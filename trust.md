@@ -100,7 +100,7 @@ Principper med teknisk fokus:
 5. Aktører i føderationer vurderer i deres styring af informationssikkerhed
 samspillet med andre aktører
 6. Administration af brugere flyttes så vidt muligt ud af fagapplikationer
-7. Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange
+7. Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange 
 *Principper med udviklingsfokus*
 8. Brugerstyring realiseres i løst koblede komponenter
 9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
@@ -169,11 +169,12 @@ omfatter både løsninger til brugerstyring i myndigheder og fx fagsystemer i
 myndigheder.
 
 For hvert afsnit angives en af følgende formuleringer:
-⮚ Dette afsnit SKAL/BØR/KAN efterkommes i fællesoffentlige løsninger.
-⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tværoffentlige brugerstyringsløsninger.
-⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tjenester, der anvender
+
+ ⮚ Dette afsnit SKAL/BØR/KAN efterkommes i fællesoffentlige løsninger.
+ ⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tværoffentlige brugerstyringsløsninger.
+ ⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tjenester, der anvender
 fællesoffentlige og tværoffentlige løsninger.
-⮚ Dette afsnit BØR/KAN efterkommes af løsninger i offentlige sektorer.
+ ⮚ Dette afsnit BØR/KAN efterkommes af løsninger i offentlige sektorer.
 
 Referencearkitekturen vil give status for standarder mv. På arkitekturguiden.digitaliser.dk vil der være oplysninger om konkrete standarder, efterhånden som de beskrives og fastlægges.
 
