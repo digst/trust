@@ -169,11 +169,12 @@ omfatter både løsninger til brugerstyring i myndigheder og fx fagsystemer i
 myndigheder.
 
 For hvert afsnit angives en af følgende formuleringer:
-&rarr Dette afsnit SKAL/BØR/KAN efterkommes i fællesoffentlige løsninger.
-&rarr Dette afsnit SKAL/BØR/KAN efterkommes i tværoffentlige brugerstyringsløsninger.
-&rarr Dette afsnit SKAL/BØR/KAN efterkommes i tjenester, der anvender
+⮚ Dette afsnit SKAL/BØR/KAN efterkommes i fællesoffentlige løsninger.
+⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tværoffentlige brugerstyringsløsninger.
+⮚ Dette afsnit SKAL/BØR/KAN efterkommes i tjenester, der anvender
 fællesoffentlige og tværoffentlige løsninger.
-&rarr Dette afsnit BØR/KAN efterkommes af løsninger i offentlige sektorer.
+⮚ Dette afsnit BØR/KAN efterkommes af løsninger i offentlige sektorer.
+
 Referencearkitekturen vil give status for standarder mv. På arkitekturguiden.digitaliser.dk vil der være oplysninger om konkrete standarder, efterhånden som de beskrives og fastlægges.
 
 ### 1.4 Metoderamme
