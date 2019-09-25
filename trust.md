@@ -2521,3 +2521,63 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 | Validering                                                  | Den proces, der kontrollerer og bekræfter korrektheden og gyldigheden af en elektronisk identitet, en signatur, et elektronisk segl, mv.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer             |
 | Verifikation                                                | Den proces, med hvilken en *identitetsgarant eller en registreringsmyndighed* med tilstrækkelig information sikrer, at en person er entydigt og korrekt identificeret.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                             |
 | VOCES                                                       | OCES *certifikat* udstedt til en virksomhed. Se også *FOCES.*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Fællesoffentlig eID i regionerne - Definition af begreber og termer                         |
+
+
+**Referenceliste:**
+
+California - Identity and Access Management (IdAM) Reference Architecture
+(RA), 2014
+http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf
+
+Datatilsynet, Flere faktorer i login
+http://www.datatilsynet.dk/fileadmin/user_upload/dokumenter/Publikationer/ST1.pdf
+
+eIDAS, EU-forordningen om elektronisk identifikation og tillidstjenester til brug
+for elektroniske transaktioner
+http://ec.europa.eu/dgs/connect/en/content/electronic-identification-and-trust-services-eidas-regulatory-environmentand-beyond
+
+EU 910/2014. Europa-Parlamentets og Rådets forordning (EU) nr. 910/2014 af
+23. juli 2014 om elektronisk identifikation og tillidstjenester
+http://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32014R0910
+
+Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og
+–løsninger
+http://www.google.dk/url?sa=t&rct=j&q=&esrc=s&frm=1&source=web&cd=1&cad=rja&uact=8&ved=0CCEQFjAA&url=http%3A%2F%2Fwww.kl.dk%2FImageVaultFiles%2Fid_67589%2Fcf_202%2FBilag_5_-_Udkast_til_rapporten_F-llesoffentlige_br.PDF&ei=LsevVM3yN4iGzAPtILwDA&usg=AFQjCNFV8hOc84wyml5TG5GfHYAv0BvbAw&bvm=bv.83339334,d.bGQ
+
+Fællesoffentlig eID i regionerne - Definition af begreber og termer
+http://lionel.lakeside.dk/twiki/bin/view/Main/EIDBegrebsListe
+
+Informationsordbogen
+www.informationsordbogen.dk
+ISO/IEC 24760, A framework for identity management
+http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=57914
+
+IT- & Telestyrelsen, Begrebsmodel til brugerstyring, Version 1.1, 2010
+http://www.digst.dk/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx
+
+Kantara, Identity Relationship Management
+https://kantarainitiative.org/irmpillars/
+
+Lakeside, Region Midtjylland, Digital identitet – vigtige begreber og processer,
+2014
+*Grundlaget for eID i regionerne – Bilag 7: Digital identitet – vigtige begreber og processer*
+
+National Standard for Identiteters Sikringsniveauer (NSIS)
+Forventes publiceret primo 2017
+
+Network Working Group, Request for Comments 2828
+http://www.ietf.org/rfc/rfc2828.txt
+
+NIST, Electronic Authentication Guideline
+http://csrc.nist.gov/publications/nistpubs/800-63-1/SP-800-63-1.pdf
+
+OCES-certifikatpolitikker
+https://www.nemid.nu/dk-da/digital_signatur/oces-standarden/oces-certifikatpolitikker/
+
+W3C, Web Services Architecture, Working Group Note, 11 February 2004
+http://www.w3.org/TR/ws-arch/
+
+## 11. Bilag B: Oversigt over kilder og baggrundsmateriale
+
+Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
+den tværoffentlige referencearkitektur for identitets- og rettighedsstyring. 
