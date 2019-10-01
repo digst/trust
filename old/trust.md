@@ -520,7 +520,7 @@ At få adgang til en tjeneste kræver derfor fælles forståelse hos tjenesteudb
 entiteter og brugerorganisationer af adgangspolitikkens indhold. Dette kan opnås
 ved at strukturere beskrivelsen af adgangspolitikken, således at det er veldefineret, hvilke attributsæt en entitet skal møde op med for at få adgang. Et attributsæt kan defineres gennem en klassifikation, som er et lukket udfaldsrum af værdier. Et eksempel er en klassifikation, der kan udtrykke datas følsomhed, et andet
 er lovhjemmel som fx KL’s Emnesystematik (KLE). Et tredje eksempel er klassifikationen af sikringsniveauer i National Standard for Identiteters Sikringsniveau (NSIS).
-![Figur 3 Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder](billede3.png)
+![Figur 3 Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder](billede3.PNG)
 
 Attributter kan udtrykke roller som basis for adgangskontrol (Role Based Access
 Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
@@ -561,7 +561,7 @@ Nedenstående tegning i figur 4 illustrerer den kæde af tillid, der skal være 
 forskellige brugerstyringstjenester. Denne kæde skal være identificeret og beskrevet i en føderation, hvor der kan være en række brugerstyringstjenester involveret i føderationen. Man skal her være eksplicit om, hvilket sikringsniveau de enkelte enheder opererer på, for det vil være det laveste sikringsniveau i hele kæden, der er bestemmende for det samlede sikringsniveau. For enkelhed i illustrationen er der her tegnet en føderation med kun én af hver brugerstyringstjeneste
 repræsenteret.
 
-![Figur 4 Kæde af tillid i et tjenestekald](billede4.png)
+![Figur 4 Kæde af tillid i et tjenestekald](billede4.PNG)
 
 - Tjenesteudbyderen af forretningstjenesten skal have tillid til, at adgangskontrollen (engelsk: Policy Enforcement Point, PEP) kun videregiver entiteter,
 hvis adgangsbillet matcher adgangspolitikken for forretningstjenesten. Tjenesteudbyderen varetager som hovedregel selv adgangskontrollen, men denne
@@ -875,7 +875,7 @@ programmer skal orientere sig efter og enten følge eller forklare.
 Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevinst
 princippet forfølger – og implikation – en instruktion i, hvad det konkret vil sige
 at følge princippet. Hvis et projekt eller program mener, at det er for problematisk at følge princippet, skal projektet eller programmet forklare hvorfor, og tillige forklare hvordan man på længere sigt kan bringe løsningen inden for rammerne, som princippet angiver.
-![Figur 5 Styrende principper ](billede5.png)
+![Figur 5 Styrende principper ](billede5.PNG)
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at
 styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for
@@ -1241,7 +1241,7 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 til at identificere og beskrive de centrale tjenester og roller, som er relevante i
 referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der
 viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
-![Figur 6. Begrebsmodel for brugerstyring](billede6.png)
+![Figur 6. Begrebsmodel for brugerstyring](billede6.PNG)
 
 | Relation                                                                                                                 | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1264,7 +1264,7 @@ den anden er, hvilke konkrete former som entiteter i en brugerstyring optræder
 med. Kontekstens begreber er markeret med blåt og vil være defineret i andre
 referencearkitekturer eller standarder.
 
-![Figur 7. Konteksten for begrebsmodellen for brugerstyring](billede7.png)
+![Figur 7. Konteksten for begrebsmodellen for brugerstyring](billede7.PNG)
 
 For denne kontekst beskrives relationerne til begrebsmodellen for brugerstyring.
 
@@ -1306,7 +1306,7 @@ Dette afsnit KAN efterkommes af andre løsninger i offentlige sektorer.
 
 Følgende figur illustrerer de løst koblede byggeblokke for administration i brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
 
-![Figur 8 Byggeblokke for administration i referencearkitekturen](billede8.png)
+![Figur 8 Byggeblokke for administration i referencearkitekturen](billede8.PNG)
 
 Byggeblokkene ”Registrering”, og ”Akkreditivtjeneste” er de tjenester, der registrerer entiteter, og de akkreditiver som anvendes til at validere identiteter. Attributter som beskriver identiteten, kan vedligeholdes af attributtjenester. Tabel 1
 giver som overblik nogle eksempler.
@@ -1404,7 +1404,7 @@ som man som samarbejdspartner kan optræde i.
 
 Følgende figur illustrerer de løst koblede byggeblokke for *anvendelse* af brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
 
-![Figur 9. Byggeblokke for referencearkitekturens brugerstyring i anvendelse](billede9.png)
+![Figur 9. Byggeblokke for referencearkitekturens brugerstyring i anvendelse](billede9.PNG)
 
 ### 6.6 Autentifikation
 
@@ -1492,7 +1492,7 @@ byggeblok i referencearkitekturen.
 
 ### 6.9 Oversigt over byggeblokke i konteksten for brugerstyring
 
-![Figur 10. Byggeblokke i konteksten for brugerstyring](billede10.png)
+![Figur 10. Byggeblokke i konteksten for brugerstyring](billede10.PNG)
 
 Byggeblokke i konteksten for brugerstyring er genstand for andre referencearkitekturer og standarder, så vi henviser til disse beskrivelser:
 
@@ -1519,7 +1519,7 @@ ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne
 referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at
 disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
 
-![Figur 11 Model til brug for brugerstyringstjenester i processer](billede11.png)
+![Figur 11 Model til brug for brugerstyringstjenester i processer](billede11.PNG)
 
 >![](logo.png)
 >> Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og
@@ -1564,7 +1564,7 @@ CVR-registret.
 brugerstyringssystemer eller i andre systemer. Attributter kan have forskellige
 sikringsniveauer.
 
-![Figur 12 Registrer identitet](billede12.png)
+![Figur 12 Registrer identitet](billede12.PNG)
 
 Processen for registrering af en elektronisk identitet foregår forenklet set gennem
 følgende trin:
@@ -1588,7 +1588,7 @@ også være associeret til en rolle, som dermed kan kendes af adgangskontrollen.
 Når en bruger anmoder om adgang til en tjeneste, der ikke kræver et eller flere
 attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:
 
-![Figur 13 Autentifikation](billede13.png)
+![Figur 13 Autentifikation](billede13.PNG)
 
 Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og
 de udstedte akkreditiver (sikringsniveauer).
@@ -1633,7 +1633,7 @@ Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilk
 kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenesten eller forretningstjenesten. Det kan
 også have betydning for, hvor aktørerne administrerer attributter.
 
-![Figur 14 Billetudstedelse og adgangskontrol via en broker](billede14.png)
+![Figur 14 Billetudstedelse og adgangskontrol via en broker](billede14.PNG)
 
 1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
 2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en adgangsbillet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation,
@@ -1692,7 +1692,7 @@ Den tekniske målarkitektur KAN efterkommes af løsninger i offentlige sektorer.
 Det systemtekniske målbillede viser, hvor validering af og data om brugere og
 andre entiteter stilles til rådighed af brugerstyringstjenesterne til forretningsformål, ligesom de kan indgå i samspil med andre infrastrukturtjenester.
 
-![Figur 15 Brugerstyringstjenester i logisk sammenhæng](billede15.png)
+![Figur 15 Brugerstyringstjenester i logisk sammenhæng](billede15.PNG)
 
 Brugerstyringstjenesterne skal gøre det muligt for forretningssystemerne at anvende og opdatere data om brugere til de mange forskellige formål, der er beskrevet ovenfor.
 
@@ -1733,13 +1733,13 @@ stedet får dem leveret af infrastrukturen gennem den udstedte billet. Herved ha
 man frihed til at ændre i placeringen af attributter, uden at forretningstjenesterne
 påvirkes.
 
-![Figur 16: Broker-baseret arkitekturmodel](billede16.png)
+![Figur 16: Broker-baseret arkitekturmodel](billede16.PNG)
 
 Denne model svarer til ”*four corner*”-modellen for betalingskortinfrastrukturen,
 som vist på Figur 17 Arkitektur til betalingskortinfrastruktur, hvor kortholderen
 (svarende til entiteten) forbindes til betalingsmodtager (svarende til tjenesteudbyder) gennem kortudsteder (svarende til registreringstjeneste og akkreditivudsteder) og kortindløser (svarerende til broker). Modellen har vist sig meget skalerbar i praksis, både i forhold til antallet af aktører og i forhold til transaktioner.
 
-![Figur 17 Arkitektur til betalingskortinfrastruktur](billede17.png)
+![Figur 17 Arkitektur til betalingskortinfrastruktur](billede17.PNG)
 
 For langt hovedparten af offentlige tjenesteudbydere anvendes denne model,
 som nævnt, allerede med NemLog-in som identitetsbroker. Ligeledes fungerer
@@ -1785,7 +1785,7 @@ Samtidig vil en tjenesteudbyder have mulighed for at indgå aftale med flere bro
 Det skal bemærkes, at en registreringstjeneste eller akkreditivudsteder kan operere som identitetsbroker, ligesom en større tjenesteudbyder kan etablere egen
 broker-funktion. Endvidere kan brokere forbinde sig til andre brokere.
 
-![Figur 18 Arkitektur med flere registreringstjenester, en akkreditivudsteder og brokere](billede18.png)
+![Figur 18 Arkitektur med flere registreringstjenester, en akkreditivudsteder og brokere](billede18.PNG)
 
 En brokerbaseret arkitektur kan indføres fleksibelt og gradvist, hvor tjenesteudbyder kan vælge at understøtte login og signering som en integreret del af egen tjeneste eller benytte en ekstern identitetsbroker. Introduktion af brokere kan
 baseres på frivillighed og med tiltag, der fremmer overgang til brug af brokere,
@@ -1807,7 +1807,7 @@ led. Omvendt kan man ved at bygge nogle fælles brugerstyringstjenester opnå en
 kritisk masse i udviklingen, og derved bygge dem stærkere end en enkelt udbyder
 af en forretningstjeneste selv har ressourcer eller viden til at etablere.
 
-![Figur 19 Sikkerhedskæder i fødereret brugerstyring](billede19.png)
+![Figur 19 Sikkerhedskæder i fødereret brugerstyring](billede19.PNG)
 
 I en løst koblet og distribueret arkitektur er det derfor nødvendigt med fælles
 rammer for sikkerhed, der definerer roller og ansvar for de forskellige komponenter. Disse spilleregler er grundlaget for tilliden mellem parterne i arkitekturen
@@ -1873,7 +1873,7 @@ referencearkitekturen fungerer.
 I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret
 oversigt over obligatoriske og anbefalede standarder skal vedligeholdes på arkitekturguiden.digitaliser.dk
 
-![Figur 20 Områder for standarder for brugerstyring](billede20.png)
+![Figur 20 Områder for standarder for brugerstyring](billede20.PNG)
 Note til figur: Pilene angiver områder for standarder
 
 Der skal være **standarder for registrering af brugere, akkreditiver og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National
@@ -1894,7 +1894,7 @@ OAuth muligheder.
 Der er behov for **standarder for kommunikation mellem føderationer.** Disse
 skal identificeres og fastlægges i arbejdet med implementering af referencearkitekturen. Arbejdet i EU-regi (STORK og eIDAS) er baseret på SAML2-profiler.
 
-![Figur 21 Kommunikation mellem føderationer](billede21.png)
+![Figur 21 Kommunikation mellem føderationer](billede21.PNG)
 
 ### 8.5 Interoperabilitet
 
@@ -1902,7 +1902,7 @@ Figuren herunder viser interoperabilitet for brugerrettighedsstyring iht. refere
 
 I takt med videreudvikling og konsolidering af området, kan denne figur opdateres og udstilles som en del dokumentationen af den fællesoffentlige rammearkitektur:
 
-![Figur 22 Interoperabilitet for brugerstyring](billede22.png)
+![Figur 22 Interoperabilitet for brugerstyring](billede22.PNG)
 
 # II Implementering
 
@@ -2363,7 +2363,7 @@ viser hvordan standarden kan anvendes. Det ventes endvidere, at der i videreudvi
 Et eksempel på, hvordan et udbredt mønster for autorisering af en app med
 OpenID Connect kunne se ud i fremtiden i en fællesoffentlig kontekst, er illustreret nedenfor i Figur :
 
-![Figur 23: Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAMLbrugerautentikation](billede23.png)
+![Figur 23: Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAMLbrugerautentikation](billede23.PNG)
 
 Der er identificeret følgende emner til det videre arbejde med fællesoffentlig
 brugerstyring, hvor entiteten er en tjenestekonsument eller et fysisk apparat eller
