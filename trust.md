@@ -2577,3 +2577,156 @@ http://www.w3.org/TR/ws-arch/
 
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
 den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
+
+| Kilde                                                                                    | Materiale                                                                                                                                                                                                                                                                                                                 |
+|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| California, Department of Technology                                                     | Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014 http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf                                                                                                                                                                        |
+| Digitaliseringsstyrelsen                                                                 | CIDR – borger.dk http://digitaliser.dk/group/2289910                                                                                                                                                                                                                                                                      |
+| Digitaliseringsstyrelsen                                                                 | Digitaliseringsstyrelsens anbefalinger for brug af standarder for identitetsog rettighedsstyring som f.eks. OIO Web SSO Profile 2.0.6 (også kendt som OIOSAML 2.0) http://www.digst.dk/Arkitektur-og-standarder/Standardisering/Standarderfor-serviceorienteret-infrastruktur/Standarder-og-anbefalinger-forbrugerstyring |
+| Digitaliseringsstyrelsen                                                                 | Forslag til fælles sikkerhedsmodel for Grunddataprogrammet - 2014-06-19                                                                                                                                                                                                                                                   |
+| Digitaliseringsstyrelsen                                                                 | Fuldmagtsrapport 2012. Fuldmagt, partsrepræsentation og samtykke. Behov og løsningsmuligheder, Rambøll for Digitaliseringsstyrelsen 2012                                                                                                                                                                                  |
+| Digitaliseringsstyrelsen                                                                 | National Standard for Identiteters Sikringsniveauer (NSIS) Forventes publiceret primo 2017                                                                                                                                                                                                                                |
+| Digitaliseringsstyrelsen                                                                 | Persongrunddata-rapporten                                                                                                                                                                                                                                                                                                 |
+| eIDAS                                                                                    | European Commission, Electronic identification and trust services http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond                                                                                                                          |
+| Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017 | Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger                                                                                                                                                                                                                               |
+| IT- & Telestyrelsen                                                                      | Den fællesoffentlige begrebsmodel til brugerstyring, der er udgivet af ITog Telestyrelsen. http://www.digst.dk/Loesninger-oginfrastruktur/NemLogin/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx                                                                                              |
+| IT- & Telestyrelsen                                                                      | Nye digitale sikkerhedsmodeller- et oplæg til diskussion. Januar 2011                                                                                                                                                                                                                                                     |
+| Kantara                                                                                  | Kantara Initiative accelerates identity services markets by developing innovations and programs to support trusted on-line transactions. The membership of Kantara Initiative includes international communities, industry, research & education, and government stakeholders. http://kantarainitiative.org               |
+| KOMBIT                                                                                   | Adgangsstyring i Rammearkitekturen - 22-03-2013 (kravspecifikation)                                                                                                                                                                                                                                                       |
+| KOMBIT                                                                                   | Introduktion til Adgangsstyring https://sharekomm.kombit.dk/P024/Delte%20dokumenter/Introduktion%20til%20Adgangsstyring.pdf                                                                                                                                                                                               |
+| Miljøportalen                                                                            | Analyse af anvendelse af NemLog-in som brugerstyringsløsning???                                                                                                                                                                                                                                                           |
+| National Sundheds-it                                                                     | Referencearkitektur for Informationssikkerhed, september 2013 http://www.ssi.dk/Sundhedsdataogit/National%20Sundhedsit/~/media/Indhold/DK%20-%20dansk/Sundhedsdata%20og%20it/NationalSundhedsIt/Standardisering/Referencearkitektur%20for%20informationssikkerhed%20v%20%201%200%20nyt%20layout.ashx                      |
+| NIST                                                                                     | Electronic Authentication Guideline http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf                                                                                                                                                                                                             |
+| Thomas Gundel                                                                            | Fællesoffentlig brugerstyring - arkitekturtegninger 30-10-2013                                                                                                                                                                                                                                                            |
+| Thomas Gundel                                                                            | Fællesoffentligt Trust Framework - Indledende overvejelser                                                                                                                                                                                                                                                                |
+| Uni-login                                                                                | UNI•Login Adgangskontrol http://www.stil.dk/~/media/UNIC/Filer/Publikationer/Tekniske%20vejledninger/uni-login-adgangskontrol.pdf                                                                                                                                                                                         |
+| US Army                                                                                  | Identity and Access Management (IdAM) Reference Architecture (RA) - 07- 05-2014 http://ciog6.army.mil/Portals/1/Architecture/2014/20140507-US_Army_IdAM_Reference_Architecture_V3-0.pdf                                                                                                                                   |
+| WAYF                                                                                     | Introducing transparency in hub-and-spoke federation architectures using SAML2 authentication request scoping elements http://www.wayf.dk/wayfweb/artikler_og_notater_attchmt/2010_09_01_TNC_article_SAML2-scoping.pdf                                                                                                    |
+| Økonomistyrelsen                                                                         | Anbefalinger til retningslinjer for tværoffentlig brugerstyring – roadmap og koncept 1.0                                                                                                                                                                                                                                  |
+
+## 12. Bilag C: Baggrund for valg af relationen entitet-elektronisk identitet
+
+**Om relationen entitet – elektronisk identitet**
+De grundlæggende begreber i brugerstyring bygger på eIDAS-forordningen inkl.
+gennemførselsforordning (EU) 2015/1502 og National Standard for Identiteters
+Sikringsniveau (NSIS), som er en dansk konkretisering af forordningen.
+
+I disse defineres følgende begreber:
+
+- »Entitet«: Et subjekt/en bruger, som skal have adgang til en tjeneste.
+- »[Elektronisk] Identitet«: En digital persona, repræsenteret ved et sæt af attributter, forkortes eID.
+- »Elektronisk identifikationsmiddel«: Et elektronisk eller en fysisk objekt/genstand, der kan anvendes til at gennemføre en autentificering af en
+identitet. ”Elektronisk identifikationsmiddel” kaldes herefter ”akkreditiv”.
+
+Det betyder, at de fleste personer i dag har en række elektroniske identiteter:
+
+- NemID-borger med attributter som PID og navn
+- Identitet hos arbejdsgiver, typisk med akkreditiverne brugernavn og kodeord
+og attributter som navn, organisatorisk enhed
+- Identitet hos Uni*Login
+- Identitet hos Facebook
+- Identitet hos Google
+- Identitet hos en række andre tjenester.
+
+![Figur 24. De tre grundlæggende begreber i identitet](billede24.PNG)
+
+Der er mange tiltag for at reducere antallet af identiteter, fx ved at flere tjenester tilbyder, at man kan bruge sin Facebook-identitet eller Google-identitet.
+
+Et andet tiltag er NemID, som er etableret med henblik på anvendelse i stort set alle offentlige tjenester og hos bankerne. NemID kan også bruges hos mange private tjenester, fx pensionskasser, forsikringsselskaber, fagforeninger mv.
+
+**Om relationen entitet – elektronisk identitet i fællesoffentlig brugerstyring**
+
+I fællesoffentlig brugerstyring har der indtil nu været arbejdet med, at en entitet kan have flere elektroniske identiteter:
+
+- En privat NemID
+- En eller flere NemID Erhverv tilknyttet forskellige virksomheder.
+
+Særligt for små erhvervsdrivende har det været utilfredsstillende at skulle håndtere to eller flere akkreditiver som følge af den nuværende models stærke binding mellem identiteter og akkreditiver, som er implementeret i NemID. Derfor har der i næste generation NemID været arbejdet med at finde løsninger på dette. Der har været to grundlæggende modeller til overvejelse for fællesoffentlige løsninger og dermed for NDIS:
+
+- En løsning med kun en identitet pr. entitet
+- En løsning med flere identiteter pr. entitet.
+
+**En løsning med kun en identitet pr. entitet**
+
+I denne løsning er der kun en identitet pr. entitet. Identiteten karakteriseres ved attributter. Nogle er tæt knyttet til den fysiske person som fx navn, adresse og CPR. Andre attributter udtrykker de rettigheder, som identiteten tildeles til at tilgå funktioner eller informationer. Skal entiteten tilgå løsninger som borger og som ejer af virksomhed eller medarbejder, udtrykkes det ved forskellige sæt af attributter.
+
+![Figur 25 En identitet pr. entitet](billede25.PNG)
+
+Fordelene ved denne model:
+
+• Den enkelte person skal kun have en elektronisk identitet og dermed et NemID.
+• Forskellige attributsæt for personrettigheder karakteriserer de rettigheder, som en person har, når de optræder i forskellige kontekster; det man også kan kalde roller.
+
+Ulemperne ved denne model:
+
+• For en række personer vil det være en ulempe kun at have en elektronisk identitet, fx hvis personen arbejder for mange virksomheder, så det kan være vanskeligt at skelne mellem rollerne, hvis det er den samme funktion og dermed det samme attributsæt, personen har.
+• Alle tjenester skal fra implementeringstidspunktet kunne understøtte, at valg af identitet kun sker gennem at registrere en og kun en NemID og ikke kan ske på anden måde.
+• Der kan ikke vælges at danne identiteter med tilhørende akkreditiver, der kan afspejle virksomheders forskellige ønsker til fx sikringsniveau eller funktionalitet, fx som i sundhedssektoren, hvor der ønskes akkreditiver, der kan anvendes i klinisk kontekst.
+
+**En løsning med flere identiteter pr. entitet**
+
+I denne løsning kan hver entitet have flere elektroniske identiteter til fællesoffentlig brugerstyring. Skal entiteten tilgå løsninger som borger og som ejer af virksomhed eller medarbejder, sker det med forskellige identiteter. Nu er det identitetsattributter, der adskiller, om det er en identitet for en borger eller en medarbejder.
+
+Løsningen svarer til den model, der anvendes i det nuværende NemID (i 2016).
+
+![Figur 26 Flere identiteter pr. entitet](billede26.PNG)
+
+For at løsningen med flere identiteter pr. entitet tilgodeser brugerbehov, kan modellen implementeres, så en entitet kan anvende sit akkreditiv (fx NemIDnøglekortet) til flere identiteter.
+
+Det sker på to måder:
+
+11. For borgere, der er ejere af enkeltmandsvirksomheder eller er tegningsberettigede, kan det offentlige tilbyde brug af borgerakkreditiver i forbindelse med erhvervsidentiteten.
+- Konceptuelt sker det ved, at en elektronisk identitet (erhvervsidentiteten)
+dannes på grundlag af en anden elektronisk identitet (borgeridentiteten).
+Fx en ny virksomhedsejer med automatisk CVR-opmærkning. Identiteten
+kan bevares over tid eller være dynamisk.
+- Denne løsning implementeres fra februar 2017 i fællesoffentlig brugerstyring.
+12. Der dannes en separat erhvervsidentitet med egne attributter. Denne erhvervsidentitet bevares over tid, uafhængigt af akkreditiver. Det betyder, at
+der kan skiftets akkreditiv, uden at der skal administreres en ny identitet med
+tilhørende rettigheder.
+
+For virksomheder betyder modellen, at de kan vælge mellem borgerens akkreditiver eller at foranledige brug af en erhvervsidentitet med akkreditiver med andre styrker. Virksomheder kan skifte mellem alternativerne løbende og stadig bevare samme erhvervsidentitet. Løsningen muliggør, at både borger og virksomhed kan vælge, om borgeridentiteten kan anvendes til erhvervsformål. Løsningen kan implementeres med begge valgmuligheder eller således, at kun den ene part (fx virksomheden) kan vælge.
+
+## 13. Bilag D: Liste over krav (SKAL, BØR,KAN)
+
+| 5. Begrebsmodel | Fællesoffentlige løsninger | Tværoffentlige brugerstyringsløsninger | Tjenester der anvender disse | Andre offentlige løsninger |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|----------------------------------------|------------------------------|----------------------------|
+| Begrebsmodellen SKAL anvendes i fællesoffentlige løsninger, i løsninger der kommunikerer mellem offentlige sektorer og i tjenester der anvender fællesoffentlige løsninger. Begrebsmodellen KAN efterkommes af løsninger i offentlige sektorer. Bruger man andre termer for begreberne inden for sin egen sektor, SKAL man kunne oversætte eller transformere disse entydigt til de autoritative termer, når man kommunikerer verbalt eller digitalt på tværs af offentlige sektorer. Dette vil sikre bedre forståelse og kommunikation mellem forskellige sektorer om brugerstyring uden at fratage dem retten til at beholde egne velfungerende termer | SKAL | KAN | N/A | N/A |
+| **6. Byggeblokke** |  |  |  |  |
+| Opbygning af brugerstyring med byggeblokkene Registrering af elektronisk identitet, Akkreditivtilknytning, Attributbeskrivelse, Autentifikation, Billetudstedelse og Adgangskontrol BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af andre løsninger i offentlige sektorer | BØR | BØR | BØR | KAN |
+| **7. Processer** |  |  |  |  |
+| Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer | BØR | BØR | BØR | KAN |
+| **8 Teknisk arkitektur**  **8.1 Teknisk målarkitektur** |  |  |  |  |
+| Den tekniske målarkitektur BØR efterkommes i fællesoffentlige løsninger, i løsninger der kommunikerer mellem offentlige sektorer og i tjenester der anvender fællesoffentlige løsninger. Den tekniske målarkitektur KAN efterkommes af løsninger i offentlige sektorer | BØR | BØR | BØR | KAN |
+| **8.2 En målarkitektur med identitetsbrokere** |  |  |  |  |
+| Arkitektur med identitetsbrokere SKAL efterkommes i fællesoffentlige løsninger, mens øvrige løsninger i offentlige sektorer BØR efterkomme ovenstående. | SKAL | BØR | BØR | BØR |
+| Identitetsbrokere BØR kommunikere sikringsniveauet (eng: Level of Assurance) for autentifikationen ved at indlejre en attribut i billetten, som angiver dette (hvor niveauet typisk er defineret i et trust framework som fx National Standard for Identiteters Sikringsniveau (NSIS)). Dette gælder for fællesoffentlige løsninger og tværoffentlige brugerstyringsløsninger. | BØR | BØR | N/A | N/A |
+| **8.3 Sikkerhed i den tværoffentlige brugerstyring** |  |  |  |  |
+| Der er følgende krav til fællesoffentlige brugerstyringstjenester og forretningstjenester i den fællesoffentlige føderation. Dette er begrundet i standarder i konteksten for brugerstyring: ISO/IEC 27001, ISO/IEC 27005, EU’s General Data Protection Regulation (GDPR) og den danske persondatalov:  <br> - Tjenesteudbyder SKAL styre sikkerheden i egen tjeneste i forhold til fortrolighed, integritet og tilgængelighed </br><br> - Tjenesteudbyder SKAL sikre, at udveksling af data (indgående og udgående) sker med tilstrækkelig sikkerhed </br><br> - Tjenesteudbyder SKAL gennemføre risikovurderinger af, hvordan tjenestens placering i føderationen påvirker tjenestens sikkerhed</br><br> – og hvordan tjenesten påvirker andre tjenesters sikkerhed og gennemføre de nødvendige tiltag</br><br> - Tjenesteudbyder SKAL i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.</br><br>   Ovenstående regler SKAL følges af brugerstyringstjenester og forretningstjenester i andre føderationer.</br> | SKAL | SKAL | SKAL | SKAL |
+
+| 9 Implementering 9.1 Registrering af identiteter 9.1.1 Standarder for registrering af identiteter | Fællesoffentlige løsninger | Tværoffentlige brugerstyringsløsninger | Tjenester der anvender disse | Andre offentlige løsninger |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|----------------------------------------|------------------------------------------------------|----------------------------|
+| Brug af National Standard for Identiteters Sikringsniveau (NSIS) SKAL efterkommes i fællesoffentlige løsninger og i løsninger, der anvender disse. En identitetsløsning BØR fastlægge et krævet NSIS sikringsniveau ”Begrænset”, ”Lav”, ”Betydelig” eller ”Høj” i forhold til anvendte akkreditiver og den samlede livscyklus. Dette muliggør en lettere integration mellem systemer, idet sikringsniveauer er umiddelbart sammenlignelige. | SKAL | BØR | SKAL | BØR |
+| Ved udstedelse af certifikater BØR semantik fra ETSI EN 319412-1 anvendes og det skal overvejes om navngivning af brugere med fordel KAN genbruge denne semantik også uden for en certifikat-kontekst. Dette gælder særligt i de situationer, hvor brugere skal kunne tilbydes certifikater til signering, hvorved navngivning er ens for en indledende autentifikation og den efterfølgende signering. | BØR | KAN | KAN | KAN |
+| Dansk Standard DS 844 er en alternativ standard for navngivning i certifikater. Denne SKAL FORLADES i nye løsninger, da den ikke i tilstrækkelig grad er fremtidssikret i en international sammenhæng. | SKAL FORLADES | SKAL FORLADES | SKAL FORLADES | SKAL FORLADES |
+| **9.2 Akkreditiver** |  |  |  |  |
+| Af hensyn til forsyningssikkerheden og grundlaget for digitaliseringen, SKAL det offentlige etablere mindst én generel registreringstjeneste og én generel akkreditivudsteder i økosystemet – samtidig med at der er åbent for alternative løsninger. | SKAL | N/A | N/A | N/A |
+| Understøttelse af notificerede eID-løsninger fra andre EUlande SKAL ske gennem national eID Gateway, der stilles til rådighed af Digitaliseringsstyrelsen. Løsninger, der skal servicere andre EU-borgere, SKAL afsøge muligheden for at anvende eID Gateway’en til dette formål. | SKAL |  | SKAL (Løsninger, der skal servicere andre EUborgere) | N/A |
+| **9.3 Attributter** |  |  |  |  |
+| Attributtjenester BØR udstille deklaration af kvaliteten af attributter, således at tjenester, der anvender attributter, har den nødvendige information om kvalitet. | BØR | BØR | BØR | BØR |
+| Fællesoffentlige brugerstyringstjenester og forretningstjenester i fællesoffentlige føderationer, der anvender attributter SKAL vurdere om kvaliteten af attributter svarer til tjenestens behov. | SKAL | SKAL | SKAL | SKAL |
+| Nye forretningstjenester (og moderniseringer af eksisterende) tjenester, der anvender fællesoffentlige løsninger, BØR benytte et design, hvor CPR-nummeret kan skifte form uden at tjenestens forretningslogik bryder sammen. | BØR | BØR | BØR | BØR |
+| **9.4 Brugerkataloger** |  |  |  |  |
+| **9.5 Autentifikation**  **9.5.1 Standarder for overførsel af autentificerede brugere** |  |  |  |  |
+| I dag anvender NemID XMLDSig i forbindelse med autentifikation, hvor særligt det indlejrede OCES certifikat er kilde til attributter om brugeren. XMLDSig BØR FORLADES fremadrettet og ikke danne grundlag for en fødereret løsning, idet der findes protokoller, der i højere grad er velegnede til dette formål. | SKAL FORLADES | SKAL FORLADES | SKAL FORLADES | SKAL FORLADES |
+| OIOSAML og OIO Basic Privilege Profile har status af anbefalede fællesoffentlige standarder og BØR som minimum følges, når der er behov for håndtering af eksterne brugere i web applikationer. Dette gælder for fællesoffentlige løsninger og tjenester der anvender fællesoffentlige løsninger | BØR | BØR | BØR | KAN |
+| For fællesoffentlig infrastruktur BØR standarden OpenID Connect på kort til mellemlang sigt tilbydes som et supplement til SAML 2.0 services, således at de forretningstjenester, der har behov for det, kan udnytte de nye muligheder – men uden at alle tvinges til det. | BØR | KAN | KAN | KAN |
+| **9.6 Login tjenester/Identitetsbrokere** |  |  |  |  |
+| For at opnå en sikker og omkostningseffektiv integration for tjenesteudbydere og for at understøtte konkurrencen på markedet, SKAL en identitetsbroker som minimum udstille en eller flere veldefinerede åbne og standardiserede interfaces til tjenesteudbydere. Dette kan typisk være et SAML2 (som kendes fra NemLog-in) og/eller OpenID Connect. | SKAL | KAN | KAN | KAN |
+| Tilsvarende SKAL der stilles veldefinerede interfaces til rådighed for digital signering. | SKAL | KAN | KAN | KAN |
+| Der SKAL fortsat være en broker som NemLog-in i den fællesoffentlige brugerstyringsinfrastruktur. | SKAL | N/A | N/A | N/A |
+| **9.6.1 Standarder for kommunikation mellem føderationer** |  |  |  |  |
+| **9.7 Fælles løsning til fuldmagter** |  |  |  |  |
+| I henhold til arkitekturprincipperne om at genbruge løsninger og anvende fælles standarder, BØR, fuldmagtsløsningen anvendes for borgerrettede løsninger, der finansieres og fungerer inden for den offentlige sektor. | N/A | BØR | BØR | BØR |
+| **9.8 Brugerstyring for tjenestekonsumenter og fysiske apparater og sensorer**  **9.8.1 Standarder for identitetsbaserede web services** |  |  |  |  |
+| Profilerne for identitetsbaserede web services(https://digitaliser.dk/resource/526486) består af: OIO WS-Trust Profile (profil til at anmode om security token) OIO WS-Trust Deployment Profile (profil til at anmode om security token) OIO Profile for Identity Tokens (profil for token udformning i web service kald) OIO Bootstrap Token Profile (profil for veksling af Web SSO session til token ifm. systemkald) Liberty Basic SOAP Binding (profil af WS-Security til sikring af SOAP-baserede web service kald med SAML Token) OIO IDWS Rest Profile (profil til sikring af REST-baserede web service kald med SAML Token) For disse standarder gælder, at de BØR følges ved etablering af system-til-system kommunikation, hvor kaldet sikres med en adgangsbillet (et security token) i henhold til denne referencearkitekturs principper, frem for en punkt-til-punkt integration. Dette gælder for fællesoffentlige løsninger og løsninger, der kommunikerer mellem offentlige sektorer. Kommunikation til fra/web services med følsomt indhold, der ønskes sikret med security tokens, BØR baseres på profilerne Liberty Basic SOAP Binding (dennes efterfølger OIO IDWS SOAP Binding) eller OIO IDWS Rest Profile ved ekstern kommunikation over Internettet. | BØR | BØR | BØR | BØR |
