@@ -939,8 +939,6 @@ sikkerhed og privacy forenes med krav om brugervenlighed.
 >![](logo.png)
 >>Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes.
 
-|![](logo.png)| Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes. |
-|:-:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ### 4.2 Princip: Brugerstyringsløsninger udvikles med fokus på brugernes behov
 
