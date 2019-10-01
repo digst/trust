@@ -208,7 +208,7 @@ brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige
 referencearkitekturer.
 Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
-![Figur 1 Referencearkitekturens rolle](billede1.PNG)
+![Figur 1 Referencearkitekturens rolle](old/billede1.PNG)
 
 ### 1.6 Målgruppe
 
