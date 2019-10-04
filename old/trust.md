@@ -2728,3 +2728,32 @@ For virksomheder betyder modellen, at de kan vælge mellem borgerens akkreditive
 | I henhold til arkitekturprincipperne om at genbruge løsninger og anvende fælles standarder, BØR, fuldmagtsløsningen anvendes for borgerrettede løsninger, der finansieres og fungerer inden for den offentlige sektor. | N/A | BØR | BØR | BØR |
 | **9.8 Brugerstyring for tjenestekonsumenter og fysiske apparater og sensorer**  **9.8.1 Standarder for identitetsbaserede web services** |  |  |  |  |
 | Profilerne for identitetsbaserede web services(https://digitaliser.dk/resource/526486) består af: OIO WS-Trust Profile (profil til at anmode om security token) OIO WS-Trust Deployment Profile (profil til at anmode om security token) OIO Profile for Identity Tokens (profil for token udformning i web service kald) OIO Bootstrap Token Profile (profil for veksling af Web SSO session til token ifm. systemkald) Liberty Basic SOAP Binding (profil af WS-Security til sikring af SOAP-baserede web service kald med SAML Token) OIO IDWS Rest Profile (profil til sikring af REST-baserede web service kald med SAML Token) For disse standarder gælder, at de BØR følges ved etablering af system-til-system kommunikation, hvor kaldet sikres med en adgangsbillet (et security token) i henhold til denne referencearkitekturs principper, frem for en punkt-til-punkt integration. Dette gælder for fællesoffentlige løsninger og løsninger, der kommunikerer mellem offentlige sektorer. Kommunikation til fra/web services med følsomt indhold, der ønskes sikret med security tokens, BØR baseres på profilerne Liberty Basic SOAP Binding (dennes efterfølger OIO IDWS SOAP Binding) eller OIO IDWS Rest Profile ved ekstern kommunikation over Internettet. | BØR | BØR | BØR | BØR |
+
+
+
+
+
+# tutorial
+## 2
+### 3
+#### 4
+>quotes
+>>sdfsfs
+>>>ddfdfs
+
+
+*kursiv*
+
+**Fed tekst**
+
+![](billede24.PNG)
+
+
+- lste1
+- liste 2
+- liste 3
+
+
+1. liste 1
+2. liste 2
+3. liste 3
