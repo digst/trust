@@ -10,4 +10,7 @@ Hvis der er brug for arbejde med flere fremtidige version, brancher vi, men anve
 
 Vi anvender pandoc til at lave word versioner når vi har brug det. Senere måske bikeshed til at producerer det færdige produkt. 
 
+------
+
+Dette er Thomass version. Skriv gerne noter her, men lad os slette dem når vi merger.
 
