@@ -2,6 +2,8 @@
 - nu med IoT
 - med henblik på noget med trust-services...
 
+(test på update)
+
 ### Forord
 
 ### Resume (in english)
