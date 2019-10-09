@@ -2,34 +2,34 @@
 - nu med IoT
 - med henblik på noget med trust-services...
 
-(test på update)
 
 ### Forord
 
 ### Resume (in english)
 ### Resume
-De senere års udvikling på brugerstyringsområdet har medført, at der er etableret  en række løsninger i samarbejde mellem interessenter. Disse løsninger sikrer sammenhæng inden for afgrænsede delområder, men der findes ikke en overordnet sammenhæng i initiativer og løsninger.
+De senere års udvikling på brugerstyringsområdet i den offentlige sektor har entydigt peget i retning af føderationer baseret på tillid og fælles standarder. Der er således etableret en række føderationer i forskellige sektorer - dette gælder fx på det kommunale område (KOMBIT), på sundhedsområdet (SOSI), på miljøområdet (Miljøportalen), inden for undervisningsningssektoren (STIL) og fællesoffentligt (NemLog-in). Dette er samtidig i tråd med internationale tendenser herunder etablering af en EU-føderation med afsæt i eIDAS-forordningen.
 
-Situationen er i dag præget af, at der er flere forholdsvis ukoordinerede løsninger (NemID/NemLog-in, SOSI-STS på sundhedsområdet, KOMBITs brugerstyring, WAYF på undervisningsområdet, Miljøportalen m.fl.). Der findes ikke den sammenhængende tværoffentlige strategi og governance, der i stigende grad efterlyses fra flere sektorer. Der er overlap, sub-optimering og dublering af løsninger med økonomiske konsekvenser. Der er stor usikkerhed hos myndigheder i forbindelse med it-investeringer – særligt i forbindelse med udbud, hvor der er brug for at kravspecificere løsninger, der skal kunne holde fem til seks år. Her er der behov for at kende retningen, man skal orientere sig imod.
+Føderationer giver en lang række fordele herunder sammenhæng for brugerne, mere effektiv administration og mulighed for arbejdsdeling, hvor specialiserede tjenester (infrastruktur) varetager komplekse opgaver med håndtering af identiteter og akkreditiver for forretningstjenester, hvilket letter byrder og samtidig øger sikkerheden.
 
-Formålet med referencearkitekturen er således at skabe **rammer** for brugerstyring og dermed skabe grundlag for, at parterne kan udvikle brugerstyring på tværs.
+ Der er til stadighed behov for, at sektorløsninger udvikles på baggrund af en fællesoffentlig referencearkitektur for brugerstyring, som udpeger fælles principper, mønstre, standarder, byggeblokke og andet. Herved kan der opnås sammenhæng, synergier og udbredelse af god praksis på tværs af hele økosystemet, og risikoen for uhensigtsmæssig sub-optimering og dublering af løsninger reduceres.
 
-Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale løsninger, som kan opdeles i administrative funktioner og adgangskontrol. De administrative funktioner omfatter oprettelse, ændring og nedlæggelse af brugere i brugerstyringssystemer, tilknytning af akkreditiver til brugere og tilknytning af rettigheder til brugere.
 
-Hovedaktiviteterne i **administration i brugerstyring (adm., brugeradm.)** er følgende:
+Formålet med referencearkitekturen er således at skabe **rammer** for brugerstyring i den offentlige sektor - som danner grundlag for et sammenhængende økosystem med høj grad af tillid, genbrug og interoperabilitet.
 
-- **Registrering** af entiteters elektroniske identiteter (eID) og den løbende vedligeholdelse heraf.
-- **Akkreditivtilknytning** af akkreditiver til et eller flere eID og den løbende vedligeholdelse heraf. Akkreditivet anvendes af entiteten til at bevise sin identitet over for en tjeneste, man vil have adgang til.
-- **Attributbeskrivelse** af karakteristika ved entiteten, som en tjeneste kræver for at give adgang, og den løbende vedligeholdelse heraf. Det er fx rettighedsrelevante attributter i form af roller og/eller andre attributter, der udtrykker kvaliteter ved entiteten, som en tjeneste forlanger at kende for at give adgang.
+Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale tjenester, som overordnet kan opdeles i administrative funktioner og adgangskontrol. De administrative funktioner omfatter oprettelse, ændring og nedlæggelse af brugere i brugerstyringssystemer, udstedelse og tilknytning af akkreditiver til brugere og tilknytning af rettigheder til brugere.
 
-Hovedaktiviteterne i **anvendelse af brugerstyring (anv.)** er følgende:
-- **Autentifikation** af entiteten, der ønsker adgang til tjenester, dvs. validering af entitetens identitet på grundlag af de fremviste akkreditiver.
-- **Billetudstedelse,** der på grundlag af den autentificerede eID udsteder en adgangsbillet (eng: Security Token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der ske en veldefineret og entydig omveksling mellem tekniske formater for akkreditiver eller attributter, således at tjenesten er i stand til at læse adgangsbilletten. Har entiteten ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil entiteten ikke opnå adgang hos tjenesten.
-- **Adgangskontrol,** som er håndhævelse af en tjenestes adgangspolitik. Det styrer, hvilke handlinger entiteten må udføre på en tjeneste, eller hvilke informationer entiteten må få adgang til på grundlag af den adgangsbillet, entiteten møder op med.
+Hovedaktiviteterne i **administration i brugerstyring** er følgende:
 
-Har en brugeradministration udstyret en entitet med det akkreditiv og den attributbeskrivelse, en tjeneste kræver, vil anvendelse af brugerstyring give adgang til tjenestens ressourcer, typisk i form af funktioner eller informationer i itsystemer.
+- **Registrering** af digitale identiteter og den løbende vedligeholdelse heraf.
+- **Udstedelse** af akkreditiver og tilknytning til digitale identiteter. Akkreditiver anvendes til at autenficere en digital identitet over for en tjeneste, som der ønskes adgang til.
+- **Attributbeskrivelse** af karakteristika ved digitale identiteter, som en tjeneste kræver for at give adgang, og den løbende vedligeholdelse heraf. Det er fx rettighedsrelevante attributter i form af roller og/eller andre attributter, der udtrykker kvaliteter, som en tjeneste har behov for at kende, før der kan gives adgang.
 
-Referencearkitekturen for brugerstyring fastlægger en række principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, akkreditiver, attributbeskrivelser, autentifikation, billetudstedelse og adgangskontrol:
+Hovedaktiviteterne i **anvendelse af brugerstyring** er følgende:
+- **Autentifikation** verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et akkreditiv (identifikationsmiddel).
+- **Billetudstedelse** udsteder på grundlag af autentifikation en signeret billet (eng: Security Token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der evt. ske en veldefineret omveksling attributter eller berigelse med attributter fra forskellige kilder, således at tjenesten er i stand til direkte at anvende adgangsbilletten. Har brugeren ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil vedkommende ikke opnå adgang hos tjenesten.
+- **Adgangskontrol**  er håndhævelse af en tjenestes adgangspolitik. Det styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til på grundlag af den adgangsbillet, der er udstedt. Attributterne i adgangsbilletten er således input til adgangskontrollen.
+
+Referencearkitekturen for brugerstyring fastlægger en række principper, der leder frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, akkreditiver, attributbeskrivelser, autentifikation, billetudstedelse og adgangskontrol:
 
 #### Principper
 
