@@ -35,7 +35,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper for at 
 1. Brugerne oplever en sammenhængende adgangsstyring
 2. Brugerstyringsløsninger udvikles med fokus på brugernes behov
 3. Brugerstyringsløsninger respekterer brugernes privatliv
-Principper med teknisk fokus:
+*Principper med teknisk fokus:*
 4. Aktører indgår i føderationer baseret på tillid
 5. Aktører i føderationer vurderer i deres styring af informationssikkerhed
 samspillet med andre aktører
@@ -97,13 +97,13 @@ For hvert afsnit angives en af følgende formuleringer:
 Referencearkitekturen vil give status for standarder mv. På arkitekturguiden.digitaliser.dk vil der være oplysninger om konkrete standarder, efterhånden som de beskrives og fastlægges.
 
 
-### Formål, anvendelse og målgruppe
+### Formål
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette, strukturere og prioritere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er således på det tværgående, dvs. adgang til tjenester på tværs af organisationer, herunder føderering på tværs af sikkerhedsdomæner med gensidig tillid via trust frameworks. Brugeren i brugerstyring er en entitet, der kan være en person, en organisation, en ting, et system eller en tjeneste.
 
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af en sikkerhedsløsning kan kommunikere med systemer og tjenester understøttet af en anden sikkerhedsløsning. Herved bliver interoperabilitet lettere at etablere og drive, så brugerne undgår at skulle logge på flere gange, og så oplysninger om brugere ikke skal vedligeholdes flere steder.
 
 ---
-
+### Anvendelse og målgruppe
 Referencearkitekturen har overordnet set tre anvendelseskontekster: standardisering, løsningsprojekter og etablering af føderationer.
 
 Referencearkitekturen skal anvendes til at udpege standarder, der understøtter skabelsen af sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af sektorer, nationalt og transnationalt. Referencearkitekturen fokuserer på at rammesætte, kravsætte og vejlede fællesoffentlige digitale løsninger, løsninger mellem offentlige sektorer, løsninger for tjenester, der skal anvende fællesoffentlige tjenester, og er vejledende for digitale løsninger inden for sektorer.
@@ -117,14 +117,14 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 ![Figur 1 Referencearkitekturens rolle](billede1.PNG)
 
 ---
-
+### Målgruppe
 Dette dokument har to målgrupper:
 
 - Den ene målgruppe er strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer.
 - Den anden målgruppe er projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere og designe løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring.
 
 
-### Scope
+### Afgrænsning
 Scope for strategi og referencearkitektur for brugerstyring er offentlige tjenesteudbydere, men referencearkitekturen kan også anvendes af private. Fokus er på brugerstyring i forhold til offentlige tjenester – herunder adgang på tværs for såvel borgere som offentlige og private brugerorganisationer.
 
 Scope omfatter også rollen som leverandør af brugerstyringstjenester (registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv.) i forhold til offentlige tjenester med både offentlige og private leverandører. Det omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata og login-systemer.
@@ -185,6 +185,7 @@ Afsnit 6-10 henvender sig særligt til løsningsarkitekter.
 Giver et samlet overblik over dokumentet inkl. resumé, formål, scope, metode og anvendelse.
 
 *Afsnit 2. Beskrivelse af brugerstyringsdomænet*
+**Flyt til 4**
 Beskrivelse af domænet, herunder de centrale opgaver: registrering, autentifikation, billetudstedelse, adgangspolitik og adgangskontrol.
 
 *Afsnit 3. Forretningsmæssige behov*
@@ -194,9 +195,11 @@ En gennemgang af de forretningsbehov der danner grundlag for udarbejdelsen af re
 - Behov hos virksomheder og myndigheder som tjenesteudbydere og som udbydere af brugerstyringstjenester.
 
 *Afsnit 4. Principper*
+**Flyt til 5**
 Dette afsnit formulerer rammer for de egenskaber, som fremtidige løsninger inden for offentlig brugerstyring skal have. Disse rammer skal sikre, at alle de forskellige løsninger der er behov for, samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
 
 *Afsnit 5. Begrebsmodel*
+**Flyt til 2**
 I dette afsnit beskrives en terminologi og en begrebsmodel for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type organisation, anvendelse eller implementering.
 
 *Afsnit 6. Byggeblokke*
