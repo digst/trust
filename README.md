@@ -10,8 +10,8 @@ Hvis der er brug for arbejde med flere fremtidige version, brancher vi, men anve
 
 Vi anvender pandoc til at lave word versioner når vi har brug det. Senere måske bikeshed til at producerer det færdige produkt.
 
-curl https://api.csswg.org/bikeshed/ -F file=@index.md -F force=1 > index.html
+`curl https://api.csswg.org/bikeshed/ -F file=@index.md -F force=1 > index.html`
 
 *eller*
 
-https://api.csswg.org/bikeshed/
+`https://api.csswg.org/bikeshed/``
