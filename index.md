@@ -187,12 +187,15 @@ Parallelt med arbejdet på referencearkitekturen er der igangsat analyser af hhv
 ## Centrale begreber
 I referencearkitekturen anvendes nogle begreber, som her beskrives for at lette læsningen.
 
-| Begreb  | Forklaring |
-|---------|-------------------------------------------------------------------|
-| Entitet                      | Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet. |
-| (elektronisk) identitet, eID | En digital persona repræsenteret ved et sæt af attributter |
-| Det fællesoffentlige eID     | En elektronisk identitet, et eID, der svarer til det nuværende NemID. |
-| Forretningstjeneste          | En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning. |
+<img src="bermuda.svg" />
+
+<dfn>Entitet</dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.
+
+<dfn>(elektronisk) identitet, eID</dfn> En digital persona repræsenteret ved et sæt af attributter.
+
+<dfn>Det fællesoffentlige eID</dfn> En elektronisk identitet, et eID, der svarer til det nuværende NemID.
+
+<dfn>forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
 
 Begreber uddybes i referencearkitekturens bilag A (ordliste). Øvrige begreber der introduceres, forklares undervejs.
 
@@ -369,6 +372,10 @@ Endelig indeholder eIDAS en række krav til såkaldte tillidstjenesteudbydere. T
 Ved etablering og drift af en identitetsinfrastruktur SKAL det vurderes, om man er omfattet eIDAS som tillidstjenesteudbyder og i givet fald efterleve forordningens krav.
 
 ## Forretningsfunktioner
+
+
+<img src="usecases.svg" />
+
 
 ### Forretningsfunktion(en/erne?) administration af elektronisk identitet, akkreditiver og attributter
 National Standard for Identiteters Sikringsniveau (NSIS) omfatter registrering, udstedelse og håndtering af elektroniske identiteter og udstedelse af akkreditiver. Standarden fastlægger, hvorledes følgende processer skal foregå, for at et eID kan være sikret på et af de fire sikringsniveauer:
