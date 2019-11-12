@@ -162,7 +162,10 @@ Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af bru
 
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer. Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
 
-![Figur 1 Referencearkitekturens rolle](billede1.PNG)
+<figure>
+<img src="billede1.PNG" />
+<fgicaption>Referencearkitekturens rolle</figcaption>
+</figure>
 
 ---
 ## Målgruppe
@@ -187,19 +190,10 @@ Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af 
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen.
 
-<img src="bermuda.svg" />
-
-<dfn>Entitet</dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. |
-<dfn>Identitet</dfn> En identitet er en digital persona (*bruger*) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.
-<dfn>Akkreditiv / (Elektronisk Identifikationsmiddel)</dfn> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn+password, NemID nøglekort mv.
-<dfn>Forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
-<dfn>Identitetsbroker</dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt *trusted third party*) fra forretningstjenester, og er derfor underlagt krav i denne standard.
-Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identiteters Sikringsniveauer v. 2.0.1), som har en omfattende begrebsliste for området vedr. digitale identiteter.
-
-Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
-
-I referencearkitekturen anvendes nogle begreber, som her beskrives for at lette læsningen.
-
+<figure>
+<img src="bermuda.svg" width="65%"/>
+<figcaption>[Bermuda-trekanten]</figcaption>
+</figure>
 
 
 <dfn>Entitet</dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.
@@ -209,6 +203,23 @@ I referencearkitekturen anvendes nogle begreber, som her beskrives for at lette 
 <dfn>Det fællesoffentlige eID</dfn> En elektronisk identitet, et eID, der svarer til det nuværende NemID.
 
 <dfn>forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+
+----
+
+<dfn>Entitet</dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.
+
+<dfn>Identitet</dfn> En identitet er en digital persona (*bruger*) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.
+
+<dfn>Akkreditiv / (Elektronisk Identifikationsmiddel)</dfn> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn+password, NemID nøglekort mv.
+
+<dfn>Forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+
+<dfn>Identitetsbroker</dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt *trusted third party*) fra forretningstjenester, og er derfor underlagt krav i denne standard.
+Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identiteters Sikringsniveauer v. 2.0.1), som har en omfattende begrebsliste for området vedr. digitale identiteter.
+
+Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
+
+
 
 
 Se Afsnit 4 og Bilag A: Ordliste
@@ -284,8 +295,13 @@ Dette afsnit beskriver konkret, hvordan referencearkitekturen implementeres, og 
 Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale løsninger. Det inkluderer oprettelse, ændring og nedlæggelse af identiteter (personer, organisationer, tjenester eller ting) i brugerstyringssystemer, tilknytning af akkreditiver og rettigheder til brugere og tildeling af adgang til ressourcer, typisk it-systemer. Brugerstyring er en fælles betegnelse for, hvordan en organisation fastlægger, håndterer og teknologisk sikrer, at kun brugere med de rigtige akkreditiver og karakteristika får adgang, og alle andre afvises.
 
 Figuren herunder viser de væsentligste elementer i brugerstyring (røde kasser) og de aktører, der er omfattet af eller anvender brugerstyring (blå kasser).
-![Figur 2 Oversigt over brugerstyringsdomænet](billede2.PNG)
-[De var ikke helt det vi tænkte da vi snakkede om røde og blå byggeblokke.. /madsh]
+
+<figure>
+<img src="billede2.PNG" />
+<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
+</figure>
+
+[De var ikke helt det vi tænkte da vi snakkede om røde og blå byggeblokke.. Blå peger på elementer beskrevet i andre ref. arkitekturer eller lovgivning. Vi brugte grå til at angive "endnu ikke definerede" /madsh]
 
 [Skal vi ikke også have et lag med lovgivning (GDPR, eIDAS) og standarder (NSIS) /TG]
 
@@ -302,6 +318,26 @@ En tjeneste og et it-system er i denne kontekst synonymer for det samme: et styk
 Rækkefølgen i gennemgangen af elementerne svarer til rækkefølgen i mange – men ikke alle – forløb i brugerstyring. I figuren er funktionerne beskrevet som opdelt på flere aktører, men en aktør kan også udføre flere eller alle funktioner.
 
 ## Forretningsmæssig kontekst
+
+<figure>
+<img src="usecases.svg" width="85%"/>
+<figcaption>[Forsøg på et funktionel overblik.... Det bør nok forsimples meget til blot at fortælle at der er administration og anvendelse. (men hvad så med kontrol, aftaleindgåelse og formulering af adgangskontrol?) ]</figcaption>
+</figure>
+
+### Administration af oplysninger til brug for brugerstyring
+
+<figure>
+<img src="administration.svg" width="95%"/>
+<figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
+</figure>
+
+
+### Anvendelse af oplysninger til adgangskontrol
+
+<figure>
+<img src="anvendelse.svg" width="85%"/>
+<figcaption></figcaption>
+</figure>
 
 ## Om (tillidstjenster?)
 
@@ -324,12 +360,17 @@ Endelig indeholder eIDAS en række krav til såkaldte tillidstjenesteudbydere. T
 Ved etablering og drift af en identitetsinfrastruktur SKAL det vurderes, om man er omfattet eIDAS som tillidstjenesteudbyder og i givet fald efterleve forordningens krav.
 
 ## Forretningsfunktioner
+[Områder for samarbejde mellem forretningsmæssige roller? Beskriver vi tjeneste/funktion eller samarbejde \madsh]
 
 
-<img src="usecases.svg" />
 
 
 ### Forretningsfunktion(en/erne?) administration af elektronisk identitet, akkreditiver og attributter
+
+[Bør vi splitte afsnittet op i tre overskrifter for at underbygger at det er tre seperate funktioner? ]
+
+
+
 National Standard for Identiteters Sikringsniveau (NSIS) omfatter registrering, udstedelse og håndtering af elektroniske identiteter og udstedelse af akkreditiver. Standarden fastlægger, hvorledes følgende processer skal foregå, for at et eID kan være sikret på et af de fire sikringsniveauer:
 
 - Ansøgning og registrering
@@ -365,7 +406,8 @@ Brugeren skal altid i brugssituationen være oplyst om, hvilken elektronisk iden
 
 Tilsvarende registreringsprocesser realiseres i NemLog-in3, der afløser NemID's erhvervsløsning.
 
-### Forretningsfunktion autentifikation
+### Forretningsfunktionerne autentifikation
+
 
 Autentifikation er de processer, hvor en entitet anvender sine akkreditiver/identifikationsmidler, og hvor en autentifikationstjeneste (ved login) verificerer akkreditiverne, fastlægger identiteten, og fastlægger det aktuelle sikringsniveau (i henhold til NSIS) som minimum af niveauet for identitetssikringen (IAL), autentifikationsstyrken (AAL), og en autentifikationstjenesten/brokeren (FAL).
 
@@ -572,8 +614,6 @@ Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevi
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
-### Principper??
-
 *Principper med brugerfokus:*
 
 1. Brugerne oplever en sammenhængende adgangsstyring
@@ -593,7 +633,7 @@ Referencearkitekturen for brugerstyring fastlægger følgende principper for at 
 9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
 10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
 
-#### Princip 1: Brugerne oplever en sammenhængende adgangsstyring
+### Princip 1: Brugerne oplever en sammenhængende adgangsstyring
 
 Brugere vil i deres dialoger med offentlige myndigheder skulle betjene sig af en række forskellige tjenester. Disse tjenester skal opleves sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret.
 
@@ -614,7 +654,7 @@ Brugere vil i deres dialoger med offentlige myndigheder skulle betjene sig af en
 >![](logo.png)
 >Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes.
 
-#### Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov
+### Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov
 
 Brugerstyringsløsninger anvendes af mange forskellige borgere, medarbejdere, virksomheder og myndigheder som brugerorganisationer og tjenesteudbydere. Disse brugere har meget forskelligartede behov afhængig af brugssituationen, det anvendte udstyr, virksomhedens karakter, størrelse og sikkerhedsbehov. Brugerstyringsløsningerne udvikles med henblik på at dække de forskellige brugeres behov.
 
@@ -635,7 +675,7 @@ Brugerstyringsløsninger anvendes af mange forskellige borgere, medarbejdere, vi
 > Princippet BØR efterkommes af brugerrettede tjenester, der anvender ovenstående brugerstyringsløsninger.
 > For øvrige KAN princippet efterkommes.
 
-#### Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv
+### Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv
 
 Fællesoffentlig brugerstyring indebærer, at information om brugerne lagres og udveksles mellem registreringstjenester, autentifikationstjenester, attributtjenester, identitetsbrokere og tjenester. Brugerstyringsløsninger skal beskytte information om brugerne (fortrolighed) og indhente og udveksle så lidt information som muligt (Data Minimisation).
 
@@ -657,7 +697,7 @@ Fællesoffentlig brugerstyring indebærer, at information om brugerne lagres og 
 >Princippet om respekt for brugernes privatliv SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
 > For øvrige SKAL princippet efterkommes.
 
-#### Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler
+### Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler
 [Måske et nyt princip 2: Føderation /madsh]
 
 Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
@@ -680,7 +720,7 @@ Aktørerne bør overholde en række fælles standarder for identiteter, fælles 
 >Princippet BØR efterkommes i tjenester, der anvender disse.
 >For øvrige KAN princippet efterkommes.
 
-#### Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører
+### Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører
 
 I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
 
@@ -698,7 +738,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 >![](logo.png)
 >Princippet om styring af informationssikkerhed i føderationer er en følge af ISO/IEC 27001,ISO/IEC 27005, EU’s General Data Protection Regulation (GDPR) og den danske persondatalov og SKAL efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse, samt i andre offentlige løsninger.
 
-#### Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer
+### Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer
 [Måske et nyt princip 1 /madsh]
 
 Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
@@ -719,7 +759,7 @@ Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres
 >Princippet om administration af brugere uden for fagapplikationer BØR efterkommes i fællesoffentlige løsninger, herunder Digital Post, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse.
 >For øvrige KAN princippet efterkommes.
 
-#### Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange
+### Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange
 [Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh]
 
 De fælles elementer i brugerstyring forsyner en elektronisk identitet med attributter, der fremsendes til den tjeneste, som brugeren vil have adgang til. Det er tjenesteudbyder, der har ansvaret for at håndhæve brugeres adgange til tjenesten på grundlag af information fra en identitetsbroker (og eventuelt supplerende lokale attributter). Tjenesteudbyder har ansvaret for ud fra sin adgangspolitik at afgøre, om brugeren får adgang.
@@ -737,7 +777,7 @@ De fælles elementer i brugerstyring forsyner en elektronisk identitet med attri
 >![](logo.png)
 >Princippet om tjenesteudbyderes håndhævelse af brugeres adgang er en følge af krav i persondataloven om dataansvar, og derfor SKAL det efterkommes af alle med dataansvar for fagapplikationer med persondata. Det BØR efterkommes af alle med dataansvar for fagapplikationer uden persondata.
 
-#### Princip 8: Brugerstyring realiseres i løst koblede komponenter
+### Princip 8: Brugerstyring realiseres i løst koblede komponenter
 
 Stadig flere løsninger for administration af elektroniske identiteter, autentifikation og adgangskontrol er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. De nødvendige aktiviteter omkring identitet og adgangsstyring skal logisk opdeles i udstedelse af akkreditiver, autentifikation af en given identitet, adgangskontrol, vedligeholdelse af attributter og vedligeholdelse af brugeres identiteter og adgange. På sigt vil vi sandsynligvis se en yderligere opdeling.
 
@@ -759,7 +799,7 @@ Stadig flere løsninger for administration af elektroniske identiteter, autentif
 > Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
 > For øvrige KAN princippet efterkommes.
 
-#### Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
+### Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
 
 
 I opbygningen af en digital infrastruktur har det offentlige gentagne gange opnået gode resultater ved at gå sammen om at opbygge en fælles kerne, som fungerer i samspil med øvrige komponenter. Det gælder fx NemID, NemLog-in og Datafordeleren der er fællesoffentlige, men det kan også gælde komponenter udviklet i en speciel kontekst som fx WAYF eller UNI-Login der indgår i et samspil på tværs.
@@ -778,7 +818,7 @@ I opbygningen af en digital infrastruktur har det offentlige gentagne gange opn�
 >![](logo.png)
 >Princippet om brugerstyring baseret på fælles kerne i samspil med decentrale komponenter SKAL efterkommes af alle fællesoffentlige løsninger. For de øvrige løsninger BØR princippet efterkommes.
 
-#### Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
+### Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
 
 Tværoffentlig brugerstyring indgår i et samspil med det internationale på flere måder. Flertallet af tekniske løsninger er udviklet i udlandet, og arkitekturer og standarder er udviklet i internationale samarbejder. Dansk brugerstyring på tværs skal så vidt muligt lægge sig tæt op ad den internationale udvikling, dog med en konkret vurdering af, hvorvidt denne udvikling passer i en dansk sammenhæng
 
