@@ -1443,7 +1443,7 @@ pre .property::before, pre .property::after {
        <a href="#forretningsfunktioner"><span class="secno">2.3</span> <span class="content">Forretningsfunktioner</span></a>
        <ol class="toc">
         <li><a href="#forretningsfunktion-en-erne-administration-af-elektronisk-identitet-akkreditiver-og-attributter"><span class="secno">2.3.1</span> <span class="content">Forretningsfunktion(en/erne?) administration af elektronisk identitet, akkreditiver og attributter</span></a>
-        <li><a href="#forretningsfunktionerne-autentifikation-og-autorisation"><span class="secno">2.3.2</span> <span class="content">Forretningsfunktionerne autentifikation og autorisation</span></a>
+        <li><a href="#forretningsfunktionerne-autentifikation"><span class="secno">2.3.2</span> <span class="content">Forretningsfunktionerne autentifikation</span></a>
         <li><a href="#foretningsfunktionen-autorisation"><span class="secno">2.3.3</span> <span class="content">Foretningsfunktionen autorisation</span></a>
         <li><a href="#forretningsfunktionen-kontrol-og-forebyggelse"><span class="secno">2.3.4</span> <span class="content">Forretningsfunktionen kontrol og forebyggelse</span></a>
        </ol>
@@ -1454,20 +1454,7 @@ pre .property::before, pre .property::after {
         <li><a href="#virksomheder-og-myndigheder-som-brugerorganisationer"><span class="secno">2.4.2</span> <span class="content">Virksomheder og myndigheder som brugerorganisationer</span></a>
         <li><a href="#virksomheder-og-myndigheder-som-tjenesteudbydere"><span class="secno">2.4.3</span> <span class="content">Virksomheder og myndigheder som tjenesteudbydere</span></a>
        </ol>
-      <li>
-       <a href="#principper"><span class="secno">2.5</span> <span class="content">Principper???</span></a>
-       <ol class="toc">
-        <li><a href="#princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring"><span class="secno">2.5.1</span> <span class="content">Princip 1: Brugerne oplever en sammenhængende adgangsstyring</span></a>
-        <li><a href="#princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov"><span class="secno">2.5.2</span> <span class="content">Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov</span></a>
-        <li><a href="#princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv"><span class="secno">2.5.3</span> <span class="content">Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv</span></a>
-        <li><a href="#princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler"><span class="secno">2.5.4</span> <span class="content">Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler</span></a>
-        <li><a href="#princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer"><span class="secno">2.5.5</span> <span class="content">Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører</span></a>
-        <li><a href="#princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer"><span class="secno">2.5.6</span> <span class="content">Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer</span></a>
-        <li><a href="#princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange"><span class="secno">2.5.7</span> <span class="content">Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</span></a>
-        <li><a href="#princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter"><span class="secno">2.5.8</span> <span class="content">Princip 8: Brugerstyring realiseres i løst koblede komponenter</span></a>
-        <li><a href="#princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen"><span class="secno">2.5.9</span> <span class="content">Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen</span></a>
-        <li><a href="#princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger"><span class="secno">2.5.10</span> <span class="content">Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</span></a>
-       </ol>
+      <li><a href="#principper"><span class="secno">2.5</span> <span class="content">Principper???</span></a>
       <li>
        <a href="#tvrgende-processer"><span class="secno">2.6</span> <span class="content">Tværgående processer</span></a>
        <ol class="toc">
@@ -1762,8 +1749,8 @@ udstedes en adgangsbillet, så informationen kan overføres til tjenesten. Derud
    </figure>
    <h4 class="heading settled" data-level="2.1.2" id="anvendelse-af-oplysninger-til-adgangskontrol"><span class="secno">2.1.2. </span><span class="content">Anvendelse af oplysninger til adgangskontrol</span><a class="self-link" href="#anvendelse-af-oplysninger-til-adgangskontrol"></a></h4>
    <figure>
-     <img src="administration.svg" width="95%"> 
-    <figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
+     <img src="anvendelse.svg" width="85%"> 
+    <figcaption></figcaption>
    </figure>
    <h3 class="heading settled" data-level="2.2" id="om-tillidstjenster"><span class="secno">2.2. </span><span class="content">Om (tillidstjenster?)</span><a class="self-link" href="#om-tillidstjenster"></a></h3>
    <p>Samspillet mellem brugere og tjenester på tværs af landegrænser vil i fremtiden stille øgede krav til identitet og autentifikation i international sammenhæng, overførsel af attributter på tværs af lande og brugerstyringstjenester og signering på tværs af landegrænser.</p>
@@ -1827,11 +1814,7 @@ udstedes en adgangsbillet, så informationen kan overføres til tjenesten. Derud
      <p>Brug af NemID-privat med automatisk tilknytning til virksomhed. Siden februar 2017 kan fuldt ansvarlige deltagere i personligt ejede virksomheder samt andre med en stærk tilkytning til en virksomhed anvende deres private NemID i forbindelse med deres virksomhed. Sammenknytningen af NemID-privat med virksomheden sker på grundlag af Erhvervsstyrelsens registrering af persontilknytninger i CVR. Samme funktionalitet videreføres med MitID-løsningen, der afløser NemID privat.</p>
    </ol>
    <p>Tilsvarende registreringsprocesser realiseres i NemLog-in3, der afløser NemID’s erhvervsløsning.</p>
-   <h4 class="heading settled" data-level="2.3.2" id="forretningsfunktionerne-autentifikation-og-autorisation"><span class="secno">2.3.2. </span><span class="content">Forretningsfunktionerne autentifikation og autorisation</span><a class="self-link" href="#forretningsfunktionerne-autentifikation-og-autorisation"></a></h4>
-   <figure>
-     <img src="anvendelse.svg" width="85%"> 
-    <figcaption></figcaption>
-   </figure>
+   <h4 class="heading settled" data-level="2.3.2" id="forretningsfunktionerne-autentifikation"><span class="secno">2.3.2. </span><span class="content">Forretningsfunktionerne autentifikation</span><a class="self-link" href="#forretningsfunktionerne-autentifikation"></a></h4>
    <p>Autentifikation er de processer, hvor en entitet anvender sine akkreditiver/identifikationsmidler, og hvor en autentifikationstjeneste (ved login) verificerer akkreditiverne, fastlægger identiteten, og fastlægger det aktuelle sikringsniveau (i henhold til NSIS) som minimum af niveauet for identitetssikringen (IAL), autentifikationsstyrken (AAL), og en autentifikationstjenesten/brokeren (FAL).</p>
    <p>Opgaverne i forbindelse med autentifikation kan løses af flere aktører, som hver løser en eller flere af opgaverne autentifikation, attributleverance og udstedelse af adgangsbillet. Ved en sådan opdeling kan de aftagende tjenester lettere betjene identiteter fra forskellige autentifikationstjenester gennem at anvende logintjenester og brokere, der afskærmer tjenesterne fra forskelligheder i formater eller protokoller for akkreditiver og attributter. En sådan opdeling kan også facilitere, at flere registreringstjenester, akkreditivtjenester og autentifikationstjenester kan samarbejde.</p>
    <blockquote>
@@ -2041,7 +2024,7 @@ foretage datamining og dele resultaterne mellem organisationerne i føderationen
     <li data-md>
      <p>Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</p>
    </ol>
-   <h4 class="heading settled" data-level="2.5.1" id="princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring"><span class="secno">2.5.1. </span><span class="content">Princip 1: Brugerne oplever en sammenhængende adgangsstyring</span><a class="self-link" href="#princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring">Princip 1: Brugerne oplever en sammenhængende adgangsstyring<a class="self-link" href="#princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring"></a></dfn></p>
    <p>Brugere vil i deres dialoger med offentlige myndigheder skulle betjene sig af en række forskellige tjenester. Disse tjenester skal opleves sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2068,7 +2051,7 @@ foretage datamining og dele resultaterne mellem organisationerne i føderationen
    <blockquote>
     <p>!<a href="logo.png"></a> Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.2" id="princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov"><span class="secno">2.5.2. </span><span class="content">Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov</span><a class="self-link" href="#princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov">Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov<a class="self-link" href="#princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov"></a></dfn></p>
    <p>Brugerstyringsløsninger anvendes af mange forskellige borgere, medarbejdere, virksomheder og myndigheder som brugerorganisationer og tjenesteudbydere. Disse brugere har meget forskelligartede behov afhængig af brugssituationen, det anvendte udstyr, virksomhedens karakter, størrelse og sikkerhedsbehov. Brugerstyringsløsningerne udvikles med henblik på at dække de forskellige brugeres behov.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2092,7 +2075,7 @@ Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
 Princippet BØR efterkommes af brugerrettede tjenester, der anvender ovenstående brugerstyringsløsninger.
 For øvrige KAN princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.3" id="princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv"><span class="secno">2.5.3. </span><span class="content">Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv</span><a class="self-link" href="#princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv">Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv<a class="self-link" href="#princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv"></a></dfn></p>
    <p>Fællesoffentlig brugerstyring indebærer, at information om brugerne lagres og udveksles mellem registreringstjenester, autentifikationstjenester, attributtjenester, identitetsbrokere og tjenester. Brugerstyringsløsninger skal beskytte information om brugerne (fortrolighed) og indhente og udveksle så lidt information som muligt (Data Minimisation).</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2120,8 +2103,7 @@ For øvrige KAN princippet efterkommes.</p>
     <p>!<a href="logo.png"></a> Princippet om respekt for brugernes privatliv SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
 For øvrige SKAL princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.4" id="princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler"><span class="secno">2.5.4. </span><span class="content">Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler</span><a class="self-link" href="#princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler"></a></h4>
-    [Måske et nyt princip 2: Føderation /madsh] 
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler">Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler<a class="self-link" href="#princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler"></a></dfn> [Måske et nyt princip 2: Føderation /madsh]</p>
    <p>Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2148,7 +2130,7 @@ For øvrige SKAL princippet efterkommes.</p>
 Princippet BØR efterkommes i tjenester, der anvender disse.
 For øvrige KAN princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.5" id="princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer"><span class="secno">2.5.5. </span><span class="content">Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører</span><a class="self-link" href="#princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer">Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører<a class="self-link" href="#princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer"></a></dfn></p>
    <p>I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2169,8 +2151,7 @@ For øvrige KAN princippet efterkommes.</p>
    <blockquote>
     <p>!<a href="logo.png"></a> Princippet om styring af informationssikkerhed i føderationer er en følge af ISO/IEC 27001,ISO/IEC 27005, EU’s General Data Protection Regulation (GDPR) og den danske persondatalov og SKAL efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse, samt i andre offentlige løsninger.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.6" id="princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer"><span class="secno">2.5.6. </span><span class="content">Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer</span><a class="self-link" href="#princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer"></a></h4>
-    [Måske et nyt princip 1 /madsh] 
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer">Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer<a class="self-link" href="#princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer"></a></dfn> [Måske et nyt princip 1 /madsh]</p>
    <p>Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2194,8 +2175,7 @@ For øvrige KAN princippet efterkommes.</p>
     <p>!<a href="logo.png"></a> Princippet om administration af brugere uden for fagapplikationer BØR efterkommes i fællesoffentlige løsninger, herunder Digital Post, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse.
 For øvrige KAN princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.7" id="princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange"><span class="secno">2.5.7. </span><span class="content">Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</span><a class="self-link" href="#princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange"></a></h4>
-    [Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh] 
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange">Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange<a class="self-link" href="#princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange"></a></dfn> [Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh]</p>
    <p>De fælles elementer i brugerstyring forsyner en elektronisk identitet med attributter, der fremsendes til den tjeneste, som brugeren vil have adgang til. Det er tjenesteudbyder, der har ansvaret for at håndhæve brugeres adgange til tjenesten på grundlag af information fra en identitetsbroker (og eventuelt supplerende lokale attributter). Tjenesteudbyder har ansvaret for ud fra sin adgangspolitik at afgøre, om brugeren får adgang.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2214,7 +2194,7 @@ For øvrige KAN princippet efterkommes.</p>
    <blockquote>
     <p>!<a href="logo.png"></a> Princippet om tjenesteudbyderes håndhævelse af brugeres adgang er en følge af krav i persondataloven om dataansvar, og derfor SKAL det efterkommes af alle med dataansvar for fagapplikationer med persondata. Det BØR efterkommes af alle med dataansvar for fagapplikationer uden persondata.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.8" id="princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter"><span class="secno">2.5.8. </span><span class="content">Princip 8: Brugerstyring realiseres i løst koblede komponenter</span><a class="self-link" href="#princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter">Princip 8: Brugerstyring realiseres i løst koblede komponenter<a class="self-link" href="#princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter"></a></dfn></p>
    <p>Stadig flere løsninger for administration af elektroniske identiteter, autentifikation og adgangskontrol er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. De nødvendige aktiviteter omkring identitet og adgangsstyring skal logisk opdeles i udstedelse af akkreditiver, autentifikation af en given identitet, adgangskontrol, vedligeholdelse af attributter og vedligeholdelse af brugeres identiteter og adgange. På sigt vil vi sandsynligvis se en yderligere opdeling.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2241,7 +2221,7 @@ For øvrige KAN princippet efterkommes.</p>
 Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
 For øvrige KAN princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.9" id="princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen"><span class="secno">2.5.9. </span><span class="content">Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen</span><a class="self-link" href="#princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen">Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen<a class="self-link" href="#princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen"></a></dfn></p>
    <p>I opbygningen af en digital infrastruktur har det offentlige gentagne gange opnået gode resultater ved at gå sammen om at opbygge en fælles kerne, som fungerer i samspil med øvrige komponenter. Det gælder fx NemID, NemLog-in og Datafordeleren der er fællesoffentlige, men det kan også gælde komponenter udviklet i en speciel kontekst som fx WAYF eller UNI-Login der indgår i et samspil på tværs.</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -2262,7 +2242,7 @@ For øvrige KAN princippet efterkommes.</p>
    <blockquote>
     <p>!<a href="logo.png"></a> Princippet om brugerstyring baseret på fælles kerne i samspil med decentrale komponenter SKAL efterkommes af alle fællesoffentlige løsninger. For de øvrige løsninger BØR princippet efterkommes.</p>
    </blockquote>
-   <h4 class="heading settled" data-level="2.5.10" id="princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger"><span class="secno">2.5.10. </span><span class="content">Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</span><a class="self-link" href="#princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger"></a></h4>
+   <p><dfn data-dfn-type="dfn" data-noexport id="princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger">Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger<a class="self-link" href="#princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger"></a></dfn></p>
    <p>Tværoffentlig brugerstyring indgår i et samspil med det internationale på flere måder. Flertallet af tekniske løsninger er udviklet i udlandet, og arkitekturer og standarder er udviklet i internationale samarbejder. Dansk brugerstyring på tværs skal så vidt muligt lægge sig tæt op ad den internationale udvikling, dog med en konkret vurdering af, hvorvidt denne udvikling passer i en dansk sammenhæng</p>
    <p><em>Rationale</em></p>
    <ul>
@@ -3154,4 +3134,14 @@ SOAP Binding) eller OIO IDWS Rest Profile ved ekstern kommunikation over interne
    <li><a href="#forretningstjeneste①">Forretningstjeneste</a><span>, in §1.5</span>
    <li><a href="#identitet">Identitet</a><span>, in §1.5</span>
    <li><a href="#identitetsbroker">Identitetsbroker</a><span>, in §1.5</span>
+   <li><a href="#princip-10-tvroffentlig-brugerstyring-etableres-i-overensstemmelse-med-internationale-standarder-og-lsninger">Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</a><span>, in §2.5</span>
+   <li><a href="#princip-1-brugerne-oplever-en-sammenhngende-adgangsstyring">Princip 1: Brugerne oplever en sammenhængende adgangsstyring</a><span>, in §2.5</span>
+   <li><a href="#princip-2-brugerstyringslsninger-udvikles-med-fokus-p-brugernes-behov">Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov</a><span>, in §2.5</span>
+   <li><a href="#princip-3-brugerstyringslsninger-respekterer-brugernes-privatliv">Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv</a><span>, in §2.5</span>
+   <li><a href="#princip-4-aktrer-indgr-i-fderationer-baseret-p-tillid-og-aftaler">Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler</a><span>, in §2.5</span>
+   <li><a href="#princip-5-aktrer-i-fderationer-vurderer-i-deres-styring-af-informationssikkerhed-samspillet-med-andre-aktrer">Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører</a><span>, in §2.5</span>
+   <li><a href="#princip-6-administration-af-brugere-flyttes-s-vidt-muligt-ud-af-fagapplikationer">Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer</a><span>, in §2.5</span>
+   <li><a href="#princip-7-tjenesteudbyder-den-dataansvarlige-har-ansvaret-for-at-hndhve-brugernes-adgange">Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</a><span>, in §2.5</span>
+   <li><a href="#princip-8-brugerstyring-realiseres-i-lst-koblede-komponenter">Princip 8: Brugerstyring realiseres i løst koblede komponenter</a><span>, in §2.5</span>
+   <li><a href="#princip-9-tvroffentlige-brugerstyringslsninger-baseres-p-en-kerne-af-flles-komponenter-i-samspil-med-vrige-komponenter-i-infrastrukturen">Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen</a><span>, in §2.5</span>
   </ul>
