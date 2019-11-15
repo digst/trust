@@ -230,6 +230,7 @@ Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identi
 
 Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
 
+"kun elektroniske identiteter kan anvende elektroniske tjenester".
 
 <div class="new">
 <figure>
