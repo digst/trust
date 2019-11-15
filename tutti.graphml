@@ -32,10 +32,10 @@
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="166.09256307946225" width="270.15857352053524" x="3621.9378127328832" y="-2436.823248774236"/>
+          <y:Geometry height="202.8534102828421" width="270.15857352053524" x="3621.9378127328832" y="-2436.823248774236"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#940027" verticalTextPosition="bottom" visible="true" width="195.9052734375" x="37.12665004151768" xml:space="preserve" y="4.0">(brugerstyring-)registrering</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#940027" verticalTextPosition="bottom" visible="true" width="171.904296875" x="49.12713832276768" xml:space="preserve" y="4.0">tillidstjenesteudbydelse</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -6172,9 +6172,7 @@ community</y:NodeLabel>
           <y:Geometry height="62.09346585016874" width="138.4047692668671" x="3177.0751023099733" y="-2451.0540060040316"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="37.515625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="79.0048828125" x="29.699943227183667" xml:space="preserve" y="12.288920425084598">anvendelse af 
-oplysninger til 
-adgangskontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="99.595703125" x="19.404533070933667" xml:space="preserve" y="23.460795425084598">tjeneste-anvendelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -6186,7 +6184,7 @@ adgangskontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
           <y:Geometry height="40.0" width="20.0" x="3082.3497770812087" y="-2440.007273078947"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="45.69921875" x="-65.8272119758376" xml:space="preserve" y="12.4140625">anvender<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="-20.1279932258376" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="39.009765625" x="-59.1377588508376" xml:space="preserve" y="12.4140625">subjekt<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="-20.1279932258376" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:SVGNodeProperties usingVisualBounds="false"/>
           <y:SVGModel svgBoundsPolicy="0">
             <y:SVGContent refid="1"/>
@@ -6201,7 +6199,7 @@ adgangskontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
           <y:Geometry height="40.0" width="20.0" x="3234.4921035515895" y="-2529.0577317590364"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="63.482421875" x="-21.7412109375" xml:space="preserve" y="-19.171875">dataansvarlig<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.5" nodeRatioX="0.0" nodeRatioY="-0.5" offsetX="0.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="107.3544921875" x="-43.67724609375" xml:space="preserve" y="-19.171875">tillidstjenesteudbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.5" nodeRatioX="0.0" nodeRatioY="-0.5" offsetX="0.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:SVGNodeProperties usingVisualBounds="false"/>
           <y:SVGModel svgBoundsPolicy="0">
             <y:SVGContent refid="1"/>
@@ -6236,21 +6234,6 @@ adgangskontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
     <node id="n421">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
-        <y:SVGNode>
-          <y:Geometry height="40.0" width="20.0" x="2910.090005473137" y="-2428.960540153863"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="10" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="17.6181640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#808080" verticalTextPosition="bottom" visible="true" width="50.38671875" x="-15.193359375" xml:space="preserve" y="-21.6181640625">registrator<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.5" nodeRatioX="0.0" nodeRatioY="-0.5" offsetX="0.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:SVGNodeProperties usingVisualBounds="false"/>
-          <y:SVGModel svgBoundsPolicy="0">
-            <y:SVGContent refid="1"/>
-          </y:SVGModel>
-        </y:SVGNode>
-      </data>
-    </node>
-    <node id="n422">
-      <data key="d4" xml:space="preserve"/>
-      <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="62.09346585016874" width="138.40476926686688" x="3023.3598296194114" y="-2540.1044646841206"/>
           <y:Fill hasColor="false" transparent="false"/>
@@ -6262,14 +6245,14 @@ brugerstyring<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n423">
+    <node id="n422">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="40.0" width="20.0" x="3390.205196805605" y="-2440.007273078947"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="40.1376953125" x="31.46033040124803" xml:space="preserve" y="12.4140625">udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.0" nodeRatioX="0.5" nodeRatioY="0.0" offsetX="11.46033040124803" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="134.01953125" x="31.46033040124803" xml:space="preserve" y="12.4140625">forretningstjenesteudbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.0" nodeRatioX="0.5" nodeRatioY="0.0" offsetX="11.46033040124803" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:SVGNodeProperties usingVisualBounds="false"/>
           <y:SVGModel svgBoundsPolicy="0">
             <y:SVGContent refid="1"/>
@@ -6277,22 +6260,7 @@ brugerstyring<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
         </y:SVGNode>
       </data>
     </node>
-    <node id="n424">
-      <data key="d4" xml:space="preserve"/>
-      <data key="d6">
-        <y:SVGNode>
-          <y:Geometry height="40.0" width="20.0" x="3082.3497770812087" y="-2356.715922880207"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="33.873046875" x="-54.80943661536185" xml:space="preserve" y="12.4140625">"Dims"<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="-20.936389740361847" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:SVGNodeProperties usingVisualBounds="false"/>
-          <y:SVGModel svgBoundsPolicy="0">
-            <y:SVGContent refid="1"/>
-          </y:SVGModel>
-        </y:SVGNode>
-      </data>
-    </node>
-    <node id="n425">
+    <node id="n423">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6305,7 +6273,7 @@ registrering<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n426">
+    <node id="n424">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6318,7 +6286,7 @@ registrering<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n427">
+    <node id="n425">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6331,7 +6299,7 @@ beskrivelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n428">
+    <node id="n426">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6347,7 +6315,7 @@ beskrivelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
         </y:SVGNode>
       </data>
     </node>
-    <node id="n429">
+    <node id="n427">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6362,7 +6330,7 @@ beskrivelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
         </y:SVGNode>
       </data>
     </node>
-    <node id="n430">
+    <node id="n428">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6377,7 +6345,7 @@ beskrivelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
         </y:SVGNode>
       </data>
     </node>
-    <node id="n431">
+    <node id="n429">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6390,7 +6358,7 @@ genkende?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n432">
+    <node id="n430">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6403,7 +6371,7 @@ kontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n433">
+    <node id="n431">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6418,7 +6386,7 @@ kontrol<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n434">
+    <node id="n432">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6434,7 +6402,7 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n435">
+    <node id="n433">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6449,7 +6417,7 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n436">
+    <node id="n434">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6464,7 +6432,7 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n437">
+    <node id="n435">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
@@ -6477,7 +6445,7 @@ beskrivelse?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n438">
+    <node id="n436">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6492,7 +6460,7 @@ beskrivelse?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel>
         </y:SVGNode>
       </data>
     </node>
-    <node id="n439">
+    <node id="n437">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6509,7 +6477,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n440">
+    <node id="n438">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6524,19 +6492,20 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n441">
+    <node id="n439">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="35.0" width="80.63404294511997" x="3082.3497770812087" y="-2117.3436827333608"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="41.79296875" x="19.4205370975601" xml:space="preserve" y="9.9140625">tjeneste<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.34375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="58.47265625" x="11.0806933475601" xml:space="preserve" y="4.328125">tjeneste-
+anvendelse<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n442">
+    <node id="n440">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6552,7 +6521,7 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n443">
+    <node id="n441">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6567,11 +6536,11 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n444">
+    <node id="n442">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="40.0" width="20.0" x="3241.21744793896" y="-2122.3436827333608"/>
+          <y:Geometry height="40.0" width="20.0" x="3241.21744793896" y="-2119.8436827333608"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#808080" verticalTextPosition="bottom" visible="true" width="84.60546875" x="-32.302734375" xml:space="preserve" y="-34.42701491445041">tjenesteansvarlig?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.5" nodeRatioX="0.0" nodeRatioY="-0.5" offsetX="0.0" offsetY="-19.255139914450183" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -6582,7 +6551,7 @@ borger?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n445">
+    <node id="n443">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
@@ -6599,7 +6568,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:SVGNode>
       </data>
     </node>
-    <node id="n446">
+    <node id="n444">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6612,7 +6581,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n447">
+    <node id="n445">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6625,7 +6594,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n448">
+    <node id="n446">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6638,25 +6607,25 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n449">
+    <node id="n447">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="166.09256307946225" width="270.15857352053524" x="3907.9303058453406" y="-2436.823248774236"/>
+          <y:Geometry height="127.82710136910964" width="270.15857352053524" x="3907.9303058453406" y="-2436.823248774236"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#940027" verticalTextPosition="bottom" visible="true" width="210.0625" x="30.048036760267678" xml:space="preserve" y="4.0">anvendelse (af brugerstyring)</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="202.1875" x="4.0" xml:space="preserve" y="4.0">(forretningtjeneste)-udbydelse</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n450">
+    <node id="n448">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="235.30560004896586" x="3925.3567925811253" y="-2396.9527383285313"/>
+          <y:Geometry height="30.0" width="235.30560004896586" x="3641.0239648720762" y="-2275.354169236113"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="199.0771484375" x="18.114225805732985" xml:space="preserve" y="3.46728515625">autentifikation (genkende?)</y:NodeLabel>
@@ -6664,20 +6633,20 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n451">
+    <node id="n449">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="235.30560004896586" x="3925.3567925811253" y="-2355.974754873081"/>
+          <y:Geometry height="75.64079859372214" width="235.30560004896586" x="3922.0963862534186" y="-2396.977238292236"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="202.201171875" x="16.552214086982985" xml:space="preserve" y="3.46728515625">adgangskontrol (godkende?)</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#940027" verticalTextPosition="bottom" visible="true" width="202.201171875" x="16.552214086982985" xml:space="preserve" y="4.0">adgangskontrol (godkende?)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n452">
+    <node id="n450">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6690,33 +6659,20 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n453">
+    <node id="n451">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="235.30560004896586" x="3642.6247057963747" y="-2496.823248774236"/>
+          <y:Geometry height="30.0" width="235.30560004896586" x="3915.503302344542" y="-2496.823248774236"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="224.9033203125" x="5.2011398682329855" xml:space="preserve" y="3.46728515625">administrere adgangspolitikker</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="201.5927734375" x="16.856413305732985" xml:space="preserve" y="3.46728515625">administrere adgangspolitik</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n454">
-      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="30.0" width="235.30560004896586" x="3926.1866252828295" y="-2496.823248774236"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="93.646484375" x="70.82955783698299" xml:space="preserve" y="3.46728515625">indgå aftaler</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n455">
+    <node id="n452">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6729,7 +6685,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n456">
+    <node id="n453">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6742,7 +6698,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n457">
+    <node id="n454">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
@@ -6755,15 +6711,56 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n455">
+      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
+      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="165.31860248868395" x="3957.0898850335593" y="-2363.7755878990392"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="88.8544921875" x="38.232055150591805" xml:space="preserve" y="5.1796875">anvende data</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n456">
+      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
+      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="222.1151623183937" width="209.2809973207062" x="4203.797563155844" y="-2531.11130972352"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#808080" verticalTextPosition="bottom" visible="true" width="149.537109375" x="29.871943972852932" xml:space="preserve" y="4.0">kontrol og forebyggelse</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n457">
+      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
+      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4222.73382080732" y="-2492.3167024129716"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="151.1025390625" x="10.152971477627034" xml:space="preserve" y="4.827869315336102">overvåge og forebygge 
+regelbrud</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <node id="n458">
       <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="235.3056000489654" x="3925.3567925811253" y="-2314.996771417631"/>
+          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4222.73382080732" y="-2437.2347780094883"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="88.8544921875" x="73.22555393073253" xml:space="preserve" y="5.1796875">anvende data</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="151.1025390625" x="10.152971477627034" xml:space="preserve" y="4.827869315336557">overvåge og forebygge 
+identitetsmisbrug</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -6773,61 +6770,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
       <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="260.3806240287463" width="209.2809973207062" x="4203.797563155844" y="-2531.11130972352"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#808080" verticalTextPosition="bottom" visible="true" width="149.537109375" x="29.871943972852932" xml:space="preserve" y="4.0">kontrol og forebyggelse</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n460">
-      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="30.0" width="171.4084820177544" x="4224.558376724583" y="-2480.8550642271903"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="49.1513671875" x="61.128557415127034" xml:space="preserve" y="5.1796875">logning</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n461">
-      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4224.558376724583" y="-2440.7101284543805"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="151.1025390625" x="10.152971477627034" xml:space="preserve" y="4.827869315336102">overvåge og forebygge 
-regelbrud</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n462">
-      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4224.558376724583" y="-2385.6282040508972"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="151.1025390625" x="10.152971477627034" xml:space="preserve" y="4.827869315336557">overvåge og forebygge 
-identitetsmisbrug</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n463">
-      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4224.558376724583" y="-2330.546279647414"/>
+          <y:Geometry height="44.93698863067266" width="171.4084820177544" x="4222.73382080732" y="-2382.152853606005"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="14" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="147.212890625" x="12.097795696377034" xml:space="preserve" y="4.827869315336102">overvåge og forebygge
@@ -6836,7 +6779,7 @@ indbrud</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n464">
+    <node id="n460">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6851,7 +6794,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n465">
+    <node id="n461">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6866,7 +6809,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n466">
+    <node id="n462">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6881,7 +6824,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n467">
+    <node id="n463">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6896,7 +6839,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n468">
+    <node id="n464">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6911,7 +6854,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n469">
+    <node id="n465">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6926,7 +6869,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n470">
+    <node id="n466">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6941,7 +6884,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n471">
+    <node id="n467">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6956,7 +6899,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n472">
+    <node id="n468">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6971,7 +6914,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n473">
+    <node id="n469">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -6986,7 +6929,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n474">
+    <node id="n470">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -7001,7 +6944,7 @@ indbrud</y:NodeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n475">
+    <node id="n471">
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -7014,6 +6957,49 @@ indbrud</y:NodeLabel>
             <y:MethodLabel xml:space="preserve"/>
           </y:UML>
         </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n472">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="25.0" width="75.0" x="2637.7053993518903" y="-2470.2462231020218"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808080" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="39.337890625" x="17.8310546875" xml:space="preserve" y="3.0">objekt</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
+            <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n473">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="40.0" width="20.0" x="3082.3497770812087" y="-2383.6488998946"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#940027" verticalTextPosition="bottom" visible="true" width="33.4482421875" x="-53.5762354133376" xml:space="preserve" y="12.4140625">objekt<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="-20.1279932258376" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="false"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n474">
+      <data key="d4" xml:space="preserve"><![CDATA[http://data.gov.dk]]></data>
+      <data key="d5" xml:space="preserve"><![CDATA[Link til hjemmeside]]></data>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="235.30560004896586" x="3638.4365546304944" y="-2496.823248774236"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="23.0654296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="182.828125" x="26.238737524482985" xml:space="preserve" y="3.46728515625">administrere tillidspolitik</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
       </data>
     </node>
     <edge id="e0" source="n27" target="n28">
@@ -10625,7 +10611,7 @@ oplysninger om<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e286" source="n416" target="n423">
+    <edge id="e286" source="n416" target="n422">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10638,7 +10624,7 @@ adgangskontrol<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e287" source="n423" target="n420">
+    <edge id="e287" source="n422" target="n420">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10677,7 +10663,7 @@ adgangspolitik<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e290" source="n422" target="n418">
+    <edge id="e290" source="n421" target="n418">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10690,7 +10676,7 @@ valider, udstil<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSid
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e291" source="n422" target="n417">
+    <edge id="e291" source="n421" target="n417">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10703,7 +10689,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e292" source="n423" target="n419">
+    <edge id="e292" source="n422" target="n419">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10726,7 +10712,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e294" source="n427" target="n438">
+    <edge id="e294" source="n425" target="n436">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10738,7 +10724,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e295" source="n428" target="n425">
+    <edge id="e295" source="n426" target="n423">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10753,7 +10739,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e296" source="n426" target="n429">
+    <edge id="e296" source="n424" target="n427">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10766,7 +10752,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e297" source="n425" target="n430">
+    <edge id="e297" source="n423" target="n428">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10778,7 +10764,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e298" source="n426" target="n428">
+    <edge id="e298" source="n424" target="n426">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10790,7 +10776,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e299" source="n427" target="n428">
+    <edge id="e299" source="n425" target="n426">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10805,7 +10791,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e300" source="n437" target="n433">
+    <edge id="e300" source="n435" target="n431">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10817,7 +10803,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e301" source="n434" target="n431">
+    <edge id="e301" source="n432" target="n429">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10829,7 +10815,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e302" source="n431" target="n436">
+    <edge id="e302" source="n429" target="n434">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10841,7 +10827,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e303" source="n435" target="n432">
+    <edge id="e303" source="n433" target="n430">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10853,7 +10839,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e304" source="n435" target="n437">
+    <edge id="e304" source="n433" target="n435">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10867,7 +10853,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e305" source="n431" target="n435">
+    <edge id="e305" source="n429" target="n433">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10881,26 +10867,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e306" source="n424" target="n416">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#808080" type="line" width="1.0"/>
-          <y:Arrows source="none" target="none"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="55.51899372454136" y="0.9864390424659177">
-            <y:LabelModel>
-              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
-            </y:ModelParameter>
-            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e307" source="n430" target="n439">
+    <edge id="e306" source="n428" target="n437">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10923,7 +10890,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e308" source="n429" target="n439">
+    <edge id="e307" source="n427" target="n437">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10943,7 +10910,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e309" source="n438" target="n439">
+    <edge id="e308" source="n436" target="n437">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10966,7 +10933,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e310" source="n442" target="n441">
+    <edge id="e309" source="n440" target="n439">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10978,7 +10945,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e311" source="n440" target="n441">
+    <edge id="e310" source="n438" target="n439">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -10992,7 +10959,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e312" source="n441" target="n443">
+    <edge id="e311" source="n439" target="n441">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11007,19 +10974,19 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e313" source="n444" target="n441">
+    <edge id="e312" source="n442" target="n439">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#808080" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="8" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="12.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="64.00390625" x="-71.23216366017868" xml:space="preserve" y="-13.418501546017978">adgangskontrol<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="0.6214014576866029" distanceToCenter="false" position="right" ratio="0.5295608035045484" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="8" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="12.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="64.00390625" x="-71.23216366017868" xml:space="preserve" y="-13.558834191047481">adgangskontrol<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="0.6214014576866029" distanceToCenter="false" position="right" ratio="0.5295608035045484" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e314" source="n443" target="n445">
+    <edge id="e313" source="n441" target="n443">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11042,7 +11009,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e315" source="n440" target="n445">
+    <edge id="e314" source="n438" target="n443">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11065,7 +11032,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e316" source="n464" target="n466">
+    <edge id="e315" source="n460" target="n462">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11080,7 +11047,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e317" source="n465" target="n464">
+    <edge id="e316" source="n461" target="n460">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11094,7 +11061,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e318" source="n465" target="n466">
+    <edge id="e317" source="n461" target="n462">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11107,7 +11074,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e319" source="n467" target="n464">
+    <edge id="e318" source="n463" target="n460">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11130,7 +11097,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e320" source="n468" target="n464">
+    <edge id="e319" source="n464" target="n460">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11153,7 +11120,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e321" source="n469" target="n468">
+    <edge id="e320" source="n465" target="n464">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11176,7 +11143,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e322" source="n470" target="n468">
+    <edge id="e321" source="n466" target="n464">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11199,7 +11166,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e323" source="n472" target="n467">
+    <edge id="e322" source="n468" target="n463">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11222,7 +11189,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e324" source="n471" target="n467">
+    <edge id="e323" source="n467" target="n463">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11245,7 +11212,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e325" source="n473" target="n475">
+    <edge id="e324" source="n469" target="n471">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11260,7 +11227,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e326" source="n474" target="n473">
+    <edge id="e325" source="n470" target="n469">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11274,7 +11241,7 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e327" source="n474" target="n475">
+    <edge id="e326" source="n470" target="n471">
       <data key="d8" xml:space="preserve"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -11283,6 +11250,18 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
           <y:Arrows source="none" target="none"/>
           <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.34375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="74.009765625" x="-37.004761057125506" xml:space="preserve" y="-31.352757316475163">associeres 
 (er knytter til?)<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="10.0" distanceToCenter="false" position="center" ratio="0.0" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="true"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e327" source="n416" target="n473">
+      <data key="d8" xml:space="preserve"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-17.93724134876311" sy="9.487476747396613" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#808080" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Open Sans" fontSize="8" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="14.89453125" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="70.60546875" x="-85.54985163507672" xml:space="preserve" y="8.219686363135224">identificerer sig?<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
       </data>
