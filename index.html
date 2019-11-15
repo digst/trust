@@ -1241,6 +1241,14 @@ Possible extra rowspan handling
 	h2#abstract {display: none;}
 	.p-summary {width: 50%; margin-left: 24px; padding: 0px;}
 
+
+
+}
+
+.new {
+    border: solid 3px green;
+    padding: 6px;
+    margin: 18px 0px 18px 0px;
 }
 </style>
 <style>/* style-md-lists */
@@ -1394,7 +1402,7 @@ pre .property::before, pre .property::after {
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1>Fællesoffentlig <br>referencearkitektur for <br>brugerstyring</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <time class="dt-updated" datetime="2019-11-12">12 November 2019</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <time class="dt-updated" datetime="2019-11-15">15 November 2019</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1671,22 +1679,32 @@ pre .property::before, pre .property::after {
    <h3 class="heading settled" data-level="1.5" id="centrale-begreber"><span class="secno">1.5. </span><span class="content">Centrale begreber</span><a class="self-link" href="#centrale-begreber"></a></h3>
     I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen. 
-   <figure>
-     <img src="bermuda.svg" width="65%"> 
-    <figcaption>[Bermuda-trekanten]</figcaption>
-   </figure>
-   <p><dfn data-dfn-type="dfn" data-noexport id="entitet">Entitet<a class="self-link" href="#entitet"></a></dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.</p>
+   <div class="new">
+    <figure>
+      <img src="bermuda.svg" width="65%"> 
+     <figcaption>[Bermuda-trekanten]</figcaption>
+    </figure>
+   </div>
+    <dfn data-dfn-type="dfn" data-noexport id="entiteter">Entiteter<a class="self-link" href="#entiteter"></a></dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet. 
    <p><dfn data-dfn-type="dfn" data-noexport id="-elektronisk-identitet-eid">(elektronisk) identitet, eID<a class="self-link" href="#-elektronisk-identitet-eid"></a></dfn> En digital persona repræsenteret ved et sæt af attributter.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="det-fllesoffentlige-eid">Det fællesoffentlige eID<a class="self-link" href="#det-fllesoffentlige-eid"></a></dfn> En elektronisk identitet, et eID, der svarer til det nuværende NemID.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="forretningstjeneste">forretningstjeneste<a class="self-link" href="#forretningstjeneste"></a></dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.</p>
    <hr>
-   <p><dfn data-dfn-type="dfn" data-noexport id="entitet①">Entitet<a class="self-link" href="#entitet①"></a></dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.</p>
-   <p><dfn data-dfn-type="dfn" data-noexport id="identitet">Identitet<a class="self-link" href="#identitet"></a></dfn> En identitet er en digital persona (<em>bruger</em>) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.</p>
-   <p><dfn data-dfn-type="dfn" data-noexport id="akkreditiv-elektronisk-identifikationsmiddel">Akkreditiv / (Elektronisk Identifikationsmiddel)<a class="self-link" href="#akkreditiv-elektronisk-identifikationsmiddel"></a></dfn> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn+password, NemID nøglekort mv.</p>
-   <p><dfn data-dfn-type="dfn" data-noexport id="forretningstjeneste①">Forretningstjeneste<a class="self-link" href="#forretningstjeneste①"></a></dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.</p>
-   <p><dfn data-dfn-type="dfn" data-noexport id="identitetsbroker">Identitetsbroker<a class="self-link" href="#identitetsbroker"></a></dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt <em>trusted third party</em>) fra forretningstjenester, og er derfor underlagt krav i denne standard.
+   <div class="new">
+     <dfn data-dfn-type="dfn" data-noexport id="entitet">Entitet<a class="self-link" href="#entitet"></a></dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. 
+    <p><dfn data-dfn-type="dfn" data-noexport id="identitet">Identitet<a class="self-link" href="#identitet"></a></dfn> En identitet er en digital persona (<em>bruger</em>) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.</p>
+    <p><dfn data-dfn-type="dfn" data-noexport id="akkreditiv-elektronisk-identifikationsmiddel">Akkreditiv / (Elektronisk Identifikationsmiddel)<a class="self-link" href="#akkreditiv-elektronisk-identifikationsmiddel"></a></dfn> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn+password, NemID nøglekort mv.</p>
+    <p><dfn data-dfn-type="dfn" data-noexport id="forretningstjeneste①">Forretningstjeneste<a class="self-link" href="#forretningstjeneste①"></a></dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.</p>
+    <p><dfn data-dfn-type="dfn" data-noexport id="identitetsbroker">Identitetsbroker<a class="self-link" href="#identitetsbroker"></a></dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt <em>trusted third party</em>) fra forretningstjenester, og er derfor underlagt krav i denne standard.
 Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identiteters Sikringsniveauer v. 2.0.1), som har en omfattende begrebsliste for området vedr. digitale identiteter.</p>
+   </div>
    <p>Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.</p>
+   <div class="new">
+    <figure>
+      <img src="firkant.svg" width="65%"> 
+     <figcaption>[en trekant og en firkant....]</figcaption>
+    </figure>
+   </div>
    <p>Se Afsnit 4 og Bilag A: Ordliste</p>
    <h3 class="heading settled" data-level="1.6" id="tilblivelse-og-governance"><span class="secno">1.6. </span><span class="content">Tilblivelse og governance</span><a class="self-link" href="#tilblivelse-og-governance"></a></h3>
    <h3 class="heading settled" data-level="1.7" id="anvendt-metode-notation-og-signaturforklaring"><span class="secno">1.7. </span><span class="content">Anvendt metode, notation og signaturforklaring</span><a class="self-link" href="#anvendt-metode-notation-og-signaturforklaring"></a></h3>
@@ -1728,6 +1746,12 @@ læsere med kendskab til domænet og dets begreber.</p>
      <img src="billede2.PNG"> 
     <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
    </figure>
+   <div class="new">
+    <figure>
+      <img src="kontekst.svg"> 
+     <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
+    </figure>
+   </div>
    <p>[De var ikke helt det vi tænkte da vi snakkede om røde og blå byggeblokke.. Blå peger på elementer beskrevet i andre ref. arkitekturer eller lovgivning. Vi brugte grå til at angive "endnu ikke definerede" /madsh]</p>
    <p>[Skal vi ikke også have et lag med lovgivning (GDPR, eIDAS) og standarder (NSIS) /TG]</p>
    <p>Informationssikkerhed (øverste niveau i midten) forvaltes af de dele af organisationen, der kan afgøre, hvilke risici organisationen vil gardere sig imod og på hvilket niveau.</p>
@@ -1738,20 +1762,26 @@ udstedes en adgangsbillet, så informationen kan overføres til tjenesten. Derud
    <p>En tjeneste og et it-system er i denne kontekst synonymer for det samme: et stykke it, der kan levere informationer og funktionaliteter. Et stykke it, der optræder som leverandør, kaldes en tjeneste eller tjeneste<em>udbyder</em>. Et stykke it, der optræder som den bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument. Det samme stykke it kan optræde både som leverandør (være en tjeneste) og i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.</p>
    <p>Rækkefølgen i gennemgangen af elementerne svarer til rækkefølgen i mange – men ikke alle – forløb i brugerstyring. I figuren er funktionerne beskrevet som opdelt på flere aktører, men en aktør kan også udføre flere eller alle funktioner.</p>
    <h3 class="heading settled" data-level="2.1" id="forretningsmssig-kontekst"><span class="secno">2.1. </span><span class="content">Forretningsmæssig kontekst</span><a class="self-link" href="#forretningsmssig-kontekst"></a></h3>
-   <figure>
-     <img src="usecases.svg" width="85%"> 
-    <figcaption>[Forsøg på et funktionel overblik.... Det bør nok forsimples meget til blot at fortælle at der er administration og anvendelse. (men hvad så med kontrol, aftaleindgåelse og formulering af adgangskontrol?) ]</figcaption>
-   </figure>
+   <div class="new">
+    <figure>
+      <img src="usecases.svg" width="85%"> 
+     <figcaption>[Forsøg på et funktionel overblik.... Det bør nok forsimples meget til blot at fortælle at der er administration og anvendelse. (men hvad så med kontrol, aftaleindgåelse og formulering af adgangskontrol?) ]</figcaption>
+    </figure>
+   </div>
    <h4 class="heading settled" data-level="2.1.1" id="administration-af-oplysninger-til-brug-for-brugerstyring"><span class="secno">2.1.1. </span><span class="content">Administration af oplysninger til brug for brugerstyring</span><a class="self-link" href="#administration-af-oplysninger-til-brug-for-brugerstyring"></a></h4>
-   <figure>
-     <img src="administration.svg" width="95%"> 
-    <figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
-   </figure>
+   <div class="new">
+    <figure>
+      <img src="administration.svg" width="95%"> 
+     <figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
+    </figure>
+   </div>
    <h4 class="heading settled" data-level="2.1.2" id="anvendelse-af-oplysninger-til-adgangskontrol"><span class="secno">2.1.2. </span><span class="content">Anvendelse af oplysninger til adgangskontrol</span><a class="self-link" href="#anvendelse-af-oplysninger-til-adgangskontrol"></a></h4>
-   <figure>
-     <img src="anvendelse.svg" width="85%"> 
-    <figcaption></figcaption>
-   </figure>
+   <div>
+    <figure>
+      <img src="anvendelse.svg" width="85%"> 
+     <figcaption></figcaption>
+    </figure>
+   </div>
    <h3 class="heading settled" data-level="2.2" id="om-tillidstjenster"><span class="secno">2.2. </span><span class="content">Om (tillidstjenster?)</span><a class="self-link" href="#om-tillidstjenster"></a></h3>
    <p>Samspillet mellem brugere og tjenester på tværs af landegrænser vil i fremtiden stille øgede krav til identitet og autentifikation i international sammenhæng, overførsel af attributter på tværs af lande og brugerstyringstjenester og signering på tværs af landegrænser.</p>
    <p>Dette behov har skabt en større og større grad af konsolidering af modelbegreber og regulering af brugerstyring og identitetshåndtering internationalt. I EU-regi er der særligt gennem eIDAS-forordningen skabt øget mulighed for interoperabilitet på tværs af lande.</p>
@@ -3124,12 +3154,8 @@ SOAP Binding) eller OIO IDWS Rest Profile ved ekstern kommunikation over interne
    <li><a href="#akkreditiv-elektronisk-identifikationsmiddel">Akkreditiv / (Elektronisk Identifikationsmiddel)</a><span>, in §1.5</span>
    <li><a href="#det-fllesoffentlige-eid">Det fællesoffentlige eID</a><span>, in §1.5</span>
    <li><a href="#-elektronisk-identitet-eid">(elektronisk) identitet, eID</a><span>, in §1.5</span>
-   <li>
-    Entitet
-    <ul>
-     <li><a href="#entitet">definition of</a><span>, in §1.5</span>
-     <li><a href="#entitet①">definition of</a><span>, in §1.5</span>
-    </ul>
+   <li><a href="#entitet">Entitet</a><span>, in §1.5</span>
+   <li><a href="#entiteter">Entiteter</a><span>, in §1.5</span>
    <li><a href="#forretningstjeneste">forretningstjeneste</a><span>, in §1.5</span>
    <li><a href="#forretningstjeneste①">Forretningstjeneste</a><span>, in §1.5</span>
    <li><a href="#identitet">Identitet</a><span>, in §1.5</span>

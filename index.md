@@ -25,6 +25,14 @@
 	h2#abstract {display: none;}
 	.p-summary {width: 50%; margin-left: 24px; padding: 0px;}
 
+
+
+}
+
+.new {
+    border: solid 3px green;
+    padding: 6px;
+    margin: 18px 0px 18px 0px;
 }
 </style>
 <pre class="metadata">
@@ -190,13 +198,13 @@ Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af 
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen.
 
+<div class="new">
 <figure>
 <img src="bermuda.svg" width="65%"/>
 <figcaption>[Bermuda-trekanten]</figcaption>
 </figure>
-
-
-<dfn>Entitet</dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.
+</div>
+<dfn>Entiteter</dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.
 
 <dfn>(elektronisk) identitet, eID</dfn> En digital persona repræsenteret ved et sæt af attributter.
 
@@ -206,6 +214,7 @@ læsningen.
 
 ----
 
+<div class="new">
 <dfn>Entitet</dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.
 
 <dfn>Identitet</dfn> En identitet er en digital persona (*bruger*) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.
@@ -217,9 +226,17 @@ læsningen.
 <dfn>Identitetsbroker</dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt *trusted third party*) fra forretningstjenester, og er derfor underlagt krav i denne standard.
 Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identiteters Sikringsniveauer v. 2.0.1), som har en omfattende begrebsliste for området vedr. digitale identiteter.
 
+</div>
+
 Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
 
 
+<div class="new">
+<figure>
+<img src="firkant.svg" width="65%"/>
+<figcaption>[en trekant og en firkant....]</figcaption>
+</figure>
+</div>
 
 
 Se Afsnit 4 og Bilag A: Ordliste
@@ -301,6 +318,13 @@ Figuren herunder viser de væsentligste elementer i brugerstyring (røde kasser)
 <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
 
+<div class="new">
+<figure>
+<img src="kontekst.svg" />
+<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
+</figure>
+</div>
+
 [De var ikke helt det vi tænkte da vi snakkede om røde og blå byggeblokke.. Blå peger på elementer beskrevet i andre ref. arkitekturer eller lovgivning. Vi brugte grå til at angive "endnu ikke definerede" /madsh]
 
 [Skal vi ikke også have et lag med lovgivning (GDPR, eIDAS) og standarder (NSIS) /TG]
@@ -319,25 +343,31 @@ Rækkefølgen i gennemgangen af elementerne svarer til rækkefølgen i mange –
 
 ## Forretningsmæssig kontekst
 
+<div class="new">
 <figure>
 <img src="usecases.svg" width="85%"/>
 <figcaption>[Forsøg på et funktionel overblik.... Det bør nok forsimples meget til blot at fortælle at der er administration og anvendelse. (men hvad så med kontrol, aftaleindgåelse og formulering af adgangskontrol?) ]</figcaption>
 </figure>
+</div>
 
 ### Administration af oplysninger til brug for brugerstyring
 
+<div class="new">
 <figure>
 <img src="administration.svg" width="95%"/>
 <figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
 </figure>
+</div>
 
 
 ### Anvendelse af oplysninger til adgangskontrol
 
+<div>
 <figure>
 <img src="anvendelse.svg" width="85%"/>
 <figcaption></figcaption>
 </figure>
+</div>
 
 ## Om (tillidstjenster?)
 
