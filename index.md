@@ -416,7 +416,7 @@ I forbindelse med registreringen eller efter denne kan identitetens karakteristi
 
 
 
-### Forretningsfunktionerne autentifikation
+### Forretningsfunktionen autentifikation
 
 Autentifikation er en proces, som genkender og verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et identifikationsmiddel, der er koblet til identiteten som beskrevet ovenfor. Ved multi-faktor autentifikation forstås en au- tentifikationsproces, hvor det anvendte elektroniske identifikationsmiddel er baseret på flere autentifikationsfaktorer fra forskellige kategorier (noget kun brugeren ved, er, eller er i besiddelse af). Et eksempel her på findes i NemID/MitID, hvor brugerne kan logge på med en kombination af et hemmeligt kodeord og 'swipe' i en App.
 
@@ -503,7 +503,7 @@ Et andet væsentligt element i sikkerheden er, at alle processerne i administrat
 Tjenester gennemgår næsten altid en forandring, efterhånden som aktiviteterne, tjenesten understøtter, udvikler sig. Det skal sikres, at disse nye faciliteter i tjenesterne også klassificeres i overensstemmelse med informationssikkerhedspolitikken, og at adgangskontrollen specificeres i overensstemmelse hermed. Her er det nyttigt at specificere snitflader for tjenestens samspil med den brugeradministration, hvor identiteten tildeles de attributter, der skal give adgangen.
 
 
-## Forretningsroller og aktører (i føderationer) (og deres behov?)
+## Tillidskæder
 De funktioner, der er beskrevet ovenfor, er ofte tidligere udført af den ansvarlige for det enkelte system. Det er ikke effektivt, sikkert eller skalérbart, og derfor er der behov for en specialisering, hvor forskellige aktører udfører forskellige funktioner. Med henblik på at der kan ske en sådan specialisering og arbejdsdeling, er der behov for regler og aftaler, der gør, at aktørerne kan have tillid til hinanden. De aktører som indgår i et tillidsforhold, udgør **en føderation,** som bygger på et trust framework som NSIS.
 
 
@@ -542,6 +542,8 @@ NSIS stiller ikke krav til forretningstjenesten - men anbefaler at denne på bag
 
 
 ----
+
+## Forretningsroller og aktører (i føderationer) (og deres behov?)
 
 Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder fremover skal være i stand til at håndtere. Scopet for referencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
