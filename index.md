@@ -310,14 +310,10 @@ Dette afsnit beskriver konkret, hvordan referencearkitekturen implementeres, og 
 
 # Forretningsarkitektur
 
-Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale løsninger. Det inkluderer oprettelse, ændring og nedlæggelse af identiteter (personer, organisationer, tjenester eller ting) i brugerstyringssystemer, tilknytning af akkreditiver og rettigheder til brugere og tildeling af adgang til ressourcer, typisk it-systemer. Brugerstyring er en fælles betegnelse for, hvordan en organisation fastlægger, håndterer og teknologisk sikrer, at kun brugere med de rigtige akkreditiver og karakteristika får adgang, og alle andre afvises.
+Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere af digitale løsninger. Det er en fælles betegnelse for de foranstaltninger som sikrer, at de rette brugere får adgang til de rette it-systemer - og alle andre afvises. Brugerstyring involverer dels *administration* af brugeridentiteter (før de tilgår it-systemer), herunder registring og udstedelse af identifikationsmidler, beskrivelse af attributter i form af egenskaber, roller, relationer mv. og dels en 'run-time' del, når brugere tilgår it-systemer, som bl.a. involverer autentifikation og udførelse af adgangskontrol.
 
-Figuren herunder viser de væsentligste elementer i brugerstyring (røde kasser) og de aktører, der er omfattet af eller anvender brugerstyring (blå kasser).
+Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (røde kasser) og kontekst i form af blå og grå kasser.
 
-<figure>
-<img src="billede2.PNG" />
-<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
-</figure>
 
 <div class="new">
 <figure>
@@ -326,23 +322,37 @@ Figuren herunder viser de væsentligste elementer i brugerstyring (røde kasser)
 </figure>
 </div>
 
-[De var ikke helt det vi tænkte da vi snakkede om røde og blå byggeblokke.. Blå peger på elementer beskrevet i andre ref. arkitekturer eller lovgivning. Vi brugte grå til at angive "endnu ikke definerede" /madsh]
+Det øverste lag i figuren omhandler governance i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx databeskyttelsesforordningen) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-[Skal vi ikke også have et lag med lovgivning (GDPR, eIDAS) og standarder (NSIS) /TG]
+På baggrund heraf udformes dels politikker for adgang til egne tjenester (adgangspolitikker), som beskriver kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
-Informationssikkerhed (øverste niveau i midten) forvaltes af de dele af organisationen, der kan afgøre, hvilke risici organisationen vil gardere sig imod og på hvilket niveau.
+Til at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse elektroniske identifikationsmidler, som brugerne kan autentificere sig med, de omfatter beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndingelser osv.), og de omfatter endelig autentifikation af brugere. *Tillidstjenester* udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
-Administration (konfigurering) af tjenester (næstøverste niveau i midten) omfatter udarbejdelse og vedligeholdelse af adgangspolitikker for tjenester i overensstemmelse med informationssikkerhedspolitikkerne. Adgangspolitikkerne anvendes til at specificere, hvilke informationer som en bruger skal præsentere for at blive lukket ind gennem adgangskontrollen. Dette anvendes i forbindelse med registrering af identiteters rettigheder i næste niveau. Administration (konfigurering) af identiteters karakteristika (tredje niveau i midten) anvendes til at give en entitet en konkret elektronisk identitet med de akkreditiver og det attributsæt, som giver adgang til en konkret tjeneste.
-
-Anvendelsesniveauet (nederste niveau i midten) gennemfører sikringen af, at
-identiteten er verificeret (autentifikation). Der
-udstedes en adgangsbillet, så informationen kan overføres til tjenesten. Derudover udføres adgangskontrol, hvor det afgøres om de attributter, som karakteriserer brugeren, er dem, der giver adgang til en tjenestes funktionaliteter og informationer.
+I den tekniske arkitektur beskrevet i kapitel (@todo) beskrives en række supplerende funktioner (fx billetudstedelse, brokering, discovery), som ikke optræder på forretningsniveau.
 
 En tjeneste og et it-system er i denne kontekst synonymer for det samme: et stykke it, der kan levere informationer og funktionaliteter. Et stykke it, der optræder som leverandør, kaldes en tjeneste eller tjeneste*udbyder*. Et stykke it, der optræder som den bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument. Det samme stykke it kan optræde både som leverandør (være en tjeneste) og i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
 
-Rækkefølgen i gennemgangen af elementerne svarer til rækkefølgen i mange – men ikke alle – forløb i brugerstyring. I figuren er funktionerne beskrevet som opdelt på flere aktører, men en aktør kan også udføre flere eller alle funktioner.
+
+
+
+## Om tillidstjenester og eIDAS
+I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenesterne. Med denne terminologi opnås et tydeligt skel til forretningstjenester, hvilket understøtter beskrivelse af eksempelvis føderationer, hvor forskellige parter leverer forskellige tjenester. Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester (hovedsageligt) indenfor PKI-området:
+- Certifikatudstedere (CA)
+- Tidsstemplingsservices
+- Valideringtjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
+- Tjenester til bevaring af signaturer, segl og certifikater
+- Elektroniske registrerede leveringstjenester.
+
+eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur.
+
+Det er endvidere vigtigt at være opmærksom på, at eIDAS-forordningen stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I kontekst af figuren ovenfor kan man sige, at eIDAS dikterer nogle elementer af visse (offentlige) tjenesters adgangspolitik, nemlig at tjenesterne skal være tilgængelige for andre EU-landes borgere og virksomheder.
+
+
 
 ## Forretningsmæssig kontekst
+Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her opfattes tillidstjenesterne ofte som noget infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af en tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og governance eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidsjeneste). NSIS definerer tre sikringsniveauer for for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret. 
+
+Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mellem udbydere af tillidstjenester og forretningstjenester.
 
 <div class="new">
 <figure>
@@ -369,26 +379,6 @@ Rækkefølgen i gennemgangen af elementerne svarer til rækkefølgen i mange –
 <figcaption></figcaption>
 </figure>
 </div>
-
-## Om (tillidstjenster?)
-
-Samspillet mellem brugere og tjenester på tværs af landegrænser vil i fremtiden stille øgede krav til identitet og autentifikation i international sammenhæng, overførsel af attributter på tværs af lande og brugerstyringstjenester og signering på tværs af landegrænser.
-
-Dette behov har skabt en større og større grad af konsolidering af modelbegreber og regulering af brugerstyring og identitetshåndtering internationalt. I EU-regi er der særligt gennem eIDAS-forordningen skabt øget mulighed for interoperabilitet på tværs af lande.
-
-Som nævnt tidligere definerer eIDAS tre sikringsniveauer, ”Lav”, ”Betydelig” og ”Høj”, der konkretiseres i den danske Nationale Standard for Identiteters Sikringsniveau (NSIS).
-
-eIDAS stiller desuden krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
-
-Endelig indeholder eIDAS en række krav til såkaldte tillidstjenesteudbydere. Tillidstjenester i eIDAS er omfatter:
-
-- Certifikatudstedere (CA)
-- Tidsstemplingsservices
-- Valideringtjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
-- Tjenester til bevaring af signaturer, segl og certifikater
-- Elektroniske registrerede leveringstjenester.
-
-Ved etablering og drift af en identitetsinfrastruktur SKAL det vurderes, om man er omfattet eIDAS som tillidstjenesteudbyder og i givet fald efterleve forordningens krav.
 
 ## Forretningsfunktioner
 [Områder for samarbejde mellem forretningsmæssige roller? Beskriver vi tjeneste/funktion eller samarbejde \madsh]
