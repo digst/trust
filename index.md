@@ -429,42 +429,43 @@ I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, s�
 
 
 ### Foretningsfunktionen attributbeskrivelse
+Som tidligere nævnt bruges termen *attributbeskrivelse* i denne referencearkitektur som en generalisering over 'data om brugere', som i praksis kan dække over en række forskellige aktiviteter udført af forskellige aktører, herunder:
+- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv.
+- Tildeling (og udstilling) af roller og fuldmagter til brugere
+- Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
+- Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
-Ordet ”autorisation” bruges i brugerstyring om flere aspekter af det at have rettigheder til en tjeneste og til data i tjenesten:
+Der er således både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol.
 
-- Det bruges om tildeling af rettigheder til en bruger (administration) i form af fx en rolle eller en egenskab hos brugeren. Sprogligt formuleres det ofte, som at brugeren er autoriseret til at tilgå en bestemt tjeneste.
-- Det bruges i forbindelse med fastlæggelse af regler og politikker, der fastlægger betingelserne for, at en bruger må få adgang til en tjeneste. Sprogligt bliver begrebet ”Adgangspolitik” anvendt i nogle sammenhænge.
-- Det bruges endeligt om de processer, der håndhæver, at kun de rette brugere får adgang til en tjeneste i en konkret situation – altså adgangskontrol.
+Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydning om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
+I denne referencearkitektur benyttes attributbeskrivelse som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer.
 
-Den sædvanlige brug af ordet autorisation dækker således en række funktionaliteter, der udføres af forskellige aktører med forskellige formål, og som det derfor er nyttigt at skille ad. I denne referencearkitektur anvendes derfor følgende termer i stedet for termen ”autorisation” med henblik på at opnå den størst mulige præcision:
+Formålet med attributbeskrivelsen er i sidste ende at tilvejebringe grundlaget for den adgangskontrol, der udføres i en forretningstjeneste. En forretningstjeneste kan således have brug for at kende brugerens alder, køn og bopælskommune for at kunne afgøre, hvilket adgang der skal gives. Udførsel af adgangskontrol beskrives nedenfor.
 
-- Administration af en brugers rettigheder består i, at den elektroniske identitet gives netop den attributbeskrivelse, en tjeneste kræver for at give adgang.
-- Udstedelse af adgangsbillet med identitet, roller, dataafgrænsninger og andre attributter betegnes med billetudstedelse.
-- Fastlæggelse af adgangspolitikker (fx hvilke roller giver adgange til hvilke ressourcer i tjenesten) betegnes adgangspolitik.
-- Håndhævelse af adgangsrettigheder kaldes adgangskontrol.
 
-Tjenesteudbydere udarbejder en adgangspolitik for tjenesten i overensstemmelse med informationssikkerhedspolitikken. Den kan udmøntes konkret i en eller flere adgangspolitikker, der beskriver, hvilke handlinger der må udføres i forhold til tjenesten og på data i tjenesten givet et bestemt sikringsniveau og et eller flere attributsæt. En identitet skal da præsentere en billet udstedt på det krævede sikringsniveau og med de krævede attributter, for at få adgang til tjenesten.
 
-Brugeradministrationen registrerer brugerens roller/rettigheder i form af attributter, og attributtjenester registrerer øvrige relevante attributter om brugeren (fx organisatorisk indplacering for en medarbejder). Jo mere standardiserede adgangspolitikker er på tværs af tjenester, jo lettere er det for brugere og brugerorganisationer at administrere rettigheder, der matcher adgangspolitikkerne.
+### Foretningsfunktionen udforme adgangspolitik
+Tjenesteudbydere bør udarbejde en adgangspolitik for deres forretningstjenester, som definerer betingelser for adgang til funktioner og data. En adgangspolitik kan fx udtrykke, at en tjeneste kun må tilgås af identiteter autentificeret på NSIS sikringsniveau Høj, som er tilknyttet et bestemt CVR-nummer, og er tildelt en bestemt rolle. Adgangspolitikker kan i praksis være formuleret mere eller mindre eksplicit (og adskilt fra implementeringen). Eksempelvis kan en borgerrettet selvbetjeningsløsing have en meget simpel politik om, at hver borger (udpeget ved CPR) får adgang til egne data. Det afgørende er, at adgangspolitikken er i overensstemmelse med ledelsens anvisninger i form af informationssikkerhedspolitik, risikovurderinger mv.
 
-At få adgang til en tjeneste kræver derfor fælles forståelse hos tjenesteudbydere, brugere og brugerorganisationer af adgangspolitikkens indhold. Dette kan opnås ved at strukturere beskrivelsen af adgangspolitikken, således at det er veldefineret, hvilke attributsæt en bruger skal præsenterei en billet for at få adgang. En attribut kan beskrives via en klassifikation, som er et udfaldsrum af værdier med tilhørende beskrivelse. Et eksempel er en klassifikation, der kan udtrykke datas følsomhed, et andet er lovhjemmel som fx KL’s Emnesystematik (KLE). Et tredje eksempel er klassifikationen af sikringsniveauer i National Standard for Identiteters Sikringsniveau (NSIS).
+For at sikre overenstemmelse mellem adgangspolitik og den efterfølgende adgangskontrol, som håndhæver politikken, kan adgangspolitikken med fordel udtrykkes i termer af attributter, der er tilgængelige via attributbeskrivelsen. Dette er fx særligt relevant i token-baserede realiseringer, hvor adgang opnås på baggrund af attributter beskrevet i et security token. Jo mere standardiserede adgangspolitikker er på tværs af tjenester, jo lettere er det for brugere og brugerorganisationer at administrere i overensstemmelse med adgangspolitikkerne. Fællesoffentligt er visse attributter standardiseret (fx i OIOSAML profilerne), og nogle domæner har standardiseret en række attributter (dette gælder fx på sundhedsområdet).
 
 ![Figur 3 Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder](billede3.PNG)
 
-Attributter kan udtrykke roller som basis for adgangskontrol (Role Based Access Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
+Adgangspolitikker kan benytte roller som basis (Role Based Access Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
 
-Autorisation omfatter således administration af brugere, billetudstedelse og adgangskontrol ud fra en adgangspolitik, og resten af referencearkitekturen vil anvende disse begreber i stedet.
 
-Når en bruger er blevet autentificeret, udstedes en signeret billet til tjenesten med relevante attributter. Hvis der mangler nødvendige attributter i adgangsbilletten, kan der i dette trin indhentes yderligere attributter fra fx en attributtjeneste. De attributter, der eventuelt tilknyttes i denne del af processen, kan evt. hentes fra en anden attributtjeneste, hvor disse attributter administreres med det eksplicitte formål at administrere identitetens rettigheder, eller de kan hentes fra andre attributtjenester som fx sundhedsvæsenets autorisationsregister. Denne indsamling og berigelse af adgangsbilletter udføres typisk af en såkaldt identitetsbroker (et eksempel på dette er NemLog-in). En broker kan altså kombinere en autentifikationstjeneste med en attributtjeneste.
 
 ### Forretningsfunktionen adgangskontrol
 
-**Adgangskontrol** består i, at tjenesteudbyderen validerer adgangsbilletten og sikrer, at der kun gives adgang til funktionalitet og data i overensstemmelse med billettens attributsæt (herunder sikringsniveau). Herigennem håndhæver tjenesteudbyderen adgangskontrollen ud fra den definerede adgangspolitik. Der kan også på dette trin indhentes yderligere attributter, og adgangskontrollen kan endvidere benytte parametre for den aktuelle brugerkontekst (fx brugerens IP-adresse, tidspunktet på dagen, data om brugerens enhed osv.) i beslutningen om adgang.
+**Adgangskontrol** er den proces, hvor en tjenesteudbyder (på baggrund af forudgående autentifikation og attributbeskrivelse) sikrer, at der gives adgang til funktionalitet og data i overensstemmelse adgangspolitikken. Man taler også om håndhævelse af adgangspolitikken - og nogle tekniske standarder (XACML) opererer med begrebet 'Policy Enforcement Point'. Adgangskontrollen kan endvidere benytte attributter for den aktuelle brugerkontekst (fx brugerens IP-adresse, tidspunktet på dagen, data om brugerens enhed osv.) i beslutningen om adgang.
 
-### Forretningsfunktionen kontrol og forebyggelse
-Kontrol og forebyggelse skal ske i alle systemer, både i organisationernes interne applikationer, i forretningstjenester som stilles til rådighed eksternt, samt i brugerstyringstjenester. Aftaler om og standarder for kontrol og audits skal indgå i føderationens grundlag.
+Adgangskontrol er altid forretningstjenestens ansvar (herunder den dataansvarliges ansvar, hvis tjenesten giver adgang til personoplysninger), men dele af den kan udføres af hjælpefunktioner.
 
-Brugerstyringstjenester indgår som en del af sikkerheden i interne applikationer og forretningstjenester og skal derfor kontrolleres i den sammenhæng. Brugerstyringstjenesterne skal desuden i meget høj grad selv gennemføre de kontroller og forebyggelsestiltag, som er centrale for, at de kan levere sikkerhed (fortrolighed, integritet (pålidelighed) og tilgængelighed) til tjenester. Dette beskrives herunder.
+
+### Forretningsfunktionen forebyggelse og kontrol
+Forebyggelse af svindel og kontrol med brugeridentiteter er relevant i alle systemer, både i forretningstjenester og i tillidsstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet lovgivning, standarder (fx NSIS), vilkår, aftaler, regler i føderationers grundlag mv.
+
+Tillidstjenester indgår typisk som en del af sikkerheden i mange forretningstjenester, og skal have ekstra fokus på kontrol og forebyggelse.
 
 Staten har i december 2014 offentliggjort (og senere revideret) en strategi for cyber- og informationssikkerhed, som har til formål fremover at professionalisere statens arbejde med informationssikkerhed og øge samfundets robusthed mod cyberangreb. Strategien omfatter 27 konkrete initiativer, der skal bidrage til at øge informationssikkerheden og styrke beskyttelsen mod cyberangreb.
 
@@ -481,10 +482,9 @@ Strategien indeholder en lang række initiativer på tværs af seks indsatsområ
 
 Med den stadigt stigende hackeraktivitet kloden over bliver arbejdet med at sikre kvaliteten af kontrol og forebyggelse af sikkerhedsbrud mere og mere vigtigt. Det skal ske i forbindelse med den registrering, autentifikation, billetudstedelse og adgangskontrol, der er kernen i brugerstyring. Dermed er det også et emne for informationssikkerhedspolitikken og dennes udmøntning i en tværgående fællesoffentlig føderation.
 
-Flere af de angreb mod organisationers it-infrastruktur som opleves, er rettet mod at forfalske identiteter, akkreditiver og adgangsbilletter, eller at give sig ud for at være den rette ihændehaver af identiteter, akkreditiver og adgangsbilletter.
-Det centrale i forhold til brugerstyring er derfor hurtigt at kunne reagere ud fra den mest aktuelle viden gennem sikkerhedsforanstaltninger. Andre angreb forsøger at begrænse tilgængeligheden gennem Distributed Denial of Service-angreb mod kritiske elementer i it-infrastrukturen, herunder fællesoffentlige identitetssystemer. Center for Cybersikkerhed udsender jævnligt en opdatering af det aktuelle trusselsbillede for cyberangreb.
+Flere af de angreb mod organisationers it-infrastruktur som opleves, er rettet mod at forfalske identiteter, identifikationsmidler og adgangsbilletter, eller at give sig ud for at være den rette ihændehaver af identiteter, identifikationsmidler og adgangsbilletter. Det centrale i forhold til brugerstyring er derfor hurtigt at kunne reagere ud fra den mest aktuelle viden gennem sikkerhedsforanstaltninger. Andre angreb forsøger at begrænse tilgængeligheden gennem Distributed Denial of Service-angreb mod kritiske elementer i it-infrastrukturen, herunder fællesoffentlige identitetssystemer. Center for Cybersikkerhed udsender jævnligt en opdatering af det aktuelle trusselsbillede for cyberangreb.
 
-Opgaverne for brugerstyringstjenester i en tværgående fællesoffentlig føderation er derfor dels hele tiden at være opdateret om sikkerhedshændelser, der omhandler forfalskning eller misbrug af identiteter, akkreditiver og adgangsbilletter, gennem abonnement på information om sikkerhedshændelser og deres imødegåelse. Dels skal brugerstyringstjenesterne hurtigt rapportere om sikkerhedshændelser til disse organisationer og om erfaringerne med at afbøde og bekæmpe angreb.
+Opgaverne for tillidstjenester er derfor dels hele tiden at være opdateret om sikkerhedshændelser, der omhandler forfalskning eller misbrug af identiteter, identifikationsmidler og adgangsbilletter, gennem abonnement på information om sikkerhedshændelser og deres imødegåelse. Dels skal tillidstjenester nøje overvåge deres transaktioner og hurtigt håndtere samt rapportere om sikkerhedshændelser.
 
 Til at støtte dette har staten samlet kræfterne i Center for Cybersikkerhed (CFCS), og nogle private organisationer udstiller deres CERT eller CSIRT-funktion. Disse organisationer håndterer sikkerhedshændelser og arbejder på at forebygge sikkerhedshændelser:
 
@@ -496,10 +496,7 @@ Til at støtte dette har staten samlet kræfterne i Center for Cybersikkerhed (C
 
 Der stilles desuden i højere grad krav om notifikation til relevante myndigheder i forbindelse med sikkerhedshændelser. Fx skal tillidstjenesteudbydere, jf. eIDAS, notificere Digitaliseringsstyrelsen, og i medfør af persondataforordningen (GDPR), skal dataansvarlig notificere Datatilsynet ved sikkerhedshændelser. Som led i et beredskab skal man således sikre sig, at man kan informere de rette myndighed inden for fastlagte tidsrammer.
 
-Da sikkerheden i føderationer afhænger af, at alle deltagere vedligeholder de sikringsniveauer, de formidler, kan der udgå anbefalinger om sikkerhedstiltag fra føderationen. En af de forebyggende aktiviteter, en tjenesteudbyder kan udføre,
-er kontinuerligt at søge efter spor i sin logning af anmodninger om adgangskontrol. Det gøres ved at datamine logningen og finde mønstre, der indikerer forsøg på omgåelse af sikkerhedsforanstaltninger. Der er desuden i 2016 opnået resultater gennem at anvende maskinlæring i datamining af logning af en tjenestes internettrafik, der giver gode forudsigelser af, om der er angreb på vej. I en tværgående fællesoffentlig føderation vil det være betimeligt at inspirere deltagerne til at
-foretage datamining og dele resultaterne mellem organisationerne i føderationen.
-
+En af de forebyggende aktiviteter, en tjenesteudbyder kan udføre, er at sikre en solid logning af al aktivitet, og herefter kan en kontrol kontinuerligt monitorere for angrebsforsøg med automatiserede værktøjer og menneskelig, analytisk kapacitet. Et andet eksempel er anvendelsen af 'risk data' i MitID-løsningen, som ud fra en række data om brugerens udstyr, adfærd, netværk og andet forsøger identificere risikofyldte transaktioner på tværs af tjenesteudbydere og brokere i infrastrukturen. Eksempelvis vil en bruger, der logger på fra to forskellige lande inden for få minutter, kunne give udslag i en høj riskoscore, som forretningstjenesten herefter kan reagere på.
 
 Et andet væsentligt element i sikkerheden er, at alle processerne i administration og vedligeholdelse af brugerstyring implementeres. Det gælder såvel identiteters karakteristika gennem brugeres livscyklus som tjenesters adgangsrettigheder, når tjenester videreudvikles. Identiteters livscyklus indeholder ændringer i registreringspraksis, i valg af anvendte akkreditiver og i beskrivelse af attributter, herunder roller og terminering af alle rettigheder for en bruger ved fx jobskifte, dødsfald og lign. I jo højere grad dette kan automatiseres, jo mere sikker er man på, at ændringer og termineringer finder sted.
 
