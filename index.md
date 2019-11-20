@@ -374,77 +374,61 @@ I nedenstående figur er vist en shared use case med fokus på adgangskontrol:
 
 Bemærk at termen *attributbeskrivelse* er en væsentlig generalisering, som i praksis kan dække over en række forskellige aktiviteter, herunder:
 - Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv.
-- Tildeling af roller og fuldmagter til en brugere
+- Tildeling (og udstilling) af roller og fuldmagter til en brugere
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
 Tillidsbegrebet er vigtigt for attributter, idet de indgår som væsentligt input til beslutninger i adgangskontrollen. På engelsk bruges ofte betegnelsen *verified claims* om det forhold, at en tredjepart har verificeret en attribut. I en adgangspolitik bør man derfor forholde sig hvilke kilder til attributter (attributtjenester), der er tillid til, og i hvilken grad. I visse tilfælde kan attributter kan endda være oplyst af brugeren selv (*self-asserted claims*), hvilket kan være helt på sin plads, forudsat at dette er udtrykt i adgangspolitikken.
 
-Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributbeskrivelse i et konkret scenarie. Det kan således variere betydeligt, hvilke attributter forskellige tjenester har behov for at kunne håndhæve deres adgangspolitik.
+Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributbeskrivelse i et konkret scenarie. Det kan således variere betydeligt, hvilke attributter forskellige tjenester har behov for at kunne håndhæve deres adgangspolitik, samt de mekanismer attributter tilvejebringes med (fx push eller pull).
 
-I senere kapitler vedr. den tekniske arkitektur beskrives mere konkret, hvordan attributter kan håndteres i brugerstyring. Ofte formidles de fx af sikkerhedshensyn som signerede data (*security tokens* eller *billetter* på dansk), og ofte er der tekniske komponenter (brokere), som orkestrerer indsamling og formidling af attributter for at lette byrden for forretningstjenester.
+I senere kapitler vedr. den tekniske arkitektur beskrives mere konkret, hvordan attributter kan håndteres i brugerstyring. Ofte formidles de fx af sikkerhedshensyn som signerede data (*security tokens* eller *billetter* på dansk), og ofte er der tekniske komponenter (brokere), som orkestrerer indsamling og formidling af attributter fra forskellige kilder for at lette byrden for forretningstjenester. Det er således ikke ligegyldigt, hvordan forretningsfunktioner udmøntes i en teknisk arkitektur - særligt når er ønske om at opnå et økosystem der er sikkert, sammenhængende og brugervenligt.
 
 
 
 ## Forretningsfunktioner
-[Områder for samarbejde mellem forretningsmæssige roller? Beskriver vi tjeneste/funktion eller samarbejde \madsh]
+I dette afsnit beskrives forretningsfunktionerne i domænet i lidt større detaljer - både dem som udføres af tillidstjenester og forretningstjenester.
 
 
+### Forretningsfunktionen udstedelse af identifikationsmidler
 
-
-### Forretningsfunktion(en/erne?) administration af elektronisk identitet, akkreditiver og attributter
-
-[Bør vi splitte afsnittet op i tre overskrifter for at underbygger at det er tre seperate funktioner? ]
-
-
-
-National Standard for Identiteters Sikringsniveau (NSIS) omfatter registrering, udstedelse og håndtering af elektroniske identiteter og udstedelse af akkreditiver. Standarden fastlægger, hvorledes følgende processer skal foregå, for at et eID kan være sikret på et af de fire sikringsniveauer:
+Formålet med at udstede identifikationsmidler til brugerne er, at de kan autentificere sig som en entydig identitet, når de interagerer med forretningstjenester (og evt. tillidstjenester). National Standard for Identiteters Sikringsniveau (NSIS) beskriver og stiller krav til delprocesserne under udstedelse:
 
 - Ansøgning og registrering
 - Verifikation af identitet
-- Levering og aktivering af akkreditiver
+- Levering og aktivering af identifikationsmidler
 - Suspendering, spærring og genaktivering
 - Fornyelse og udskiftning.
 
-I brugerstyring indgår, at personer (og andre entiteter) registrerer sig, tildeles en identitet bundet til akkreditiver. **Registreringen** af identiteten varetages af registreringstjenesten, som også verificerer identiteten (identitetssikring). Den elektroniske identitet kan have forskellige sikringsniveauer i forhold til, hvor sikkert brugeres identitet verificeres (eng: Identity Assurance Level - benævnt IAL i NSIS).
+I brugerstyring er det en forudsætning, at brugerne registreres og tildeles en identitet, som forbindes til et identifikationsmiddel. **Registreringen** af identiteten kan varetages af en underfunktion (registreringstjeneste), som også verificerer identiteten (identitetssikring). Eksempelvis agerer banker & borgerservice som registreringstjenester for NemID/MitID løsningerne. Processen for udstedelse af identifikationsmidler kan variere betydeligt i kvalitet, hvilke attributter der valideres, og scope for den efterfølgende anvendelse.
 
-> Personer registrerer selv deres Facebook-identitet, mens NemID-identiteten kan registreres af Borgerservice. Personer kan også selv ansøge om NemID-identitet på NemID.nu. Det kræver, at de kan dokumentere deres identitet med fx kørekort eller pas, samt er oprettet i CPR-registret.
+I NSIS opereres med, at identiteten kan valideres på tre forskellige sikringsniveauer (fx i forhold til om brugeren har gennemført en on-line registrering, er mødt fysisk op, har præsenteret pas/kørekort osv.). Kvaliteten af en identitetssikring betegnes ofte *Identity Assurance Level*.
 
-Efter oprettelse af den elektroniske identitet skal et **akkreditiv** (fx kodeord, PIN, fingeraftryk) **tilknyttes** til identiteten. Akkreditiver anvendes til at autentificere identiteten i modsætning til attributter, som beskriver identiteten. En akkreditivudsteder skal dels sikre sammenhængen mellem akkreditiver og identitet og dels stå inde for akkreditivets sikringsniveau. Akkreditivudstederen kan knytte allerede udstedte akkreditiver til identiteten eller udstede et nyt akkreditiv og tilknytte dette til identiteten.
+> Personer registrerer selv deres Facebook-identitet, hvor kun e-mail adressen verificeres, mens NemID/MitID-identiteter får valideret navn og CPR-nummer.
 
-> Registreringen kan starte med valg af akkreditiv (fx en Yubikey), hvor personen efterfølgende knytter en identitet til akkreditivet, enten en nyoprettet identitet eller en allerede eksisterende identitet.
+Efter oprettelse af den elektroniske identitet skal et **identifikationsmiddel** (fx kodeord, PIN, fingeraftryk) **tilknyttes** til identiteten. Identifikationsmidler anvendes til at autentificere identiteten i modsætning til attributter, som beskriver identiteten. En udsteder af identifikationsmidler skal dels sikre sammenhængen mellem identifikationsmidlet og identitet, og dels stå inde for identifikationsmidlets tekniske styrke (se næste afsnit). Udstederen kan knytte allerede udstedte identifikationsmidler til identiteten eller udstede et nyt identifikationsmiddel og tilknytte dette til identiteten. Styrken af identifikationsmidler er ligeledes klassificeret i NSIS og tager afsæt i bl.a. antallet af autentifikationsfaktorer, hvor resistent det er mod angreb, samt andre sikkerhedsmæsige egenskaber.
 
-CPR-nummeret er en attribut, som desværre også historisk er brugt som akkreditiv, dvs. som bevis for identitet. Denne anvendelse af CPR-nummeret er imod regler fra CPR-kontoret, men anvendes stadig i et vist omfang. Udgangspunktet i beskrivelsen er, at brugerstyringstjenesten er en centralt placeret aktør (som fx Facebook og NemID), men der er modeller, hvor denne funktion ligger hos brugeren selv. Brugerstyringstjenester kan have forskellige tillidsniveauer knyttet til omfanget af audit og kontrol med deres metoder.
+Det er centralt i denne referencearkitektur, at der opereres med en *løs* kobling mellem identiteter og identifikationsmidler. Eksempelvis kan et identifikationsmiddel benyttes til at autentificere flere forskellige identiteter (hørende til samme entitet). Et eksempel på dette i fællesoffentlig kontekst er, når samme private NemID/MitID både kan bruges til autentificere både en privatperson og en ejer (fuldt ansvarlig deltager) for en enkeltmandsvirksomhed. Brugeren skal altid i brugssituationen være oplyst om, hvilken elektronisk identitet vedkommende optræder med.
 
-I forbindelse med registreringen eller efter denne kan identitetens karakteristika og egenskaber **beskrives i form af attributter** (fx køn, adresse, alder, et nummer i form af fx personalenummer). Dette varetages af en eller flere attributtjenester. Det er kombinationen af et validt akkreditiv og et antal attributter (et attributsæt), der kan give adgang til en tjeneste. Det sker ved, at en identitetsbroker udsteder en signeret billet (eng. *security token*), som skal præsenteres for tjenesten.
+CPR-nummeret er en attribut, som desværre også historisk er brugt som identifikationsmiddel - dvs. som bevis for identitet. Denne anvendelse af CPR-nummeret er imod regler fra CPR-kontoret, men anvendes stadig i et vist omfang.
 
-I NemID for borgere registreres attributter, der hentes fra CPR. Der er mange eksempler på elektroniske identiteter, hvor attributter mere udtrykker personens ønsker om at præsentere sig end objektive forhold. Det sker fx på dating-sites. I denne sammenhæng tales ofte om selverklærede attributer (eng. *self-asserted claims*) i modsætning til verificerede attributter (eng. *verfied claims*).
+I forbindelse med registreringen eller efter denne kan identitetens karakteristika og egenskaber **beskrives i form af attributter** (fx køn, adresse, alder, et nummer i form af fx personalenummer). For medarbejderidentiteter foretages en del af registreringen typisk af en administrator udpeget af virksomhedens ledelse, hvor en central del består i at sikre relationen mellem virksomheden (som juridisk enhed) og medarbejderen (som fysisk person). For IoT-enheder kan en del af registreringen ske af brugeren eller ejeren - fx når en person tilknytter en elektronisk blodtryksmåler til sin profil på en sundhedstjeneste og giver den adgang til at indberette på denne.
 
-Registrering, akkreditivtilknytning og -udstedelse og attributbeskrivelse omfatter også løbende administration af elektroniske identiteter, akkreditiver (der kan være tidsbegrænsede), attributter (fx ændringer i funktioner og roller), og ophør af identiteten med efterfølgende afkobling af attributter og dermed lukning af adgang og eventuel arkivering.
 
-En entitet (fx en fysisk person) kan være repræsenteret i form af flere forskellige elektroniske identiteter afhængig af kontekst, og en entitet kan have flere forskellige akkreditiver til at bevise sin elektroniske identitet.
-
-Brugeren skal altid i brugssituationen være oplyst om, hvilken elektronisk identitet vedkommende agerer som.
-
-> Registrering af erhvervsidentiteter i NemID foregår på flere forskellige måder:
-1. Manuel registrering. En virksomheds NemID-dministrator bestiller en NemID-medarbejdersignatur i medarbejdersignatur.dk. De nødvendige data indtastes.
-2. Overførsel af data fra egen brugerstyring. En virksomheds brugeradministrator markerer i virksomhedens egen brugerstyring, at en medarbejder skal have en NemID-medarbejdersignatur. Data overføres til NemID’s API.
-3. Brug af NemID-privat med automatisk tilknytning til virksomhed. Siden februar 2017 kan fuldt ansvarlige deltagere i personligt ejede virksomheder samt andre med en stærk tilkytning til en virksomhed anvende deres private NemID i forbindelse med deres virksomhed. Sammenknytningen af NemID-privat med virksomheden sker på grundlag af Erhvervsstyrelsens registrering af persontilknytninger i CVR. Samme funktionalitet videreføres med MitID-løsningen, der afløser NemID privat.
-
-Tilsvarende registreringsprocesser realiseres i NemLog-in3, der afløser NemID's erhvervsløsning.
 
 ### Forretningsfunktionerne autentifikation
 
+Autentifikation er en proces, som genkender og verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et identifikationsmiddel, der er koblet til identiteten som beskrevet ovenfor. Ved multi-faktor autentifikation forstås en au- tentifikationsproces, hvor det anvendte elektroniske identifikationsmiddel er baseret på flere autentifikationsfaktorer fra forskellige kategorier (noget kun brugeren ved, er, eller er i besiddelse af). Et eksempel her på findes i NemID/MitID, hvor brugerne kan logge på med en kombination af et hemmeligt kodeord og 'swipe' i en App.
 
-Autentifikation er de processer, hvor en entitet anvender sine akkreditiver/identifikationsmidler, og hvor en autentifikationstjeneste (ved login) verificerer akkreditiverne, fastlægger identiteten, og fastlægger det aktuelle sikringsniveau (i henhold til NSIS) som minimum af niveauet for identitetssikringen (IAL), autentifikationsstyrken (AAL), og en autentifikationstjenesten/brokeren (FAL).
+Autentikationsfunktionen varetages i nogle tilfælde af den part, der har udstedt identifikationsmidlet (fx fordi denne kender brugerens password eller en afledt værdi heraf), men kan også være separat for udstederen (fx kan man i PKI-baseret autentifikation verificere brugerens kontrol over den private nøgle op mod det tilhørende certifikat).
 
-Opgaverne i forbindelse med autentifikation kan løses af flere aktører, som hver løser en eller flere af opgaverne autentifikation, attributleverance og udstedelse af adgangsbillet. Ved en sådan opdeling kan de aftagende tjenester lettere betjene identiteter fra forskellige autentifikationstjenester gennem at anvende logintjenester og brokere, der afskærmer tjenesterne fra forskelligheder i formater eller protokoller for akkreditiver og attributter. En sådan opdeling kan også facilitere, at flere registreringstjenester, akkreditivtjenester og autentifikationstjenester kan samarbejde.
+Styrken af en autentifikationsproces klassificeres i NSIS som AAL (Authenticator Assurance Level) og indplaceres på den sædvanlig tre-trins skala (Lav, Betydelig, Høj), og kan dermed indgå i adgangspolitikker for tjenester.
 
->I NemID-økosystemet løser NemID opgaven som registreringstjeneste, akkreditivtjeneste og autentifikationstjeneste og medsender kun PID/RID (entydigt identifikationsnummer for NemID-identiteten) samt eventuelt navn og e-mail samt CVR-nummer for NemID medarbejdersignaturer. Det anvendte format er XMLDSig. En række private login-tjenester eller brokere tilbyder private tjenesteudbydere at supplere med flere attributter. NemLog-in tilføjer CPR-nummeret (ved opslag i PID/RID-CPR-tjeneste) og eventuelt rettighedsrelevante attributter og videresender data med OIOSAML-protokollen. Modellen med login-tjenester/brokere mellem autentifikationstjenester og tjenester kendes fra kredit- og betalingskort, hvor forretninger kan modtage betaling fra mange forskellige kortudsteder, fordi det firma, der har opstillet kortterminalen, understøtter dette med en grænseflade til forretningen.
+I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, således at den identitet, som formidles til tjeneste, er beriget med yderligere oplysninger - og den kombinerede funktion betegnes ofte som *broker* eller *identitetsbroker*. En anden vigtig egenskab ved autentifikationstjenester er, at de kan afkoble forretningstjenester fra at kende til detaljerne i validering af brugernes identifikationsmidler. I føderationer er det bærende princip, at forretningstjenester ikke må udføre autentifikation selv. Ved at delegere denne funktion til en ekstern tillidstjeneste opnås en lang række fordele som fx en mere sammenhængende, sikker og skalerbar arkitektur, hvor brugerne kan genbruge deres identifikationsmidler på tværs af forretningstjenester.  
 
-En aktør, der udfører autentifikation, kaldes en autentifikationstjeneste eller identitetsbroker i referencearkitekturen.
 
-### Foretningsfunktionen autorisation
+
+### Foretningsfunktionen attributbeskrivelse
 
 Ordet ”autorisation” bruges i brugerstyring om flere aspekter af det at have rettigheder til en tjeneste og til data i tjenesten:
 
@@ -472,6 +456,8 @@ Attributter kan udtrykke roller som basis for adgangskontrol (Role Based Access 
 Autorisation omfatter således administration af brugere, billetudstedelse og adgangskontrol ud fra en adgangspolitik, og resten af referencearkitekturen vil anvende disse begreber i stedet.
 
 Når en bruger er blevet autentificeret, udstedes en signeret billet til tjenesten med relevante attributter. Hvis der mangler nødvendige attributter i adgangsbilletten, kan der i dette trin indhentes yderligere attributter fra fx en attributtjeneste. De attributter, der eventuelt tilknyttes i denne del af processen, kan evt. hentes fra en anden attributtjeneste, hvor disse attributter administreres med det eksplicitte formål at administrere identitetens rettigheder, eller de kan hentes fra andre attributtjenester som fx sundhedsvæsenets autorisationsregister. Denne indsamling og berigelse af adgangsbilletter udføres typisk af en såkaldt identitetsbroker (et eksempel på dette er NemLog-in). En broker kan altså kombinere en autentifikationstjeneste med en attributtjeneste.
+
+### Forretningsfunktionen adgangskontrol
 
 **Adgangskontrol** består i, at tjenesteudbyderen validerer adgangsbilletten og sikrer, at der kun gives adgang til funktionalitet og data i overensstemmelse med billettens attributsæt (herunder sikringsniveau). Herigennem håndhæver tjenesteudbyderen adgangskontrollen ud fra den definerede adgangspolitik. Der kan også på dette trin indhentes yderligere attributter, og adgangskontrollen kan endvidere benytte parametre for den aktuelle brugerkontekst (fx brugerens IP-adresse, tidspunktet på dagen, data om brugerens enhed osv.) i beslutningen om adgang.
 
