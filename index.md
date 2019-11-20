@@ -350,35 +350,41 @@ Det er endvidere vigtigt at være opmærksom på, at eIDAS-forordningen stiller 
 
 
 ## Forretningsmæssig kontekst
-Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her opfattes tillidstjenesterne ofte som noget infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af en tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og governance eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidsjeneste). NSIS definerer tre sikringsniveauer for for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret. 
+Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her opfattes tillidstjenesterne ofte som noget infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af en tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og governance eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidsjeneste). NSIS definerer tre sikringsniveauer for for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret.
 
 Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mellem udbydere af tillidstjenester og forretningstjenester.
 
 <div class="new">
 <figure>
 <img src="usecases.svg" width="85%"/>
-<figcaption>[Forsøg på et funktionel overblik.... Det bør nok forsimples meget til blot at fortælle at der er administration og anvendelse. (men hvad så med kontrol, aftaleindgåelse og formulering af adgangskontrol?) ]</figcaption>
+<figcaption>Samarbejde mellem tillidstjenester og forretningstjenester</figcaption>
 </figure>
 </div>
 
-### Administration af oplysninger til brug for brugerstyring
+I nedenstående figur er vist en shared use case med fokus på adgangskontrol:
 
-<div class="new">
-<figure>
-<img src="administration.svg" width="95%"/>
-<figcaption>Administration af brugerstyring (registrering af forskellige oplysning til brug for brugerstyring) [UML Shared Use Case Diagram] [Overvej om beskrive attribut-beskrivelse som 'generel registering af oplysninger om ideniteter (herunder deres indbyrdes relationer)']</figcaption>
-</figure>
-</div>
-
-
-### Anvendelse af oplysninger til adgangskontrol
 
 <div>
 <figure>
-<img src="anvendelse.svg" width="85%"/>
-<figcaption></figcaption>
+<img src="use-case-simpel.svg" width="85%"/>
+<figcaption>Samarbejde ved adgangskontrol</figcaption>
 </figure>
 </div>
+
+
+Bemærk at termen *attributbeskrivelse* er en væsentlig generalisering, som i praksis kan dække over en række forskellige aktiviteter, herunder:
+- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv.
+- Tildeling af roller og fuldmagter til en brugere
+- Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
+- Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
+
+Tillidsbegrebet er vigtigt for attributter, idet de indgår som væsentligt input til beslutninger i adgangskontrollen. På engelsk bruges ofte betegnelsen *verified claims* om det forhold, at en tredjepart har verificeret en attribut. I en adgangspolitik bør man derfor forholde sig hvilke kilder til attributter (attributtjenester), der er tillid til, og i hvilken grad. I visse tilfælde kan attributter kan endda være oplyst af brugeren selv (*self-asserted claims*), hvilket kan være helt på sin plads, forudsat at dette er udtrykt i adgangspolitikken.
+
+Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributbeskrivelse i et konkret scenarie. Det kan således variere betydeligt, hvilke attributter forskellige tjenester har behov for at kunne håndhæve deres adgangspolitik.
+
+I senere kapitler vedr. den tekniske arkitektur beskrives mere konkret, hvordan attributter kan håndteres i brugerstyring. Ofte formidles de fx af sikkerhedshensyn som signerede data (*security tokens* eller *billetter* på dansk), og ofte er der tekniske komponenter (brokere), som orkestrerer indsamling og formidling af attributter for at lette byrden for forretningstjenester.
+
+
 
 ## Forretningsfunktioner
 [Områder for samarbejde mellem forretningsmæssige roller? Beskriver vi tjeneste/funktion eller samarbejde \madsh]
