@@ -55,8 +55,10 @@ Logo: digst...
 
 
 <h2 class="no-num">Forord</h2>
-- nu med IoT
-- med henblik på noget med trust-services...
+Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur affødt af Digitaliseringsstrategiens initiativ 8.1, som indtil videre er kommet til udtryk i ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering”.
+
+2017-udgaven af referencearkitekturen omfattede personer. I 2019-udgaven af referencearkitekturen er yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester og uddybet.
+
 
 <h2 class="no-num"> Resume (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -113,61 +115,14 @@ I referencearkitekturen fastlægges en række standarder for håndtering af brug
 
 
 # Introduktion
-Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger og føderationer generelt i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur affødt af Digitaliseringsstrategiens initiativ 8.1, som indtil videre er kommet til udtryk i ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering”. [ *her skal der nok trækkes tråde til de øvrige referencearkitekturer, som er fremkommet i mellemtiden* ]
 
-----
+## Formål
+Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
+Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 
-En referencearkitektur giver både myndigheder og virksomheder fælles pejlemærker i forbindelse med videreudvikling og nyanskaffelser. Med denne referencearkitektur gælder det for både virksomheder og myndigheder i deres forskellige roller:
-- som brugerorganisationer og arbejdsgivere, der skal håndtere identiteter for egne medarbejdere, systemer og enheder
-- som udbydere af brugerstyringstjenester som fx autentifikationstjenester og brokere
-- som udbydere af forretningstjenester, der giver adgang til data og funktionalitet
-
-En referencearkitektur er en fælles referenceramme for den måde, der bygges løsninger på inden for et specifikt område. Den beskriver de forretningsmæssige visioner og mål, og den fastlægger principper og begreber. Den beskriver, hvordan man kan realisere de egenskaber, som der er behov for både på forretningsniveau og på teknisk niveau.
-
-En referencearkitektur er en beskrivelse på konceptuelt og logisk niveau. Referencearkitekturen for brugerstyring er styrende for arbejdet med tværoffentlig brugerstyring og kan ligeledes være vejledende for arbejdet med brugerstyring i sektorer, myndigheder og virksomheder. Dette er specificeret gennem anvendelse af termerne SKAL, BØR, KAN, hvis betydning er fastlagt i afsnit 1.3.1.
-
-----
-
-Referencearkitekturen er som fælles referenceramme styrende for arbejdet med tværoffentlig brugerstyring og kan ligeledes være vejledende for arbejdet med brugerstyring i sektorer, myndigheder og virksomheder.
-
-På nogle områder indeholder referencearkitekturen krav og anbefalinger:
-- Afsnit angivet med “SKAL” er krav, som skal efterkommes af offentlige myndigheder i Danmark.
-- Afsnit angivet med “BØR” er anbefalinger, som bør efterkommes af offentlige myndigheder, men der er ikke krav om det. Efterkommer man det ikke, SKAL man give en begrundelse for ikke at gøre det ud fra et ”følg eller forklar”-princip.
-- Afsnit angivet med ”KAN” er vejledende, som myndighederne kan efterkomme efter behov.
-
-Referencearkitekturens krav og anbefalinger gælder, når der er tale om nyudvikling eller større ændringer. Der kan være andre regelsæt, der kræver bagudrettede ændringer
-
-Der vil være forskelle med hensyn til, hvem et SKAL/BØR/KAN gælder for. Referencearkitekturen skelner mellem følgende:
-- **Fællesoffentlige løsninger.** Det er løsninger, der er finansieret og specificeret gennem en fællesoffentlig aftale fx (NemID og MitID), NemLog-in og Digital Post.
-- **Tværoffentlige brugerstyringsløsninger.** Det er løsninger, der anvendes af flere myndigheder og er finansieret på anden måde end gennem fællesoffentlig aftale fx Uni*Login, Miljøportalen, WAYF, Kommunerne, Sundhed.
-- **Tjenester der anvender fællesoffentlige og tværoffentlige løsninger,** og som er rettet mod borgere og virksomheder som slutbrugere. Eksempler er borger.dk, virk.dk, sundhed.dk og kommunale tjenester.
-- **Løsninger der finansieres og fungerer inden for en offentlig sektor.** Det omfatter både løsninger til brugerstyring i myndigheder og fx fagsystemer i myndigheder.
-
-For hvert afsnit angives en af følgende formuleringer:
-
-- Dette afsnit SKAL/BØR/KAN efterkommes i fællesoffentlige løsninger.
-- Dette afsnit SKAL/BØR/KAN efterkommes i tværoffentlige brugerstyringsløsninger.
-- Dette afsnit SKAL/BØR/KAN efterkommes i tjenester, der anvender fællesoffentlige og tværoffentlige løsninger.
-- Dette afsnit BØR/KAN efterkommes af løsninger i offentlige sektorer.
-
-Referencearkitekturen vil give status for standarder mv. På arkitekturguiden.digitaliser.dk vil der være oplysninger om konkrete standarder, efterhånden som de beskrives og fastlægges.
-
-
-## Formål, anvendelse og målgruppe
-Den fællesoffentlige referencearkitektur for brugerstyring skal målrette, strukturere og prioritere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er således på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderering på tværs af sikkerhedsdomæner med gensidig tillid via trust frameworks. Brugeren i brugerstyring er en entitet, der kan være en person, en organisation, en ting, et system eller en tjeneste, og entiteten optræder over for en forretningstjeneste som en digital identitet beskrevet ved et sæt af attributter.
-
-Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af en sikkerhedsløsning kan kommunikere med systemer og tjenester understøttet af en anden sikkerhedsløsning. Herved bliver interoperabilitet lettere at etablere og drive, så brugerne undgår at skulle logge på flere gange, og så oplysninger om brugere ikke skal vedligeholdes flere steder.
-
----
-## Anvendelse og målgruppe?
-Referencearkitekturen har overordnet set tre anvendelseskontekster: standardisering, løsningsprojekter og etablering af føderationer.
-
-Referencearkitekturen skal anvendes til at udpege standarder, der understøtter skabelsen af sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af sektorer, nationalt og transnationalt. Referencearkitekturen fokuserer på at rammesætte, kravsætte og vejlede fællesoffentlige digitale løsninger, løsninger mellem offentlige sektorer, løsninger for tjenester, der skal anvende fællesoffentlige tjenester, og er vejledende for digitale løsninger inden for sektorer.
-
-Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Den kan anvendes i forbindelse med kravspecificering af løsninger, og den kan anvendes i forbindelse med specificering af standardiserede snitflader mellem systemer, der skal håndtere de enkelte tjenester i den tværoffentlige brugerstyring. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
-
-Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme. Etablering af en føderation sker gennem fastlæggelse af et aftalesæt mellem føderationens deltagere.
-
+## Anvendelse
+Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
+Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer. Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
 
 <figure>
@@ -175,7 +130,6 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 <fgicaption>Referencearkitekturens rolle</figcaption>
 </figure>
 
----
 ## Målgruppe
 Dette dokument har to målgrupper:
 
@@ -183,14 +137,16 @@ Dette dokument har to målgrupper:
 - Den anden målgruppe er projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring.
 
 
-## Afgrænsning?
-Scope for referencearkitekturen for brugerstyring er i første offentlige tjenester, men referencearkitekturen kan også med fordel anvendes af private til eksempelvis at understøtte tværgående brugerforløb med det offentlige.
+## Omfang og afgrænsning
+Referencearkitekturen for brugerstyring omfatter offentlige tjenester, men referencearkitekturen kan med fordel også anvendes til ikke offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
 
-Scope omfatter også rollen som leverandør af brugerstyringstjenester (registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv.) i forhold til offentlige tjenester med både offentlige og private leverandører. Det omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata og login-systemer.
+Arkitekturen omfatter også rollen som leverandør af tillidstjenester - registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata og login-systemer.
 
-Scope omfatter både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
+Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
 
-Denne 2019-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedr. brugerstyring for ting, tjenester og systemer - samlet under betegnelsen NonPerson Entities (NPE).
+Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme. Etablering af en føderation sker gennem fastlæggelse af et aftalesæt mellem føderationens deltagere.
+
+Denne 2019-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
 Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
@@ -198,115 +154,103 @@ Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af 
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen.
 
-<div class="new">
+Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
+I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
+
 <figure>
-<img src="bermuda.svg" width="65%"/>
-<figcaption>[Bermuda-trekanten]</figcaption>
+<img src="Begrebsoverblik.png" width="80%"/>
+<figcaption>[Brugerstyringsbegreber]</figcaption>
 </figure>
-</div>
-<dfn>Entiteter</dfn> Et subjekt/en bruger som skal have adgang til en tjeneste. I denne version betragtes kun fysiske personer, som evt. kan være associeret med en juridisk person, som en entitet.
 
-<dfn>(elektronisk) identitet, eID</dfn> En digital persona repræsenteret ved et sæt af attributter.
+<dfn>Entitet</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
 
-<dfn>Det fællesoffentlige eID</dfn> En elektronisk identitet, et eID, der svarer til det nuværende NemID.
+<dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces hvor identiteten udstedes - Identitetssikring.
 
-<dfn>forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+<dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn og password, NemID nøglekort, certifikater, fingeraftryk mv.
 
-----
+<dfn>Forretningstjeneste</dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
 
-<div class="new">
-<dfn>Entitet</dfn> En fysisk person, en fysisk enhed (NPE) eller juridisk enhed, som ønsker adgang til en tjeneste gennem autentifikation med akkreditiver (elektroniske identifikationsmidler). En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.
+<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
 
-<dfn>Identitet</dfn> En identitet er en digital persona (*bruger*) repræsenteret ved et sæt af attributter, som fx kan repræsentere en fysisk person (pri-vatidentitet), en juridisk enhed (virksomhedsidentitet), eller en fysisk person, der er associeret med en juridisk enhed (fx erhvervsidentitet). En identitet kan rumme attributter, som entydigt udpeger en entitet (fx en CPR attribut), men kan også være pseudonyme.
+### Type af entiteter
 
-<dfn>Akkreditiv / (Elektronisk Identifikationsmiddel)</dfn> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn+password, NemID nøglekort mv.
+Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
 
-<dfn>Forretningstjeneste</dfn> En tjeneste der løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+<figure>
+<img src="Entitet.png" width="60%"/>
+<figcaption>[Entitetsformer]</figcaption>
+</figure>
 
-<dfn>Identitetsbroker</dfn> En tjeneste som formidler en autentificeret identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i flere led). En identitetsbroker foretager ikke nødvendigvis selv identitetssikring eller udstedelse af elektroniske identifikationsmidler. En identitetsbroker er en tjeneste, som kræver tillid (optræder som en såkaldt *trusted third party*) fra forretningstjenester, og er derfor underlagt krav i denne standard.
-Ovenstående begreber er gengivet direkte fra NSIS (National Standard for Identiteters Sikringsniveauer v. 2.0.1), som har en omfattende begrebsliste for området vedr. digitale identiteter.
+<dfn>Person</dfn> Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-</div>
+<dfn>Juridisk enhed</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+
+<dfn>Ting</dfn> Fysiske ting med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+
+<dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i en ting, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
+En automatiseringsrobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler efter at være logget ind på de nødvendige systemer, i brugerstyringssammenhæng ikke betragtes som en robot.
+
+### Relationer imellem identiteter
+Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
+
+<figure>
+<img src="Entitet relation.png" width="60%"/>
+<figcaption>[Entitetsrelationer]</figcaption>
+</figure>
+
+**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
+
+**Tilhør** imellem person og juridisk enhed. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
+
+**Rettighed** der eksplicit gives fra en juridisk enhed til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+
+**Bruger af** en ting. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at tingen arver rettigheder fra brugeren.
+
+**Produktansvar** som juridisk enhed har overfor de ting den producerer.
+
+**Delegering** af rettigheder fra en person eller juridisk enhed til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+
+En applikation der **afvikles på** en enhed, kan få særlige rettigheder på grund af enheden den afvikles på. *< eksempel >*.
+
+Juridisk enhed der har **ansvar for** hvad en applikation gør.
 
 Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
 
 "kun elektroniske identiteter kan anvende elektroniske tjenester".
 
-<div class="new">
-<figure>
-<img src="firkant.svg" width="65%"/>
-<figcaption>[en trekant og en firkant....]</figcaption>
-</figure>
-</div>
-
-
 Se Afsnit 4 og Bilag A: Ordliste
 
 
-## Tilblivelse og governance
+## Tilblivelse og styring
+
+2020-udgaven er udarbejdet i Kontor for Data og Arkitektur, Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
+
+I udarbejdelsen har en arbejdsgruppe af offentlige arkitekter bidraget gennem en række af workshops. I gruppen har deltaget repræsentanter fra følgende organisationer: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Kystdirektoratet, Danmarks miljøportal, Udviklings og forenklingsstyrelsen, Energistyrelsen og Energinet.
+
+2020-udgaven af referencearkitekturen godkendtes i version 2.0 i Styregruppe for Data og Arkitektur under Digitaliseringsstrategien i maj 2020. Styregruppen er herefter ejer af dokumentet, med Kontor for Data og Arkitektur som ansvarlig for vedligehold af referencearkitekturen som en del af den Fællesoffentlige, Digitale Arkitektur.
 
 ## Anvendt metode, notation og signaturforklaring
-Denne version af referencearkitekturen anvender OIO Arkitekturmetoden (OIO EA) som metoderamme.
 
-Referencearkitekturen er generelt søgt udarbejdet således, at den er så konsistent som muligt med andre fællesoffentlige arkitekturdokumenter og standarder udarbejdet i OIO-regi.
+Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af Den fællesoffentlige digitale arkitektur og følger så vidt muligt den fælles skabelon for referencearkitekturer som udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under digitaliseringsstrategien.
 
-Referencearkitekturen bygger på etablerede fællesoffentlige arkitekturprincipper, aftaler og retningslinjer vedrørende deling af data og anvendelse af åbne standarder.
-
-Det bemærkes, at der i regi af Digitaliseringsstrategiens initiativ 8.1 pågår en opdatering af den fællesoffentlige rammearkitektur. Fremtidige udgaver af referencearkitekturen for brugerstyring vil blive koordineret med den fællesoffentlige rammearkitektur og tage højde for andre relevante afhængigheder.  [ *her skal der indføres en kort beskrivelse af de øvrige referencearkitekturer* ]
-
----
-
-**Figurernes farvekoder**
-I referencearkitekturen indgår en række figurer. I disse indgår både brugerstyringsdomænets elementer og sammenhænge med andre domæner. I figurerne er brugerstyringsdomænets elementer vist med rødt og andre domæners elementer med blåt.
-
-**Sprog**
-Der anvendes som hovedregel danske ord, men der henvises også til de engelske ord for at skabe sammenhæng til internationale begreber på brugerstyringsområdet.
-
+I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
+-	Rød tekst: At et element eller en relation ejes og defineres i denne referencearkitekturs begrebsmodel
+-	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur eller i lovgivning.
+-	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
 ## Relation til rammearkitektur og andre referencearkitekturer
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende brugerstyring, herunder relaterede standarder mv.
 
+[ *her skal der indføres en kort beskrivelse af de øvrige referencearkitekturer* ]
+
 ## Læsevejledning
-Afsnit 1-5 bør læses af alle.
 
-Afsnit 2 giver en introduktion til brugerstyringsdomænet og kan springes over af
-læsere med kendskab til domænet og dets begreber.
+Kapitel 1 og 2 bør læses af alle.
 
-Afsnit 6-10 henvender sig særligt til løsningsarkitekter.
+Kapitel 3 om den forretningsmæssige del af arkitekturen bør læses af de der skal forstå arkitekturen.
 
-*Afsnit 1. Indledning*
-Giver et samlet overblik over dokumentet inkl. resumé, formål, scope, metode og anvendelse.
-
-*Afsnit 2. Beskrivelse af brugerstyringsdomænet*
-**Flyt til 4**
-Beskrivelse af domænet, herunder de centrale opgaver: registrering, autentifikation, billetudstedelse, adgangspolitik og adgangskontrol.
-
-*Afsnit 3. Forretningsmæssige behov*
-En gennemgang af de forretningsbehov der danner grundlag for udarbejdelsen af referencearkitekturen.
-- Behov hos personer – både som borgere og medarbejdere
-- Behov hos virksomheder og myndigheder som brugerorganisationer og arbejdsgivere
-- Behov hos virksomheder og myndigheder som tjenesteudbydere og som udbydere af brugerstyringstjenester.
-
-*Afsnit 4. Principper*
-**Flyt til 5**
-Dette afsnit formulerer rammer for de egenskaber, som fremtidige løsninger inden for offentlig brugerstyring skal have. Disse rammer skal sikre, at alle de forskellige løsninger der er behov for, samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
-
-*Afsnit 5. Begrebsmodel*
-**Flyt til 2**
-I dette afsnit beskrives en terminologi og en begrebsmodel for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type organisation, anvendelse eller implementering.
-
-*Afsnit 6. Byggeblokke*
-I dette afsnit beskrives de byggeblokke, der skal være til stede for at kunne realisere de løsninger, der lægges op til med referencearkitekturen.
-
-*Afsnit 7. Processer*
-Dette afsnit viser med nogle eksempler, hvordan tjenesternes interfaces kan benyttes til understøttelse af forskellige typiske brugssituationer.
-
-*Afsnit 8. Teknisk arkitektur*
-Dette afsnit beskriver den systemtekniske målarkitektur, de væsentligste komponenter og anbefalede standarder.
-
-*Afsnit 9. Implementering*
-Dette afsnit beskriver konkret, hvordan referencearkitekturen implementeres, og der fastlægges krav og anbefalinger.
+Kapitel 4 og 5 henvender sig særligt til løsningsarkitekter.
 
 # Forretningsarkitektur
 
@@ -965,6 +909,16 @@ I denne liste gives kun definitioner for de begreber, som referencearkitekturen 
 Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber relateret til brugerstyring.
 
 ## Begrebsmodel og relationer i brugerstyring
+
+
+<div class="new">
+<figure>
+<img src="firkant.svg" width="65%"/>
+<figcaption>[en trekant og en firkant....]</figcaption>
+</figure>
+</div>
+
+
 
 Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
 ![Figur 6. Begrebsmodel for brugerstyring](billede6.PNG)
