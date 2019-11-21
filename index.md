@@ -535,31 +535,32 @@ NSIS stiller ikke krav til forretningstjenesten med stiller sikringsniveauerne t
 
 ----
 
-## Forretningsroller og aktører (i føderationer) (og deres behov?)
+## Forretningsroller og aktører - og deres behov
 
 Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder fremover skal være i stand til at håndtere. Scopet for referencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
-Forretningsbehovene er i den tværoffentlige strategi for brugerstyring beskrevet ud fra flere synsvinkler, idet interessenterne har flere roller, som har betydning for behov:
+Forretningsbehovene er beskrevet ud fra flere synsvinkler, idet interessenterne har flere roller, som har betydning for behov:
 
 - Behov hos personer – både som borgere og medarbejdere
 - Behov hos virksomheder og myndigheder som brugerorganisationer og arbejdsgivere
-- Behov hos virksomheder og myndigheder som tjenesteudbydere og som udbydere af brugerstyringstjenester.
+- Behov hos virksomheder og myndigheder som tjenesteudbydere og som udbydere af brugerstyringstjenester
 
 ### Personer – som borgere og som medarbejdere
 
 Borgere og medarbejdere forventer først og fremmest, at tjenester er let tilgængelige – og herunder ikke mindst at obligatoriske systemer er så smarte, som teknologien tillader.
 
-Mange personer har primært fokus på brugervenlighed og mindre på sikkerhed og privacy. For disse personer skal der være mulighed for at vælge så meget brugervenlighed, som hensyn til lovgivning og sikkerhed tillader. Andre personer har fokus på sikkerhed og privacy. For disse personer skal der være mulighed for løsninger, hvor personen selv har en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter deres elektroniske identiteter udfører, mulighed for anonymitet mv. Tilbud til brugerne skal dog til enhver tid bygge på en høj sikkerhed, så borgernes data ikke kompromitteres.
+Nogle personer har primært fokus på brugervenlighed og mindre på sikkerhed og privacy. For disse personer skal der være mulighed for at vælge så meget brugervenlighed, som hensyn til lovgivning og sikkerhed tillader. Andre personer har fokus på sikkerhed og privacy. For disse personer skal der være mulighed for løsninger, hvor personen selv har en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter deres elektroniske identiteter udfører, mulighed for anonymitet mv. Tilbud til brugerne skal dog til enhver tid bygge på en høj sikkerhed, så borgernes data ikke kompromitteres.
 
+Et ofte udtalt brugerbehov er ønsket om at kunne anvende samme identifikationsmiddel på tværs af tjenester og sektorer - og ofte også gerne i kombination med single sign-on. Dette kan i høj grad opnås ved anvendelse af føderationsprincippet beskrevet i denne referencearkitektur. Et andet behov er, at brugerne på den ene side bør have indsigt i / konrtrol over hvordan deres data flyder (herunder attributter), og på den anden side ofte har et ønske om ikke at skulle indtaste de samme oplysninger flere gange (once-only princippet).
 
-Et eksempel på denne balance er, at det bliver muligt i højere grad for personer at anvende deres private akkreditiv i tilknytning til en erhvervsidentitet med NemLog-in3 og MitID. Dette sker med respekt for det *dobbelte frivillighedsprincip*, hvor et privat akkreditiv kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det. Begge parter kan med andre ord vælge det fra. Samtidig holdes privat- og erhvervsidentiteten fuldstændigt adskilt i overensstemmelse med tidligere beskrene principper (kun akkreditivet genbruges).
+Et eksempel på håndtering af balancen ellem brugervenlighed og privacy er, at det bliver muligt i højere grad for personer at anvende deres private identifikationsmoddel i tilknytning til en erhvervsidentitet med NemLog-in3 og MitID. Dette sker med respekt for det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det. Begge parter kan med andre ord vælge det fra. Samtidig holdes privat- og erhvervsidentiteten fuldstændigt adskilt i overensstemmelse med tidligere beskrene principper (kun identifikationsmidlet genbruges).
 
 
 Nogle medarbejdere anvender deres akkreditiv mange gange i løbet af en arbejdsdag. For denne brugergruppe er det derfor væsentligt, at det er let og effektivt at anvende sit akkreditiv.
 
-En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter. Det tilsvarende gælder for samtykke. Samtidig er udtalt behov for, at man et centralt sted kan få et overblik over fuldmagter og samtykker i stedet for at skulle tilgå hver eneste applikation.
+En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
 
-I forhold til de konkrete løsninger har personerne behov for løsninger, der:
+I forhold til de tekniske realiseringer har personerne behov for løsninger, der:
 - Kan anvendes på forskellige typer udstyr
 - Kan dække mange forskellige brugerkompetencer og behov
 - Kan dække mange brugsscenarier, herunder også scenarier hvor tjenester tilgås via systemer, ting eller apps.
@@ -568,13 +569,13 @@ I forhold til de konkrete løsninger har personerne behov for løsninger, der:
 
 ### Virksomheder og myndigheder som brugerorganisationer
 
-Virksomheder og myndigheder har behov for nem og sikker adgang til eksterne tjenester, både webbaserede og gennem lokale applikationer. Da der er mange – og et stigende antal – eksterne tjenester, har virksomheder og myndigheder behov for at have ensartede metoder til at tilgå disse tjenester.
+Virksomheder og myndigheder har behov for nem og sikker adgang til eksterne tjenester, både web-baserede og gennem fag-applikationer. Da der er mange – og et stigende antal – eksterne tjenester, har virksomheder og myndigheder behov for at have ensartede metoder til at tilgå disse tjenester.
 
-En situation, hvor hver tjeneste tildeler egne brugernavne og akkreditiver, vil allerede nu være til stor ulempe for mange virksomheder, og dette problem vil øges fremover, hvis der ikke sikres ensartede løsninger.
+En situation, hvor hver tjeneste tildeler egne brugernavne, passwords eller andre identifikationsmidler, er til stor ulempe for mange virksomheder, og dette problem vil øges fremover, hvis der ikke sikres ensartede løsninger.
 
-Mange meget små virksomheder og andre organisationer har brug for meget enkle løsninger til autentifikation og signering, og i nogle tilfælde kan brugeradministration for en stor del automatiseres og dermed ikke optræde synligt for virksomheden.
+Mange meget små virksomheder og andre organisationer har brug for meget enkle løsninger til autentifikation og signering, og i nogle tilfælde kan brugeradministration for en stor del automatiseres og dermed ikke optræder synligt for virksomheden.
 
-Små og mellemstore virksomheder, foreninger og anpartsselskaber med flere medarbejdere har behov for enkel brugeradministration, hvor rettigheder set med brugernes øjne administreres manuelt ét samlet sted for offentlige selvbetjeningsløsninger.
+Små og mellemstore virksomheder, foreninger og anpartsselskaber med flere medarbejdere har behov for enkel brugeradministration, hvor rettigheder set med brugernes øjne administreres  ét samlet sted for offentlige selvbetjeningsløsninger.
 
 Større virksomheder har brug for forskellige løsninger, der både kan omfatte manuel indtastning, digital provisionering og eventuelt føderering. Større virksomheder har egen brugerstyring, og de kan generelt have behov for god sammenhæng mellem deres egen brugerstyring og ekstern brugerstyring.
 
@@ -586,21 +587,21 @@ Mange brugerorganisationer har behov for at få styr på deres mange forskellige
 
 ### Virksomheder og myndigheder som tjenesteudbydere
 
-Det er et fælles behov for tjenesteudbyderne at kunne modtage billetter med en autentificeret identitet på en standardiseret måde, og gerne så tjenesteudbyderne afskærmes fra ændringer på brugerstyringssiden.
+Det er et fælles behov for tjenesteudbyderne at kunne trække på modne tillidstjenester på en standardiseret måde, således at tjenesteudbyderne afskærmes fra kompleksiteten i at håndtere og administrere brugeridentiteter, identifikationsmidler mv. Når man bygger en forretningstjeneste, er det ofte komplekst og ressourcekrævende selv at håndtere brugerstyring, og der er ofte en god business case i at få det som en ekstern tjeneste.
 
-En stor del af de offentlige tjenester rummer fortrolige data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau som fx NSIS Betydelig. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens. Andre offentlige tjenester (fx i forbindelse med renovation og lokalebestilling) har ikke samme sikkerhedskrav og nøjes med et lavere sikringsniveau.
+En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
 
 Forskellige sektorer har forskelligartede behov:
 
-- Myndigheder er omfattet af reglerne om partsrepræsentation, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
-- Tjenester i den finansielle sektor har sikkerhedskrav og krav og kendskab til kundeidentiteter,  dels i kraft lovgivning om hvidvask dels i medfør af PSD2 direktivet.
+- Myndigheder er omfattet af reglerne om partsrepræsentation i forvaltningsloven, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
+- Tjenester i den finansielle sektor er underlagt sikkerhedskrav samt krav om verificering af kundeidentiteter,  dels i kraft lovgivning om hvidvask dels i medfør af PSD2 direktivet.
 - Tjenester i spilsektoren er forpligtet ved lov til at anvende stærk autentifikation samt at kontrollere, at identiteten ikke er omfattet af spærrelisten. Tjenesterne har ikke et behov for præcis identifikation med navn.
 - En virksomhed som ”Den Blå Avis/DBA” har brug for at kunne garantere mod svindel, hvilket de aktuelt håndterer ved, at sælgerne og køberne kan blive NemID-valideret. DBA identificerer ikke personerne med CPR, men anvender i stedet certifikatets PID, hvilket kan anses som en privacy-mæssig fordel.
 - Regionerne har mange private aktører som medtjenesteudbydere.
 
-En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data.
+En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
 
-Tjenesteudbydere har behov for adgang til eksterne identiteter og rettighedsrelevante attributter, så de ikke skal etablere egne brugerstyringsløsninger og drive og supportere disse. Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring. Der er en god business case i at få det som en tjeneste eller som koncepter.
+
 
 Brugerne skal kunne autentificeres på flere sikringsniveauer svarende til tjenesternes behov for sikkerhed. Tjenesteudbyderne har for nogle tjenester behov for at kunne sikre, at en bruger kun får adgang til ressourcer eller data, der relaterer til den enkelte brugers aktuelle opgave. Sundhedsdomænet har eksempelvis behov for løsninger, der kan sikre, at kun sundhedspersonale, der reelt har en relation til behandlingen af en patient, får adgang til patientdata (behandlerrelation).
 
