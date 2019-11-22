@@ -308,6 +308,74 @@ Dette afsnit beskriver den systemtekniske målarkitektur, de væsentligste kompo
 *Afsnit 9. Implementering*
 Dette afsnit beskriver konkret, hvordan referencearkitekturen implementeres, og der fastlægges krav og anbefalinger.
 
+
+# Strategi
+
+## Temaer
+Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til infrastruktur og tjenester. Hvis brugerne mister tilliden til, at en løsning giver en tilstrækkelig beskyttelse af deres persondata, vil der være risiko for, at de fravælger en given løsning og måske overgår til analog behandling eller helt fravælger en serviceydelse. Der vil derfor være forretningsmæssige fordele ved at indtænke privatlivsbeskyttelse i brugerstyringssystemer i tillæg til den rene overholdelse af lovgivningen på området. Dette kan håndteres gennem et struktureret privacy-program.
+
+## Strategiske principper
+OECD har defineret otte basale principper for privatlivsbeskyttelse(Kan findes beskrevet hos OECD:https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm):
+
+Princippet om begrænset indsamling
+Princippet om datakvalitet
+Princippet om formålsspecificering
+Princippet om anvendelsesbegrænsning
+Princippet om datasikkerhed
+Princippet om åbenhed (transparens)
+Princippet om individets deltagelse
+Princippet om ansvarlighed (accountability).
+Løsninger bør i design, udvikling, drift og vedligehold forholde sig til ovenstående.
+
+
+## Vision
+
+## Værdiskabelse
+
+## Juridiske rammer
+
+I maj 2018 trådte EU’s forordning om persondatabeskyttelse (GDPR) i kraft. Denne stiller en række krav til persondatabeskyttelse, og en del af disse krav er dækket, hvis man følger ovenstående basale principper fra OECD. Dog er der konkrete krav i GDPR, som skal indtænkes i løsninger, herunder:
+
+Privacy Impact Assessments
+Privacy-by-design og privacy-by-default
+Retten til at blive glemt
+Retten til dataportabilitet
+Retten til indsigt i egne data
+Selvom privatlivsbeskyttelse omfatter andet end informationssikkerhed, kan man med fordel indbygge sit privacy-program i eksisterende ISMS, da mange kontroller er sammenfaldende.
+
+## Sikkerhed
+
+[Er det måske mere beslutning der er truffet strategisk, at vi er forpligtiget til at anvende ISO 27001? Og at vi har NSIS /madsh]
+
+Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. ISO 27001 er valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og kommunerne er forpligtet til at følge principperne.
+
+Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har udarbejdet vejledninger, værktøjer og skabeloner hertil, som er placeret her: http://www.digst.dk/Informationssikkerhed.
+
+Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester, som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge
+
+retningslinjer
+forretningsgange og instrukser
+sikkerhedsforanstaltninger,
+som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
+
+Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiter, rettigheder og akkreditiver. National Standard for Identiteters Sikringsniveauer (NSIS) er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trinsskala:� Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester, som aftager identiteter.
+
+Den kommende fællesoffentlige infrastruktur for identiteter i form af MitID og NemLog-in3 bygges på NSIS, og overholdelse af NSIS standarden vil være en forudsætning for at tilslutte en forretningstjeneste, broker eller lokal IdP til NemLog-in3.
+
+I en tværoffentlig brugerstyring er det endvidere nødvendigt at koordinere risikovurderinger og valg af niveau for og håndtering af informationssikkerheden. Dette kan ske ved at benytte et fælles trust framework som NSIS. For at alle parter kan have tillid til hinanden, ekspliciterer, harmoniserer og standardiserer et trust framework forskellige aspekter af sikkerhed, herunder politikker, sikkerhedsmæssige tiltag og fælles sprog. Harmonisering og standardisering er teoretisk set ikke en nødvendighed, men konsekvensen ved ikke at harmonisere og standardisere er, at kompleksiteten af kommunikationen mellem sikkerhedsdomæner bliver meget høj. Der skal indgås individuelle aftaler mellem parterne, og disse skal kende til hinandens politikker og arbejdsgange m.m. Et trust framework er med til at reducere denne kompleksitet.
+
+NSIS og trust frameworks generelt giver mulighed for:
+
+Sammenhængende løsninger på tværs af domæner og føderationer via gensidig tillid (sammenkobling af siloer).
+En fælles forståelse samt koordinering/governance af sikringsniveauer.
+Transparens gennem tydelig beskrivelse af krav til parterne og regler for deres adfærd.
+En flerleverandørstrategi baseret på outsourcing af funktioner med mulighed for private aktører - hvor det er ønskeligt og økonomisk fordelagtigt.
+Veldefineret governance gennem anmeldelse, revision og tilsyn.
+National Standard for Identiteters Sikringsniveauer (NSIS), der har afsæt i eIDAS-forordningen, er et dansk trust framework for identitetssikring. NSIS fastlægger som tidligere nævnt tre sikringsniveauer (”Lav”, ”Betydeligt” og ”Høj”), som modsvarer de tilsvarende niveauer i eIDAS. Niveauerne dækker hele livscyklussen for elektroniske identiteter fra registrering til arkivering/nedlæggelse.
+
+Når en bruger autentificerer sig mod en forretningtjeneste, vil brugerens security token (billet) indeholde information om det aktuelle sikringsniveau for autentifikationen. Forretningstjenesten kan på baggrund af dette (samt øvrige attributter om brugeren) beslutte, hvilken adgang brugeren kan få i tjenesten. Sikringsniveauet er dermed et input til adgangskontrollen i tjenesten.
+
+
 # Forretningsarkitektur
 
 Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale løsninger. Det inkluderer oprettelse, ændring og nedlæggelse af identiteter (personer, organisationer, tjenester eller ting) i brugerstyringssystemer, tilknytning af akkreditiver og rettigheder til brugere og tildeling af adgang til ressourcer, typisk it-systemer. Brugerstyring er en fælles betegnelse for, hvordan en organisation fastlægger, håndterer og teknologisk sikrer, at kun brugere med de rigtige akkreditiver og karakteristika får adgang, og alle andre afvises.

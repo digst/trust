@@ -10,6 +10,8 @@ Hvis der er brug for arbejde med flere fremtidige version, brancher vi, men anve
 
 Vi anvender pandoc til at lave word versioner når vi har brug det. Senere måske bikeshed til at producerer det færdige produkt.
 
+Alle tegninger findes i file tutti og kan læses/redigeres med yed. 
+
 
 
 *eller*
