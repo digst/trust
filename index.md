@@ -10,6 +10,7 @@
   h4 { font-size: 125%;}
 
   #toc {page-break-before: always;}
+
   /* DIGST-like frontpage */
   .head { width: 50%; margin-left: 24px; padding: 0px; background-color: #031D5C;}
   .head div { background-color: white; padding: 24px; }
@@ -24,9 +25,6 @@
   blockquote { font-size: 80%; font-style: italic; margin-left: 5%; width: 70%; border-left-width: 2px;}
 	h2#abstract {display: none;}
 	.p-summary {width: 50%; margin-left: 24px; padding: 0px;}
-
-
-
 }
 
 .new {
@@ -34,6 +32,8 @@
     padding: 6px;
     margin: 18px 0px 18px 0px;
 }
+
+/* style til egne og andres definitioner rød/blå*/
 </style>
 <pre class="metadata">
 Title: arkitektur.digst.dk Brugerstyring
@@ -114,16 +114,21 @@ I referencearkitekturen fastlægges en række standarder for håndtering af brug
 
 
 
-# Introduktion
+# Introduktion [phj]
 
 ## Formål
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
+[Opdatering skal også indarbejde andet FDA arbejde som fx Modelregler ]
+[bidrage til tværgående arktitekturarbejde hos andre domæner]
 
 ## Anvendelse
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
 Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
-Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer. Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
+Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer.
+[anvendes direkte i nogle områder, indirekte gennem domænearkitektur?]
+[henvisning til hvidbogen]
+Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
 
 <figure>
 <img src="billede1.PNG" />
@@ -134,6 +139,7 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 Dette dokument har to målgrupper:
 
 - Den ene målgruppe er strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer.
+- [dem der laver tværgående arkitektur indenfor domæner]
 - Den anden målgruppe er projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring.
 
 
@@ -148,7 +154,7 @@ Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af bru
 
 Denne 2019-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
-Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
+Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen. [beskriv det i termer fra FODS initiativer]
 
 ## Centrale begreber
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
@@ -157,10 +163,14 @@ læsningen.
 Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
 
+[På et teknisk niveau har vi identitets baseret adgangskontrol, men loven peger nogle gange på entiteter...]
+
 <figure>
 <img src="Begrebsoverblik.png" width="80%"/>
-<figcaption>[Brugerstyringsbegreber]</figcaption>
+<figcaption>[Brugerstyringsbegreber, udvid med navngivne releationer.]</figcaption>
 </figure>
+
+[Overvej om vi skal ramme brugerstyring her også]
 
 <dfn>Entitet</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
 
@@ -173,6 +183,13 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 <dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
 
 ### Type af entiteter
+
+[genskriv med princip om entiteter og identitets typer hænger sammen mht til adgangskontrol]
+
+[entiteterne får adgang, men det er identiteter der tilgå tjeneste]
+
+
+
 
 Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
 
@@ -238,11 +255,13 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 -	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur eller i lovgivning.
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
-## Relation til rammearkitektur og andre referencearkitekturer
+## Relation til rammearkitektur og andre referencearkitekturer [madsh]
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende brugerstyring, herunder relaterede standarder mv.
 
 [ *her skal der indføres en kort beskrivelse af de øvrige referencearkitekturer* ]
+
+[indenfor og udenfor FDA, den på sundhedsområdet]
 
 ## Læsevejledning
 
@@ -253,12 +272,23 @@ Kapitel 3 om den forretningsmæssige del af arkitekturen bør læses af de der s
 Kapitel 4 og 5 henvender sig særligt til løsningsarkitekter.
 
 
-# Strategi
+# Strategi [madsh]
 
 ## Temaer
 Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til infrastruktur og tjenester. Hvis brugerne mister tilliden til, at en løsning giver en tilstrækkelig beskyttelse af deres persondata, vil der være risiko for, at de fravælger en given løsning og måske overgår til analog behandling eller helt fravælger en serviceydelse. Der vil derfor være forretningsmæssige fordele ved at indtænke privatlivsbeskyttelse i brugerstyringssystemer i tillæg til den rene overholdelse af lovgivningen på området. Dette kan håndteres gennem et struktureret privacy-program.
 
-## Strategiske principper
+[temaer bør afspejle 3.5, måske hvsd betyder sikker, sammenhængende og effektivt for hver af de tre aktører plus tillidtjeneste udbyder]
+
+
+## Strategiske principper [madsh]
+
+[forhold sig til hvidbogens principper]
+[beskriver at der kommer mere specifikke principper til og de er rettet til målgruppe]
+
+[er det øverst brugerstyringsprincip, sammenhængende økosystem... tillidstjenester]
+
+[inkl bilag om hvad vi har gjort]
+
 OECD har defineret otte basale principper for privatlivsbeskyttelse(Kan findes beskrevet hos OECD:https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm):
 
 Princippet om begrænset indsamling
@@ -290,6 +320,8 @@ Selvom privatlivsbeskyttelse omfatter andet end informationssikkerhed, kan man m
 ## Sikkerhed
 
 [Er det måske mere beslutning der er truffet strategisk, at vi er forpligtiget til at anvende ISO 27001? Og at vi har NSIS /madsh]
+
+[Skal vi prøve at pege på de relevante ISO kontroller]
 
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. ISO 27001 er valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og kommunerne er forpligtet til at følge principperne.
 
@@ -330,7 +362,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 <div class="new">
 <figure>
 <img src="kontekst.svg" />
-<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
+<figcaption>Oversigt over brugerstyringsdomænet [overveje at sætte 'vidergivelse af data på...']</figcaption>
 </figure>
 </div>
 
@@ -436,7 +468,7 @@ Autentikationsfunktionen varetages i nogle tilfælde af den part, der har udsted
 
 Styrken af en autentifikationsproces klassificeres i NSIS som AAL (Authenticator Assurance Level) og indplaceres på den sædvanlig tre-trins skala (Lav, Betydelig, Høj), og kan dermed indgå i adgangspolitikker for tjenester.
 
-I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, således at den identitet, som formidles til tjeneste, er beriget med yderligere oplysninger - og den kombinerede funktion betegnes ofte som *broker* eller *identitetsbroker*. En anden vigtig egenskab ved autentifikationstjenester er, at de kan afkoble forretningstjenester fra at kende til detaljerne i validering af brugernes identifikationsmidler. I føderationer er det bærende princip, at forretningstjenester ikke må udføre autentifikation selv. Ved at delegere denne funktion til en ekstern tillidstjeneste opnås en lang række fordele som fx en mere sammenhængende, sikker og skalerbar arkitektur, hvor brugerne kan genbruge deres identifikationsmidler på tværs af forretningstjenester.  
+I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, således at den identitet, som formidles til tjeneste, er beriget med yderligere oplysninger - og den kombinerede funktion betegnes ofte som *broker* eller *identitetsbroker*. En anden vigtig egenskab ved autentifikationstjenester er, at de kan afkoble forretningstjenester fra at kende til detaljerne i validering af brugernes identifikationsmidler. I føderationer er det bærende princip, at forretningstjenester ikke må udføre autentifikation selv. Ved at delegere denne funktion til en ekstern tillidstjeneste opnås en lang række fordele som fx en mere sammenhængende, sikker og skalerbar arkitektur, hvor brugerne kan genbruge deres identifikationsmidler på tværs af forretningstjenester.
 
 
 
@@ -621,7 +653,7 @@ Tjenesteudbydere har behov for kontrol med, hvem der har logget ind og udført h
 
 Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.
 
-## Principper???
+## Principper??? [madsh]
 [Jeg vil foretrække principper spredt ud i det afsnit de hører mest til, og opsummeret i resume /madsh]
 
 Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
@@ -866,7 +898,11 @@ De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være f
 
 I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
 
-![Figur 11 Model til brug for brugerstyringstjenester i processer](billede11.PNG)
+<figure>
+<img src="billede11.PNG" width="65%"/>
+<figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
+</figure>
+
 
 >![](logo.png)
 > Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.
@@ -889,7 +925,11 @@ For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem vir
 
 **Attributbeskrivelsen** er her beskrevet meget forenklet. Attributter for en identitet kan hentes fra eksterne kilder i forbindelse med registreringen (fx CPR-oplysninger), kan registreres i forbindelse med registreringen, kan registreres i brugerstyringssystemer eller i andre systemer. Attributter kan på samme måde som en identitet have forskellige kvalitetsniveauer, der bl.a. afhænger af de processer, der er anvendt under registreringen.
 
-![Figur 12 Registrer identitet](billede12.PNG)
+<figure>
+<img src="billede12.PNG" width="65%"/>
+<figcaption>Registrer identitet</figcaption>
+</figure>
+
 
 Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:
 
@@ -905,7 +945,11 @@ En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets k
 
 Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:
 
-![Figur 13 Autentifikation](billede13.PNG)
+
+<figure>
+<img src="billede13.PNG" width="65%"/>
+<figcaption>Autentifikation</figcaption>
+</figure>
 
 Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).
 
@@ -933,7 +977,11 @@ I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder
 
 Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.
 
-![Figur 14 Billetudstedelse og adgangskontrol via en broker](billede14.PNG)
+
+<figure>
+<img src="billede14.PNG" width="65%"/>
+<figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
+</figure>
 
 1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
 2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
@@ -953,7 +1001,10 @@ I eksemplet om Billetudstedelse og Adgangskontrol ovenfor skal alle brugerstyrin
 
 Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
 
-## Forretningsobjekter og begreber
+
+
+## Forretningsobjekter og begreber [madsh]
+[samle til et afsnit]
 
 I dette afsnit beskrives en terminologi og begrebsmodel for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type person, organisation, anvendelse eller implementering. Begrebsmodellen kan således danne udgangspunkt for flere forskellige implementeringer
 
@@ -977,7 +1028,7 @@ I denne liste gives kun definitioner for de begreber, som referencearkitekturen 
 
 Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber relateret til brugerstyring.
 
-## Begrebsmodel og relationer i brugerstyring
+## Begrebsmodel og relationer i brugerstyring [madsh]
 
 
 <div class="new">
@@ -990,6 +1041,8 @@ Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber re
 
 
 Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
+
+
 ![Figur 6. Begrebsmodel for brugerstyring](billede6.PNG)
 [Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
 

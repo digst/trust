@@ -1226,6 +1226,7 @@ Possible extra rowspan handling
   h4 { font-size: 125%;}
 
   #toc {page-break-before: always;}
+
   /* DIGST-like frontpage */
   .head { width: 50%; margin-left: 24px; padding: 0px; background-color: #031D5C;}
   .head div { background-color: white; padding: 24px; }
@@ -1240,9 +1241,6 @@ Possible extra rowspan handling
   blockquote { font-size: 80%; font-style: italic; margin-left: 5%; width: 70%; border-left-width: 2px;}
 	h2#abstract {display: none;}
 	.p-summary {width: 50%; margin-left: 24px; padding: 0px;}
-
-
-
 }
 
 .new {
@@ -2276,7 +2274,10 @@ BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyring
 [Jeg tror vi skal helt over i BPMN diagrammer /madsh]</p>
    <p>De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte myndighed, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.</p>
    <p>I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.</p>
-   <p>!<a href="billede11.PNG">Figur 11 Model til brug for brugerstyringstjenester i processer</a></p>
+   <figure>
+     <img src="billede11.PNG" width="65%"> 
+    <figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
+   </figure>
    <blockquote>
     <p>!<a href="logo.png"></a> Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.</p>
    </blockquote>
@@ -2289,7 +2290,10 @@ BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyring
    <p>En arbejdsgiver kan også registrere en tilknytning mellem sin virksomhed og en given identitet, fx ved at en person med en given identitet  må udføre handlinger i virksomhedens systemer eller for virksomheden.</p>
    <p>For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem virksomhed og en given identitet ske automatisk på grundlag af registreringer i CVR-registret (fx at en person er fuldt ansvarlig deltager eller kan tegne alene for en given virksomhed).</p>
    <p><strong>Attributbeskrivelsen</strong> er her beskrevet meget forenklet. Attributter for en identitet kan hentes fra eksterne kilder i forbindelse med registreringen (fx CPR-oplysninger), kan registreres i forbindelse med registreringen, kan registreres i brugerstyringssystemer eller i andre systemer. Attributter kan på samme måde som en identitet have forskellige kvalitetsniveauer, der bl.a. afhænger af de processer, der er anvendt under registreringen.</p>
-   <p>!<a href="billede12.PNG">Figur 12 Registrer identitet</a></p>
+   <figure>
+     <img src="billede12.PNG" width="65%"> 
+    <figcaption>Registrer identitet</figcaption>
+   </figure>
    <p>Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:</p>
    <ul>
     <li data-md>
@@ -2306,7 +2310,10 @@ BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyring
    <p>En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets kvalitet (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.</p>
    <h4 class="heading settled" data-level="3.7.2" id="autentifikation"><span class="secno">3.7.2. </span><span class="content">Autentifikation</span><a class="self-link" href="#autentifikation"></a></h4>
    <p>Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:</p>
-   <p>!<a href="billede13.PNG">Figur 13 Autentifikation</a></p>
+   <figure>
+     <img src="billede13.PNG" width="65%"> 
+    <figcaption>Autentifikation</figcaption>
+   </figure>
    <p>Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).</p>
    <p>Typisk skelnes der mellem, hvor stærke akkreditiver der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et akkreditiv (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.</p>
    <p>Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker (NemLog-in) og en autentifikationstjeneste indgår.</p>
@@ -2335,7 +2342,10 @@ BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyring
    <h4 class="heading settled" data-level="3.7.3" id="billetudstedelse-og-adgangskontrol"><span class="secno">3.7.3. </span><span class="content">Billetudstedelse og adgangskontrol</span><a class="self-link" href="#billetudstedelse-og-adgangskontrol"></a></h4>
    <p>I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med Billetudstedelse og Adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som tjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.</p>
    <p>Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.</p>
-   <p>!<a href="billede14.PNG">Figur 14 Billetudstedelse og adgangskontrol via en broker</a></p>
+   <figure>
+     <img src="billede14.PNG" width="65%"> 
+    <figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
+   </figure>
    <ol>
     <li data-md>
      <p>En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.</p>
@@ -2386,8 +2396,8 @@ Bruger man andre termer for begreberne inden for sin egen sektor, SKAL man kunne
      <figcaption>[en trekant og en firkant....]</figcaption>
     </figure>
    </div>
-   <p>Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
-!<a href="billede6.PNG">Figur 6. Begrebsmodel for brugerstyring</a> [Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]</p>
+   <p>Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.</p>
+   <p>!<a href="billede6.PNG">Figur 6. Begrebsmodel for brugerstyring</a> [Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]</p>
    <p>| Relation | Definition |
 |---       |---         |
 | En entitet registres med en eller flere identiteter. | En identitet fastlægges og valideres af en registreringstjeneste  |
