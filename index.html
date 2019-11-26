@@ -1248,6 +1248,8 @@ Possible extra rowspan handling
     padding: 6px;
     margin: 18px 0px 18px 0px;
 }
+
+/* style til egne og andres definitioner rød/blå*/
 </style>
 <style>/* style-md-lists */
 
@@ -1400,7 +1402,7 @@ pre .property::before, pre .property::after {
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1>Fællesoffentlig <br>referencearkitektur for <br>brugerstyring</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <time class="dt-updated" datetime="2019-11-25">25 November 2019</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <time class="dt-updated" datetime="2019-11-26">26 November 2019</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1423,7 +1425,7 @@ pre .property::before, pre .property::after {
     <li><a href="#resume-in-english"><span class="secno"></span> <span class="content"> Resume (in english)</span></a>
     <li><a href="#resume"><span class="secno"></span> <span class="content">Resume</span></a>
     <li>
-     <a href="#introduktion"><span class="secno">1</span> <span class="content">Introduktion</span></a>
+     <a href="#introduktion-phj"><span class="secno">1</span> <span class="content">Introduktion [phj]</span></a>
      <ol class="toc">
       <li><a href="#forml"><span class="secno">1.1</span> <span class="content">Formål</span></a>
       <li><a href="#anvendelse"><span class="secno">1.2</span> <span class="content">Anvendelse</span></a>
@@ -1437,14 +1439,14 @@ pre .property::before, pre .property::after {
        </ol>
       <li><a href="#tilblivelse-og-styring"><span class="secno">1.6</span> <span class="content">Tilblivelse og styring</span></a>
       <li><a href="#anvendt-metode-notation-og-signaturforklaring"><span class="secno">1.7</span> <span class="content">Anvendt metode, notation og signaturforklaring</span></a>
-      <li><a href="#relation-til-rammearkitektur-og-andre-referencearkitekturer"><span class="secno">1.8</span> <span class="content">Relation til rammearkitektur og andre referencearkitekturer</span></a>
+      <li><a href="#relation-til-rammearkitektur-og-andre-referencearkitekturer-madsh"><span class="secno">1.8</span> <span class="content">Relation til rammearkitektur og andre referencearkitekturer [madsh]</span></a>
       <li><a href="#lsevejledning"><span class="secno">1.9</span> <span class="content">Læsevejledning</span></a>
      </ol>
     <li>
-     <a href="#strategi"><span class="secno">2</span> <span class="content">Strategi</span></a>
+     <a href="#strategi-madsh"><span class="secno">2</span> <span class="content">Strategi [madsh]</span></a>
      <ol class="toc">
       <li><a href="#temaer"><span class="secno">2.1</span> <span class="content">Temaer</span></a>
-      <li><a href="#strategiske-principper"><span class="secno">2.2</span> <span class="content">Strategiske principper</span></a>
+      <li><a href="#strategiske-principper-madsh"><span class="secno">2.2</span> <span class="content">Strategiske principper [madsh]</span></a>
       <li><a href="#vision"><span class="secno">2.3</span> <span class="content">Vision</span></a>
       <li><a href="#vrdiskabelse"><span class="secno">2.4</span> <span class="content">Værdiskabelse</span></a>
       <li><a href="#juridiske-rammer"><span class="secno">2.5</span> <span class="content">Juridiske rammer</span></a>
@@ -1477,7 +1479,7 @@ pre .property::before, pre .property::after {
         <li><a href="#virksomheder-og-myndigheder-som-brugerorganisationer"><span class="secno">3.5.2</span> <span class="content">Virksomheder og myndigheder som brugerorganisationer</span></a>
         <li><a href="#virksomheder-og-myndigheder-som-tjenesteudbydere"><span class="secno">3.5.3</span> <span class="content">Virksomheder og myndigheder som tjenesteudbydere</span></a>
        </ol>
-      <li><a href="#principper"><span class="secno">3.6</span> <span class="content">Principper???</span></a>
+      <li><a href="#principper-madsh"><span class="secno">3.6</span> <span class="content">Principper??? [madsh]</span></a>
       <li>
        <a href="#tvrgende-processer"><span class="secno">3.7</span> <span class="content">Tværgående processer</span></a>
        <ol class="toc">
@@ -1486,8 +1488,8 @@ pre .property::before, pre .property::after {
         <li><a href="#billetudstedelse-og-adgangskontrol"><span class="secno">3.7.3</span> <span class="content">Billetudstedelse og adgangskontrol</span></a>
         <li><a href="#kontrol-og-rapportering"><span class="secno">3.7.4</span> <span class="content">Kontrol og rapportering</span></a>
        </ol>
-      <li><a href="#forretningsobjekter-og-begreber"><span class="secno">3.8</span> <span class="content">Forretningsobjekter og begreber</span></a>
-      <li><a href="#begrebsmodel-og-relationer-i-brugerstyring"><span class="secno">3.9</span> <span class="content">Begrebsmodel og relationer i brugerstyring</span></a>
+      <li><a href="#forretningsobjekter-og-begreber-madsh"><span class="secno">3.8</span> <span class="content">Forretningsobjekter og begreber [madsh]</span></a>
+      <li><a href="#begrebsmodel-og-relationer-i-brugerstyring-madsh"><span class="secno">3.9</span> <span class="content">Begrebsmodel og relationer i brugerstyring [madsh]</span></a>
      </ol>
     <li>
      <a href="#teknisk-arkitektur"><span class="secno">4</span> <span class="content">Teknisk arkitektur</span></a>
@@ -1609,14 +1611,19 @@ pre .property::before, pre .property::after {
    <p>Der er derfor valgt en token-baseret model for adgangsstyring. Denne indebærer, at brugere og systemer efter autentifikation får udstedt en signeret billet, et såkaldt <em>security token</em>, af en betroet komponent i infrastrukturen. Billetten præsenteres herefter over for den tjeneste, som leverer data eller funktionalitet, der ønskes adgang til. En billet indeholder attributter, som beskriver identitet, karakteristika  samt tildelte adgangsrettigheder. Den er desuden tidsstemlet og digitalt signeret af udstederen, så den ikke kan forfalskes eller manipuleres.</p>
    <p>Digitalisering forudsætter informationssikkerhed, og brugerstyring er et af midlerne til at håndtere risici knyttet til håndtering af digitale identiteter.</p>
    <p>I referencearkitekturen fastlægges en række standarder for håndtering af brugere, akkreditiver og attributter. Der er behov for standarder for overførsel af data om autentificerede brugere mellem autentifikationstjenester, login-tjenester/brokere og forretningstjenester. Der er behov for standarder i forbindelse med rettighedsrelevante attributter, og der er behov for standarder for kommunikation mellem føderationer. Dette behandles i afsnit 9.6.1.</p>
-   <h2 class="heading settled" data-level="1" id="introduktion"><span class="secno">1. </span><span class="content">Introduktion</span><a class="self-link" href="#introduktion"></a></h2>
+   <h2 class="heading settled" data-level="1" id="introduktion-phj"><span class="secno">1. </span><span class="content">Introduktion [phj]</span><a class="self-link" href="#introduktion-phj"></a></h2>
    <h3 class="heading settled" data-level="1.1" id="forml"><span class="secno">1.1. </span><span class="content">Formål</span><a class="self-link" href="#forml"></a></h3>
     Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
-Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder. 
+Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
+[Opdatering skal også indarbejde andet FDA arbejde som fx Modelregler ]
+[bidrage til tværgående arktitekturarbejde hos andre domæner] 
    <h3 class="heading settled" data-level="1.2" id="anvendelse"><span class="secno">1.2. </span><span class="content">Anvendelse</span><a class="self-link" href="#anvendelse"></a></h3>
     Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
 Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
-Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer. Generelt kan en referencearkitekturs rolle illustreres med følgende figur: 
+Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer.
+[anvendes direkte i nogle områder, indirekte gennem domænearkitektur?]
+[henvisning til hvidbogen]
+Generelt kan en referencearkitekturs rolle illustreres med følgende figur: 
    <figure>
      <img src="billede1.PNG"> 
     <fgicaption>Referencearkitekturens rolle </fgicaption>
@@ -1627,6 +1634,8 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
     <li data-md>
      <p>Den ene målgruppe er strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer.</p>
     <li data-md>
+     <p>[dem der laver tværgående arkitektur indenfor domæner]</p>
+    <li data-md>
      <p>Den anden målgruppe er projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring.</p>
    </ul>
    <h3 class="heading settled" data-level="1.4" id="omfang-og-afgrnsning"><span class="secno">1.4. </span><span class="content">Omfang og afgrænsning</span><a class="self-link" href="#omfang-og-afgrnsning"></a></h3>
@@ -1635,22 +1644,26 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
    <p>Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).</p>
    <p>Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme. Etablering af en føderation sker gennem fastlæggelse af et aftalesæt mellem føderationens deltagere.</p>
    <p>Denne 2019-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).</p>
-   <p>Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.</p>
+   <p>Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen. [beskriv det i termer fra FODS initiativer]</p>
    <h3 class="heading settled" data-level="1.5" id="centrale-begreber"><span class="secno">1.5. </span><span class="content">Centrale begreber</span><a class="self-link" href="#centrale-begreber"></a></h3>
     I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen. 
    <p>Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.</p>
+   <p>[På et teknisk niveau har vi identitets baseret adgangskontrol, men loven peger nogle gange på entiteter...]</p>
    <figure>
      <img src="Begrebsoverblik.png" width="80%"> 
-    <figcaption>[Brugerstyringsbegreber]</figcaption>
+    <figcaption>[Brugerstyringsbegreber, udvid med navngivne releationer.]</figcaption>
    </figure>
+   <p>[Overvej om vi skal ramme brugerstyring her også]</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="entitet">Entitet<a class="self-link" href="#entitet"></a></dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="identitet">Identitet<a class="self-link" href="#identitet"></a></dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces hvor identiteten udstedes - Identitetssikring.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="identifikationsmiddel">Identifikationsmiddel<a class="self-link" href="#identifikationsmiddel"></a></dfn> som en entitet får udstedt eller registreret til brug for autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn og password, NemID nøglekort, certifikater, fingeraftryk mv.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="forretningstjeneste">Forretningstjeneste<a class="self-link" href="#forretningstjeneste"></a></dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.</p>
    <p><dfn data-dfn-type="dfn" data-noexport id="adgangskontrol">Adgangskontrol<a class="self-link" href="#adgangskontrol"></a></dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.</p>
    <h4 class="heading settled" data-level="1.5.1" id="type-af-entiteter"><span class="secno">1.5.1. </span><span class="content">Type af entiteter</span><a class="self-link" href="#type-af-entiteter"></a></h4>
+   <p>[genskriv med princip om entiteter og identitets typer hænger sammen mht til adgangskontrol]</p>
+   <p>[entiteterne får adgang, men det er identiteter der tilgå tjeneste]</p>
    <p>Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.</p>
    <figure>
      <img src="Entitet.png" width="60%"> 
@@ -1693,18 +1706,24 @@ En automatiseringsrobot vil være en applikation og skal derfor have egen identi
     <li data-md>
      <p>Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.</p>
    </ul>
-   <h3 class="heading settled" data-level="1.8" id="relation-til-rammearkitektur-og-andre-referencearkitekturer"><span class="secno">1.8. </span><span class="content">Relation til rammearkitektur og andre referencearkitekturer</span><a class="self-link" href="#relation-til-rammearkitektur-og-andre-referencearkitekturer"></a></h3>
+   <h3 class="heading settled" data-level="1.8" id="relation-til-rammearkitektur-og-andre-referencearkitekturer-madsh"><span class="secno">1.8. </span><span class="content">Relation til rammearkitektur og andre referencearkitekturer [madsh]</span><a class="self-link" href="#relation-til-rammearkitektur-og-andre-referencearkitekturer-madsh"></a></h3>
    <p>Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende brugerstyring, herunder relaterede standarder mv.</p>
    <p>[ <em>her skal der indføres en kort beskrivelse af de øvrige referencearkitekturer</em> ]</p>
+   <p>[indenfor og udenfor FDA, den på sundhedsområdet]</p>
    <h3 class="heading settled" data-level="1.9" id="lsevejledning"><span class="secno">1.9. </span><span class="content">Læsevejledning</span><a class="self-link" href="#lsevejledning"></a></h3>
    <p>Kapitel 1 og 2 bør læses af alle.</p>
    <p>Kapitel 3 om den forretningsmæssige del af arkitekturen bør læses af de der skal forstå arkitekturen.</p>
    <p>Kapitel 4 og 5 henvender sig særligt til løsningsarkitekter.</p>
-   <h2 class="heading settled" data-level="2" id="strategi"><span class="secno">2. </span><span class="content">Strategi</span><a class="self-link" href="#strategi"></a></h2>
+   <h2 class="heading settled" data-level="2" id="strategi-madsh"><span class="secno">2. </span><span class="content">Strategi [madsh]</span><a class="self-link" href="#strategi-madsh"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="temaer"><span class="secno">2.1. </span><span class="content">Temaer</span><a class="self-link" href="#temaer"></a></h3>
     Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til infrastruktur og tjenester. Hvis brugerne mister tilliden til, at en løsning giver en tilstrækkelig beskyttelse af deres persondata, vil der være risiko for, at de fravælger en given løsning og måske overgår til analog behandling eller helt fravælger en serviceydelse. Der vil derfor være forretningsmæssige fordele ved at indtænke privatlivsbeskyttelse i brugerstyringssystemer i tillæg til den rene overholdelse af lovgivningen på området. Dette kan håndteres gennem et struktureret privacy-program. 
-   <h3 class="heading settled" data-level="2.2" id="strategiske-principper"><span class="secno">2.2. </span><span class="content">Strategiske principper</span><a class="self-link" href="#strategiske-principper"></a></h3>
-    OECD har defineret otte basale principper for privatlivsbeskyttelse(Kan findes beskrevet hos OECD:https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm): 
+   <p>[temaer bør afspejle 3.5, måske hvsd betyder sikker, sammenhængende og effektivt for hver af de tre aktører plus tillidtjeneste udbyder]</p>
+   <h3 class="heading settled" data-level="2.2" id="strategiske-principper-madsh"><span class="secno">2.2. </span><span class="content">Strategiske principper [madsh]</span><a class="self-link" href="#strategiske-principper-madsh"></a></h3>
+   <p>[forhold sig til hvidbogens principper]
+[beskriver at der kommer mere specifikke principper til og de er rettet til målgruppe]</p>
+   <p>[er det øverst brugerstyringsprincip, sammenhængende økosystem... tillidstjenester]</p>
+   <p>[inkl bilag om hvad vi har gjort]</p>
+   <p>OECD har defineret otte basale principper for privatlivsbeskyttelse(Kan findes beskrevet hos OECD:https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm):</p>
    <p>Princippet om begrænset indsamling
 Princippet om datakvalitet
 Princippet om formålsspecificering
@@ -1726,6 +1745,7 @@ Retten til indsigt i egne data
 Selvom privatlivsbeskyttelse omfatter andet end informationssikkerhed, kan man med fordel indbygge sit privacy-program i eksisterende ISMS, da mange kontroller er sammenfaldende.</p>
    <h3 class="heading settled" data-level="2.6" id="sikkerhed"><span class="secno">2.6. </span><span class="content">Sikkerhed</span><a class="self-link" href="#sikkerhed"></a></h3>
    <p>[Er det måske mere beslutning der er truffet strategisk, at vi er forpligtiget til at anvende ISO 27001? Og at vi har NSIS /madsh]</p>
+   <p>[Skal vi prøve at pege på de relevante ISO kontroller]</p>
    <p>Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. ISO 27001 er valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og kommunerne er forpligtet til at følge principperne.</p>
    <p>Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har udarbejdet vejledninger, værktøjer og skabeloner hertil, som er placeret her: http://www.digst.dk/Informationssikkerhed.</p>
    <p>Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester, som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge</p>
@@ -1750,7 +1770,7 @@ National Standard for Identiteters Sikringsniveauer (NSIS), der har afsæt i eID
    <div class="new">
     <figure>
       <img src="kontekst.svg"> 
-     <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
+     <figcaption>Oversigt over brugerstyringsdomænet [overveje at sætte 'vidergivelse af data på...']</figcaption>
     </figure>
    </div>
    <p>Det øverste lag i figuren omhandler governance i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx databeskyttelsesforordningen) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.</p>
@@ -1990,7 +2010,7 @@ I denne referencearkitektur benyttes attributbeskrivelse som en bredere og mere 
    <p>Brugerne skal kunne autentificeres på flere sikringsniveauer svarende til tjenesternes behov for sikkerhed. Tjenesteudbyderne har for nogle tjenester behov for at kunne sikre, at en bruger kun får adgang til ressourcer eller data, der relaterer til den enkelte brugers aktuelle opgave. Sundhedsdomænet har eksempelvis behov for løsninger, der kan sikre, at kun sundhedspersonale, der reelt har en relation til behandlingen af en patient, får adgang til patientdata (behandlerrelation).</p>
    <p>Tjenesteudbydere har behov for kontrol med, hvem der har logget ind og udført hvilke handlinger i tjenester.</p>
    <p>Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.</p>
-   <h3 class="heading settled" data-level="3.6" id="principper"><span class="secno">3.6. </span><span class="content">Principper???</span><a class="self-link" href="#principper"></a></h3>
+   <h3 class="heading settled" data-level="3.6" id="principper-madsh"><span class="secno">3.6. </span><span class="content">Principper??? [madsh]</span><a class="self-link" href="#principper-madsh"></a></h3>
     [Jeg vil foretrække principper spredt ud i det afsnit de hører mest til, og opsummeret i resume /madsh] 
    <p>Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.</p>
    <p>Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevinstprincippet forfølger – og implikation – en instruktion i, hvad det konkret vil sige at følge princippet. Hvis et projekt eller program mener, at det er for problematisk at følge princippet, skal projektet eller programmet forklare hvorfor, og tillige forklare hvordan man på længere sigt kan bringe løsningen inden for rammerne, som princippet angiver.
@@ -2371,7 +2391,8 @@ BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyring
    <h4 class="heading settled" data-level="3.7.4" id="kontrol-og-rapportering"><span class="secno">3.7.4. </span><span class="content">Kontrol og rapportering</span><a class="self-link" href="#kontrol-og-rapportering"></a></h4>
    <p>I eksemplet om Billetudstedelse og Adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.</p>
    <p>Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.</p>
-   <h3 class="heading settled" data-level="3.8" id="forretningsobjekter-og-begreber"><span class="secno">3.8. </span><span class="content">Forretningsobjekter og begreber</span><a class="self-link" href="#forretningsobjekter-og-begreber"></a></h3>
+   <h3 class="heading settled" data-level="3.8" id="forretningsobjekter-og-begreber-madsh"><span class="secno">3.8. </span><span class="content">Forretningsobjekter og begreber [madsh]</span><a class="self-link" href="#forretningsobjekter-og-begreber-madsh"></a></h3>
+    [samle til et afsnit] 
    <p>I dette afsnit beskrives en terminologi og begrebsmodel for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type person, organisation, anvendelse eller implementering. Begrebsmodellen kan således danne udgangspunkt for flere forskellige implementeringer</p>
    <blockquote>
     <p>!<a href="logo.png"></a> Begrebsmodellen SKAL anvendes i fællesoffentlige løsninger, i løsninger, der kommunikerer mellem offentlige sektorer, og i tjenester, der anvender fællesoffentlige løsninger.
@@ -2389,7 +2410,7 @@ Bruger man andre termer for begreberne inden for sin egen sektor, SKAL man kunne
 | Adgangsbillet | Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en betroet tjeneste (identitetsbroker eller login-tjeneste). En adgangsbillet betegnes på engelsk som <em>security token</em>. | For at opfylde adgangspolitikken for en tjeneste, skal der indhentes en eller flere adgangsbilletter hos brugerstyringstjenester, som tjenesten har tillid til. Dette foretages af en billettjeneste, der kan være en simpel funktion til håndtering af et login, der håndteres af autentifikationstjenesten, eller billetudstedelsen kan foretages af en identitetsbroker. Denne kan, baseret på en autentifikationstjenestes verificering af et akkreditiv, indsamle attributter fra flere attributtjenester, og identitetsbrokeren kan også omveksle attributter med samme betydning og sikringsniveau fra et protokolformat til et andet. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en identitetsbroker. Et andet eksempel er en Kerberos Server, der udsteder ”tickets”, som giver brugere adgang til servere i et sikkerhedsdomæne (fx Active Directory). |
 | Adgangspolitik | En adgangspolitik beskriver betingelserne for at udføre en eller flere funktioner eller give adgang til alle informationer (data) eller en afgrænset mængde af informationer (data) i en tjeneste. | En adgangspolitik for en tjeneste fastlægges af tjenesteudbyder, baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik har to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en identitet møder op med en adgangsbillet, anvendes adgangspolitikken til at afgøre, om en identitet må udføre en specifik handling på et objekt, herunder hvilke specifikke data entiteten må få adgang til. Hvis ikke identitetens adgangsbillet indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, giver adgangskontrollen ikke adgang. |</p>
    <p>Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber relateret til brugerstyring.</p>
-   <h3 class="heading settled" data-level="3.9" id="begrebsmodel-og-relationer-i-brugerstyring"><span class="secno">3.9. </span><span class="content">Begrebsmodel og relationer i brugerstyring</span><a class="self-link" href="#begrebsmodel-og-relationer-i-brugerstyring"></a></h3>
+   <h3 class="heading settled" data-level="3.9" id="begrebsmodel-og-relationer-i-brugerstyring-madsh"><span class="secno">3.9. </span><span class="content">Begrebsmodel og relationer i brugerstyring [madsh]</span><a class="self-link" href="#begrebsmodel-og-relationer-i-brugerstyring-madsh"></a></h3>
    <div class="new">
     <figure>
       <img src="firkant.svg" width="65%"> 
