@@ -888,121 +888,6 @@ Tværoffentlig brugerstyring indgår i et samspil med det internationale på fle
 >Princippet om brugerstyring i overensstemmelse med internationale standarder og løsninger
 > BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. For øvrige KAN princippet efterkommes
 
-## Tværgående processer
-
-I dette afsnit vises med nogle få eksempler, hvordan byggeblokkenes interfaces kan benyttes til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
-[Jeg tror vi skal helt over i BPMN diagrammer /madsh]
-
-
-De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte myndighed, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
-
-I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
-
-<figure>
-<img src="billede11.PNG" width="65%"/>
-<figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
-</figure>
-
-
->![](logo.png)
-> Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.
-
-### Administration af elektronisk identitet, akkreditiver og attributter
-
-Processer i forbindelse med administration af identiteter, akkreditiver og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
-
-De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere akkreditiver (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
-
-**Registrering af elektronisk identitet** kan på lave sikringsniveauer ske ved, at en person registrerer sig selv – og med data, der er valgt af personen selv eller med de officielle data som navn og adresse fra CPR. Der er et tilsvarende behov for registrering af organisationer og ting.
-
-En myndighed kan registrere personen, verificere personens identitet (eng. *identity proofing*) og angive styrken af registreringen (NSIS IAL), fx om registreringen er sket på grundlag af fysisk fremmøde eller på anden måde.
-
-En arbejdsgiver kan registrere sine medarbejdere i egne brugerstyringssystemer eller i eksterne brugerstyringssystemer fx i det NemLog-in og Miljøportalen. Det kan ske manuelt eller ved overførsel fra arbejdsgiverens eget brugerstyringssystem til det eksterne system.
-
-En arbejdsgiver kan også registrere en tilknytning mellem sin virksomhed og en given identitet, fx ved at en person med en given identitet  må udføre handlinger i virksomhedens systemer eller for virksomheden.
-
-For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem virksomhed og en given identitet ske automatisk på grundlag af registreringer i CVR-registret (fx at en person er fuldt ansvarlig deltager eller kan tegne alene for en given virksomhed).
-
-**Attributbeskrivelsen** er her beskrevet meget forenklet. Attributter for en identitet kan hentes fra eksterne kilder i forbindelse med registreringen (fx CPR-oplysninger), kan registreres i forbindelse med registreringen, kan registreres i brugerstyringssystemer eller i andre systemer. Attributter kan på samme måde som en identitet have forskellige kvalitetsniveauer, der bl.a. afhænger af de processer, der er anvendt under registreringen.
-
-<figure>
-<img src="billede12.PNG" width="65%"/>
-<figcaption>Registrer identitet</figcaption>
-</figure>
-
-
-Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:
-
-- En bruger anmoder om en identitet.
-- Registreringstjenesten verificerer identiteten fx med hjælp fra grunddata samt beviser leveret af ansøgeren (fx pas og kørekort). Disse grunddata kan desuden indgå i trinnet Registrer attributter.
-- I akkreditivtjenesten kan der tilknyttes allerede anskaffede akkreditiver, eller der kan udstedes og tilknyttes nye akkreditiver. Akkreditiver kan bestå af både digitalt information, som en nøgleapp, og fysisk information, som fx et nøglekort.
-- Aktøren registrerer de attributter, der er krævet/ønsket.
-- Resultatet vises for brugeren.
-
-En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets kvalitet (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
-
-### Autentifikation
-
-Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:
-
-
-<figure>
-<img src="billede13.PNG" width="65%"/>
-<figcaption>Autentifikation</figcaption>
-</figure>
-
-Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).
-
-Typisk skelnes der mellem, hvor stærke akkreditiver der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et akkreditiv (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
-
-Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker (NemLog-in) og en autentifikationstjeneste indgår.
-
-1. Brugeren tilgår (anmoder om adgang til) forretningstjenesten.
-2. Forretningstjenesten anmoder evt. brugeren om at vælge, hvilken broker eller autentifikationstjeneste brugeren ønsker at benytte (fx NemLog-in, WAYF, KOMBIT).
-3. Forretningstjenesten anmoder brokeren autentifikationstjenesten om en adgangsbillet (en token) til brug for login.
-4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine akkreditiver.
-5. Brugeren autentificerer sig over for autentifikationstjenesten.
-6. Autentifikationstjenesten/brokeren validerer brugerlogin.
-7. Autentifikationstjenesten/brokeren udsteder en signeret billet til tjenesten med brugerens identitet og eventuelle attributter.
-8. Forretningstjenesten kontrollerer den udstedte billet og etablerer evt. en session med brugeren.
-9. Brugeren kan anvende forretningstjenesten underlagt dennes adgangskontrol.
-
-Forløbet i denne proces varierer afhængigt af brugertype og situation. I figuren herover starter processen i forretningstjenesten, som re-dirigerer til autentifikationstjenesten. Hvis brugeren allerede har en session med autentifikationstjenesten, sker der ikke nødvendigvis fornyet login, men der udstedes en adgangsbillet til den ny forretningstjeneste.
-
-Ovenstående dækker både processer, hvor brugeren tilgår tjenesten i en browser, app eller rig applikation. Der vil dog være forskelle i de tekniske implementeringer.
-
-### Billetudstedelse og adgangskontrol
-
-I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med Billetudstedelse og Adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som tjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.
-
-Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.
-
-
-<figure>
-<img src="billede14.PNG" width="65%"/>
-<figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
-</figure>
-
-1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
-2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
-3. Autentifikationstjenesten verificerer brugerens akkreditiv gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
-4. Autentifikationstjenesten udsteder herefter en adgangsbillet til identitetsbrokeren med de attributter for identiteten, som tjenesten kræver inkl. angivelse af aktuelt sikringsniveau.
-5. En eller flere grunddatatjenester leverer de fornødne attributter knyttet til identiteten.
-6. En eller flere attributtjenester leverer attributter knyttet til identiteten.
-7. Brokeren beriger adgangsbilletten med attributter og udsteder denne til forretningstjenesten.
-8. Denne forretningstjeneste etablerer en session, som personen kan agere i med disse rettigheder og attributter.
-9. Forretningstjenesten håndhæver adgangspolitikken i personens anvendelse af forretningstjenesten.
-10. Brugeren anvender forretningstjenesten.
-
-
-### Kontrol og rapportering
-
-I eksemplet om Billetudstedelse og Adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.
-
-Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
-
-
-
 ## Forretningsobjekter og begreber [madsh]
 [samle til et afsnit]
 
@@ -1175,6 +1060,119 @@ En udbredt model for adgangsrettigheder er rollebaseret adgangskontrol (RBAC), h
 I **Adgangskontrol** kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra Autentifikation og Billetudstedelse. Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret Single Sign-On funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie eller en OAuth access token, der er udvekslet til at holde sessionen åben i en bestemt tidsperiode.
 
 Adgangskontrollen påhviler tjenesteudbyder. Dele af den kan løses af en fælles byggeblok i referencearkitekturen.
+
+## Orkestreringseksempler
+
+I dette afsnit vises med nogle få eksempler, hvordan byggeblokkenes interfaces kan benyttes til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
+[Jeg tror vi skal helt over i BPMN diagrammer /madsh]
+
+
+De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte myndighed, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
+
+I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
+
+<figure>
+<img src="billede11.PNG" width="65%"/>
+<figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
+</figure>
+
+
+>![](logo.png)
+> Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.
+
+### Administration af elektronisk identitet, akkreditiver og attributter
+
+Processer i forbindelse med administration af identiteter, akkreditiver og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
+
+De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere akkreditiver (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
+
+**Registrering af elektronisk identitet** kan på lave sikringsniveauer ske ved, at en person registrerer sig selv – og med data, der er valgt af personen selv eller med de officielle data som navn og adresse fra CPR. Der er et tilsvarende behov for registrering af organisationer og ting.
+
+En myndighed kan registrere personen, verificere personens identitet (eng. *identity proofing*) og angive styrken af registreringen (NSIS IAL), fx om registreringen er sket på grundlag af fysisk fremmøde eller på anden måde.
+
+En arbejdsgiver kan registrere sine medarbejdere i egne brugerstyringssystemer eller i eksterne brugerstyringssystemer fx i det NemLog-in og Miljøportalen. Det kan ske manuelt eller ved overførsel fra arbejdsgiverens eget brugerstyringssystem til det eksterne system.
+
+En arbejdsgiver kan også registrere en tilknytning mellem sin virksomhed og en given identitet, fx ved at en person med en given identitet  må udføre handlinger i virksomhedens systemer eller for virksomheden.
+
+For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem virksomhed og en given identitet ske automatisk på grundlag af registreringer i CVR-registret (fx at en person er fuldt ansvarlig deltager eller kan tegne alene for en given virksomhed).
+
+**Attributbeskrivelsen** er her beskrevet meget forenklet. Attributter for en identitet kan hentes fra eksterne kilder i forbindelse med registreringen (fx CPR-oplysninger), kan registreres i forbindelse med registreringen, kan registreres i brugerstyringssystemer eller i andre systemer. Attributter kan på samme måde som en identitet have forskellige kvalitetsniveauer, der bl.a. afhænger af de processer, der er anvendt under registreringen.
+
+<figure>
+<img src="billede12.PNG" width="65%"/>
+<figcaption>Registrer identitet</figcaption>
+</figure>
+
+
+Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:
+
+- En bruger anmoder om en identitet.
+- Registreringstjenesten verificerer identiteten fx med hjælp fra grunddata samt beviser leveret af ansøgeren (fx pas og kørekort). Disse grunddata kan desuden indgå i trinnet Registrer attributter.
+- I akkreditivtjenesten kan der tilknyttes allerede anskaffede akkreditiver, eller der kan udstedes og tilknyttes nye akkreditiver. Akkreditiver kan bestå af både digitalt information, som en nøgleapp, og fysisk information, som fx et nøglekort.
+- Aktøren registrerer de attributter, der er krævet/ønsket.
+- Resultatet vises for brugeren.
+
+En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets kvalitet (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
+
+### Autentifikation
+
+Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:
+
+
+<figure>
+<img src="billede13.PNG" width="65%"/>
+<figcaption>Autentifikation</figcaption>
+</figure>
+
+Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).
+
+Typisk skelnes der mellem, hvor stærke akkreditiver der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et akkreditiv (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
+
+Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker (NemLog-in) og en autentifikationstjeneste indgår.
+
+1. Brugeren tilgår (anmoder om adgang til) forretningstjenesten.
+2. Forretningstjenesten anmoder evt. brugeren om at vælge, hvilken broker eller autentifikationstjeneste brugeren ønsker at benytte (fx NemLog-in, WAYF, KOMBIT).
+3. Forretningstjenesten anmoder brokeren autentifikationstjenesten om en adgangsbillet (en token) til brug for login.
+4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine akkreditiver.
+5. Brugeren autentificerer sig over for autentifikationstjenesten.
+6. Autentifikationstjenesten/brokeren validerer brugerlogin.
+7. Autentifikationstjenesten/brokeren udsteder en signeret billet til tjenesten med brugerens identitet og eventuelle attributter.
+8. Forretningstjenesten kontrollerer den udstedte billet og etablerer evt. en session med brugeren.
+9. Brugeren kan anvende forretningstjenesten underlagt dennes adgangskontrol.
+
+Forløbet i denne proces varierer afhængigt af brugertype og situation. I figuren herover starter processen i forretningstjenesten, som re-dirigerer til autentifikationstjenesten. Hvis brugeren allerede har en session med autentifikationstjenesten, sker der ikke nødvendigvis fornyet login, men der udstedes en adgangsbillet til den ny forretningstjeneste.
+
+Ovenstående dækker både processer, hvor brugeren tilgår tjenesten i en browser, app eller rig applikation. Der vil dog være forskelle i de tekniske implementeringer.
+
+### Billetudstedelse og adgangskontrol
+
+I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med Billetudstedelse og Adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som tjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.
+
+Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.
+
+
+<figure>
+<img src="billede14.PNG" width="65%"/>
+<figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
+</figure>
+
+1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
+2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
+3. Autentifikationstjenesten verificerer brugerens akkreditiv gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
+4. Autentifikationstjenesten udsteder herefter en adgangsbillet til identitetsbrokeren med de attributter for identiteten, som tjenesten kræver inkl. angivelse af aktuelt sikringsniveau.
+5. En eller flere grunddatatjenester leverer de fornødne attributter knyttet til identiteten.
+6. En eller flere attributtjenester leverer attributter knyttet til identiteten.
+7. Brokeren beriger adgangsbilletten med attributter og udsteder denne til forretningstjenesten.
+8. Denne forretningstjeneste etablerer en session, som personen kan agere i med disse rettigheder og attributter.
+9. Forretningstjenesten håndhæver adgangspolitikken i personens anvendelse af forretningstjenesten.
+10. Brugeren anvender forretningstjenesten.
+
+
+### Kontrol og rapportering
+
+I eksemplet om Billetudstedelse og Adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.
+
+Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
 
 ## Tekniske implementering af forretningsfunktioner
 
