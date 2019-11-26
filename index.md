@@ -160,6 +160,8 @@ Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af 
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
 læsningen.
 
+<dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
+
 Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
 
@@ -237,6 +239,19 @@ Juridisk enhed der har **ansvar for** hvad en applikation gør.
 
 Se Afsnit 4 og Bilag A: Ordliste
 
+###Brugerstyring i niveauer
+
+Brugerstyring forgår når der tilgås en tjeneste. Tjenesterne kan tilgås af traditionelle brugere eller fra anden tjeneste.
+
+<figure>
+<img src="Brug af tjeneste.png" width="50%"/>
+<figcaption>[Niveauer af tjenester]</figcaption>
+</figure>
+
+Den initiale bruger tilgår en tjeneste med sit bruger-id. Hvis tjenesten har brug for at kalde andre tjenester, kan det foregå enten med den oprindelige brugers bruger-id eller tjenesten kan have sit eget bruger-id for at tilgå underliggende tjenester. Rækken kan fortsættes i princippet uendeligt.
+
+###Føderationer###
+<dfn>Føderationer</dfn>, sammenslutning tjenester med gensidig tillid. Føderationer er en forudsætning for referencearkitekturens adskillelse af brugerstyring i tillidstjenester og forretningstjenester, hvor tillidstjenesterne typisk er generelle og leveres af andre end dem der leverer forretningstjenesterne.
 
 ## Tilblivelse og styring
 
