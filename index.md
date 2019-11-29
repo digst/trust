@@ -74,7 +74,10 @@ Formålet med referencearkitekturen er således at skabe **rammer** for brugerst
 
 Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale tjenester, som overordnet kan opdeles i administrative funktioner og adgangskontrol. De administrative funktioner omfatter oprettelse, ændring og nedlæggelse af brugere i brugerstyringssystemer, udstedelse og tilknytning af akkreditiver til brugere og tilknytning af rettigheder til brugere.
 
-Hovedaktiviteterne i **administration i brugerstyring** er følgende:
+[Formuering om at der er ledelses ansvar at deltage i samarbejder om udformning af adgangs- og tillids-politkker og det følger af både GDPR og aftale om ISO 27001 anvendelse]
+
+
+Hovedaktiviteterne i **administration i brugerstyring** er følgende: [tilpasses]
 
 - **Registrering** af digitale identiteter og den løbende vedligeholdelse heraf.
 - **Udstedelse** af akkreditiver og tilknytning af disse til digitale identiteter. Akkreditiver anvendes til at autenficere en digital identitet over for en tjeneste, som der ønskes adgang til.
@@ -89,21 +92,9 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der le
 
 Principper
 
-*Principper med brugerfokus:*
-1. Brugerne oplever en sammenhængende adgangsstyring
-2. Brugerstyringsløsninger udvikles med fokus på brugernes behov
-3. Brugerstyringsløsninger respekterer brugernes privatliv
-
-*Principper med teknisk fokus:*
-4. Aktører indgår i føderationer baseret på tillid
-5. Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører
-6. Administration af brugere flyttes så vidt muligt ud af fagapplikationer
-7. Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange
-
-*Principper med udviklingsfokus*
-8. Brugerstyring realiseres i løst koblede komponenter
-9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
-10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
+- **Samlet brugeradministration**
+- **(Inter-)Føderation**
+- **Harmoniserede tillidstjenester**
 
 Forretningsbehov og ovenstående principper peger entydigt frem mod en løst koblet, fødereret arkitektur, hvor de enkelte tjenester/tjenesteudbydere håndhæver adgang baseret på forudgående (ekstern) autentifikation og således ikke selv håndterer administration af brugere, anvendersystemer og rettigheder.
 
@@ -117,27 +108,20 @@ I referencearkitekturen fastlægges en række standarder for håndtering af brug
 
 # Introduktion [phj]
 
-## Formål
+## Formål, anvendelse og målgrupper
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 [Opdatering skal også indarbejde andet FDA arbejde som fx Modelregler ]
 [bidrage til tværgående arktitekturarbejde hos andre domæner]
 
-## Anvendelse
+
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
 Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer.
 [anvendes direkte i nogle områder, indirekte gennem domænearkitektur?]
 [henvisning til hvidbogen]
-Generelt kan en referencearkitekturs rolle illustreres med følgende figur:
 
-<figure>
-<img src="billede1.PNG" />
-<fgicaption>Referencearkitekturens rolle</figcaption>
-</figure>
-
-## Målgruppe
-Dette dokument har to målgrupper:
+Dette dokument har tre målgrupper:
 
 - Den ene målgruppe er strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer.
 - [dem der laver tværgående arkitektur indenfor domæner]
@@ -158,10 +142,16 @@ Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de s
 Med udspring i Digitaliseringpagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
-I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
-læsningen.
+I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lettelæsningen.
+
+<dfn>Forretningstjeneste</dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+
+<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
 
 <dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
+
+<dfn>Tillidstjeneste</dfn> udbydes særskilt, anvendes af bruger og forretningstjenesteudbyder i fælleskab... aftaler om tillidspolitikker
+
 
 Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
@@ -169,11 +159,17 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 [På et teknisk niveau har vi identitets baseret adgangskontrol, men loven peger nogle gange på entiteter...]
 
 <figure>
+<img src="centrale.svg" width="80%"/>
+<figcaption>Centrale begreber omkring bugerstyring</figcaption>
+</figure>
+
+
+<figure>
 <img src="Begrebsoverblik.png" width="80%"/>
 <figcaption>[Brugerstyringsbegreber, udvid med navngivne releationer.]</figcaption>
 </figure>
 
-[Overvej om vi skal ramme brugerstyring her også]
+[Overveje om vi bør gemme disse begreber til forretningsarkitektur for ikke at skræmme folk væk allerede :-)]
 
 <dfn>Entitet</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
 
@@ -181,9 +177,9 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 
 <dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn og password, NemID nøglekort, certifikater, fingeraftryk mv.
 
-<dfn>Forretningstjeneste</dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
 
-<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
+
+
 
 **Type af entiteter**
 
@@ -311,6 +307,9 @@ effektiv datadeling er det konkrete ophæng for denne referencearkitektur.[TODO,
 
 - Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse
 
+ det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+
+
 
 
 *Borgere som tjenesteanvendere*
@@ -326,7 +325,7 @@ Borgere er forskellige og ligger forskelligt vægt på forskellige aspekter af t
   - Forvaltningsret (partsrepræsentation)
 
 
- det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+
 
 En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
 
@@ -384,25 +383,19 @@ Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan
 
 [fair konkurrence og mulighed for at tjene penge?]
 
-## Aftalte principper [madsh]
+## Principper [madsh]
 [Jeg vil foretrække principper spredt ud i det afsnit de hører mest til, og opsummeret i resume /madsh]
-
-Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
-
-Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevinstprincippet forfølger – og implikation – en instruktion i, hvad det konkret vil sige at følge princippet. Hvis et projekt eller program mener, at det er for problematisk at følge princippet, skal projektet eller programmet forklare hvorfor, og tillige forklare hvordan man på længere sigt kan bringe løsningen inden for rammerne, som princippet angiver.
-<figure>
-<img src="billede5.PNG" />
-<fgicaption>Styrende principper</figcaption>
-</figure>
 
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
 
-4. Aktører indgår i føderationer baseret på tillid
-5. Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører
-6. Administration af brugere flyttes så vidt muligt ud af fagapplikationer
-10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
+- **Samlet brugeradministration**
+- **(Inter-)Føderation**
+- **Harmoniserede tillidstjenester**
+
+
+
 
 <dfn>Samlet? brugeradministration</dfn> Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer...
 
@@ -425,8 +418,6 @@ Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres
 
 <dfn>Føderation</dfn> Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitkker og adgangspolitikker.
 
-[Sammenskrives med princip 5 til generelt princip om aftale baseret føderation i samarbejde mellem tjenesteudbyder og anvendere med krav til tillidstjenester]
-
 Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
 I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
 
@@ -448,85 +439,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 - De risici, der beror på arbejdsdeling mellem aktørerne, skal håndteres ved, at hver enkelt aktør skal vurdere samspillet med andre aktører i sin sikkerhedsmæssige risikovurdering i henhold til fx ISO/IEC 27001.
 - Aktører i føderationer skal i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.
 
-<dfn>Harmoniserede tillidstjenester</dfn> Princip om at føderation sikre
-
-
-
-*Rationale*
-
-
-
-*Implikationer*
-
-
-
-
-
-
-
-
-
-
-<dfn>Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</dfn>
-[Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh]
-
-De fælles elementer i brugerstyring forsyner en elektronisk identitet med attributter, der fremsendes til den tjeneste, som brugeren vil have adgang til. Det er tjenesteudbyder, der har ansvaret for at håndhæve brugeres adgange til tjenesten på grundlag af information fra en identitetsbroker (og eventuelt supplerende lokale attributter). Tjenesteudbyder har ansvaret for ud fra sin adgangspolitik at afgøre, om brugeren får adgang.
-
-*Rationale*
-
-- Det er hos tjenesteudbyder, at viden om konsekvenserne af at give adgang kan findes, og det er derfor tjenesteudbyder, der har ansvaret for at afgøre, om der gives adgang.
-- Det juridiske ansvar for at håndhæve adgangen til tjenesten ligger hos dens ejer (den dataansvarlige, jf. fx persondataloven).
-
-*Implikationer*
-
-- Funktioner til styring af adgangskontrol skal bygges i sammenhæng med tjenesterne.
-- Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
-
->![](logo.png)
->Princippet om tjenesteudbyderes håndhævelse af brugeres adgang er en følge af krav i persondataloven om dataansvar, og derfor SKAL det efterkommes af alle med dataansvar for fagapplikationer med persondata. Det BØR efterkommes af alle med dataansvar for fagapplikationer uden persondata.
-
-<dfn>Princip 8: Brugerstyring realiseres i løst koblede komponenter</dfn>
-
-Stadig flere løsninger for administration af elektroniske identiteter, autentifikation og adgangskontrol er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. De nødvendige aktiviteter omkring identitet og adgangsstyring skal logisk opdeles i udstedelse af akkreditiver, autentifikation af en given identitet, adgangskontrol, vedligeholdelse af attributter og vedligeholdelse af brugeres identiteter og adgange. På sigt vil vi sandsynligvis se en yderligere opdeling.
-
-*Rationale*
-
-- Løst koblede, sammensatte komponenter og standarder for informationsoverførsler mellem de definerede rammer, som leverandører kan agere i. Dette giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet, og aktørerne kan udnytte og udfolde det løsningsrum, som rammerne giver.
-- En åben og modulær arkitektur giver mulighed for at udskifte/variere delløsninger, integrere nye teknologier og implementere ændrede regler og politikker. Dette leder til større agilitet og ændringsparathed.
-- En opdeling i komponenter skal reducere den samlede kompleksitet af den fællesoffentlige brugerstyring.
-
-*Implikationer*
-
-- En anvendelse af referencearkitekturen skal definere et overordnet sæt tjenester eller byggeblokke for brugerstyring og et antal områder for fællesoffentlige standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring skal tage udgangspunkt i disse tjenester og skal overholde disse standarder.
-- Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne, jf. 4.4.
-- Åbne, løst koblede komponenter implementeres, så brugerne får en sammenhængende brugeroplevelse.
-- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt.
-
->![](logo.png)
->Princippet om løst koblede brugerstyringskomponenter SKAL efterkommes i fællesoffentlige løsninger, herunder fællesoffentlige eID og NemLog-in.
-> Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
-> For øvrige KAN princippet efterkommes.
-
-<dfn>Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen</dfn>
-
-
-I opbygningen af en digital infrastruktur har det offentlige gentagne gange opnået gode resultater ved at gå sammen om at opbygge en fælles kerne, som fungerer i samspil med øvrige komponenter. Det gælder fx NemID, NemLog-in og Datafordeleren der er fællesoffentlige, men det kan også gælde komponenter udviklet i en speciel kontekst som fx WAYF eller UNI-Login der indgår i et samspil på tværs.
-
-*Rationale*
-
-- Infrastrukturløsninger kræver store investeringer og kan som oftest kun opbygges ved at flere parter går sammen.
-- Der er besparelser ved at opbygge en kerne i fællesskab, som alle kan anvende, i stedet for at der udvikles flere komponenter, som delvist dækker samme opgaver.
-- En fælles kerne af infrastruktur og principper giver et operationelt grundlag for at opbygge løsninger med den målsatte sammenhæng og kvalitet.
-
-*Implikationer*
-
-- Ambitioner og omfang af den fælles kerne skal aftales mellem de centrale parter.
-- Der er løbende behov for at tage stilling til balancen mellem den fælles kerne og de decentrale elementer.
-
->![](logo.png)
->Princippet om brugerstyring baseret på fælles kerne i samspil med decentrale komponenter SKAL efterkommes af alle fællesoffentlige løsninger. For de øvrige løsninger BØR princippet efterkommes.
-
-<dfn>Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</dfn>
+<dfn>Harmoniserede tillidstjenester</dfn> Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurrencebaseret marked.
 
 Tværoffentlig brugerstyring indgår i et samspil med det internationale på flere måder. Flertallet af tekniske løsninger er udviklet i udlandet, og arkitekturer og standarder er udviklet i internationale samarbejder. Dansk brugerstyring på tværs skal så vidt muligt lægge sig tæt op ad den internationale udvikling, dog med en konkret vurdering af, hvorvidt denne udvikling passer i en dansk sammenhæng
 
@@ -542,28 +455,6 @@ Tværoffentlig brugerstyring indgår i et samspil med det internationale på fle
 
 - Det skal altid undersøges, hvilke internationale standarder det er muligt at anvende, evt. med dansk profilering.
 - Danske profileringer bør begrænses til at dække forhold i økosystemet, som er specifikt danske, og som ikke kan ændres til at følge internationale standarder (fx CPR-data).
-
->![](logo.png)
->Princippet om brugerstyring i overensstemmelse med internationale standarder og løsninger
-> BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. For øvrige KAN princippet efterkommes
-
-
-
-[er det øverst brugerstyringsprincip, sammenhængende økosystem... tillidstjenester]
-
-[inkl bilag om hvad vi har gjort]
-
-OECD har defineret otte basale principper for privatlivsbeskyttelse(Kan findes beskrevet hos OECD:https://www.oecd.org/sti/ieconomy/oecdguidelinesontheprotectionofprivacyandtransborderflowsofpersonaldata.htm):
-
-Princippet om begrænset indsamling
-Princippet om datakvalitet
-Princippet om formålsspecificering
-Princippet om anvendelsesbegrænsning
-Princippet om datasikkerhed
-Princippet om åbenhed (transparens)
-Princippet om individets deltagelse
-Princippet om ansvarlighed (accountability).
-Løsninger bør i design, udvikling, drift og vedligehold forholde sig til ovenstående.
 
 
 ## Vision
@@ -1362,9 +1253,9 @@ Tabel 2. Eksempler på identifikatorer, akkreditiver og attributter for entitete
 
 <table>
 <tr>
-<th rowspan="1">Entitet</th>
-<th rowspan="1">Akkreditiv</th>
-<th colspan="2">Atrributter</th>
+<th rowspan="2">Entitet</th>
+<th rowspan="2">Akkreditiv</th>
+<th colspan="3">Atrributter</th>
 </tr>
 <tr>
 <th>Baseret på tal</th>
@@ -1908,12 +1799,18 @@ Nedenstående liste forklarer betydningen af de væsentligste ord og begreber, d
 
 Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordlisten.
 
-<dfn>Brugerrolle<dfn>Rolle der udgøres af en eller flere *adgangsrettigheder* til et eller flere it-systemer, som en bloc tildeles til en bruger. Brugerroller anvendes til at afgøre, hvilke handlinger en bruger må udføre i et it-system. Brugerrollen fastlægger de *adgangsrettigheder*, som brugeren er tildelt. Brugere tilknyttes til roller og opnår *adgangsrettigheder* ved at være rolleindehaver. Brugerroller er grupperinger af *adgangsrettigheder*. Der er ikke nødvendigvis sammenfald mellem brugerroller og brugerens profession, stillingsbetegnelse mv.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
-<dfn>Brugerrollerestriktion<dfn>En begrænsning som specificerer, hvad en *brugerrolle* må bruges på. Et typisk eksempel er en såkaldt *dataafgrænsning*, som angiver hvilke dataobjekter (fx sager) som en given rolle må anvendes på (fx rollen *læs sag* afgrænset til sag med nummeret *xyz*'). I RBAC samt OIO Basic Privilege Profile benævnes dette for en *constraint*.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
-<dfn>Brugerrolletildeling<dfn>Angivelse af de *brugerroller* som en bruger er tildelt evt. med tilhørende *brugerrollerestriktioner*. Brugerrolletildeling anvendes til at definere en brugers *brugerroller* med de begrænsninger (*brugerrollerestriktioner*), der måtte være i forhold til anvendelsen af brugerrollen. I OIO Basic Privile Profile anvises hvordan brugerens roller kan udtrykkes i et en SAML Assertion.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
-<dfn>Brugerstyring<dfn>Brugerstyring anvendes bredt i denne tværoffentlige strategi og referencearkitektur for brugerstyring. Betegnelsen omfatter både *adgangskontrol* og administration af identiteter, akkreditiver, attributter og *adgangsrettigheder*, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM). Brugerstyring dækker således opgaver i forbindelse med *indrullering, autentificering, autorisation, billetudstedelse, adgangskontrol* osv.[]
-<dfn>Certificate Authority (CA)<dfn>En betroet enhed, der udsteder *certifikater* til identificerede og registrerede parter (se også *registreringsmyndighed*). Opgaverne og ansvarsområderne tilhørende en CA er opdelt i Identity Proofing Service (IPS) og *Credential Management Service (CMS)*.[]
-<dfn>Certifikat<dfn>En elektronisk attest, som angiver certifikatindehaverens offentlige nøgle sammen med supplerende information, og som entydigt knytter den offentlige nøgle til identifikation af certifikatindehaveren. Et certifikat skal signeres af et certificeringscenter (CA), som derved bekræfter certifikatets gyldighed.[OCES certifikatpolitikker]
+<dfn>Brugerrolle</dfn> Rolle der udgøres af en eller flere *adgangsrettigheder* til et eller flere it-systemer, som en bloc tildeles til en bruger. Brugerroller anvendes til at afgøre, hvilke handlinger en bruger må udføre i et it-system. Brugerrollen fastlægger de *adgangsrettigheder*, som brugeren er tildelt. Brugere tilknyttes til roller og opnår *adgangsrettigheder* ved at være rolleindehaver. Brugerroller er grupperinger af *adgangsrettigheder*. Der er ikke nødvendigvis sammenfald mellem brugerroller og brugerens profession, stillingsbetegnelse mv.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
+
+<dfn>Brugerrollerestriktion</dfn> En begrænsning som specificerer, hvad en *brugerrolle* må bruges på. Et typisk eksempel er en såkaldt *dataafgrænsning*, som angiver hvilke dataobjekter (fx sager) som en given rolle må anvendes på (fx rollen *læs sag* afgrænset til sag med nummeret *xyz*'). I RBAC samt OIO Basic Privilege Profile benævnes dette for en *constraint*.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
+
+<dfn>Brugerrolletildeling</dfn> Angivelse af de *brugerroller* som en bruger er tildelt evt. med tilhørende *brugerrollerestriktioner*. Brugerrolletildeling anvendes til at definere en brugers *brugerroller* med de begrænsninger (*brugerrollerestriktioner*), der måtte være i forhold til anvendelsen af brugerrollen. I OIO Basic Privile Profile anvises hvordan brugerens roller kan udtrykkes i et en SAML Assertion.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
+
+<dfn>Brugerstyring</dfn> Brugerstyring anvendes bredt i denne tværoffentlige strategi og referencearkitektur for brugerstyring. Betegnelsen omfatter både *adgangskontrol* og administration af identiteter, akkreditiver, attributter og *adgangsrettigheder*, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM). Brugerstyring dækker således opgaver i forbindelse med *indrullering, autentificering, autorisation, billetudstedelse, adgangskontrol* osv.[]
+
+<dfn>Certificate Authority (CA)</dfn> En betroet enhed, der udsteder *certifikater* til identificerede og registrerede parter (se også *registreringsmyndighed*). Opgaverne og ansvarsområderne tilhørende en CA er opdelt i Identity Proofing Service (IPS) og *Credential Management Service (CMS)*.[]
+
+<dfn>Certifikat</dfn> En elektronisk attest, som angiver certifikatindehaverens offentlige nøgle sammen med supplerende information, og som entydigt knytter den offentlige nøgle til identifikation af certifikatindehaveren. Et certifikat skal signeres af et certificeringscenter (CA), som derved bekræfter certifikatets gyldighed.[OCES certifikatpolitikker]
+
 <dfn>Certifikatudbyder, Certifikatudsteder, Certificeringscenter<dfn>En fysisk eller juridisk person, der er bemyndiget til at generere, udstede og administrere *certifikater* (jf. *identitetsudbyder*). Se også *Certificate Authority*.[OCES certifikatpolitikker]
 <dfn>Credential<dfn>Synonym for attribut.[]
 <dfn>Claim<dfn>Synonym for *Akkreditiv.*[]
@@ -1921,8 +1818,8 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 <dfn>Credential Service Provider (CSR)<dfn>Se Udsteder af akkreditiv.[]
 <dfn>Delegering<dfn>Omhandler personers adgang til at benytte medhjælp, dvs. under ansvar og efter instruktion og under tilsynspligt uddelegere nogle af den uddelegerendes rettigheder. Karakteristisk for delegering er, at der er tale om en person, der instruerer en anden i at handle på sine vegne. Med delegeringen kan der følge en pligt til at instruere og kontrollere. Der stilles derfor krav om, at man skal kunne se, hvem der handler på hvis vegne ved centrale opslag.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 <dfn>Digital identitet<dfn>En digital persona repræsenteret (entydigt) ved et sæt af attributter. En entitet kan have mere end en identitet.[Informationsordbogen]
-<dfn>Digital Signatur<dfn>Anvendes om første generation af offentlige *certifikater* til elektronisk service (OCES). Et matematisk skema til at bevise autenticiteten af en digital besked eller dokument. Digitale signaturer dannes ved brug af asymmetrisk kryptering og hashfunktioner. Anvendes ikke synonymt med eSignatur.[Informationsordbogen]          
-<dfn>eIDAS<dfn>Electronic identification and trust services. EU-forordningen om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner.[eIDAS]                   
+<dfn>Digital Signatur<dfn>Anvendes om første generation af offentlige *certifikater* til elektronisk service (OCES). Et matematisk skema til at bevise autenticiteten af en digital besked eller dokument. Digitale signaturer dannes ved brug af asymmetrisk kryptering og hashfunktioner. Anvendes ikke synonymt med eSignatur.[Informationsordbogen]
+<dfn>eIDAS<dfn>Electronic identification and trust services. EU-forordningen om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner.[eIDAS]
 <dfn>Elektronisk Identitet<dfn>Se *Digital Identitet.*[]
 <dfn>Elektronisk signatur<dfn>Data i elektronisk form, der er vedhæftet eller logisk tilknyttet andre data i elektronisk form, og som anvendes af underskriveren til at skrive under med.[EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 <dfn>Elektronisk identifikationsmiddel<dfn>Et elektronisk eller fysisk objekt/genstand, der kan anvendes til at gennemføre en autentifikation af en identitet. Eksempler kan være brugernavn/kodeord, et NemID nøglekort, et certifikat med tilhørende privat nøgle, et SAML token etc. Betegnes også for  Akkreditiv.[National Standard for Identiteters Sikringsniveauer (NSIS)]
@@ -2050,8 +1947,8 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
   "author": "California, Department of Technology",
   "title": "Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014",
   "href": " http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf"}
-}
 
+}
 | Kilde                                                                                    | Materiale                                                                                                                                                                                                                                                                                                                 |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | California, Department of Technology                                                     | Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014 http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf                                                                                                                                                                        |
@@ -2184,7 +2081,7 @@ For virksomheder betyder modellen, at de kan vælge mellem borgerens akkreditive
 
 *Principper med udviklingsfokus*
 8. Brugerstyring realiseres i løst koblede komponenter (Udgår, findes som arkitekturregel)
-9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen (Udgår, findes som arkitekturregel)
+9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen (Udgår, findes som arkitekturregel omkring ar styre på rette niveau.)
 10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger (Bibeholdes, og flyttes til tekniske arkitektur)
 
 ----
