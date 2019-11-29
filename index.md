@@ -55,10 +55,11 @@ Logo: digst...
 
 
 <h2 class="no-num">Forord</h2>
-Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur affødt af Digitaliseringsstrategiens initiativ 8.1, som indtil videre er kommet til udtryk i ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering”.
+Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering”.
 
-2017-udgaven af referencearkitekturen omfattede personer. I 2019-udgaven af referencearkitekturen er yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester og uddybet.
+2017-udgaven af referencearkitekturen omfattede personer. I denne udgave af referencearkitekturen er der yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
 
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler.
 
 <h2 class="no-num"> Resume (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -81,7 +82,7 @@ Hovedaktiviteterne i **administration i brugerstyring** er følgende:
 
 Hovedaktiviteterne i **anvendelse af brugerstyring** er følgende:
 - **Autentifikation** verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et akkreditiv (identifikationsmiddel).
-- **Billetudstedelse** udsteder på grundlag af en autentifikation en signeret billet (eng. security token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der evt. ske en veldefineret omveksling attributter eller berigelse med attributter fra forskellige kilder, således at tjenesten er i stand til direkte at anvende adgangsbilletten. Har brugeren ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil vedkommende ikke opnå adgang hos tjenesten.
+- **Billetudstedelse** udsteder på grundlag af en autentifikation en signeret billet (eng. security token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der evt. ske en veldefineret omveksling af attributter eller berigelse med attributter fra forskellige kilder, således at tjenesten er i stand til direkte at anvende adgangsbilletten. Har brugeren ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil vedkommende ikke opnå adgang hos tjenesten.
 - **Adgangskontrol**  er håndhævelse af en tjenestes adgangspolitik i tjenesten (eng. policy enforcement). Det styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til på grundlag af den adgangsbillet, der er udstedt. Attributterne i adgangsbilletten er således input til adgangskontrollen.
 
 Referencearkitekturen for brugerstyring fastlægger en række principper, der leder frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, akkreditiver, attributbeskrivelser, autentifikation, billetudstedelse og adgangskontrol:
@@ -152,9 +153,9 @@ Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme. Etablering af en føderation sker gennem fastlæggelse af et aftalesæt mellem føderationens deltagere.
 
-Denne 2019-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
+Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
-Parallelt med opdateringen af referencearkitekturen er der igangsat analyser af muligheden for en fællesoffentlig samtykkeløsning med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen. [beskriv det i termer fra FODS initiativer]
+Med udspring i Digitaliseringpagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lette
@@ -256,15 +257,15 @@ Den initiale bruger tilgår en tjeneste med sit bruger-id. Hvis tjenesten har br
 
 ## Tilblivelse og styring
 
-2020-udgaven er udarbejdet i Kontor for Data og Arkitektur, Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
+2020-udgaven af Referencearkitektur for bruerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
 
-I udarbejdelsen har en arbejdsgruppe af offentlige arkitekter bidraget gennem en række af workshops. I gruppen har deltaget repræsentanter fra følgende organisationer: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Kystdirektoratet, Danmarks miljøportal, Udviklings og forenklingsstyrelsen, Energistyrelsen og Energinet.
+En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.
 
-2020-udgaven af referencearkitekturen godkendtes i version 2.0 i Styregruppe for Data og Arkitektur under Digitaliseringsstrategien i maj 2020. Styregruppen er herefter ejer af dokumentet, med Kontor for Data og Arkitektur som ansvarlig for vedligehold af referencearkitekturen som en del af den Fællesoffentlige, Digitale Arkitektur.
+2020-udgaven af referencearkitekturen godkendtes i version 2.0 i Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i Den fællesoffentlige digitale arkitektur (FDA).[Skal opdateres ved godkendelse]
 
 ## Anvendt metode, notation og signaturforklaring
 
-Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af Den fællesoffentlige digitale arkitektur og følger så vidt muligt den fælles skabelon for referencearkitekturer som udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under digitaliseringsstrategien.
+Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af Den fællesoffentlige digitale arkitektur og følger så vidt muligt den fælles skabelon for referencearkitekturer som udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020.
 
 I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
 -	Rød tekst: At et element eller en relation ejes og defineres i denne referencearkitekturs begrebsmodel
@@ -273,7 +274,7 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 
 ## Andre referencearkitekturer [madsh]
 
-Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende brugerstyring, herunder relaterede standarder mv.
+Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
 
 [ *her skal der indføres en kort beskrivelse af de øvrige referencearkitekturer* ]
 
