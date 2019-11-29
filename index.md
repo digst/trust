@@ -390,7 +390,11 @@ Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan
 Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
 
 Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevinstprincippet forfølger – og implikation – en instruktion i, hvad det konkret vil sige at følge princippet. Hvis et projekt eller program mener, at det er for problematisk at følge princippet, skal projektet eller programmet forklare hvorfor, og tillige forklare hvordan man på længere sigt kan bringe løsningen inden for rammerne, som princippet angiver.
-![Figur 5 Styrende principper ](billede5.PNG)
+<figure>
+<img src="billede5.PNG" />
+<fgicaption>Styrende principper</figcaption>
+</figure>
+
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
@@ -841,7 +845,10 @@ Tjenesteudbydere bør udarbejde en adgangspolitik for deres forretningstjenester
 
 For at sikre overenstemmelse mellem adgangspolitik og den efterfølgende adgangskontrol, som håndhæver politikken, kan adgangspolitikken med fordel udtrykkes i termer af attributter, der er tilgængelige via attributbeskrivelsen. Dette er fx særligt relevant i token-baserede realiseringer, hvor adgang opnås på baggrund af attributter beskrevet i et security token. Jo mere standardiserede adgangspolitikker er på tværs af tjenester, jo lettere er det for brugere og brugerorganisationer at administrere i overensstemmelse med adgangspolitikkerne. Fællesoffentligt er visse attributter standardiseret (fx i OIOSAML profilerne), og nogle domæner har standardiseret en række attributter (dette gælder fx på sundhedsområdet).
 
-![Figur 3 Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder](billede3.PNG)
+<figure>
+<img src="billede3.PNG" />
+<figcaption>Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder</figcaption>
+</figure>
 
 Adgangspolitikker kan benytte roller som basis (Role Based Access Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
 
@@ -1015,7 +1022,10 @@ I et sammenhængende, skalérbart og sikkert økosystem af tillidstjenester og f
 
 Nedenstående tegning i figur 4 illustrerer den kæde af tillid, der kan optræder mellem tillidstjenester og forretningstjenester i et komplekst scenarie. Denne kæde skal være identificeret og beskrevet i en føderation, hvor der kan være en række tillidstjenester involveret i føderationen. Man skal her være eksplicit om, hvilket sikringsniveau de enkelte tjenester opererer på, for det vil være det laveste sikringsniveau i hele kæden, der er bestemmende for det samlede sikringsniveau. For enkelhed i illustrationen er der her tegnet en føderation med kun én af hver tillidstjeneste repræsenteret.
 
-![Figur 4 Kæde af tillid i et tjenestekald](billede4.PNG)
+<figure>
+<img src="billede4.PNG" />
+<figcaption>Kæde af tillid i et tjenestekald</figcaption>
+</figure>
 
 - Tjenesteudbyderen af forretningstjenesten skal have tillid til, at adgangskontrollen (engelsk: Policy Enforcement Point, PEP) kun viderestiller identiteter, hvis adgangsbillet matcher adgangspolitikken for forretningstjenesten. Tjenesteudbyderen varetager som hovedregel selv adgangskontrollen, men denne funktion kan varetages af en ekstern tjeneste.
 - Adgangskontrollen bygger på tillid til, at den adgangsbillet en broker har udstedt, indeholder korrekte attributter og er sket på baggrund af en gyldig autentifikation.
@@ -1080,8 +1090,10 @@ Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber re
 
 Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
 
-
-![Figur 6. Begrebsmodel for brugerstyring](billede6.PNG)
+<figure>
+<img src="billede6.PNG" />
+<figcaption>Begrebsmodel for brugerstyring</figcaption>
+</figure>
 [Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
 
 | Relation | Definition |
@@ -1100,7 +1112,10 @@ Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
 
 Brugerstyring foregår i en kontekst, og for referencearkitekturen er der dele af denne kontekst, som det er særlig vigtigt at være opmærksom på. Den ene er informationssikkerhedspolitikken og registrering af sikkerhedshændelser, mens den anden er, hvilke konkrete former som identiteter i en brugerstyring optræder med. Kontekstens begreber er markeret med blåt og vil være defineret i andre referencearkitekturer eller standarder.
 
-![Figur 7. Konteksten for begrebsmodellen for brugerstyring](billede7.PNG)
+<figure>
+<img src="billede7.PNG" />
+<figcaption>Konteksten for begrebsmodellen for brugerstyring</figcaption>
+</figure>
 
 For denne kontekst beskrives relationerne til begrebsmodellen for brugerstyring.
 
@@ -1131,7 +1146,10 @@ Denne indebærer, at en autentificeret identitet får udstedt en adgangsbillet (
 
 ------
 
-![Figur 10. Byggeblokke i konteksten for brugerstyring](billede10.PNG)
+<figure>
+<img src="billede10.PNG" />
+<figcaption>Byggeblokke i konteksten for brugerstyring</figcaption>
+</figure>
 
 Byggeblokke i konteksten for brugerstyring er genstand for andre referencearkitekturer og standarder, så vi henviser til disse beskrivelser:
 
@@ -1333,7 +1351,10 @@ Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjene
 
 Følgende figur illustrerer de løst koblede byggeblokke for administration i brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
 
-![Figur 8 Byggeblokke for administration i referencearkitekturen](billede8.PNG)
+<figure>
+<img src="billede8.PNG" />
+<figcaption>Byggeblokke for administration i referencearkitekturen</figcaption>
+</figure>
 
 Byggeblokkene ”Registrering”, og ”Akkreditivtjeneste” er de tjenester, der registrerer identiteter, og de akkreditiver som anvendes til at validere identiteter. Attributter som beskriver identiteten, kan vedligeholdes af attributtjenester. Tabel 1 giver som overblik nogle eksempler.
 
@@ -1382,7 +1403,10 @@ ved dødsfald eller konkurs.
 ### Implementering af Anvendelse af brugerstyring?
 Følgende figur illustrerer de løst koblede byggeblokke for *anvendelse* af brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
 
-![Figur 9. Byggeblokke for referencearkitekturens brugerstyring i anvendelse](billede9.PNG)
+<figure>
+<img src="billede9.PNG" />
+<figcaption>Byggeblokke for referencearkitekturens brugerstyring i anvendelse</figcaption>
+</figure>
 
 
 ## Understøttende applikationsservices
@@ -1394,7 +1418,11 @@ Referencearkitekturen peger på, hvilke områder der skal være standarder for, 
 
 I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret  oversigt over obligatoriske og anbefalede standarder skal vedligeholdes på arkitekturguiden.digitaliser.dk
 
-![Figur 20 Områder for standarder for brugerstyring](billede20.PNG)
+<figure>
+<img src="billede20.PNG" />
+<figcaption>Områder for standarder for brugerstyring</figcaption>
+</figure>
+
 Note til figur: Pilene angiver områder for standarder
 
 Der skal være **standarder for registrering af brugere, akkreditiver og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National Standard for Identiteters Sikringsniveau (NSIS), ISO29115, Kantara Identity Assurance Framework).
@@ -1405,7 +1433,11 @@ Der er behov for **standarder i forbindelse med rettigheder og attributter.** De
 
 Der er behov for **standarder for kommunikation mellem føderationer.** Disse skal identificeres og fastlægges i arbejdet med implementering af referencearkitekturen. Arbejdet i EU-regi (STORK og eIDAS) er baseret på SAML2-profiler.
 
-![Figur 21 Kommunikation mellem føderationer](billede21.PNG)
+<figure>
+<img src="billede21.PNG" />
+<figcaption>Kommunikation mellem føderationer</figcaption>
+</figure>
+
 
 ------
 
@@ -1413,7 +1445,11 @@ Figuren herunder viser interoperabilitet for brugerrettighedsstyring iht. refere
 
 I takt med videreudvikling og konsolidering af området, kan denne figur opdateres og udstilles som en del dokumentationen af den fællesoffentlige rammearkitektur:
 
-![Figur 22 Interoperabilitet for brugerstyring](billede22.PNG)
+<figure>
+<img src="billede22.PNG" />
+<figcaption>Interoperabilitet for brugerstyring</figcaption>
+</figure>
+
 
 ---------
 
@@ -1438,7 +1474,10 @@ Der forventes desuden en fortsat øget specialisering af funktioner i økosystem
 
 Det systemtekniske målbillede viser, hvor validering af og data om brugere og andre identiteter stilles til rådighed af brugerstyringstjenesterne til forretningsformål, ligesom de kan indgå i samspil med andre infrastrukturtjenester.
 
-![Figur 15 Brugerstyringstjenester i logisk sammenhæng](billede15.PNG)
+<figure>
+<img src="billede15.PNG" />
+<figcaption>Brugerstyringstjenester i logisk sammenhæng</figcaption>
+</figure>
 
 Brugerstyringstjenesterne skal gøre det muligt for forretningssystemerne at anvende og opdatere data om brugere til de mange forskellige formål, der er beskrevet ovenfor.
 
@@ -1463,12 +1502,17 @@ En login-tjeneste kaldes også for en identitetsbroker. Ved at anvende en identi
 
 Et andet væsentligt aspekt af den løse kobling er, at forretningsapplikationen ikke hårdkodes til at hente oplysninger om identiteter bestemte steder, men i stedet får dem leveret af infrastrukturen gennem den udstedte billet. Herved har man frihed til at ændre i placeringen af attributter, uden at forretningstjenesterne påvirkes.
 
-
-![Figur 16: Broker-baseret arkitekturmodel](billede16.PNG)
+<figure>
+<img src="billede16.PNG" />
+<figcaption>Broker-baseret arkitekturmodel</figcaption>
+</figure>
 
 Denne model svarer til ”*four corner*”-modellen for betalingskortinfrastrukturen, som vist på Figur 17 Arkitektur til betalingskortinfrastruktur, hvor kortholderen (svarende til identiteten) forbindes til betalingsmodtager (svarende til tjenesteudbyder) gennem kortudsteder (svarende til registreringstjeneste og akkreditivudsteder) og kortindløser (svarerende til broker). Modellen har vist sig meget skalerbar i praksis, både i forhold til antallet af aktører og i forhold til transaktioner.
 
-![Figur 17 Arkitektur til betalingskortinfrastruktur](billede17.PNG)
+<figure>
+<img src="billede17.PNG" />
+<figcaption>Arkitektur til betalingskortinfrastruktur</figcaption>
+</figure>
 
 For langt hovedparten af offentlige tjenesteudbydere anvendes denne model, som nævnt, allerede med NemLog-in som identitetsbroker. Ligeledes fungerer sundhedsområdets SOSI STS som identitetsbroker.
 
@@ -1488,7 +1532,10 @@ Samtidig vil en tjenesteudbyder have mulighed for at indgå aftale med flere bro
 
 Det skal bemærkes, at en registreringstjeneste eller akkreditivudsteder kan operere som identitetsbroker, ligesom en større tjenesteudbyder kan etablere egen broker-funktion. Endvidere kan brokere forbinde sig til andre brokere.
 
-![Figur 18 Arkitektur med flere registreringstjenester, en akkreditivudsteder og brokere](billede18.PNG)
+<figure>
+<img src="billede18.PNG" />
+<figcaption>Arkitektur med flere registreringstjenester, en akkreditivudsteder og brokere</figcaption>
+</figure>
 
 En brokerbaseret arkitektur kan indføres fleksibelt og gradvist, hvor tjenesteudbyder kan vælge at understøtte login og signering som en integreret del af egen tjeneste eller benytte en ekstern identitetsbroker. Introduktion af brokere kan baseres på frivillighed og med tiltag, der fremmer overgang til brug af brokere, herunder markedsføring af akkrediterings-/mærkningsordning af brokere. Alternativt kan der stilles krav om, at der benyttes en godkendt broker – fx indeholder National Standard for Identiteters Sikringsniveau (NSIS) krav til identitetsbrokere på forskellige sikringsniveauer. Ved brug af MitID løsningen som afløser NemID bliver det obligatorisk at anvende en broker, idet den enkelte tjenesteudbyder ikke selv får lov at integrere direkte med MitID-kernen.
 
@@ -1501,7 +1548,10 @@ led. Omvendt kan man ved at bygge nogle fælles brugerstyringstjenester opnå en
 kritisk masse i udviklingen, og derved bygge dem stærkere end en enkelt udbyder
 af en forretningstjeneste selv har ressourcer eller viden til at etablere. I NSIS standarden håndteres tillidskæder ved, at det er det svageste led i kæden, som definerer det samlede sikringsniveau. En broker på sikringsniveau NSIS Betydelig kan fx ikke formidle autentifikationer på sikringsniveau NSIS Høj, selvom brugeren måtte kunne autentificere sig på niveau Høj.
 
-![Figur 19 Sikkerhedskæder i fødereret brugerstyring](billede19.PNG)
+<figure>
+<img src="billede19.PNG" />
+<figcaption>Sikkerhedskæder i fødereret brugerstyring</figcaption>
+</figure>
 
 I en løst koblet og distribueret arkitektur er det derfor nødvendigt med fælles
 rammer for sikkerhed, der definerer roller og ansvar for de forskellige komponenter. Disse spilleregler er grundlaget for tilliden mellem parterne i arkitekturen og sikrer, at der ikke falder noget mellem to stole.
@@ -1807,7 +1857,10 @@ På mobile enheder er der ofte behov for at kunne autorisere en app til at kunne
 
 Et eksempel på, hvordan et udbredt mønster for autorisering af en app med OpenID Connect kunne se ud i en fællesoffentlig kontekst, er illustreret nedenfor i Figur :
 
-![Figur 23: Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAMLbrugerautentikation](billede23.PNG)
+<figure>
+<img src="billede23.PNG" />
+<figcaption>Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAMLbrugerautentikation</figcaption>
+</figure>
 
 Der er identificeret følgende emner til det videre arbejde med fællesoffentlig brugerstyring, hvor identiteten er en tjenestekonsument eller et fysisk apparat eller sensor:
 
@@ -2013,7 +2066,10 @@ Det betyder, at de fleste personer i dag har en række elektroniske identiteter:
 - Identitet hos Google
 - Identitet hos en række andre tjenester.
 
-![Figur 24. De tre grundlæggende begreber i identitet](billede24.PNG)
+<figure>
+<img src="billede24.PNG" />
+<figcaption>De tre grundlæggende begreber i identitet</figcaption>
+</figure>
 
 Der er mange tiltag for at reducere antallet af identiteter, fx ved at flere tjenester tilbyder, at man kan bruge sin Facebook-identitet eller Google-identitet.
 
@@ -2035,7 +2091,10 @@ Særligt for små erhvervsdrivende har det været utilfredsstillende at skulle h
 
 I denne løsning er der kun en identitet pr. entitet. Identiteten karakteriseres ved attributter. Nogle er tæt knyttet til den fysiske person som fx navn, adresse og CPR. Andre attributter udtrykker de rettigheder, som identiteten tildeles til at tilgå funktioner eller informationer. Skal entiteten tilgå løsninger som borger og som ejer af virksomhed eller medarbejder, udtrykkes det ved forskellige sæt af attributter.
 
-![Figur 25 En identitet pr. entitet](billede25.PNG)
+<figure>
+<img src="billede25.PNG" />
+<figcaption>En identitet pr. entitet</figcaption>
+</figure>
 
 Fordelene ved denne model:
 
@@ -2054,7 +2113,11 @@ I denne løsning kan hver entitet have flere elektroniske identiteter til fælle
 
 Løsningen svarer til den model, der anvendes i det nuværende NemID (i 2016).
 
-![Figur 26 Flere identiteter pr. entitet](billede26.PNG)
+<figure>
+<img src="billede26.PNG" />
+<figcaption>Flere identiteter pr. entitet</figcaption>
+</figure>
+
 
 For at løsningen med flere identiteter pr. entitet tilgodeser brugerbehov, kan modellen implementeres, så en entitet kan anvende sit akkreditiv (fx NemIDnøglekortet) til flere identiteter.
 
