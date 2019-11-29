@@ -398,132 +398,13 @@ Principperne konkretiseres med beskrivelse af rationale – hvilket mål og gevi
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
-*Principper med brugerfokus:*
-
-1. Brugerne oplever en sammenhængende adgangsstyring
-2. Brugerstyringsløsninger udvikles med fokus på brugernes behov
-3. Brugerstyringsløsninger respekterer brugernes privatliv
-
-*Principper med teknisk fokus:*
 
 4. Aktører indgår i føderationer baseret på tillid
 5. Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører
 6. Administration af brugere flyttes så vidt muligt ud af fagapplikationer
-7. Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange
-
-*Principper med udviklingsfokus*
-
-8. Brugerstyring realiseres i løst koblede komponenter
-9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen
 10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger
 
-<dfn>Princip 1: Brugerne oplever en sammenhængende adgangsstyring</dfn>
-
-Brugere vil i deres dialoger med offentlige myndigheder skulle betjene sig af en række forskellige tjenester. Disse tjenester skal opleves sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret.
-
-*Rationale*
-
-- Borgere og virksomheder vil opleve en bedre og mere gnidningsfri løsning af deres opgaver, der kræver forretningsprocesser på tværs af organisationer og sektorer. Dette vil medvirke til at fjerne en væsentlig barriere for udviklingen mod fuld digitalisering, så digitale tjenester fungerer nemt og effektivt, uanset hvilken situation man er i.
-- For udviklings- og supportfunktioner betyder det, at de vil få mere tilfredsebrugere og fx færre supporthenvendelser fra brugere, der ikke kan finde ud af at logge på.
-
-*Implikationer*
-
-- Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
-- Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter og have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
-- Brugerne skal opleve en sammenhæng mellem autentifikation og evt. senere signering.
-- Brugerne skal opleve en sammenhængende administration af oprettelse af brugere, administration af fuldmagter og administration af rettigheder.
-- Brugerne skal i videst muligt omfang have brugergrænseflader, hvor krav til sikkerhed og privacy forenes med krav om brugervenlighed.
-- Brugerne skal tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester.
-
->![](logo.png)
->Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes.
-
-<dfn>Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov</dfn>
-
-Brugerstyringsløsninger anvendes af mange forskellige borgere, medarbejdere, virksomheder og myndigheder som brugerorganisationer og tjenesteudbydere. Disse brugere har meget forskelligartede behov afhængig af brugssituationen, det anvendte udstyr, virksomhedens karakter, størrelse og sikkerhedsbehov. Brugerstyringsløsningerne udvikles med henblik på at dække de forskellige brugeres behov.
-
-*Rationale*
-
-- Målrettet dækning af forskellige behov øger brugertilfredshed og effektivitet.
-- Innovation fordrer plads til forskellighed (inden for en veldefineret ramme).
-- Brugere og tjenesteudbydere ønsker både lette løsninger, billige løsninger og sikre løsninger. At tilbyde løsninger målrettet forskellige brugergruppers behov bidrager til at dialogen med det offentlige bliver nem og effektiv.
-
-*Implikationer*
-
-- Standarder og komponenter skal værre så fleksible, at de kan anvendes til differentierede, målrettede løsninger, fx også mobile løsninger.
-- Løsninger skal stadig overholde referencearkitekturen for brugerstyring, dvs. respektere strukturen af tjenester og standarder for overførsel af informationer mellem tjenester.
-
->![](logo.png)
->Princippet om fokus på brugernes behov SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
-> Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
-> Princippet BØR efterkommes af brugerrettede tjenester, der anvender ovenstående brugerstyringsløsninger.
-> For øvrige KAN princippet efterkommes.
-
-<dfn>Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv</dfn>
-
-Fællesoffentlig brugerstyring indebærer, at information om brugerne lagres og udveksles mellem registreringstjenester, autentifikationstjenester, attributtjenester, identitetsbrokere og tjenester. Brugerstyringsløsninger skal beskytte information om brugerne (fortrolighed) og indhente og udveksle så lidt information som muligt (Data Minimisation).
-
-*Rationale*
-
-- Persondataloven og EU-forordningen om beskyttelse af personoplysninger (GDPR) stiller en række krav til beskyttelse af borgernes privatliv (privacy).
-- Brugernes privatliv respekteres ved, at brugerne kan se, hvad data bruges til (transparens), og ved at brugerne skal kunne træffe valg (samtykke). Dette understøtter, at personoplysninger kun videregives efter ”Data Minimisation”-princippet.
-- Transparens styrker brugernes tillid til offentlige digitale tjenester.
-
-*Implikationer*
-
-- Registreringstjenester, autentifikationstjenester, attributtjenester og identitetsbrokere skal ikke registrere og videresende overflødige informationer om brugerne.
-- Danske offentlige tjenester må fortsat bruge CPR-nummeret, men skal overveje kun at anvende det, hvor det er nødvendigt.
-- Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
-- En brugerstyringstjeneste bør vælge at give borgeren adgang til at se alle informationer og opdatere alle eller nogle af de informationer, som tjenesten vedligeholder om brugeren.
-- Brugeren bør have adgang til at få rettet unøjagtige eller fejlagtige persondata, hvis der ikke er mulighed for selv at rette data.
-
->![](logo.png)
->Princippet om respekt for brugernes privatliv SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
-> For øvrige SKAL princippet efterkommes.
-
-<dfn>Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler</dfn>
-[Måske et nyt princip 2: Føderation /madsh]
-
-Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
-
-*Rationale*
-
-- Gennem etablering af føderationer vil man over en årrække kunne fjerne nogle stærke sikkerheds- og teknologiske barrierer for udnyttelse af digitalisering.
-- Den fødererede model muliggør, at brugeradministrationen (oprettelse og nedlæggelse af brugere samt tildeling af attributter) udføres lokalt i organisationens egen brugerstyringsløsning (fx Active Directory eller anden Identity Management-løsning). Herved kan organisationer af en vis størrelse og modenhed vælge en løsning, så de undgår dobbelt vedligehold af de samme brugere, og administrationen sker tættest på brugerne med størst viden om deres jobfunktioner og med størst sikkerhed for korrekthed og hurtig respons på ændringer.
-- En fødereret model gør det muligt for private aktører at indgå i eller i samspil med offentlige føderationer, såfremt dette vælges af føderationen.
-
-*Implikationer*
-
-- En føderation definerer klart og entydigt såvel rammer som indhold af de former for elektroniske identiteter, autentifikationer og adgangskontroller, som en gensidig tillid baseres herpå. Det gælder både teknisk og organisatorisk.
-- For føderationen defineres en styringsmodel (governance) for, hvorledes føderationens rammer og indhold vedligeholdes, og for kvalitetskrav til og ansvarsforpligtigelser hos de organisationers brugerstyringsadministration, som indgår i føderationen.
-- Der udarbejdes et trust framework med evt. akkreditering og certificering baseret på en risikovurdering.
-- Der udøves kontrol og defineres sanktionsmuligheder.
-
->![](logo.png)
->Princippet om føderationer baseret på tillid og aftaler BØR efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in og i tværoffentlige brugerstyringsløsninger.
->Princippet BØR efterkommes i tjenester, der anvender disse.
->For øvrige KAN princippet efterkommes.
-
-<dfn>Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører</dfn>
-
-I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
-
-*Rationale*
-
-- Der er klare regler for den enkelte aktørs ansvar for sikkerheden, og tilsynet hermed varetages af overliggende myndigheder og revision (fx Rigsrevisionen).
-- Der er behov for præcisering af, hvilket ansvar for den enkelte aktør der følger af, at denne aktør er afhængig af og påvirker sikkerheden hos andre aktører.
-- Der er behov for vurdering af samspillet mellem aktørerne i føderationer, fx for hvordan sikkerhedsrisici og -hændelser skal formidles til andre aktører i føderationer.
-
-*Implikationer*
-
-- De risici, der beror på arbejdsdeling mellem aktørerne, skal håndteres ved, at hver enkelt aktør skal vurdere samspillet med andre aktører i sin sikkerhedsmæssige risikovurdering i henhold til fx ISO/IEC 27001.
-- Aktører i føderationer skal i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.
-
->![](logo.png)
->Princippet om styring af informationssikkerhed i føderationer er en følge af ISO/IEC 27001,ISO/IEC 27005, EU’s General Data Protection Regulation (GDPR) og den danske persondatalov og SKAL efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse, samt i andre offentlige løsninger.
-
-<dfn>Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer</dfn>
-[Måske et nyt princip 1 /madsh]
+<dfn>Samlet? brugeradministration</dfn> Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer...
 
 Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
 
@@ -538,10 +419,53 @@ Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres
 
 - Brugernes identiteter, akkreditiver og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
 - Der skal etableres fællesoffentlige føderationer baseret på valg af fælles politikker, regler og obligatoriske standarder inden for et område, hvor dette giver gevinster.
+- [rettigheder og adgangspolitikker fra tjenesteudbydere skal være synlige for brugerorganisationer]
 
->![](logo.png)
->Princippet om administration af brugere uden for fagapplikationer BØR efterkommes i fællesoffentlige løsninger, herunder Digital Post, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse.
->For øvrige KAN princippet efterkommes.
+
+
+<dfn>Føderation</dfn> Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitkker og adgangspolitikker.
+
+[Sammenskrives med princip 5 til generelt princip om aftale baseret føderation i samarbejde mellem tjenesteudbyder og anvendere med krav til tillidstjenester]
+
+Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
+I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
+
+*Rationale*
+
+- Gennem etablering af føderationer vil man over en årrække kunne fjerne nogle stærke sikkerheds- og teknologiske barrierer for udnyttelse af digitalisering.
+- Den fødererede model muliggør, at brugeradministrationen (oprettelse og nedlæggelse af brugere samt tildeling af attributter) udføres lokalt i organisationens egen brugerstyringsløsning (fx Active Directory eller anden Identity Management-løsning). Herved kan organisationer af en vis størrelse og modenhed vælge en løsning, så de undgår dobbelt vedligehold af de samme brugere, og administrationen sker tættest på brugerne med størst viden om deres jobfunktioner og med størst sikkerhed for korrekthed og hurtig respons på ændringer.
+- En fødereret model gør det muligt for private aktører at indgå i eller i samspil med offentlige føderationer, såfremt dette vælges af føderationen.
+- Der er klare regler for den enkelte aktørs ansvar for sikkerheden, og tilsynet hermed varetages af overliggende myndigheder og revision (fx Rigsrevisionen).
+- Der er behov for præcisering af, hvilket ansvar for den enkelte aktør der følger af, at denne aktør er afhængig af og påvirker sikkerheden hos andre aktører.
+- Der er behov for vurdering af samspillet mellem aktørerne i føderationer, fx for hvordan sikkerhedsrisici og -hændelser skal formidles til andre aktører i føderationer.
+
+*Implikationer*
+
+- En føderation definerer klart og entydigt såvel rammer som indhold af de former for elektroniske identiteter, autentifikationer og adgangskontroller, som en gensidig tillid baseres herpå. Det gælder både teknisk og organisatorisk.
+- For føderationen defineres en styringsmodel (governance) for, hvorledes føderationens rammer og indhold vedligeholdes, og for kvalitetskrav til og ansvarsforpligtigelser hos de organisationers brugerstyringsadministration, som indgår i føderationen.
+- Der udarbejdes et trust framework med evt. akkreditering og certificering baseret på en risikovurdering.
+- Der udøves kontrol og defineres sanktionsmuligheder.
+- De risici, der beror på arbejdsdeling mellem aktørerne, skal håndteres ved, at hver enkelt aktør skal vurdere samspillet med andre aktører i sin sikkerhedsmæssige risikovurdering i henhold til fx ISO/IEC 27001.
+- Aktører i føderationer skal i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.
+
+<dfn>Harmoniserede tillidstjenester</dfn> Princip om at føderation sikre
+
+
+
+*Rationale*
+
+
+
+*Implikationer*
+
+
+
+
+
+
+
+
+
 
 <dfn>Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</dfn>
 [Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh]
@@ -2020,6 +1944,17 @@ W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.
 
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
 
+
+[[CDT]]
+
+<pre class=biblio>
+{
+"CDT": {
+  "author": "California, Department of Technology",
+  "title": "Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014",
+  "href": " http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf"}
+}
+
 | Kilde                                                                                    | Materiale                                                                                                                                                                                                                                                                                                                 |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | California, Department of Technology                                                     | Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014 http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf                                                                                                                                                                        |
@@ -2134,3 +2069,234 @@ Der dannes en separat erhvervsidentitet med egne attributter. Denne erhvervsiden
 For virksomheder betyder modellen, at de kan vælge mellem borgerens akkreditiver eller at foranledige brug af en erhvervsidentitet med akkreditiver med andre styrker. Virksomheder kan skifte mellem alternativerne løbende og stadig bevare samme erhvervsidentitet. Løsningen muliggør, at både borger og virksomhed kan vælge, om borgeridentiteten kan anvendes til erhvervsformål. Løsningen kan implementeres med begge valgmuligheder eller således, at kun den ene part (fx virksomheden) kan vælge.
 
 [Bilag om typer af robotanvendelser. Hvad starter robotten... tids, ændring, henvendelse, brugerklik]
+
+
+## Hvad skete der med den 10 principper fra 2017-versionen.
+
+
+*Principper med brugerfokus:*
+1. Brugerne oplever en sammenhængende adgangsstyring (Udgår. Er dækket af tilsvarende princip fra hvidbogen om sammenhæng)
+2. Brugerstyringsløsninger udvikles med fokus på brugernes behov (Udgår. Er dækket af tilsvarende princip fra hvidbogen om sammenhæng)
+3. Brugerstyringsløsninger respekterer brugernes privatliv ((Udgår. Er dækket af persondata lovgivning om generelt principper om sikkerhed.  )
+
+*Principper med teknisk fokus:*
+4. Aktører indgår i føderationer baseret på tillid (Beholdes, men flyttes til forretningsarkitektur og relateres til at tillidspolitikken og adgangspolikker udformes i fællesskab)
+5. Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører (Se princip 4)
+6. Administration af brugere flyttes så vidt muligt ud af fagapplikationer (Skærpes og flyttes til et forretningsmæssigt princip)
+7. Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange (Udgår. Fælger direkte af persondata lovgivning og findes desuden i referencearkitkektur for deling af data og dokumenter)
+
+*Principper med udviklingsfokus*
+8. Brugerstyring realiseres i løst koblede komponenter (Udgår, findes som arkitekturregel)
+9. Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen (Udgår, findes som arkitekturregel)
+10. Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger (Bibeholdes, og flyttes til tekniske arkitektur)
+
+----
+
+Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
+
+
+<dfn>Princip 1: Brugerne oplever en sammenhængende adgangsstyring</dfn>
+
+Brugere vil i deres dialoger med offentlige myndigheder skulle betjene sig af en række forskellige tjenester. Disse tjenester skal opleves sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret.
+
+*Rationale*
+
+- Borgere og virksomheder vil opleve en bedre og mere gnidningsfri løsning af deres opgaver, der kræver forretningsprocesser på tværs af organisationer og sektorer. Dette vil medvirke til at fjerne en væsentlig barriere for udviklingen mod fuld digitalisering, så digitale tjenester fungerer nemt og effektivt, uanset hvilken situation man er i.
+- For udviklings- og supportfunktioner betyder det, at de vil få mere tilfredsebrugere og fx færre supporthenvendelser fra brugere, der ikke kan finde ud af at logge på.
+
+*Implikationer*
+
+- Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
+- Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter og have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
+- Brugerne skal opleve en sammenhæng mellem autentifikation og evt. senere signering.
+- Brugerne skal opleve en sammenhængende administration af oprettelse af brugere, administration af fuldmagter og administration af rettigheder.
+- Brugerne skal i videst muligt omfang have brugergrænseflader, hvor krav til sikkerhed og privacy forenes med krav om brugervenlighed.
+- Brugerne skal tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester.
+
+>![](logo.png)
+>Princippet om sammenhængende adgangsstyring for brugere SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in samt af tjenester, der anvender disse. For øvrige BØR princippet efterkommes.
+
+<dfn>Princip 2: Brugerstyringsløsninger udvikles med fokus på brugernes behov</dfn>
+
+Brugerstyringsløsninger anvendes af mange forskellige borgere, medarbejdere, virksomheder og myndigheder som brugerorganisationer og tjenesteudbydere. Disse brugere har meget forskelligartede behov afhængig af brugssituationen, det anvendte udstyr, virksomhedens karakter, størrelse og sikkerhedsbehov. Brugerstyringsløsningerne udvikles med henblik på at dække de forskellige brugeres behov.
+
+*Rationale*
+
+- Målrettet dækning af forskellige behov øger brugertilfredshed og effektivitet.
+- Innovation fordrer plads til forskellighed (inden for en veldefineret ramme).
+- Brugere og tjenesteudbydere ønsker både lette løsninger, billige løsninger og sikre løsninger. At tilbyde løsninger målrettet forskellige brugergruppers behov bidrager til at dialogen med det offentlige bliver nem og effektiv.
+
+*Implikationer*
+
+- Standarder og komponenter skal værre så fleksible, at de kan anvendes til differentierede, målrettede løsninger, fx også mobile løsninger.
+- Løsninger skal stadig overholde referencearkitekturen for brugerstyring, dvs. respektere strukturen af tjenester og standarder for overførsel af informationer mellem tjenester.
+
+>![](logo.png)
+>Princippet om fokus på brugernes behov SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
+> Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
+> Princippet BØR efterkommes af brugerrettede tjenester, der anvender ovenstående brugerstyringsløsninger.
+> For øvrige KAN princippet efterkommes.
+
+<dfn>Princip 3: Brugerstyringsløsninger respekterer brugernes privatliv</dfn>
+
+Fællesoffentlig brugerstyring indebærer, at information om brugerne lagres og udveksles mellem registreringstjenester, autentifikationstjenester, attributtjenester, identitetsbrokere og tjenester. Brugerstyringsløsninger skal beskytte information om brugerne (fortrolighed) og indhente og udveksle så lidt information som muligt (Data Minimisation).
+
+*Rationale*
+
+- Persondataloven og EU-forordningen om beskyttelse af personoplysninger (GDPR) stiller en række krav til beskyttelse af borgernes privatliv (privacy).
+- Brugernes privatliv respekteres ved, at brugerne kan se, hvad data bruges til (transparens), og ved at brugerne skal kunne træffe valg (samtykke). Dette understøtter, at personoplysninger kun videregives efter ”Data Minimisation”-princippet.
+- Transparens styrker brugernes tillid til offentlige digitale tjenester.
+
+*Implikationer*
+
+- Registreringstjenester, autentifikationstjenester, attributtjenester og identitetsbrokere skal ikke registrere og videresende overflødige informationer om brugerne.
+- Danske offentlige tjenester må fortsat bruge CPR-nummeret, men skal overveje kun at anvende det, hvor det er nødvendigt.
+- Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
+- En brugerstyringstjeneste bør vælge at give borgeren adgang til at se alle informationer og opdatere alle eller nogle af de informationer, som tjenesten vedligeholder om brugeren.
+- Brugeren bør have adgang til at få rettet unøjagtige eller fejlagtige persondata, hvis der ikke er mulighed for selv at rette data.
+
+>![](logo.png)
+>Princippet om respekt for brugernes privatliv SKAL efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in.
+> For øvrige SKAL princippet efterkommes.
+
+<dfn>Princip 4: Aktører indgår i føderationer baseret på tillid og aftaler</dfn>
+[Måske et nyt princip 2: Føderation /madsh]
+
+Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
+
+*Rationale*
+
+- Gennem etablering af føderationer vil man over en årrække kunne fjerne nogle stærke sikkerheds- og teknologiske barrierer for udnyttelse af digitalisering.
+- Den fødererede model muliggør, at brugeradministrationen (oprettelse og nedlæggelse af brugere samt tildeling af attributter) udføres lokalt i organisationens egen brugerstyringsløsning (fx Active Directory eller anden Identity Management-løsning). Herved kan organisationer af en vis størrelse og modenhed vælge en løsning, så de undgår dobbelt vedligehold af de samme brugere, og administrationen sker tættest på brugerne med størst viden om deres jobfunktioner og med størst sikkerhed for korrekthed og hurtig respons på ændringer.
+- En fødereret model gør det muligt for private aktører at indgå i eller i samspil med offentlige føderationer, såfremt dette vælges af føderationen.
+
+*Implikationer*
+
+- En føderation definerer klart og entydigt såvel rammer som indhold af de former for elektroniske identiteter, autentifikationer og adgangskontroller, som en gensidig tillid baseres herpå. Det gælder både teknisk og organisatorisk.
+- For føderationen defineres en styringsmodel (governance) for, hvorledes føderationens rammer og indhold vedligeholdes, og for kvalitetskrav til og ansvarsforpligtigelser hos de organisationers brugerstyringsadministration, som indgår i føderationen.
+- Der udarbejdes et trust framework med evt. akkreditering og certificering baseret på en risikovurdering.
+- Der udøves kontrol og defineres sanktionsmuligheder.
+
+>![](logo.png)
+>Princippet om føderationer baseret på tillid og aftaler BØR efterkommes i fællesoffentlige løsninger, herunder det fællesoffentlige eID og NemLog-in og i tværoffentlige brugerstyringsløsninger.
+>Princippet BØR efterkommes i tjenester, der anvender disse.
+>For øvrige KAN princippet efterkommes.
+
+<dfn>Princip 5: Aktører i føderationer vurderer i deres styring af informationssikkerhed samspillet med andre aktører</dfn>
+
+I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
+
+*Rationale*
+
+- Der er klare regler for den enkelte aktørs ansvar for sikkerheden, og tilsynet hermed varetages af overliggende myndigheder og revision (fx Rigsrevisionen).
+- Der er behov for præcisering af, hvilket ansvar for den enkelte aktør der følger af, at denne aktør er afhængig af og påvirker sikkerheden hos andre aktører.
+- Der er behov for vurdering af samspillet mellem aktørerne i føderationer, fx for hvordan sikkerhedsrisici og -hændelser skal formidles til andre aktører i føderationer.
+
+*Implikationer*
+
+- De risici, der beror på arbejdsdeling mellem aktørerne, skal håndteres ved, at hver enkelt aktør skal vurdere samspillet med andre aktører i sin sikkerhedsmæssige risikovurdering i henhold til fx ISO/IEC 27001.
+- Aktører i føderationer skal i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.
+
+>![](logo.png)
+>Princippet om styring af informationssikkerhed i føderationer er en følge af ISO/IEC 27001,ISO/IEC 27005, EU’s General Data Protection Regulation (GDPR) og den danske persondatalov og SKAL efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse, samt i andre offentlige løsninger.
+
+<dfn>Princip 6: Administration af brugere flyttes så vidt muligt ud af fagapplikationer</dfn>
+[Måske et nyt princip 1 /madsh]
+
+Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
+
+*Rationale*
+
+- Det giver mindre overlap, sub-optimering og dublering af løsninger, hvilket sparer penge ved udvikling og drift af applikationerne og resulterer i mere effektive løsninger.
+- Brugeradministrationen effektiviseres, idet brugerne ikke skal vedligeholdes mange forskellige steder.
+- Muliggør adgangsstyring på tværs af løsninger i de forskellige domæner.
+- Sikkerheden øges, idet erfaringen er, at brugere der forlader en organisation, sjældent får ændret status rettidigt og derfor bliver til en sårbarhed for den organisation, vedkommende forlader. Et arbejdsophør kan automatisk udløse, at identiteten bliver suspenderet eller spærret, og at alle rettigheder bliver blokeret for denne identitet.
+
+*Implikationer*
+
+- Brugernes identiteter, akkreditiver og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
+- Der skal etableres fællesoffentlige føderationer baseret på valg af fælles politikker, regler og obligatoriske standarder inden for et område, hvor dette giver gevinster.
+
+>![](logo.png)
+>Princippet om administration af brugere uden for fagapplikationer BØR efterkommes i fællesoffentlige løsninger, herunder Digital Post, i tværoffentlige brugerstyringstjenester og i tjenester, der anvender disse.
+>For øvrige KAN princippet efterkommes.
+
+<dfn>Princip 7: Tjenesteudbyder (den dataansvarlige) har ansvaret for at håndhæve brugernes adgange</dfn>
+[Hvem kunne det ellers være? NATO som anti-pattern? Følger princippet af GDPR? /madsh]
+
+De fælles elementer i brugerstyring forsyner en elektronisk identitet med attributter, der fremsendes til den tjeneste, som brugeren vil have adgang til. Det er tjenesteudbyder, der har ansvaret for at håndhæve brugeres adgange til tjenesten på grundlag af information fra en identitetsbroker (og eventuelt supplerende lokale attributter). Tjenesteudbyder har ansvaret for ud fra sin adgangspolitik at afgøre, om brugeren får adgang.
+
+*Rationale*
+
+- Det er hos tjenesteudbyder, at viden om konsekvenserne af at give adgang kan findes, og det er derfor tjenesteudbyder, der har ansvaret for at afgøre, om der gives adgang.
+- Det juridiske ansvar for at håndhæve adgangen til tjenesten ligger hos dens ejer (den dataansvarlige, jf. fx persondataloven).
+
+*Implikationer*
+
+- Funktioner til styring af adgangskontrol skal bygges i sammenhæng med tjenesterne.
+- Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
+
+>![](logo.png)
+>Princippet om tjenesteudbyderes håndhævelse af brugeres adgang er en følge af krav i persondataloven om dataansvar, og derfor SKAL det efterkommes af alle med dataansvar for fagapplikationer med persondata. Det BØR efterkommes af alle med dataansvar for fagapplikationer uden persondata.
+
+<dfn>Princip 8: Brugerstyring realiseres i løst koblede komponenter</dfn>
+
+Stadig flere løsninger for administration af elektroniske identiteter, autentifikation og adgangskontrol er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. De nødvendige aktiviteter omkring identitet og adgangsstyring skal logisk opdeles i udstedelse af akkreditiver, autentifikation af en given identitet, adgangskontrol, vedligeholdelse af attributter og vedligeholdelse af brugeres identiteter og adgange. På sigt vil vi sandsynligvis se en yderligere opdeling.
+
+*Rationale*
+
+- Løst koblede, sammensatte komponenter og standarder for informationsoverførsler mellem de definerede rammer, som leverandører kan agere i. Dette giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet, og aktørerne kan udnytte og udfolde det løsningsrum, som rammerne giver.
+- En åben og modulær arkitektur giver mulighed for at udskifte/variere delløsninger, integrere nye teknologier og implementere ændrede regler og politikker. Dette leder til større agilitet og ændringsparathed.
+- En opdeling i komponenter skal reducere den samlede kompleksitet af den fællesoffentlige brugerstyring.
+
+*Implikationer*
+
+- En anvendelse af referencearkitekturen skal definere et overordnet sæt tjenester eller byggeblokke for brugerstyring og et antal områder for fællesoffentlige standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring skal tage udgangspunkt i disse tjenester og skal overholde disse standarder.
+- Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne, jf. 4.4.
+- Åbne, løst koblede komponenter implementeres, så brugerne får en sammenhængende brugeroplevelse.
+- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt.
+
+>![](logo.png)
+>Princippet om løst koblede brugerstyringskomponenter SKAL efterkommes i fællesoffentlige løsninger, herunder fællesoffentlige eID og NemLog-in.
+> Princippet BØR efterkommes af tværoffentlige brugerstyringsløsninger.
+> For øvrige KAN princippet efterkommes.
+
+<dfn>Princip 9: Tværoffentlige brugerstyringsløsninger baseres på en kerne af fælles komponenter i samspil med øvrige komponenter i infrastrukturen</dfn>
+
+
+I opbygningen af en digital infrastruktur har det offentlige gentagne gange opnået gode resultater ved at gå sammen om at opbygge en fælles kerne, som fungerer i samspil med øvrige komponenter. Det gælder fx NemID, NemLog-in og Datafordeleren der er fællesoffentlige, men det kan også gælde komponenter udviklet i en speciel kontekst som fx WAYF eller UNI-Login der indgår i et samspil på tværs.
+
+*Rationale*
+
+- Infrastrukturløsninger kræver store investeringer og kan som oftest kun opbygges ved at flere parter går sammen.
+- Der er besparelser ved at opbygge en kerne i fællesskab, som alle kan anvende, i stedet for at der udvikles flere komponenter, som delvist dækker samme opgaver.
+- En fælles kerne af infrastruktur og principper giver et operationelt grundlag for at opbygge løsninger med den målsatte sammenhæng og kvalitet.
+
+*Implikationer*
+
+- Ambitioner og omfang af den fælles kerne skal aftales mellem de centrale parter.
+- Der er løbende behov for at tage stilling til balancen mellem den fælles kerne og de decentrale elementer.
+
+>![](logo.png)
+>Princippet om brugerstyring baseret på fælles kerne i samspil med decentrale komponenter SKAL efterkommes af alle fællesoffentlige løsninger. For de øvrige løsninger BØR princippet efterkommes.
+
+<dfn>Princip 10: Tværoffentlig brugerstyring etableres i overensstemmelse med internationale standarder og løsninger</dfn>
+
+Tværoffentlig brugerstyring indgår i et samspil med det internationale på flere måder. Flertallet af tekniske løsninger er udviklet i udlandet, og arkitekturer og standarder er udviklet i internationale samarbejder. Dansk brugerstyring på tværs skal så vidt muligt lægge sig tæt op ad den internationale udvikling, dog med en konkret vurdering af, hvorvidt denne udvikling passer i en dansk sammenhæng
+
+*Rationale*
+
+- Anvendelse af standarder og løsninger med internationalt scope betyder bedre og billigere løsninger, der kan indgå i sammenhæng.
+- Lokale brugerstyringsløsninger anvender generelt internationale produkter, der efterlever internationale standarder, og internationalt baserede løsninger og standarder vil derfor lette samspillet mellem det lokale og det tværgående.
+- Fælles åbne standarder sikrer interoperabilitet.
+- Der er generelt bedre adgang til leverandører og kompetencer på markedet, når løsningerne baserer sig på anerkendte og udbredte standarder.
+- Ved at basere sig på standarder, som andre også anvender, øges ’beredskabet’ omkring eventuelle problemer der skulle opstå med standarderne, f.eks. hvis der bliver fundet sikkerhedshuller.
+
+*Implikationer*
+
+- Det skal altid undersøges, hvilke internationale standarder det er muligt at anvende, evt. med dansk profilering.
+- Danske profileringer bør begrænses til at dække forhold i økosystemet, som er specifikt danske, og som ikke kan ændres til at følge internationale standarder (fx CPR-data).
+
+>![](logo.png)
+>Princippet om brugerstyring i overensstemmelse med internationale standarder og løsninger
+> BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. For øvrige KAN princippet efterkommes
