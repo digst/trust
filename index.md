@@ -1076,14 +1076,44 @@ I dette afsnit beskrives en terminologi og begrebsmodel for brugerstyring. Begre
 
 I denne liste gives kun definitioner for de begreber, som referencearkitekturen for brugerstyring autoritativt definerer, og som er markeret på figur 6 (nedenfor) med røde rammer.
 
-| *Begreb*  | Definition | Eksempler|
-|---       |---         |---   |
-| Entitet  | Noget værende, der kan have en identitet. | En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), ting (sensor, apparat) eller tjeneste (system, app, applikation, paskontor). |
-| Identitet | En digital persona repræsenteret ved et sæt af attributter. En entitet kan have mere end en identitet. | Den repræsentation i et sæt attributter, som man giver en entitet gennem brugerstyring, er målrettet de tjenester, som entiteten skal have adgang til. |
-| Akkreditiv | Et elektronisk eller fysisk objekt/genstand, der kan anvendes til at gennemføre en autentifikation af en identitet. Også benævnt elektronisk identifikationsmiddel. | Et akkreditiv kan være et brugernavn, et brugernavn og password, en PIN-kode, et SmartCard, et certifikat, et (hardware) token, et fingeraftryk, et pas osv. Akkreditivet udstedes af en akkreditivtjeneste på baggrund af den foregående registrering af et eID. Akkreditivet kan også karakteriseres ved sikringsniveauer. |
-| Attribut | Karakteristika eller egenskaber ved en entitet. På engelsk betegnes attributter som *claims*. | Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en akkreditivtjeneste, samtidig med at der udstedes et akkreditiv.  |
-| Adgangsbillet | Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en betroet tjeneste (identitetsbroker eller login-tjeneste). En adgangsbillet betegnes på engelsk som *security token*. | For at opfylde adgangspolitikken for en tjeneste, skal der indhentes en eller flere adgangsbilletter hos brugerstyringstjenester, som tjenesten har tillid til. Dette foretages af en billettjeneste, der kan være en simpel funktion til håndtering af et login, der håndteres af autentifikationstjenesten, eller billetudstedelsen kan foretages af en identitetsbroker. Denne kan, baseret på en autentifikationstjenestes verificering af et akkreditiv, indsamle attributter fra flere attributtjenester, og identitetsbrokeren kan også omveksle attributter med samme betydning og sikringsniveau fra et protokolformat til et andet. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en identitetsbroker. Et andet eksempel er en Kerberos Server, der udsteder ”tickets”, som giver brugere adgang til servere i et sikkerhedsdomæne (fx Active Directory). |
-| Adgangspolitik | En adgangspolitik beskriver betingelserne for at udføre en eller flere funktioner eller give adgang til alle informationer (data) eller en afgrænset mængde af informationer (data) i en tjeneste. | En adgangspolitik for en tjeneste fastlægges af tjenesteudbyder, baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik har to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en identitet møder op med en adgangsbillet, anvendes adgangspolitikken til at afgøre, om en identitet må udføre en specifik handling på et objekt, herunder hvilke specifikke data entiteten må få adgang til. Hvis ikke identitetens adgangsbillet indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, giver adgangskontrollen ikke adgang. |
+<table>
+<tr>
+<th>Begreb</th>
+<th>Definition</th>
+<th>Eksempler</th>
+</tr>
+<tr>
+<td>Entitet </td>
+<td>Noget værende, der kan have en identitet.</td>
+<td>En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), ting (sensor, apparat) eller tjeneste (system, app, applikation, paskontor).</td>
+</tr>
+<tr>
+<td>Identitet</td>
+<td>En digital persona repræsenteret ved et sæt af attributter. En entitet kan have mere end en identitet.</td>
+<td>Den repræsentation i et sæt attributter, som man giver en entitet gennem brugerstyring, er målrettet de tjenester, som entiteten skal have adgang til.</td>
+</tr>
+<tr>
+<td>Akkreditiv</td>
+<td>Et elektronisk eller fysisk objekt/genstand, der kan anvendes til at gennemføre en autentifikation af en identitet. Også benævnt elektronisk identifikationsmiddel.</td>
+<td>Et akkreditiv kan være et brugernavn, et brugernavn og password, en PIN-kode, et SmartCard, et certifikat, et (hardware) token, et fingeraftryk, et pas osv. Akkreditivet udstedes af en akkreditivtjeneste på baggrund af den foregående registrering af et eID. Akkreditivet kan også karakteriseres ved sikringsniveauer.</td>
+</tr>
+<tr>
+<td>Attribut</td>
+<td>Karakteristika eller egenskaber ved en entitet. På engelsk betegnes attributter som *claims*.</td>
+<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en akkreditivtjeneste, samtidig med at der udstedes et akkreditiv.</td>
+</tr>
+<tr>
+<td>Adgangsbillet</td>
+<td>Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en betroet tjeneste (identitetsbroker eller login-tjeneste). En adgangsbillet betegnes på engelsk som *security token*.</td>
+<td>For at opfylde adgangspolitikken for en tjeneste, skal der indhentes en eller flere adgangsbilletter hos brugerstyringstjenester, som tjenesten har tillid til. Dette foretages af en billettjeneste, der kan være en simpel funktion til håndtering af et login, der håndteres af autentifikationstjenesten, eller billetudstedelsen kan foretages af en identitetsbroker. Denne kan, baseret på en autentifikationstjenestes verificering af et akkreditiv, indsamle attributter fra flere attributtjenester, og identitetsbrokeren kan også omveksle attributter med samme betydning og sikringsniveau fra et protokolformat til et andet. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en identitetsbroker. Et andet eksempel er en Kerberos Server, der udsteder ”tickets”, som giver brugere adgang til servere i et sikkerhedsdomæne (fx Active Directory).</td>
+</tr>
+<tr>
+<td>Adgangspolitik </td>
+<td>En adgangspolitik beskriver betingelserne for at udføre en eller flere funktioner eller give adgang til alle informationer (data) eller en afgrænset mængde af informationer (data) i en tjeneste.</td>
+<td>En adgangspolitik for en tjeneste fastlægges af tjenesteudbyder, baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik har to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en identitet møder op med en adgangsbillet, anvendes adgangspolitikken til at afgøre, om en identitet må udføre en specifik handling på et objekt, herunder hvilke specifikke data entiteten må få adgang til. Hvis ikke identitetens adgangsbillet indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, giver adgangskontrollen ikke adgang.</td>
+</tr>
+</table>
+
 
 Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber relateret til brugerstyring.
 
@@ -1096,15 +1126,35 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 </figure>
 [Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
 
-| Relation | Definition |
-|---       |---         |
-| En entitet registres med en eller flere identiteter. | En identitet fastlægges og valideres af en registreringstjeneste  |
-| En entitet får tildelt et eller flere akkreditiver knyttet til identiteter.| En akkreditivtjeneste udstyrer entiteten med fysiske eller digitale objekter (pas, kørekort, brugernavn-kodeord, NemID), der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen. |
-| En identitet kan associeres med (knyttes til) flere akkreditiver, og et akkreditiv kan associeres med flere identiteter. | Ved at koble identitet og akkreditiver løst kan identiteten være vedvarende over tid med mulighed for at skifte akkreditiv. Det giver også mulighed for, at brugeren kan indrullere flere akkreditiver som supplement til et udleveret akkreditiv (fx indrullere fingeraftryk). |
-| En identitet associeres med en eller flere attributter (claims) og en attribut kan associeres med flere identiteter. | En identitet tilknyttes attributter, der karakteriserer den specifikke identitet, til brug for en tjenestes vurdering af, om tjenesten kan give denne identitet adgang. Et givet antal attributter hos en identitet skal matche adgangspolitikken hos tjenesten, for at tjenesten giver identiteten adgang. |
-| En adgangsbillet indeholder et eller flere sæt attributter.  | En anmodning om adgang behandles af login-tjeneste eller identitetsbroker, som udsteder en adgangsbillet med en eller flere attributter, der beskriver identiteten.   |
-| En adgangsbillet matches med en adgangspolitik. | Adgang gives af en tjeneste på grundlag af de attributter, der fremgår af adgangsbilletten, samt et tillidsforhold til den tjeneste, som har udstedt billetten. Adgangskontrollen følger tjenesteudbyderens vedtagne adgangspolitik for den pågældende tjeneste.  |
-| En tjeneste har en adgangspolitik.  | En tjenesteudbyders tjeneste stiller funktionalitet og informationer (data) til rådighed, som er underlagt en adgangspolitik, der specificerer, hvilke attributter identiteten skal demonstrere for at få adgang til specifikke funktioner og informationer. Denne adgangspolitik fastlægger niveauet for funktionaliteters og informationers (datas) tilgængelighed og beskyttelse, herunder de sikringsniveau for identitet og akkreditiver, som tjenesten accepterer, og den kvalitet i attributter den forventer. |
+<table>
+<tr>
+<th>Relation</th>
+<th>Definition</th>
+</tr>
+<tr>
+<td>En entitet registres med en eller flere identiteter.</td>
+<td>En identitet fastlægges og valideres af en registreringstjeneste</td>
+</tr>
+<tr>
+<td>En entitet får tildelt et eller flere akkreditiver knyttet til identiteter.</td>
+<td>En akkreditivtjeneste udstyrer entiteten med fysiske eller digitale objekter (pas, kørekort, brugernavn-kodeord, NemID), der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen.</td>
+</tr><tr>
+<td>En identitet kan associeres med (knyttes til) flere akkreditiver, og et akkreditiv kan associeres med flere identiteter.</td>
+<td>Ved at koble identitet og akkreditiver løst kan identiteten være vedvarende over tid med mulighed for at skifte akkreditiv. Det giver også mulighed for, at brugeren kan indrullere flere akkreditiver som supplement til et udleveret akkreditiv (fx indrullere fingeraftryk).</td>
+</tr><tr>
+<td>En identitet associeres med en eller flere attributter (claims) og en attribut kan associeres med flere identiteter.</td>
+<td>En identitet tilknyttes attributter, der karakteriserer den specifikke identitet, til brug for en tjenestes vurdering af, om tjenesten kan give denne identitet adgang. Et givet antal attributter hos en identitet skal matche adgangspolitikken hos tjenesten, for at tjenesten giver identiteten adgang.</td>
+</tr><tr>
+<td>En adgangsbillet indeholder et eller flere sæt attributter.</td>
+<td>En anmodning om adgang behandles af login-tjeneste eller identitetsbroker, som udsteder en adgangsbillet med en eller flere attributter, der beskriver identiteten. </td>
+</tr><tr>
+<td>En adgangsbillet matches med en adgangspolitik.</td>
+<td>Adgang gives af en tjeneste på grundlag af de attributter, der fremgår af adgangsbilletten, samt et tillidsforhold til den tjeneste, som har udstedt billetten. Adgangskontrollen følger tjenesteudbyderens vedtagne adgangspolitik for den pågældende tjeneste.</td>
+</tr><tr>
+<td>En tjeneste har en adgangspolitik.</td>
+<td>En tjenesteudbyders tjeneste stiller funktionalitet og informationer (data) til rådighed, som er underlagt en adgangspolitik, der specificerer, hvilke attributter identiteten skal demonstrere for at få adgang til specifikke funktioner og informationer. Denne adgangspolitik fastlægger niveauet for funktionaliteters og informationers (datas) tilgængelighed og beskyttelse, herunder de sikringsniveau for identitet og akkreditiver, som tjenesten accepterer, og den kvalitet i attributter den forventer.</td>
+</tr>
+</table>
 
 Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
 
@@ -1119,15 +1169,41 @@ Brugerstyring foregår i en kontekst, og for referencearkitekturen er der dele a
 
 For denne kontekst beskrives relationerne til begrebsmodellen for brugerstyring.
 
-| Relation  | Definition  |
-|---        |----         |
-| En entitet kan være en person, en organisation, en ting eller en tjeneste. | Siden er der udviklet en dansk standard for fysiske personer, juridiske enheder og erhvervsidentiteter (se NSIS), der bygger på eIDAS, og identiteter efter eIDAS skal overholdes af alle EU-lande. Dette rammeværk er endnu ikke udviklet for ting eller tjenester. En tjeneste, der optræder som entitet, kaldes en tjenestekonsument. |
-| En informationssikkerhedspolitik påvirker identitet og dens tilhørende akkreditiver og attributter. | Politikkens retningslinjer, forretningsgange og instrukser og sikkerhedsforanstaltninger påtrykkes den konkrete specifikation af identitet, akkreditiv og attributter, således at sikkerhedshændelser forebygges.  |
-| En informationssikkerhedspolitik påvirker hvilken adgangspolitik, der kan lægges for en tjeneste. | Det er gennem anvendelse af informationssikkerhedspolitikken og tilhørende risikovurderinger, at en adgangspolitik kan fastlægges. En risikovurdering kan fx klarlægge, hvilket NSIS sikringsniveau, der kræves for en autentificeret bruger for at få adgang. |
-| Log af sikkerhedshændelser foretages hver gang, der forsøges at forfalske autentifikation eller omgå adgangskontrol.                      | Alle begrebers repræsentationer i data fra og med identitet til og med tjeneste kan blive kompromitteret. En log registrerer alle trin i behandling af en identitets anmodning om en adgang.  |
-| Flere logs knyttes til et spor af en sikkerhedshændelse  | Gennem statistisk og algoritmisk behandling findes mønstre i logs af sikkerhedshændelser, der giver et spor.  |
-| En sikkerhedshændelse kan ske ved angreb på eller forvanskning af identitet, akkreditiv, attributsæt, adgangsbillet eller adgangskontrol. | Alle muligheder udnyttes af fjendtligtsindede. Overvåges og håndteres af organisationers Cyber Emergency Response Team (CERT), som for staten er placeret i Center for Cybersikkerhed.  |
-| En sikkerhedshændelse knyttes til en sikkerhedstype.  | En gruppering af sikkerhedshændelser  |
+
+<table>
+<tr>
+<th>Relation</th>
+<th>Definition</th>
+</tr>
+<tr>
+<td>En entitet kan være en person, en organisation, en ting eller en tjeneste.</td>
+<td>Siden er der udviklet en dansk standard for fysiske personer, juridiske enheder og erhvervsidentiteter (se NSIS), der bygger på eIDAS, og identiteter efter eIDAS skal overholdes af alle EU-lande. Dette rammeværk er endnu ikke udviklet for ting eller tjenester. En tjeneste, der optræder som entitet, kaldes en tjenestekonsument.</td>
+</tr>
+<tr>
+<td>En informationssikkerhedspolitik påvirker identitet og dens tilhørende akkreditiver og attributter.</td>
+<td>Politikkens retningslinjer, forretningsgange og instrukser og sikkerhedsforanstaltninger påtrykkes den konkrete specifikation af identitet, akkreditiv og attributter, således at sikkerhedshændelser forebygges.</td>
+</tr>
+<tr>
+<td>En informationssikkerhedspolitik påvirker hvilken adgangspolitik, der kan lægges for en tjeneste.</td>
+<td>Det er gennem anvendelse af informationssikkerhedspolitikken og tilhørende risikovurderinger, at en adgangspolitik kan fastlægges. En risikovurdering kan fx klarlægge, hvilket NSIS sikringsniveau, der kræves for en autentificeret bruger for at få adgang.</td>
+</tr>
+<tr>
+<td>Log af sikkerhedshændelser foretages hver gang, der forsøges at forfalske autentifikation eller omgå adgangskontrol.</td>
+<td>Alle begrebers repræsentationer i data fra og med identitet til og med tjeneste kan blive kompromitteret. En log registrerer alle trin i behandling af en identitets anmodning om en adgang.</td>
+</tr>
+<tr>
+<td>Flere logs knyttes til et spor af en sikkerhedshændelse</td>
+<td>Gennem statistisk og algoritmisk behandling findes mønstre i logs af sikkerhedshændelser, der giver et spor.</td>
+</tr>
+<tr>
+<td>En sikkerhedshændelse kan ske ved angreb på eller forvanskning af identitet, akkreditiv, attributsæt, adgangsbillet eller adgangskontrol.</td>
+<td>Alle muligheder udnyttes af fjendtligtsindede. Overvåges og håndteres af organisationers Cyber Emergency Response Team (CERT), som for staten er placeret i Center for Cybersikkerhed.</td>
+</tr>
+<tr>
+<td>En sikkerhedshændelse knyttes til en sikkerhedstype.</td>
+<td>En gruppering af sikkerhedshændelser.</td>
+</tr>
+</table>
 
 
 # Teknisk arkitektur
@@ -1362,20 +1438,44 @@ Tabel 2. Eksempler på identifikatorer, akkreditiver og attributter for entitete
 
 <table>
 <tr>
-<th></th>
+<th rowspan="1">Entitet</th>
+<th rowspan="1">Akkreditiv</th>
+<th colspan="2">Atrributter</th>
 </tr>
 <tr>
-<td></td>
+<th>Baseret på tal</th>
+<th>Baseret på navne</th>
+<th>Baseret på klassifikationer</th>
 </tr>
-
+<tr>
+<td>Person</td>
+<td>Kodeord, nøglekort, nøglefil, fingeraftryk, irisscanning</td>
+<td>CPR-nr., administrativt CPR-nr.</td>
+<td>Brugernavn, vanlig-navn, køn, alder, UNI*Login</td>
+<td>Specialkonsulent, leder, administrator, kompetence, uddannelse, certificering.</td>
+</tr>
+<tr>
+<td>Organisation</td>
+<td>Nøglefil</td>
+<td>CVR-nr., EAN, SEnr.</td>
+<td>Vanlig-navn, logi, branchekode</td>
+<td>Leverandør, rådgiver, kontrollant, certificering</td>
+</tr>
+<tr>
+<td>Ting</td>
+<td>Nøglefil, token</td>
+<td>Serienummer, URL, Typenummer</td>
+<td>Funktion, RDF, OWL</td>
+<td>Sensortype, triggertype, certificering</td>
+</tr>
+<tr>
+<td>Tjenestekonsument</td>
+<td>Nøglefil (p.t. FOCES)</td>
+<td>P-nummer</td>
+<td>RDF, OWL, funktionsnavn</td>
+<td>FORM, opmærkning, funktionstype</td>
+</tr>
 </table>
-|                   |                                                          | Atrributter                     |                                                |                                                                                |
-|-------------------|----------------------------------------------------------|---------------------------------|------------------------------------------------|--------------------------------------------------------------------------------|
-| **Entitet**           | **Akkreditiv**                                               | *Baseret på tal*                  | *Baseret på navne*                               | *Baseret på* klassifikationer                                                    |
-| Person            | Kodeord, nøglekort, nøglefil, fingeraftryk, irisscanning | CPR-nr., administrativt CPR-nr. | Brugernavn, vanlig-navn, køn, alder, UNI*Login | Specialkonsulent, leder, administrator, kompetence, uddannelse, certificering. |
-| Organisation      | Nøglefil                                                 | CVR-nr., EAN, SEnr.             | Vanlig-navn, logi, branchekode                 | Leverandør, rådgiver, kontrollant, certificering                               |
-| Ting              | Nøglefil, token                                          | Serienummer, URL, Typenummer    | Funktion, RDF, OWL                             | Sensortype, triggertype, certificering                                         |
-| Tjenestekonsument | Nøglefil (p.t. FOCES)                                    | P-nummer                        | RDF, OWL, funktionsnavn                        | FORM, opmærkning, funktionstype                                                |
 
 Implementering af disse byggeblokke målrettes det eller de sikringsniveauer, som informationssikkerhedspolitikken har fastlagt. Det udtrykkes fx af forskellen i processen for at opnå et NemID eller et virksomhedscertifikat i forhold til at opnå et brugernavn-kodeord til at tilgå sin virksomheds informationer. Grundet tradition logger de fleste medarbejdere på deres organisations lokale netværk blot med brugernavn-kodeord, men påtvinges så at skifte dette ofte, fx med tre måneders mellemrum.
 
