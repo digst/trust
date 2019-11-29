@@ -1939,7 +1939,7 @@ W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
 
 
-[[CDT]]
+[[CDT]] ljsadflkj alfk [[OIOSAML]]
 
 <pre class=biblio>
 {
@@ -2025,6 +2025,7 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
     "author": "Økonomistyrelsen",
     "title": "Anbefalinger til retningslinjer for tværoffentlig brugerstyring – roadmap og koncept 1.0"}
 }
+</pre>
 
 
 ## Baggrund for valg af relationen entitet-elektronisk identitet
