@@ -2347,3 +2347,18 @@ Tværoffentlig brugerstyring indgår i et samspil med det internationale på fle
 >![](logo.png)
 >Princippet om brugerstyring i overensstemmelse med internationale standarder og løsninger
 > BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. For øvrige KAN princippet efterkommes
+
+
+## Om robotter....
+
+
+<figure>
+<img src="trin.svg" width="100%"/>
+<figcaption>Tillidstjenester i kontekst ag sammenhængende tjenester</figcaption>
+</figure>
+
+
+<figure>
+<img src="snitflader.svg" width="100%"/>
+<figcaption>Brugere af digitale tjenester har altid sit eget it-system....</figcaption>
+</figure>
