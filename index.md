@@ -2046,37 +2046,89 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
 
 <pre class=biblio>
 {
-"CDT": {
-  "author": "California, Department of Technology",
-  "title": "Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014",
-  "href": " http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf"}
+  "CDT": {
+    "author": "California, Department of Technology",
+    "title": "Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014",
+    "href": " http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf"},
+  "CIDR": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "CIDR – borger.dk",
+    "href": "http://digitaliser.dk/group/2289910"},  
+  "OIOSAML": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Digitaliseringsstyrelsens anbefalinger for brug af standarder for identitetsog rettighedsstyring som f.eks. OIO Web SSO Profile 2.0.6 (også kendt som OIOSAML 2.0)",
+    "href": "http://www.digst.dk/Arkitektur-og-standarder/Standardisering/Standarderfor-serviceorienteret-infrastruktur/Standarder-og-anbefalinger-forbrugerstyring"},
+  "Fælles sikkerhedsmodel": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Forslag til fælles sikkerhedsmodel for Grunddataprogrammet - 2014-06-19"},
+  "Fuldmagt": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Fuldmagtsrapport 2012. Fuldmagt, partsrepræsentation og samtykke. Behov og løsningsmuligheder, Rambøll for Digitaliseringsstyrelsen 2012"},
+  "National standard": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "National Standard for Identiteters Sikringsniveauer (NSIS) Forventes publiceret primo 2017"},
+  "Grunddata": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Persongrunddata-rapporten"},
+  "eIDAS": {
+    "author": "eIDAS",
+    "title": "European Commission, Electronic identification and trust services",
+    "href": "http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond"},
+  "Brugerstyingsløsninger": {
+    "author": "Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017",
+    "title": "Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger "},
+  "Begrebsmodel": {
+    "author": "IT- & Telestyrelsen",
+    "title": "Den fællesoffentlige begrebsmodel til brugerstyring, der er udgivet af IT og Telestyrelsen.",
+    "href": "http://www.digst.dk/Loesninger-oginfrastruktur/NemLogin/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx"},  
+  "Nye Sikkerhedsmodeller": {
+    "author": "IT- & Telestyrelsen",
+    "title": "Nye digitale sikkerhedsmodeller- et oplæg til diskussion. Januar 2011 "},
+  "Kantara": {
+    "author": "Kantara ",
+    "title": "Kantara Initiative accelerates identity services markets by developing innovations and programs to support trusted on-line transactions. The membership of Kantara Initiative includes international communities, industry, research & education, and government stakeholders.",
+    "href": "http://kantarainitiative.org"},
+  "Adgangsstyring": {
+    "author": "KOMBIT",
+    "title": "Adgangsstyring i Rammearkitekturen - 22-03-2013 (kravspecifikation)"},
+  "Introduktion til adgangsstyring": {
+    "author": "KOMBIT",
+    "title": "Introduktion til Adgangsstyring",
+    "href": "https://sharekomm.kombit.dk/P024/Delte%20dokumenter/Introduktion%20til%20Adgangsstyring.pdf"},
+  "Miljøportalen": {
+    "author": "Miljøportalen",
+    "title": "Analyse af anvendelse af NemLog-in som brugerstyringsløsning???"},
+  "National Sundheds-it": {
+    "author": "National Sundheds-it",
+    "title": "Referencearkitektur for Informationssikkerhed, september 2013",
+    "href": "http://www.ssi.dk/Sundhedsdataogit/National%20Sundhedsit/~/media/Indhold/DK%20-%20dansk/Sundhedsdata%20og%20it/NationalSundhedsIt/Standardisering/Referencearkitektur%20for%20informationssikkerhed%20v%20%201%200%20nyt%20layout.ashx"},
+  "NIST": {
+    "author": "NIST",
+    "title": "Electronic Authentication Guideline",
+    "href": "http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf"},
+  "Arkitekturtegninger": {
+    "author": "Thomas Gundel",
+    "title": "Fællesoffentlig brugerstyring - arkitekturtegninger 30-10-2013"},
+  "Trust framework": {
+    "author": "Thomas Gundel",
+    "title": "Fællesoffentligt Trust Framework - Indledende overvejelser"},
+  "Uni-login": {
+    "author": "Uni-login",
+    "title": "UNI-Login Adgangskontrol",
+    "href": "http://www.stil.dk/~/media/UNIC/Filer/Publikationer/Tekniske%20vejledninger/uni-login-adgangskontrol.pdf"},
+  "US Army": {
+    "author": "US Army",
+    "title": "Identity and Access Management (IdAM) Reference Architecture (RA) - 07- 05-2014",
+    "href": "http://ciog6.army.mil/Portals/1/Architecture/2014/20140507-US_Army_IdAM_Reference_Architecture_V3-0.pdf"},
+  "WAYF": {
+    "author": "WAYF",
+    "title": "Introducing transparency in hub-and-spoke federation architectures using SAML2 authentication request scoping elements.",
+    "href": "http://www.wayf.dk/wayfweb/artikler_og_notater_attchmt/2010_09_01_TNC_article_SAML2-scoping.pdf"},
+  "Økonomistyrelsen": {
+    "author": "Økonomistyrelsen",
+    "title": "Anbefalinger til retningslinjer for tværoffentlig brugerstyring – roadmap og koncept 1.0"}     
 }
 
-| Kilde                                                                                    | Materiale                                                                                                                                                                                                                                                                                                                 |
-|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| California, Department of Technology                                                     | Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014 http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf                                                                                                                                                                        |
-| Digitaliseringsstyrelsen                                                                 | CIDR – borger.dk http://digitaliser.dk/group/2289910                                                                                                                                                                                                                                                                      |
-| Digitaliseringsstyrelsen                                                                 | Digitaliseringsstyrelsens anbefalinger for brug af standarder for identitetsog rettighedsstyring som f.eks. OIO Web SSO Profile 2.0.6 (også kendt som OIOSAML 2.0) http://www.digst.dk/Arkitektur-og-standarder/Standardisering/Standarderfor-serviceorienteret-infrastruktur/Standarder-og-anbefalinger-forbrugerstyring |
-| Digitaliseringsstyrelsen                                                                 | Forslag til fælles sikkerhedsmodel for Grunddataprogrammet - 2014-06-19                                                                                                                                                                                                                                                   |
-| Digitaliseringsstyrelsen                                                                 | Fuldmagtsrapport 2012. Fuldmagt, partsrepræsentation og samtykke. Behov og løsningsmuligheder, Rambøll for Digitaliseringsstyrelsen 2012                                                                                                                                                                                  |
-| Digitaliseringsstyrelsen                                                                 | National Standard for Identiteters Sikringsniveauer (NSIS) Forventes publiceret primo 2017                                                                                                                                                                                                                                |
-| Digitaliseringsstyrelsen                                                                 | Persongrunddata-rapporten                                                                                                                                                                                                                                                                                                 |
-| eIDAS                                                                                    | European Commission, Electronic identification and trust services http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond                                                                                                                          |
-| Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017 | Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger                                                                                                                                                                                                                               |
-| IT- & Telestyrelsen                                                                      | Den fællesoffentlige begrebsmodel til brugerstyring, der er udgivet af ITog Telestyrelsen. http://www.digst.dk/Loesninger-oginfrastruktur/NemLogin/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx                                                                                              |
-| IT- & Telestyrelsen                                                                      | Nye digitale sikkerhedsmodeller- et oplæg til diskussion. Januar 2011                                                                                                                                                                                                                                                     |
-| Kantara                                                                                  | Kantara Initiative accelerates identity services markets by developing innovations and programs to support trusted on-line transactions. The membership of Kantara Initiative includes international communities, industry, research & education, and government stakeholders. http://kantarainitiative.org               |
-| KOMBIT                                                                                   | Adgangsstyring i Rammearkitekturen - 22-03-2013 (kravspecifikation)                                                                                                                                                                                                                                                       |
-| KOMBIT                                                                                   | Introduktion til Adgangsstyring https://sharekomm.kombit.dk/P024/Delte%20dokumenter/Introduktion%20til%20Adgangsstyring.pdf                                                                                                                                                                                               |
-| Miljøportalen                                                                            | Analyse af anvendelse af NemLog-in som brugerstyringsløsning???                                                                                                                                                                                                                                                           |
-| National Sundheds-it                                                                     | Referencearkitektur for Informationssikkerhed, september 2013 http://www.ssi.dk/Sundhedsdataogit/National%20Sundhedsit/~/media/Indhold/DK%20-%20dansk/Sundhedsdata%20og%20it/NationalSundhedsIt/Standardisering/Referencearkitektur%20for%20informationssikkerhed%20v%20%201%200%20nyt%20layout.ashx                      |
-| NIST                                                                                     | Electronic Authentication Guideline http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf                                                                                                                                                                                                             |
-| Thomas Gundel                                                                            | Fællesoffentlig brugerstyring - arkitekturtegninger 30-10-2013                                                                                                                                                                                                                                                            |
-| Thomas Gundel                                                                            | Fællesoffentligt Trust Framework - Indledende overvejelser                                                                                                                                                                                                                                                                |
-| Uni-login                                                                                | UNI•Login Adgangskontrol http://www.stil.dk/~/media/UNIC/Filer/Publikationer/Tekniske%20vejledninger/uni-login-adgangskontrol.pdf                                                                                                                                                                                         |
-| US Army                                                                                  | Identity and Access Management (IdAM) Reference Architecture (RA) - 07- 05-2014 http://ciog6.army.mil/Portals/1/Architecture/2014/20140507-US_Army_IdAM_Reference_Architecture_V3-0.pdf                                                                                                                                   |
-| WAYF                                                                                     | Introducing transparency in hub-and-spoke federation architectures using SAML2 authentication request scoping elements http://www.wayf.dk/wayfweb/artikler_og_notater_attchmt/2010_09_01_TNC_article_SAML2-scoping.pdf                                                                                                    |
-| Økonomistyrelsen                                                                         | Anbefalinger til retningslinjer for tværoffentlig brugerstyring – roadmap og koncept 1.0
 
 ## Baggrund for valg af relationen entitet-elektronisk identitet
 
