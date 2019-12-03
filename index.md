@@ -2036,7 +2036,32 @@ W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
 
 
-[[CDT]] ljsadflkj alfk [[OIOSAML]]
+[[CDT]]
+[[CIDR]]
+[[OIOSAML]]
+[[Fælles sikkerhedsmodel]]
+[[Fuldmagt]]
+[[National standard]]
+[[Grunddata]]
+[[eIDAS]]
+[[Brugerstyringsløsninger]]
+[[Begrebsmodel]]
+[[Nye Sikkerhedsmodeller]]
+[[Kantara]]
+[[Adgangsstyring]]
+[[Introduktion til adgangsstyring]]
+[[Miljøportalen]]
+[[NSI]]
+[[NIST]]
+[[Arkitekturtegninger]]
+[[Trust framework]]
+[[Uni-login]]
+[[US Army]]
+[[WAYF]]
+[[Økonomistyrelsen]]
+[[RAS]]
+[[RA3D]]
+[[eIDAS tillidstjenester]]
 
 <pre class=biblio>
 {
@@ -2068,7 +2093,7 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
     "author": "eIDAS",
     "title": "European Commission, Electronic identification and trust services",
     "href": "http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond"},
-  "Brugerstyingsløsninger": {
+  "Brugerstyringsløsninger": {
     "author": "Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017",
     "title": "Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger "},
   "Begrebsmodel": {
@@ -2129,9 +2154,10 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
       "author": "Fællesoffentlig Digital Arkitektur",
       "title": "Referencearkitektur for deling af data og dokumenter",
       "href": "https://arkitektur.digst.dk/sites/default/files/20180503_rad_v1.0_-_godkendt_af_sda.pdf"},
-  "eIDAS": {
+  "eIDAS tillidstjenester": {
           "title": "Elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked",
           "href": "https://eur-lex.europa.eu/legal-content/da/TXT/?uri=CELEX:32014R0910"}
+
 
 
 
