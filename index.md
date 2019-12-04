@@ -69,47 +69,7 @@ Siden første udgave af referencearkitekturen er De fællesoffentlige regler for
 
 <h2 class="no-num"> Resume (in english)</h2>
 <h2 class="no-num">Resume</h2>
-De senere års udvikling på brugerstyringsområdet i den offentlige sektor har entydigt peget i retning af føderationer baseret på tillid og fælles standarder. Der er således etableret en række føderationer i forskellige sektorer - dette gælder fx på det kommunale område (KOMBIT), på sundhedsområdet (SOSI), på miljøområdet (Miljøportalen), inden for undervisningsningssektoren (STIL) og fællesoffentligt (NemLog-in). Dette er samtidig i tråd med internationale tendenser herunder etablering af en EU-føderation med afsæt i eIDAS-forordningen.
-
-Føderationer giver en lang række fordele herunder sammenhæng for brugerne, mere effektiv administration og mulighed for arbejdsdeling, hvor specialiserede tjenester (infrastruktur) varetager komplekse opgaver med håndtering af identiteter og akkreditiver for forretningstjenester, hvilket letter byrder og samtidig øger sikkerheden.
-
-Der er til stadighed behov for, at sektorløsninger udvikles på baggrund af en fællesoffentlig referencearkitektur for brugerstyring, som udpeger fælles principper, mønstre, standarder, byggeblokke og andet. Herved kan der opnås sammenhæng, synergier og udbredelse af god praksis på tværs af hele økosystemet, og risikoen for uhensigtsmæssig sub-optimering og dublering af løsninger reduceres.
-
-
-Formålet med referencearkitekturen er således at skabe **rammer** for brugerstyring i den offentlige sektor - som danner grundlag for et sammenhængende økosystem med høj grad af tillid, genbrug og interoperabilitet.
-
-Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale tjenester, som overordnet kan opdeles i administrative funktioner og adgangskontrol. De administrative funktioner omfatter oprettelse, ændring og nedlæggelse af brugere i brugerstyringssystemer, udstedelse og tilknytning af akkreditiver til brugere og tilknytning af rettigheder til brugere.
-
-[Formuering om at der er ledelses ansvar at deltage i samarbejder om udformning af adgangs- og tillids-politkker og det følger af både GDPR og aftale om ISO 27001 anvendelse]
-
-
-Hovedaktiviteterne i **administration i brugerstyring** er følgende: [tilpasses]
-
-- **Registrering** af digitale identiteter og den løbende vedligeholdelse heraf.
-- **Udstedelse** af akkreditiver og tilknytning af disse til digitale identiteter. Akkreditiver anvendes til at autenficere en digital identitet over for en tjeneste, som der ønskes adgang til.
-- **Attributbeskrivelse** af karakteristika ved digitale identiteter, som en tjeneste kræver for at give adgang, og den løbende vedligeholdelse heraf. Det er fx rettighedsrelevante attributter i form af roller, fuldmagter, samtykker og/eller andre attributter, der udtrykker kvaliteter, som en tjeneste baserer sin adgangskontrol på.
-
-Hovedaktiviteterne i **anvendelse af brugerstyring** er følgende:
-- **Autentifikation** verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et akkreditiv (identifikationsmiddel).
-- **Billetudstedelse** udsteder på grundlag af en autentifikation en signeret billet (eng. security token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der evt. ske en veldefineret omveksling af attributter eller berigelse med attributter fra forskellige kilder, således at tjenesten er i stand til direkte at anvende adgangsbilletten. Har brugeren ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil vedkommende ikke opnå adgang hos tjenesten.
-- **Adgangskontrol**  er håndhævelse af en tjenestes adgangspolitik i tjenesten (eng. policy enforcement). Det styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til på grundlag af den adgangsbillet, der er udstedt. Attributterne i adgangsbilletten er således input til adgangskontrollen.
-
-Referencearkitekturen for brugerstyring fastlægger en række principper, der leder frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, akkreditiver, attributbeskrivelser, autentifikation, billetudstedelse og adgangskontrol:
-
-Principper
-
-- **Samlet brugeradministration**
-- **(Inter-)Føderation**
-- **Harmoniserede tillidstjenester**
-
-Forretningsbehov og ovenstående principper peger entydigt frem mod en løst koblet, fødereret arkitektur, hvor de enkelte tjenester/tjenesteudbydere håndhæver adgang baseret på forudgående (ekstern) autentifikation og således ikke selv håndterer administration af brugere, anvendersystemer og rettigheder.
-
-Der er derfor valgt en token-baseret model for adgangsstyring. Denne indebærer, at brugere og systemer efter autentifikation får udstedt en signeret billet, et såkaldt *security token*, af en betroet komponent i infrastrukturen. Billetten præsenteres herefter over for den tjeneste, som leverer data eller funktionalitet, der ønskes adgang til. En billet indeholder attributter, som beskriver identitet, karakteristika  samt tildelte adgangsrettigheder. Den er desuden tidsstemlet og digitalt signeret af udstederen, så den ikke kan forfalskes eller manipuleres.
-
-Digitalisering forudsætter informationssikkerhed, og brugerstyring er et af midlerne til at håndtere risici knyttet til håndtering af digitale identiteter.
-
-I referencearkitekturen fastlægges en række standarder for håndtering af brugere, akkreditiver og attributter. Der er behov for standarder for overførsel af data om autentificerede brugere mellem autentifikationstjenester, login-tjenester/brokere og forretningstjenester. Der er behov for standarder i forbindelse med rettighedsrelevante attributter, og der er behov for standarder for kommunikation mellem føderationer. Dette behandles i afsnit 9.6.1.
-
+[Skrives midt januar]
 
 
 # Introduktion [phj]
@@ -147,7 +107,7 @@ Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de s
 
 Med udspring i Digitaliseringpagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
-## Centrale begreber
+## Centrale begreber  [madsh - flytte trekanten ned til 3 og løfte en figur op]
 I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lettelæsningen.
 
 <dfn>Forretningstjeneste</dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
@@ -309,15 +269,15 @@ effektiv datadeling er det konkrete ophæng for denne referencearkitektur.[TODO,
 
 [Vi bør kunne samle nedenstående i temaer... her et bud på overskrifts niveau]
 
-- Sammenhængende services
+- Sammenhængende services (herunde partsrepræsenation)
 
-- Offentligt-privat samarbejde
+- Privacy (herunder frivilligsheds)
+
+- Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse, Offentligt-privat samarbejde
 
 - Infrastruktur på nationalt, fællesoffentlig og domæne niveau
 
-- Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse
-
- det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+ det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.v [Se datatilsynets vejledning, udspring af GDPR]
 
 
 
@@ -394,8 +354,7 @@ Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan
 [fair konkurrence og mulighed for at tjene penge?]
 
 ## Principper [madsh]
-[Jeg vil foretrække principper spredt ud i det afsnit de hører mest til, og opsummeret i resume /madsh]
-
+[Her samler vi vores specifikke principper, og vi henfører til de generelle... det samme som den gamle, men formuleret anerledes pga hvidbog er godkendt]
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
@@ -423,6 +382,8 @@ Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres
 - Brugernes identiteter, akkreditiver og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
 - Der skal etableres fællesoffentlige føderationer baseret på valg af fælles politikker, regler og obligatoriske standarder inden for et område, hvor dette giver gevinster.
 - [rettigheder og adgangspolitikker fra tjenesteudbydere skal være synlige for brugerorganisationer]
+
+*Relationer*
 
 
 
