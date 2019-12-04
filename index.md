@@ -1115,18 +1115,19 @@ Man kan evt. vælge at lade billetter for robotter indeholde en særlig attribut
 
 
 
+## Brugerstyring for (native) apps
 
 
 
 ## Orkestreringseksempler
 
-I dette afsnit vises med nogle få eksempler, hvordan byggeblokkenes interfaces kan benyttes til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
+I dette afsnit vises med nogle få eksempler, hvordan forretningstjenester og tillidstjenester kan kombineres til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
 [Jeg tror vi skal helt over i BPMN diagrammer /madsh]
 
 
-De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte myndighed, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
+De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte organisation, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
 
-I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
+I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af tillidstjeneste) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
 
 <figure>
 <img src="billede11.PNG" width="65%"/>
@@ -1137,11 +1138,11 @@ I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, 
 >![](logo.png)
 > Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.
 
-### Administration af elektronisk identitet, akkreditiver og attributter
+### Administration af elektronisk identitet, identifikationsmidler og attributter
 
-Processer i forbindelse med administration af identiteter, akkreditiver og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
+Processer i forbindelse med administration af identiteter, identifikationsmidler og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
 
-De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere akkreditiver (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
+De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere identifikationsmidler (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
 
 **Registrering af elektronisk identitet** kan på lave sikringsniveauer ske ved, at en person registrerer sig selv – og med data, der er valgt af personen selv eller med de officielle data som navn og adresse fra CPR. Der er et tilsvarende behov for registrering af organisationer og ting.
 
@@ -1165,11 +1166,11 @@ Processen for registrering af en elektronisk identitet foregår forenklet set ge
 
 - En bruger anmoder om en identitet.
 - Registreringstjenesten verificerer identiteten fx med hjælp fra grunddata samt beviser leveret af ansøgeren (fx pas og kørekort). Disse grunddata kan desuden indgå i trinnet Registrer attributter.
-- I akkreditivtjenesten kan der tilknyttes allerede anskaffede akkreditiver, eller der kan udstedes og tilknyttes nye akkreditiver. Akkreditiver kan bestå af både digitalt information, som en nøgleapp, og fysisk information, som fx et nøglekort.
+-  Der tilknyttes allerede anskaffede identifikationsmidler, eller der kan udstedes og tilknyttes nye.
 - Aktøren registrerer de attributter, der er krævet/ønsket.
 - Resultatet vises for brugeren.
 
-En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets kvalitet (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
+En attribut kan være niveauet af registreringskvalitet (IAL) og identifikationsmidlets styrke (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
 
 ### Autentifikation
 
@@ -1181,16 +1182,16 @@ Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere att
 <figcaption>Autentifikation</figcaption>
 </figure>
 
-Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).
+Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte identifikationsmidler (sikringsniveauer).
 
-Typisk skelnes der mellem, hvor stærke akkreditiver der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et akkreditiv (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
+Typisk skelnes der mellem, hvor stærke identifikationsmidler der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et identifikationsmiddel (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
 
 Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker (NemLog-in) og en autentifikationstjeneste indgår.
 
 1. Brugeren tilgår (anmoder om adgang til) forretningstjenesten.
 2. Forretningstjenesten anmoder evt. brugeren om at vælge, hvilken broker eller autentifikationstjeneste brugeren ønsker at benytte (fx NemLog-in, WAYF, KOMBIT).
 3. Forretningstjenesten anmoder brokeren autentifikationstjenesten om en adgangsbillet (en token) til brug for login.
-4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine akkreditiver.
+4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine identifikationsmidler.
 5. Brugeren autentificerer sig over for autentifikationstjenesten.
 6. Autentifikationstjenesten/brokeren validerer brugerlogin.
 7. Autentifikationstjenesten/brokeren udsteder en signeret billet til tjenesten med brugerens identitet og eventuelle attributter.
@@ -1215,7 +1216,7 @@ Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilk
 
 1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
 2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
-3. Autentifikationstjenesten verificerer brugerens akkreditiv gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
+3. Autentifikationstjenesten verificerer brugerens identifikationsmiddel gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
 4. Autentifikationstjenesten udsteder herefter en adgangsbillet til identitetsbrokeren med de attributter for identiteten, som tjenesten kræver inkl. angivelse af aktuelt sikringsniveau.
 5. En eller flere grunddatatjenester leverer de fornødne attributter knyttet til identiteten.
 6. En eller flere attributtjenester leverer attributter knyttet til identiteten.
@@ -1233,7 +1234,7 @@ Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjene
 
 ## Tekniske implementering af forretningsfunktioner
 
-### Implementering af administration af elektronisk identitet, Akkreditiver og Attributter
+### Implementering af administration af elektronisk identitet, identifikationsmidler og attributter
 
 Følgende figur illustrerer de løst koblede byggeblokke for administration i brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
 
@@ -1242,14 +1243,14 @@ Følgende figur illustrerer de løst koblede byggeblokke for administration i br
 <figcaption>Byggeblokke for administration i referencearkitekturen</figcaption>
 </figure>
 
-Byggeblokkene ”Registrering”, og ”Akkreditivtjeneste” er de tjenester, der registrerer identiteter, og de akkreditiver som anvendes til at validere identiteter. Attributter som beskriver identiteten, kan vedligeholdes af attributtjenester. Tabel 1 giver som overblik nogle eksempler.
+Funktionerne ”Registrering”, og ”Udstedelse” er de tjenester, der registrerer identiteter, og de identifikationsmidler som anvendes til at validere identiteter. Attributter som beskriver identiteten, kan vedligeholdes af attributtjenester. Tabel 1 giver som overblik nogle eksempler.
 
-Tabel 2. Eksempler på identifikatorer, akkreditiver og attributter for entiteter
+Tabel 2. Eksempler på identifikatorer, identifikationsmidler og attributter
 
 <table>
 <tr>
 <th rowspan="2">Entitet</th>
-<th rowspan="2">Akkreditiv</th>
+<th rowspan="2">Identifikationsmiddel</th>
 <th colspan="3">Atrributter</th>
 </tr>
 <tr>
@@ -1289,11 +1290,11 @@ Tabel 2. Eksempler på identifikatorer, akkreditiver og attributter for entitete
 
 Implementering af disse byggeblokke målrettes det eller de sikringsniveauer, som informationssikkerhedspolitikken har fastlagt. Det udtrykkes fx af forskellen i processen for at opnå et NemID eller et virksomhedscertifikat i forhold til at opnå et brugernavn-kodeord til at tilgå sin virksomheds informationer. Grundet tradition logger de fleste medarbejdere på deres organisations lokale netværk blot med brugernavn-kodeord, men påtvinges så at skifte dette ofte, fx med tre måneders mellemrum.
 
-Jo stærkere garanti for akkreditiv og attributter, som et valgt sikringsniveau kræver, jo stærkere skal kontrolfunktionerne omkring registreringen være.
+Jo stærkere garanti for identitet, som et valgt sikringsniveau kræver, jo stærkere skal kontrolfunktionerne omkring registreringen være.
 
 Brugerstyringstjenesterne kan varetages af samme organisation, men kan i en tværgående føderation varetages af forskellige organisationer. Opdelingen kædes sammen med fællesoffentlige standardprotokoller for informationsudveksling. Da de forskellige standardsystemer, som anvendes af myndigheder og virksomheder, ikke nødvendigvis har de fælles protokolstandarder indbygget, kan dette løses af en broker, der foretager protokolkonvertering.
 
-En særlig opmærksomhed skal gives vedligeholdelse af identiteters attributter gennem hele deres livscyklus. Denne livscyklus indeholder ændringer i registreringspraksis, i valg af anvendte akkreditiver og i beskrivelse af attributter, herunder roller og terminering af alle rettigheder for en identitet ved fx jobskifte, dødsfald, konkurs, udskiftning, ændring eller nedlæggelse af tjeneste og lign.
+En særlig opmærksomhed skal gives vedligeholdelse af identiteters attributter gennem hele deres livscyklus. Denne livscyklus indeholder ændringer i registreringspraksis, i valg af anvendte identifikationsmidler og i beskrivelse af attributter, herunder roller og terminering af alle rettigheder for en identitet ved fx jobskifte, dødsfald, konkurs, udskiftning, ændring eller nedlæggelse af tjeneste og lign.
 
 Det gentages her, at denne referencearkitektur anvender følgende termer i stedet for termen autorisation med henblik på at opnå den størst mulige præcision:
 
@@ -1319,9 +1320,6 @@ Følgende figur illustrerer de løst koblede byggeblokke for *anvendelse* af bru
 </figure>
 
 
-## Understøttende applikationsservices
-[Mon ikke der er noget at hente i 'deling af data og dokumenter' fx dataservice... log... /madsh]
-
 
 ## Områder for standardisering
 Referencearkitekturen peger på, hvilke områder der skal være standarder for, at referencearkitekturen fungerer.
@@ -1335,7 +1333,7 @@ I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret 
 
 Note til figur: Pilene angiver områder for standarder
 
-Der skal være **standarder for registrering af brugere, akkreditiver og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National Standard for Identiteters Sikringsniveau (NSIS), ISO29115, Kantara Identity Assurance Framework).
+Der skal være **standarder for registrering af brugere, identifikationsmidler og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National Standard for Identiteters Sikringsniveau (NSIS), ISO29115, Kantara Identity Assurance Framework).
 
 Der skal være **standarder for overførsel af data om autentificerede brugere** mellem autentifikationstjenester, login-tjenester/brokere og tjenester (her bruges i dag fx OIOSAML standarden mellem NemLog-in og tjenester).
 
