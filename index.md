@@ -499,9 +499,10 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 
 <div class="new">
 <figure>
-<img src="kontekst.svg" />
-<figcaption>Oversigt over brugerstyringsdomænet [overveje at sætte 'vidergivelse af data på...']</figcaption>
+<img src="kontekst3.png" />
+<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
+<br>
 </div>
 
 Det øverste lag i figuren omhandler governance i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx databeskyttelsesforordningen) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
@@ -510,7 +511,7 @@ På baggrund heraf udformes dels politikker for adgang til egne tjenester (adgan
 
 Til at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse elektroniske identifikationsmidler, som brugerne kan autentificere sig med, de omfatter beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndingelser osv.), og de omfatter endelig autentifikation af brugere. *Tillidstjenester* udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
-I den tekniske arkitektur beskrevet i kapitel (@todo) beskrives en række supplerende funktioner (fx billetudstedelse, brokering, discovery), som ikke optræder på forretningsniveau.
+I den tekniske arkitektur beskrevet i næste kapitel beskrives en række supplerende funktioner (fx billetudstedelse, brokering, discovery), som ikke optræder på forretningsniveau.
 
 En tjeneste og et it-system er i denne kontekst synonymer for det samme: et stykke it, der kan levere informationer og funktionaliteter. Et stykke it, der optræder som leverandør, kaldes en tjeneste eller tjeneste*udbyder*. Et stykke it, der optræder som den bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument. Det samme stykke it kan optræde både som leverandør (være en tjeneste) og i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
 
@@ -525,9 +526,19 @@ I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forsta
 - Tjenester til bevaring af signaturer, segl og certifikater
 - Elektroniske registrerede leveringstjenester.
 
-eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur.
+eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift.
 
-Det er endvidere vigtigt at være opmærksom på, at eIDAS-forordningen stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret [TODO stå der ikke bare anmeldt i forordningnen?] eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I kontekst af figuren ovenfor kan man sige, at eIDAS dikterer nogle elementer af visse (offentlige) tjenesters adgangspolitik, nemlig at tjenesterne skal være tilgængelige for andre EU-landes borgere og virksomheder.[[eIDAS]]
+De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
+<div class="new">
+<figure>
+<img src="typer-tillidstjenester.svg" />
+<figcaption>Oversigt over de forskellige typer af tillidstjenester</figcaption>
+</figure>
+</div>
+<br>
+
+
+Det er endvidere vigtigt at være opmærksom på, at eIDAS-forordningen stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt anmeldt eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I kontekst af figuren ovenfor kan man sige, at eIDAS dikterer nogle elementer af visse (offentlige) tjenesters adgangspolitik, nemlig at tjenesterne skal være tilgængelige for andre EU-landes borgere og virksomheder. [[eIDAS]]
 
 
 
@@ -543,15 +554,6 @@ Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mell
 </figure>
 </div>
 
-I nedenstående figur er vist en shared use case med fokus på adgangskontrol:
-
-
-<div>
-<figure>
-<img src="use-case-simpel.svg" width="85%"/>
-<figcaption>Samarbejde ved adgangskontrol</figcaption>
-</figure>
-</div>
 
 
 Bemærk at termen *attributbeskrivelse* er en væsentlig generalisering, som i praksis kan dække over en række forskellige aktiviteter, herunder:
@@ -610,14 +612,16 @@ I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, s�
 
 
 
-### Foretningsfunktionen attributbeskrivelse
-Som tidligere nævnt bruges termen *attributbeskrivelse* i denne referencearkitektur som en generalisering over 'data om brugere', som i praksis kan dække over en række forskellige aktiviteter udført af forskellige aktører, herunder:
-- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv.
-- Tildeling (og udstilling) af roller og fuldmagter til brugere
+### Foretningsfunktionerne registrering og attestering af attributter
+Som tidligere nævnt bruges termen *attributter* i denne referencearkitektur som en generalisering over 'data om brugere', som i praksis kan dække over en lang række forskellige typer oplysninger. Funktionerne, som omhandler attributter, opdeles typisk i registrering og *attestering*. Termen attestering dækker over, at attributter ikke blot udstilles som almindelige data, men at en tillidstjeneste står på mål for dem, således at forretningstjenester kan fæstne lid til dem og anvende dem til beslutninger i deres adgangskontrol. På en engelsk benyttes betegnelsen 'verified claims'.
+
+Eksempler på opgaver inden for området kan være:
+- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv. underlagt governance og ledelse i en organisation.
+- Tildeling (og udstilling) af roller og fuldmagter til brugere.
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
-Der er således både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol.
+Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet mens de kommunikeres i en infrastruktur.
 
 Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydning om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
 I denne referencearkitektur benyttes attributbeskrivelse som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer.
@@ -637,6 +641,11 @@ For at sikre overenstemmelse mellem adgangspolitik og den efterfølgende adgangs
 </figure>
 
 Adgangspolitikker kan benytte roller som basis (Role Based Access Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
+
+### Foretningsfunktionen udforme tillidspolitik
+Udforming af tillidspolitikker handler om at gøre det eksplicit, hvilke tillidstjenester der vurderes som troværdige til forskellige anvendelser ud fra en risikovurdering. En forretningstjeneste kan fx beslutte, at den kun vil anvende autentifikationstjenester, som er NSIS anmeldte (som identitetsbrokere) på et givet sikringsniveau, mens en anden forretningstjeneste kan beslutte, at den stoler på autentifikationer fra en betsemt broker, der ikke er NSIS anmeldt - fx på baggrund af en aftale eller kontrakt med den pågældende broker. Et andet eksempel på en tillidspolitik kan være, hvorvidt en cloud-baseret tillidstjeneste anerkendes af en bestemt forretningstjeneste.
+
+Det er vigtigt, at til og fravalg af tillidstjenester sker ud fra en informeret stillingtagen og forretningsmæsssig vurdering af sikkerhed, tillid og andre former for garantier (SLA, lovkrav, revisionserklæringer).
 
 
 
@@ -838,27 +847,9 @@ Digitaliseringsstyrelsen gennemgår anmeldelsen og publicerer herefter denne på
 NSIS stiller ikke krav til forretningstjenesten med stiller sikringsniveauerne til rådighed for deres adgangspolitikker og -kontroller. Det anbefales at forretningstjenester på baggrund af en risikovurdering fastlægger hvilket sikringsniveau, der som minimum kræves for at få adgang til tjenesten.
 
 
-----
+## Forretningsobjekter og begreber
+I dette afsnit beskrives terminologi og centrale begreber for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type person, organisation, anvendelse eller implementering. Begrebsmodellen kan således danne udgangspunkt for flere forskellige implementeringer
 
-## Forretningsroller og aktører
-
-[Hvem kan spille hvad....]
-
-
-
-
-
-## Forretningsobjekter og begreber [madsh]
-[samle til et afsnit]
-
-I dette afsnit beskrives en terminologi og begrebsmodel for brugerstyring. Begrebsmodellen er på et generelt og overordnet konceptuelt niveau. Dvs. at den ikke er bundet til en bestemt type person, organisation, anvendelse eller implementering. Begrebsmodellen kan således danne udgangspunkt for flere forskellige implementeringer
-
->![](logo.png)
->Begrebsmodellen SKAL anvendes i fællesoffentlige løsninger, i løsninger, der kommunikerer mellem offentlige sektorer, og i tjenester, der anvender fællesoffentlige løsninger.
-> Begrebsmodellen KAN efterkommes af løsninger i offentlige sektorer.
-> Bruger man andre termer for begreberne inden for sin egen sektor, SKAL man kunne oversætte eller transformere disse entydigt til de autoritative termer, når man kommunikerer verbalt eller digitalt på tværs af offentlige sektorer. Dette vil sikre bedre forståelse og kommunikation mellem forskellige sektorer om brugerstyring uden at fratage dem retten til at beholde egne velfungerende termer.
-
-----
 
 I denne liste gives kun definitioner for de begreber, som referencearkitekturen for brugerstyring autoritativt definerer, og som er markeret på figur 6 (nedenfor) med røde rammer.
 
@@ -870,33 +861,33 @@ I denne liste gives kun definitioner for de begreber, som referencearkitekturen 
 </tr>
 <tr>
 <td>Entitet </td>
-<td>Noget værende, der kan have en identitet.</td>
+<td>Noget værende, der kan repræsenteres ved en digital identitet, og som ønsker adgang til en forretningstjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.</td>
 <td>En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), ting (sensor, apparat) eller tjeneste (system, app, applikation, paskontor).</td>
 </tr>
 <tr>
 <td>Identitet</td>
-<td>En digital persona repræsenteret ved et sæt af attributter. En entitet kan have mere end en identitet.</td>
+<td>En digital persona repræsenteret entydigt i en kontekst ved et sæt af attributter. En entitet kan have mere end en identitet.</td>
 <td>Den repræsentation i et sæt attributter, som man giver en entitet gennem brugerstyring, er målrettet de tjenester, som entiteten skal have adgang til.</td>
 </tr>
 <tr>
-<td>Akkreditiv</td>
-<td>Et elektronisk eller fysisk objekt/genstand, der kan anvendes til at gennemføre en autentifikation af en identitet. Også benævnt elektronisk identifikationsmiddel.</td>
-<td>Et akkreditiv kan være et brugernavn, et brugernavn og password, en PIN-kode, et SmartCard, et certifikat, et (hardware) token, et fingeraftryk, et pas osv. Akkreditivet udstedes af en akkreditivtjeneste på baggrund af den foregående registrering af et eID. Akkreditivet kan også karakteriseres ved sikringsniveauer.</td>
+<td>Identifikationsmiddel</td>
+<td> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Også benævnt elektronisk akkreditiv.</td>
+<td>Et elektronisk identifikationsmiddel kan være et brugernavn, et brugernavn og password, en PIN-kode, et SmartCard, et certifikat, et (hardware) token, et fingeraftryk, et pas osv. Identifikationsmidlet kan også karakteriseres ved sikringsniveauer (AAL).</td>
 </tr>
 <tr>
 <td>Attribut</td>
-<td>Karakteristika eller egenskaber ved en entitet. På engelsk betegnes attributter som *claims*.</td>
-<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en akkreditivtjeneste, samtidig med at der udstedes et akkreditiv.</td>
+<td>Karakteristika eller egenskaber ved en identitet. På engelsk betegnes attributter som claims.</td>
+<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en akkreditivtjeneste, samtidig med at der udstedes et akkreditiv. Når attributter attesteres af en tillidstjeneste taler man på engelsk om såkaldte 'verified claims'.</td>
 </tr>
 <tr>
-<td>Adgangsbillet</td>
-<td>Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en betroet tjeneste (identitetsbroker eller login-tjeneste). En adgangsbillet betegnes på engelsk som *security token*.</td>
-<td>For at opfylde adgangspolitikken for en tjeneste, skal der indhentes en eller flere adgangsbilletter hos brugerstyringstjenester, som tjenesten har tillid til. Dette foretages af en billettjeneste, der kan være en simpel funktion til håndtering af et login, der håndteres af autentifikationstjenesten, eller billetudstedelsen kan foretages af en identitetsbroker. Denne kan, baseret på en autentifikationstjenestes verificering af et akkreditiv, indsamle attributter fra flere attributtjenester, og identitetsbrokeren kan også omveksle attributter med samme betydning og sikringsniveau fra et protokolformat til et andet. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en identitetsbroker. Et andet eksempel er en Kerberos Server, der udsteder ”tickets”, som giver brugere adgang til servere i et sikkerhedsdomæne (fx Active Directory).</td>
+<td>Adgangsbillet (token)</td>
+<td>Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en tillidstjeneste (autentifikationstjeneste, attributtjeneste eller identitetsbroker). En adgangsbillet betegnes på engelsk som 'security token' og er ofte signeret af udstederen for at sikre mod manipulering og forfalskning.</td>
+<td>For at opfylde adgangspolitikken for en tjeneste (levere et sæt claims), skal der ofte indhentes en eller flere billetter hos tillidstjenester, som forretningstjenesten har tillid til. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en autentifikationstjeneste og identitetsbroker.</td>
 </tr>
 <tr>
 <td>Adgangspolitik </td>
 <td>En adgangspolitik beskriver betingelserne for at udføre en eller flere funktioner eller give adgang til alle informationer (data) eller en afgrænset mængde af informationer (data) i en tjeneste.</td>
-<td>En adgangspolitik for en tjeneste fastlægges af tjenesteudbyder, baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik har to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en identitet møder op med en adgangsbillet, anvendes adgangspolitikken til at afgøre, om en identitet må udføre en specifik handling på et objekt, herunder hvilke specifikke data entiteten må få adgang til. Hvis ikke identitetens adgangsbillet indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, giver adgangskontrollen ikke adgang.</td>
+<td>En adgangspolitik for en tjeneste fastlægges af den dataansvarlige tjenesteudbyder baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik kan have to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en bruger præsenterer en eller flere adgangsbilletter, konsulteres adgangspolitikken til at afgøre, hvilke data og funktioner, der skal gives adgang til. Hvis ikke adgangsbilletten indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, afvises adgang.</td>
 </tr>
 </table>
 
@@ -910,7 +901,7 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 <img src="billede6.PNG" />
 <figcaption>Begrebsmodel for brugerstyring</figcaption>
 </figure>
-[Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
+<br>
 
 <table>
 <tr>
@@ -922,17 +913,17 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 <td>En identitet fastlægges og valideres af en registreringstjeneste</td>
 </tr>
 <tr>
-<td>En entitet får tildelt et eller flere akkreditiver knyttet til identiteter.</td>
-<td>En akkreditivtjeneste udstyrer entiteten med fysiske eller digitale objekter (pas, kørekort, brugernavn-kodeord, NemID), der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen.</td>
+<td>En entitet får tildelt et eller flere identifikationsmidler knyttet til identiteter.</td>
+<td>En udsteder af identifikationsmidler udstyrer entiteten med identifikationsmidler, der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen.</td>
 </tr><tr>
 <td>En identitet kan associeres med (knyttes til) flere akkreditiver, og et akkreditiv kan associeres med flere identiteter.</td>
-<td>Ved at koble identitet og akkreditiver løst kan identiteten være vedvarende over tid med mulighed for at skifte akkreditiv. Det giver også mulighed for, at brugeren kan indrullere flere akkreditiver som supplement til et udleveret akkreditiv (fx indrullere fingeraftryk).</td>
+<td>Ved at koble identitet og identifikationsmidler løst kan identiteten være vedvarende over tid med mulighed for at skifte identifikationsmiddel. Det giver også mulighed for, at brugeren kan indrullere flere identifikationsmidler som supplement til et udleveret identifikationsmiddel (fx indrullere fingeraftryk).</td>
 </tr><tr>
 <td>En identitet associeres med en eller flere attributter (claims) og en attribut kan associeres med flere identiteter.</td>
 <td>En identitet tilknyttes attributter, der karakteriserer den specifikke identitet, til brug for en tjenestes vurdering af, om tjenesten kan give denne identitet adgang. Et givet antal attributter hos en identitet skal matche adgangspolitikken hos tjenesten, for at tjenesten giver identiteten adgang.</td>
 </tr><tr>
 <td>En adgangsbillet indeholder et eller flere sæt attributter.</td>
-<td>En anmodning om adgang behandles af login-tjeneste eller identitetsbroker, som udsteder en adgangsbillet med en eller flere attributter, der beskriver identiteten. </td>
+<td>En anmodning om adgang behandles af autentifikationstjeneste eller identitetsbroker, som udsteder en adgangsbillet med en eller flere attributter, der beskriver identiteten. </td>
 </tr><tr>
 <td>En adgangsbillet matches med en adgangspolitik.</td>
 <td>Adgang gives af en tjeneste på grundlag af de attributter, der fremgår af adgangsbilletten, samt et tillidsforhold til den tjeneste, som har udstedt billetten. Adgangskontrollen følger tjenesteudbyderens vedtagne adgangspolitik for den pågældende tjeneste.</td>
@@ -944,132 +935,84 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 
 Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
 
------
-
-Brugerstyring foregår i en kontekst, og for referencearkitekturen er der dele af denne kontekst, som det er særlig vigtigt at være opmærksom på. Den ene er informationssikkerhedspolitikken og registrering af sikkerhedshændelser, mens den anden er, hvilke konkrete former som identiteter i en brugerstyring optræder med. Kontekstens begreber er markeret med blåt og vil være defineret i andre referencearkitekturer eller standarder.
-
-<figure>
-<img src="billede7.PNG" />
-<figcaption>Konteksten for begrebsmodellen for brugerstyring</figcaption>
-</figure>
-
-For denne kontekst beskrives relationerne til begrebsmodellen for brugerstyring.
-
-
-<table>
-<tr>
-<th>Relation</th>
-<th>Definition</th>
-</tr>
-<tr>
-<td>En entitet kan være en person, en organisation, en ting eller en tjeneste.</td>
-<td>Siden er der udviklet en dansk standard for fysiske personer, juridiske enheder og erhvervsidentiteter (se NSIS), der bygger på eIDAS, og identiteter efter eIDAS skal overholdes af alle EU-lande. Dette rammeværk er endnu ikke udviklet for ting eller tjenester. En tjeneste, der optræder som entitet, kaldes en tjenestekonsument.</td>
-</tr>
-<tr>
-<td>En informationssikkerhedspolitik påvirker identitet og dens tilhørende akkreditiver og attributter.</td>
-<td>Politikkens retningslinjer, forretningsgange og instrukser og sikkerhedsforanstaltninger påtrykkes den konkrete specifikation af identitet, akkreditiv og attributter, således at sikkerhedshændelser forebygges.</td>
-</tr>
-<tr>
-<td>En informationssikkerhedspolitik påvirker hvilken adgangspolitik, der kan lægges for en tjeneste.</td>
-<td>Det er gennem anvendelse af informationssikkerhedspolitikken og tilhørende risikovurderinger, at en adgangspolitik kan fastlægges. En risikovurdering kan fx klarlægge, hvilket NSIS sikringsniveau, der kræves for en autentificeret bruger for at få adgang.</td>
-</tr>
-<tr>
-<td>Log af sikkerhedshændelser foretages hver gang, der forsøges at forfalske autentifikation eller omgå adgangskontrol.</td>
-<td>Alle begrebers repræsentationer i data fra og med identitet til og med tjeneste kan blive kompromitteret. En log registrerer alle trin i behandling af en identitets anmodning om en adgang.</td>
-</tr>
-<tr>
-<td>Flere logs knyttes til et spor af en sikkerhedshændelse</td>
-<td>Gennem statistisk og algoritmisk behandling findes mønstre i logs af sikkerhedshændelser, der giver et spor.</td>
-</tr>
-<tr>
-<td>En sikkerhedshændelse kan ske ved angreb på eller forvanskning af identitet, akkreditiv, attributsæt, adgangsbillet eller adgangskontrol.</td>
-<td>Alle muligheder udnyttes af fjendtligtsindede. Overvåges og håndteres af organisationers Cyber Emergency Response Team (CERT), som for staten er placeret i Center for Cybersikkerhed.</td>
-</tr>
-<tr>
-<td>En sikkerhedshændelse knyttes til en sikkerhedstype.</td>
-<td>En gruppering af sikkerhedshændelser.</td>
-</tr>
-</table>
 
 
 # Teknisk arkitektur
-I dette afsnit beskrives de byggeblokke, der skal være til stede for at kunne realisere de løsninger, der lægges op til med referencearkitekturen. Referencearkitekturen begrænser sig til at definere de tjenester, som forvalter referencearkitekturens begreber. Disse tjenester er markeret medrøde rammer nedenfor
+I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, der er beskrevet i forrige kapitel. Dette går eksempelvis på støttefunktioner som discovery og billetomveksling, samt håndtering af apps, softwarerobotter og identitetsbaserede services.
 
-De forretningsbehov der er beskrevet i afsnit **Fejl! Henvisningskilde ikke fundet.,** og ovenstående principper peger entydigt frem mod en løst koblet, fødereret arkitektur. Her vil de enkelte tjenester/tjenesteudbydere håndhæve adgang baseret på forudgående (ekstern) registrering, attributbeskrivelse, autentifikation og billetudstedelse. Således vil de ikke selv skulle håndtere en registreringstjeneste, en attributtjeneste, en autentifikationstjeneste og en billettjeneste. Der er derfor valgt en token-baseret model for adgangsstyring.
+De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2 og 3, peger entydigt frem mod en løst koblet, fødereret arkitektur, hvor forretningstjenester understøttes af (eksterne) tillidstjenester. Her vil de enkelte forretningstjenester/tjenesteudbydere håndhæve adgang baseret på oplysninger attesteret af tillidstjenester, og forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributbeskrivelse, autentifikation osv.
 
-[Måske er der en princip mere her... Token baseret? /madsh]
+Der gives endvidere nogle eksempler fra det fællesoffentlige domæne i form af MitID og NemLog-in3 løsningerne. For andre domæner som fx det kommunale område og sundhedsområdet henvises til specifikke domænearkitekturer og målbilleder udarbejdet i de respektive domæner.
 
-Denne indebærer, at en autentificeret identitet får udstedt en adgangsbillet (et såkaldt Security Token) af en betroet komponent i infrastrukturen, der fx kan være en autentifikationstjeneste eller identitetsbroker. Adgangsbilletten præsenteres herefter over for den tjeneste, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om identitetens karakteristika og egenskaber i form af attributter og skal være digitalt signeret af den betroede udsteder, så den ikke kan forfalskes eller manipuleres. Valget af den token-baserede fødererede model er i tråd med alle nyere løsninger og planlagte initiativer i de forskellige sektorer i Danmark såvel som internationalt. Fællesoffentlige løsninger inden for brugerstyring er baseret på en model og standarder, der understøtter den, herunder OIOSAML-standarden. Således benytter eksempelvis NemLog-in, grunddataprogrammet, Borger.dk, Virk.dk, Danmarks miljøportal, den fælleskommunale rammearkitektur og sundhedsområdet alle en token-baseret model.
+## Attestation via push/pull
+En forretningstjeneste kan få adgang til attesterede oplysninger om en bruger fra en tillidstjeneste på forskellige måder:
+- Ved selv at foretage opslag hos tillidstjenesterne (pull) eller evt. i autoritative registre med grunddata af relevans for brugerstyring (fx CPR- og CVR-data).
+- Ved at få leveret en adgangsbillet (security token) (push), hvor oplysninger om brugeren (inkl. dennes autentifikation) er samlet og signeret (typisk af en broker). Bemærk at tokens bør være specifikke og målrettede mod den aktuelle tjeneste - i SAML standarden er dette eksempelvis understøttet af Audience-elementet.
 
->![](logo.png)
->Opbygning af brugerstyring med byggeblokkene Registrering af elektronisk identitet, Akkreditivtilknytning, Attributbeskrivelse, Autentifikation, Billetudstedelse og Adgangskontrol BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse.
-> Dette afsnit KAN efterkommes af andre løsninger i offentlige sektorer.
+De to tilgange kan sagtens kombineres.
 
+[tegning skal laves]
 
-------
+Fordelen ved at at få de attesterede oplysninger om brugeren leveret i et token er, at forretningstjenesten får en løsere kobling til tillidstjenesterne, idet forretningstjenesten typisk ikke skal bekymre sig om, hvilke tillidstjenester der er relevante for den aktuelle bruger, hvor de findes, hvordan der integreres med dem osv. Brokeren vil ofte påtage sig opgaven med at sikre afkobling for forretningstjenester og orkestrere tillidstjenesterne i et domæne (eller mod andre domæner) gennem opslag og omvekslinger af tokens. Omvendt kan det i nogen sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation, hvorfor et naturligt behov for dynamiske opslag kan opstå. Det kan også hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i et token, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i GDPR, hvor kun absolut nødvendige oplysninger behandles.
 
-<figure>
-<img src="billede10.PNG" />
-<figcaption>Byggeblokke i konteksten for brugerstyring</figcaption>
-</figure>
+Valget af den token-baserede og fødererede model er i tråd med alle nyere løsninger og planlagte initiativer i de forskellige sektorer i Danmark såvel som internationalt. Fællesoffentlige løsninger inden for brugerstyring er baseret på en model og standarder, der understøtter den, herunder OIOSAML-standarden. Således benytter eksempelvis NemLog-in, grunddataprogrammet, Borger.dk, Virk.dk, Danmarks miljøportal, den fælleskommunale rammearkitektur og sundhedsområdet alle en token-baseret model.
 
-Byggeblokke i konteksten for brugerstyring er genstand for andre referencearkitekturer og standarder, så vi henviser til disse beskrivelser:
+## Discovery-tjenester
+En støttefunktion, som ofte ses i større føderationer, er discovery-tjenester, som for en given bruger har til opgave at lokalisere de tilllidstjenester (fx autentifikation og attributtjenester), der kan tilvejebringe oplysninger om brugeren. Ofte er discovery-funktionen en integreret del af en broker.
 
-- *Informationssikkerhedspolitik* er beskrevet i ISO/IEC 27001, og der er vejledninger på Digitaliseringsstyrelsens hjemmeside.
-- *Kontrol og forebyggelse* koordineres af Center for Cybersikkerhed, der udgiver vejledninger og jævnligt opdaterer trusselsbilleder.
-- *Organisation:* OIO Organisation er den fællesoffentlige standard for Organisation. Denne forventes revideret som led i digitaliseringsstrategien 2017-2020.
-- *Person:* Her er CPR-version 1.1.0 den seneste fællesoffentlige standard.
+Kendte eksempler på discovery-tjenester er fx:
+- WAYF føderation (Where Are You From), hvor en bruger angiver hvilken institution, vedkommende kommer fra - og dermed hvilken autentifikationstjeneste, som kan autentificere brugeren og levere attributter.
+- En tilsvarende funktion findes i KOMBIT's ContextHandler, som kan afgøre hvilken kommune, en kommunal bruger vedkommende kommer fra, for derved at lokalisere den relevante lokale (kommunale) autentifikationstjeneste (IdP).
+- I eIDAS føderationen findes en obligatoriske "landevælger", hvor brugeren vælger det EU-land, som kan autentificere ham.
 
-[Se anvendelse af blå og røde byggeblokke i 'deling af data og dokumenter']
+Bemærk at en discovery funktion ikke nødvendigvis behøver at interagere med brugeren, idet discovery også kan baseres på cookies, URL parametre osv.
 
-## Nødvendige applikationsservices
+## Billetudstedelse og -omveksling
 
-### Akkreditivtjeneste
-[Er det en specialisering af 'registrering' /madsh]
-Gennem byggeblokken ”Akkreditivtjeneste” skabes en relation mellem en identitet og et akkreditiv, som garanterer nogle centrale karakteristika ved denne identitet, som udstederen af akkreditiver står inde for.
+I praksis vil man ofte realisere attestering af information om en autentifikation eller brugerattributter gennem ”billetudstedelse”.
 
+En billet er typisk en signeret datastruktur baseret på XML (fx Assertions i SAML standarden) eller JSON (JWT standarden), hvilket sikrer mod manipulation eller forfalskning. I nogle sammenhænge kan billetter også være krypterede til sikring af konfidentialitet under transport. Modtageren kan validere billetten ved at verifice signaturen, hvilket forudsætter kendskab til udstederens certifikat. Typisk vil modtagere af billetter derfor være konfigureret med et såkaldt trust store for de billetudstedere og andre tillidstjenester, som skal kunne verificeres. Dette betegnes også som 'trust ankre'.
 
-Det mest simple og udbredte akkreditiv er et kodeord knyttet til et navn, der repræsenterer identiteten. Et andet eksempel er NemID og den kommende MitID løsning.
-
-
-Akkreditivtjenesten skaber i nogle tilfælde alene en tilknytning mellem en repræsentation af en identitet og et allerede eksisterende akkreditiv, mens der i andre tilfælde udstedes et nyt akkreditiv, som knyttes til identiteten. Nogle akkreditivtjenester tilføjer også flere beskrivende attributter til identiteten.
-
-Akkreditivtjenesten har et vedligeholdelsesansvar for akkreditivets livscyklus, idet akkreditiver kan have en tidsbegrænset varighed og kan blive kompromitteret. NSIS standarden stiller en række til håndtering og udstedelse af akkreditiver møntet på de forskellige faser af akkreditivets livscyklus.
-
-### Attributbeskrivelse
-[Er det en specialisering af 'registrering' /madsh]
-I forbindelse med registrering og oprettelse af den elektroniske identitet vil der typisk blive registreret en række beskrivende attributter. Attributterne beskriver identiteten, f.eks. med identifikatorer (UUID, CPR eller brugernavn), navne, højde, øjenfarve eller andet. Der kan dog også registreres andre typer attributter, der i sidste ende kan være adgangsgivende ift. tjenester, f.eks. den eller de arbejdsfunktioner, som ledelsen i en virksomhed ønske at personen skal kunne optræde i, eller attributter vedrørende roller, bemyndigelser eller andet. Tilknytning af attributter til en elektronisk identitet kaldes i denne referencearkitektur for *attributbeskrivelse.*
-
-Der kan være mange, der knytter attributter til identiteter. Nogle vil, som ovenfor nævnt, typisk blive tilknyttet i forbindelse med registrering og oprettelse af den elektroniske identitet, mens andre kan komme til i senere processer, hvor f.eks. brugeradministratorer tildeler ’roller’, vedligeholder eksisterende attributter eller tilføjer nye attributter.
+Typisk udføres billedudstedelse af af en broker på grundlag af en forudgående autentifikation, hvor brokeren kan tilføje attributter, der beskriver identiteten, samt anden relevant information som fx tidspunkt for autentifikation, NSIS sikringsniveau for autentifikationen mm. Attributterne udtrykker som tidligere beskrevet kendetegn, roller eller andre typer af attributter som en relation (“repræsenterer og er under instruks af CVR”, “arbejder på vegne af læge X”), eller attributter, der udtaler sig mere specifikt om identitetens funktion (“arbejdsfunktion”, “rolle”).
 
 
-Indgår man i en føderation, kan der fastlægges attributter, som er særlig vigtige for samspil mellem føderationens deltagere, og derfor tildeles af en attributtjeneste anerkendt inden for føderationen. Det samme kan gælde, hvis man ønsker, at roller skal håndteres ens på tværs af en føderations deltagere. Inden for sundhedsområdet er det fx vigtigt, at visse roller – og dermed attributter – håndteres ens på tværs af sundhedsaktører, der skal samarbejde om behandlingen af patienter.
 
+Et eksempel på dette mønster findes i NemLog-in, der efter autentifikation af en bruger (fx med NemID eller MitID) kan berige den udstedte SAML Assertion med CPR nummer baseret på opslag i CPR, med det aktuelle NSIS sikringsniveau for autentifikationen, samt rettigheder og fuldmagter baseret på opslag i NemLog-in's egen rettigheds- og fuldmagtskomponent. Alle forretningstjenester tilsluttet NemLog-in har forinden udvekslet SAML metadata med NemLog-in, som indeholder certifikater, der bruges til signering og kryptering, og kan med udgangspunkt heri validere billetter fra NemLog-in.
 
-Enheder, der leverer attributbeskrivelser, skal vælges og håndteres med en omhu, der afspejler det sikringsniveau, som man ønsker, at attributterne skal matche. På sundhedsområdet er det meget veldefineret, hvilken myndighed der må koble en persons identitet til forskellige autorisationer til at udføre sygepleje og lægebehandling. I andre sammenhænge kan man lade en virksomhed beskrive de roller, som man som samarbejdspartner kan optræde i.
+I større føderationer eller i scenarier med interføderation, hvor to eller flere føderationer forbindes, kan der være flere tillidstjenester, der udsteder og signerer billetter - og det kan være urealistisk eller upraktisk at hver forretningstjeneste kender dem alle. Her er der ofte behov for, at brokere foretager en billetomveksling - dvs. udsteder og signerer en ny (samlet) billet baseret på andre billetter udstedt af andre tillidstjenester, som der er en tillidsrelation til. Dvs. en broker, som forretningstjenesten kender og har tillid til, sørger for at håndtere tillidstjenester længere ude i tillædskæden, som forretningstjenesten ikke har direkte kendskab til. Den tekniske omveksling er udtryk for 'transitiv trust' forstået på den måde, at tillidskæden kollapses over for tjenesten. Udover at foretage 'trust brokering' kan billetomveksling også anvendes til at oversætte attributter eller foretage protokolkonvertering mv.
 
-### Authentifikation (genkendelse?)
-[Er det en specialisering af 'opslag'? /madsh]
+## Identitetsbaserede services
+En ofte forekommende problematik er, at en forretningstjeneste for at servicere en bruger har brug for at kalde videre til andre forretningsservices. Dette kan fx være en portal som borger.dk, der tilgås af slutbrugere, har brug for opslag i en bagvedliggende service, der kan levere data om en bestemt borger (fx Digital Post).
 
-Byggeblokken ”Autentifikation” er den tjeneste, der validerer en identitet på baggrund af et akkreditiv. Autentifikation er baseret på brug af akkreditiver som fx kodeord (noget kun brugeren ved), et token (noget kun brugeren har) eller biometri (noget kun brugeren er eller gør). Tjenesten kan desuden levere identitetsattributter samt information om validiteten af identiteten til tjenesten Billetudstedelse, der danner adgangsbilletter (*security tokens*) med tidsbegrænset gyldighed til en eller flere tjenester. I en føderation er det adgangsbilletten, der giver adgang til tjenesten – ikke det akkreditiv, som er udstedt til bruger/serviceaftager, da dette typisk er usynligt for tjenesten grundet den arkitekturmæssige afkobling.
+Her er der grundlæggende to måder at håndtere det videre kald på mellem forretningstjenester:
+- Enten kalder den første forretningstjeneste videre med sin egen identitet (også kaldet system-trust modellen).
+- Ellers kalder den første forretningstjeneste videre med kontekst af den specifikke bruger, som der ønskes data på vegne af.
 
-Før tjenesteudbyderen giver adgang til en bruger, anvender tjenesteudbyderen en autentifikationstjeneste til at validere identiteten. Tjenesteudbyderen kan anvende autentifikationstjenesten direkte eller gennem tjenesten ”Billetudstedelse”, som beskrives i næste afsnit.
+Den sidstnævnte model kaldes for identitetsbaserede (web) services, idet den oprindelige brugeridentitet føres med videre i kaldet.
 
-Autentifikationen bygger på tillid til, at den akkreditivtjeneste, der har tilknyttet og udstedt akkreditiverne, har gjort dette til de rette entiteter, nemlig de samme entiteter som registreringstjeneste har identificeret og registreret identiteten på.
+Fordelen ved den identitetsbaserede model er, at tilliden skabes gennem en konkret brugerforespørgsel, fremfor at den kaldende forretningstjeneste får fuld adgang på vegne af alle brugere. Endvidere bliver det enkelte kald sporbart til den konkrete bruger. Til gengæld fordrer det synkronitet, idet brugeren som regel skal være logget ind i den kaldende forretningstjeneste, før et identitetsbaseret kald er muligt. Omvendt kan system trust modellen fungere uafhængigt af, om brugeren er logget ind, men til gengæld vil et sikkerhedsbrud i den kaldende forretningstjeneste (fx kompromitteret privatnøgle) kunne skalere til samtlige brugere hos den anden forretningstjeneste. Identitetsbaserede services anses derfor som regel for at være både mere sikre og med bedre understøttelse af privacy og en højere grad af transparens.
 
-### Billetudstedelse
-[Er det i det måske omvekslingen der skal i fokus? /madsh]
+Der er fællesoffentligt specificeret en række standarder for *identitetsbaserede webservices*. Disse standarder kan eksempelvis benyttes, når en tjenestekonsument skal anmode om et *security token* på vegne af en bruger, som herefter benyttes til at autorisere et kald til en webservice i et andet domæne. Et eksempel kan være, at en bruger logger ind på en webportal, som herefter har brug for at hente data om brugeren hos en anden tjenesteudbyder
 
-Byggeblokken ”Billetudstedelse” er den del af brugerstyringen, som udsteder adgangsbilletter (eng: *security tokens*) til tjenester på grundlag af en autentifikation, og tilføjer attributter, der beskriver identiteten, samt anden relevant information som fx tidspunkt for autentifikation, NSIS sikringsniveau for atuentifikationen mm. Attributterne udtrykker kendetegn, roller eller andre typer af attributter som en relation (“repræsenterer og er under instruks af CVR”, “arbejder på vegne af læge X”), eller attributter, der udtaler sig mere specifikt om identitetens funktion (“arbejdsfunktion”, “rolle”).
+Profilerne for identitetsbaserede webservices(https://digitaliser.dk/resource/526486) består af:
+- OIO WS-Trust Profile (profil til at anmode om Security Token).
+- OIO WS-Trust Deployment Profile (profil til at anmode om Security Token).
+- OIO Profile for Identity Tokens (profil for token udformning i webservice-kald).
+- OIO Bootstrap Token Profile (profil for veksling af Web SSO session til token ifm. systemkald).
+- Liberty Basic SOAP Binding (profil af WS-Security til sikring af SOAP-baserede webservice-kald med SAML Token).
+- OIO IDWS Rest Profile (profil til sikring af REST-baserede webservice-kald med SAML Token).
 
-Attributter kan stamme fra en autentifikationstjenesten, fra attributtjenester eller fra egne brugerstyringssystemer. Byggeblokken kan desuden tilbyde, at de udstedte adgangsbilletter leveres i flere standardformater. Byggeblokken kan varetages af en broker, der dels kan indsamle attributter fra forskellige attributtjenester, dels kan omveksle attributformater, hvis en tjeneste kræver et bestemt format for adgangsbilletten.
+Disse profiler er endvidere suppleret med open sourcereferenceimplementeringer i Java og .Net for at lette udbredelsen.
 
-I en føderation bygger tjenesten Billetudstedelse på tillid til føderationens registreringstjenester, akkreditivudstedere og attributtjenester. Endvidere kan brokere omveksle og berige tokens fra andre brokere og dermed danne en *tillidskæde*. Autentifikationstjenestens tjek af akkreditivet sikrer, at det er den rette brugeridentitet, som udtrykkes i billetten. Den billet, som Billetudstedelse udsteder, skal indeholde det eller de attributter for denne konkrete identitet, som kræves af tjenestens adgangskontrol, før der kan opnås adgang. Det er dermed en fordel for brokeren at kende til tjenestens krav til attributter, hvilket ofte løses ved, at det ønskede attributsæt registreres, når tjenesten tilsluttes brokeren.
+Profilerne er i dag implementeret i NemLog-in gennem udstilling af en Security Token Service. Underprofiler af disse er endvidere specificeret inden for sundhedsdomænet samt den fælleskommunale rammearkitektur.
 
+Sundhedsområdet benytter samme arkitekturprincipper og har defineret egne SAML-baserede standarder, suppleret med egne STS’er deployet i domænet. Det overordnede princip i OIO IDWS-modellen er at anvende en fødereret og token-baseret model for systemer på samme måde som for personbrugere. En Security Token Service udfylder samme rolle for systemer som en SAML Identity Provider udfylder for personer (autentifikation og udstedelse af adgangsbillet). Endvidere kan man med identitetsbaserede webservices opnå, at et system (fx server eller rig klient) kan agere på vegne af en person, der er logget ind på systemet. Dette er fx relevant, når en bruger logger ind på en portal, som herefter har brug for at kontakte en tredje tjeneste for at tilgå brugerens data.
 
-### Adgangskontrol (men ikke autorisation?)
+I grunddataprogrammet har man valgt en fælles, tværgående sikkerhedsmodel, baseret på udstedelse af Security Tokens for de services, der muliggør opdatering af registre. Dette giver en struktureret model på tværs af programmet frem for et virvar af punkt-til-punkt integrationer, baseret på certifikater. Modellen er baseret på, at myndighederne registrerer deres opdateringsservices i NemLog-in med tilhørende roller, og at såkaldte systembrugerklienter kan blive tildelt rettigheder til disse services. Efter tildelingen kan en systembrugerklient anmode NemLogin’s STS om en adgangsbillet til en service, hvor rollerne så vil fremgå af adgangsbilletten.
 
-Tjenesteudbyderen er den, der forvalter det juridiske ansvar for adgangen til de informationer og funktioner, som tjenesteudbyderen udstiller - som hovedregel i rollen som *dataansvarlig*.
+## Adgangskontrol
+
+Tjenesteudbyderen er som tidligere nævnt den, der forvalter det juridiske ansvar for adgangen til de informationer og funktioner, som forretningstjenesten udstiller - som hovedregel i rollen som *dataansvarlig* i databeskyttelsesreguleringens forstand.
 
 Det sker på grundlag af:
 
@@ -1082,27 +1025,93 @@ Tjenesteudbyderen fastlægger en **adgangspolitik** på grundlag af sin sikkerhe
 - *Integritet (pålidelighed),* at data er komplette, korrekte og opdaterede.
 - *Tilgængelighed,* at det skal være muligt at tilgå systemer og data for autoriserede personer, når dette er nødvendigt.
 
-Tjenesteudbyderen skal ud fra sin adgangspolitik og en risikovurdering fastlægge, hvilke sikringsniveauer og attributsæt, der giver adgang til hvilke informationer og funktioner. Disse kan være udmøntet i et struktureret format, der kan læses maskinelt af en funktion, der undersøger betingelserne til at få adgang til tjenestens funktioner og informationer.
+Tjenesteudbyderen skal som led i sin adgangspolitik og en risikovurdering fastlægge, hvilke sikringsniveauer og attributsæt, der giver adgang til hvilke informationer og funktioner. Disse kan være udmøntet i et struktureret format, der kan læses maskinelt af en funktion, der undersøger betingelserne til at få adgang til tjenestens funktioner og informationer.
 
-Beskrivelsen af adgangspolitikken er desuden grundlaget for brugerens eller brugerorganisationens administration af brugerens rettighedsrelevante attributter. Tjenesteudbydere og brugere/brugerorganisationer skal derfor have fælles forståelse af adgangspolitikken - herunder fx hvad konsekvensen af at tildele en bruger en bestemt rolle er. I en standard som WS-SecurityPolicy er der specificeret et sprog for at udtrykke en adgangspolitik. Dette giver en Billetudsteder mulighed for maskinelt at spørge tjenesten, hvilken adgangspolitik der skal opfyldes, for at få adgang til en bestemt funktion eller bestemte informationer. En mere simpel logik findes i SAML standarden, hvor en tjenestes behov for attributter kan udtrykkes i en såkaldt metadatafil.
+Beskrivelsen af adgangspolitikken er desuden grundlaget for brugerens eller brugerorganisationens administration af brugerens rettighedsrelevante attributter. Tjenesteudbydere og brugere/brugerorganisationer skal derfor have fælles forståelse af adgangspolitikken - herunder fx hvad konsekvensen af at tildele en bruger en bestemt rolle er. I en standard som WS-SecurityPolicy er der specificeret et sprog for at udtrykke en adgangspolitik. Dette giver en billetudstedende tillidstjeneste mulighed for maskinelt at spørge tjenesten, hvilken adgangspolitik der skal opfyldes, for at få adgang til en bestemt funktion eller bestemte informationer. En mere simpel logik findes i SAML standarden, hvor en tjenestes behov for attributter kan udtrykkes i en såkaldt metadatafil.
 
-Den løbende vedligeholdelse af den adgangspolitik, en given tjeneste kræver, er omfattende, idet den skal realiseres for enhver tjeneste, som tjenesteudbyder stiller til rådighed for brugere. Det samme gælder, hvilke akkreditiver og attributter der giver adgangsrettigheder til hvilke informationer og funktioner. De arbejdsprocesser, der foretager al denne vedligeholdelse, er i sin manuelle implementering meget ressourcekrævende. Der er derfor klare gevinster at hente gennem automatisering af administration i form af sparede manuelle ressourcer og sikring af, at personer der forlader organisationen, eller organisationer der forlader føderationen, også meldes ud.
+Den løbende vedligeholdelse af den adgangspolitik, en given tjeneste kræver, er omfattende, idet den skal realiseres for enhver tjeneste, som tjenesteudbyder stiller til rådighed for brugere. Det samme gælder, hvilke identifikationsmidler og attributter der giver adgangsrettigheder til hvilke informationer og funktioner. De arbejdsprocesser, der foretager al denne vedligeholdelse, er i sin manuelle implementering meget ressourcekrævende. Der er derfor klare gevinster at hente gennem automatisering af administration i form af sparede manuelle ressourcer og sikring af, at personer der forlader organisationen, eller organisationer der forlader føderationen, også meldes ud.
 
 En udbredt model for adgangsrettigheder er rollebaseret adgangskontrol (RBAC), hvor brugerorganisationen kan anvende egne organisatoriske roller i forbindelse med adgangskontrol. I de seneste år har en ny model, attributbaseret adgangskontrol (ABAC), vundet frem, hvor en regelmotor kan agere ud fra de attributværdier, en tjeneste præsenteres for gennem adgangsbilletten. RBAC kan opfattes som en delmængde af ABAC, idet roller kan udtrykkes som attributter.
 
-I **Adgangskontrol** kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra Autentifikation og Billetudstedelse. Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret Single Sign-On funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie eller en OAuth access token, der er udvekslet til at holde sessionen åben i en bestemt tidsperiode.
+I **Adgangskontrol** kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra Autentifikation og Billetudstedelse - foruden at selve billetten valideres (herunder signatur og tidsstempel på denne). Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret Single Sign-On funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie eller en OAuth token, der er udvekslet til at holde sessionen åben i en bestemt tidsperiode.
 
-Adgangskontrollen påhviler tjenesteudbyder. Dele af den kan løses af en fælles byggeblok i referencearkitekturen.
+Adgangskontrollen er tjenesteudbyders ansvar, men tekniske funktioner kan leveres af eksterne systemer. Dette er eksempelvis tilfældet i XACML standarden, der dog ikke er særlig udbredt i praksis.
+
+
+## Softwarerobotter
+Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Disse systemer er ofte legacy-systemer, der kun udstiller deres funktionalitet via en brugergrænseflade – og derfor har robotter behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen for at kunne opnå den ønskede automatisering.
+
+Det er ofte en grundlæggende præmis, at applikationerne ikke kan skrives om (gøres robot-venlige), men må bruges mere eller mindre ’as-is’. Det kan her bemærkes, at den ideelle og langsigtede løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
+
+En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres akkreditiver til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS, lovgivning som eIDAS mv.
+
+I denne referencearkitektur forstås ved softwarerobotter de såkaldte autonome robotter, der selvstændigt logger på applikationer og ikke agerer kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for scope, og giver som regel heller ikke udfordringer i brugerstyringen.
+
+For autonome robotter opstår derimod ofte udfordringer med brugerstyring, når applikationen er konstrueret til at forvente et log-in med et identifikationsmiddel, som alene må anvendes af menneskebrugere – eksempelvis et MOCES medarbejdercertifikat, der er særdeles udbredt. Her kan den autonome robot ikke få adgang – med mindre et menneske bryder reglerne og kompromitterer sikkerheden. I de næste underafsnit præsenteres et forslag til en løsning af denne udfordring baseret på føderationsprincippet.
+
+### Løsning for autonome robotter via føderation
+Til håndtering af autonome robotter kan man med fordel bygge på føderationsprincippet. Hvis applikationen således ikke selv står for autentifikation af brugere men anvender en ekstern broker eller autentifikationstjeneste, kan der foretages en afkobling, som tillader robotten at simulere et menneske. I det følgende tages udgangspunkt i et konkret scenarie, hvor applikationen kræver log-in med MOCES-certifikat, og anvender NemLog-in som autentikationstjeneste / broker. Dette vil være tilfældet for mange offentlige tjenester – og mønstret kan sagtens generaliseres til andre sammenhænge herunder andre brokere.
+
+Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet, sker autentifikationen i NemLog-in, og applikationen får blot en signeret billet tilbage (SAML Assertion) med en række attributter. Applikationens binding er således reelt til et forventet attributsæt (attributkontrakten), der beskriver en medarbejderidentitet (fx navn, e-mail, CVR, RID-nummer, rettigheder mv.) snarere end en binding til medarbejderens akkreditiv (fx MOCES certifikatet).
+
+Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en billet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer akkreditiver, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
+
+For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med præcis de samme attributter som en almindelig medarbejderidentitet (M), og herefter udstede/tilknytte et robot-egnet identifikationsmiddel (fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans).
+
+Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
+-	Robotten tilgår applikationen ved at simulere en browser.
+-	Applikationen laver redirect til NemLog-in’s autentifikationsservice og anmoder om autentifikation af en medarbejderidentitet (via OIOSAML standarden).
+-	Robotten autentificerer sig overfor NemLog-in via sit tilknyttede identifikationsmiddel (her FOCES certifikat).
+-	Efter autentifikationen fremfinder NemLog-in den medarbejderidentitet (M’) i sin brugerdatabase, som er tilknyttet identifikationsmidlet, og danner et autentifikationssvar med de nødvendige attributter til applikationen.
+-	Applikationen validerer billettens signatur, og giver adgang til applikationen på baggrund af attributterne i billetten (i henhold til applikationens adgangspolitik).
+
+Ovenstående kan generaliseres til alle typer applikationer, der via føderation har en kontrakt med en broker om autentificering af medarbejderidentiteter.
+
+Det skal også bemærkes, at løsningen ville forudsætte en mindre udvidelse af NemLog-in3 – herunder administration af robotidentiteter og tilknytning af andre typer akkreditiver. 
+Løsningen er illustreret på nedenstående figur:
+
+<figure>
+<img src="robotfigur.png" width="65%"/>
+<figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
+</figure>
+<br>
+
+
+
+Man kan evt. vælge at lade billetter for robotter indeholde en særlig attribut som indikerer, at der er tale om en robot. Herved kan ’robot-aware’ applikationer reagere på en særlig måde overfor robotter (hvis de vil), mens ’ikke-robot-aware’ applikationer blot ignorerer attributten, og opfører sig på samme måde som hvis der var tale om medarbejderidentitet for en fysisk person.
+
+
+
+## Brugerstyring for (native) apps
+På mobile enheder er der ofte behov for at kunne autorisere en app til at kunne agere på brugerens vegne efter ovennævnte principper om identitetsbaserede web service. Der findes endnu ingen fællesoffentlige profiler eller standarder på dette område, men der tegner sig alligevel en række mønstre og best practices, baseret på anvendelse af OAuth 2.0 samt OpenID Connect standarderne. Det grundlæggende princip i disse er, at brugeren via en mobil browser sendes til en autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må tilgå brugerens data og ressourcer. Herefter udstedes et token (eller flere) til app’en, som kan anvendes til at autorisere kald til back-end services (typisk REST API'er). Herved er såvel app'ens identitet og identifikationsmiddel adskilt fra brugerens.
+
+Det skal endvidere bemærkes, at brugerautentifikationen (indlejret i OAuth eller OpenID Connect) sagtens kan være baseret på SAML2.0, hvorfor eksisterende SAML-baserede autentifikationstjenester og brokere kan genanvendes. Digitaliseringsstyrelsen har i 2011 udgivet en vejledning til OAuth 2.0 (https://digitaliser.dk/resource/1246357), der viser hvordan standarden kan anvendes. Det ventes endvidere, at der i videreudviklingen af NemLog-in3 vil blive etableret bedre understøttelse af mobile enheder via andre protokoller end SAML.
+
+Et eksempel på, hvordan et udbredt mønster for autorisering af en app med OpenID Connect kunne se ud i en fællesoffentlig kontekst, er illustreret nedenfor i Figur :
+
+<figure>
+<img src="oidc-tegning.png" />
+<figcaption>Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAML-baseret brugerautentikation</figcaption>
+</figure>
+<br>
+
+Sekvensen i figuren er som følger:
+
+
+En af begrænsningerne ved ovenstående scenarie er, at en konkret app autoriseres mod et konkret API. Mønstret skalerer således ikke umiddelbart til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte at app'ens backend kan kalde videre via princippet om identitetsbaserede services.
+
+
 
 ## Orkestreringseksempler
 
-I dette afsnit vises med nogle få eksempler, hvordan byggeblokkenes interfaces kan benyttes til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
+I dette afsnit vises med nogle få eksempler på, hvordan forretningstjenester og tillidstjenester kan korkestreres til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
+
 [Jeg tror vi skal helt over i BPMN diagrammer /madsh]
 
 
-De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte myndighed, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
+De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte organisation, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
 
-I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af brugerstyringstjenester) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
+I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af tillidstjeneste) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
 
 <figure>
 <img src="billede11.PNG" width="65%"/>
@@ -1110,14 +1119,11 @@ I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, 
 </figure>
 
 
->![](logo.png)
-> Den tekniske opbygning af brugerstyring med opdeling i klart adskilte delprocesser og arbejdsdeling mellem aktørerne i administrative processer og autentifikation, billetudstedelse og adgangskontrol samt kontrol og rapportering BØR efterkommes i fællesoffentlige løsninger, i tværoffentlige brugerstyringsløsninger og i tjenester, der anvender disse. Dette afsnit KAN efterkommes af løsninger i offentlige sektorer.
+### Administration af elektronisk identitet, identifikationsmidler og attributter
 
-### Administration af elektronisk identitet, akkreditiver og attributter
+Processer i forbindelse med administration af identiteter, identifikationsmidler og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
 
-Processer i forbindelse med administration af identiteter, akkreditiver og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
-
-De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere akkreditiver (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
+De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere identifikationsmidler (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
 
 **Registrering af elektronisk identitet** kan på lave sikringsniveauer ske ved, at en person registrerer sig selv – og med data, der er valgt af personen selv eller med de officielle data som navn og adresse fra CPR. Der er et tilsvarende behov for registrering af organisationer og ting.
 
@@ -1135,17 +1141,18 @@ For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem vir
 <img src="billede12.PNG" width="65%"/>
 <figcaption>Registrer identitet</figcaption>
 </figure>
+<br>
 
 
 Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:
 
 - En bruger anmoder om en identitet.
 - Registreringstjenesten verificerer identiteten fx med hjælp fra grunddata samt beviser leveret af ansøgeren (fx pas og kørekort). Disse grunddata kan desuden indgå i trinnet Registrer attributter.
-- I akkreditivtjenesten kan der tilknyttes allerede anskaffede akkreditiver, eller der kan udstedes og tilknyttes nye akkreditiver. Akkreditiver kan bestå af både digitalt information, som en nøgleapp, og fysisk information, som fx et nøglekort.
+-  Der tilknyttes allerede anskaffede identifikationsmidler, eller der kan udstedes og tilknyttes nye.
 - Aktøren registrerer de attributter, der er krævet/ønsket.
 - Resultatet vises for brugeren.
 
-En attribut kan være niveauet af registreringskvalitet (IAL) og akkreditivets kvalitet (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
+En attribut kan være niveauet af registreringskvalitet (IAL) og identifikationsmidlets styrke (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
 
 ### Autentifikation
 
@@ -1156,17 +1163,18 @@ Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere att
 <img src="billede13.PNG" width="65%"/>
 <figcaption>Autentifikation</figcaption>
 </figure>
+<br>
 
-Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte akkreditiver (sikringsniveauer).
+Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte identifikationsmidler (sikringsniveauer).
 
-Typisk skelnes der mellem, hvor stærke akkreditiver der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et akkreditiv (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
+Typisk skelnes der mellem, hvor stærke identifikationsmidler der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et identifikationsmiddel (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
 
-Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker (NemLog-in) og en autentifikationstjeneste indgår.
+Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker og en autentifikationstjeneste indgår.
 
 1. Brugeren tilgår (anmoder om adgang til) forretningstjenesten.
 2. Forretningstjenesten anmoder evt. brugeren om at vælge, hvilken broker eller autentifikationstjeneste brugeren ønsker at benytte (fx NemLog-in, WAYF, KOMBIT).
 3. Forretningstjenesten anmoder brokeren autentifikationstjenesten om en adgangsbillet (en token) til brug for login.
-4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine akkreditiver.
+4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine identifikationsmidler.
 5. Brugeren autentificerer sig over for autentifikationstjenesten.
 6. Autentifikationstjenesten/brokeren validerer brugerlogin.
 7. Autentifikationstjenesten/brokeren udsteder en signeret billet til tjenesten med brugerens identitet og eventuelle attributter.
@@ -1179,7 +1187,7 @@ Ovenstående dækker både processer, hvor brugeren tilgår tjenesten i en brows
 
 ### Billetudstedelse og adgangskontrol
 
-I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med Billetudstedelse og Adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som tjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.
+I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med nilletudstedelse og adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som forretningstjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.
 
 Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.
 
@@ -1188,116 +1196,25 @@ Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilk
 <img src="billede14.PNG" width="65%"/>
 <figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
 </figure>
+<br>
 
 1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
-2. Tjenesten beder derfor en Billetudstedelse (identitetsbroker) om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
-3. Autentifikationstjenesten verificerer brugerens akkreditiv gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
+2. Tjenesten beder derfor en broker om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
+3. Autentifikationstjenesten verificerer brugerens identifikationsmiddel gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
 4. Autentifikationstjenesten udsteder herefter en adgangsbillet til identitetsbrokeren med de attributter for identiteten, som tjenesten kræver inkl. angivelse af aktuelt sikringsniveau.
 5. En eller flere grunddatatjenester leverer de fornødne attributter knyttet til identiteten.
 6. En eller flere attributtjenester leverer attributter knyttet til identiteten.
-7. Brokeren beriger adgangsbilletten med attributter og udsteder denne til forretningstjenesten.
-8. Denne forretningstjeneste etablerer en session, som personen kan agere i med disse rettigheder og attributter.
-9. Forretningstjenesten håndhæver adgangspolitikken i personens anvendelse af forretningstjenesten.
+7. Brokeren danner en samlet adgangsbillet med attributter og udsteder (signerer) denne til forretningstjenesten.
+8. Forretningstjenesten etablerer en session, som brugeren kan agere i med disse rettigheder og attributter.
+9. Forretningstjenesten håndhæver adgangspolitikken i brugerens anvendelse af forretningstjenesten.
 10. Brugeren anvender forretningstjenesten.
 
 
 ### Kontrol og rapportering
 
-I eksemplet om Billetudstedelse og Adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.
+I eksemplet om billetudstedelse og adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.
 
-Sikkerhedsfunktionen hos udbydere af brugerstyringstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
-
-## Tekniske implementering af forretningsfunktioner
-
-### Implementering af administration af elektronisk identitet, Akkreditiver og Attributter
-
-Følgende figur illustrerer de løst koblede byggeblokke for administration i brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
-
-<figure>
-<img src="billede8.PNG" />
-<figcaption>Byggeblokke for administration i referencearkitekturen</figcaption>
-</figure>
-
-Byggeblokkene ”Registrering”, og ”Akkreditivtjeneste” er de tjenester, der registrerer identiteter, og de akkreditiver som anvendes til at validere identiteter. Attributter som beskriver identiteten, kan vedligeholdes af attributtjenester. Tabel 1 giver som overblik nogle eksempler.
-
-Tabel 2. Eksempler på identifikatorer, akkreditiver og attributter for entiteter
-
-<table>
-<tr>
-<th rowspan="2">Entitet</th>
-<th rowspan="2">Akkreditiv</th>
-<th colspan="3">Atrributter</th>
-</tr>
-<tr>
-<th>Baseret på tal</th>
-<th>Baseret på navne</th>
-<th>Baseret på klassifikationer</th>
-</tr>
-<tr>
-<td>Person</td>
-<td>Kodeord, nøglekort, nøglefil, fingeraftryk, irisscanning</td>
-<td>CPR-nr., administrativt CPR-nr.</td>
-<td>Brugernavn, vanlig-navn, køn, alder, UNI*Login</td>
-<td>Specialkonsulent, leder, administrator, kompetence, uddannelse, certificering.</td>
-</tr>
-<tr>
-<td>Organisation</td>
-<td>Nøglefil</td>
-<td>CVR-nr., EAN, SEnr.</td>
-<td>Vanlig-navn, logi, branchekode</td>
-<td>Leverandør, rådgiver, kontrollant, certificering</td>
-</tr>
-<tr>
-<td>Ting</td>
-<td>Nøglefil, token</td>
-<td>Serienummer, URL, Typenummer</td>
-<td>Funktion, RDF, OWL</td>
-<td>Sensortype, triggertype, certificering</td>
-</tr>
-<tr>
-<td>Tjenestekonsument</td>
-<td>Nøglefil (p.t. FOCES)</td>
-<td>P-nummer</td>
-<td>RDF, OWL, funktionsnavn</td>
-<td>FORM, opmærkning, funktionstype</td>
-</tr>
-</table>
-
-Implementering af disse byggeblokke målrettes det eller de sikringsniveauer, som informationssikkerhedspolitikken har fastlagt. Det udtrykkes fx af forskellen i processen for at opnå et NemID eller et virksomhedscertifikat i forhold til at opnå et brugernavn-kodeord til at tilgå sin virksomheds informationer. Grundet tradition logger de fleste medarbejdere på deres organisations lokale netværk blot med brugernavn-kodeord, men påtvinges så at skifte dette ofte, fx med tre måneders mellemrum.
-
-Jo stærkere garanti for akkreditiv og attributter, som et valgt sikringsniveau kræver, jo stærkere skal kontrolfunktionerne omkring registreringen være.
-
-Brugerstyringstjenesterne kan varetages af samme organisation, men kan i en tværgående føderation varetages af forskellige organisationer. Opdelingen kædes sammen med fællesoffentlige standardprotokoller for informationsudveksling. Da de forskellige standardsystemer, som anvendes af myndigheder og virksomheder, ikke nødvendigvis har de fælles protokolstandarder indbygget, kan dette løses af en broker, der foretager protokolkonvertering.
-
-En særlig opmærksomhed skal gives vedligeholdelse af identiteters attributter gennem hele deres livscyklus. Denne livscyklus indeholder ændringer i registreringspraksis, i valg af anvendte akkreditiver og i beskrivelse af attributter, herunder roller og terminering af alle rettigheder for en identitet ved fx jobskifte, dødsfald, konkurs, udskiftning, ændring eller nedlæggelse af tjeneste og lign.
-
-Det gentages her, at denne referencearkitektur anvender følgende termer i stedet for termen autorisation med henblik på at opnå den størst mulige præcision:
-
-- Administration af en identitets rettigheder gennem associering af attributter.
-- Udstedelse af adgangsbillet med identitet, roller, dataafgrænsninger og andre attributter betegnes med *billetudstedelse.*
-- Fastlæggelse af adgangspolitikker og adgangsrettigheder betegnes *adgangspolitik.*
-- Håndhævelse af adgangsrettigheder kaldes *adgangskontrol.*
-
-### Implementering af Registrering af elektronisk identitet
-Byggeblokken ”Registreringstjeneste” har til opgave at foretage en tilknytning mellem en entitet og en identitet og udføre dette efter National Standard for Identiteters Sikringsniveauer (NSIS). NSIS fastlægger tre veldefinerede sikringsniveauer, som en tjenestes adgangskontrol kan tage udgangspunkt i, når de præsenteres for en autentificeret identitet. En entitet kan knyttes til flere identiteter.
-
-En registreringstjeneste har ansvar for ikke blot at registrere identiteter første gang, men også for at vedligeholde en identitetsregistrering i hele dets livscyklus. Dette inkluderer nedlæggelse af identiteten, hvis identiteten ophører med at eksistere fx
-ved dødsfald eller konkurs.
-
-
-
-### Implementering af Anvendelse af brugerstyring?
-Følgende figur illustrerer de løst koblede byggeblokke for *anvendelse* af brugerstyring, der udgør de centrale byggeblokke i den samlede arkitektur:
-
-<figure>
-<img src="billede9.PNG" />
-<figcaption>Byggeblokke for referencearkitekturens brugerstyring i anvendelse</figcaption>
-</figure>
-
-
-## Understøttende applikationsservices
-[Mon ikke der er noget at hente i 'deling af data og dokumenter' fx dataservice... log... /madsh]
-
+Sikkerhedsfunktionen hos udbydere af tillidstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
 
 ## Områder for standardisering
 Referencearkitekturen peger på, hvilke områder der skal være standarder for, at referencearkitekturen fungerer.
@@ -1311,9 +1228,9 @@ I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret 
 
 Note til figur: Pilene angiver områder for standarder
 
-Der skal være **standarder for registrering af brugere, akkreditiver og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National Standard for Identiteters Sikringsniveau (NSIS), ISO29115, Kantara Identity Assurance Framework).
+Der skal være **standarder for registrering af brugere, identifikationsmidler og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS, National Standard for Identiteters Sikringsniveau (NSIS), ISO29115, Kantara Identity Assurance Framework).
 
-Der skal være **standarder for overførsel af data om autentificerede brugere** mellem autentifikationstjenester, login-tjenester/brokere og tjenester (her bruges i dag fx OIOSAML standarden mellem NemLog-in og tjenester).
+Der skal være **standarder for overførsel af data om autentificerede brugere** mellem autentifikationstjenester, login-tjenester/brokere og tjenester. Her bruges i dag fx OIOSAML standarden fællesoffentligt, mens flere domæner har defineret underprofiler med henblik på håndtering af lokale behov (det gælder på det kommunale område og på sundhedsområdet). På app-området er den dominerede standard OpenID Connect, men der er endnu ingen fællesoffentlig profilering heraf, hvilket skønnes nødvendigt, da den rene standard efterlader mange sikkerhedsvalg åbne.
 
 Der er behov for **standarder i forbindelse med rettigheder og attributter.** Det drejer sig dels om standarder til at kommunikere med attributtjenester (SAML, OpenID Connect), dels at kommunikere mellem attributtjenester og forretningstjenester (fx XACML). Et andet aspekt er standarder for at indhente brugernes samtykke, når dette indgår i adgangsbeslutninger – her er UMA og OAuth muligheder.
 
@@ -1323,18 +1240,9 @@ Der er behov for **standarder for kommunikation mellem føderationer.** Disse sk
 <img src="billede21.PNG" />
 <figcaption>Kommunikation mellem føderationer</figcaption>
 </figure>
+<br>
 
 
-------
-
-Figuren herunder viser interoperabilitet for brugerrettighedsstyring iht. referencemodellen for interoperabilitet, som den er beskrevet i hvidbogen for fællesoffentlig rammearkitektur.
-
-I takt med videreudvikling og konsolidering af området, kan denne figur opdateres og udstilles som en del dokumentationen af den fællesoffentlige rammearkitektur:
-
-<figure>
-<img src="billede22.PNG" />
-<figcaption>Interoperabilitet for brugerstyring</figcaption>
-</figure>
 
 
 ---------
@@ -1711,42 +1619,8 @@ Dette område er karakteriseret ved en stor diversitet i behov og muligheder –
 Den klassiske tilgang for sikring af systemkommunikation har været at sikre punkt-til-punkt forbindelser med X.509-certifikater, passwords, SSH-nøgler etc. afhængigt af den valgte kommunikationsprotokol. Det er eksempelvis muligt i den nuværende fællesoffentlige identitetsinfrastruktur at få udstedt OCES-funktionseller virksomhedscertifikater og benytte dem til system-til-system kommunikation ved at udveksle den offentlige nøgle med modparten. Dette giver en simpel og isoleret løsning for en konkret integration, men kan i større infrastrukturer hurtigt lede til et ustruktureret og uhåndterbart virvar af punkt-til-punkt sikringer, som ingen har overblik over, og som er usammenhængende og ufleksibelt i forhold til ændringer i infrastrukturen. Uden videre tiltag og en fælles arkitektur er der derfor stor risiko for fragmentering og mangel på sammenhæng og interoperabilitet.
 
 ## Standarder for identitetsbaserede webservices
-Der er fællesoffentligt specificeret en række standarder, omhandlende *identitetsbaserede webservices*. Disse standarder kan eksempelvis benyttes, når en tjenestekonsument skal anmode om et *security token* på vegne af en bruger, som herefter benyttes til at autorisere et kald til en webservice i et andet domæne. Et eksempel kan være, at en bruger logger ind på en webportal, som herefter har brug for at hente data om brugeren hos en anden tjenesteudbyder
 
 
->![](logo.png)
-
-Profilerne for identitetsbaserede webservices(https://digitaliser.dk/resource/526486) består af:
-- OIO WS-Trust Profile (profil til at anmode om Security Token).
-- OIO WS-Trust Deployment Profile (profil til at anmode om Security Token).
-- OIO Profile for Identity Tokens (profil for token udformning i webservice-kald).
-- OIO Bootstrap Token Profile (profil for veksling af Web SSO session til token ifm. systemkald).
-- Liberty Basic SOAP Binding (profil af WS-Security til sikring af SOAP-baserede webservice-kald med SAML Token).
-- OIO IDWS Rest Profile (profil til sikring af REST-baserede webservice-kald med SAML Token).
-
-For disse standarder gælder, at de BØR følges ved etablering af system-til-system kommunikation, hvor kaldet sikres med en adgangsbillet (et *security token*) i henhold til denne referencearkitekturs principper, frem for en punkt-til-punkt integration. Dette gælder for fællesoffentlige løsninger og løsninger, der kommunikerer mellem offentlige sektorer.
-
-
-Disse profiler er endvidere suppleret med open sourcereferenceimplementeringer i Java og .Net for at lette udbredelsen.
-
-Profilerne er i dag implementeret i NemLog-in gennem udstilling af en Security Token Service. Underprofiler af disse er endvidere specificeret inden for sundhedsdomænet samt den fælleskommunale rammearkitektur.
-
-Sundhedsområdet benytter samme arkitekturprincipper og har defineret egne SAML-baserede standarder, suppleret med egne STS’er deployet i domænet. Det overordnede princip i OIO IDWS-modellen er at anvende en fødereret og token-baseret model for systemer på samme måde som for personbrugere. En Security Token Service udfylder samme rolle for systemer som en SAML Identity Provider udfylder for personer (autentifikation og udstedelse af adgangsbillet). Endvidere kan man med identitetsbaserede webservices opnå, at et system (fx server eller rig klient) kan agere på vegne af en person, der er logget ind på systemet. Dette er fx relevant, når en bruger logger ind på en portal, som herefter har brug for at kontakte en tredje tjeneste for at tilgå brugerens data.
-
-I grunddataprogrammet har man valgt en fælles, tværgående sikkerhedsmodel, baseret på udstedelse af Security Tokens for de services, der muliggør opdatering af registre. Dette giver en struktureret model på tværs af programmet frem for et virvar af punkt-til-punkt integrationer, baseret på certifikater. Modellen er baseret på, at myndighederne registrerer deres opdateringsservices i NemLog-in med tilhørende roller, og at såkaldte systembrugerklienter kan blive tildelt rettigheder til disse services. Efter tildelingen kan en systembrugerklient anmode NemLogin’s STS om en adgangsbillet til en service, hvor rollerne så vil fremgå af adgangsbilletten.
-
->![](logo.png)
->Kommunikation til/fra webservices med følsomt indhold, der ønskes sikret med Security Tokens, BØR baseres på profilerne Liberty Basic SOAP Binding (dennes efterfølger OIO IDWS
-SOAP Binding) eller OIO IDWS Rest Profile ved ekstern kommunikation over internettet.
-
-På mobile enheder er der ofte behov for at kunne autorisere en app til at kunne agere på brugerens vegne. Der findes endnu ingen fællesoffentlige standarder på dette område, men der tegner sig alligevel en række mønstre og best practices, baseret på anvendelse af OAuth 2.0 samt OpenID Connect standarderne. Det grundlæggende princip i disse er, at brugeren via en mobil browser sendes til en autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må tilgå brugerens data og ressourcer. Herefter udstedes en adgangsbillet til app’en, som herefter kan anvendes til at autorisere kald til webservices - og såvel app'ens identitet som akkreditiv er adskilt fra brugerens. Her skal bemærkes, at brugerautentifikationen (indlejret i OAuth eller OpenID Connect) sagtens kan være baseret på SAML2.0, hvorfor den eksisterende infrastruktur kan genanvendes. Digitaliseringsstyrelsen har i 2011 udgivet en vejledning til OAuth 2.0 (https://digitaliser.dk/resource/1246357), der viser hvordan standarden kan anvendes. Det ventes endvidere, at der i videreudviklingen af NemLog-in vil blive etableret bedre understøttelse af mobile enheder via andre protokoller end SAML.
-
-Et eksempel på, hvordan et udbredt mønster for autorisering af en app med OpenID Connect kunne se ud i en fællesoffentlig kontekst, er illustreret nedenfor i Figur :
-
-<figure>
-<img src="billede23.PNG" />
-<figcaption>Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAMLbrugerautentikation</figcaption>
-</figure>
 
 Der er identificeret følgende emner til det videre arbejde med fællesoffentlig brugerstyring, hvor identiteten er en tjenestekonsument eller et fysisk apparat eller sensor:
 
@@ -1997,7 +1871,32 @@ W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
 
 
-[[CDT]] ljsadflkj alfk [[OIOSAML]]
+[[CDT]]
+[[CIDR]]
+[[OIOSAML]]
+[[Fælles sikkerhedsmodel]]
+[[Fuldmagt]]
+[[National standard]]
+[[Grunddata]]
+[[eIDAS]]
+[[Brugerstyringsløsninger]]
+[[Begrebsmodel]]
+[[Nye Sikkerhedsmodeller]]
+[[Kantara]]
+[[Adgangsstyring]]
+[[Introduktion til adgangsstyring]]
+[[Miljøportalen]]
+[[NSI]]
+[[NIST]]
+[[Arkitekturtegninger]]
+[[Trust framework]]
+[[Uni-login]]
+[[US Army]]
+[[WAYF]]
+[[Økonomistyrelsen]]
+[[RAS]]
+[[RA3D]]
+[[eIDAS tillidstjenester]]
 
 <pre class=biblio>
 {
@@ -2029,7 +1928,7 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
     "author": "eIDAS",
     "title": "European Commission, Electronic identification and trust services",
     "href": "http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond"},
-  "Brugerstyingsløsninger": {
+  "Brugerstyringsløsninger": {
     "author": "Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017",
     "title": "Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger "},
   "Begrebsmodel": {
@@ -2090,9 +1989,10 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
       "author": "Fællesoffentlig Digital Arkitektur",
       "title": "Referencearkitektur for deling af data og dokumenter",
       "href": "https://arkitektur.digst.dk/sites/default/files/20180503_rad_v1.0_-_godkendt_af_sda.pdf"},
-  "eIDAS": {
+  "eIDAS tillidstjenester": {
           "title": "Elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked",
           "href": "https://eur-lex.europa.eu/legal-content/da/TXT/?uri=CELEX:32014R0910"}
+
 
 
 
