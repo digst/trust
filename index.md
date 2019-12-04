@@ -975,12 +975,10 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 
 Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
 
------
-
 
 
 # Teknisk arkitektur
-I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, der er beskrevet i forrige kapitel. Dette går eksempelvis på støttefunktioner som discovery og billetomveksling, der er brug for i praksis.
+I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, der er beskrevet i forrige kapitel. Dette går eksempelvis på støttefunktioner som discovery og billetomveksling, samt håndtering af apps, softwarerobotter og identitetsbaserede services.
 
 De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2 og 3, peger entydigt frem mod en løst koblet, fødereret arkitektur, hvor forretningstjenester understøttes af (eksterne) tillidstjenester. Her vil de enkelte forretningstjenester/tjenesteudbydere håndhæve adgang baseret på oplysninger attesteret af tillidstjenester, og forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributbeskrivelse, autentifikation osv.
 
@@ -1132,10 +1130,13 @@ Det skal endvidere bemærkes, at brugerautentifikationen (indlejret i OAuth elle
 Et eksempel på, hvordan et udbredt mønster for autorisering af en app med OpenID Connect kunne se ud i en fællesoffentlig kontekst, er illustreret nedenfor i Figur :
 
 <figure>
-<img src="billede23.PNG" />
+<img src="oidc-tegning.png" />
 <figcaption>Eksempel på autorisering af en mobil app via OpenID Connect med en indlejret SAML-baseret brugerautentikation</figcaption>
 </figure>
 <br>
+
+Sekvensen i figuren er som følger:
+
 
 En af begrænsningerne ved ovenstående scenarie er, at en konkret app autoriseres mod et konkret API. Mønstret skalerer således ikke umiddelbart til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte at app'ens backend kan kalde videre via princippet om identitetsbaserede services.
 
