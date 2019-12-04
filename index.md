@@ -538,9 +538,10 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 
 <div class="new">
 <figure>
-<img src="kontekst.svg" />
-<figcaption>Oversigt over brugerstyringsdomænet [overveje at sætte 'vidergivelse af data på...']</figcaption>
+<img src="kontekst3.png" />
+<figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
+<br>
 </div>
 
 Det øverste lag i figuren omhandler governance i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx databeskyttelsesforordningen) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
@@ -549,7 +550,7 @@ På baggrund heraf udformes dels politikker for adgang til egne tjenester (adgan
 
 Til at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse elektroniske identifikationsmidler, som brugerne kan autentificere sig med, de omfatter beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndingelser osv.), og de omfatter endelig autentifikation af brugere. *Tillidstjenester* udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
-I den tekniske arkitektur beskrevet i kapitel (@todo) beskrives en række supplerende funktioner (fx billetudstedelse, brokering, discovery), som ikke optræder på forretningsniveau.
+I den tekniske arkitektur beskrevet i næste kapitel beskrives en række supplerende funktioner (fx billetudstedelse, brokering, discovery), som ikke optræder på forretningsniveau.
 
 En tjeneste og et it-system er i denne kontekst synonymer for det samme: et stykke it, der kan levere informationer og funktionaliteter. Et stykke it, der optræder som leverandør, kaldes en tjeneste eller tjeneste*udbyder*. Et stykke it, der optræder som den bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument. Det samme stykke it kan optræde både som leverandør (være en tjeneste) og i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
 
@@ -592,15 +593,6 @@ Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mell
 </figure>
 </div>
 
-I nedenstående figur er vist en shared use case med fokus på adgangskontrol:
-
-
-<div>
-<figure>
-<img src="use-case-simpel.svg" width="85%"/>
-<figcaption>Samarbejde ved adgangskontrol</figcaption>
-</figure>
-</div>
 
 
 Bemærk at termen *attributbeskrivelse* er en væsentlig generalisering, som i praksis kan dække over en række forskellige aktiviteter, herunder:
@@ -659,14 +651,16 @@ I praksis kombineres autentifikationsfunktionen ofte med attributbeskrivelse, s�
 
 
 
-### Foretningsfunktionen attributbeskrivelse
-Som tidligere nævnt bruges termen *attributbeskrivelse* i denne referencearkitektur som en generalisering over 'data om brugere', som i praksis kan dække over en række forskellige aktiviteter udført af forskellige aktører, herunder:
-- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv.
-- Tildeling (og udstilling) af roller og fuldmagter til brugere
+### Foretningsfunktionerne registrering og attestering af attributter
+Som tidligere nævnt bruges termen *attributter* i denne referencearkitektur som en generalisering over 'data om brugere', som i praksis kan dække over en lang række forskellige typer oplysninger. Funktionerne, som omhandler attributter, opdeles typisk i registrering og *attestering*. Termen attestering dækker over, at attributter ikke blot udstilles som almindelige data, men at en tillidstjeneste står på mål for dem, således at forretningstjenester kan fæstne lid til dem og anvende dem til beslutninger i deres adgangskontrol. På en engelsk benyttes betegnelsen 'verified claims'.
+
+Eksempler på opgaver inden for området kan være:
+- Administration af brugere i et brugerkatalog (fx et AD) med navn, titel, email, afdeling osv. underlagt governance og ledelse i en organisation.
+- Tildeling (og udstilling) af roller og fuldmagter til brugere.
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
-Der er således både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol.
+Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet mens de kommunikeres i en infrastruktur.
 
 Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydning om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
 I denne referencearkitektur benyttes attributbeskrivelse som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer.
@@ -686,6 +680,11 @@ For at sikre overenstemmelse mellem adgangspolitik og den efterfølgende adgangs
 </figure>
 
 Adgangspolitikker kan benytte roller som basis (Role Based Access Control – RBAC), eller man kan arbejdet direkte med attributter (Attribute Based Access Control - ABAC). I begge tilfælde vil en fælles forståelse kunne udtrykkes med en klassifikation, der systematisk beskriver roller eller andre attributsæt, evt. i form af et hierarki.
+
+### Foretningsfunktionen udforme tillidspolitik
+Udforming af tillidspolitikker handler om at gøre det eksplicit, hvilke tillidstjenester der vurderes som troværdige til forskellige anvendelser ud fra en risikovurdering. En forretningstjeneste kan fx beslutte, at den kun vil anvende autentifikationstjenester, som er NSIS anmeldte (som identitetsbrokere) på et givet sikringsniveau, mens en anden forretningstjeneste kan beslutte, at den stoler på autentifikationer fra en betsemt broker, der ikke er NSIS anmeldt - fx på baggrund af en aftale eller kontrakt med den pågældende broker. Et andet eksempel på en tillidspolitik kan være, hvorvidt en cloud-baseret tillidstjeneste anerkendes af en bestemt forretningstjeneste.
+
+Det er vigtigt, at til og fravalg af tillidstjenester sker ud fra en informeret stillingtagen og forretningsmæsssig vurdering af sikkerhed, tillid og andre former for garantier (SLA, lovkrav, revisionserklæringer).
 
 
 
@@ -941,7 +940,7 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 <img src="billede6.PNG" />
 <figcaption>Begrebsmodel for brugerstyring</figcaption>
 </figure>
-[Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
+<br>
 
 <table>
 <tr>
