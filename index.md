@@ -69,47 +69,7 @@ Siden første udgave af referencearkitekturen er De fællesoffentlige regler for
 
 <h2 class="no-num"> Resume (in english)</h2>
 <h2 class="no-num">Resume</h2>
-De senere års udvikling på brugerstyringsområdet i den offentlige sektor har entydigt peget i retning af føderationer baseret på tillid og fælles standarder. Der er således etableret en række føderationer i forskellige sektorer - dette gælder fx på det kommunale område (KOMBIT), på sundhedsområdet (SOSI), på miljøområdet (Miljøportalen), inden for undervisningsningssektoren (STIL) og fællesoffentligt (NemLog-in). Dette er samtidig i tråd med internationale tendenser herunder etablering af en EU-føderation med afsæt i eIDAS-forordningen.
-
-Føderationer giver en lang række fordele herunder sammenhæng for brugerne, mere effektiv administration og mulighed for arbejdsdeling, hvor specialiserede tjenester (infrastruktur) varetager komplekse opgaver med håndtering af identiteter og akkreditiver for forretningstjenester, hvilket letter byrder og samtidig øger sikkerheden.
-
-Der er til stadighed behov for, at sektorløsninger udvikles på baggrund af en fællesoffentlig referencearkitektur for brugerstyring, som udpeger fælles principper, mønstre, standarder, byggeblokke og andet. Herved kan der opnås sammenhæng, synergier og udbredelse af god praksis på tværs af hele økosystemet, og risikoen for uhensigtsmæssig sub-optimering og dublering af løsninger reduceres.
-
-
-Formålet med referencearkitekturen er således at skabe **rammer** for brugerstyring i den offentlige sektor - som danner grundlag for et sammenhængende økosystem med høj grad af tillid, genbrug og interoperabilitet.
-
-Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere i forhold til digitale tjenester, som overordnet kan opdeles i administrative funktioner og adgangskontrol. De administrative funktioner omfatter oprettelse, ændring og nedlæggelse af brugere i brugerstyringssystemer, udstedelse og tilknytning af akkreditiver til brugere og tilknytning af rettigheder til brugere.
-
-[Formuering om at der er ledelses ansvar at deltage i samarbejder om udformning af adgangs- og tillids-politkker og det følger af både GDPR og aftale om ISO 27001 anvendelse]
-
-
-Hovedaktiviteterne i **administration i brugerstyring** er følgende: [tilpasses]
-
-- **Registrering** af digitale identiteter og den løbende vedligeholdelse heraf.
-- **Udstedelse** af akkreditiver og tilknytning af disse til digitale identiteter. Akkreditiver anvendes til at autenficere en digital identitet over for en tjeneste, som der ønskes adgang til.
-- **Attributbeskrivelse** af karakteristika ved digitale identiteter, som en tjeneste kræver for at give adgang, og den løbende vedligeholdelse heraf. Det er fx rettighedsrelevante attributter i form af roller, fuldmagter, samtykker og/eller andre attributter, der udtrykker kvaliteter, som en tjeneste baserer sin adgangskontrol på.
-
-Hovedaktiviteterne i **anvendelse af brugerstyring** er følgende:
-- **Autentifikation** verificerer en identitet (tilknyttet en entitet) gennem anvendelse af et akkreditiv (identifikationsmiddel).
-- **Billetudstedelse** udsteder på grundlag af en autentifikation en signeret billet (eng. security token) med det sæt attributter, som tjenesten kræver for at give adgang. I denne proces kan der evt. ske en veldefineret omveksling af attributter eller berigelse med attributter fra forskellige kilder, således at tjenesten er i stand til direkte at anvende adgangsbilletten. Har brugeren ikke fået tildelt de nødvendige beskrivende attributter i det rette format, vil vedkommende ikke opnå adgang hos tjenesten.
-- **Adgangskontrol**  er håndhævelse af en tjenestes adgangspolitik i tjenesten (eng. policy enforcement). Det styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til på grundlag af den adgangsbillet, der er udstedt. Attributterne i adgangsbilletten er således input til adgangskontrollen.
-
-Referencearkitekturen for brugerstyring fastlægger en række principper, der leder frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, akkreditiver, attributbeskrivelser, autentifikation, billetudstedelse og adgangskontrol:
-
-Principper
-
-- **Samlet brugeradministration**
-- **(Inter-)Føderation**
-- **Harmoniserede tillidstjenester**
-
-Forretningsbehov og ovenstående principper peger entydigt frem mod en løst koblet, fødereret arkitektur, hvor de enkelte tjenester/tjenesteudbydere håndhæver adgang baseret på forudgående (ekstern) autentifikation og således ikke selv håndterer administration af brugere, anvendersystemer og rettigheder.
-
-Der er derfor valgt en token-baseret model for adgangsstyring. Denne indebærer, at brugere og systemer efter autentifikation får udstedt en signeret billet, et såkaldt *security token*, af en betroet komponent i infrastrukturen. Billetten præsenteres herefter over for den tjeneste, som leverer data eller funktionalitet, der ønskes adgang til. En billet indeholder attributter, som beskriver identitet, karakteristika  samt tildelte adgangsrettigheder. Den er desuden tidsstemlet og digitalt signeret af udstederen, så den ikke kan forfalskes eller manipuleres.
-
-Digitalisering forudsætter informationssikkerhed, og brugerstyring er et af midlerne til at håndtere risici knyttet til håndtering af digitale identiteter.
-
-I referencearkitekturen fastlægges en række standarder for håndtering af brugere, akkreditiver og attributter. Der er behov for standarder for overførsel af data om autentificerede brugere mellem autentifikationstjenester, login-tjenester/brokere og forretningstjenester. Der er behov for standarder i forbindelse med rettighedsrelevante attributter, og der er behov for standarder for kommunikation mellem føderationer. Dette behandles i afsnit 9.6.1.
-
+[Skrives midt januar]
 
 
 # Introduktion [phj]
@@ -133,6 +93,7 @@ Dette dokument har tre målgrupper:
 - [dem der laver tværgående arkitektur indenfor domæner]
 - Den anden målgruppe er projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring.
 
+[Tilføj for hver målgruppe hvad de særligt skal forholde sig til, så kan vi slette læsevejledning]
 
 ## Omfang og afgrænsning
 Referencearkitekturen for brugerstyring omfatter offentlige tjenester, men referencearkitekturen kan med fordel også anvendes til ikke offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
@@ -148,21 +109,15 @@ Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de s
 Med udspring i Digitaliseringpagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
-I referencearkitekturen anvendes nogle centrale begreber, som her beskrives for at lettelæsningen.
+Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomhed, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-<dfn>Forretningstjeneste</dfn> løser et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning.
+En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for omgivelserne". [ARCHI, check om EIRA rammer bedre] Hos offentlige myndigheder vil det typisk være en digital selvbetjening som anvendes af borgere eller virksomheders ansatte, men dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
 
-<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
+En udbyder udfører adgangskontrol som indgår i en forretningstjeneste. Det gør udbyderen for at sikre sig at brugeren er den som de udgiver sig for at være, og at vedkommende har lov til at anvende tjenesten. Adgangskontrol kan være reguleret af lovgivning fx hvis tjenesten giver adgang til personoplysninger eller andre følsomme oplysninger.
 
-<dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
-
-<dfn>Tillidstjeneste</dfn> udbydes særskilt, anvendes af bruger og forretningstjenesteudbyder i fælleskab... aftaler om tillidspolitikker
+En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i praksis. Det kan omhandle aftaler om, hvem af en virksomheds medarbejder der må anvendes en tjeneste hos myndighed. Eller det kan være mere generelle aftaler om hvilke elektroniske identifikationsmidler en udbyder vil acceptere.
 
 
-Referencearkitekturen beskriver styring af brugeres adgang til tjenester. Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
-I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
-
-[På et teknisk niveau har vi identitets baseret adgangskontrol, men loven peger nogle gange på entiteter...]
 
 <figure>
 <img src="centrale.svg" width="80%"/>
@@ -170,100 +125,53 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 </figure>
 
 
-<figure>
-<img src="Begrebsoverblik.png" width="80%"/>
-<figcaption>[Brugerstyringsbegreber, udvid med navngivne releationer.]</figcaption>
-</figure>
 
-[Overveje om vi bør gemme disse begreber til forretningsarkitektur for ikke at skræmme folk væk allerede :-)]
+<dfn>Forretningstjeneste</dfn> eksternt synligt funktionalitet, der giver mening for omgivelserne [ARCHI].
 
-<dfn>Entitet</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
+<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
 
-<dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces hvor identiteten udstedes - Identitetssikring.
-
-<dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn og password, NemID nøglekort, certifikater, fingeraftryk mv.
+<dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
 
 
-
-
-
-**Type af entiteter**
-
-[genskriv med princip om entiteter og identitets typer hænger sammen mht til adgangskontrol]
-
-[entiteterne får adgang, men det er identiteter der tilgå tjeneste]
-
-
-
-
-Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
+Det Europæiske Interoperabilitets Rammeværk, Den Fælles Offentlige Digitaliseringsstrategi og dens Fællesoffentlig Digital Arkitektur beskriver en model for 'intergrated service delivery' eller 'sammenhænge offentlige tjenester'. Grundideen er et opgør med isolerede digitale tjeneste hos den enkelte myndighed, og et skift til bedre og brede tjeneste hvor en bruger oplever en samlet service på tværs af mange offentlige myndigheder. [Måske bruge digital flytning som eksempel]
 
 <figure>
-<img src="Entitet.png" width="60%"/>
-<figcaption>[Entitetsformer]</figcaption>
+<img src="integrated_service_delivery.svg" width="65%"/>
+<figcaption>[Integrated Service Delivery]</figcaption>
 </figure>
 
-<dfn>Person</dfn> Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+En sådan vision stiller særlig krav til brugerstyring. Brugerstyring sker ikke alene når en bruger anvende den tværgående tjeneste, men vil gentages hos hver af den understøttende services.
 
-<dfn>Juridisk enhed</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+Den referencearkitektur beskriver hvordan tværgående tjenester kan understøttes af særlige tjenester med fokus på at etablere tillid og sikkerhed på tværs af tjenester i en form for fællesskab.
 
-<dfn>Ting</dfn> Fysiske ting med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+Føderationer er en forudsætning for referencearkitekturens adskillelse af brugerstyring i tillidstjenester og forretningstjenester, hvor tillidstjenesterne typisk er generelle og leveres af andre end dem der leverer forretningstjenesterne.
 
-<dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i en ting, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
-En automatiseringsrobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler efter at være logget ind på de nødvendige systemer, i brugerstyringssammenhæng ikke betragtes som en robot.
 
-**Relationer imellem identiteter**
+<dfn>Tillidstjeneste</dfn> udbydes særskilt, anvendes af bruger og forretningstjenesteudbyder i fælleskab... aftaler om tillidspolitikker
 
-Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
+<dfn>Føderationer</dfn>, sammenslutning tjenester med gensidig tillid.
 
-<figure>
-<img src="Entitet relation.png" width="60%"/>
-<figcaption>[Entitetsrelationer]</figcaption>
-</figure>
+De teknologisk løsninger til brugerstyring har udviklet sig langt hurtige end det danske sprog. En konsekvens er at der ofte er sket mangelfulde oversættelser eller det anvendte sprog kan oplevelse som indforsået. Intentionen i denne version af referencearkitekturen er at gøre området mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolikker og håndhævelsen af dem i forretningstjenester.
 
-**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
 
-**Tilhør** imellem person og juridisk enhed. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
-
-**Rettighed** der eksplicit gives fra en juridisk enhed til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
-
-**Bruger af** en ting. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at tingen arver rettigheder fra brugeren.
-
-**Produktansvar** som juridisk enhed har overfor de ting den producerer.
-
-**Delegering** af rettigheder fra en person eller juridisk enhed til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
-
-En applikation der **afvikles på** en enhed, kan få særlige rettigheder på grund af enheden den afvikles på. *< eksempel >*.
-
-Juridisk enhed der har **ansvar for** hvad en applikation gør.
-
-Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
-
-"kun elektroniske identiteter kan anvende elektroniske tjenester".
-
-Se Afsnit 4 og Bilag A: Ordliste
-
-###Brugerstyring i niveauer
-
-Brugerstyring forgår når der tilgås en tjeneste. Tjenesterne kan tilgås af traditionelle brugere eller fra anden tjeneste.
-
-<figure>
-<img src="Brug af tjeneste.png" width="50%"/>
-<figcaption>[Niveauer af tjenester]</figcaption>
-</figure>
-
-Den initiale bruger tilgår en tjeneste med sit bruger-id. Hvis tjenesten har brug for at kalde andre tjenester, kan det foregå enten med den oprindelige brugers bruger-id eller tjenesten kan have sit eget bruger-id for at tilgå underliggende tjenester. Rækken kan fortsættes i princippet uendeligt.
-
-###Føderationer###
-<dfn>Føderationer</dfn>, sammenslutning tjenester med gensidig tillid. Føderationer er en forudsætning for referencearkitekturens adskillelse af brugerstyring i tillidstjenester og forretningstjenester, hvor tillidstjenesterne typisk er generelle og leveres af andre end dem der leverer forretningstjenesterne.
-
-## Tilblivelse og styring
+## Tilblivelse, styring og andre referencearkitekturer
 
 2020-udgaven af Referencearkitektur for bruerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
 
 En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.
 
 2020-udgaven af referencearkitekturen godkendtes i version 2.0 i Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i Den fællesoffentlige digitale arkitektur (FDA).[Skal opdateres ved godkendelse]
+
+
+Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
+
+Den tidligere version af denne referencearkitektur blev udarbejdet på baggrund af "Referencearkitektur for Informationssikkerhed (på sundhedsområdet)" [[NSI]].
+
+Den anvender (refererer til) to fællesoffentlige referencearkitekturer "Referencearkitektur for deling af data og dokumenter" [[RA3D]] og "Referencearkitektur for selvbetjening" [[RAS]].
+
+En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?]
+
+[I bilag [XX] kan se liste over identificere offentlige it-løsninger der realisere nogle af de applikationsroller og -services der beskrives i dette dokument]
 
 ## Anvendt metode, notation og signaturforklaring
 
@@ -274,31 +182,16 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 -	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur eller i lovgivning.
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
-## Andre referencearkitekturer [madsh]
-
-Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
-
-Den tidligere version af denne referencearkitektur blev udarbejdet på baggrund af "Referencearkitektur for Informationssikkerhed (på sundhedsområdet)" [[NSI]].
-
-Den anvender (refererer til) to fællesoffentlige referencearkitekturer "Referencearkitektur for deling af data og dokumenter" [[RA3D]] og "Referencearkitektur for selvbetjening" [[RAS]].
-
-[indenfor og udenfor FDA, den på sundhedsområdet]
-
-## Læsevejledning
-
-Kapitel 1 og 2 bør læses af alle.
-
-Kapitel 3 om den forretningsmæssige del af arkitekturen bør læses af de der skal forstå arkitekturen.
-
-Kapitel 4 og 5 henvender sig særligt til løsningsarkitekter.
 
 
-# Strategi [madsh]
+# Strategi
 
 Referencearkitekturen udmønter og understøtter beslutninger i Den fællesoffentlige digitaliseringsstrategi 2016-2020. Strategien har tre, overordnede målsætninger:
 
 — Det digitale skal være let, hurtigt og sikre god kvalitet
+
 — Offentlig digitalisering skal give gode vilkår for vækst
+
 — Tryghed og tillid skal i centrum
 
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 8.1: Gode data og
@@ -309,43 +202,41 @@ effektiv datadeling er det konkrete ophæng for denne referencearkitektur.[TODO,
 
 [Vi bør kunne samle nedenstående i temaer... her et bud på overskrifts niveau]
 
-- Sammenhængende services
 
-- Offentligt-privat samarbejde
-
-- Infrastruktur på nationalt, fællesoffentlig og domæne niveau
-
-- Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse
-
- det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
-
-
-
-
-*Borgere som tjenesteanvendere*
-
-Borgere er forskellige og ligger forskelligt vægt på forskellige aspekter af tillidstjenester. Her er nogle aspekter.
-
-- Brugervenlighed
-  - Valg af idmidler efter personlige præferencer
-  - Mulighed for samme identifkationsmiddel på tværs af tjenester og sektorer
-- Rettigheder overholdes
-  - Privacy (dataminimering og gennemsigtighed)
-  - Adskille privat og erhvervs-identitet.
-  - Forvaltningsret (partsrepræsentation)
-
-
-
+### Sammenhængende tjenester
 
 En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
 
+- Mulighed for samme identifkationsmiddel på tværs af tjenester og sektorer
 
-*Virksomheder og myndigheder som tjenesteanvendere*
-
-- Brugervenlig.
 - Effektiv adgang til både interne og eksterne tjenester.
+
 - Effektiv håndtering af rettigheder.
+
+
+### Retten til privatliv
+
+det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervsssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.v [Se datatilsynets vejledning, udspring af GDPR]
+
 - Balancere virksomheds behov/pligt/ret for logning og medarbejders ret til ikke at blive overvåget
+
+En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
+
+En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
+
+
+### Effektivitet
+
+[Rigsrevisions formulering omkring forvaltningsrevision....sparsommelighed, effektivitet og produktivitet]
+
+Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse, Offentligt-privat samarbejde
+
+
+- Valg af idmidler efter personlige præferencer
+
+- fair konkurrence og mulighed for at tjene penge
+
+- Behov for forskellige løsninger...
 
 Nogle medarbejdere anvender deres akkreditiv mange gange i løbet af en arbejdsdag. For denne brugergruppe er det derfor væsentligt, at det er let og effektivt at anvende sit akkreditiv.
 
@@ -356,18 +247,6 @@ Større virksomheder har brug for forskellige løsninger, der både kan omfatte 
 De har desuden behov for kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen, hvad en medarbejder gør.
 
 
-*Virksomheder og myndigheder som tjenesteudbydere*
-
-- Brugervenlige (da det giver effektiv)
-- Regulative forpligtigelser
-  - Beskyttelse af (følsomme) person data.
-  - Partsrepræsentation
-- Balancere behov for kontinuitet og udvikling
-
-Det er et fælles behov for tjenesteudbyderne at kunne trække på modne tillidstjenester på en standardiseret måde, således at tjenesteudbyderne afskærmes fra kompleksiteten i at håndtere og administrere brugeridentiteter, identifikationsmidler mv. Når man bygger en forretningstjeneste, er det ofte komplekst og ressourcekrævende selv at håndtere brugerstyring, og der er ofte en god business case i at få det som en ekstern tjeneste.
-
-En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
-
 Forskellige sektorer har forskelligartede behov:
 
 - Myndigheder er omfattet af reglerne om partsrepræsentation i forvaltningsloven, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
@@ -376,113 +255,63 @@ Forskellige sektorer har forskelligartede behov:
 - En virksomhed som ”Den Blå Avis/DBA” har brug for at kunne garantere mod svindel, hvilket de aktuelt håndterer ved, at sælgerne og køberne kan blive NemID-valideret. DBA identificerer ikke personerne med CPR, men anvender i stedet certifikatets PID, hvilket kan anses som en privacy-mæssig fordel.
 - Regionerne har mange private aktører som medtjenesteudbydere.
 
-En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
-
-
-Tjenesteudbydere har behov for kontrol med, hvem der har logget ind og udført hvilke handlinger i tjenester.
+### Inter-føderation
+Infrastruktur på tværnationalt, nationalt, fællesoffentlig og domæne niveau
 
 Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.
 
-[temaer bør afspejle 3.5, måske hvsd betyder sikker, sammenhængende og effektivt for hver af de tre aktører plus tillidtjeneste udbyder]
 
-*Særlige behov for offentlige myndigheder?*
 
-[Rigsrevisions formulering omkring forvaltningsrevision....sparsommelighed, effektivitet og produktivitet]
-
-*Særlige behov for udbydere af tillidstjenester*
-
-[fair konkurrence og mulighed for at tjene penge?]
-
-## Principper [madsh]
-[Jeg vil foretrække principper spredt ud i det afsnit de hører mest til, og opsummeret i resume /madsh]
-
+## Principper
 
 Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
+### Samlet? brugeradministration
 
-- **Samlet brugeradministration**
-- **(Inter-)Føderation**
-- **Harmoniserede tillidstjenester**
+Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer... (se mere under afsnittet forretningsfunktioner).
 
+### Føderation
 
+Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitkker og adgangspolitikker. (Se mere under afsnittet om forretningsmønstre)
 
+### Harmoniserede tillidstjenester
 
-<dfn>Samlet? brugeradministration</dfn> Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer...
-
-Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
-
-*Rationale*
-
-- Det giver mindre overlap, sub-optimering og dublering af løsninger, hvilket sparer penge ved udvikling og drift af applikationerne og resulterer i mere effektive løsninger.
-- Brugeradministrationen effektiviseres, idet brugerne ikke skal vedligeholdes mange forskellige steder.
-- Muliggør adgangsstyring på tværs af løsninger i de forskellige domæner.
-- Sikkerheden øges, idet erfaringen er, at brugere der forlader en organisation, sjældent får ændret status rettidigt og derfor bliver til en sårbarhed for den organisation, vedkommende forlader. Et arbejdsophør kan automatisk udløse, at identiteten bliver suspenderet eller spærret, og at alle rettigheder bliver blokeret for denne identitet.
-
-*Implikationer*
-
-- Brugernes identiteter, akkreditiver og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
-- Der skal etableres fællesoffentlige føderationer baseret på valg af fælles politikker, regler og obligatoriske standarder inden for et område, hvor dette giver gevinster.
-- [rettigheder og adgangspolitikker fra tjenesteudbydere skal være synlige for brugerorganisationer]
-
-
-
-<dfn>Føderation</dfn> Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitkker og adgangspolitikker.
-
-Aktørerne bør overholde en række fælles standarder for identiteter, fælles sikkerhedspolitikker og aftaler, og tilbyde servicekald på tværs af føderationernes grænser, således at aktører i forskellige organisationer kan indgå i føderationer. I denne sammenhæng omfatter aktører både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester. Aktører kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere, såfremt de ansvarlige for føderationen vælger dette.
-I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, og som bygger på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
-
-*Rationale*
-
-- Gennem etablering af føderationer vil man over en årrække kunne fjerne nogle stærke sikkerheds- og teknologiske barrierer for udnyttelse af digitalisering.
-- Den fødererede model muliggør, at brugeradministrationen (oprettelse og nedlæggelse af brugere samt tildeling af attributter) udføres lokalt i organisationens egen brugerstyringsløsning (fx Active Directory eller anden Identity Management-løsning). Herved kan organisationer af en vis størrelse og modenhed vælge en løsning, så de undgår dobbelt vedligehold af de samme brugere, og administrationen sker tættest på brugerne med størst viden om deres jobfunktioner og med størst sikkerhed for korrekthed og hurtig respons på ændringer.
-- En fødereret model gør det muligt for private aktører at indgå i eller i samspil med offentlige føderationer, såfremt dette vælges af føderationen.
-- Der er klare regler for den enkelte aktørs ansvar for sikkerheden, og tilsynet hermed varetages af overliggende myndigheder og revision (fx Rigsrevisionen).
-- Der er behov for præcisering af, hvilket ansvar for den enkelte aktør der følger af, at denne aktør er afhængig af og påvirker sikkerheden hos andre aktører.
-- Der er behov for vurdering af samspillet mellem aktørerne i føderationer, fx for hvordan sikkerhedsrisici og -hændelser skal formidles til andre aktører i føderationer.
-
-*Implikationer*
-
-- En føderation definerer klart og entydigt såvel rammer som indhold af de former for elektroniske identiteter, autentifikationer og adgangskontroller, som en gensidig tillid baseres herpå. Det gælder både teknisk og organisatorisk.
-- For føderationen defineres en styringsmodel (governance) for, hvorledes føderationens rammer og indhold vedligeholdes, og for kvalitetskrav til og ansvarsforpligtigelser hos de organisationers brugerstyringsadministration, som indgår i føderationen.
-- Der udarbejdes et trust framework med evt. akkreditering og certificering baseret på en risikovurdering.
-- Der udøves kontrol og defineres sanktionsmuligheder.
-- De risici, der beror på arbejdsdeling mellem aktørerne, skal håndteres ved, at hver enkelt aktør skal vurdere samspillet med andre aktører i sin sikkerhedsmæssige risikovurdering i henhold til fx ISO/IEC 27001.
-- Aktører i føderationer skal i relevant omfang informere andre aktører i føderationen om risikovurderinger og sikkerhedshændelser.
-
-<dfn>Harmoniserede tillidstjenester</dfn> Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurrencebaseret marked.
-
-Tværoffentlig brugerstyring indgår i et samspil med det internationale på flere måder. Flertallet af tekniske løsninger er udviklet i udlandet, og arkitekturer og standarder er udviklet i internationale samarbejder. Dansk brugerstyring på tværs skal så vidt muligt lægge sig tæt op ad den internationale udvikling, dog med en konkret vurdering af, hvorvidt denne udvikling passer i en dansk sammenhæng
-
-*Rationale*
-
-- Anvendelse af standarder og løsninger med internationalt scope betyder bedre og billigere løsninger, der kan indgå i sammenhæng.
-- Lokale brugerstyringsløsninger anvender generelt internationale produkter, der efterlever internationale standarder, og internationalt baserede løsninger og standarder vil derfor lette samspillet mellem det lokale og det tværgående.
-- Fælles åbne standarder sikrer interoperabilitet.
-- Der er generelt bedre adgang til leverandører og kompetencer på markedet, når løsningerne baserer sig på anerkendte og udbredte standarder.
-- Ved at basere sig på standarder, som andre også anvender, øges ’beredskabet’ omkring eventuelle problemer der skulle opstå med standarderne, f.eks. hvis der bliver fundet sikkerhedshuller.
-
-*Implikationer*
-
-- Det skal altid undersøges, hvilke internationale standarder det er muligt at anvende, evt. med dansk profilering.
-- Danske profileringer bør begrænses til at dække forhold i økosystemet, som er specifikt danske, og som ikke kan ændres til at følge internationale standarder (fx CPR-data).
-
+Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurrencebaseret marked. (Se mere under afsnittet områder for standardisering)
 
 ## Vision
 
-Tjenester kan implementeres og anvendes effektiv ved anvendelse af tillidstjenester (i sund konkurrence).??
+Digitaliserseringsstyrelsen udgav i april 2017 [kan vi finde aftalekredsen frem /madsh] "Fællesoffentlig strategi for brugerstyring". Her fastlægges en vision med tre elementer.
+
+1. Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger.
+
+2. Løsningerne bindes sammen på tværs af domæner.
+
+3. Brugerstyring sker på en måde som fremmer sikkerhed, tillid, privatlivsbeskyttelse, valgmuligheder, innovation, og som øger anvendelsen af tjenester.
+
+Denne version af referencearkitektur for brugerstyring ligger i forlængelse af denne vision.
+
+[Beskriv hvordan hvert enkelt element er understøttet af temaer og strategiske principper fra dette dokument]
+
 
 ## Værdiskabelse
 
 ## Juridiske rammer
 
-I maj 2018 trådte EU’s forordning om persondatabeskyttelse (GDPR) i kraft. Denne stiller en række krav til persondatabeskyttelse, og en del af disse krav er dækket, hvis man følger ovenstående basale principper fra OECD. Dog er der konkrete krav i GDPR, som skal indtænkes i løsninger, herunder:
+De mest relevante love og forordninger (med særligt fokus på brugerstyring og adgangskontrol) er:
 
-Privacy Impact Assessments
-Privacy-by-design og privacy-by-default
-Retten til at blive glemt
-Retten til dataportabilitet
-Retten til indsigt i egne data
-Selvom privatlivsbeskyttelse omfatter andet end informationssikkerhed, kan man med fordel indbygge sit privacy-program i eksisterende ISMS, da mange kontroller er sammenfaldende.
+— EU-forordningen eIDAS (electronic IDentification, Authentication and trust Services) definerer registrerede tillidstjenester. En af disse tillidstjenester er elektroniske identifikationsmidler som beskrives i denne referenearkitektur.
+
+— EU’s NIS-direktiv (direktiv 2016/1148/EU af 6. juli 2016)
+
+— Lov om NemID?
+
+Og mere generelt..
+
+— EU-databeskyttelsesforordningen (GDPR) beskriver pligter og rettigheder ved behandling af persondata.
+
+— Databeskyttelseslov ...
+
+— Forvaltningsloven indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 
 ## Sikkerhed
 
@@ -496,12 +325,11 @@ Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Infor
 
 Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester, som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge
 
-retningslinjer
-forretningsgange og instrukser
-sikkerhedsforanstaltninger,
-som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
+- retningslinjer
+- forretningsgange og instrukser
+- sikkerhedsforanstaltninger, som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
 
-Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiter, rettigheder og akkreditiver. National Standard for Identiteters Sikringsniveauer (NSIS) er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trinsskala:� Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester, som aftager identiteter.
+Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiter, rettigheder og akkreditiver. National Standard for Identiteters Sikringsniveauer (NSIS) er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trinsskala: Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester, som aftager identiteter.
 
 Den kommende fællesoffentlige infrastruktur for identiteter i form af MitID og NemLog-in3 bygges på NSIS, og overholdelse af NSIS standarden vil være en forudsætning for at tilslutte en forretningstjeneste, broker eller lokal IdP til NemLog-in3.
 
