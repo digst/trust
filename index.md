@@ -318,13 +318,9 @@ Dertil kan der være særregulering inden for visse domæner som fx sundhedsomr�
 Som eksempler på hvordan ovvennævnte regulering påvirker brugerstyring kan nævnes:
 - Databestyttelsesforordningen stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering. En af det helt centrale sikkerhedsforanstaltninger i forretningstjenester, som udstiller personoplysninger, er adgangskontrol og udforming af adgangspolitikker. Dermed kan efterlevelse af denne referencearkitektur understøtte compliancearbejdet. Bemærk at der findes en lang række øvrige krav i GDPR, som håndteres med andre tilgange end brugerstyring.
 - eIDAS-forordningen stiller krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt (forudsat det er på et tilstrækkeligt sikringsniveau). Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med 27 andre landes nationale identifikationsordninger. Denne referencearkitektur beskriver principperne for, hvordan brugerstyring kan håndteres i stor skala.
+- Forvaltningsloven stiller krav om, at borgere, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed som udstiller fuldt digitale interaktioner er nødt til at kunne håndtere digitale fuldmagter.
 
 ## Sikkerhed
-
-[Er det måske mere beslutning der er truffet strategisk, at vi er forpligtiget til at anvende ISO 27001? Og at vi har NSIS /madsh]
-
-[Skal vi prøve at pege på de relevante ISO kontroller]
-
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. ISO 27001 er valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og kommunerne er forpligtet til at følge principperne.
 
 Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har udarbejdet vejledninger, værktøjer og skabeloner hertil, som er placeret her: http://www.digst.dk/Informationssikkerhed.
@@ -335,22 +331,20 @@ Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationss
 - forretningsgange og instrukser
 - sikkerhedsforanstaltninger, som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
 
-Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og akkreditiver. National Standard for Identiteters Sikringsniveauer (NSIS) er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trinsskala: Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester, som aftager identiteter.
+ISO/IEC 27001 standarden er opdelt i 14 domæner, hvor brugerstyring særligt er relevant for domænet 'Access Control' og for management delen en del af domænet 'Information Security Policies'.
 
-Den kommende fællesoffentlige infrastruktur for identiteter i form af MitID og NemLog-in3 bygges på NSIS, og overholdelse af NSIS standarden vil være en forudsætning for at tilslutte en forretningstjeneste, broker eller lokal IdP til NemLog-in3.
+### Risici vedr. brugere
+Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trinsskala: Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester, som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og er en dansk pendant til eIDAS forordningen retsakt om sikringsniveauer.
 
-I en tværoffentlig brugerstyring er det endvidere nødvendigt at koordinere risikovurderinger og valg af niveau for og håndtering af informationssikkerheden. Dette kan ske ved at benytte et fælles trust framework som NSIS. For at alle parter kan have tillid til hinanden, ekspliciterer, harmoniserer og standardiserer et trust framework forskellige aspekter af sikkerhed, herunder politikker, sikkerhedsmæssige tiltag og fælles sprog. Harmonisering og standardisering er teoretisk set ikke en nødvendighed, men konsekvensen ved ikke at harmonisere og standardisere er, at kompleksiteten af kommunikationen mellem sikkerhedsdomæner bliver meget høj. Der skal indgås individuelle aftaler mellem parterne, og disse skal kende til hinandens politikker og arbejdsgange m.m. Et trust framework er med til at reducere denne kompleksitet.
+NSIS giver mulighed for:
 
-NSIS og trust frameworks generelt giver mulighed for:
+- Sammenhængende løsninger på tværs af domæner og føderationer via gensidig tillid (sammenkobling af siloer).
+- En fælles forståelse samt koordinering/styring af sikringsniveauer.
+- Transparens gennem tydelig beskrivelse af krav til parterne og regler for deres adfærd.
+- En flerleverandørstrategi baseret på outsourcing af funktioner med mulighed for private aktører - hvor det er ønskeligt og økonomisk fordelagtigt.
+- Veldefineret kontrol og styring gennem anmeldelse, revision og tilsyn.
 
-Sammenhængende løsninger på tværs af domæner og føderationer via gensidig tillid (sammenkobling af siloer).
-En fælles forståelse samt koordinering/styring af sikringsniveauer.
-Transparens gennem tydelig beskrivelse af krav til parterne og regler for deres adfærd.
-En flerleverandørstrategi baseret på outsourcing af funktioner med mulighed for private aktører - hvor det er ønskeligt og økonomisk fordelagtigt.
-Veldefineret kontrol og styring gennem anmeldelse, revision og tilsyn.
-National Standard for Identiteters Sikringsniveauer (NSIS), der har afsæt i eIDAS-forordningen, er et dansk trust framework for identitetssikring. NSIS fastlægger som tidligere nævnt tre sikringsniveauer (”Lav”, ”Betydeligt” og ”Høj”), som modsvarer de tilsvarende niveauer i eIDAS. Niveauerne dækker hele livscyklussen for elektroniske identiteter fra registrering til arkivering/nedlæggelse.
-
-Når en bruger autentificerer sig mod en forretningstjeneste, vil brugerens security token (billet) indeholde information om det aktuelle sikringsniveau for autentifikationen. Forretningstjenesten kan på baggrund af dette (samt øvrige attributter om brugeren) beslutte, hvilken adgang brugeren kan få i tjenesten. Sikringsniveauet er dermed et input til adgangskontrollen i tjenesten.
+Når en bruger autentificerer sig mod en forretningstjeneste, vil det aktuelle sikringsniveau for autentifikationen typisk blive fastlagt og kommunikeret til forretningstjenesten. Forretningstjenesten kan så på baggrund af sikringsniveauet (samt øvrige attributter om brugeren) beslutte, hvilken adgang brugeren kan få i tjenesten. Sikringsniveauet er dermed et input til adgangskontrollen.
 
 
 ## Fællesoffentlige arkitekturprincipper og -regler
