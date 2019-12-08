@@ -102,18 +102,21 @@ Arkitekturen omfatter også rollen som leverandør af tillidstjenester - registr
 
 Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
 
-Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme. Etablering af en føderation sker gennem fastlæggelse af et aftalesæt mellem føderationens deltagere.
+Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
 Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
 Med udspring i Digitaliseringspagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
-Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomhed, og anvendes af borgere eller andre virksomheder og deres ansatte.
+Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for omgivelserne". [ARCHI, check om EIRA rammer bedre] Hos offentlige myndigheder vil det typisk være en digital selvbetjening som anvendes af borgere eller virksomheders ansatte, men dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
+De teknologiske løsninger til brugerstyring har udviklet sig langt hurtige end det danske sprog. En konsekvens er at der ofte er sket mangelfulde oversættelser eller det anvendte sprog kan oplevelse som indforstået. Intentionen i denne version af referencearkitekturen er at gøre området mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
 
-En udbyder udfører adgangskontrol som indgår i en forretningstjeneste. Det gør udbyderen for at sikre sig at brugeren er den som de udgiver sig for at være, og at vedkommende har lov til at anvende tjenesten. Adgangskontrol kan være reguleret af lovgivning fx hvis tjenesten giver adgang til personoplysninger eller andre følsomme oplysninger.
+
+En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for omgivelserne". [ARCHI, check om EIRA rammer bedre] Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
+
+En udbyder udfører adgangskontrol, som indgår i en forretningstjeneste. Det gør udbyderen for at sikre sig, at brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.
 
 En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i praksis. Det kan omhandle aftaler om, hvem af en virksomheds medarbejder der må anvendes en tjeneste hos myndighed. Eller det kan være mere generelle aftaler om hvilke elektroniske identifikationsmidler en udbyder vil acceptere.
 
@@ -150,8 +153,6 @@ Føderationer er en forudsætning for referencearkitekturens adskillelse af brug
 <dfn>Tillidstjeneste</dfn> udbydes særskilt, anvendes af bruger og forretningstjenesteudbyder i fælleskab... aftaler om tillidspolitikker
 
 <dfn>Føderationer</dfn>, sammenslutning tjenester med gensidig tillid.
-
-De teknologiske løsninger til brugerstyring har udviklet sig langt hurtige end det danske sprog. En konsekvens er at der ofte er sket mangelfulde oversættelser eller det anvendte sprog kan oplevelse som indforstået. Intentionen i denne version af referencearkitekturen er at gøre området mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
 
 
 ## Tilblivelse, styring og andre referencearkitekturer
