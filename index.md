@@ -948,6 +948,7 @@ Brugerstyring foregår i en kontekst, og for referencearkitekturen er der dele a
 <img src="Picture7.png" />
 <figcaption>Konteksten for begrebsmodellen for brugerstyring</figcaption>
 </figure>
+<br>
 
 For denne kontekst beskrives relationerne til begrebsmodellen for brugerstyring.
 
@@ -1002,7 +1003,17 @@ En forretningstjeneste kan få adgang til attesterede oplysninger om en bruger f
 
 De to tilgange kan sagtens kombineres.
 
-[tegning skal laves]
+<figure>
+<img src="attestation-pull.svg" />
+<figcaption>Attestation via pull</figcaption>
+</figure>
+<br>
+
+<figure>
+<img src="attestation-push.svg" />
+<figcaption>Attestation via push</figcaption>
+</figure>
+<br>
 
 Fordelen ved at at få de attesterede oplysninger om brugeren leveret i et token er, at forretningstjenesten får en løsere kobling til tillidstjenesterne, idet forretningstjenesten typisk ikke skal bekymre sig om, hvilke tillidstjenester der er relevante for den aktuelle bruger, hvor de findes, hvordan der integreres med dem osv. Brokeren vil ofte påtage sig opgaven med at sikre afkobling for forretningstjenester og orkestrere tillidstjenesterne i et domæne (eller mod andre domæner) gennem opslag og omvekslinger af tokens. Omvendt kan det i nogen sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation, hvorfor et naturligt behov for dynamiske opslag kan opstå. Det kan også hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i et token, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i GDPR, hvor kun absolut nødvendige oplysninger behandles.
 
