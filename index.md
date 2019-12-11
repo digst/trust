@@ -1034,9 +1034,17 @@ I grunddataprogrammet har man valgt en fælles, tværgående sikkerhedsmodel, ba
 ### Identitetsbaseret kald via billetomveksling
 I dette afsnit præsenteres et simpelt eksempel på, hvordan et identitetsbaseret kald kan realiseres med OIO IDWS specifikationerne og deres implementering i NemLog-in.
 
-Eksemplet tager udgangspunkt i, at brugeren logger på en web-portal via SAML IdP, der agerer autentifikationstjeneste. Når brugeren autentificerer sig overfor IdP udstedet en adgangsbillet til portalen, som endvidere har indlejret et såkaldt 'bootstrap token'. Dette bootstrap token kan portalen omveksle hos en Security Token Service til et nyt token, der kan anvendes i kaldet til den næste forretningstjeneste.
+Eksemplet tager udgangspunkt i, at brugeren logger på en web-portal (tjeneste A) via SAML IdP, der agerer autentifikationstjeneste. Når brugeren autentificerer sig overfor IdP'en udstedet en adgangsbillet (T) til portalen, som endvidere har indlejret et såkaldt 'bootstrap token' (neævnt b på figuren nedenfor). Dette bootstrap token kan portalen omveksle hos en Security Token Service til et nyt token (T'), der kan anvendes i kaldet til den næste forretningstjeneste.
 
 Scenariet er illustreret på nedenstående figur:
+
+<figure>
+<img src="idws-scenarie.svg" />
+<figcaption>Identitetsbaseret kald via tokenveksling</figcaption>
+</figure>
+<br>
+
+Scenariet forudsætter, at begge forretningstjenester har tillid til samme IdP/STS - men ellers kan det udvides med yderligere omvekslinger af tokens udført af brokere. Desuden skal STS'en på forhånd kende den forretningstjeneste (B), som den udsteder et token til, herunder have defineret en politik for, hvilke omvekslinger, der tillades. I den forstand varetager STS'en en del af forretningstjeneste B's adgangspolitik.
 
 
 ## Adgangskontrol
@@ -1126,8 +1134,45 @@ Et eksempel på, hvordan et udbredt mønster for autorisering af en app med Open
 
 Sekvensen i figuren er som følger:
 
+1.	Brugeren installerer og åbner App'en.
+2.	App'en starter log-in flowet ved at åbne en browser på den mobile enhed og medsende et OpenID Connect Authentication Request. Dette specificerer via nogle parametre (i form af scopes), hvilke data, der ønskes adgang til.
+3.	Browseren sendes med HTTP redirect (302) til OpenID Connect Authorization Service endepunktet og overleverer herved Authentication Request fra App'en.
+4.	Authorization Servicen indhenter Brugerens accept til at App'en kan tilgå de data (scopes), der er angivet i OpenID requestet. Herefter detekterer Authorization Servicen, at der tale om en ny browser (ingen session) og danner derfor et SAML Authentication Request mod en ekstern SAML IdP (sendes også via HTTP Redirect).
+5.	Brugeren autentificerer sig mod IdP'en.
+6.	IdP'en danner et SAML Response indeholdende brugerens attributter og sender browseren tilbage til Authorization Service endepunktet (HTTP POST).
+7.	Authorization Servicen verificerer den modtagne SAML Assertion fra IdP'en og persisterer brugerinformation. Herefter sendes med et browser redirect et OpenID Connect svar til klientens angivne modtageradresse (redirect_uri) indeholdende bl.a. en autorisationskode.
+8.	App'en kalder Token Servicen og veksler her den modtagne autorisationskode til et OpenID Connect ID token samt access-token.
+9.	App'en validerer det modtagne ID token og kan herefter udtrække basale brugerattributter fra dette. Access tokenet kan nu benyttes til at kalde back-end API'er og få adgang til brugerens data i overensstemmelse med de scopes, som brugerne har autoriseret.
 
-En af begrænsningerne ved ovenstående scenarie er, at en konkret app autoriseres mod et konkret API, og at udstedelsen af tokenet typisk ikke sker af en fælles tillidstjenester men af en 'Authorization Server', der er lokal for API'et. Mønstret skalerer således ikke umiddelbart til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte at app'ens backend kan kalde videre via princippet om identitetsbaserede services.
+
+En af begrænsningerne ved ovenstående scenarie er, at en konkret app autoriseres mod et konkret API, og at udstedelsen af tokenet typisk ikke sker af en fælles tillidstjeneste men af en 'Authorization Server', der er lokal for API'et. Mønstret skalerer således ikke umiddelbart til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte at app'ens backend kan kalde videre til andre API'er via princippet om identitetsbaserede services. Der foregår international standardisering på dette område i regi af IETF ('OAuth 2.0 Token Exchange' https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-19), men standarden forligger endnu kun som 'draft' og vil endvidere kræve væsentlig profilering (a la OIO IDWS), før den er anvendelig og interoperabel i fællesoffentligt regi.
+
+
+## Digitale fuldmagter
+En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
+
+Hovedfunktionerne i en digital fuldmagtsløsning er:
+
+- Funktionalitet til digital afgivelse af fuldmagt gennem et selvbetjeningsforløb (inkl. udpegning af modtager, indhold af fuldmagt, gyldighedsperiode og signering af fuldmagt).
+- Funktionalitet til at få overblik over afgivne og modtagne fuldmagter.
+- Funktionalitet til at tilbagekalde en fuldmagt.
+- Funktionalitet for en tjeneste til at definere de ”fuldmagtspakker”, som beskriver indholdet af de fuldmagter, der kan afgives til tjenesten (fx roller til tjenesten).
+- Funktionalitet til, at en betroet medarbejder kan indtaste en fuldmagt på vegne af en (it-svag) borger – fx på baggrund af en underskrevet papirblanket.
+- Integration med identitetsbrokere, så fuldmagter kan indlejres i udstedte adgangsbilletter til tjenester.
+- API’er for tjenester til at batch-hente fuldmagter.
+
+Som for øvrige områder af brugerstyring er det uhensigtsmæssigt, hvis den enkelte forretningstjeneste etablerer sin egen fuldmagtsløsning. Dette ville medføre, at brugerne taber overblikket over afgivne eller modtagne fuldmagter, og at muligheden for at danne tværgående fuldmagter reduceres. Der er derfor etableret en fællesoffentlig fuldmagtsløsning i regi af NemLog-in, kaldet ’Digital Fuldmagt’. Løsningen findes i to forskellige varianter, der er målrettet til forskellige brugssituationer:
+
+- En løsning til Erhvervsfuldmagt i NemLog-in/Brugeradministration (FBRS).
+- En løsning til Borgerfuldmagt (selvstændig brugergrænseflade).
+
+For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at det i adgangsbilletten tilhørende identiteten for repræsentanten markeres, at der er delegeret en rettighed (privilegie) fra fuldmagtsgiver. Digitale fuldmagter udmøntes med andre ord som en delegering af rettigheder til en tjeneste, udtrykt som attributter i en adgangsbillet – og dermed benytter de grundlæggende byggeblokke, der allerede findes i arkitekturen. Herved er det væsentligt lettere for tjenester at tage fuldmagtsfunktionaliteten i brug, idet eksisterende grænseflader og integrationer med NemLog-in genanvendes. Konkret består disse i OIOSAML profilen, og delegeringen udtrykkes via OIO Basic Privilege Profile.
+
+I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
+
+Endelig kan det nævnes, at den nuværende fuldmagtsløsning i regi af NemLog-in hidtil har været frivillig at anvende for offentlige tjenester. Denne referencearkitektur skærper dette til et ”bør”.
+
+Dette sikrer genbrug, strømlining af infrastrukturen og ensartet brugeroplevelse og giver borgere og virksomheder mulighed for at få en central indgang til alle deres fuldmagter på tværs af tjenester. Dette vil formentlig indebære, at NemLog-in’s fuldmagtsløsning videreudvikles funktionelt, så behov i langt de fleste sektorer og løsninger kan understøttes.
 
 
 ## Forretningsprocesser
@@ -1196,67 +1241,8 @@ Processen for registrering af en elektronisk identitet foregår forenklet set ge
 
 En attribut kan være niveauet af registreringskvalitet (IAL) og identifikationsmidlets styrke (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
 
-### Autentifikation
-
-Når en bruger anmoder om adgang til en tjeneste, der kræver et eller flere attributsæt for at give adgang, aktiveres de ovenfor beskrevne tjenester i en proces, der typisk forløber, som illustreret i følgende figur:
 
 
-<figure>
-<img src="billede13.PNG" width="65%"/>
-<figcaption>Autentifikation</figcaption>
-</figure>
-<br>
-
-Processer i forbindelse med autentifikation kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og de udstedte identifikationsmidler (sikringsniveauer).
-
-Typisk skelnes der mellem, hvor stærke identifikationsmidler der anvendes, styrken af autentifikationsprotokollen samt hvilke kontroller der er tilknyttet selve autentifikationsprocessen. Login med et identifikationsmiddel (1-faktor login) er fx på lavere sikringsniveau end 2-faktor login. Login via en protokol, som er robust over for fx replay-angreb, er stærkere end login via protokoller, som ikke kan sikre mod denne type angreb.
-
-Autentifikationen kan som beskrevet ske ved, at tjenesten henvender sig direkte til autentifikationstjenesten, men der kan også indgå flere aktører i processen, som når både en broker og en autentifikationstjeneste indgår.
-
-1. Brugeren tilgår (anmoder om adgang til) forretningstjenesten.
-2. Forretningstjenesten anmoder evt. brugeren om at vælge, hvilken broker eller autentifikationstjeneste brugeren ønsker at benytte (fx NemLog-in, WAYF, KOMBIT).
-3. Forretningstjenesten anmoder brokeren autentifikationstjenesten om en adgangsbillet (en token) til brug for login.
-4. Autentifikationstjenesten beder brugeren om at autentificere sig via sine identifikationsmidler.
-5. Brugeren autentificerer sig over for autentifikationstjenesten.
-6. Autentifikationstjenesten/brokeren validerer brugerlogin.
-7. Autentifikationstjenesten/brokeren udsteder en signeret billet til tjenesten med brugerens identitet og eventuelle attributter.
-8. Forretningstjenesten kontrollerer den udstedte billet og etablerer evt. en session med brugeren.
-9. Brugeren kan anvende forretningstjenesten underlagt dennes adgangskontrol.
-
-Forløbet i denne proces varierer afhængigt af brugertype og situation. I figuren herover starter processen i forretningstjenesten, som re-dirigerer til autentifikationstjenesten. Hvis brugeren allerede har en session med autentifikationstjenesten, sker der ikke nødvendigvis fornyet login, men der udstedes en adgangsbillet til den ny forretningstjeneste.
-
-Ovenstående dækker både processer, hvor brugeren tilgår tjenesten i en browser, app eller rig applikation. Der vil dog være forskelle i de tekniske implementeringer.
-
-### Billetudstedelse og adgangskontrol
-
-I denne proces kræver tjenestens adgangspolitik, at adgangsbilletten indeholder bestemte attributter. Processerne i forbindelse med nilletudstedelse og adgangskontrol tager derfor udgangspunkt i, at der er oprettet en identitet, som har fået tilknyttet attributter, der matcher forretningstjenestens adgangspolitik, og at identiteten endvidere kan autentificere sig på det sikringsniveau, som forretningstjenesten kræver. Efter autentifikation skal identiteten derfor have udtrykt disse attributter og aktuelle sikringsniveau i den adgangsbillet, som forretningstjenesten modtager.
-
-Arbejdsdelingen mellem de forskellige aktører kan også være forskellig, hvilket kan have betydning for, hvor attributter (fx rolle) hentes fra, og om fx adgangspolitikker håndteres af rettighedstjenester eller forretningstjenesten selv. Det kan også have betydning for, hvor aktørerne administrerer attributter.
-
-
-<figure>
-<img src="billede14.PNG" width="65%"/>
-<figcaption>Billetudstedelse og adgangskontrol via en broker</figcaption>
-</figure>
-<br>
-
-1. En person anmoder om at anvende en tjeneste hos en tjenesteudbyder.
-2. Tjenesten beder derfor en broker om en signeret billet. Identitetsbrokeren tager sig af at sikre gennemførsel af autentifikation, indhente alle nødvendige attributter og udstede adgangsbilletten.
-3. Autentifikationstjenesten verificerer brugerens identifikationsmiddel gennem en autentifikationsproces. Kun hvis dette er gyldigt, fortsættes, ellers afvises personen.
-4. Autentifikationstjenesten udsteder herefter en adgangsbillet til identitetsbrokeren med de attributter for identiteten, som tjenesten kræver inkl. angivelse af aktuelt sikringsniveau.
-5. En eller flere grunddatatjenester leverer de fornødne attributter knyttet til identiteten.
-6. En eller flere attributtjenester leverer attributter knyttet til identiteten.
-7. Brokeren danner en samlet adgangsbillet med attributter og udsteder (signerer) denne til forretningstjenesten.
-8. Forretningstjenesten etablerer en session, som brugeren kan agere i med disse rettigheder og attributter.
-9. Forretningstjenesten håndhæver adgangspolitikken i brugerens anvendelse af forretningstjenesten.
-10. Brugeren anvender forretningstjenesten.
-
-
-### Kontrol og rapportering
-
-I eksemplet om billetudstedelse og adgangskontrol ovenfor skal alle brugerstyringstjenesterne for hver aktivitet logge resultatet af aktiviteten som adgangshændelser. Hvis man i brugerstyringstjenesterne konstaterer et sikkerhedsbrud, logges det som en sikkerhedshændelse, og denne forsynes med tilstrækkelige metadata til, at de tjenester der overvåger sikkerhedsbrud, kan anvende informationen og agere på den.
-
-Sikkerhedsfunktionen hos udbydere af tillidstjenester og forretningstjenester bør med passende mellemrum undersøge loggen af adgangshændelser for spor af forsøg på sikkerhedsbrud som led i forebyggelse af sikkerhedsbrud, fx gennem datamining-teknikker, herunder maskinlæring. Derigennem kan indbrudsforsøg afdækkes, og sikkerhedsforanstaltninger foretages og forebygges. Dette rapporteres også som en type sikkerhedshændelse til føderationen og til sikkerhedstjenester i føderationen. Samme sted kan tjenesteudbyderens sikkerhedsfunktion og udbyderne af brugerstyringstjenester hente de seneste erfaringer med sikkerhedshændelser eller spor af sikkerhedshændelser og anvende dette i deres forebyggende arbejde.
 
 ## Områder for standardisering
 Referencearkitekturen peger på, hvilke områder der skal være standarder for, at referencearkitekturen fungerer.
@@ -1285,14 +1271,13 @@ Der er behov for **standarder for kommunikation mellem føderationer.** Disse sk
 <br>
 
 
-
-
 ---------
 
 
 
 # Målbillede? Implementering?
 [Det var et afsnit vi undlod i 'deling af data og dokumenter' /madsh]
+[Tænker også det skal udgå helt /TG]
 
 Dette afsnit beskriver det systemtekniske målbillede, de væsentligste komponenter og standarder.
 
@@ -1621,34 +1606,7 @@ Ved kommunikation mellem føderationer (interføderation) benyttes normalt de sa
 
 De primære udfordringer ved interføderation opstår, når hvert domæne har etableret egne domænespecifikke attributter, domænepolitikker eller har egne sikringsniveauer, der ikke er kompatible. Her kan NSIS (og eIDAS) løse udfordringen med fælles sikringsniveauer, mens der ikke findes generelle standarder for oversættelse mellem domæners attributter og politikker. Et første skridt i den retning kunne være at etablere fælles vokabularer (fx i stil med OIO Organisation og *ISA Core Vocabularies*(http://ec.europa.eu/isa/ready-to-use-solutions/core-vocabularies_en.htm) som findes i EU-regi). Dette arbejde har dog mere karakter af datastandardisering og semantiske modeller og vurderes ikke nødvendigvis som hjemmehørende under brugerstyringsarbejdet.
 
-## Fælles løsning til fuldmagter
-En fælles løsning til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en onlinetjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
 
-Hovedfunktionerne i en digital fuldmagtsløsning er:
-
-- Funktionalitet til digital afgivelse af fuldmagt gennem et selvbetjeningsforløb (inkl. udpegning af modtager, indhold af fuldmagt, gyldighedsperiode og signering af fuldmagt).
-- Funktionalitet til at få overblik over afgivne og modtagne fuldmagter.
-- Funktionalitet til at tilbagekalde en fuldmagt.
-- Funktionalitet for en tjeneste til at definere de ”fuldmagtspakker”, som beskriver indholdet af de fuldmagter, der kan afgives til tjenesten (fx roller til tjenesten).
-- Funktionalitet til, at en betroet medarbejder kan indtaste en fuldmagt på vegne af en (it-svag) borger – fx på baggrund af en underskrevet papirblanket.
-- Integration med identitetsbrokere, så fuldmagter kan indlejres i udstedte adgangsbilletter til tjenester.
-- API’er for tjenester til at batch-hente fuldmagter.
-
-En fællesoffentlig løsning er i dag etableret i regi af NemLog-in, kaldet ’Digital Fuldmagt’. Løsningen findes i to forskellige varianter, der er målrettet til forskellige brugssituationer:
-
-- En løsning til Erhvervsfuldmagt i NemLog-in/Brugeradministration (FBRS).
-- En løsning til Borgerfuldmagt (selvstændig brugergrænseflade).
-
-For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at adgangsbilletten tilhørende identiteten for repræsentanten markeres, at der er delegeret en rettighed (privilegie) fra fuldmagtsgiver. Digitale fuldmagter udmøntes med andre ord som en delegering af rettigheder til en tjeneste, udtrykt som attributter i en adgangsbillet – og dermed benytter de grundlæggende byggeblokke, der allerede findes i arkitekturen. Herved er det væsentligt lettere for tjenester at tage fuldmagtsfunktionaliteten i brug, idet eksisterende grænseflader og integrationer med NemLog-in genanvendes. Konkret består disse i OIOSAML profilen, og delegeringen udtrykkes via OIO Basic Privilege Profile.
-
-I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol. Dette er dog et identificeret videreudviklingsønske, som forventes at blive reali
-
-Endelig kan det nævnes, at den nuværende fuldmagtsløsning i regi af NemLog-in hidtil har været frivillig at anvende for offentlige tjenester. Denne referencearkitektur skærper dette til et ”bør”.
-
->![](logo.png)
->I henhold til arkitekturprincipperne om at genbruge løsninger og anvende fælles standarder BØR fuldmagtsløsningen anvendes for borgerrettede løsninger, der finansieres og fungerer inden for den offentlige sektor.
-
-Dette sikrer genbrug, strømlining af infrastrukturen og ensartet brugeroplevelse og giver borgere og virksomheder mulighed for at få en central indgang til alle deres fuldmagter på tværs af tjenester. Dette vil formentlig indebære, at NemLog-in’s fuldmagtsløsning videreudvikles funktionelt, så behov i langt de fleste sektorer og løsninger kan understøttes.
 
 ## Brugerstyring for tjenestekonsumenter og fysiske apparater og sensorer
 
