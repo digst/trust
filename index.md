@@ -131,7 +131,7 @@ En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i p
 
 <dfn>Forretningstjeneste</dfn> eksternt synligt funktionalitet, der giver mening for omgivelserne [ARCHI].
 
-<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger identiteten må udføre i en tjeneste, eller hvilke informationer identiteten må få adgang til.
+<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger brugere må udføre i en tjeneste, eller hvilke informationer brugere må få adgang til.
 
 <dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
 
@@ -152,7 +152,7 @@ Føderationer er en forudsætning for referencearkitekturens adskillelse af brug
 
 <dfn>Tillidstjeneste</dfn> udbydes særskilt, anvendes af bruger og forretningstjenesteudbyder i fælleskab... aftaler om tillidspolitikker
 
-<dfn>Føderationer</dfn>, sammenslutning tjenester med gensidig tillid.
+<dfn>Føderationer</dfn>, sammenslutning af tjenester med gensidig tillid.
 
 
 ## Tilblivelse, styring og andre referencearkitekturer
@@ -296,10 +296,10 @@ Denne version af referencearkitektur for brugerstyring ligger i forlængelse af 
 
 ## Værdiskabelse
 Ved af efterleve principper og mønstre i denne referencearkitektur opnås værdiskabelse på en række områder:
-- Det bliver hurtigere og billigere at bygge forretningstjenester med en høj grad af sikkerhed, fordi vanskelig håndtering af brugerstyring fås som en service af tillidstjenester, der er specialiserede i området.
+- Det bliver hurtigere og billigere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området.
 - Tab som følge af svindel og misbrug nedbringes, når sikkerheden øges gennem profesionelle, dedikerede tillidstjenester.
 - De adminstrative udgifter til administration af brugere reduceres, når brugere kan administreres samlet og effektivt frem for i en række adskilte siloer.
-- Udgifterne til systemintegration og sammenhængende arbejdsgange reduceres, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
+- Udgifterne til systemintegration og sikring af sammenhængende arbejdsgange reduceres, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
 - Brugerne spilder mindre tid på at udføre deres opgaver i forretningstjenester, når skift mellem disse kan ske sømløst (fx via single sign on) og identifikationsmidler kan genbruges på tværs. Brugerne vil således opleve færre barrierer for udførelse af deres egentlige arbejde og kan dermed være mere effektive.  
 
 
@@ -307,18 +307,18 @@ Ved af efterleve principper og mønstre i denne referencearkitektur opnås værd
 
 De mest relevante love og forordninger (med særligt fokus på brugerstyring og adgangskontrol) er:
 
-- EU-forordningen eIDAS (electronic IDentification, Authentication and trust Services) regulerer tillidstjenester og elektroniske identifikationsordninger.
+- EU-forordningen eIDAS (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
 - Lov om NemID og MitID.
-- EU-databeskyttelsesforordningen (GDPR) beskriver pligter og rettigheder ved behandling af persondata.
+- EU-databeskyttelsesforordningen (GDPR) som beskriver pligter og rettigheder ved behandling af persondata.
 - Databeskyttelsesloven som i dansk kontekst supplerer GDPR.
-- Forvaltningsloven indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
+- Forvaltningsloven som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 
 Dertil kan der være særregulering inden for visse domæner som fx sundhedsområdet.
 
 Som eksempler på hvordan ovvennævnte regulering påvirker brugerstyring kan nævnes:
 - Databestyttelsesforordningen stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering. En af det helt centrale sikkerhedsforanstaltninger i forretningstjenester, som udstiller personoplysninger, er adgangskontrol og udforming af adgangspolitikker. Dermed kan efterlevelse af denne referencearkitektur understøtte compliancearbejdet. Bemærk at der findes en lang række øvrige krav i GDPR, som håndteres med andre tilgange end brugerstyring.
-- eIDAS-forordningen stiller krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt (forudsat det er på et tilstrækkeligt sikringsniveau). Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med 27 andre landes nationale identifikationsordninger. Denne referencearkitektur beskriver principperne for, hvordan brugerstyring kan håndteres i stor skala.
-- Forvaltningsloven stiller krav om, at borgere, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed som udstiller fuldt digitale interaktioner er nødt til at kunne håndtere digitale fuldmagter.
+- eIDAS-forordningen stiller krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt (forudsat det er på et tilstrækkeligt sikringsniveau). Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med alle øvrige EU-landes nationale identifikationsordninger. Denne referencearkitektur beskriver principperne for, hvordan brugerstyring kan håndteres i stor skala.
+- Forvaltningsloven stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller fuldt digitale løsninger, er nødt til at kunne håndtere digitale fuldmagter.
 
 ## Sikkerhed
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. ISO 27001 er valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og kommunerne er forpligtet til at følge principperne.
