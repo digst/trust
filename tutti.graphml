@@ -3104,7 +3104,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="81.12744276788976" x="-562.0458067729305" y="-684.0806626448436"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="62.677734375" x="9.22485419644488" xml:space="preserve" y="3.0">afsender</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="62.677734375" x="9.22485419644488" xml:space="preserve" y="5.3447265625">afsender</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3119,7 +3119,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="81.12744276788976" x="-562.0458067729305" y="-634.6349704538615"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="68.53662109375" x="6.2954108370698805" xml:space="preserve" y="3.0">modtager</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="68.53662109375" x="6.2954108370698805" xml:space="preserve" y="5.3447265625">modtager</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3134,7 +3134,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="100.0" x="23.720932192649343" y="-634.6349704538613"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.18798828125" x="16.906005859375" xml:space="preserve" y="3.0">anvender</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.18798828125" x="16.906005859375" xml:space="preserve" y="5.3447265625">anvender</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3149,7 +3149,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-284.4285184489256" y="-1050.1170720716657"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="94.64453125" x="11.307207945076016" xml:space="preserve" y="3.0">databehandler</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="94.64453125" x="11.307207945076016" xml:space="preserve" y="5.3447265625">databehandler</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3164,7 +3164,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-470.0827720187244" y="-1050.1170720716657"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="88.12548828125" x="14.566729429451016" xml:space="preserve" y="3.0">dataansvarlig</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="88.12548828125" x="14.566729429451016" xml:space="preserve" y="5.3447265625">dataansvarlig</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3179,7 +3179,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-81.49693942947033" y="-1050.1170720716657"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="108.06982421875" x="4.594561460701016" xml:space="preserve" y="3.0">den registrerede</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="108.06982421875" x="4.594561460701016" xml:space="preserve" y="5.3447265625">den registrerede</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3194,7 +3194,7 @@ service</y:NodeLabel>
           <y:Geometry height="130.54915624569003" width="117.25894714015203" x="-284.2476418607789" y="-915.8328699368326"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="108.29833984375" x="4.480303648201016" xml:space="preserve" y="3.0">databehandling</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="108.29833984375" x="4.480303648201016" xml:space="preserve" y="55.619304685345014">databehandling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3209,7 +3209,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="205.21787162211956" x="-81.49693942947033" y="-867.877649380492"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="86.33544921875" x="59.44121120168478" xml:space="preserve" y="3.0">datasamling</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="86.33544921875" x="59.44121120168478" xml:space="preserve" y="5.3447265625">datasamling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3224,7 +3224,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="50.0" x="-79.42107694682659" y="-924.131246102979"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="25.10595703125" x="12.447021484375" xml:space="preserve" y="3.0">log</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="25.10595703125" x="12.447021484375" xml:space="preserve" y="5.3447265625">log</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3239,7 +3239,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="264.3552276919754" x="-419.8384018773363" y="-750.0223695614346"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="143.79443359375" x="60.28039704911271" xml:space="preserve" y="3.0">videregivelse af data</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="143.79443359375" x="60.28039704911271" xml:space="preserve" y="5.3447265625">videregivelse af data</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3254,7 +3254,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-470.0827720187244" y="-912.8399569524893"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="89.76953125" x="13.744707945076016" xml:space="preserve" y="3.0">brugerstyring</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="89.76953125" x="13.744707945076016" xml:space="preserve" y="5.3447265625">brugerstyring</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3269,7 +3269,7 @@ service</y:NodeLabel>
           <y:Geometry height="85.4315181596686" width="118.09542533351384" x="-284.2476418607789" y="-687.0735756291867"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="80.1083984375" x="18.993513448006922" xml:space="preserve" y="3.0">meddelelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="80.1083984375" x="18.993513448006922" xml:space="preserve" y="33.06048564233424">meddelelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3284,7 +3284,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="90.69241107997277" x="-295.3118066060932" y="-571.6420574695181"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="89.16650390625" x="0.7629535868613857" xml:space="preserve" y="3.0">forespørgsel</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="89.16650390625" x="0.7629535868613857" xml:space="preserve" y="5.3447265625">forespørgsel</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3299,7 +3299,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="50.0" x="-196.80754841485145" y="-571.6420574695181"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="32.615234375" x="8.6923828125" xml:space="preserve" y="3.0">svar</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="32.615234375" x="8.6923828125" xml:space="preserve" y="5.3447265625">svar</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3314,7 +3314,7 @@ service</y:NodeLabel>
           <y:Geometry height="85.4315181596686" width="100.0" x="-129.72497831734586" y="-687.0735756291867"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="51.353515625" x="24.3232421875" xml:space="preserve" y="3.0">data-
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="51.353515625" x="24.3232421875" xml:space="preserve" y="25.405212204834243">data-
 service</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
@@ -3330,7 +3330,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="148.50425819124177" x="-295.3118066060931" y="-511.6420574695179"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="87.28125" x="30.611504095620887" xml:space="preserve" y="3.0">abonnement</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="87.28125" x="30.611504095620887" xml:space="preserve" y="5.3447265625">abonnement</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3345,7 +3345,7 @@ service</y:NodeLabel>
           <y:Geometry height="85.43151815966871" width="100.0" x="-419.8384018773362" y="-687.0735756291868"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="98.1865234375" x="0.90673828125" xml:space="preserve" y="3.0">forsendelses-
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="98.1865234375" x="0.90673828125" xml:space="preserve" y="25.405212204834356">forsendelses-
 service</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
@@ -3361,7 +3361,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="100.0" x="-419.8384018773362" y="-511.64205746951814"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="56.1015625" x="21.94921875" xml:space="preserve" y="3.0">adresse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="56.1015625" x="21.94921875" xml:space="preserve" y="5.3447265625">adresse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3376,7 +3376,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="100.0" x="-419.8384018773362" y="-571.6420574695181"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="85.3388671875" x="7.33056640625" xml:space="preserve" y="3.0">påmindelse </y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="85.3388671875" x="7.33056640625" xml:space="preserve" y="5.3447265625">påmindelse </y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3391,7 +3391,7 @@ service</y:NodeLabel>
           <y:Geometry height="30.0" width="117.2589471401518" x="-494.5394988061414" y="-859.6570460352389"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="97.3486328125" x="9.955157163825902" xml:space="preserve" y="3.0">adgangspolitik</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="97.3486328125" x="9.955157163825902" xml:space="preserve" y="5.3447265625">adgangspolitik</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3604,7 +3604,7 @@ service</y:NodeLabel>
           <y:Geometry height="47.38787548117716" width="117.07807055200533" x="-284.2476418607789" y="-993.2207454180098"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.73828125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="86.5703125" x="15.253879026002664" xml:space="preserve" y="3.0">person-
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.73828125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="86.5703125" x="15.253879026002664" xml:space="preserve" y="5.824797115588581">person-
 databehandling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
@@ -3620,7 +3620,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-81.49693942947033" y="-984.131246102979"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="47.36083984375" x="34.949053648201016" xml:space="preserve" y="3.0">indsigt</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="47.36083984375" x="34.949053648201016" xml:space="preserve" y="5.3447265625">indsigt</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3635,7 +3635,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-470.0827720187244" y="-984.131246102979"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.5390625" x="29.359942320076016" xml:space="preserve" y="3.0">hjemmel</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.5390625" x="29.359942320076016" xml:space="preserve" y="5.3447265625">hjemmel</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3650,7 +3650,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="117.25894714015203" x="-426.66644305669126" y="-815.2837136911426"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="103.0234375" x="7.117754820076016" xml:space="preserve" y="3.0">adgangskontrol</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="103.0234375" x="7.117754820076016" xml:space="preserve" y="5.3447265625">adgangskontrol</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3665,7 +3665,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="100.0" x="23.720932192649343" y="-684.0806626448436"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="76.22998046875" x="11.885009765625" xml:space="preserve" y="3.0">distributør</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="76.22998046875" x="11.885009765625" xml:space="preserve" y="5.3447265625">distributør</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3691,7 +3691,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="89.39219725896123" x="-115.44414816340259" y="-750.0223695614346"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="74.53515625" x="7.428520504480616" xml:space="preserve" y="3.0">datamodel</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="74.53515625" x="7.428520504480616" xml:space="preserve" y="5.3447265625">datamodel</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3706,7 +3706,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="66.0" x="-58.48367018688327" y="-812.9711634936825"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="53.88623046875" x="6.056884765625" xml:space="preserve" y="3.0">katalog</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="53.88623046875" x="6.056884765625" xml:space="preserve" y="5.3447265625">katalog</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -3721,7 +3721,7 @@ databehandling</y:NodeLabel>
           <y:Geometry height="30.0" width="100.0" x="23.720932192649343" y="-750.0223695614346"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="96.30126953125" x="1.849365234375" xml:space="preserve" y="3.0">referencedata</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="96.30126953125" x="1.849365234375" xml:space="preserve" y="5.3447265625">referencedata</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -4943,7 +4943,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="210.41630918356032" y="-1636.6151559796294"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="28.31787109375" x="23.341064453125" xml:space="preserve" y="3.0">data</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="28.31787109375" x="23.341064453125" xml:space="preserve" y="2.5654296875">data</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -4958,7 +4958,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="210.41630918356032" y="-1579.0960265332894"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="4.361572265625" xml:space="preserve" y="3.0">meddelelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="4.361572265625" xml:space="preserve" y="2.5654296875">meddelelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -4973,7 +4973,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="210.41630918356032" y="-1694.1342854259694"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="70.02197265625" x="2.489013671875" xml:space="preserve" y="3.0">datasamling</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="70.02197265625" x="2.489013671875" xml:space="preserve" y="2.5654296875">datasamling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -4988,7 +4988,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="319.2988587266425" y="-1636.6151559796294"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="3.0">dokument</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="2.5654296875">dokument</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5003,7 +5003,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="437.8856857221483" y="-1663.6445581515486"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="28.40673828125" x="23.296630859375" xml:space="preserve" y="3.0">data</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="28.40673828125" x="23.296630859375" xml:space="preserve" y="2.5654296875">data</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5018,7 +5018,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="437.8856857221483" y="-1606.1254287052086"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="55.9365234375" x="9.53173828125" xml:space="preserve" y="3.0">metadata</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#808080" verticalTextPosition="bottom" visible="true" width="55.9365234375" x="9.53173828125" xml:space="preserve" y="2.5654296875">metadata</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5033,7 +5033,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="170.4564838855365" x="929.6239549935001" y="-1688.7066263171862"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="41.5908203125" x="64.43283178651825" xml:space="preserve" y="3.0">besked</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="41.5908203125" x="64.43283178651825" xml:space="preserve" y="2.5654296875">besked</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5048,7 +5048,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="929.6239549935002" y="-1630.8414936002016"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.58154296875" x="4.209228515625" xml:space="preserve" y="3.0">påmindelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.58154296875" x="4.209228515625" xml:space="preserve" y="2.5654296875">påmindelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5063,7 +5063,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="1025.0804388790366" y="-1630.8414936002016"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="4.361572265625" xml:space="preserve" y="3.0">meddelelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="4.361572265625" xml:space="preserve" y="2.5654296875">meddelelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5078,7 +5078,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="1120.5369227645733" y="-1630.8414936002016"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="3.0">dokument</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="2.5654296875">dokument</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5093,7 +5093,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="920.049836383694" y="-1536.159865126909"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.58154296875" x="4.209228515625" xml:space="preserve" y="3.0">påmindelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.58154296875" x="4.209228515625" xml:space="preserve" y="2.5654296875">påmindelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5108,7 +5108,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="596.1589066194839" y="-1630.8414936002016"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="28.31787109375" x="23.341064453125" xml:space="preserve" y="3.0">data</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="28.31787109375" x="23.341064453125" xml:space="preserve" y="2.5654296875">data</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5123,7 +5123,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="197.59499769422337" x="596.1589066194839" y="-1579.0960265332894"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="65.65907111273668" xml:space="preserve" y="3.0">meddelelse</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="66.27685546875" x="65.65907111273668" xml:space="preserve" y="2.5654296875">meddelelse</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5138,7 +5138,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="596.1589066194839" y="-1682.5869606671138"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="70.02197265625" x="2.489013671875" xml:space="preserve" y="3.0">datasamling</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="70.02197265625" x="2.489013671875" xml:space="preserve" y="2.5654296875">datasamling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5153,7 +5153,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="718.7539043137072" y="-1630.8414936002016"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="3.0">dokument</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="58.462890625" x="8.2685546875" xml:space="preserve" y="2.5654296875">dokument</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -5168,7 +5168,7 @@ data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Model
           <y:Geometry height="25.0" width="75.0" x="718.753904313707" y="-1682.5869606671138"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="62.59521484375" x="6.202392578125" xml:space="preserve" y="3.0">datamodel</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.869140625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="62.59521484375" x="6.202392578125" xml:space="preserve" y="2.5654296875">datamodel</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6042,7 +6042,7 @@ om data</y:NodeLabel>
           <y:Geometry height="47.38787548117716" width="117.25894714015203" x="-887.0450141467817" y="-1608.1421938820197"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="108.29833984375" x="4.480303648201016" xml:space="preserve" y="3.0">databehandling</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="108.29833984375" x="4.480303648201016" xml:space="preserve" y="14.03866430308858">databehandling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6057,7 +6057,7 @@ om data</y:NodeLabel>
           <y:Geometry height="47.38787548117716" width="117.25894714015203" x="-700.1578064983478" y="-1608.1421938820197"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="93.02587890625" x="12.116534116951016" xml:space="preserve" y="3.0">videregivelse
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="93.02587890625" x="12.116534116951016" xml:space="preserve" y="6.383390865588581">videregivelse
  af data</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
@@ -6073,7 +6073,7 @@ om data</y:NodeLabel>
           <y:Geometry height="47.38787548117716" width="117.07807055200533" x="-1073.7513452070689" y="-1608.1421938820197"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.73828125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="86.5703125" x="15.253879026002664" xml:space="preserve" y="3.0">person-
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.73828125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="86.5703125" x="15.253879026002778" xml:space="preserve" y="5.824797115588581">person-
 databehandling</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
@@ -6508,7 +6508,7 @@ udbyder<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="30.8125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="89.3359375" x="0.6462220400578644" xml:space="preserve" y="3.0">identifikations-
-midler</y:NodeLabel>
+middel</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6568,7 +6568,7 @@ midler</y:NodeLabel>
           <y:Geometry height="25.0" width="99.1062927546377" x="2754.863579675945" y="-2516.123111551011"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="83.37109375" x="7.867599502318853" xml:space="preserve" y="3.0">fysiske objekt</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="76.697265625" x="11.204513564818853" xml:space="preserve" y="3.0">fysisk objekt</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6583,7 +6583,7 @@ midler</y:NodeLabel>
           <y:Geometry height="25.0" width="99.1062927546377" x="2754.863579675945" y="-2476.123111551011"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="78.68359375" x="10.211349502318853" xml:space="preserve" y="3.0">virtual objekt</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="82.6796875" x="8.213302627318853" xml:space="preserve" y="3.0">virtuelt objekt</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6598,7 +6598,7 @@ midler</y:NodeLabel>
           <y:Geometry height="25.0" width="99.1062927546377" x="2757.4850196759453" y="-2556.123111551011"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="82.703125" x="8.201583877318853" xml:space="preserve" y="3.0">virksomheder</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="71.359375" x="13.873458877318853" xml:space="preserve" y="3.0">virksomhed</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -6613,7 +6613,7 @@ midler</y:NodeLabel>
           <y:Geometry height="25.0" width="99.1062927546377" x="2757.4850196759453" y="-2596.123111551011"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="55.3515625" x="21.877365127318853" xml:space="preserve" y="3.0">personer</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Arial" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.40625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="44.0078125" x="27.549240127318853" xml:space="preserve" y="3.0">person</y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="true" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve">.</y:AttributeLabel>
             <y:MethodLabel xml:space="preserve"/>
@@ -13042,8 +13042,8 @@ oplysninger om<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide
           </y:Path>
           <y:LineStyle color="#808080" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.34375" horizontalTextPosition="center" iconTextGap="4" modelName="side_slider" preferredPlacement="source" ratio="0.5854153587998103" textColor="#940027" verticalTextPosition="bottom" visible="true" width="79.0390625" x="-85.06191930842988" xml:space="preserve" y="-25.50616819163588">registreres med
-(tildeles?)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="side_slider" preferredPlacement="source" ratio="0.5854153587998103" textColor="#940027" verticalTextPosition="bottom" visible="true" width="79.0390625" x="-85.06191930842988" xml:space="preserve" y="-25.50616819163588">registreres med
+<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
       </data>
@@ -13069,8 +13069,8 @@ oplysninger om<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide
           <y:Path sx="-6.278540935323085" sy="-0.6935284999998658" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#808080" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.34375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="74.009765625" x="-37.00483391780426" xml:space="preserve" y="-31.31354123851088">associeres
-(er knytter til?)<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="10.0" distanceToCenter="false" position="center" ratio="0.0" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Arial" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#940027" verticalTextPosition="bottom" visible="true" width="79.048828125" x="-39.52436516780426" xml:space="preserve" y="-20.14166623851088">associeres med
+<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="10.0" distanceToCenter="false" position="center" ratio="0.0" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
       </data>
@@ -14320,7 +14320,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e401" source="n617" target="n609">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14332,7 +14331,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e402" source="n620" target="n619">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14344,7 +14342,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e403" source="n619" target="n622">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14356,7 +14353,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e404" source="n627" target="n626">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14368,7 +14364,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e405" source="n626" target="n629">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14380,7 +14375,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e406" source="n633" target="n626">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14392,7 +14386,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e407" source="n626" target="n634">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14404,7 +14397,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e408" source="n634" target="n626">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14416,7 +14408,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e409" source="n634" target="n626">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -14428,7 +14419,6 @@ begræns anvendelse<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRigh
     </edge>
     <edge id="e410" source="n634" target="n626">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
