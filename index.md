@@ -362,7 +362,11 @@ I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forsta
 - Bevaring af elektroniske signaturer, segl eller certifikater relateret til disse tjenester
 
 
-eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes endvidere et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
+eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur.
+
+For eIDAS tillidstjenesterne findes et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
+
+ En udbyder som ønsker at tilbyde en kvalificerer tillidstjenste skal sende en ansøgning til tilsynsmyndigheden (Digitaliseringsstyrelsen) om dette. Udbyderen skal også sende en overensstemmelsesvurderingsrapport udstedt af et overensstemmelsesvurderingsorgan . Hvis Digitaliseringsstyrelsen vurderer, at udbyderen og de tillidstjenester som udbydes opfylder kravene i eIDAS-forordningen, optages de på en national liste (positivliste) med tildelt status som kvalificeret. Denne liste indeholder oplysninger om kvalificerede udbydere af tillidstjenester og de tjenester som udbydes. Der er også en bestemmelse om tilbagekaldelse af en status som kvalificeret, hvis kravene i forordningen ikke længere er opfyldt af udbyderen.
 
 De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
