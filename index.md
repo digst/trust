@@ -357,11 +357,10 @@ En tjeneste og et it-system er i denne kontekst synonymer for det samme: et styk
 
 ## Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester, hvilket understøtter beskrivelse af eksempelvis føderationer, hvor forskellige parter leverer forskellige tjenester. Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester (hovedsageligt) indenfor PKI-området:
-- Certifikatudstedere (CA)
-- Tidsstemplingsservices
-- Valideringstjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
-- Tjenester til bevaring af signaturer, segl og certifikater
-- Elektroniske registrerede leveringstjenester.
+- Generering, kontrol og validering af elektroniske signaturer, elektroniske segl eller elektroniske tidsstempler, elektroniske registrerede leveringstjenester og certifikater relateret til disse tjenester
+- Generering, kontrol og validering af certifikater for webstedsautentifikation, eller
+- Bevaring af elektroniske signaturer, segl eller certifikater relateret til disse tjenester
+
 
 eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes endvidere et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
