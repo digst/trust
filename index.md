@@ -76,7 +76,7 @@ Siden første udgave af referencearkitekturen er De fællesoffentlige regler for
 
 ## Formål, anvendelse og målgrupper
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
-Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsning kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
+Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 [Opdatering skal også indarbejde andet FDA arbejde som fx Modelregler ]
 [bidrage til tværgående arkititekturarbejde hos andre domæner]
 
@@ -104,14 +104,14 @@ Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-Denne 2020-udgave af referencearkitekturen for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
+Denne version 1.1 af Referencearkitektur for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
 Med udspring i Digitaliseringspagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-De teknologiske løsninger til brugerstyring har udviklet sig langt hurtige end det danske sprog. En konsekvens er at der ofte er sket mangelfulde oversættelser eller det anvendte sprog kan oplevelse som indforstået. Intentionen i denne version af referencearkitekturen er at gøre området mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
+Intentionen i denne version af referencearkitekturen er at skabe et fælles sprog om brugerstyring, som kan bidrage til at gøre samarbejdet om løsninger lettere. Desuden tilstræbes det, at området bliver mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
 
 
 En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for omgivelserne". [ARCHI, check om EIRA rammer bedre] Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
@@ -136,7 +136,7 @@ En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i p
 <dfn>Brugerstyring</dfn>, administration og kontrol af brugere og deres adgang til tjenester.
 
 
-Det Europæiske Interoperabilitets Rammeværk, Den Fælles Offentlige Digitaliseringsstrategi og dens Fællesoffentlig Digital Arkitektur beskriver en model for 'integrated service delivery' eller 'sammenhænge offentlige tjenester'. Grundideen er et opgør med isolerede digitale tjeneste hos den enkelte myndighed, og et skift til bedre og brede tjeneste hvor en bruger oplever en samlet service på tværs af mange offentlige myndigheder. [Måske bruge digital flytning som eksempel]
+Det Europæiske Interoperabilitets Rammeværk, Den Fælles Offentlige Digitaliseringsstrategi og Den fællesoffentlige digitale arkitektur beskriver en model for 'integrated service delivery' eller 'sammenhænge offentlige tjenester'. Grundideen er et opgør med isolerede digitale tjenester hos den enkelte myndighed, og et skift til bedre og brede tjeneste hvor en bruger oplever en samlet service på tværs af mange offentlige myndigheder. Et eksempel er den sammenhængende brugerrejse Flytteguiden på borger.dk, der samler informationer og gøremål fra forskellige myndigheder og private virksomheder, som brugerne skal tage stilling til, når de flytter.
 
 <figure>
 <img src="integrated_service_delivery.svg" width="65%"/>
@@ -199,41 +199,69 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 effektiv datadeling er det konkrete ophæng for denne referencearkitektur. [TODO, check ophæng]
 
 
-## Forretningsmæssige behov
+## Temaer
 
-Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere. Omfanget for referencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+[Vi bør kunne samle nedenstående i temaer... her et bud på overskrifts niveau]
 
-### Lettilgængelige sammenhængende tjenester
-Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængeligt hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
 
-Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker adgang til denne tjeneste. Da brug af tjenester fra tjenester er stigende, er der behov for ensartede metoder til at tilgå disse tjenester.
+### Sammenhængende tjenester
 
-eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
+En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
+
+- Mulighed for samme identifkationsmiddel på tværs af tjenester og sektorer
+
+- Effektiv adgang til både interne og eksterne tjenester.
+
+- Effektiv håndtering af rettigheder.
+
 
 ### Retten til privatliv
-Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet mv.
 
-I forbindelse med det nye MitId, kan private og erhvervsmæssige identiteter forbindes. For at sikre retten til privatliv er denne funktionalitet beskyttet af et dobbelt frivillighedsprincip, hvor forbindelsen kun kan bruges, hvis både medarbejder og virksomhed siger god for det. Ref[Se datatilsynets vejledning, udspring af GDPR]
+det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.v [Se datatilsynets vejledning, udspring af GDPR]
 
-### Sikkerhed og tillid
-Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data, som kræver høj sikkerhed, mens andre er mindre kritiske og derfor ikke med lavere sikkerhedsbehov.
+- Balancere virksomheds behov/pligt/ret for logning og medarbejders ret til ikke at blive overvåget
 
-Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester der udbydes og den sikkerhed de beskyttes med. Når tjenester bliver mere sammensatte skal denne tillid kunne opfyldes af alle tjenester der indgår.  
+En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
 
-### Delegering og fuldmagt
-En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig.
-Myndigheder er omfattet af reglerne om partsrepræsentation, og deres tjenester skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
+En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
 
-I forhold automatiseringsrobotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en automatiseringsrobots identitet.
 
 ### Effektivitet
-Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det vurderes om systemer og processer understøtter sparsommelighed, produktivitet og effektivitet. Private tjenester vil på den anden side være underlagt et ønske om profit. Alle tjenester har derfor et behov for at være effektive, hvilket kan udtrykkes i behov som:
--	Enkel og samlet administration af brugere.
--	Sammenhæng imellem brugerstyring i forskellige organisation både private og offentlige.
--	En sammenhængende brugerstyring, så tjenester kan implementeres effektivt.
--	Kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen.
 
-Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring. Det er derfor effektivt, at adskille forretningstjeneste og bruge brugerstyring som en tjeneste.
+[Rigsrevisions formulering omkring forvaltningsrevision....sparsommelighed, effektivitet og produktivitet]
+
+Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse, Offentligt-privat samarbejde
+
+
+- Valg af idmidler efter personlige præferencer
+
+- fair konkurrence og mulighed for at tjene penge
+
+- Behov for forskellige løsninger...
+
+Nogle medarbejdere anvender deres akkreditiv mange gange i løbet af en arbejdsdag. For denne brugergruppe er det derfor væsentligt, at det er let og effektivt at anvende sit akkreditiv.
+
+Små og mellemstore virksomheder, foreninger og anpartsselskaber med flere medarbejdere har behov for enkel brugeradministration, hvor rettigheder set med brugernes øjne administreres  ét samlet sted for offentlige selvbetjeningsløsninger.
+
+Større virksomheder har brug for forskellige løsninger, der både kan omfatte manuel indtastning, digital provisionering og eventuelt føderering. Større virksomheder har egen brugerstyring, og de kan generelt have behov for god sammenhæng mellem deres egen brugerstyring og ekstern brugerstyring.
+
+De har desuden behov for kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen, hvad en medarbejder gør.
+
+
+Forskellige sektorer har forskelligartede behov:
+
+- Myndigheder er omfattet af reglerne om partsrepræsentation i forvaltningsloven, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
+- Tjenester i den finansielle sektor er underlagt sikkerhedskrav samt krav om verificering af kundeidentiteter,  dels i kraft lovgivning om hvidvask dels i medfør af PSD2 direktivet.
+- Tjenester i spilsektoren er forpligtet ved lov til at anvende stærk autentifikation samt at kontrollere, at identiteten ikke er omfattet af spærrelisten. Tjenesterne har ikke et behov for præcis identifikation med navn.
+- En virksomhed som ”Den Blå Avis/DBA” har brug for at kunne garantere mod svindel, hvilket de aktuelt håndterer ved, at sælgerne og køberne kan blive NemID-valideret. DBA identificerer ikke personerne med CPR, men anvender i stedet certifikatets PID, hvilket kan anses som en privacy-mæssig fordel.
+- Regionerne har mange private aktører som medtjenesteudbydere.
+
+### Inter-føderation
+Infrastruktur på tværnationalt, nationalt, fællesoffentlig og domæne niveau
+
+Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.
+
+
 
 ## Principper
 
@@ -357,16 +385,13 @@ En tjeneste og et it-system er i denne kontekst synonymer for det samme: et styk
 
 ## Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester, hvilket understøtter beskrivelse af eksempelvis føderationer, hvor forskellige parter leverer forskellige tjenester. Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester (hovedsageligt) indenfor PKI-området:
-- Generering, kontrol og validering af elektroniske signaturer, elektroniske segl eller elektroniske tidsstempler, elektroniske registrerede leveringstjenester og certifikater relateret til disse tjenester
-- Generering, kontrol og validering af certifikater for webstedsautentifikation, eller
-- Bevaring af elektroniske signaturer, segl eller certifikater relateret til disse tjenester
+- Certifikatudstedere (CA)
+- Tidsstemplingsservices
+- Valideringstjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
+- Tjenester til bevaring af signaturer, segl og certifikater
+- Elektroniske registrerede leveringstjenester.
 
-
-eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur.
-
-For eIDAS tillidstjenesterne findes et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
-
- En udbyder, som ønsker at tilbyde en kvalificeret tillidstjeneste i eIDAS-regi, skal sende en ansøgning til tilsynsmyndigheden (Digitaliseringsstyrelsen i Danmark) om dette. Udbyderen skal også sende en overensstemmelsesvurderingsrapport udstedt af et overensstemmelsesvurderingsorgan . Hvis Digitaliseringsstyrelsen vurderer, at udbyderen og de tillidstjenester som udbydes opfylder kravene i eIDAS-forordningen, optages de på en national liste (positivliste) med tildelt status som kvalificeret. Denne liste indeholder oplysninger om kvalificerede udbydere af tillidstjenester og de tjenester som udbydes. Der er også en bestemmelse om tilbagekaldelse af en status som kvalificeret, hvis kravene i forordningen ikke længere er opfyldt af udbyderen.
+eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes endvidere et særligt niveau (kvalificerede tillidstjenester), som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
 De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
