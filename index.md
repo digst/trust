@@ -118,18 +118,18 @@ En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for
 
 En udbyder udfører adgangskontrol, som indgår i en forretningstjeneste. Det gør udbyderen for at sikre sig, at brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.
 
-En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i praksis. Det kan omhandle aftaler om, hvem af en virksomheds medarbejder der må anvendes en tjeneste hos myndighed. Eller det kan være mere generelle aftaler om hvilke elektroniske identifikationsmidler en udbyder vil acceptere.
+En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i praksis. Det kan omhandle aftaler om, hvem af en virksomheds medarbejdere der må anvende en tjeneste hos myndighed.
 
 
 
 <figure>
 <img src="centrale.svg" width="80%"/>
-<figcaption>Centrale begreber omkring bugerstyring</figcaption>
+<figcaption>Centrale begreber omkring brugerstyring</figcaption>
 </figure>
 
 
 
-<dfn>Forretningstjeneste</dfn> eksternt synligt funktionalitet, der giver mening for omgivelserne [ARCHI].
+<dfn>Forretningstjeneste</dfn> Eksternt synligt funktionalitet, der giver mening for omgivelserne.
 
 <dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger brugere må udføre i en tjeneste, eller hvilke informationer brugere må få adgang til.
 
@@ -140,7 +140,7 @@ Det Europæiske Interoperabilitets Rammeværk, Den Fælles Offentlige Digitalise
 
 <figure>
 <img src="Sammenhængende tjenster.svg" width="65%"/>
-<figcaption>Sammenhængende forretningstjenster</figcaption>
+<figcaption>Sammenhængende forretningstjenester</figcaption>
 </figure>
 
 En sådan vision stiller særlig krav til brugerstyring. Brugerstyring sker ikke alene når en bruger anvender den tværgående tjeneste, men vil gentages hos hver af den understøttende services.
@@ -157,11 +157,11 @@ Føderationer er en forudsætning for referencearkitekturens adskillelse af brug
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
-2020-udgaven af Referencearkitektur for brugerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
+Denne udgave af Referencearkitektur for brugerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
 
 En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.
 
-2020-udgaven af referencearkitekturen godkendtes i version 2.0 i Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i Den fællesoffentlige digitale arkitektur (FDA).[Skal opdateres ved godkendelse]
+Referencearkitekturen godkendtes i version 1.1 i Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i Den fællesoffentlige digitale arkitektur (FDA).[Skal opdateres ved godkendelse]
 
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
@@ -199,68 +199,34 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 effektiv datadeling er det konkrete ophæng for denne referencearkitektur. [TODO, check ophæng]
 
 
-## Temaer
+## Forretningsmæssige behov
 
-[Vi bør kunne samle nedenstående i temaer... her et bud på overskrifts niveau]
+Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere. Omfanget for refe¬rencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
-
-### Sammenhængende tjenester
-
-En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
-
-- Mulighed for samme identifkationsmiddel på tværs af tjenester og sektorer
-
-- Effektiv adgang til både interne og eksterne tjenester.
-
-- Effektiv håndtering af rettigheder.
-
+### Lettilgængelige sammenhængende tjenester
+Borgere og medarbejdere forventer, at tjenester er let tilgæn¬gelige og sammenhængende. Let tilgængeligt hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
+Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker adgang til denne tjeneste. Da brug af tjenester fra tjenester er stigende, er der be¬hov for ensartede metoder til at tilgå disse tjenester.
+eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notifice¬ret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
 
 ### Retten til privatliv
+Der skal være mulighed for en højere grad af kontrol over, hvilke data tje¬nester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet mv.
+I forbindelse med det nye MitId, kan private og erhvervsmæssige identiteter forbindes. For at sikre retten til privatliv er denne funktionalitet beskyttet af et dobbelt frivillighedsprincip, hvor forbindelsen kun kan bruges, hvis både medarbejder og virksomhed siger god for det. Ref[Se datatilsynets vejledning, udspring af GDPR]
 
-det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.v [Se datatilsynets vejledning, udspring af GDPR]
-
-- Balancere virksomheds behov/pligt/ret for logning og medarbejders ret til ikke at blive overvåget
-
-En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
-
-En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
-
+### Sikkerhed og tillid
+Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data, som kræver høj sikkerhed, mens andre er mindre kritiske og derfor ikke med lavere sikkerhedsbehov.
+Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester der udbydes og den sikkerhed de beskyttes med. Når tjenester bliver mere sammensatte skal denne tillid kunne opfyldes af alle tjenester der indgår.  
+Delegering og fuldmagt
+En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig.
+Myndigheder er omfattet af reglerne om partsrepræsentation, og deres tjene¬ster skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
+I forhold automatiseringsrobotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en automatiseringsrobots identitet.
 
 ### Effektivitet
-
-[Rigsrevisions formulering omkring forvaltningsrevision....sparsommelighed, effektivitet og produktivitet]
-
-Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse, Offentligt-privat samarbejde
-
-
-- Valg af idmidler efter personlige præferencer
-
-- fair konkurrence og mulighed for at tjene penge
-
-- Behov for forskellige løsninger...
-
-Nogle medarbejdere anvender deres akkreditiv mange gange i løbet af en arbejdsdag. For denne brugergruppe er det derfor væsentligt, at det er let og effektivt at anvende sit akkreditiv.
-
-Små og mellemstore virksomheder, foreninger og anpartsselskaber med flere medarbejdere har behov for enkel brugeradministration, hvor rettigheder set med brugernes øjne administreres  ét samlet sted for offentlige selvbetjeningsløsninger.
-
-Større virksomheder har brug for forskellige løsninger, der både kan omfatte manuel indtastning, digital provisionering og eventuelt føderering. Større virksomheder har egen brugerstyring, og de kan generelt have behov for god sammenhæng mellem deres egen brugerstyring og ekstern brugerstyring.
-
-De har desuden behov for kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen, hvad en medarbejder gør.
-
-
-Forskellige sektorer har forskelligartede behov:
-
-- Myndigheder er omfattet af reglerne om partsrepræsentation i forvaltningsloven, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
-- Tjenester i den finansielle sektor er underlagt sikkerhedskrav samt krav om verificering af kundeidentiteter,  dels i kraft lovgivning om hvidvask dels i medfør af PSD2 direktivet.
-- Tjenester i spilsektoren er forpligtet ved lov til at anvende stærk autentifikation samt at kontrollere, at identiteten ikke er omfattet af spærrelisten. Tjenesterne har ikke et behov for præcis identifikation med navn.
-- En virksomhed som ”Den Blå Avis/DBA” har brug for at kunne garantere mod svindel, hvilket de aktuelt håndterer ved, at sælgerne og køberne kan blive NemID-valideret. DBA identificerer ikke personerne med CPR, men anvender i stedet certifikatets PID, hvilket kan anses som en privacy-mæssig fordel.
-- Regionerne har mange private aktører som medtjenesteudbydere.
-
-### Inter-føderation
-Infrastruktur på tværnationalt, nationalt, fællesoffentlig og domæne niveau
-
-Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.
-
+Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det vurderes om systemer og processer understøtter sparsommelighed, produktivitet og effektivitet. Private tjenester vil på den anden side være underlagt et ønske om profit. Alle tjenester har derfor et behov for at være effektive, hvilket kan udtrykkes i behov som:
+-	Enkel og samlet administration af brugere.
+-	Sammenhæng imellem brugerstyring i forskellige organisation både private og offentlige.
+-	En sammenhængende brugerstyring, så tjenester kan implementeres effektivt.
+-	Kontrol af medarbejdernes an¬vendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen.
+Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring. Der er derfor en god business case, at adskille forretningstjeneste og bruge brugerstyring som en tjeneste.
 
 
 ## Principper
@@ -1370,7 +1336,7 @@ kritisk masse i udviklingen, og derved bygge dem stærkere end en enkelt udbyder
 af en forretningstjeneste selv har ressourcer eller viden til at etablere. I NSIS standarden håndteres tillidskæder ved, at det er det svageste led i kæden, som definerer det samlede sikringsniveau. En broker på sikringsniveau NSIS Betydelig kan fx ikke formidle autentifikationer på sikringsniveau NSIS Høj, selvom brugeren måtte kunne autentificere sig på niveau Høj.
 
 <figure>
-<img src="billede19.PNG" />
+<img src="billede19.png" />
 <figcaption>Sikkerhedskæder i fødereret brugerstyring</figcaption>
 </figure>
 
