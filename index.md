@@ -281,9 +281,9 @@ De mest relevante love og forordninger (med særligt fokus på brugerstyring og 
 
 Dertil kan der være særregulering inden for visse domæner som fx sundhedsområdet.
 
-Som eksempler på hvordan ovvennævnte regulering påvirker brugerstyring kan nævnes:
-- Databestyttelsesforordningen stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering. En af det helt centrale sikkerhedsforanstaltninger i forretningstjenester, som udstiller personoplysninger, er adgangskontrol og udforming af adgangspolitikker. Dermed kan efterlevelse af denne referencearkitektur understøtte compliancearbejdet. Bemærk at der findes en lang række øvrige krav i GDPR, som håndteres med andre tilgange end brugerstyring.
-- eIDAS-forordningen stiller i artikel 6 krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt (forudsat det er på et tilstrækkeligt sikringsniveau). Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med alle øvrige EU-landes nationale identifikationsordninger. Denne referencearkitektur beskriver principperne for, hvordan brugerstyring kan håndteres i stor skala.
+Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan nævnes:
+- Databestyttelsesforordningen stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
+- eIDAS-forordningen stiller i artikel 6 krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt. Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med alle øvrige EU-landes nationale identifikationsordninger.
 - Forvaltningsloven stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller fuldt digitale løsninger, er nødt til at kunne håndtere digitale fuldmagter.
 
 ## Sikkerhed
@@ -304,13 +304,13 @@ Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig me
 
 NSIS giver mulighed for:
 
-- Sammenhængende løsninger på tværs af domæner og føderationer via gensidig tillid (sammenkobling af siloer).
+- Sammenhængende løsninger på tværs af domæner og føderationer via gensidig tillid.
 - En fælles forståelse samt koordinering/styring af sikringsniveauer.
 - Transparens gennem tydelig beskrivelse af krav til parterne og regler for deres adfærd.
 - En flerleverandørstrategi baseret på outsourcing af funktioner med mulighed for private aktører - hvor det er ønskeligt og økonomisk fordelagtigt.
 - Veldefineret kontrol og styring gennem anmeldelse, revision og tilsyn.
 
-Når en bruger autentificerer sig mod en forretningstjeneste, vil det aktuelle sikringsniveau for autentifikationen typisk blive fastlagt og kommunikeret til forretningstjenesten. Forretningstjenesten kan så på baggrund af sikringsniveauet (samt øvrige attributter om brugeren) beslutte, hvilken adgang brugeren kan få i tjenesten. Sikringsniveauet er dermed et input til adgangskontrollen.
+Når en bruger autentificerer sig mod en forretningstjeneste, vil det aktuelle sikringsniveau for autentifikationen typisk blive fastlagt og kommunikeret til forretningstjenesten. Forretningstjenesten kan så på baggrund af sikringsniveauet, samt øvrige attributter om brugeren, beslutte, hvilken adgang brugeren kan få i tjenesten.
 
 
 ## Fællesoffentlige arkitekturprincipper og -regler
@@ -325,7 +325,7 @@ Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres
 
 # Forretningsarkitektur
 
-Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere af digitale løsninger. Det er således en fælles betegnelse for de foranstaltninger som sikrer, at de rette brugere får adgang til de rette it-systemer (herunder data) - og alle andre afvises. Brugerstyring involverer dels *administration* af brugeridentiteter (før de tilgår it-systemer), herunder registrering og udstedelse af identifikationsmidler, beskrivelse af attributter i form af egenskaber, roller, relationer mv. og dels en 'run-time' del, når brugere tilgår it-systemer, som bl.a. involverer autentifikation og udførelse af adgangskontrol.
+Brugerstyring dækker opgaver og funktioner i forbindelse med håndtering af brugere af digitale løsninger. Det er således en fælles betegnelse for de foranstaltninger som sikrer, at de rette brugere får adgang til de rette it-systemer (herunder data) - og at alle andre afvises. Brugerstyring involverer dels *administration* af brugeridentiteter (før de tilgår it-systemer), herunder registrering og udstedelse af identifikationsmidler, beskrivelse af attributter i form af egenskaber, roller, relationer mv. og dels en 'run-time' del, når brugere tilgår it-systemer, som bl.a. involverer autentifikation og udførelse af adgangskontrol.
 
 Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (røde kasser) og kontekst i form af blå og grå kasser.
 
@@ -350,7 +350,8 @@ En tjeneste og et it-system er i denne kontekst synonymer for det samme: et styk
 
 
 ## Om tillidstjenester og eIDAS
-I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester, hvilket understøtter beskrivelse af eksempelvis føderationer, hvor forskellige parter leverer forskellige tjenester. Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester (hovedsageligt) indenfor PKI-området:
+I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner til  understøttelse af brugerstyring. Med denne terminologi opnås et tydeligt skel til forretningstjenester.
+Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester (hovedsageligt) indenfor PKI-området:
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
 - Valideringstjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
@@ -367,11 +368,11 @@ De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 </figure>
 <br>
 
-Det er som tidligere nævnt vigtigt at være opmærksom på, at eIDAS-forordningen stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en national eID-løsning, skal det være muligt at autentificere sig med anmeldte eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I kontekst af figuren ovenfor kan man sige, at eIDAS dikterer nogle elementer af visse (offentlige) tjenesters adgangspolitik, nemlig at tjenesterne skal være tilgængelige for andre EU-landes borgere og virksomheder.[[eIDAS]]
+Det er som tidligere nævnt vigtigt at være opmærksom på, at eIDAS-forordningen stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en national eID-løsning, skal det være muligt at autentificere sig med anmeldte eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I kontekst af figuren ovenfor kan man sige, at eIDAS dikterer nogle elementer af visse (offentlige) tjenesters adgangspolitik, nemlig at tjenesterne skal være tilgængelige for andre EU-landes borgere og virksomheder. [[eIDAS]]
 
 
 ## Forretningsmæssig kontekst
-Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her opfattes tillidstjenesterne ofte som noget infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af en tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og styring eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidsjeneste). NSIS definerer tre sikringsniveauer for for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret.
+Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her opfattes tillidstjenesterne ofte som noget infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af en tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og styring eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidstjeneste). NSIS definerer tre sikringsniveauer for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret.
 
 Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mellem udbydere af tillidstjenester og forretningstjenester.
 
