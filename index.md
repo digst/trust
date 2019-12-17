@@ -139,8 +139,8 @@ En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i p
 Det Europæiske Interoperabilitets Rammeværk, Den Fælles Offentlige Digitaliseringsstrategi og Den fællesoffentlige digitale arkitektur beskriver en model for 'integrated service delivery' eller 'sammenhænge offentlige tjenester'. Grundideen er et opgør med isolerede digitale tjenester hos den enkelte myndighed, og et skift til bedre og bredere tjenester hvor en bruger oplever en samlet service på tværs af mange offentlige myndigheder. Et eksempel herpå er den sammenhængende brugerrejse Flytteguiden på borger.dk, der samler informationer og gøremål fra forskellige myndigheder og private virksomheder, som borgerne skal tage stilling til, når de flytter.
 
 <figure>
-<img src="integrated_service_delivery.svg" width="65%"/>
-<figcaption>[Integrated Service Delivery]</figcaption>
+<img src="Sammenhængende tjenster.svg" width="65%"/>
+<figcaption>Sammenhængende tjenester</figcaption>
 </figure>
 
 En sådan vision stiller særlige krav til brugerstyring. Brugerstyring sker ikke alene, når en bruger anvender den tværgående tjeneste, men vil gentages hos hver af de understøttende services.
@@ -364,7 +364,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 
 
 <figure>
-<img src="kontekst.svg" />
+<img src="Oversigt brugerstyring.svg" />
 <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
 <br>
@@ -410,7 +410,7 @@ Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og
 Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mellem udbydere af tillidstjenester og forretningstjenester.
 
 <figure>
-<img src="usecases.svg" width="85%"/>
+<img src="anvendelse.svg" width="85%"/>
 <figcaption>Samarbejde mellem tillidstjenester og forretningstjenester</figcaption>
 </figure>
 </div>
@@ -753,7 +753,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 
 
 <figure>
-<img src="firkant.svg" width="80%"/>
+<img src="Udvalgte forretningsobjekter.svg" width="80%"/>
 <figcaption>Udvalgte forretningsobjekter med særlig relevans for brugerstyring og adgangskontrol </figcaption>
 </figure>
 
@@ -1001,7 +1001,7 @@ I en føderation mellem en række sektorer, der hver har deres sikkerhedsdomæne
 En ofte forekommende problematik er, at en forretningstjeneste har brug for at kalde videre til andre forretningsservices for at service en bruger. Dette kan fx være en portal som borger.dk, der tilgås af slutbrugere, har brug for opslag i en bagvedliggende service, der kan levere data om en bestemt borger (fx Digital Post). Nedenstående figur illustrerer et simpelt eksempel, hvor der kun er to forretingstjenester i spil:
 
 <figure>
-<img src="idws-figur.svg" />
+<img src="Kald mellem forretningstjenster.svg" />
 <figcaption>Kald mellem forretningstjenester</figcaption>
 </figure>
 <br>
@@ -1039,7 +1039,7 @@ Eksemplet tager udgangspunkt i, at brugeren logger på en web-portal (tjeneste A
 Scenariet er illustreret på nedenstående figur:
 
 <figure>
-<img src="idws-scenarie.svg" />
+<img src="Identitetsbaseret kald.svg" />
 <figcaption>Identitetsbaseret kald via tokenveksling</figcaption>
 </figure>
 <br>
