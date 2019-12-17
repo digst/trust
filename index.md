@@ -1,3 +1,7 @@
+% Referencearkitektur for brugerstyring 2020
+% Digitaliseringsstyrelsen
+% December 2019
+
 <style>
 @media print {
   html { margin: 0cm 2cm 2cm 0cm; font-size: 80%; }
@@ -65,7 +69,7 @@ Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige 
 
 2017-udgaven af referencearkitekturen omfattede brugerstyring af personer. I denne udgave af referencearkitekturen er der yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
 
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler.
+[Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler.]
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -77,9 +81,6 @@ Siden første udgave af referencearkitekturen er De fællesoffentlige regler for
 ## Formål, anvendelse og målgrupper
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
-[Opdatering skal også indarbejde andet FDA arbejde som fx Modelregler ]
-[bidrage til tværgående arkititekturarbejde hos andre domæner]
-
 
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
 Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
@@ -90,10 +91,8 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
 
 - Strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer. Kapitel 1 og 2, der indeholder introduktion til brugerstyring, strategi, centrale begreber og principper er særligt rettet mod denne målgruppe.
-- [dem der laver tværgående arkitektur indenfor domæner]
+- Arkitekter der udarbejder domænearkitekturer på basis denne refferencearkitektur.
 - Projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring. Ud over de to første kapitler er kapitel 3 og 4, der handler om forretningsarkitektur og teknisk arkitektur særligt rettet mod denne målgruppe.
-
-[Tilføj for hver målgruppe hvad de særligt skal forholde sig til, så kan vi slette læsevejledning]
 
 ## Omfang og afgrænsning
 Referencearkitekturen for brugerstyring omfatter offentlige tjenester, men referencearkitekturen kan med fordel også anvendes til ikke offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
@@ -166,10 +165,6 @@ Referencearkitektur for brugerstyring godkendtes i version 1.1 af Styregruppe fo
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
 
-Den tidligere version af denne referencearkitektur blev udarbejdet på baggrund af "Referencearkitektur for Informationssikkerhed (på sundhedsområdet)" [[NSI]].
-
-Version 1.1 (refererer til) to andre fællesoffentlige referencearkitekturer "Referencearkitektur for deling af data og dokumenter" [[RA3D]] og "Referencearkitektur for selvbetjening" [[RAS]].
-
 En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?]
 
 [I bilag [XX] kan se liste over identificerede offentlige it-løsninger der realisere nogle af de applikationsroller og -services der beskrives i dette dokument]
@@ -179,6 +174,7 @@ En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyrin
 Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af Den fællesoffentlige digitale arkitektur og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020.
 
 I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
+
 -	Rød tekst: At et element eller en relation ejes og defineres i denne referencearkitekturs begrebsmodel
 -	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur eller i lovgivning.
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
@@ -189,78 +185,48 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 
 Referencearkitekturen udmønter og understøtter beslutninger i Den fællesoffentlige digitaliseringsstrategi 2016-2020. Strategien har tre, overordnede målsætninger:
 
-— Det digitale skal være let, hurtigt og sikre god kvalitet
+- Det digitale skal være let, hurtigt og sikre god kvalitet
 
-— Offentlig digitalisering skal give gode vilkår for vækst
+- Offentlig digitalisering skal give gode vilkår for vækst
 
-— Tryghed og tillid skal i centrum
+- Tryghed og tillid skal i centrum
 
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 8.1: Gode data og
 effektiv datadeling er det konkrete ophæng for denne referencearkitektur.
 
-## Temaer
+## Forretningsmæssige behov
+Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere. Omfanget for refe¬rencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
-[Vi bør kunne samle nedenstående i temaer... her et bud på overskrifts niveau]
-
-
-### Sammenhængende tjenester
-
-En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig. For de borgere, som afgiver og får fuldmagt, er der behov for løsninger til at administrere fuldmagter, som giver et overblik på tværs af tjenester, så brugeren ikke skal logge ind i mange tjenester for at se eller administrere fuldmagter. Det tilsvarende gælder for samtykke.
-
-- Mulighed for samme identifkationsmiddel på tværs af tjenester og sektorer
-
-- Effektiv adgang til både interne og eksterne tjenester.
-
-- Effektiv håndtering af rettigheder.
+### Lettilgængelige sammenhængende tjenester
+Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængeligt hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
+Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker adgang til denne tjeneste. Da brug af tjenester fra tjenester er stigende, er der  for ensartede metoder til at tilgå disse tjenester.
+eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notifice¬ret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
 
 
 ### Retten til privatliv
 
-det *dobbelte frivillighedsprincip*, hvor et privat identifikationsmidddel kun anvendes i erhvervssammenhæng, hvis *både* medarbejder og virksomhed siger god for det.v [Se datatilsynets vejledning, udspring af GDPR]
+Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet mv.
+I forbindelse med det nye MitId, kan private og erhvervsmæssige identiteter forbindes. For at sikre retten til privatliv er denne funktionalitet beskyttet af et dobbelt frivillighedsprincip, hvor forbindelsen kun kan bruges, hvis både medarbejder og virksomhed siger god for det. Ref[Se datatilsynets vejledning, udspring af GDPR]
 
-- Balancere virksomheds behov/pligt/ret for logning og medarbejders ret til ikke at blive overvåget
+### Sikkerhed og tillid
+Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data, som kræver høj sikkerhed, mens andre er mindre kritiske og derfor ikke med lavere sikkerhedsbehov.
+Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester der udbydes og den sikkerhed de beskyttes med. Når tjenester bliver mere sammensatte skal denne tillid kunne opfyldes af alle tjenester der indgår.  
 
-En stor del af de offentlige tjenester rummer fortrolige eller personhenførbare data, som er dækket af sikkerhedskrav i persondatareguleringen, og som dermed skal opnå et tilstrækkeligt sikringsniveau. Flertallet af offentlige tjenester har behov for at kende borgerens CPR-nummer og i nogle tilfælde medarbejderens - dette gælder eksempelvis på sundhedsområdet. Andre offentlige tjenester har ikke samme behov / sikkerhedskrav og kan nøjes med et lavere sikringsniveau.
-
-En række tjenester har lavere sikkerhedskrav end ovennævnte, men har stadig brug for sikker identifikation med færre oplysninger om brugeren. Det er fx ehandelstjenester, der har brug for at kende borgerens adresse eller tjenester, eller der har brug for at kende brugerens alder (fx over/under 18 år). For disse tjenester er der økonomiske fordele ved kun at kende ikke-fortrolige data, da der i så fald ikke skal anvendes ressourcer på at sikre fortrolige data. Dette er ligeledes i overensstemmelse med dataminimeringsprincippet i GDPR.
-
+### Delegering og fuldmagt
+En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig.
+Myndigheder er omfattet af reglerne om partsrepræsentation, og deres tjenester skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
+I forhold automatiseringsrobotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en automatiseringsrobots identitet.
 
 ### Effektivitet
 
-[Rigsrevisions formulering omkring forvaltningsrevision....sparsommelighed, effektivitet og produktivitet]
+Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det vurderes om systemer og processer understøtter sparsommelighed, produktivitet og effektivitet. Private tjenester vil på den anden side være underlagt et ønske om profit. Alle tjenester har derfor et behov for at være effektive, hvilket kan udtrykkes i behov som:
 
-Markedsliggørelse gennem enartet regulering af tillidstjenester og deres anvendelse, Offentligt-privat samarbejde
+- Enkel og samlet administration af brugere.
+- Sammenhæng imellem brugerstyring i forskellige organisation både private og offentlige.
+- En sammenhængende brugerstyring, så tjenester kan implementeres effektivt.
+- Kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen.
 
-
-- Valg af idmidler efter personlige præferencer
-
-- fair konkurrence og mulighed for at tjene penge
-
-- Behov for forskellige løsninger...
-
-Nogle medarbejdere anvender deres akkreditiv mange gange i løbet af en arbejdsdag. For denne brugergruppe er det derfor væsentligt, at det er let og effektivt at anvende sit akkreditiv.
-
-Små og mellemstore virksomheder, foreninger og anpartsselskaber med flere medarbejdere har behov for enkel brugeradministration, hvor rettigheder set med brugernes øjne administreres  ét samlet sted for offentlige selvbetjeningsløsninger.
-
-Større virksomheder har brug for forskellige løsninger, der både kan omfatte manuel indtastning, digital provisionering og eventuelt føderering. Større virksomheder har egen brugerstyring, og de kan generelt have behov for god sammenhæng mellem deres egen brugerstyring og ekstern brugerstyring.
-
-De har desuden behov for kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen, hvad en medarbejder gør.
-
-
-Forskellige sektorer har forskelligartede behov:
-
-- Myndigheder er omfattet af reglerne om partsrepræsentation i forvaltningsloven, og deres tjenester skal derfor understøtte anvendelse af digital fuldmagt eller alternativt etablere manuelle løsninger til partsrepræsentation.
-- Tjenester i den finansielle sektor er underlagt sikkerhedskrav samt krav om verificering af kundeidentiteter,  dels i kraft lovgivning om hvidvask dels i medfør af PSD2 direktivet.
-- Tjenester i spilsektoren er forpligtet ved lov til at anvende stærk autentifikation samt at kontrollere, at identiteten ikke er omfattet af spærrelisten. Tjenesterne har ikke et behov for præcis identifikation med navn.
-- En virksomhed som ”Den Blå Avis/DBA” har brug for at kunne garantere mod svindel, hvilket de aktuelt håndterer ved, at sælgerne og køberne kan blive NemID-valideret. DBA identificerer ikke personerne med CPR, men anvender i stedet certifikatets PID, hvilket kan anses som en privacy-mæssig fordel.
-- Regionerne har mange private aktører som medtjenesteudbydere.
-
-### Inter-føderation
-Infrastruktur på tværnationalt, nationalt, fællesoffentlig og domæne niveau
-
-Etablerede tjenester har behov for kontinuitet (bagudkompabilitet), idet der kan være store omkostninger ved at ændre integrationer til tværgående brugerstyringsløsninger.
-
-
+Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring. Der er derfor en god business case, at adskille forretningstjeneste og bruge brugerstyring som en tjeneste.
 
 ## Principper
 
@@ -276,7 +242,7 @@ Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forplig
 
 ### Harmoniserede tillidstjenester
 
-Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurrencebaseret marked. (Se mere under afsnittet områder for standardisering)
+Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurencebaseret marked. (Se mere under afsnittet områder for standardisering)
 
 ## Vision
 
