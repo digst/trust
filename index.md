@@ -206,6 +206,11 @@ eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådi
 ### Retten til privatliv
 
 Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet mv.
+En tjeneste har ikke altid behov for at kende identifikation af brugeren for at kunne afgøre dennes adgang til en service.  Tillidstjensten skal her nøjes med at sende relevante attributter til tjenesten, dataminimeringsprincippet.
+
+- Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
+- Nogle tjenester har blot brug for om brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
+
 I forbindelse med det nye MitId, kan private og erhvervsmæssige identiteter forbindes. For at sikre retten til privatliv er denne funktionalitet beskyttet af et dobbelt frivillighedsprincip, hvor forbindelsen kun kan bruges, hvis både medarbejder og virksomhed siger god for det. Ref[Se datatilsynets vejledning, udspring af GDPR]
 
 ### Sikkerhed og tillid
@@ -1314,7 +1319,7 @@ Arkitekturmodellen betyder – som for betalingskort – at brugerne kan anvende
 
 Anvendelse af en broker-baseret arkitektur åbner desuden mulighed for, at tjenesteudbydere kan få mere relevante og branchespecifikke attributter for den konkrete kontekst, uden at registreringstjenester og akkreditivudstedere skal akkumulere en lang række informationer om brugerne. Dette kendes allerede i dag fra sundhedssektoren, hvor SOSI STS’erne fungerer som brokere og tilfører information om brugerne fra eksempelvis Sundhedsstyrelsens autorisationsregister.
 
-[Uddrag af dette afsnit kan bruges i 2.1!]
+[Uddrag af dette afsnit er brugt i 2.1!]
 Det er langt fra altid, at en rettighedstjeneste eller tjenesteudbyder har brug for entydigt at kende identifikation af brugeren/serviceaftageren for at kunne afgøre dennes adgang til en service. Ved et køb af billet til bus eller tog er der, som tidligere nævnt, et behov for at levere et bevis for betaling, men ikke nødvendigvis for kundens identitet. Et andet eksempel er løsninger, der blot har brug for at vide, om brugeren er myndig (alder>18) eller vedkommendes bopælskommune. Her BØR login-tjenesten/identitetsbrokeren nøjes med at sende relevante attributter videre til tjenesten og ikke data, der afslører brugerens identitet. Dette princip kaldes ofte for ”minimal disclosure” (dataminimeringsprincippet) og er altså et udtryk for, at man af hensyn til brugerens privatliv sender den minimale mængde af information, som tjenesten har behov for. Som eksempel på denne tendens benytter OIOSAML 3.0 profilen som udgangspunkt et tjenesteudbyderspecifikt UUID som *identifier* for brugeren i den udstedte billet for at forebygge muligheden for, at en bruger kan spores på tværs af tjenester. For tjenester, der har lovhjemmel og relevant behov, kan der dog stadig leveres en CPR-attribut i en OIOSAML 3.0 Assertion.
 
 I forhold til en infrastruktur med flere registreringstjenester og akkreditivudstedere vil anvendelse af identitetsbrokere skjule kompleksiteten for den enkelte tjenesteudbyder. Anvendelse af en broker vil således minimere påvirkning af tjenesteudbyder ved ændringer i form af teknologiskift hos de eksisterende autentifikationstjenester og etablering af nye autentifikationstjenester.
