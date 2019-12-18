@@ -195,12 +195,12 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 effektiv datadeling er det konkrete ophæng for denne referencearkitektur.
 
 ## Forretningsmæssige behov
-Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere. Omfanget for refe¬rencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere. Omfanget for referencearkitekturen for brugerrettighedsstyring er især behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
 ### Lettilgængelige sammenhængende tjenester
 Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængeligt hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
 Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker adgang til denne tjeneste. Da brug af tjenester fra tjenester er stigende, er der  for ensartede metoder til at tilgå disse tjenester.
-eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notifice¬ret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
+eIDAS stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
 
 
 ### Retten til privatliv
@@ -266,6 +266,7 @@ Denne version af referencearkitektur for brugerstyring ligger i forlængelse af 
 
 ## Værdiskabelse
 Ved af efterleve principper og mønstre i denne referencearkitektur opnås værdiskabelse på en række områder:
+
 - Det bliver hurtigere og billigere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området.
 - Tab som følge af svindel og misbrug nedbringes, når sikkerheden øges gennem profesionelle, dedikerede tillidstjenester.
 - De adminstrative udgifter til administration af brugere reduceres, når brugere kan administreres samlet og effektivt frem for i en række adskilte siloer.
