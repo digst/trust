@@ -69,7 +69,7 @@ Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige 
 
 2017-udgaven af referencearkitekturen omfattede brugerstyring af personer. I denne udgave af referencearkitekturen er der yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
 
-[Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler.]
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler [Figurnr. indsættes]. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -83,21 +83,19 @@ Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og st
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen.
-Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og standarder for løsninger.
-Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer.
-[anvendes direkte i nogle områder, indirekte gennem domænearkitektur?]
-[henvisning til hvidbogen]
+Referencearkitekturen skal understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Referencearkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om arkitektur og digitalisering, hvor det fremgår, at fællesoffentlige referencearkitekturer "...definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
+Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
 
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
 
 - Strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer. Kapitel 1 og 2, der indeholder introduktion til brugerstyring, strategi, centrale begreber og principper er særligt rettet mod denne målgruppe.
-- Arkitekter der udarbejder domænearkitekturer på basis denne refferencearkitektur.
 - Projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring. Ud over de to første kapitler er kapitel 3 og 4, der handler om forretningsarkitektur og teknisk arkitektur særligt rettet mod denne målgruppe.
+- Arkitekter der udarbejder domænearkitekturer på basis denne referencearkitektur. De vil have særlig opmærksomhed på kapitel 3 og 4.
 
 ## Omfang og afgrænsning
 Referencearkitekturen for brugerstyring omfatter offentlige tjenester, men referencearkitekturen kan med fordel også anvendes til ikke offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
 
-Arkitekturen omfatter også rollen som leverandør af tillidstjenester - registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata og login-systemer.
+Arkitekturen omfatter også rollen som leverandør af tillidstjenester - registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata samt login-systemer.
 
 Arkitekturen omfatter både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
 
@@ -111,7 +109,6 @@ Med udspring i Digitaliseringspagten er der parallelt med opdateringen af denne 
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
 Intentionen i denne version af referencearkitekturen er at skabe et fælles sprog om brugerstyring, som kan bidrage til at gøre samarbejdet om løsninger lettere. Desuden tilstræbes det, at området bliver mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
-
 
 En forretningstjeneste er "eksternt synligt funktionalitet, der giver mening for omgivelserne". [ARCHI, check om EIRA rammer bedre] Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
 
@@ -163,7 +160,7 @@ En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdater
 Referencearkitektur for brugerstyring godkendtes i version 1.1 af Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i Den fællesoffentlige digitale arkitektur (FDA).[Skal opdateres ved godkendelse]
 
 
-Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende Den fællesoffentlige digitale arkitektur.
+Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende FDA.
 
 En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?]
 
@@ -171,12 +168,12 @@ En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyrin
 
 ## Anvendt metode, notation og signaturforklaring
 
-Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af Den fællesoffentlige digitale arkitektur og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020.
+Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af FDA og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i Sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020.
 
 I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
 
 -	Rød tekst: At et element eller en relation ejes og defineres i denne referencearkitekturs begrebsmodel
--	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur eller i lovgivning.
+-	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitektur
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
 
