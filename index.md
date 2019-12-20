@@ -59,6 +59,7 @@ Markup Shorthands: markdown yes
 Repository: digst/trust
 Inline Github Issues: full
 Logo: digst...
+Slim Build Artifact:
 </pre>
 
 <h1>Fællesoffentlig <br>referencearkitektur for <br>brugerstyring</h1>
@@ -91,7 +92,7 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
 
 - Strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer. Kapitel 1 og 2, der indeholder introduktion til brugerstyring, strategi, centrale begreber og principper er særligt rettet mod denne målgruppe.
-- Arkitekter der udarbejder domænearkitekturer på basis denne refferencearkitektur.
+- Arkitekter der udarbejder domænearkitekturer på basis denne referencearkitektur.
 - Projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring. Ud over de to første kapitler er kapitel 3 og 4, der handler om forretningsarkitektur og teknisk arkitektur særligt rettet mod denne målgruppe.
 
 ## Omfang og afgrænsning
@@ -123,7 +124,7 @@ En bruger og en udbyder vil samarbejde om hvordan adgangskontrollen udføres i p
 
 <figure>
 <img src="centrale.svg" width="80%"/>
-<figcaption>Centrale begreber omkring bugerstyring</figcaption>
+<figcaption>Centrale begreber omkring brugerstyring</figcaption>
 </figure>
 
 
@@ -235,7 +236,7 @@ Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring.
 
 ## Principper
 
-Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
+Referencearkitekturen for brugerstyring benytter og fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol. Som overordnet ramme for disse principper ligger de ti tværoffentlige overordnede principper for forretnings- og it-arkitektur(http://arkitekturguiden.digitaliser.dk/principper/10-overordnede-principper), og hvad der står heri gentages ikke. Det skal her bemærkes, at disse principper opdateres som følge af arbejdet med hvidbogen for den fællesoffentlige rammearkitektur, hvilket kan give anledning til ændringer i kommende udgaver af denne referencearkitektur.
 
 ### Samlet? brugeradministration
 
