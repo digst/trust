@@ -233,7 +233,13 @@ Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring.
 
 ## Principper
 
-Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol.
+Principperne der benyttes i denne referencearkitektur er dels fra den Fællesoffentlige Digitale Arkitektur (FDA), hvorfra en række principper er fremhævet og dels principper fastlagt i forbindelse med denne arkitektur.
+
+
+Vi understøtter særligt...: 3, 4, 5
+
+Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres i forhold til denne referencearkitektur:
+
 
 ### Samlet? brugeradministration
 
@@ -314,17 +320,6 @@ NSIS giver mulighed for:
 - Veldefineret kontrol og styring gennem anmeldelse, revision og tilsyn.
 
 Når en bruger autentificerer sig mod en forretningstjeneste, vil det aktuelle sikringsniveau for autentifikationen typisk blive fastlagt og kommunikeret til forretningstjenesten. Forretningstjenesten kan så på baggrund af sikringsniveauet, samt øvrige attributter om brugeren, beslutte, hvilken adgang brugeren kan få i tjenesten.
-
-
-## Fællesoffentlige arkitekturprincipper og -regler
-
-Den Fællesoffentlige Digitale Arkitektur (FDA) udpeger en række principper til rammesætning og styring af den offentlige digitalisering.
-
-Vi understøtter særligt...: 3, 4, 5
-
-Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres i forhold til denne referencearkitektur:
-
-
 
 # Forretningsarkitektur
 
