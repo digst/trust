@@ -1114,19 +1114,25 @@ Sekvensen i figuren er som følger:
 9.	App'en validerer det modtagne ID token og kan herefter udtrække basale brugerattributter fra dette. Access tokenet kan nu benyttes til at kalde back-end API'er og få adgang til brugerens data i overensstemmelse med de scopes, som brugerne har autoriseret.
 
 
-Ovenstående scenarie fungerer isoleret, men en væsentlig begrænsning er dog, at en konkret app autoriseres mod et konkret API, og at udstedelsen af tokenet typisk ikke sker af en fælles tillidstjeneste men af en 'Authorization Server', der er lokal for API'et. Forretningstjenesten og tokenudstederen (som tillidstjeneste) tilhører således samme organisation. Mønstret skalerer således ikke umiddelbart til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte, at app'ens backend kan kalde videre til andre API'er via princippet om identitetsbaserede services. Der foregår pt. internationalt standardiseringsarbejde på dette område i regi af IETF (se fx 'OAuth 2.0 Token Exchange' https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-19), men standarden foreligger endnu kun som 'draft' og vil endvidere kræve væsentlig profilering (tilsvarende OIO IDWS), før den er anvendelig og interoperabel i fællesoffentligt regi.
+Ovenstående scenarie fungerer isoleret, men en væsentlig begrænsning er dog, at en konkret app autoriseres mod et konkret API, og at udstedelsen af tokenet typisk ikke sker af en fælles tillidstjeneste men af en 'Authorization Server', der er lokal for API'et. Forretningstjenesten er i mangel af fællesoffentlige komponenter tvunget til at etablere sin egen autorisationsserver (som tillidstjeneste), og de tekniske valg (fx tokenformat) for integrationen mellem app og API er typisk proprietære. Mønstret skalerer således ikke til føderationer, hvor apps skal tilgå forskellige back-ends, og standarderne på området understøtter heller ikke direkte, at app'ens backend kan kalde videre til andre API'er via princippet om identitetsbaserede services. Der foregår pt. internationalt standardiseringsarbejde på dette område i regi af IETF (se fx 'OAuth 2.0 Token Exchange' https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-19), men standarden foreligger endnu kun som 'draft' og vil endvidere kræve væsentlig profilering (tilsvarende OIO IDWS), før den er anvendelig og interoperabel i fællesoffentligt regi.
 
-For at opnå en mere konsolideret understøttelse af apps fællesoffentligt, vurderes der at være behov for flg. komponenter og specifikationer:
+Der er således behov for videreudvikling af en arkitektur omhandlende brugerstyring for apps, der understøtter følgende forretningsbehov:
+- Interoperabilitet gennem fælles standarder/profiler som sikrer at apps (serviceanvendere), API'er (serviceudstillere) og tillidstjenester (autorisationsservere og STS'er) udviklet af forskellige parter sømløst kan interagere med hinanden i et økosystem.
+- Fælles trust model for hvordan apps autoriseres til at kalde API'er.
+- Understøttelse af delegeringer og identitetsbaserede kald på tværs af API'er.
+- Mulighed for konsolideret overblik for slutbrugere over deres apps og styring af afgivne samtykker til at apps kan tilgå deres data.
+
+
+Ovenstående forretningsbehov vurderes at kunne blive opfyldt på et teknisk plan gennem udvikling af en række specifikationer og fællesoffentlige komponenter:
 - Profilering af mobil-egnede tokens baseret på JWT, PASETO eller tilsvarende, herunder krav til attributter såvel som sikkerhedsmæssige egenskaber i form af signering, kryptering mv. Profilen skal modsvare de nuværende OIO profiler for SAML tokens i form af 'OIO SAML Profile for Identity Tokens' og 'OIOSAML Web SSO Profile'.
-- Etablering af model for at udtrykke 'scopes' i tokens på en interoperabel måde.
-- Model for håndtering af SSO samt fornyelse og revokering af tokens.
-- Etablering af fællesoffentlig Security Token Service (STS) som kan udstede tokens i henhold til ovenstående (HTTP/JSON) profiler på baggrund af en autorisationsmodel underlagt veldefineret governance. Denne er en pendant til NemLog-in's eksisterende STS, som i dag understøtter udstedelse af OIO IDWS tokens (SAML) gennem WS-Trust protokollen målrettet til SOAP-baserede web service klienter (WSC'er).
-- Etablering af en administrationskomponent under NemLog-in, hvor klienter og API'er til den nye STS kan administreres.
+- Etablering af model for at udtrykke 'scopes' i tokens på en interoperabel måde samt håndtering af Sikringsniveauer (NSIS).
+- Model for håndtering af SSO, sessioner samt fornyelse, revokering og omveksling af tokens.
+- Etablering af fællesoffentlig Security Token Service (STS) som kan udstede tokens i henhold til ovenstående (HTTP/JSON) profiler på baggrund af en trust model underlagt veldefineret governance. Denne er en pendant til NemLog-in's eksisterende STS, som i dag understøtter udstedelse af OIO IDWS tokens (SAML) gennem WS-Trust protokollen målrettet til SOAP-baserede web service klienter (WSC'er).
+- Etablering af en administrationskomponent, hvor klienter og API'er til den nye STS kan administreres.
 - Etablering af en brugergrænseflade ('Mine apps'), hvor slutbrugere kan få et overblik over de apps, de har autoriseret til at tilgå deres (offentlige) data, samt let kan fjerne adgangen for alle apps på en given enhed til brug for situationer, hvor en enhed er mistet. Spærringsfunktionen bør endvidere være understøttet af fællesoffentlig support, idet en mistet mobil enhed samtidig kan bremse brugerens mulighed for at logge ind på en hjemmeside, hvis brugeren anvender sin enhed til NemID/MitID autentifikation.
+- Etablering af fælles politikker for caching af data i apps, levetid for tokens, håndtering af brugersamtykker mv.
 
 Uden ovenstående specifikationer og byggeblokke er der risiko for, at understøttelsen af apps sker gennem isolerede implementeringer, hvor hver applikation etablerer egne byggeblokke og tillidstjenester i mangel på en fælles model. Dette kan føre til manglende sammenhæng og interoperabilitet.
-
-[Noget om sletning af langt levende tokens, når den bagvedliggende rettighed tages væk.]
 
 
 ## Digitale fuldmagter
