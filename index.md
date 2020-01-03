@@ -1144,7 +1144,7 @@ Man kan evt. vælge at lade billetter for robotter indeholde en særlig attribut
 ### Robotter uden føderation
 For forretningstjenester, som ikke understøtter føderationsmodellen (fx mønster 1 eller 2 beskrevet ovenfor), må der anvendes en anden tilgang til understøttelse af softwarerobotter. Her kan en oplagt mulighed være at oprette en særlig 'robotbruger' med brugernavn+kodeord i applikationens lokale brugerkatalog (mønster 1) eller i det fælles directory (mønster 2). Herved optræder robotten som en selvstændig identitet, kan få egne rettigheder tildelt og autentificerer sig med et selvstændigt identifikationsmiddel, der er adskilt fra personbrugere.
 
-Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikation med en bestemt type identifikationsmiddel, som kun må udstedes til mennesker (fx NemID medarbejdercertifikater), er der ikke umiddelbart nogen lette løsninger til at give softwarerobotter adgang til forretningtjenesten. Her må applikation typisk omskrives på den ene eller anden måde.
+Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikation med en bestemt type identifikationsmiddel, som kun må udstedes til mennesker (fx NemID medarbejdercertifikater), er der ikke umiddelbart nogen lette løsninger til at give softwarerobotter adgang til forretningtjenesten. Her må forretningstjenesten typisk omskrives på den ene eller anden måde.
 
 
 ## Brugerstyring for (native) apps
