@@ -66,7 +66,7 @@ Slim Build Artifact:
 
 
 <h2 class="no-num">Forord</h2>
-Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [1].
+Denne referencearkitektur er udarbejdet i sammenhæng med den fællesoffentlige strategi for brugerstyring [Denne skal opdateres eller fjernes, selv strategien passser godt nok, men der direkte link til kan, skal og bør, plus kapitler.] og for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Dermed har den en tæt relation til den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [1].
 
 2017-udgaven af referencearkitekturen omfattede brugerstyring af personer. I denne udgave af referencearkitekturen er der yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
 
@@ -153,7 +153,7 @@ Føderationer er en forudsætning for referencearkitekturens adskillelse af brug
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
-Denne version 1.1 af Referencearkitektur for brugerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra IT Crew og Capgemini.
+Denne version 1.1 af Referencearkitektur for brugerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra ITCrew og Capgemini.
 
 En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.
 
@@ -233,7 +233,12 @@ Når man bygger en forretningstjeneste, er det dyrt selv at bygge brugerstyring.
 
 ## Principper
 
-Referencearkitekturen for brugerstyring fastlægger følgende principper for at styre frem mod en fælles forretnings- og it-arkitektur for det offentliges elektroniske identiteter, autentifikation og adgangskontrol.
+Principperne der benyttes i denne referencearkitektur er dels fra den Fællesoffentlige Digitale Arkitektur (FDA), hvorfra en række principper er fremhævet og dels principper fastlagt i forbindelse med denne arkitektur.
+
+Vi understøtter særligt...: 3, 4, 5
+
+Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres i forhold til denne referencearkitektur:
+
 
 ### Samlet? brugeradministration
 
@@ -314,17 +319,6 @@ NSIS giver mulighed for:
 - Veldefineret kontrol og styring gennem anmeldelse, revision og tilsyn.
 
 Når en bruger autentificerer sig mod en forretningstjeneste, vil det aktuelle sikringsniveau for autentifikationen typisk blive fastlagt og kommunikeret til forretningstjenesten. Forretningstjenesten kan så på baggrund af sikringsniveauet, samt øvrige attributter om brugeren, beslutte, hvilken adgang brugeren kan få i tjenesten.
-
-
-## Fællesoffentlige arkitekturprincipper og -regler
-
-Den Fællesoffentlige Digitale Arkitektur (FDA) udpeger en række principper til rammesætning og styring af den offentlige digitalisering.
-
-Vi understøtter særligt...: 3, 4, 5
-
-Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres i forhold til denne referencearkitektur:
-
-
 
 # Forretningsarkitektur
 
@@ -633,6 +627,8 @@ Mønstret kendes også på nationalt niveau, når eksempelvis en kommunal bruger
 </figure>
 <br>
 
+[Bør figuren også omfatte attributter ?]
+
 Fordel:
 - Mønstret kan håndtere store føderationer uden centrale ankre. Der er mao. stor skalérbarhed.
 - Brokerne håndterer kompleksiteten i infrastrukturen for forretningstjenesten og brugerorganisationen.
@@ -780,8 +776,6 @@ Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
 
 **Bruger af** en ting. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at tingen arver rettigheder fra brugeren.
 
-**Produktansvar** som juridisk enhed har overfor de ting den producerer.
-
 **Delegering** af rettigheder fra en person eller juridisk enhed til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
 
 En applikation der **afvikles på** en enhed, kan få særlige rettigheder på grund af enheden den afvikles på. *< eksempel >*.
@@ -916,41 +910,7 @@ De to tilgange kan sagtens kombineres.
 
 Fordelen ved at at få de attesterede oplysninger om brugeren leveret i et token via push-modellen er, at forretningstjenesten får en løsere kobling til tillidstjenesterne, idet forretningstjenesten typisk ikke skal bekymre sig om, hvilke tillidstjenester der er relevante for den aktuelle bruger, hvor de findes, hvordan der integreres med dem osv. Brokeren [er dette ikke en fordeler i offentlig terminologi ?] vil ofte påtage sig opgaven med at sikre afkobling for forretningstjenester og orkestrere tillidstjenesterne i et domæne (eller mod andre domæner) gennem opslag og omvekslinger af tokens. Omvendt kan det i nogen sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation, hvorfor et naturligt behov for dynamiske opslag kan opstå mens brugeren anvender forretningstjenesten. Det kan også hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i et token, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i GDPR, hvor kun absolut nødvendige oplysninger behandles.
 
-## Attributhåndtering
-Som tidligere nævnt spiller attributter en vigtig rolle i brugerstyring, dels som grundlag for beskrivelse af brugerne, deres egenskaber og deres kontekst, dels som grundlag for håndhævelse af adgangskontrol. I dette afsnit fokuseres på attesterede attributter, hvor en tillidstjeneste udtaler sig om attributter underlagt en eller anden form for governance.
-
-Nedenfor er givet eksempler på forskellige, vigtige kategorier af attributter:
-
-- Identificerende attributter (eller identifikatorer), som beskriver identiteten entydigt i en bestemt kontekst (fx CPR, PID, RID, UUID osv.).
-- Beskrivende attributter om identiteten (fødselsdag, øjenfarve, navn).
-- Attributter, der beskriver relationer (fx 'repræsenterer virksomhed *xyz*', 'forælder til', 'ejer af').
-- Rettighedsrelevante attributter (roller, rettigheder eller indhold af dataafgrænsninger, autorisation af læge/sygeplejerske/o.m.a for sundhedsprofessionelle).
-- Fuldmagter eller samtykker udtrykt som attributter.
-
-Derudover anvendes i nogle sammenhænge informationer om konteksten for en autentifikation som grundlag for adgangskontrol (fx IP-adresse, devicetype, tidspunkt for login, geolokation).
-
-
-I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at forholde sig til attributternes kvalitet. Dette gælder særligt, når attributter anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er der kun fælles rammer for visse attributters kvalitet i form af sikringsniveauerne LoA, IAL, AAL og FAL i National Standard for Identiteters Sikringsniveau (NSIS), mens det for øvrige attributter ofte er underforstået af sammenhængen, hvilken kvalitet, der er gældende. En simpel (men primitiv) mekanisme kan være at associere attributkvaliteten med den tillidstjeneste, der har attesteret den. Men her kan der opstå udfordringer, når attributter formidles gennem kæder med flere led og omveksles mellem tokens, idet det for slutmodtageren bliver mere uklart, hvem der oprindeligt udtalte sig om en bestemt attribut. I stedet er det bedre eksplicit at påstemple yderligere oplysninger om attributtens kvalitetsegenskaber fx ved henvisning til en klassifikation eller lignende mekanisme, så denne information bevares gennem tillidskæden.
-
-Det er ligeledes vigtigt, at den fulde livscyklus for attributter kan håndteres, idet værdierne kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et certifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
-
-
-I det fremadrettede arbejde med fællesoffentlig brugerstyring vurderes der at være behov for at yderligere analyserer i forhold til fælles standarder for attributters kvalitet (ud over dem, som er beskrevet i NSIS). Attributter defineres ofte inden for en bestemt sektor, men det kunne fællesoffentligt godt være relevant at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveksles på en interoperabel måde. Det kræver ofte en vis modenhed og veldefineret governance at bygge klassifikationer og semantiske modeller. Som et eksempel på dette kan nævnes den kommunale emnesystematik (KLE), der er en taksonomi til at beskrive kommunale fagområder. Ved at benytte KLE er det muligt at berige en rolletildeling til en bruger med en dataafgrænsning til et bestemt emneomåde angivet ved en eller flere KLE-værdier på rolletildelingen.
-
-### Attributkontrakter
-
-Forskellige forretningstjenester har behov for at *modtage* bestemte attributter for
-at kunne fungere, mens forskellige tillidstjenester kan *levere* forskellige sæt af attributter for bestemte identiteter. En konkret aftale eller specifikation af, hvilke attributter der skal leveres til en bestemt tjeneste, kaldes i flere sammenhænge for en attributkontrakt. Beskrivelse af attributsæt indenfor bestemte domæner sker ofte i profiler af standarder som fx SAML:
-- Den fællesoffentlige OIOSAML profil definerer et attributsæt for private og professionelle med dels en række obligatoriske og dels en række frivillige attributter.
-- KOMBIT har defineret en attributprofil som underprofil af OIOSAML, der definerer særlige attributter for kommunale medarbejdere.
-- Sundhedsdatastyrelsen har ligeledes defineret underprofil af OIOSAML med attributter relevant for sundhedsområdet.
-
-Ofte vil en forretningstjeneste ved tilslutning til en broker deklarere hvilke attributter, den pågældende forretningstjeneste har behov for (og ofte med henvisning til attributter defineret i en profil for domænet). Dette er fx sædvanligt at definere attributsæt i SAML metadatafiler.
-
-En anden mulighed, som der dog i praksis sjældent ses implementeret, er at beskrive attributter som en del af snitfladen (fx som et forventet sæt af claims i WS-Security Policy), så sikkerhedsinfrastrukturen kan foretage en automatisk orkestrering. Via en policy fil med deklaration af attributter kan en identitetsbroker evaluere forretningstjenestens attributbehov og herefter kontakte et antal tillidstjenester, som tilsammen kan levere de ønskede attributter (i rette kvalitet), hvorefter brokeren udsteder en samlet adgangsbillet mod tjenesten med foreningsmængden af attributter.
-
-Endelig er der en velkendt fællesoffentlig udfordring i håndtering af CPR-nummeret. Mange forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
-
+[Kan det og hvis ja hvordan identificeres hvilke attributter en forretningstjeneste har brug for ?]
 
 ## Discovery-tjenester
 En støttefunktion, som ofte ses i større føderationer, er discovery-tjenester, som for en given bruger har til opgave at lokalisere de tilllidstjenester (fx autentifikation og attributtjenester), der kan tilvejebringe oplysninger om brugeren. Ofte er discovery-funktionen en integreret del af en broker, særligt i føderationer med en central broker.
@@ -1166,6 +1126,8 @@ For at opnå en mere konsolideret understøttelse af apps fællesoffentligt, vur
 
 Uden ovenstående specifikationer og byggeblokke er der risiko for, at understøttelsen af apps sker gennem isolerede implementeringer, hvor hver applikation etablerer egne byggeblokke og tillidstjenester i mangel på en fælles model. Dette kan føre til manglende sammenhæng og interoperabilitet.
 
+[Noget om sletning af langt levende tokens, når den bagvedliggende rettighed tages væk.]
+
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
@@ -1192,74 +1154,6 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 Endelig kan det nævnes, at den nuværende fuldmagtsløsning i regi af NemLog-in hidtil har været frivillig at anvende for offentlige tjenester. Denne referencearkitektur skærper dette til et ”bør”.
 
 Dette sikrer genbrug, strømlining af infrastrukturen og ensartet brugeroplevelse og giver borgere og virksomheder mulighed for at få en central indgang til alle deres fuldmagter på tværs af tjenester. Dette vil formentlig indebære, at NemLog-in’s fuldmagtsløsning videreudvikles funktionelt, så behov i langt de fleste sektorer og løsninger kan understøttes.
-
-
-## Forretningsprocesser
-
-## Generisk proces for tjenesteanvendelse
-Nedenstående BPMN-diagram illustrerer en generisk proces for tjenesteanvendelse. Her tilgår en bruger en forretningstjeneste, som anvender en broker til at orkestrere en række tillidstjenester, herunder autentifikation og attributattestering. Brokeren udsteder en billet med resultat af brugerautentifikation og attributopslag, og billetten valideres i forretningstjenesten, hvorefter dens indhold er grundlaget for forretningstjenestens adgangskontrol. Undervejs interagerer brugeren med brokeren (valg af ønsket autentifikationsform) og autentifikationstjenesten (beviser sin identitet fx gennem indtastning af password eller andre typer identifikationsmidler).
-
-I konkrete scenarier kan valg og orkestrering af tillidstjenester variere, men forløbet vil ofte være i tråd med ovenstående.
-
-<figure>
-<img src="proces-tjenesteanvendelse.svg" />
-<figcaption>Generisk proces for tjenesteanvendelse</figcaption>
-</figure>
-<br>
-
-
-## Orkestreringseksempler
-
-I dette afsnit vises med nogle få eksempler på, hvordan forretningstjenester og tillidstjenester kan orkestreres til understøttelse af forskellige typiske brugssituationer. Brugssituationerne beskrives ved hjælp af arbejdsgange.
-
-[Jeg tror vi skal helt over i BPMN diagrammer /madsh]
-
-
-De aktiviteter, der er skitseret i arbejdsgangene, er eksempler. Der kan være flere eller færre aktiviteter, og rækkefølgen af disse kan i nogle tilfælde være en anden. Det er arbejdsgangene i den enkelte organisation, der afgør, hvilke konkrete aktiviteter en given arbejdsgang består af i praksis.
-
-I de efterfølgende eksempler på arbejdsgange opererer hver aktør (myndighed, leverandør af tillidstjeneste) i sin egen svømmebane. De forskellige tjenester har desuden fået hver deres bane, hvor brugen af de forskellige interfaces vises. For overskuelighedens skyld er aktiviteternes brug af disse interfaces vist som en direkte anvendelse af disse fra aktiviteterne. I praksis vil dette ofte ske gennem forskellige tjenester, men da disse er mangfoldige og uden for denne referencearkitekturs scope, er oversigten over arbejdsgange simplificeret ved, at disse tjenester ikke vises i de følgende eksempler, jf. nedenstående figur.
-
-<figure>
-<img src="billede11.PNG" width="65%"/>
-<figcaption>Model til brug for brugerstyringstjenester i processer</figcaption>
-</figure>
-
-
-### Administration af elektronisk identitet, identifikationsmidler og attributter
-
-Processer i forbindelse med administration af identiteter, identifikationsmidler og attributter kan gennemføres på forskellige måder og med forskellig sikkerhed for sammenhæng mellem elektronisk identitet og en fysisk person eller anden entitet. Kravene på forskellige sikringsniveauer (Levels of Assurance) beskrives normalt i et trust framework som NSIS, således at modtageren af en identitet kan matche dette mod deres risikoniveauer.
-
-De administrative processer kan gennemføres i et samlet forløb (som det beskrives her) eller i flere adskilte forløb. Enkelte processer kan gentages, fx kan brugeren få tilknyttet flere identifikationsmidler (fx et nyt smartcard) og flere attributter på et senere tidspunkt.
-
-**Registrering af elektronisk identitet** kan på lave sikringsniveauer ske ved, at en person registrerer sig selv – og med data, der er valgt af personen selv eller med de officielle data som navn og adresse fra CPR. Der er et tilsvarende behov for registrering af organisationer og ting.
-
-En myndighed kan registrere personen, verificere personens identitet (eng. *identity proofing*) og angive styrken af registreringen (NSIS IAL), fx om registreringen er sket på grundlag af fysisk fremmøde eller på anden måde.
-
-En arbejdsgiver kan registrere sine medarbejdere i egne brugerstyringssystemer eller i eksterne brugerstyringssystemer fx i det NemLog-in og Miljøportalen. Det kan ske manuelt eller ved overførsel fra arbejdsgiverens eget brugerstyringssystem til det eksterne system.
-
-En arbejdsgiver kan også registrere en tilknytning mellem sin virksomhed og en given identitet, fx ved at en person med en given identitet  må udføre handlinger i virksomhedens systemer eller for virksomheden.
-
-For de mange virksomheder, der er personligt ejede, kan tilknytningen mellem virksomhed og en given identitet ske automatisk på grundlag af registreringer i CVR-registret (fx at en person er fuldt ansvarlig deltager eller kan tegne alene for en given virksomhed).
-
-**Attributbeskrivelsen** er her beskrevet meget forenklet. Attributter for en identitet kan hentes fra eksterne kilder i forbindelse med registreringen (fx CPR-oplysninger), kan registreres i forbindelse med registreringen, kan registreres i brugerstyringssystemer eller i andre systemer. Attributter kan på samme måde som en identitet have forskellige kvalitetsniveauer, der bl.a. afhænger af de processer, der er anvendt under registreringen.
-
-<figure>
-<img src="billede12.PNG" width="65%"/>
-<figcaption>Registrer identitet</figcaption>
-</figure>
-<br>
-
-
-Processen for registrering af en elektronisk identitet foregår forenklet set gennem følgende trin:
-
-- En bruger anmoder om en identitet.
-- Registreringstjenesten verificerer identiteten fx med hjælp fra grunddata samt beviser leveret af ansøgeren (fx pas og kørekort). Disse grunddata kan desuden indgå i trinnet Registrer attributter.
--  Der tilknyttes allerede anskaffede identifikationsmidler, eller der kan udstedes og tilknyttes nye.
-- Aktøren registrerer de attributter, der er krævet/ønsket.
-- Resultatet vises for brugeren.
-
-En attribut kan være niveauet af registreringskvalitet (IAL) og identifikationsmidlets styrke (AAL) som beskrevet i NSIS eller eIDAS, der begge har en model for fastlæggelse af niveauer af registreringskvalitet for en identitet.
-
 
 
 
@@ -1466,6 +1360,57 @@ Der findes dog huller i landskabet af registreringstjenester og akkreditivtjenes
 >![](logo.png)
 >Understøttelse af notificerede eID-løsninger fra andre EU-lande SKAL ske gennem national eID-Gateway, der stilles til rådighed af Digitaliseringsstyrelsen. Løsninger, der skal servicere andre EU-borgere, SKAL afsøge muligheden for at anvende eID-Gateway’en til dette formål.
 
+
+## Attributter [Skal noget af dette med ?]
+[Eventuelt kombineret med noget om koordinering af attributter og roller på tværs]
+Som tidligere nævnt, spiller attributter en vigtig rolle i brugerstyringen, dels som grundlag for beskrivelse af brugerne og deres kontekst, dels som grundlag for håndhævelse af adgangskontrol.
+
+Nedenfor er givet eksempler på forskellige, vigtige kategorier af såvel identitetsattributter som beskrivende attributter:
+
+- Identitetsattributter, der er specifikke karakteristika ved den identiteten (fx navn, adresse, CPR-nummer).
+- Andre attributter om identiteten (fødselsdag, øjenfarve, biometri).
+- Tildelte/udstedte identifikationsnumre/registreringsnøgler (fx UUID, CVR-nummer, PID-, RID- eller FID-numre) eller tjenestespecifikke pseudonymer.
+- Attributter, der beskriver relationer (repræsenterer virksomhed *xyz*).
+
+- Rettighedsrelevante attributter (roller, rettigheder eller indhold af dataafgrænsninger, autorisation af læge/sygeplejerske/o.m.a for sundhedsprofessionelle).
+- Kontekstafhængige attributter for en autentifikation (IP-adresse, devicetype, tidspunkt for login).
+- Fuldmagter eller samtykker udtrykt som attributter.
+
+Nogle attributter fastlægges i forbindelse med den indledende identitetsregistrering, mens andre etableres på andre tidspunkter af andre end en registreringstjeneste – eksempelvis i forbindelse med, at en brugeradministrator tildeler rettigheder, eller en attributtjeneste gør det på vegne af en føderation.
+
+
+Der er vigtigt, at den fulde livscyklus for attributter håndteres, idet de kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et certifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
+
+I forbindelse med adgangskontrol af attributter i forretningstjenester er det vigtigt at forholde sig til attributternes kvalitet. Dette gælder særligt, når attributter
+anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er
+der kun fælles rammer for visse attributters kvalitet – fx CPR-nummeret, CVR-numre eller de identitetsattributter, der håndteres gennem sikringsniveauerne i
+National Standard for Identiteters Sikringsniveau (NSIS). Da mange attributter sædvanligvis er stabile over tid, er det ofte tilstrækkeligt at kende kvaliteten af attributter ved en tjenestes etablering og ved dialog med attributtjenesten at sikre sig, at der informeres ved ændringer i kvaliteten.
+
+>![](logo.png)
+>Attributtjenester BØR udstille deklaration af kvaliteten af attributter, således at tjenester, der
+anvender attributter, har den nødvendige information om kvalitet.
+>>Fællesoffentlige brugerstyringstjenester og forretningstjenester i fællesoffentlige føderationer,
+der anvender attributter, SKAL vurdere, om kvaliteten af attributter svarer til tjenestens behov.
+
+I det fremadrettede arbejde med fællesoffentlig brugerstyring er der behov for at
+analysere videre i forhold til, på hvilke områder der er behov for fælles standarder for attributters kvalitet. Attributter defineres ofte inden for en bestemt sektor, men der kunne fællesoffentligt godt være mening i at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveksles på en interoperabel måde.
+
+Forskellige forretningstjenester har behov for at *modtage* bestemte attributter for
+at kunne fungere, mens forskellige login-tjenester/identitetsbrokere og attributtjenester kan *levere* forskellige sæt af attributter for bestemte identiteter. Disse sæt af attributter kan beskrives eksplicit som en del af snitfladen, så sikkerhedsinfrastrukturen kan foretage en automatisk orkestrering.
+
+Eksempelvis kan en identitetsbroker evaluere tjenestens attributbehov og herefter kontakte et antal andre login-tjenester/identitetsbrokere og supplerende attributtjenester, som tilsammen kan levere de ønskede attributter, hvorefter brokeren udsteder en samlet adgangsbillet mod tjenesten med foreningsmængden af
+attributter.
+
+I den nuværende fællesoffentlige brugerstyringsinfrastruktur er der en begrænset
+dynamik i orkestreringen af attributter, og det er fx ikke direkte muligt at tilkoble
+en ny ekstern attributtjeneste til NemLog-in (kræver udvikling). Det kan derfor i det videre arbejde være relevant at se på mulighederne for en mere dynamisk håndtering af attributter, som følger ovennævnte arkitekturprincipper. Desuden kan det være relevant at give personbrugerne transparens og medejerskab for
+deres attributter, fx ved at etablere en brugerprofilside på NemLog-in eller borger.dk, hvor brugerne kan se (og for visse indtaste/rette) attributter samt styre præferencer for deling af attributter mellem tjenester.
+
+Endelig er der en fællesoffentlig udfordring i håndtering af CPR-nummerattributten. Mange  forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
+
+
+>![](logo.png)
+Nye forretningstjenester (og moderniseringer af eksisterende) tjenester, der anvender fællesoffentlige løsninger, BØR benytte et design, hvor CPR-nummeret kan skifte form, uden at tjenestens forretningslogik bryder sammen.
 
 ## Brugerkataloger
 
