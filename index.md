@@ -946,7 +946,7 @@ En anden mulighed, som der dog i praksis sjældent ses implementeret, er at besk
 Endelig er der en velkendt fællesoffentlig udfordring i håndtering af CPR-nummeret. Mange forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
 
 ### Brugerkataloger
-Et brugerkatalog indeholder informationer om et sæt af brugeridentiteter (evt. både personbrugere og tjenestekonsumenter.), typisk i form af attributter og i mange tilfælde også information til brug for validering af akkreditiver for en brugerkonto. Et velkendt eksempel er *LDAP Directories* (som fx Active Directory), der både udstiller services til brugerautentifikation, til at hente attributter, og som har en veldefineret administrationsstruktur.
+Et brugerkatalog indeholder informationer om et sæt af brugeridentiteter typisk i form af attributter og i mange tilfælde også information til brug for validering af identifikationsmidler for en brugerkonto. Et velkendt eksempel er *LDAP Directories* (som fx Active Directory), der både udstiller services til brugerautentifikation, til at hente attributter, og som har en veldefineret administrationsmodel.
 
 
 Brugerkataloger etableres i mange kontekster som fx:
@@ -954,28 +954,18 @@ Brugerkataloger etableres i mange kontekster som fx:
 - Et brugerkatalog til en bestemt applikation (applikationens brugerdatabase).
 - Et brugerkatalog for en organisation eller virksomhed.
 - Brugerkataloger knyttet til et bestemt domæne (fx som i UNI•Login).
-- Fællesoffentlige brugerkataloger (fx brugerdatabasen i NemLogin.
+- Fællesoffentlige brugerkataloger (fx brugerdatabasen i NemLogin).
 
 Traditionelt har *enterprise directories* været en del af centralnervesystemet i større virksomheders systeminfrastrukturer, og i de senere år er der opstået en stigende tendens til at etablere brugerkataloger i skyen med henblik på at understøtte økosystemet af cloud-applikationer.
 
-I referencearkitekturen indgår brugerkataloger ikke som selvstændige tjenester,
-men de udstilles gennem veldefinerede snitflader som logintjenester/identitetsbrokere eller attributtjenester med henblik på at etablere den ønskede løse kobling. Brugerkataloger opfattes med andre ord som en privat implementering af disse typer af tjenester, og der bør ikke i udgangspunktet skabes tætte koblinger til brugerkataloger gennem brug af deres leverandørspecifikke snitflader. En tydelig tendens mod den mere løst koblede model kan observeres med Active Directory, hvor man for år tilbage ofte koblede organisationer sammen via proprietære mekanismer, der kunne forbinde AD’er. I dag anvendes
+I referencearkitekturen indgår brugerkataloger ikke som selvstændige tjenester, men de udstilles gennem veldefinerede snitflader som logintjenester/identitetsbrokere eller attributtjenester med henblik på at etablere den ønskede løse kobling. Brugerkataloger opfattes med andre ord som en privat implementering af disse typer af tjenester, og der bør ikke i udgangspunktet skabes tætte koblinger til brugerkataloger gennem brug af deres leverandørspecifikke snitflader. En tydelig tendens mod den mere løst koblede model kan observeres med Active Directory, hvor man for år tilbage ofte koblede organisationer sammen via proprietære mekanismer, der kunne forbinde AD’er. I dag anvendes
 i langt højere grad *Federation Services,* hvor sammenkoblingen sker via føderationsprotokoller som SAML, OpenID Connect mv.
 
 Referencearkitekturen kommer ikke med specifikke anbefalinger til, hvilke brugerkataloger der skal etableres – men fokuserer hovedsageligt på, hvordan de udstilles. Behov for brugerkataloger vil således i høj grad afhænge af lokale forhold, herunder behov for organiseringen af brugeradministration.
 
-Som en god praksis (og som det fremgår af Princip: Administration af brugere
-flyttes så vidt muligt ud af fagapplikationer) bør brugere i en organisation i udgangspunktet oprettes i så få brugerkataloger som muligt med henblik på at effektivisere brugeradministrationen og sikre et centralt overblik. Dette gælder løsninger, der finansieres og fungerer inden for den offentlige sektor.
+Som en god praksis (og som det fremgår af Princip: Administration af brugere flyttes så vidt muligt ud af fagapplikationer) bør brugere i en organisation i udgangspunktet oprettes i så få brugerkataloger som muligt med henblik på at effektivisere brugeradministrationen og sikre et centralt overblik. Dette gælder løsninger, der finansieres og fungerer inden for den offentlige sektor.
 
-Som eksempel på mitigering af problemstillingen med mange, adskilte brugerkataloger (siloer),
-etablerer mange organisationer såkaldte Identity Management-løsninger, som kan
-skabe sammenhæng mellem mange brugerkataloger gennem processer, teknisk
-provisionering og adapters. Herved kan man oprette, administrere og nedlægge
-brugere centralt og automatisk få de nødvendige opdateringer kommunikeret til
-applikationer og infrastruktur. Dette er dog i mange sammenhænge udtryk for
-applikationernes manglende modenhed inden for brugerstyring (de fastholder et
-lokalt brugerkatalog som deres eneste verdensbillede), og løsningen med provisionering og applikationsspecifikke adapters fastholder den tætte binding frem for
-at løse det underliggende problem og skabe en åben, løst koblet arkitektur.
+Som eksempel på mitigering af problemstillingen med mange, adskilte brugerkataloger (siloer), etablerer mange organisationer såkaldte Identity Management-løsninger, som kan skabe sammenhæng mellem mange brugerkataloger gennem processer, teknisk provisionering og adapters. Herved kan man oprette, administrere og nedlægge brugere centralt og automatisk få de nødvendige opdateringer kommunikeret til applikationer og infrastruktur. Dette er dog i mange sammenhænge udtryk for applikationernes manglende modenhed inden for brugerstyring (de fastholder et lokalt brugerkatalog som deres eneste verdensbillede), og løsningen med provisionering og applikationsspecifikke adapters fastholder den tætte binding frem for at løse det underliggende problem og skabe en åben, løst koblet arkitektur.
 
 I den fællesoffentlige brugerstyring findes et centralt brugerkatalog for virksomheder i form af NemLog-in/Brugeradministration, der i Nemlog-in3 erstattes med en samlet komponent til erhvervsidentitetsadministration (EIA). Hensigten med dette er at garantere danske virksomheder adgang til mindst et brugerkatalog, da særligt mindre virksomheder ikke kan forventes selv at kunne etablere en sådan infrastruktur. Med NemLog-in3 får større virksomheder kan vælge at bruge deres eget lokale brugerkatalog, også i forbindelse med administration af adgang til offentlige løsninger.
 
