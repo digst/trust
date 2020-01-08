@@ -361,7 +361,7 @@ eIDAS-forordningen stiller en række krav til udbydere (PKI)-tillidstjenester, s
 De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
 <figure>
-<img src="typer-tillidstjenester.svg" width="90%"/>
+<img src="typer-tillidstjenester.svg" width="100%"/>
 <figcaption>Oversigt over de forskellige typer af tillidstjenester</figcaption>
 </figure>
 <br>
