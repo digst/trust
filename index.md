@@ -95,7 +95,7 @@ Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til
 ## Omfang og afgrænsning
 Referencearkitekturen for brugerstyring er målrettet offentlige tjenester, men referencearkitekturen kan desuden med fordel anvendes til ikke offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
 
-Arkitekturen omfatter rollerne som leverandør af tillidstjenester - registreringstjenester, akkreditivtjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata samt login-systemer.
+Arkitekturen omfatter rollerne som leverandør af tillidstjenester - registreringstjenester, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at anvende bruger- og rolledata samt login-systemer.
 
 Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
 
@@ -307,7 +307,7 @@ Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationss
 ISO/IEC 27001 standarden er opdelt i 14 domæner, hvor brugerstyring særligt er relevant for domænet 'Access Control' og for management delen en del af domænet 'Information Security Policies'.
 
 ### Risici vedr. brugere
-Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [Ref @Kirsten] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trins skala: Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
+Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. [Hvordan passes det næste med Risisci vedr. brugere ? @Thomas] National Standard for Identiteters Sikringsniveauer (NSIS) [Ref @Kirsten] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trins skala: Lav, Betydelig, Høj. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
 NSIS giver mulighed for: [Hører det til her ? @Thomas]
 
@@ -368,7 +368,7 @@ De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
 
 ## Forretningsmæssig kontekst
-Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her kan  tillidstjenesterne opfattes som infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og styring eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidstjeneste). NSIS definerer tre sikringsniveauer for en autentificeret identitet (Lav, Betydelig, Høj), og gør det dermed muligt både at klassificere tillidstjenester i forhold til disse og indrette tjenesters adgangspolitikker differentieret.
+Et helt centralt tema i denne referencearkitektur er, at forretningstjenester og tillidstjenester arbejder sammen om at udføre brugerstyring - såkaldt *shared use cases*. Her kan  tillidstjenesterne opfattes som infrastruktur, der muliggør en sikker forretningsmæssig anvendelse af et it-system.  Grundlaget for samarbejdet er baseret på tillid, som gør det muligt for forretningstjenesten at uddelegere betroede funktioner til en tillidstjeneste udbudt af tredjepart. Tilliden kan være rodfæstet i lovgivning, i standarder og rammeværk med indbygget kontrol og styring eller i aftaler (herunder databehandleraftaler). Et vigtigt eksempel er National Standard for Identiteters Sikringsniveauer (NSIS), som gennem krav og kontrol via revisionserklæringer gør det muligt at have tillid til (og kvantificere risici for) autentificerede identiteter, der er håndteret af en ekstern part (tillidstjeneste).
 
 Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mellem udbydere af tillidstjenester og forretningstjenester.
 
@@ -390,7 +390,7 @@ I dette afsnit beskrives tillidstjenester og betroede funktioner fra ovenståend
 
 [Vi skal lige overveje forholdet mellem forretningstjenester, funktioner og applikationsservice. Det ser ud til attributregistrering og attestation er to funktioner hos den samme forretningstjeneste. Gælder det også for id-midler @Thomas]
 
-[Er der virkelighed tale om to forskellige forretningsprocesser: Brugerstyring(administration), "Anvendelse af forretningstjeneste, med adgangskontrol". Og måske er det princippet... at der sker i en særskilt proces og ikke ved første brug af servicen... Vi mangler nogle gode overordnede generiske processer... /madsh ]
+[Er der virkelighed tale om to forskellige forretningsprocesser: Brugerstyring(administration), "Anvendelse af forretningstjeneste, med adgangskontrol". Og måske er det princippet... at der sker i en særskilt proces og ikke ved første brug af servicen... Vi mangler nogle gode overordnede generiske processer... /madsh @Mads]
 
 
 ### Tillidstjenesten udstedelse af identifikationsmidler
@@ -503,7 +503,9 @@ Strategien indeholder en lang række initiativer på tværs af seks indsatsområ
 
 Med den stadigt stigende hackeraktivitet kloden over bliver arbejdet med at sikre kvaliteten af kontrol og forebyggelse af sikkerhedsbrud mere og mere vigtigt. Det skal ske i forbindelse med den registrering, autentifikation, billetudstedelse og adgangskontrol, der er kernen i brugerstyring. Dermed er det også et emne for informationssikkerhedspolitikken og dennes udmøntning i en tværgående fællesoffentlig føderation.
 
-Flere af de angreb mod organisationers it-infrastruktur som opleves, er rettet mod at forfalske identiteter, identifikationsmidler og adgangsbilletter, eller at give sig ud for at være den rette ihændehaver af identiteter, identifikationsmidler og adgangsbilletter. Det centrale i forhold til brugerstyring er derfor hurtigt at kunne reagere ud fra den mest aktuelle viden gennem sikkerhedsforanstaltninger. Andre angreb forsøger at begrænse tilgængeligheden gennem Distributed Denial of Service-angreb mod kritiske elementer i it-infrastrukturen, herunder fællesoffentlige identitetssystemer. Center for Cybersikkerhed udsender jævnligt en opdatering af det aktuelle trusselsbillede for cyberangreb.
+Flere af de angreb mod organisationers it-infrastruktur som opleves, er rettet mod at forfalske identiteter, identifikationsmidler og adgangsbilletter, eller at give sig ud for at være den rette ihændehaver af identiteter, identifikationsmidler og adgangsbilletter. Det centrale i forhold til brugerstyring er derfor hurtigt at kunne reagere ud fra den mest aktuelle viden gennem sikkerhedsforanstaltninger.
+
+Andre angreb forsøger at begrænse tilgængeligheden gennem Distributed Denial of Service-angreb mod kritiske elementer i it-infrastrukturen, herunder fællesoffentlige identitetssystemer. Center for Cybersikkerhed udsender jævnligt en opdatering af det aktuelle trusselsbillede for cyberangreb.
 
 Til at styrke området har staten samlet kræfterne i Center for Cybersikkerhed (CFCS), og nogle private organisationer udstiller deres CERT eller CSIRT-funktion. Disse organisationer håndterer sikkerhedshændelser og arbejder på at forebygge sikkerhedshændelser:
 
@@ -559,10 +561,12 @@ Dette mønster er karakteriseret ved, at en brugerorganisation har etableret et 
 
 
 I forhold til mønster 1 opnås der en række fordele:
+
 -	Brugerne skal kun vedligeholdes ét sted – i det fælles brugerkatalog.
 -	Brugerne kan med ét identifikationsmiddel tilgå alle applikationer, der anvender det fælles directory.
 
 Der er dog stadig nogle centrale begrænsninger i mønster 2:
+
 -	Mønstret skalerer stadig ikke til scenarier, hvor tjenesteudbyder og brugerorganisation ikke tilhører én og samme organisation. Der er stadig kun en autentifikationstjeneste og et administrationsinterface.
 -	Mønstret håndterer ikke scenarier med borgere som slutbrugere.
 -	Mønstret fordrer en homogenitet i de adgangspolitikker, der kan understøttes (typisk snævert baseret på attributter fx om medlemskab af grupper i brugerkataloget). Al viden om brugerne relevant for adgangskontrol skal således findes i brugerkataloget.
@@ -603,13 +607,15 @@ Mønstret anvendes bl.a. i den fælleskommunale infrastruktur etableret af KOMBI
 <br>
 
 Fordele:
+
 - Der er kun ét integrationspunkt for forretningstjenester og ét integrationspunkt for en brugerorganisation med egen IdP, hvilket gør det enkelt at tilslutte sig føderationen og samtidig opnå adgang til et stort økosystem.
-- Brugere i en brugerorganisation kan genbruge et lokalt log-in både til interne tjenester og til eksterne tjenester – og endda opnå single sign-on på tværs af disse.
+- Brugere i en brugerorganisation kan genbruge et lokalt log-in til både in- og eksterne tjenester – og endda opnå single sign-on på tværs af disse.
 - Brokeren kan indkapsle variationer i lokale IdP’er, så de er usynlige for tjenesterne – fx ved at foretage protokoltransformation, attributomveksling og berigelse af tokens.
 - Den centrale hub giver ofte mulighed for stærk styring herunder fastlæggelse af attributter, protokoller mv. der kan give en stor homogenitet og et økosystem med rige tjenester. Som eksempel kan nævnes, at både det kommunale domæne og sundhedsområdet har defineret egne attributprofiler, som beskriver særlige karakteristika ved domænet: på sundhedsområdet er det fx attributter vedr. sundhedsfaglige autorisationer og på det kommunale område er det anvendelse af kommunale emnesystematik (KLE), der er en taksonomi til at beskrive kommunale fagområder.
 
 
 Ulemper:
+
 - Mønstret er begrænset til situationer, hvor alle relevante tjenester for brugerne er koblet til samme ’hub’. Anvendelsen er derfor ofte begrænset til specifikke domæner – som fx det kommunale område. Hvis man skal på tværs af domæner / føderationer er det i stedet relevant at anvende mønster 5.
 - Brugerne kan komme ud for at skulle angive deres lokale IdP i en liste blandt mange (såkaldt home realm discovery) første gang de logger på, således at brokeren kan finde ud af, hvilken lokal IdP der skal anvendes til autentifikation.
 
@@ -631,12 +637,14 @@ Mønstret kendes også på nationalt niveau, når eksempelvis en kommunal bruger
 
 [Bør figuren også omfatte attributter ?]
 
-Fordel:
+Fordele:
+
 - Mønstret kan håndtere store føderationer uden centrale ankre. Der er mao. stor skalérbarhed.
 - Brokerne håndterer kompleksiteten i infrastrukturen for forretningstjenesten og brugerorganisationen.
 
 
 Ulemper:
+
 - Der kan være stor kompleksitet med flere lag af discovery.
 - Governance er typisk noget svagere på tværs af føderationer og domæner.
 - Det fælles forståede attributsæt er typisk mere begrænset, når tillidskæden er lang:
@@ -647,7 +655,10 @@ Ulemper:
 
 
 ### Tillid gennem NSIS
+[Kunne dette afsnit flyttes til Forretningsfunktionen udforme tillidspolitik ? @Thomas]
+
 I National Standard for Identiteters Sikringsniveauer (NSIS) skal elektroniske identifikationsordninger (udstedere af identifikationsmidler) og identitetsbrokere anmeldes til Digitaliseringsstyrelsen, før de må benytte NSIS, herunder påstemple NSIS sikringsniveauer på en brugerautentifikation. Kravene til dokumentation for compliance stiger gennem sikringsniveauerne:
+
 - På niveau Lav kan man benytte ‘selvdeklarering’, hvor anmelder selv indestår for opfyldelse af krav.
 - På niveau Betydelig og Høj skal der vedlægges en ISAE 3000 revisionserklæring fra en uafhængig, statsautoriseret revisor. Erklæringens formål er at konkludere, hvorvidt en anmelder samlet set har etableret alle relevante kontroller og procedurer for sin løsning.
 
@@ -660,10 +671,10 @@ NSIS stiller ikke krav til forretningstjenesten med stiller sikringsniveauerne t
 
 ----
 
-## Principper
+## Principper [@Mads]
 <dfn>Samlet? brugeradministration</dfn> Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbetjningssystemer...
 
-Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, akkreditiver og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og akkreditiver, og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
+Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres identiteter, identifikationsmidler og attributter med det resultat, at den samme bruger har mange forskellige elektroniske identiteter og at disse identiteter ikke kan anvendes på tværs af tjenester. Fagapplikationerne skal i stedet kunne indgå i føderationer på tværs af organisationsenheder og myndigheder - og agere som konsument af identitet leveret af andre.
 
 *Rationale*
 
@@ -674,7 +685,7 @@ Historisk har fagapplikationer, der anvendes på tværs, selv forvaltet brugeres
 
 *Implikationer*
 
-- Brugernes identiteter, akkreditiver og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
+- Brugernes identiteter, identifikationsmidler og attributter administreres ikke i de enkelte fagapplikationer. Information om identiteter og attributter leveres i stedet til applikationen af identitetsbrokere i en adgangsbillet.
 - Der skal etableres fællesoffentlige føderationer baseret på valg af fælles politikker, regler og obligatoriske standarder inden for et område, hvor dette giver gevinster.
 - [rettigheder og adgangspolitikker fra tjenesteudbydere skal være synlige for brugerorganisationer]
 
@@ -788,7 +799,7 @@ Juridisk enhed der har **ansvar for** hvad en applikation gør.
 
 "kun elektroniske identiteter kan anvende elektroniske tjenester".
 
-Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række loginmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
+Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række identifikationsmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
 
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
 
@@ -823,7 +834,7 @@ I denne liste gives kun definitioner for de begreber, som referencearkitekturen 
 <tr>
 <td>Attribut</td>
 <td>Karakteristika eller egenskaber ved en identitet. På engelsk betegnes attributter som claims.</td>
-<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en akkreditivtjeneste, samtidig med at der udstedes et akkreditiv. Når attributter attesteres af en tillidstjeneste taler man på engelsk om såkaldte 'verified claims'.</td>
+<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en registreringstjeneste, samtidig med at der udstedes et identifikationsmiddel. Når attributter attesteres af en tillidstjeneste taler man på engelsk om såkaldte 'verified claims'.</td>
 </tr>
 <tr>
 <td>Adgangsbillet (token)</td>
@@ -862,7 +873,7 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 <td>En entitet får tildelt et eller flere identifikationsmidler knyttet til identiteter.</td>
 <td>En udsteder af identifikationsmidler udstyrer entiteten med identifikationsmidler, der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen.</td>
 </tr><tr>
-<td>En identitet kan associeres med (knyttes til) flere akkreditiver, og et akkreditiv kan associeres med flere identiteter.</td>
+<td>En identitet kan associeres med (knyttes til) flere identifikationsmidler, og et identifikationsmiddel kan associeres med flere identiteter.</td>
 <td>Ved at koble identitet og identifikationsmidler løst kan identiteten være vedvarende over tid med mulighed for at skifte identifikationsmiddel. Det giver også mulighed for, at brugeren kan indrullere flere identifikationsmidler som supplement til et udleveret identifikationsmiddel (fx indrullere fingeraftryk).</td>
 </tr><tr>
 <td>En identitet associeres med en eller flere attributter (claims) og en attribut kan associeres med flere identiteter.</td>
@@ -875,7 +886,7 @@ Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreb
 <td>Adgang gives af en tjeneste på grundlag af de attributter, der fremgår af adgangsbilletten, samt et tillidsforhold til den tjeneste, som har udstedt billetten. Adgangskontrollen følger tjenesteudbyderens vedtagne adgangspolitik for den pågældende tjeneste.</td>
 </tr><tr>
 <td>En tjeneste har en adgangspolitik.</td>
-<td>En tjenesteudbyders tjeneste stiller funktionalitet og informationer (data) til rådighed, som er underlagt en adgangspolitik, der specificerer, hvilke attributter identiteten skal demonstrere for at få adgang til specifikke funktioner og informationer. Denne adgangspolitik fastlægger niveauet for funktionaliteters og informationers (datas) tilgængelighed og beskyttelse, herunder de sikringsniveau for identitet og akkreditiver, som tjenesten accepterer, og den kvalitet i attributter den forventer.</td>
+<td>En tjenesteudbyders tjeneste stiller funktionalitet og informationer (data) til rådighed, som er underlagt en adgangspolitik, der specificerer, hvilke attributter identiteten skal demonstrere for at få adgang til specifikke funktioner og informationer. Denne adgangspolitik fastlægger niveauet for funktioner og informationers  tilgængelighed og beskyttelse, herunder det sikringsniveau for identiteter, som tjenesten accepterer, og den kvalitet i attributter den forventer.</td>
 </tr>
 </table>
 
@@ -1015,7 +1026,7 @@ Nedenstående tegning i figur 4 illustrerer den kæde af tillid, der kan optræd
 - Brokeren har tillid til, at autentifikationstjenesten på en sikker måde har kunnet fastslå brugerens identitet (autentificere vedkommende).
 - Autentifikationstjenesten har tillid til, at udstederen af identifikationsmidlet, der har tilknyttet og udstedt identifikationsmidlet, har gjort det til de rette entiteter, nemlig de samme entiteter, som registreringstjenesten (eng: Registration Authority, RA) har identificeret og registreret identiteten på.
 - I den udstrækning, som tjenesteudbyderen, adgangskontrollen, brokeren eller autentifikationstjenesten anvender et eller flere attributsæt, skal disse have tillid til de attributtjenester, som de anvender.
-- Attributtjenester skal have tillid til, at den der har tilknyttet og udstedt akkreditiverne, har gjort det til de rette entiteter, nemlig de samme entiteter som registreringstjenesten har identificeret og registreret identiteten på.
+- Attributtjenester skal have tillid til, at den der har tilknyttet og udstedt identiteterne, har gjort det til de rette entiteter, nemlig de samme entiteter som registreringstjenesten har identificeret og registreret identiteten på.
 - Udstederen af elektroniske identifikationsmidler har tillid til de identifikationsbeviser (fx pas, kørekort) og grunddata, som udstedelsesprocessen er baseret på.
 - Hele vejen gennem kæden skal der være tillid til de billetter (eng. *security token*), der udstedes af autentifikationstjenesten og beriges af brokere, og som benyttes som billet med tidsbegrænset gyldighed til en eller flere tjenester – også når adgangsbilletter omveksles ved overgang mellem sektorer.
 
@@ -1090,7 +1101,7 @@ Tjenesteudbyderen fastlægger en **adgangspolitik** på grundlag af sin sikkerhe
 - *Integritet (pålidelighed),* at data er komplette, korrekte og opdaterede.
 - *Tilgængelighed,* at det skal være muligt at tilgå systemer og data for autoriserede personer, når dette er nødvendigt.
 
-[Er de to sidste brugerstyring ?]
+[Er de to sidste brugerstyring ? @Thomas]
 
 Tjenesteudbyderen skal som led i sin adgangspolitik og en risikovurdering fastlægge, hvilke sikringsniveauer og attributsæt, der giver adgang til hvilke informationer og funktioner. Disse kan være udmøntet i et struktureret format, der kan læses maskinelt af en funktion, der undersøger betingelserne til at få adgang til tjenestens funktioner og informationer.
 
@@ -1110,7 +1121,7 @@ Behovet for softwarerobotter udspringer af et ønske om at automatisere processe
 
 Det er ofte en grundlæggende præmis, at applikationerne ikke kan skrives om (gøres robot-venlige), men må bruges som de er. Det kan her bemærkes, at den ideelle løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
 
-En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres loginmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS, lovgivning som eIDAS mv.
+En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres identifikationsmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS, lovgivning som eIDAS mv.
 
 I denne referencearkitektur forstås ved softwarerobotter de såkaldte autonome robotter, der selvstændigt logger på applikationer og ikke agerer kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for scope, og giver som regel heller ikke udfordringer i brugerstyringen.
 
@@ -1119,9 +1130,9 @@ For autonome robotter opstår derimod ofte udfordringer med brugerstyring, når 
 ### Løsning for autonome robotter via føderation
 Til håndtering af autonome robotter kan man med fordel bygge på føderationsprincippet. Hvis applikationen således ikke selv står for autentifikation af brugere men anvender en ekstern broker eller autentifikationstjeneste, kan der foretages en afkobling, som tillader robotten at simulere et menneske. I det følgende tages udgangspunkt i et konkret scenarie, hvor applikationen kræver log-in med MOCES-certifikat, og anvender NemLog-in som autentikationstjeneste / broker. Dette vil være tilfældet for mange offentlige tjenester – og mønstret kan sagtens generaliseres til andre sammenhænge herunder andre brokere.
 
-Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet, sker autentifikationen i NemLog-in, og applikationen får blot en signeret billet tilbage (SAML Assertion) med en række attributter. Applikationens binding er således reelt til et forventet attributsæt (attributkontrakten), der beskriver en medarbejderidentitet (fx navn, e-mail, CVR, RID-nummer, rettigheder mv.) snarere end en binding til medarbejderens akkreditiv (fx MOCES certifikatet).
+Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet, sker autentifikationen i NemLog-in, og applikationen får blot en signeret billet tilbage (SAML Assertion) med en række attributter. Applikationens binding er således reelt til et forventet attributsæt (attributkontrakten), der beskriver en medarbejderidentitet (fx navn, e-mail, CVR, RID-nummer, rettigheder mv.) snarere end en binding til medarbejderens identifikationsmidler (fx MOCES certifikatet).
 
-Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en billet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer akkreditiver, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
+Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en billet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
 
 For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med præcis de samme attributter som en almindelig medarbejderidentitet (M), og herefter udstede/tilknytte et robot-egnet identifikationsmiddel (fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans).
 
@@ -1134,7 +1145,7 @@ Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
 
 Ovenstående kan generaliseres til alle typer applikationer, der via føderation har en kontrakt med en broker om autentificering af medarbejderidentiteter.
 
-Det skal også bemærkes, at løsningen ville forudsætte en mindre udvidelse af NemLog-in3 – herunder administration af robotidentiteter og tilknytning af andre typer akkreditiver. 
+Det skal også bemærkes, at løsningen ville forudsætte en mindre udvidelse af NemLog-in3 – herunder administration af robotidentiteter og tilknytning af andre typer identifikationsmidler. 
 Løsningen er illustreret på nedenstående figur:
 
 <figure>
@@ -1278,7 +1289,7 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Brugerrolletildeling</dfn> Angivelse af de *brugerroller* som en bruger er tildelt evt. med tilhørende *brugerrollerestriktioner*. Brugerrolletildeling anvendes til at definere en brugers *brugerroller* med de begrænsninger (*brugerrollerestriktioner*), der måtte være i forhold til anvendelsen af brugerrollen. I OIO Basic Privile Profile anvises hvordan brugerens roller kan udtrykkes i et en SAML Assertion.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
 
-<dfn>Brugerstyring</dfn> Brugerstyring anvendes bredt i denne tværoffentlige strategi og referencearkitektur for brugerstyring. Betegnelsen omfatter både *adgangskontrol* og administration af identiteter, akkreditiver, attributter og *adgangsrettigheder*, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM). Brugerstyring dækker således opgaver i forbindelse med *indrullering, autentificering, autorisation, billetudstedelse, adgangskontrol* osv.[]
+<dfn>Brugerstyring</dfn> Brugerstyring anvendes bredt i denne tværoffentlige strategi og referencearkitektur for brugerstyring. Betegnelsen omfatter både *adgangskontrol* og administration af identiteter, identifikationsmidler, attributter og *adgangsrettigheder*, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM). Brugerstyring dækker således opgaver i forbindelse med *indrullering, autentificering, autorisation, billetudstedelse, adgangskontrol* osv.[]
 
 <dfn>Certificate Authority (CA)</dfn> En betroet enhed, der udsteder *certifikater* til identificerede og registrerede parter (se også *registreringsmyndighed*). Opgaverne og ansvarsområderne tilhørende en CA er opdelt i Identity Proofing Service (IPS) og *Credential Management Service (CMS)*.[]
 
@@ -1288,11 +1299,11 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Credential</dfn>Synonym for attribut.[]
 
-<dfn>Claim</dfn>Synonym for *Akkreditiv.*[]
+<dfn>Claim</dfn>Synonym for *identifikationsmiddel.*[]
 
-<dfn>Credential Management Service</dfn>Service  der varetager udstedelse og vedligeholdelse af akkreditiver gennem hele deres livscyklus.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
+<dfn>Credential Management Service</dfn>Service  der varetager udstedelse og vedligeholdelse af identifikationsmidler gennem hele deres livscyklus.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 
-<dfn>Credential Service Provider (CSR)</dfn>Se Udsteder af akkreditiv.[]
+<dfn>Credential Service Provider (CSR)</dfn>Se Udsteder af identifikationsmiddel.[]
 
 <dfn>Delegering</dfn>Omhandler personers adgang til at benytte medhjælp, dvs. under ansvar og efter instruktion og under tilsynspligt uddelegere nogle af den uddelegerendes rettigheder. Karakteristisk for delegering er, at der er tale om en person, der instruerer en anden i at handle på sine vegne. Med delegeringen kan der følge en pligt til at instruere og kontrollere. Der stilles derfor krav om, at man skal kunne se, hvem der handler på hvis vegne ved centrale opslag.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 
@@ -1328,11 +1339,11 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Identitet</dfn>En digital persona repræsenteret ved et sæt af attributter. Anvendes også som synonym for *Elektronisk Identitet*.[National Standard for Identiteters Sikringsniveauer (NSIS)]
 
-<dfn>Identitetsgarant</dfn>Den organisation, der udsteder *akkreditiver* og på anmodning (ved login) garanterer, at de fremviste *akkreditiver* tilhører den *entitet*, de er udstedt til. Samme organisation kan varetage registrering af identitet eller bygge på autoritativt *identitetsregister*, fx CPR, CVR eller virksomheders identitetsregistre (AD). Samme organisation kan varetage *verifikation* eller bygge på andres *verifikation* (i DK banker og borgerservicecentre).[]
+<dfn>Identitetsgarant</dfn>Den organisation, der udsteder *identifikationsmidler* og på anmodning (ved login) garanterer, at de fremviste *identifikationsmidler* tilhører den *entitet*, de er udstedt til. Samme organisation kan varetage registrering af identitet eller bygge på autoritativt *identitetsregister*, fx CPR, CVR eller virksomheders identitetsregistre (AD). Samme organisation kan varetage *verifikation* eller bygge på andres *verifikation* (i DK banker og borgerservicecentre).[]
 
 <dfn>Identitetsregister </dfn>En funktion/register, der registrerer information om entiteter (fx borgere). Dette kan fx være CPR-registret og CVR-registret som eksempler blandt flere registre.[National Standard for Identiteters Sikringsniveauer (NSIS)]
 
-<dfn>Identitetsudbyder, Identity Provider (IdP)</dfn>En autentifikationstjeneste, der verificerer en brugers eller et systems identitet på baggrund af brugerens (eller systemets) besiddelse og kontrol over *akkreditiver*.[Informationsordbogen NIST, Electronic Authentication Guideline]
+<dfn>Identitetsudbyder, Identity Provider (IdP)</dfn>En autentifikationstjeneste, der verificerer en brugers eller et systems identitet på baggrund af brugerens (eller systemets) besiddelse og kontrol over *identifikationsmidler*.[Informationsordbogen NIST, Electronic Authentication Guideline]
 
 <dfn>Identity Relationship Management</dfn>En variant af brugerstyring, hvor vægten lægges på relationer mellem entiteter og håndteringen heraf. Er fremkommet som følge af behovet for at kunne håndtere relationerne mellem personer og de mange enheder, der vil blive sluttet til internettet (internet of things).[Kantara, Identity Relationship Management]
 
@@ -1340,13 +1351,13 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>IdP  (Identity Provider)</dfn>Se *Identitetsudbyder.*[]
 
-<dfn>Indrullering</dfn>Indrullering er den proces, en person gennemgår for at få oprettet en elektronisk identitet. I processen skal personen identitetssikres i passende omfang, f.eks. ved personligt fremmøde og fremvisning af tidligere udstedte *akkreditiver* (pas, kørekort).  Styrken af identitetssikringen af personen er et af grundelementerne i den såkaldte ”Level of Assurance” (LoA), dvs. den grad af tillid, der kan haves til den fysiske identitet, der er koblet til en elektronisk identitet. Resultatet af en indrullering er dels en elektronisk identitet koblet til den fysiske bruger, dels nye *akkreditiver* der efterfølgende kan anvendes til at autentificere relationen mellem den fysiske bruger og den digitale identitet.  Handlinger ved indrullering:  - Registrering af identiteten - Identifikation (”Identity proofing”) - Udstedelse af *akkreditiver* (f.eks. *certifikat* og nøglekort) - Aktivering af identiteten (har typisk til formål at sikre sole *control*)[Lakeside, Region  Midtjylland, Digital identitet –  vigtige begreber  og processer]
+<dfn>Indrullering</dfn>Indrullering er den proces, en person gennemgår for at få oprettet en elektronisk identitet. I processen skal personen identitetssikres i passende omfang, f.eks. ved personligt fremmøde og fremvisning af tidligere udstedte *identifikationsmidler* (pas, kørekort).  Styrken af identitetssikringen af personen er et af grundelementerne i den såkaldte ”Level of Assurance” (LoA), dvs. den grad af tillid, der kan haves til den fysiske identitet, der er koblet til en elektronisk identitet. Resultatet af en indrullering er dels en elektronisk identitet koblet til den fysiske bruger, dels nye *identifikationsmidler* der efterfølgende kan anvendes til at autentificere relationen mellem den fysiske bruger og den digitale identitet.  Handlinger ved indrullering:  - Registrering af identiteten - Identifikation (”Identity proofing”) - Udstedelse af *identifikationsmidler* (f.eks. *certifikat* og nøglekort) - Aktivering af identiteten (har typisk til formål at sikre sole *control*)[Lakeside, Region  Midtjylland, Digital identitet –  vigtige begreber  og processer]
 
 <dfn>Informationssikkerhedspolitik</dfn>Det overordnede dokument, som underskrives af ledelsen, og som udstikker de overordnede krav og målsætninger, som skal gælde for en organisations håndtering af informationssikkerhed Består af retningslinjer, forretningsgang og instruks og sikkerhedsforanstaltninger.[Informationssikkerhedspolitik  : Digitaliseringsstyrelsen]
 
 <dfn>Local Registration Authority</dfn>Se *Signaturadministrator*.[]
 
-<dfn>Login</dfn>Den proces, hvor en person præsenterer sine *akkreditiver* for at bevise sin identitet. Se også *autentificering*.[Informationsordbogen]
+<dfn>Login</dfn>Den proces, hvor en person præsenterer sine *identifikationsmidler* for at bevise sin identitet. Se også *autentificering*.[Informationsordbogen]
 
 <dfn>Login-faktor</dfn>Se *autentifikationsfaktor.*[]
 
@@ -1356,7 +1367,7 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>MOCES</dfn>OCES *certifikat* udstedt til en medarbejder i en virksomhed. *Certifikatet* attesterer at en person er identificeret af ledelsen (eller en af ledelsen udpeget administrator) og at personen er tilknyttet virksomheden.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 
-<dfn>NemID</dfn>En løsning leveret af Nets DanID til brug i offentlige og private tjenester. NemID udsteder akkreditiver til borgere og medarbejdere i Danmark, og forventes erstattes med MitID løsningen i i løbet af 2021.[]
+<dfn>NemID</dfn>En løsning leveret af Nets DanID til brug i offentlige og private tjenester. NemID udsteder identifikationsmidler til borgere og medarbejdere i Danmark, og forventes erstattes med MitID løsningen i i løbet af 2021.[]
 
 <dfn>NemID Privat</dfn>Bruges til de løsninger, der retter sig specifikt til private borgere.[]
 
@@ -1388,7 +1399,7 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Protokol</dfn>En formel specifikation af hvordan enheder interagerer. På de lavere niveauer specificerer protokoller elektriske og fysiske standarder for netværk, rækkefølge af signaler / bits i en transmission, fejlhåndtering (f.eks. retransmission) mm.. På højere niveauer specificerer protokoller karaktersæt, syntaks af beskeder, beskedsekvenser mm.[http://da.wikipedia.org/wiki/Protokol_(edb)]
 
-<dfn>Provisionering</dfn>Bruger provisionering henviser til skabelse/oprettelse, vedligeholdelse og deaktivering af bruger objekter og *akkreditiver* og *attributter* for brugere, da de eksisterer i flere ét eller flere systemer, registre eller appikationer, i modsætning til automatiseret eller interaktive forretningsprocesser. Se også indrullering.[http://en.wikipedia.org/wiki/Provisioning, afsnit 3. User provisioning]
+<dfn>Provisionering</dfn>Bruger provisionering henviser til skabelse/oprettelse, vedligeholdelse og deaktivering af bruger objekter og *identifikationsmidler* og *attributter* for brugere, da de eksisterer i flere ét eller flere systemer, registre eller appikationer, i modsætning til automatiseret eller interaktive forretningsprocesser. Se også indrullering.[http://en.wikipedia.org/wiki/Provisioning, afsnit 3. User provisioning]
 
 <dfn>Public Key Infrastructure</dfn>PKI er en teknologi til udstedelse, administration og brug af digitale *certifikater*. Den Digitale Signatur er en PKI tofaktor sikkerhedsarkitektur (kendskab til kodeord samt besiddelse af en fysisk enhed, f.eks. en *nøglefil* eller et nøglekort), der administreres på nationalt hold af en OCES-operatør.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 
@@ -1396,9 +1407,9 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Registration Authority</dfn>Se *Registreringsmyndighed* og *Identitetsgarant*[]
 
-<dfn>Registrering</dfn>Registrering af en entitet, af attributter og akkreditiver. Omfatter bl.a. indrullering[]
+<dfn>Registrering</dfn>Registrering af en entitet, af attributter og identifikationsmidler. Omfatter bl.a. indrullering[]
 
-<dfn>Registreringsmyndighed, Registreringsenhed</dfn>Den organisation, som registrerer en *entitet* og verificerer den identitet (fx med hjælp fra identitetspapirer). De står dermed inde for identitet af og oplysninger (*attributter*) om den part, der skal modtage et akkreditiv. Samme organisation kan varetage registrering af identitet (UK) eller bygge på autoritativt *identitetsregister*, fx CPR, CVR eller virksomheders identitetsregistre (AD)[]
+<dfn>Registreringsmyndighed, Registreringsenhed</dfn>Den organisation, som registrerer en *entitet* og verificerer den identitet (fx med hjælp fra identitetspapirer). De står dermed inde for identitet af og oplysninger (*attributter*) om den part, der skal modtage et identifikationsmiddel. Samme organisation kan varetage registrering af identitet (UK) eller bygge på autoritativt *identitetsregister*, fx CPR, CVR eller virksomheders identitetsregistre (AD)[]
 
 <dfn>Ressource</dfn>Se *Tjeneste*[]
 
@@ -1452,7 +1463,7 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>Tokenudsteder</dfn>En tokenudsteder er en betroet tjeneste, som udsteder *security tokens* indeholdende attributter, der beskriver en identitet. Tokenudstedere er betroede tjenester, der ved noget om brugerne, således at it-services ikke behøver det. Tokenudstedere vil typisk være autentifikationstjenester eller identitetsbrokere og benævnes i tekniske standarder ofte for *IdP* eller *STS*.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
 
-<dfn>Trust framework</dfn>For at alle parter i en *føderation* har tillid til hinanden er det en fordel at eksplicitere, harmonisere og standardisere forskellige aspekter af sikkerhed, herunder politikker, sikkerhedsmæssige tiltag og fælles sprog. Det sker ved udarbejdelse af et såkaldt trust framework. Et trust framework rummer et sæt af retningslinjer og procedurer m.v., som parterne, der anvender trust frameworket kan acceptere at overholde, så der etableres gensidig tillid - eller kan alternativt være fastsat ved lov. Trust frameworket fastsætter egenskaber som kvaliteten af identitetssikringsprocessen, akkreditivudstedelsesprocessen samt krav til selve autentifikationsprocessen. For at trust frameworket har værdi er det essentielt med bedømmelse og kontrol af de enkelte parters overholdelse af fremsatte retningslinjer og specifikationer. Dette kræver en organisation og governance omkring trust frameworket.          Velkendte eksempler på trust frameworks er NSIS og eIDAS.[Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger]
+<dfn>Trust framework</dfn>For at alle parter i en *føderation* har tillid til hinanden er det en fordel at eksplicitere, harmonisere og standardisere forskellige aspekter af sikkerhed, herunder politikker, sikkerhedsmæssige tiltag og fælles sprog. Det sker ved udarbejdelse af et såkaldt trust framework. Et trust framework rummer et sæt af retningslinjer og procedurer m.v., som parterne, der anvender trust frameworket kan acceptere at overholde, så der etableres gensidig tillid - eller kan alternativt være fastsat ved lov. Trust frameworket fastsætter egenskaber som kvaliteten af identitetssikringsprocessen, identifikationsmiddeludstedelsesprocessen samt krav til selve autentifikationsprocessen. For at trust frameworket har værdi er det essentielt med bedømmelse og kontrol af de enkelte parters overholdelse af fremsatte retningslinjer og specifikationer. Dette kræver en organisation og governance omkring trust frameworket.          Velkendte eksempler på trust frameworks er NSIS og eIDAS.[Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger]
 
 <dfn>Validering</dfn>Den proces, der kontrollerer og bekræfter korrektheden og gyldigheden af en elektronisk identitet, en signatur, et elektronisk segl, mv.[EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer]
 
@@ -1637,12 +1648,12 @@ I disse defineres følgende begreber:
 
 - »Entitet«: Et subjekt/en bruger, som skal have adgang til en tjeneste.
 - »[Elektronisk] Identitet«: En digital persona, repræsenteret ved et sæt af attributter, forkortes eID.
-- »Elektronisk identifikationsmiddel«: Et elektronisk eller en fysisk objekt/genstand, der kan anvendes til at gennemføre en autentificering af en identitet. ”Elektronisk identifikationsmiddel” kaldes herefter ”akkreditiv”.
+- »Elektronisk identifikationsmiddel«: Et elektronisk eller en fysisk objekt/genstand, der kan anvendes til at gennemføre en autentificering af en identitet.
 
 Det betyder, at de fleste personer i dag har en række elektroniske identiteter:
 
 - NemID-borger med attributter som PID og navn
-- Identitet hos arbejdsgiver, typisk med akkreditiverne brugernavn og kodeord og attributter som navn, organisatorisk enhed
+- Identitet hos arbejdsgiver, typisk med identifikationsmidlerne brugernavn og kodeord og attributter som navn, organisatorisk enhed
 - Identitet hos Uni*Login
 - Identitet hos Facebook
 - Identitet hos Google
@@ -1664,7 +1675,7 @@ I fællesoffentlig brugerstyring har der indtil nu været arbejdet med, at en en
 - En privat NemID
 - En eller flere NemID Erhverv tilknyttet forskellige virksomheder.
 
-Særligt for små erhvervsdrivende har det været utilfredsstillende at skulle håndtere to eller flere akkreditiver som følge af den nuværende models stærke binding mellem identiteter og akkreditiver, som er implementeret i NemID. Derfor har der i næste generation NemID været arbejdet med at finde løsninger på dette. Der har været to grundlæggende modeller til overvejelse for fællesoffentlige løsninger og dermed for NDIS:
+Særligt for små erhvervsdrivende har det været utilfredsstillende at skulle håndtere to eller flere identifikationsmidler som følge af den nuværende models stærke binding mellem identiteter og identifikationsmidler, som er implementeret i NemID. Derfor har der i næste generation NemID været arbejdet med at finde løsninger på dette. Der har været to grundlæggende modeller til overvejelse for fællesoffentlige løsninger og dermed for NDIS:
 
 - En løsning med kun en identitet pr. entitet
 - En løsning med flere identiteter pr. entitet.
@@ -1687,7 +1698,7 @@ Ulemperne ved denne model:
 
 • For en række personer vil det være en ulempe kun at have en elektronisk identitet, fx hvis personen arbejder for mange virksomheder, så det kan være vanskeligt at skelne mellem rollerne, hvis det er den samme funktion og dermed det samme attributsæt, personen har.
 • Alle tjenester skal fra implementeringstidspunktet kunne understøtte, at valg af identitet kun sker gennem at registrere en og kun en NemID og ikke kan ske på anden måde.
-• Der kan ikke vælges at danne identiteter med tilhørende akkreditiver, der kan afspejle virksomheders forskellige ønsker til fx sikringsniveau eller funktionalitet, fx som i sundhedssektoren, hvor der ønskes akkreditiver, der kan anvendes i klinisk kontekst.
+• Der kan ikke vælges at danne identiteter med tilhørende identifikationsmidler, der kan afspejle virksomheders forskellige ønsker til fx sikringsniveau eller funktionalitet, fx som i sundhedssektoren, hvor der ønskes identifikationsmidler, der kan anvendes i klinisk kontekst.
 
 **En løsning med flere identiteter pr. entitet**
 
@@ -1701,19 +1712,19 @@ Løsningen svarer til den model, der anvendes i det nuværende NemID (i 2016).
 </figure>
 
 
-For at løsningen med flere identiteter pr. entitet tilgodeser brugerbehov, kan modellen implementeres, så en entitet kan anvende sit akkreditiv (fx NemIDnøglekortet) til flere identiteter.
+For at løsningen med flere identiteter pr. entitet tilgodeser brugerbehov, kan modellen implementeres, så en entitet kan anvende sit identifikationsmiddel (fx NemIDnøglekortet) til flere identiteter.
 
 Det sker på to måder:
 
-For borgere, der er ejere af enkeltmandsvirksomheder eller er tegningsberettigede, kan det offentlige tilbyde brug af borgerakkreditiver i forbindelse med erhvervsidentiteten.
+For borgere, der er ejere af enkeltmandsvirksomheder eller er tegningsberettigede, kan det offentlige tilbyde brug af borgeridentifikationsmidler i forbindelse med erhvervsidentiteten.
 
 Konceptuelt sker det ved, at en elektronisk identitet (erhvervsidentiteten) dannes på grundlag af en anden elektronisk identitet (borgeridentiteten). Fx en ny virksomhedsejer med automatisk CVR-opmærkning. Identiteten kan bevares over tid eller være dynamisk.
 
 Denne løsning implementeres fra februar 2017 i fællesoffentlig brugerstyring.
 
-Der dannes en separat erhvervsidentitet med egne attributter. Denne erhvervsidentitet bevares over tid, uafhængigt af akkreditiver. Det betyder, at der kan skiftets akkreditiv, uden at der skal administreres en ny identitet med tilhørende rettigheder.
+Der dannes en separat erhvervsidentitet med egne attributter. Denne erhvervsidentitet bevares over tid, uafhængigt af identifikationsmidler. Det betyder, at der kan skiftets identifikationsmiddel, uden at der skal administreres en ny identitet med tilhørende rettigheder.
 
-For virksomheder betyder modellen, at de kan vælge mellem borgerens akkreditiver eller at foranledige brug af en erhvervsidentitet med akkreditiver med andre styrker. Virksomheder kan skifte mellem alternativerne løbende og stadig bevare samme erhvervsidentitet. Løsningen muliggør, at både borger og virksomhed kan vælge, om borgeridentiteten kan anvendes til erhvervsformål. Løsningen kan implementeres med begge valgmuligheder eller således, at kun den ene part (fx virksomheden) kan vælge.
+For virksomheder betyder modellen, at de kan vælge mellem borgerens identifikationsmidler eller at foranledige brug af en erhvervsidentitet med identifikationsmidler med andre styrker. Virksomheder kan skifte mellem alternativerne løbende og stadig bevare samme erhvervsidentitet. Løsningen muliggør, at både borger og virksomhed kan vælge, om borgeridentiteten kan anvendes til erhvervsformål. Løsningen kan implementeres med begge valgmuligheder eller således, at kun den ene part (fx virksomheden) kan vælge.
 
 [Bilag om typer af robotanvendelser. Hvad starter robotten... tids, ændring, henvendelse, brugerklik]
 
