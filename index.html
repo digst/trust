@@ -27,7 +27,7 @@
 @media print {
   html { margin: 0cm 2cm 2cm 0cm; font-size: 80%; }
   /* DIGST fonts */
-  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; counter-reset: figures;}
   h2,h3,h4, h4 dfn { font-family: "Garamond", serif; color: black; margin-bottom: 0; font-style: normal; font-weight: normal;}
 
   h2:not(#subtitle) { page-break-before: always; font-size: 250%; border-bottom: solid 0.5px black; padding-top: 20px; margin-bottom: 6px;}
@@ -63,6 +63,18 @@
 dfn {
   color: #940027;
 }
+
+figure {
+	counter-increment: figures;
+  margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+figure figcaption:before {
+	content: 'Fig. ' counter(figures) ' - ';
+}
+
 
 /* style til egne og andres definitioner rød/blå*/
 </style>
@@ -331,7 +343,7 @@ Samarbejde mellem tillidstjenester og forretningstjenester
 <p>Tjenesteudbydere bør udarbejde en adgangspolitik for deres forretningstjenester, som definerer betingelser for adgang til funktioner og data. En adgangspolitik kan fx udtrykke, at en tjeneste kun må tilgås af identiteter autentificeret på NSIS sikringsniveau Høj, som er tilknyttet et bestemt CVR-nummer, og er tildelt en bestemt rolle. Adgangspolitikker kan i praksis være formuleret mere eller mindre eksplicit (og adskilt fra implementeringen). Eksempelvis kan en borgerrettet selvbetjeningsløsning have en meget simpel politik om, at hver borger (udpeget ved CPR) får adgang til egne data. Det afgørende er, at adgangspolitikken er i overensstemmelse med ledelsens anvisninger i form af informationssikkerhedspolitik, risikovurderinger mv.</p>
 <p>For at sikre overensstemmelse mellem adgangspolitik og den efterfølgende adgangskontrol, som håndhæver politikken, kan adgangspolitikken med fordel udtrykkes i termer af attributter, der er tilgængelige via attributbeskrivelsen. Dette er fx særligt relevant i token-baserede realiseringer, hvor adgang opnås på baggrund af attributter beskrevet i et security token. Jo mere standardiserede adgangspolitikker er på tværs af tjenester, jo lettere er det for brugere og brugerorganisationer at administrere i overensstemmelse med adgangspolitikkerne. Fællesoffentligt er visse attributter standardiseret (fx i OIOSAML profilerne), og nogle domæner har standardiseret en række attributter (dette gælder fx på sundhedsområdet).</p>
 <figure>
-<img src="billede3.PNG" />
+<img src="billede3.PNG" width="70%"/>
 <figcaption>
 Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder
 </figcaption>
