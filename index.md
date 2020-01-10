@@ -211,8 +211,8 @@ En tjeneste har ikke altid behov for at kende identifikation af brugeren for at 
 I forbindelse med det nye MitId, kan private og erhvervsmæssige identiteter forbindes. For at sikre retten til privatliv har man i MitId besluttet at denne funktionalitet beskyttes af et dobbelt frivillighedsprincip, hvor forbindelsen kun kan bruges, hvis både medarbejder og virksomhed siger god for det.
 
 ### Sikkerhed og tillid
-Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data, som kræver høj sikkerhed, mens andre er mindre kritiske og derfor med lavere sikkerhedsbehov.
-Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester, der udbydes og den sikkerhed, de beskyttes med. Når tjenester bliver mere sammensatte, skal denne tillid kunne opfyldes af alle tjenester der er omfattet.  
+Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data, som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
+Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester, der udbydes og den sikkerhed, de beskyttes med. Når tjenester bliver mere sammensatte, skal denne tillid kunne opfyldes af alle tjenester, der er omfattet.  
 
 ### Delegering og fuldmagt
 En del borgere har behov for at kunne give andre fuldmagt til at løse opgaver for sig.
@@ -241,19 +241,19 @@ Derudover kan en række af de øvrige arkitekturregler udfoldes og konkretiseres
 
 ### Samlet? brugeradministration
 
-Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer... (se mere under afsnittet forretningsfunktioner).
+Princip der fastlægger at brugeradministration er en tværgående funktion og sker i dedikerede systemer uden for fag- og selvbejtningssystemer... (se mere under afsnittet Forretningsfunktioner).
 
 ### Føderation
 
-Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitikker og adgangspolitikker. (Se mere under afsnittet om forretningsmønstre)
+Princip der fastlægger at tjenesteanvender og tjenesteudbyder indgår i forpligtigende fællesskaber om udformning af tillidspolitikker og adgangspolitikker. (Se mere under afsnittet om Forretningsmæssige arkitekturmønstre)
 
 ### Harmoniserede tillidstjenester
 
-Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurencebaseret marked. (Se mere under afsnittet områder for standardisering)
+Princip om at føderationer baserer sig på harmoniserede krav til tillidstjenester for at sikre et konkurencebaseret marked. (Se mere under afsnittet Områder for standardisering)
 
 ## Vision
 
-Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [8] efter godkendelse i Styregruppen for udbud af fællesoffentlige komponenter. Her fastlages en vision med tre elementer:
+Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10] efter godkendelse i Styregruppen for udbud af fællesoffentlige komponenter. Her fastlages en vision med tre elementer:
 
 1. Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger.
 
@@ -278,36 +278,36 @@ Ved af efterleve principper og mønstre i denne referencearkitektur opnås værd
 
 De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
 
-- eIDAS forordningen [6] (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
-- Lov om NemID [Ref @Kirsten] og den kommende lov om MitID.
-- EU-databeskyttelsesforordningen (GDPR) som beskriver pligter og rettigheder ved behandling af persondata.
-- Databeskyttelsesloven som i dansk kontekst supplerer GDPR.
-- Forvaltningsloven som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
+- eIDAS forordningen [8] (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
+- Lov om udstedelse af NemID [11], der sætter rammerne for [Ref @Kirsten] og den kommende lov om MitID.
+- Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester [12], der er den supplerende lov for eIDAS forordningen ui Danmark.
+- EU-databeskyttelsesforordningen (GDPR)[13] som beskriver pligter og rettigheder ved behandling af persondata.
+- Databeskyttelsesloven [14] som i dansk kontekst supplerer GDPR.
+- Forvaltningsloven [15] som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 
 Dertil kan der være særregulering inden for visse domæner som fx sundhedsområdet.
 
 Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan nævnes:
 
-- Databeskyttelsesforordningen [Ref @Kirsten] stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
-
-- eIDAS-forordningen [Ref @Kirsten] stiller i artikel 6 krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt. Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med alle øvrige EU-landes nationale identifikationsordninger.
-- Forvaltningsloven stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller fuldt digitale løsninger, er nødt til at kunne håndtere digitale fuldmagter.
+- Databeskyttelsesforordningen [13] stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
+- eIDAS-forordningen [8] stiller i artikel 6 krav om, at en række tjenester udstillet af offentlige myndigheder skal kunne tilgås af borgere og virksomheder i andre EU-lande ved brug af de elektroniske identifikationsmidler, som det enkelte EU-land har udstedt. Uden brug af føderationer og eksterne tillidstjenester ville dette være en helt uoverskuelig opgave for den enkelte forretningstjeneste at skulle integrere med alle øvrige EU-landes nationale identifikationsordninger.
+- Forvaltningsloven [15] stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller fuldt digitale løsninger, er nødt til at kunne håndtere digitale fuldmagter.
 
 ## Sikkerhed
-Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden for styring af informationssikkerhed. I National strategi for cyber- og informationssikkerhed for 2015-16 [Ref x @Kirsten https://digst.dk/strategier/cyber-og-informationssikkerhed/], er ISO 27001 valgt som statslig sikkerhedsstandard og har været obligatorisk at følge for statslige institutioner siden januar 2014, og også kommunerne er forpligtet til at følge principperne.
+Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001-standarden i januar 2014 blev det obligatorisk at følge ISO 27001 standarden for de statslige myndigheder. Kommunerne er også forpligtet til at følge principperne.
 
-Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har udarbejdet vejledninger, værktøjer og skabeloner hertil, som er placeret her: http://www.digst.dk/Informationssikkerhed.
+Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
 
-Hovedindholdet i ISO/IEC 27001 er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge:
+Hovedindholdet i ISO/IEC 27001 [16] er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge:
 
 - retningslinjer
 - forretningsgange og instrukser
 - sikkerhedsforanstaltninger, som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
 
-ISO/IEC 27001 standarden er opdelt i 14 domæner, hvor brugerstyring særligt er relevant for domænet 'Access Control' og for management delen en del af domænet 'Information Security Policies'.
+ISO/IEC 27001 [16] standarden er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
 ### Risici vedr. brugere
-Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [Ref @Kirsten] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
+Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
 
 
