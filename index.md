@@ -1241,7 +1241,7 @@ I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret 
 
 Note til figur: Pilene angiver områder for standarder
 
-Der skal være **standarder for registrering af brugere, identifikationsmidler og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS [8], National Standard for Identiteters Sikringsniveau (NSIS) [18], ISO29115, Kantara Identity Assurance Framework [30]).
+Der skal være **standarder for registrering af brugere, identifikationsmidler og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS [8], National Standard for Identiteters Sikringsniveau (NSIS) [18], ISO29115 [32], Kantara Identity Assurance Framework [30]).
 
 Der skal være **standarder for overførsel af data om autentificerede brugere** mellem autentifikationstjenester, login-tjenester/brokere og tjenester. Her bruges i dag fx OIOSAML standarden fællesoffentligt, mens flere domæner har defineret underprofiler med henblik på håndtering af lokale behov (det gælder på det kommunale område og på sundhedsområdet). På app-området er den dominerede standard OpenID Connect, men der er endnu ingen fællesoffentlig profilering heraf, hvilket skønnes nødvendigt, da den rene standard efterlader mange sikkerhedsvalg åbne.
 
