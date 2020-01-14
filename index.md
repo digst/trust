@@ -68,7 +68,7 @@ Slim Build Artifact:
 <h2 class="no-num">Forord</h2>
 Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
 
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) er der yderligere behandlet applikationer som brugere og i noget omfang ting i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
+2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) er der yderligere behandlet applikationer som brugere og i noget omfang apparater i form af IoT - Internet of Things eller NPE – Non person entities. Brugen af føderationer og tillidstjenester er uddybet.
 
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler [Figurnr. indsættes]. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
@@ -101,7 +101,7 @@ Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder de
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-Denne version 1.1 af Referencearkitektur for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
+Denne version 1.1 af Referencearkitektur for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for tinger, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
 
 Med udspring i Digitaliseringspagten er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen. [Hvad er status på samtykke @Kirsten: Det er stadig ikke afklaret]
 
@@ -406,7 +406,7 @@ Det er centralt i denne referencearkitektur, at der opereres med en *løs* kobli
 
 CPR-nummeret er en attribut, som desværre også historisk er brugt som identifikationsmiddel - dvs. som bevis for identitet. Denne anvendelse af CPR-nummeret er imod regler fra CPR-kontoret, men anvendes stadig i et vist omfang.
 
-I forbindelse med registreringen eller efter denne kan identitetens karakteristika og egenskaber **beskrives i form af attributter** (fx køn, adresse, alder, et nummer i form af fx personalenummer). For medarbejderidentiteter foretages en del af registreringen typisk af en administrator, der er udpeget af virksomhedens ledelse. En central del af registreringen består i at sikre relationen mellem virksomheden (som juridisk enhed) og medarbejderen (som fysisk person). For IoT-enheder kan en del af registreringen ske af brugeren eller ejeren - fx når en person tilknytter en elektronisk blodtryksmåler til sin profil på en sundhedstjeneste og giver den adgang til at indberette på denne.
+I forbindelse med registreringen eller efter denne kan identitetens karakteristika og egenskaber **beskrives i form af attributter** (fx køn, adresse, alder, et nummer i form af fx personalenummer). For medarbejderidentiteter foretages en del af registreringen typisk af en administrator, der er udpeget af virksomhedens ledelse. En central del af registreringen består i at sikre relationen mellem virksomheden (som organisation) og medarbejderen (som fysisk person). For IoT-enheder kan en del af registreringen ske af brugeren eller ejeren - fx når en person tilknytter en elektronisk blodtryksmåler til sin profil på en sundhedstjeneste og giver den adgang til at indberette på denne.
 
 
 
@@ -724,7 +724,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 </figure>
 
 
-<dfn>Bruger</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
+<dfn>Bruger</dfn> Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
 
 <dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes - Identitetssikring.
 
@@ -734,7 +734,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 
 
 
-**Type af entiteter**
+**Type af brugere**
 
 [genskriv med princip om entiteter og identitets typer hænger sammen mht til adgangskontrol]
 
@@ -743,7 +743,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 
 
 
-Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
+Brugere ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
 
 <figure>
 <img src="Brugertyper.png" width="60%"/>
@@ -754,14 +754,14 @@ Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der k
 
 <dfn>Organisation</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
 
-<dfn>Apparat</dfn> Fysiske ting med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+<dfn>Apparat</dfn> Fysiske enhed med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
 
-<dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i en ting, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
+<dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
 En automatiseringsrobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler efter at være logget ind på de nødvendige systemer, i brugerstyringssammenhæng ikke betragtes som en robot.
 
-**Relationer imellem identiteter**
+**Relationer imellem brugere**
 
-Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
+Brugere kan have indbyrdes relationer af betydning for brugerstyring.
 
 <figure>
 <img src="Brugerrelationer.png" width="60%"/>
@@ -770,17 +770,17 @@ Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
 
 **Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
 
-**Tilhør** imellem person og juridisk enhed. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
+**Tilhør** imellem person og organisation. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
 
-**Rettighed** der eksplicit gives fra en juridisk enhed til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+**Rettighed** der eksplicit gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 
-**Bruger af** en ting. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at tingen arver rettigheder fra brugeren.
+**Bruger af** et apparat. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver rettigheder fra personen der bruger det.
 
-**Delegering** af rettigheder fra en person eller juridisk enhed til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+**Delegering** af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
 
 En applikation der **afvikles på** en enhed, kan få særlige rettigheder på grund af enheden den afvikles på. *< eksempel >*.
 
-Juridisk enhed der har **ansvar for** hvad en applikation gør.
+organisation der har **ansvar for** hvad en applikation gør.
 
 Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
 
@@ -806,7 +806,7 @@ I denne liste gives kun definitioner for de begreber, som referencearkitekturen 
 <tr>
 <td>Entitet </td>
 <td>Noget værende, der kan repræsenteres ved en digital identitet, og som ønsker adgang til en forretningstjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.</td>
-<td>En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), ting (sensor, apparat) eller tjeneste (system, app, applikation, paskontor).</td>
+<td>En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), apparat (sensor, telefon) eller tjeneste (system, app, applikation, paskontor).</td>
 </tr>
 <tr>
 <td>Identitet</td>
@@ -1308,7 +1308,7 @@ Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordl
 
 <dfn>ID-tjeneste</dfn>En betroet tjeneste, som leverer en eller flere af de processer, som er underlagt krav i (NSIS). Dette kan fx være identitetssikring, udstedelse af elektroniske identifikationsmidler eller drift af en broker. Bemærk, at eIDAS reguleringen bruger det komplementerende begreb ”tillidstjeneste” om tjenester involveret i udstedelse af digitale signaturer/certifikater, validering af certifikaters gyldighed og tidsstempling. Der er intet overlap mellem ID-tjenester i NSIS og tillidstjenester i eIDAS - det er således helt komplementære begreber.[National Standard for Identiteters Sikringsniveauer (NSIS)]
 
-<dfn>Entitet</dfn>En fysisk person eller juridisk enhed, som ønsker adgang til en on-line tjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. En entitet er noget værende, og kan også være en ting, sensor, app, apparat eller softwarerobot.[National Standard for Identiteters Sikringsniveauer (NSIS)]
+<dfn>Bruger</dfn> En fysisk person eller organisation, som ønsker adgang til en on-line tjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. En entitet er noget værende, og kan også være et apparat, sensor, app, apparat eller softwarerobot.[National Standard for Identiteters Sikringsniveauer (NSIS)]
 
 <dfn>eSignatur</dfn>eSignatur defineres som data i elektronisk form, der er logisk forbundet med andre elektroniske data, som autentificerer den, der signerer. En ”avanceret” signatur er en eSignatur, der kan identificere den, som signerer. Anvendes primært om begrebet elektronisk underskrift og i begrænset omfang om en specifik elektronisk underskrift. *<Vi har flere forskellige signaturord (eSignatur, Elektronisk signatur, Avanceret elektronisk signatur, Digital Signatur, Signatur). Vi skal have et overblik så vi kan se hvilke der er synomyner og hvilke der adskiller sig. Et aspekt er at digital signatur er certifikatbaseret, mens en elektronisk signatur er enhver form for elektronisk version, fx en indscannet underskrift eller en underskrift på en skærm.*[http://ec.europa.eu/digitalagenda/en/trustservices-and-eid]
 
