@@ -1494,6 +1494,41 @@ W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.
 
 Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.
 
+| Nr. | Kilde | Materiale |
+|-----|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 | Regeringen, KL, Danske Regioner | Den Fælles Offentlige Digitaliseringsstrategi 2016-2020,  https://digst.dk/strategier/digitaliseringsstrategien/ |
+| 2 | Digitaliseringsstyrelsen | En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering, juni 2017,  https://arkitektur.digst.dk/node/241 |
+| 3 | Digitaliseringsstyrelsen | Referencearkitektur for brugerstyring version 1.0, april 2017, https://arkitektur.digst.dk/node/123 |
+| 4 | Digitaliseringsstyrelsen | Fællesoffentlige regler for begrebs- og datamodellering Version 2.0., marts 2019,  https://arkitektur.digst.dk/metoder/regler-begrebs-og-datamodellering/modelregler-v-20 |
+| 5 | Regeringen, KL, Danske Regioner | Digitaliseringspagten, marts 2019,  https://digst.dk/strategier/digitaliseringspagten/ |
+| 6 | Europakommissionen | European Interoperability Reference Architecture (EIRA),  https://joinup.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/about |
+| 7 | Digitaliseringsstyrelsen | Den fællesoffentlige digitale arkitektur (FDA),  https://arkitektur.digst.dk/ |
+| 8 | Europaparlamentet og Rådet | eIDAS-forordningen, Europa-Parlamentets og Rådets forordning (EU) nr. 910/2014 af 23. juli 2014 om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked og om ophævelse af direktiv 1999/93/EF,  https://eur-lex.europa.eu/legal-content/DA/ALL/?uri=CELEX%3A32014R0910 |
+| 9 | Digitaliseringsstyrelsen | Beskrivelse af det dobbelte frivillighedsprincip på Digitaliseringsstyrelsens hjemmeside,  https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/fra-det-eksisterende-til-det-kommende-nemlog-in/nye-erhvervsidentiteter-det-dobbelte-frivillighedsprincip/ |
+| 10 | Digitaliseringsstyrelsen | Fællesoffentlig strategi for brugerstyring, april 2017,  https://arkitektur.digst.dk/node/123 |
+| 11 | Folketinget | Lov nr. 439,  Lov om udstedelse af NemID med offentlig digital signatur til fysiske personer og til medarbejdere i juridiske enheder, https://www.retsinformation.dk/eli/lta/2018/439 |
+| 12 | Folketinget | Lov nr. 617 Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked, https://www.retsinformation.dk/Forms/R0710.aspx?id=180237 |
+| 13 | Europaparlamentet og Rådet | Databeskyttelsesforordningen. Europa-Parlamentets og Rådets forordning (EU) 2016/679 af 27. april 2016 om beskyttelse af fysiske personer i forbindelse med behandling af personoplysninger og om fri udveksling af sådanne oplysninger og om ophævelse  af direktiv 95/46/EF (generel forordning om databeskyttelse), https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX%3A32016R0679 |
+| 14 | Folketinget | Lov nr. 502 af 23. maj 2018 om supplerende bestemmelser til forordning om beskyttelse af fysiske personer i forbindelse med behandling af personoplysninger og om fri udveksling af sådanne oplysninger (Databeskyttelsesloven), https://www.retsinformation.dk/Forms/r0710.aspx?id=201319 |
+| 15 | Folketinget | LBK nr. 433 af 22/04/2014 Bekendtgørelse af forvaltningsloven,  https://www.retsinformation.dk/forms/r0710.aspx?id=161411 |
+| 16 | ISO/IEC | ISO/IEC 27001:2017 Informationsteknologi – Sikkerhedsteknikker – Ledelsessystemer for informationssikkerhed – Krav,  https://webshop.ds.dk/da-dk/standard/ds-en-iso-iec-270012017 0 |
+| 17 | Digitaliseringsstyrelsen og Erhvervsstyrelsen | Vejledninger og skabeloner til ISMS,  https://sikkerdigital.dk/myndighed/forstaa-arbejdet-med-informationssikkerhed/vejledninger-og-skabeloner/ |
+| 18 | Digitaliseringsstyrelsen | National Standard for Identiteters Sikringsniveauer (NSIS), version 2.0.1, oktober 2019,  https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/vejledninger-og-standarder/nsis-standarden/ |
+| 19 | Digitaliseringsstyrelsen | OIOSAML Web SSO Profile 3.0, oktober 2019,  https://www.digitaliser.dk/resource/4904798 |
+| 20 | Regeringen | National strategi for cyber- og informationssikkerhed, april 2018,  https://digst.dk/strategier/cyber-og-informationssikkerhed/ |
+| 21 | Nets DanID | OCES-certifikatpolitikker,  https://www.nemid.nu/dk-da/om-nemid/historien_om_nemid/oces-standarden/oces-certifikatpolitikker/ |
+| 22 | Digitaliseringsstyrelsen | OIOSAML,  https://www.digitaliser.dk/group/42063/resources |
+| 23 | The Internet Engineering Task Force (IETF) | JSON Web Token (JWT) rfc 7519,  https://tools.ietf.org/ |
+| 24 | Digitaliseringsstyrelsen | OIO IDWS,  https://digitaliser.dk/resource/526486 |
+| 25 | Oasis | WS-Security Policy,  http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2-spec-os.html |
+| 26 | Oasis | XACML,  https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml |
+| 27 | The Internet Engineering Task Force (IETF) | OAuth 2.0 Authorization Framework rfc 6749,  https://digitaliser.dk/resource/1246357 |
+| 28 | OpenID Foundation | OpenID Connect Core 1.0,  https://openid.net/specs/openid-connect-core-1_0.html |
+| 29 | The Internet Engineering Task Force (IETF) | OAuth 2.0 Token Exchange,  https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-19 |
+| 30 | Kantara Inititative | Kantara Identity Insurance Framework,  https://kantarainitiative.org/confluence/display/LC/Identity+Assurance+Framework |
+| 31 | Kantara Inititative | User-Managed Access (UMA),  https://kantarainitiative.org/confluence/display/uma/Home |
+| 32 | ISO | ISO 29115,  Information technology - Security techniques - Entity authentication assurance framework, https://www.iso.org/standard/45138.html |
+#Bilag
 
 [[CDT]]
 [[CIDR]]
