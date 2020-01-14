@@ -724,7 +724,7 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 </figure>
 
 
-<dfn>Entitet</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En entitet kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver entitet der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
+<dfn>Bruger</dfn> Person, juridisk enhed, ting eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
 
 <dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes - Identitetssikring.
 
@@ -746,15 +746,15 @@ I brugerstyring, hvor opgaverne løses af forskellige aktører i føderationer, 
 Entiteter ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
 
 <figure>
-<img src="Entitet.png" width="60%"/>
-<figcaption>[Entitetsformer]</figcaption>
+<img src="Brugertyper.png" width="60%"/>
+<figcaption>Brugertyper</figcaption>
 </figure>
 
 <dfn>Person</dfn> Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-<dfn>Juridisk enhed</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+<dfn>Organisation</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
 
-<dfn>Ting</dfn> Fysiske ting med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+<dfn>Apparat</dfn> Fysiske ting med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
 
 <dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i en ting, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
 En automatiseringsrobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler efter at være logget ind på de nødvendige systemer, i brugerstyringssammenhæng ikke betragtes som en robot.
@@ -764,8 +764,8 @@ En automatiseringsrobot vil være en applikation og skal derfor have egen identi
 Entiteter kan have indbyrdes relationer af betydning for brugerstyring.
 
 <figure>
-<img src="Entitet relation.png" width="60%"/>
-<figcaption>[Entitetsrelationer]</figcaption>
+<img src="Brugerrelationer.png" width="60%"/>
+<figcaption>Brugerrelationer</figcaption>
 </figure>
 
 **Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
