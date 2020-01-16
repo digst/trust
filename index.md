@@ -146,9 +146,9 @@ Denne referencearkitektur beskriver hvordan tværgående tjenester kan understø
 Føderationer er en forudsætning for referencearkitekturens adskillelse af brugerstyring i tillidstjenester og forretningstjenester, hvor tillidstjenesterne typisk er generelle og leveres af andre end dem, der leverer forretningstjenesterne.
 
 
-<dfn>Tillidstjeneste</dfn> en betroet tjeneste som udbydes særskilt, og anvendes af bruger og forretningstjenesteudbyder i fælleskab, styret af aftaler om tillidspolitikker.
+<dfn>Tillidstjeneste</dfn> en betroet tjeneste som udbydes særskilt, og anvendes af bruger og forretningstjenesteudbyder i fællesskab, styret af aftaler om tillidspolitikker.
 
-<dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og governance.
+<dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
 
 
 ## Tilblivelse, styring og andre referencearkitekturer
@@ -208,7 +208,7 @@ En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
 - Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
 
-I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
 
 ### Sikkerhed og tillid
 Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data (herunder følsomme personoplysninger), som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
@@ -228,9 +228,10 @@ Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det 
 - Kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen.
 
 Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at bygge brugerstyring. Det er derfor en positiv business case at udvikle forretningstjenesten for sig og tilgå brugerstyring som en (delt)  tjeneste.
+
 ## Vision
 
-Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10] efter godkendelse i Styregruppen for udbud af fællesoffentlige komponenter. Her fastlages en vision med tre elementer:
+Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10] efter godkendelse i Styregruppen for udbud af fællesoffentlige komponenter. Her blev fastlagt en vision med tre elementer:
 
 1. Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger.
 
@@ -280,7 +281,7 @@ Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed,
 -	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standard samlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
--	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplys-ninger anvendes til angivne formål, og at oplysningerne er grundlag for hand-linger inden for en føderation i forbindelse med brugerstyring.
+-	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
 ### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. Reglerne for adgang specificeres i en adgangspolitik udarbejdet af tjenesteudbyder.
@@ -292,7 +293,7 @@ Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. R
 *Implikationer*
 
 -	Uanset hvor og hvordan adgangskontrollen implementeres, skal tjenesteudbyder sikre at den sker i henhold til adgangspolitikken.
--	Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fæl-les adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
+-	Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
 Historisk har forretningstjenester indeholdt brugerstyring, med det resultat, at den samme bruger kan have mange forskellige identiteter, og at identiteter ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring placeret i tillidstjenester udenfor for forretningstjenesten.
@@ -1051,7 +1052,7 @@ En ofte forekommende problematik er, at en forretningstjeneste har brug for at k
 </figure>
 <br>
 
-Begge forretningstjenster udfører som tidligere nævnt brugerstyring (illustreret på figuren med røde stjerner). Det første kald er helt almindelig brugeradgang, men for kaldet til den næste forretningstjeneste er der grundlæggende to måder at håndtere det videre kald på mellem forretningstjenester:
+Begge forretningstjenester udfører som tidligere nævnt brugerstyring (illustreret på figuren med røde stjerner). Det første kald er helt almindelig brugeradgang, men for kaldet til den næste forretningstjeneste er der grundlæggende to måder at håndtere det videre kald på mellem forretningstjenester:
 
 - Enten kalder den første forretningstjeneste videre med sin egen identitet (også kaldet system-trust modellen).
 - Alternativt kalder den første forretningstjeneste videre med kontekst af den specifikke bruger, som der ønskes data på vegne af (altså en delegeringsmodel).
