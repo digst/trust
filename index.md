@@ -227,7 +227,7 @@ Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det 
 - En sammenhængende brugerstyring, så tjenester kan implementeres effektivt.
 - Kontrol af medarbejdernes anvendelse af elektronisk identitet på virksomhedens vegne, da det både juridisk og kommercielt kan være forpligtende for brugerorganisationen.
 
-Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at bygge brugerstyring. Det er derfor en positiv business case at udvikle forretningstjenesten for sig og tilgå brugerstyring som en (delt)  tjeneste.
+Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at bygge brugerstyring. Det er derfor en positiv business case at udvikle forretningstjenesten for sig og tilgå brugerstyring som en fælles tjeneste.
 
 ## Vision
 
@@ -245,6 +245,7 @@ Strategien for brugerstyring er ikke længere aktiv, men visionen ovenfor føres
 ## Principper
 
 Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
+
 *Principper*
 
 1.	Brugerne oplever en relevant og sammenhængende adgangsstyring
@@ -258,6 +259,7 @@ I tillæg til principperne i denne referencearkitektur, findes yderligere princi
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
 Brugere vil skulle betjene sig af en række forskellige tjenester og med forskellige sikkerhedsbehov. Disse tjenester skal opleves lettilgængelige og sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret. Kravene til sikringsniveau skal svare til det sikkerhedsniveau de anvendte tjenester kræver.
+
 *Rationale*
 
 -	Brugerne vil opleve en bedre og mere gnidningsfri løsning af deres opgaver, der kræver forretningsprocesser på tværs af organisationer og sektorer, hvilket øger brugertilfredshed og effektivitet.
@@ -272,12 +274,15 @@ Brugere vil skulle betjene sig af en række forskellige tjenester og med forskel
 
 ## Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
 Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed, og indhente og udveksle så lidt information som muligt - Data Minimering.
+
 *Rationale*
 
 -	Persondataloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
 -	Tjenester der respekterer brugernes privatliv er nemmere at have tillid til.
 -	Princippet understøtter FDA arkitekturprincip 4 Sikkerhed, privatliv og tillid sikres.
+
 *Implikationer*
+
 -	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standard samlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
@@ -285,6 +290,7 @@ Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed,
 
 ### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. Reglerne for adgang specificeres i en adgangspolitik udarbejdet af tjenesteudbyder.
+
 *Rationale*
 
 -	Tjenesteudbyder har dataansvaret, og dermed det juridiske ansvar.
