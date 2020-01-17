@@ -1556,7 +1556,8 @@ Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af
 | 30 | Kantara Inititative | Kantara Identity Insurance Framework,  https://kantarainitiative.org/confluence/display/LC/Identity+Assurance+Framework |
 | 31 | Kantara Inititative | User-Managed Access (UMA),  https://kantarainitiative.org/confluence/display/uma/Home |
 | 32 | ISO | ISO 29115,  Information technology - Security techniques - Entity authentication assurance framework, https://www.iso.org/standard/45138.html |
-#Bilag
+
+# Bilag
 
 [[CDT]]
 [[CIDR]]
