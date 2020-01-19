@@ -740,21 +740,21 @@ Ulemper:
 
 
 ## Forretningsobjekter og begrebsmodel
-
+På figuren nedenfor illustreres de vigtigste forretningsobjekter inden for brugerstyring og deres relationer:
 
 <figure>
 <img src="Udvalgte forretningsobjekter.svg" width="80%"/>
 <figcaption>Udvalgte forretningsobjekter med særlig relevans for brugerstyring og adgangskontrol </figcaption>
 </figure>
+<br>
 
+<dfn>Bruger</dfn> Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen (unikke) identitet.
 
-<dfn>Bruger</dfn> Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen identitet.
+<dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -iIdentitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
 
-<dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes - Identitetssikring.
+<dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation af en (ellere flere) identitet(er). Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (password), nogt kun brugeren er (biometri) eller nogen kun brugeren er i besiddelse af (enhed).
 
-<dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation af en identitet. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Velkendte eksempler er brugernavn og password, NemID nøglekort, certifikater, fingeraftryk mv.
-
-
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (som entitet) have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt. I mange (legacy) implementeringer af brugerstyring er identifikationsmiddel og identitet koblet hårdt til hinanden, men det behøver de ikke at være, og en løs kobling kan give en større fleksibilitet - herunder gøre det muligt for brugerne ikke at skulle administrere et identifikationsmiddel per identitet, de kan optræde med. 
 
 
 
