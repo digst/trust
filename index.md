@@ -1254,24 +1254,23 @@ Dette sikrer genbrug, strømlining af infrastrukturen og ensartet brugeroplevels
 
 
 ## Områder for standardisering
-Referencearkitekturen peger på, hvilke områder der skal være standarder for, at referencearkitekturen fungerer.
+En vigtig del af referencearkitekturen er at udpege hvilke områder, der skal være standarder for, at referencearkitekturen fungerer. Der er gennem de sidste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffentlige standarder og profiler inden for en række områder, som succesfuldt har bidraget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
+- National Standard for Identiteters Sikringsniveauer, som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridiske enhender og fysiske personer associeret med en juridisk enhed.
+- OCES certifikatpolitikkerne og deres afløsere (se certifikat.gov.dk), som definerer formater og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), medarbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
+- OIOSAML Web SSO profilerne som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web appliationer, herunder single sign-on.
+- OIO Basic Privilege Profile som definerer hvordan rettigheder og roller kan udtrykkes i et token herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
+- OIO IDWS familien af profiler, som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
 
-I afsnit 0 er beskrivelse af standarder på de udpegede områder. En detaljeret  oversigt over obligatoriske og anbefalede standarder skal vedligeholdes på arkitekturguiden.digitaliser.dk
+Som tidligere beskrevet er der en række områder, hvor der **fællesoffentligt** er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet:
+- Der er behov for yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere.
+- Der er behov for fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
+- Der er behov for profilering af mobil-egnede tokens baseret på JWT, PASETO eller tilsvarende samt protokoller til token-udstedelse baseret på fx OpenID Connect. De nuværende OIO SAML profiler er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
 
-<figure>
-<img src="billede20.PNG" width="90%" />
-<figcaption>Områder for standarder for brugerstyring</figcaption>
-</figure>
+- Der er behov for en model til at udtrykke rettigheder ('OAuth2.0 scopes') i tokens på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
 
-Note til figur: Pilene angiver områder for standarder
+Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde omkring discovery og orkestrering af tillidstjenester, samt naturligvis en domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
 
-Der skal være **standarder for registrering af brugere, identifikationsmidler og attributter.** Disse standarder skal dække registreringskvaliteten (eIDAS [8], National Standard for Identiteters Sikringsniveau (NSIS) [18], ISO29115 [32], Kantara Identity Assurance Framework [30]).
-
-Der skal være **standarder for overførsel af data om autentificerede brugere** mellem autentifikationstjenester, login-tjenester/brokere og tjenester. Her bruges i dag fx OIOSAML standarden fællesoffentligt, mens flere domæner har defineret underprofiler med henblik på håndtering af lokale behov (det gælder på det kommunale område og på sundhedsområdet). På app-området er den dominerede standard OpenID Connect, men der er endnu ingen fællesoffentlig profilering heraf, hvilket skønnes nødvendigt, da den rene standard efterlader mange sikkerhedsvalg åbne.
-
-Der er behov for **standarder i forbindelse med rettigheder og attributter.** Det drejer sig dels om standarder til at kommunikere med attributtjenester (OIOSAML [22], OpenID Connect [28]), dels at kommunikere mellem attributtjenester og forretningstjenester (fx XACML). Et andet aspekt er standarder for at indhente brugernes samtykke, når dette indgår i adgangsbeslutninger – her er UMA [31] og OAuth [27] muligheder.
-
-Der er behov for **standarder for kommunikation mellem føderationer.** Disse skal identificeres og fastlægges i arbejdet med implementering af referencearkitekturen. Arbejdet i EU-regi (STORK og eIDAS) er baseret på SAML2-profiler.
+Endelig vurderes det, at der kan blive behov for yderligere vejledning og standarder for kommunikation mellem føderationer, når erfaringerne med interføderation udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK og eIDAS) med interføderation baseret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT's brugerstyring) og sundhedsdomænet (SEB).
 
 <figure>
 <img src="billede21.PNG" width="90%" />
@@ -1281,9 +1280,6 @@ Der er behov for **standarder for kommunikation mellem føderationer.** Disse sk
 
 
 ---------
-
-
-
 
 
 ## Ordliste
