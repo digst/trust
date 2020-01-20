@@ -952,7 +952,7 @@ I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at f
 Det er ligeledes vigtigt, at den fulde livscyklus for attributter kan håndteres, idet værdierne kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et certifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
 
 
-I det fremadrettede arbejde med fællesoffentlig brugerstyring vurderes der at være behov for at analysere fælles standarder for attributters kvalitet yderligere (ud over dem, som er beskrevet i NSIS [18]). Attributter defineres ofte inden for en bestemt sektor, men det kunne fællesoffentligt godt være relevant at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveksles på en interoperabel måde. Det kræver ofte en vis modenhed og veldefineret governance at bygge klassifikationer og semantiske modeller. Som et eksempel på dette kan nævnes den kommunale emnesystematik (KLE), der er en taksonomi til at beskrive kommunale fagområder. Ved at benytte KLE er det muligt at berige en rolletildeling til en bruger med en dataafgrænsning til et bestemt emneomåde, der angives ved en eller flere KLE-værdier på rolletildelingen.
+I det fremadrettede arbejde med fællesoffentlig brugerstyring vurderes der at være behov for at analysere fælles standarder for attributters kvalitet yderligere (ud over dem, som er beskrevet i NSIS [18]). Attributter defineres ofte inden for en bestemt sektor, men det kunne fællesoffentligt godt være relevant at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveksles på en interoperabel måde. Det kræver ofte en vis modenhed og veldefineret governance at bygge klassifikationer og semantiske modeller. Som et eksempel på dette kan nævnes den kommunale emnesystematik (KLE), der er en taksonomi til at beskrive kommunale fagområder. Ved at benytte KLE er det muligt at berige en rolletildeling til en bruger med en dataafgrænsning til et bestemt emneomåde, der angives ved en eller flere KLE-værdier på rolletildelingen. Tilsvarende kan nævnes for FORM, der er et opgavekatalog over det offentliges opgaver (se https://arkitektur.digst.dk/rammearkitektur/klassifikationer/form).
 
 ### Attributkontrakter
 
@@ -1252,6 +1252,8 @@ Dette sikrer genbrug, strømlining af infrastrukturen og ensartet brugeroplevels
 
 
 ## Områder for standardisering
+
+### Eksisterende standarder
 En vigtig del af referencearkitekturen er at udpege hvilke områder, der skal være standarder for, at referencearkitekturen fungerer. Der er gennem de sidste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffentlige standarder og profiler inden for en række områder, som succesfuldt har bidraget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
 - National Standard for Identiteters Sikringsniveauer, som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridiske enhender og fysiske personer associeret med en juridisk enhed.
 - OCES certifikatpolitikkerne og deres afløsere (se certifikat.gov.dk), som definerer formater og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), medarbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
@@ -1259,6 +1261,7 @@ En vigtig del af referencearkitekturen er at udpege hvilke områder, der skal v�
 - OIO Basic Privilege Profile som definerer hvordan rettigheder og roller kan udtrykkes i et token herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
 - OIO IDWS familien af profiler, som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
 
+### Behov for nye fællesoffentlige standarder
 Som tidligere beskrevet er der en række områder, hvor der **fællesoffentligt** er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet:
 - Der er behov for yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere.
 - Der er behov for fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
@@ -1275,6 +1278,22 @@ Endelig vurderes det, at der kan blive behov for yderligere vejledning og standa
 <figcaption>Kommunikation mellem føderationer</figcaption>
 </figure>
 <br>
+
+### Igangværende standardisering internationalt
+En række internationale standardiseringsorganisationer er i gang med at udarbejde nye standarder, som kan påvirke denne referencearkitektur. I dette afsnit gives en introduktion til nogle få af disse, uden at oversigten på nogen måde kan siges at være udtømmende. Der er i gennemgangen prioriteret standarder, som ikke er domæne- eller industrispecifikke, og som vil have potentiale til at blive anvendt eller profileret fællesoffentligt, når behov og modenhed er tilstrækkelig udtalt.
+
+#### Decentraliseret brugerstyring og -ID'er
+Standardiseringsorganisationen W3C, som er kendt fra en række internetstandarder, har en arbejdsgruppe, som arbejder med såkaldte 'de-centralized identifiers' eller DIDs. Gruppen har udgivet et udkast til en standard, som specificerer datamodel og syntaks for DIDs (https://www.w3.org/TR/did-core/), som har status som 'W3C Working Draft'.
+
+Standarden er en central brik i forhold til skabe standardisering og interoperabilitet inden for den bredere bevægelse som kan kaldes decentraliseret brugerstyring ('decentralized identity management'), som ikke bygger på centrale autoriteter (fx tillidstjenester eller centrale registre) men i stedet benytter en mere decentral arkitektur ofte baseret på blockchains, distributed ledger technology (DLT) og lignende teknologier. Her bruges alternative mekanismer til at skabe tillid, herunder de egenskaber som en blockchain tilvejebringer. Et anden karakteristisk egenskab er, at brugerne tager en mere aktiv rolle i håndtering af deres identiteter ('brugercentrisk identity management'), herunder kan skabe så mange uafhængige identiteter som ønskes af fx privatlivshensyn.
+
+
+En DID er basalt set en URL som relaterer et 'DID subject' til et 'DID dokument' på en måde der giver mulighed for troværdige interaktioner med subjektet (brugeren). Et DID dokument kan fx beskrive offentlige nøgler, som DID subjektet (og tilhørende services) kan bruge til at autentificere sig med, og beskrive serviceendepunkter, som kan benyttes til at interagere med DID subjektet. Hensigten med standardiseringen er at specificere syntaks (DID scheme) og et generisk sæt af operationer på DID dokumenter. Ved at publicere et DID dokument på en blockchain kan brugere på en generisk måde specificere, hvordan en bestemt identitet kan autentificeres.
+
+Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skole baseret på centrale autoriteter og -tillidstjenester, som sammenbindes gennem føderationer. Den decentrale brugerstyring er dog et interessant nyt paradigme, som vil blive observeret efterhånden som området modnes og standarderne færdiggøres. De to paradigmer kan godt forenes, eksempelvis kan klassiske identiteter og identifikationsmidler fra en centraliseret model udstilles som decentrale identifiers.
+
+#### IoT initiativer
+[Poul udfylder om W3C WoT]
 
 
 ---------
