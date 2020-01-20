@@ -719,8 +719,6 @@ Mønstret kendes også på nationalt niveau, når eksempelvis en kommunal bruger
 </figure>
 <br>
 
-[Bør figuren også omfatte attributter ?]
-
 Fordele:
 
 - Mønstret kan håndtere store føderationer uden centrale ankre. Der er mao. stor skalérbarhed.
@@ -739,7 +737,7 @@ Ulemper:
 
 
 
-## Forretningsobjekter og begrebsmodel
+## Forretningsobjekter
 På figuren nedenfor illustreres de vigtigste forretningsobjekter inden for brugerstyring og deres relationer:
 
 <figure>
@@ -754,7 +752,7 @@ På figuren nedenfor illustreres de vigtigste forretningsobjekter inden for brug
 
 <dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation af en (ellere flere) identitet(er). Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (password), nogt kun brugeren er (biometri) eller nogen kun brugeren er i besiddelse af (enhed).
 
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (som entitet) have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt. I mange (legacy) implementeringer af brugerstyring er identifikationsmiddel og identitet koblet hårdt til hinanden, men det behøver de ikke at være, og en løs kobling kan give en større fleksibilitet - herunder gøre det muligt for brugerne ikke at skulle administrere et identifikationsmiddel per identitet, de kan optræde med. 
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (som entitet) have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt. I mange (legacy) implementeringer af brugerstyring er identifikationsmiddel og identitet koblet hårdt til hinanden, men det behøver de ikke at være, og en løs kobling kan give en større fleksibilitet - herunder gøre det muligt for brugerne ikke at skulle administrere et identifikationsmiddel per identitet, de kan optræde med.
 
 
 
@@ -907,7 +905,7 @@ Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
 
 
 # Teknisk arkitektur
-I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester. Dette omhandler eksempelvis på støttefunktioner som discovery [?] og billetomveksling, håndtering af apps på mobile enheder, softwarerobotter og identitetsbaserede services.
+I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester. Dette omhandler eksempelvis på støttefunktioner som discovery og billetomveksling, håndtering af apps på mobile enheder, softwarerobotter og identitetsbaserede services.
 
 De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2, peger entydigt frem mod en løst koblet arkitektur, hvor forretningstjenester understøttes af tillidstjenester og hvor forretnings- og tillidstjenester indgår i en føderation. Her vil de enkelte forretningstjenester håndhæve adgang, der er baseret på oplysninger attesteret af tillidstjenester. Forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributbeskrivelse, autentifikation osv.
 
@@ -1010,7 +1008,7 @@ Bemærk at en discovery funktion ikke nødvendigvis behøver at interagere med b
 
 I praksis vil man ofte realisere attestering af information om autentifikation eller brugerattributter gennem ”billetudstedelse”.
 
-En billet er typisk en signeret datastruktur baseret på XML (fx Assertions i SAML standarden [22]) eller JSON (JWT standarden [23]), hvilket sikrer mod manipulation eller forfalskning. I nogle sammenhænge kan billetter også være krypterede til sikring af konfidentialitet under transport. Modtageren kan validere billetten ved at verifice signaturen, hvilket forudsætter kendskab til udstederens certifikat. Typisk vil modtagere af billetter derfor være konfigureret med et såkaldt trust store [Er det defineret ?] for de billetudstedere og andre tillidstjenester, som skal kunne verificeres. Dette betegnes også som 'trust ankre'.
+En billet er typisk en signeret datastruktur baseret på XML (fx Assertions i SAML standarden [22]) eller JSON (JWT standarden [23]), hvilket sikrer mod manipulation eller forfalskning. I nogle sammenhænge kan billetter også være krypterede til sikring af konfidentialitet under transport. Modtageren kan validere billetten ved at verifice signaturen, hvilket forudsætter kendskab til udstederens certifikat. Typisk vil modtagere af billetter derfor være konfigureret med et såkaldt 'trust store' for de billetudstedere og andre tillidstjenester, som skal kunne verificeres. Dette betegnes også som 'trust ankre'.
 
 Typisk udføres billedudstedelse af af en broker på grundlag af en forudgående autentifikation, hvor brokeren kan tilføje attributter, der beskriver identiteten, samt anden relevant information som fx tidspunkt for autentifikation, NSIS sikringsniveau for autentifikationen mm. Attributterne udtrykker som tidligere beskrevet kendetegn, roller eller andre typer af attributter som en relation (“repræsenterer og er under instruks af CVR”, “arbejder på vegne af læge X”), eller attributter, der udtaler sig mere specifikt om identitetens funktion (“arbejdsfunktion”, “rolle”).
 
@@ -1061,7 +1059,7 @@ Begge forretningstjenester udfører som tidligere nævnt brugerstyring (illustre
 
 Den sidstnævnte model kaldes for identitetsbaserede (web) services, idet den oprindelige brugeridentitet føres med videre i kaldet. Modellen forudsætter, at forretningstjenester er forberedt for en mere kompleks model, der understøtter delegering.
 
-Fordelen ved den identitetsbaserede model er, at tilliden skabes gennem en konkret brugerforespørgsel, fremfor at den kaldende forretningstjeneste får fuld adgang på vegne af alle brugere. Endvidere bliver det enkelte kald sporbart til den konkrete bruger. Til gengæld fordrer det synkronitet, idet brugeren som regel [hvornår kan man ikke være det ?] skal være logget ind i den kaldende forretningstjeneste, før et identitetsbaseret kald er muligt. Omvendt kan system trust modellen fungere uafhængigt af, om brugeren er logget ind, men til gengæld vil et sikkerhedsbrud i den kaldende forretningstjeneste (fx kompromitteret privatnøgle) kunne skalere til samtlige brugere hos den anden forretningstjeneste. Som regel anses identitetsbaserede services for at være mere sikre, understøtte privacy bedre, samt indebære en højere grad af transparens.
+Fordelen ved den identitetsbaserede model er, at tilliden skabes gennem en konkret brugerforespørgsel, fremfor at den kaldende forretningstjeneste får fuld adgang på vegne af alle brugere. Endvidere bliver det enkelte kald sporbart til den konkrete bruger. Til gengæld fordrer det synkronitet, idet brugeren som regel skal være logget ind i den kaldende forretningstjeneste, før et identitetsbaseret kald er muligt, hvilket er en udfordring i scenarier med batch-lignende kørsler. Omvendt kan system trust modellen fungere uafhængigt af, om brugeren er logget ind, men til gengæld vil et sikkerhedsbrud i den kaldende forretningstjeneste (fx kompromitteret privatnøgle) kunne skalere til samtlige brugere hos den anden forretningstjeneste. Som regel anses identitetsbaserede services for at være mere sikre, understøtte privacy bedre, samt indebære en højere grad af transparens.
 
 Der er fællesoffentligt specificeret en række standarder for *identitetsbaserede webservices*, der går under betegnelsen OIO IDWS [24]. Disse standarder kan eksempelvis benyttes, når en tjenestekonsument skal anmode om et *security token* på vegne af en bruger, som herefter benyttes til at autorisere et kald til en webservice i et andet domæne. Et eksempel kan være, at en bruger logger ind på en webportal, som herefter har brug for at hente data om brugeren hos en anden tjenesteudbyder.
 
@@ -1288,7 +1286,7 @@ Nedenstående liste forklarer betydningen af de væsentligste ord og begreber, d
 
 Ord, der er markeret med *kursiv*, er ord, hvor definitionen kan findes på ordlisten.
 
-<dfn>Brugerrolle</dfn> Rolle der udgøres af en eller flere *adgangsrettigheder* til et eller flere it-systemer, som en bloc tildeles til en bruger. Brugerroller anvendes til at afgøre, hvilke handlinger en bruger må udføre i et it-system. Brugerrollen fastlægger de *adgangsrettigheder*, som brugeren er tildelt. Brugere tilknyttes til roller og opnår *adgangsrettigheder* ved at være rolleindehaver. Brugerroller er grupperinger af *adgangsrettigheder*. Der er ikke nødvendigvis sammenfald mellem brugerroller og brugerens profession, stillingsbetegnelse mv.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
+<dfn>Brugerrolle</dfn> Rolle der udgøres af en eller flere *adgangsrettigheder* til et eller flere it-systemer, som en bloc tildeles til en bruger. Brugerroller anvendes til at afgøre, hvilke handlinger en bruger må udføre i et it-system. Brugerrollen fastlægger de *adgangsrettigheder*, som brugeren er tildelt. Brugere tilknyttes til roller og opnår *adgangsrettigheder* ved at være rolleindehaver. Brugerroller er grupperinger af *adgangsrettigheder*. Der er ikke nødvendigvis sammenfald mellem brugerroller og brugerens profession, stillingsbetegnelse mv. [IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
 
 <dfn>Brugerrollerestriktion</dfn> En begrænsning som specificerer, hvad en *brugerrolle* må bruges på. Et typisk eksempel er en såkaldt *dataafgrænsning*, som angiver hvilke dataobjekter (fx sager) som en given rolle må anvendes på (fx rollen *læs sag* afgrænset til sag med nummeret *xyz*'). I RBAC samt OIO Basic Privilege Profile benævnes dette for en *constraint*.[IT- & Telestyrelsen, Begrebsmodel til brugerstyring]
 
