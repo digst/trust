@@ -247,7 +247,7 @@ Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offen
 
 *Principper*
 
-1.	Brugerne oplever en relevant og sammenhængende adgangsstyring
+1.	Brugerne oplever en relevant og sammenhængende adgangsstyring [TG: skulle der evt. stå brugerstyring i stedet for adgangsstyring?]
 2.	Brugerstyringsløsninger respekterer brugernes privatliv
 3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 4.	Brugerstyring er adskilt fra forretningstjenester
@@ -257,7 +257,7 @@ Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offen
 I tillæg til principperne i denne referencearkitektur, findes yderligere principperne i den Fællesoffentlige Digitale Arkitektur (FDA).
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
-Brugere vil skulle betjene sig af en række forskellige tjenester og med forskellige sikkerhedsbehov. Disse tjenester skal opleves lettilgængelige og sammenhængende, uanset hvor mange tjenester eller myndigheder der er involveret. Kravene til sikringsniveau skal svare til det sikkerhedsniveau de anvendte tjenester kræver.
+Brugere vil skulle betjene sig af en række forskellige tjenester og med forskellige sikkerhedsbehov. Disse tjenester skal opleves lettilgængelige og sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret. Kravene til sikringsniveau skal svare til det sikkerhedsniveau de anvendte tjenester kræver.
 
 *Rationale*
 
@@ -266,23 +266,24 @@ Brugere vil skulle betjene sig af en række forskellige tjenester og med forskel
 
 *Implikationer*
 
+- Forretningstjenester skal ikke diktere, hvordan brugerne logger ind, men blot stille krav til et sikringsnivau samt evt. nødvendige attributer.
 -	Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter og have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
 -	Brugerne skal opleve en sammenhængende administration af oprettelse af brugere, administration af fuldmagter og administration af rettigheder.
 -	Brugerne skal have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
 -	Brugerne skal tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester.
 
 ## Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
-Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed, og indhente og udveksle så lidt information som muligt - Data Minimering.
+Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed, og indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
 
 *Rationale*
 
--	Persondataloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
+-	Databeskyttelsesloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
 -	Tjenester der respekterer brugernes privatliv er nemmere at have tillid til.
--	Princippet understøtter FDA arkitekturprincip 4 Sikkerhed, privatliv og tillid sikres.
+-	Princippet understøtter FDA arkitekturprincip 4: 'Sikkerhed, privatliv og tillid sikres'.
 
 *Implikationer*
 
--	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standard samlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
+-	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
@@ -292,32 +293,32 @@ Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. R
 
 *Rationale*
 
--	Tjenesteudbyder har dataansvaret, og dermed det juridiske ansvar.
+-	Tjenesteudbyder har dataansvaret og dermed det juridiske ansvar.
 -	Tjenesteudbyder har viden om konsekvenserne af at give adgang.
 
 *Implikationer*
 
--	Uanset hvor og hvordan adgangskontrollen implementeres, skal tjenesteudbyder sikre at den sker i henhold til adgangspolitikken.
+-	Uanset hvor og hvordan adgangskontrollen implementeres, skal tjenesteudbyder sikre, at den sker i henhold til adgangspolitikken.
 -	Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
-Historisk har forretningstjenester indeholdt brugerstyring, med det resultat, at den samme bruger kan have mange forskellige identiteter, og at identiteter ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring placeret i tillidstjenester udenfor for forretningstjenesten.
+Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at identiteter ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.
 
 *Rationale*
 
 -	Det giver større brugervenlighed, når samme identitet kan benyttes til alle tjenester, med mulighed for adgangsstyring på tværs af løsninger og domæner.
 -	Brugeradministrationen effektiviseres, idet brugerne ikke skal vedligeholdes flere steder og det øger sandsynligheden for korrekt oprydning i brugere og rettigheder.
--	Det giver mindre overlap og dublering når brugerstyring kan anvendes til mange tjenester, hvilket sparer penge ved udvikling og drift af applikationerne og resulterer i mere ef¬fektive løsninger.
+-	Det giver mindre overlap og dublering, når brugerstyring kan anvendes til mange tjenester, hvilket sparer penge ved udvikling og drift af applikationerne og resulterer i mere ef¬fektive løsninger.
 -	Sikkerheden øges når brugerstyring foregår i dedikerede tjenester, hvor fokus er på brugerstyring.
 
 *Implikationer*
 
--	Forretningstjenesten skal kunne samarbejde med tillidstjenester der leverer brugerstyring.
+-	Forretningstjenesten skal kunne samarbejde med tillidstjenester, der leverer brugerstyring.
 -	Der skal etableres aftaler imellem udbyderne af forretningstjenesterne og udbyderne af tillidstjenesterne, således at den nødvendige tillid for samarbejdet er til stede.  
--	Brugerstyring skal være harmoniseret således at samarbejde imellem forretningstjenester og tillidstjenester kan etableres enkelt, sikkert og effektivt.
+-	Brugerstyring skal være harmoniseret [TG: hvad menes hermed? baseret på fælles standarder eller noget andet?] således at samarbejde imellem forretningstjenester og tillidstjenester kan etableres enkelt, sikkert og effektivt.
 
 ### Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester
-Brugerstyring er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem tjenesterne og for at kunne kombinere tjenester på nye måder er det en fordel når tjenesterne lever op til harmoniserede krav.
+Brugerstyring er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem tjenesterne og for at kunne kombinere tjenester på nye måder er det en fordel, når tjenesterne lever op til harmoniserede krav. [TG: det med betydningen af harmonisering spøger også lidt her...]
 
 *Rationale*
 
@@ -330,7 +331,7 @@ Brugerstyring er præget af stigende arbejdsdeling og opdeling i løst koblede k
 
 -	En anvendelse af referencearkitekturen skal definere et overordnet sæt tjenester eller byggeblokke for brugerstyring og et antal områder for fællesoffentlige standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring skal tage udgangspunkt i disse tjenester og skal overholde disse standarder.
 - Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne.
-- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt.
+- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med dansk profiler, hvor det er nødvendigt).
 -	Når brugerstyringsopgaven løses af forskellige aktører bygget på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
 
 ### Princip 6: Tjenesteudbydere indgår i føderationer
