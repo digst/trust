@@ -255,8 +255,9 @@ Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og lev
 6.	Tjenesteudbydere indgår i føderationer
 
 
-### Princip: Brugerne oplever en relevant og sammenhængende adgangsstyring
+### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
 Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
+
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs og princip
 
 *Rationale*
@@ -276,19 +277,21 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 
 ## Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
-Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed, og indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
+Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
+
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
 
 *Rationale*
 
 -	Databeskyttelsesloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
 -	Tjenester der respekterer brugernes privatliv er nemmere at have tillid til.
--	Princippet understøtter FDA arkitekturprincip 4: 'Sikkerhed, privatliv og tillid sikres'.
+-	Dataminimering kan understøtte risikominimering i forhold til informations-sikkerhed.
 
 *Implikationer*
 
 -	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
--	Det skal være tydeligt for brugeren, hvad oplysningerne anvendes til.
+-	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten  er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
 ### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
@@ -301,8 +304,8 @@ Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. R
 
 *Implikationer*
 
--	Uanset hvor og hvordan adgangskontrollen implementeres, skal tjenesteudbyder sikre, at den sker i henhold til adgangspolitikken.
--	Der kan inden for sikkerhedsdomæner være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
+-	•	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
+-	Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
 Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at identiteter ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.
