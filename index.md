@@ -243,34 +243,37 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 
 ## Principper
 
-Dette afsnit formulerer rammer for de egenskaber, som løsninger inden for offentlig brugerstyring skal have. Formålet er at sikre, at de forskellige løsninger samlet set bringer brugerstyring i Danmark frem mod de mål og de gevinster, den nationale strategi for brugerstyring fastlægger. Rammerne formuleres som principper, som alle projekter og programmer skal orientere sig efter og enten følge eller forklare.
+Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fælles-offentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de over-ordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur (FDA) [2]. For hvert princip er angivet de væsentligste relationer til disse.
 
-*Principper*
+*Principper for brugerstyring*
 
-1.	Brugerne oplever en relevant og sammenhængende adgangsstyring [TG: skulle der evt. stå brugerstyring i stedet for adgangsstyring?]
+1.	Brugerne oplever en relevant og sammenhængende adgangsstyring
 2.	Brugerstyringsløsninger respekterer brugernes privatliv
 3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 4.	Brugerstyring er adskilt fra forretningstjenester
 5.	Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester
 6.	Tjenesteudbydere indgår i føderationer
 
-I tillæg til principperne i denne referencearkitektur, findes yderligere principperne i den Fællesoffentlige Digitale Arkitektur (FDA).
 
-### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
-Brugere vil skulle betjene sig af en række forskellige tjenester og med forskellige sikkerhedsbehov. Disse tjenester skal opleves lettilgængelige og sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret. Kravene til sikringsniveau skal svare til det sikkerhedsniveau de anvendte tjenester kræver.
+### Princip: Brugerne oplever en relevant og sammenhængende adgangsstyring
+Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs og princip
 
 *Rationale*
 
--	Brugerne vil opleve en bedre og mere gnidningsfri løsning af deres opgaver, der kræver forretningsprocesser på tværs af organisationer og sektorer, hvilket øger brugertilfredshed og effektivitet.
--	Principper understøtter FDA princip 5: Processer optimeres på tværs.
+-	Brugerne vil være mere tilfredse og effektive, hvis de oplever en bedre og mere gnidningsfri løsning af deres opgaver, der involverer tjenester og forretningsprocesser på tværs af organisationer og sektorer.
+-	Brugerne får nemmere ved at anvende delegation af opgaver via fuldmagt, hvis det sker på en ensartet måde på tværs af offentlige myndigheder og relevante private aktører.
 
 *Implikationer*
 
-- Forretningstjenester skal ikke diktere, hvordan brugerne logger ind, men blot stille krav til et sikringsnivau samt evt. nødvendige attributer.
--	Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter og have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
--	Brugerne skal opleve en sammenhængende administration af oprettelse af brugere, administration af fuldmagter og administration af rettigheder.
--	Brugerne skal have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
--	Brugerne skal tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester.
+- Brugerne skal i offentlige digitale løsninger have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
+-	Brugerne skal kunne tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester også når de går på tværs af domæner.
+-	Brugere skal, hvor det er relevant, kunne afgive samtykke til brugen af  deres oplysninger, samt at oplysningerne kan bruges inden for en føderation i forbindelse med brugerstyring.
+- Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter.
+- Brugerne skal have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
+-	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, administration af fuldmagter og administration af rettigheder.
+- Kravene til sikringsniveau i digitale forløb skal svare til det sikkerhedsniveau, der kræves af de enkelte tjenester, der indgår i forløbet.
+
 
 ## Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
 Brugerstyringsløsninger skal beskytte information om brugerne – fortrolighed, og indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
