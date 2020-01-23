@@ -320,29 +320,32 @@ Historisk har forretningstjenester selv varetaget brugerstyring med det resultat
 *Implikationer*
 
 -	Forretningstjenesten skal kunne samarbejde med tillidstjenester, der leverer brugerstyring.
--	Der skal etableres aftaler imellem udbyderne af forretningstjenesterne og udbyderne af tillidstjenesterne, således at den nødvendige tillid for samarbejdet er til stede.  
 -	Brugerstyring skal være harmoniseret [TG: hvad menes hermed? baseret på fælles standarder eller noget andet?] således at samarbejde imellem forretningstjenester og tillidstjenester kan etableres enkelt, sikkert og effektivt.
+-	Der skal etableres aftaler imellem udbyderne af forretningstjenesterne og udbyderne af tillidstjenesterne, således at den nødvendige tillid for samarbejdet er til stede.  
+
 
 ### Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester
-Brugerstyring er præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem tjenesterne og for at kunne kombinere tjenester på nye måder er det en fordel, når tjenesterne lever op til harmoniserede krav. [TG: det med betydningen af harmonisering spøger også lidt her...]
+Brugerstyring er som fagligt domæne præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem  tillidstjenesterne og forretningstjenesterne såvel som mellem tillidstjenesterne indbyrdes og for at kunne kombinere tillidstjenester på nye måder er det en fordel, når tillidstjenesterne lever op til harmoniserede krav.
+
+Princippet understøtter FDA særligt arkitekturprincip 2: Arkitektur fremmer sammenhæng, innovation og effektivitet og princip 7: It-løsninger samarbejder effektivt.
 
 *Rationale*
 
--	En opdeling i komponenter reducerer den samlede kompleksitet af den fællesoffentlige brugerstyring.
--	Harmoniserede krav til funktionalitet og informationsoverførsler giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet.
--	En åben og modulær arkitektur giver mulighed for at udskifte/variere delløsninger, integrere nye teknologier og implementere ændrede regler og politikker. Dette leder til større agilitet og ændringsparathed.
--	Princippet understøtter FDA arkitekturprincip 7: It-løsninger samarbejder effektivt
+-	En opdeling i  logisk adskilte komponenter reducerer den samlede kompleksitet af den fællesoffentlige brugerstyring.
+-	Harmoniserede krav til funktionalitet og snitflader giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet.
+-	En åben og modulær arkitektur giver større agilitet og ændringsparathed i forhold til at udskifte eller variere delløsninger, integrere nye teknologier og implementere ændrede regler og politikker.
 
 *Implikationer*
 
--	En anvendelse af referencearkitekturen skal definere et overordnet sæt tjenester eller byggeblokke for brugerstyring og et antal områder for fællesoffentlige standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring skal tage udgangspunkt i disse tjenester og skal overholde disse standarder.
+-	Tillidstjenester bør overholde fællesoffentlige aftaler og krav til egenskaber og anvendelse af standarder.
 - Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne.
-- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med dansk profiler, hvor det er nødvendigt).
+- Standarderne for informationsoverførsler mellem de løst koblede komponenter bør tage udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med dansk profiler, hvor det er nødvendigt).
 -	Når brugerstyringsopgaven løses af forskellige aktører bygget på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
+- FDA-porteføljen indeholder et overordnet sæt tjenester og byggeblokke for brugerstyring og et antal områder for fællesoffentlige standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i de tjenester og standarder, der indgår i FDA-porteføljen.
 
 ### Princip 6: Tjenesteudbydere indgår i føderationer
 For at effektivisere samarbejdet imellem udbydere af forretningstjenester og anvendte brugerstyringstjenester kan udbydere indgå i føderationer. Inden for føderationen aftales fælles standarder, samt tillids- og adgangspolitikker.
-Deltagere i føderationen kan omfatte både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester, men kan også omfatte private tjenesteudbydere og brugerstyringstjenesteudbydere.
+Deltagere i føderationen kan omfatte både myndigheder og virksomheder i rollerne som brugerorganisationer, tjenesteudbydere og udbydere af brugerstyringstjenester.
 
 *Rationale*
 
