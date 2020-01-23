@@ -108,7 +108,7 @@ Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af de
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-Intentionen i denne version af referencearkitekturen er at skabe et fælles sprog for brugerstyring, som kan bidrage til at gøre samarbejdet om løsninger lettere. Arkitekturen viser hvordan brugerstyring bedst kan organiseres som et samarbejde mellem forretningstjenester og tillidtjenester, så de forretningsmæssige ønsker til sammenhæng, effektivitet og brugervenlighed opnås. Desuden tilstræbes det, at området bliver mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
+Intentionen i denne version af referencearkitekturen er at skabe et fælles sprog for brugerstyring, som kan bidrage til at gøre samarbejdet om løsninger lettere. Arkitekturen viser hvordan brugerstyring bedst kan organiseres som et samarbejde mellem forretningstjenester og tillidstjenester, så de forretningsmæssige ønsker til sammenhæng, effektivitet og brugervenlighed opnås. Desuden tilstræbes det, at området bliver mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
 
 En forretningstjeneste er primært eksternt synlig funktionalitet, men kan også være til internt brug. Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
 
@@ -159,11 +159,11 @@ En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdater
 
 Inden godkendelse er referencearkitekturen blevet reviewet i regi af FDA ligesom der har været en offentlig høring af dokumentet med inddragelse af relevante offentlige og private interessenter.
 
-Referencearkitektur for brugerstyring godkendtes i version 1.1 af Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.
+Referencearkitektur for brugerstyring godkendtes i version 1.1 af Udvalg for arkitektur og standarder (UAS) under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i juni 2020. Udvalget er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende FDA.
 
-En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?] [Indsæt referencer @Kirsten]
+En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?] [Har du nogle referencer? @Michael]
 
 [I bilag [XX] kan se liste over identificerede offentlige it-løsninger der realisere nogle af de applikationsroller og -services der beskrives i dette dokument] [Bevarer vi dette bilag ?]
 
@@ -208,7 +208,7 @@ En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
 - Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
 
-I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip'[9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler, der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
 
 ### Sikkerhed og tillid
 Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data (herunder følsomme personoplysninger), som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
@@ -231,7 +231,7 @@ Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at by
 
 ## Vision
 
-Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
+Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev der fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
 
 *Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger. Løsningerne bindes sammen på tværs af domæner. Brugerstyring sker på en måde, som fremmer sikkerhed, tillid, privatlivsbeskyttelse, valgmuligheder, innovation, og som øger anvendelsen af tjenester.*
 
@@ -243,7 +243,7 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 
 ## Principper
 
-Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fælles-offentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de over-ordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur (FDA) [2]. For hvert princip er angivet de væsentligste relationer til disse.
+Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. De væsentligste relationer til disse er angivet for hvert princip.
 
 *Principper for brugerstyring*
 
@@ -256,9 +256,9 @@ Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og lev
 
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
-Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
+Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjenings)forløb.
 
-Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs og princip
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs.
 
 *Rationale*
 
@@ -268,11 +268,11 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 *Implikationer*
 
 - Brugerne skal i offentlige digitale løsninger have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
--	Brugerne skal kunne tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester også når de går på tværs af domæner.
+-	Brugerne skal kunne tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester, også når de går på tværs af domæner.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til brugen af  deres oplysninger, samt at oplysningerne kan bruges inden for en føderation i forbindelse med brugerstyring.
 - Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter.
 - Brugerne skal have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
--	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, administration af fuldmagter og administration af rettigheder.
+-	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, fuldmagter og rettigheder.
 - Kravene til sikringsniveau i digitale forløb skal svare til det sikkerhedsniveau, der kræves af de enkelte tjenester, der indgår i forløbet.
 
 
@@ -283,14 +283,14 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 *Rationale*
 
--	Databeskyttelsesloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
+-	Løsningerne skal understøtte Databeskyttelsesforordningen [13] og Databeskyttelsesloven [14], der omhandler beskyttelse af personoplysninger og stiller en række krav til beskyttelse af borgernes privatliv.
 -	Tjenester der respekterer brugernes privatliv er nemmere at have tillid til.
 -	Dataminimering kan understøtte risikominimering i forhold til informations-sikkerhed.
 
 *Implikationer*
 
--	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
--	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
+-	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil for eksempel sige, at standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
+-	Danske offentlige tjenester må fortsat anvende CPR-nummeret, men kun hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten  er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
@@ -304,7 +304,7 @@ Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. R
 
 *Implikationer*
 
--	•	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
+-	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
 -	Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
