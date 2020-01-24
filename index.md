@@ -128,7 +128,7 @@ Ved siden af forretningstjenester findes tillidstjenester, som kan implementere 
 
 <dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
 
-### Brugere i brugerstyring
+### Brugere og identiteter
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
 
 <figure>
