@@ -108,47 +108,69 @@ Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af de
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-Intentionen i denne version af referencearkitekturen er at skabe et fælles sprog for brugerstyring, som kan bidrage til at gøre samarbejdet om løsninger lettere. Arkitekturen viser hvordan brugerstyring bedst kan organiseres som et samarbejde mellem forretningstjenester og tillidstjenester, så de forretningsmæssige ønsker til sammenhæng, effektivitet og brugervenlighed opnås. Desuden tilstræbes det, at området bliver mere tilgængeligt - også for det ledelsesniveau der har det endelige ansvar for adgangspolitikker og håndhævelsen af dem i forretningstjenester.
-
-En forretningstjeneste er primært eksternt synlig funktionalitet, men kan også være til internt brug. Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
-
-En tjenesteudbyder udfører adgangskontrol for en forretningstjeneste, for at sikre sig, at brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.
-
-En bruger og en tjenesteudbyder vil samarbejde om hvordan adgangskontrollen udføres i praksis. Det kan omhandle aftaler om, hvem af en virksomheds medarbejdere, der må anvende en tjeneste hos en myndighed. Eller det kan være mere generelle aftaler om, hvilket sikringsniveau for elektroniske identifikationsmidler, en udbyder vil acceptere.
-
-
+Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
+De primære kapabiliteter i brugerstyring er
+•	Administrationen af brugere, med registrering, sikring af identiteter og tilknytning af rettigheder.
+•	Sikring af adgang, med autentifikation og håndtering af attributter om brugeren.
 
 <figure>
-<img src="centrale.svg" width="90%"/>
-<figcaption>Centrale begreber omkring brugerstyring</figcaption>
+<img src="Brugerstyring overblik.png" width="90%"/>
+<figcaption>Kapabiliteter omkring brugerstyring</figcaption>
 </figure>
 
+Forretningstjeneste en primært eksternt synlig funktionalitet, men kan også være til internt brug. Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
 
+En tjenesteudbyder sikrer adgangen til forretningstjenesten, så brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.
 
-<dfn>Forretningstjeneste</dfn> eksternt synligt funktionalitet, der giver mening for omgivelserne [ARCHI @Mads].
-
-<dfn>Adgangskontrol</dfn> Håndhævelse af en tjenestes adgangspolitik. Adgangskontrollen styrer, hvilke handlinger brugere må udføre i en tjeneste, eller hvilke informationer brugere må få adgang til.
-
-<dfn>Brugerstyring</dfn> administration og kontrol af brugere og deres adgang til tjenester.
-
-
-Det Europæiske Interoperabilitets Rammeværk, EIRA [6], Den Fælles Offentlige Digitaliseringsstrategi 2016-2020 [1] og Den fællesoffentlige digitale arkitektur (FDA) [7] beskriver en model for 'integrated service delivery' eller 'sammenhængende offentlige tjenester'. Grundideen er et opgør med isolerede digitale tjenester hos den enkelte myndighed, og et skift til bedre og bredere tjenester, hvor en bruger oplever en samlet service på tværs af mange offentlige myndigheder. Et eksempel herpå er den sammenhængende brugerrejse 'Flytteguiden' på Borger.dk, der samler informationer og gøremål fra forskellige myndigheder og private virksomheder, som borgerne skal tage stilling til, når de flytter.
-
-<figure>
-<img src="Sammenhængende tjenster.svg" width="65%"/>
-<figcaption>Sammenhængende tjenester</figcaption>
-</figure>
-
-En sådan vision stiller særlige krav til brugerstyring, idet sammenhængende forretningstjester fordrer sammenhængende brugerstyring. Brugerstyring sker ikke alene, når en bruger anvender den tværgående tjeneste, men vil gentages hos hver af de understøttende services.
-
-Denne referencearkitektur beskriver hvordan tværgående tjenester kan understøttes af særlige tjenester med fokus på at etablere tillid og sikkerhed på tværs af tjenester i en form for fællesskab.
-
-Føderationer er en forudsætning for referencearkitekturens adskillelse af brugerstyring i tillidstjenester og forretningstjenester, hvor tillidstjenesterne typisk er generelle og leveres af andre end dem, der leverer forretningstjenesterne.
-
+Ved siden af forretningstjenester findes tillidstjenester, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af føderationer.
 
 <dfn>Tillidstjeneste</dfn> en betroet tjeneste som udbydes særskilt, og anvendes af bruger og forretningstjenesteudbyder i fællesskab, styret af aftaler om tillidspolitikker.
 
 <dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
+
+### Brugere i brugerstyring
+I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
+
+<figure>
+<img src="Bermuda.png" width="65%"/>
+<figcaption>Sammenhængende tjenester</figcaption>
+</figure>
+
+Entitet, person eller enhed som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet bruger om entiteter i rollen som brugere af en tjeneste.
+
+Bruger Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen (unikke) identitet.
+
+Identitet Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
+
+Identifikationsmiddel som en bruger får udstedt eller registreret til brug for autentifikation af en identitet. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
+
+### Typer af brugere
+I forbindelse med brugerstyring kan brugere være enten et subjekt, med rettigheder og pligter, eller et objekt, der kun kan arve rettigheder fra et subjekt.
+
+<figure>
+<img src="Brugertyper.png" width="65%"/>
+<figcaption>Brugertyper</figcaption>
+</figure>
+
+Person Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+
+Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+
+Apparat Fysiske enhed med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+
+Applikation Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.
+
+### Relationer imellem brugere
+Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af rettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.
+
+-	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
+-	Tilhør til organisation. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
+-	Eksplicit rettighed der gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+-	Bruger af et apparat. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver rettigheder fra personen der bruger det.
+-	Delegering af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+-	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
 
 
 ## Tilblivelse, styring og andre referencearkitekturer
@@ -159,11 +181,11 @@ En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdater
 
 Inden godkendelse er referencearkitekturen blevet reviewet i regi af FDA ligesom der har været en offentlig høring af dokumentet med inddragelse af relevante offentlige og private interessenter.
 
-Referencearkitektur for brugerstyring godkendtes i version 1.1 af Udvalg for arkitektur og standarder (UAS) under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i juni 2020. Udvalget er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.
+Referencearkitektur for brugerstyring godkendtes i version 1.1 af Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.
 
 Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende FDA.
 
-En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?] [Har du nogle referencer? @Michael]
+En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens "Målbillede for tillidstjenester[check]" og [Kommunernes?] [Indsæt referencer @Kirsten]
 
 [I bilag [XX] kan se liste over identificerede offentlige it-løsninger der realisere nogle af de applikationsroller og -services der beskrives i dette dokument] [Bevarer vi dette bilag ?]
 
@@ -208,7 +230,7 @@ En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
 - Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
 
-I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler, der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip'[9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
 
 ### Sikkerhed og tillid
 Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data (herunder følsomme personoplysninger), som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
@@ -231,7 +253,7 @@ Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at by
 
 ## Vision
 
-Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev der fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
+Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
 
 *Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger. Løsningerne bindes sammen på tværs af domæner. Brugerstyring sker på en måde, som fremmer sikkerhed, tillid, privatlivsbeskyttelse, valgmuligheder, innovation, og som øger anvendelsen af tjenester.*
 
@@ -243,7 +265,7 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 
 ## Principper
 
-Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. De væsentligste relationer til disse er angivet for hvert princip.
+Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fælles-offentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de over-ordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur (FDA) [2]. For hvert princip er angivet de væsentligste relationer til disse.
 
 *Principper for brugerstyring*
 
@@ -256,9 +278,9 @@ Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og lev
 
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
-Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjenings)forløb.
+Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
 
-Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs.
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs og princip
 
 *Rationale*
 
@@ -268,11 +290,11 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 *Implikationer*
 
 - Brugerne skal i offentlige digitale løsninger have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
--	Brugerne skal kunne tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester, også når de går på tværs af domæner.
+-	Brugerne skal kunne tilbydes Single Sign-On i brugerforløb, der krydser flere tjenester også når de går på tværs af domæner.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til brugen af  deres oplysninger, samt at oplysningerne kan bruges inden for en føderation i forbindelse med brugerstyring.
 - Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter.
 - Brugerne skal have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
--	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, fuldmagter og rettigheder.
+-	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, administration af fuldmagter og administration af rettigheder.
 - Kravene til sikringsniveau i digitale forløb skal svare til det sikkerhedsniveau, der kræves af de enkelte tjenester, der indgår i forløbet.
 
 
@@ -283,14 +305,14 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 *Rationale*
 
--	Løsningerne skal understøtte Databeskyttelsesforordningen [13] og Databeskyttelsesloven [14], der omhandler beskyttelse af personoplysninger og stiller en række krav til beskyttelse af borgernes privatliv.
+-	Databeskyttelsesloven og EU-forordningen GDPR om beskyttelse af personoplysninger, stiller en række krav til beskyttelse af borgernes privatliv.
 -	Tjenester der respekterer brugernes privatliv er nemmere at have tillid til.
 -	Dataminimering kan understøtte risikominimering i forhold til informations-sikkerhed.
 
 *Implikationer*
 
--	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil for eksempel sige, at standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
--	Danske offentlige tjenester må fortsat anvende CPR-nummeret, men kun hvor det er nødvendigt.
+-	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at for eksempel standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssig.
+-	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten  er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
@@ -304,7 +326,7 @@ Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. R
 
 *Implikationer*
 
--	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
+-	•	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
 -	Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
@@ -415,7 +437,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 
 
 <figure>
-<img src="Oversigt brugerstyring.svg" width="70%"/>
+<img src="Oversigt brugerstyring.svg" width="120%"/>
 <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
 <br>
@@ -741,176 +763,6 @@ Ulemper:
 - Det fælles forståede attributsæt er typisk mere begrænset, når tillidskæden er lang:
  -	Dette er fx en kendt udfordring i eIDAS føderationen, hvor det garanterede minimumsæt af attributter for en fysisk person på tværs af EU er meget fattigt og kun rummer navn, fødselsdato, og en unik ID (ikke meningsbærende).  Det er således en udfordring for mange forretningstjenester at levere en meningsfuld tjeneste til brugerne baseret på dette attributsæt. Enten fordi der ikke kan laves et sikkert match til en lokal repræsentation af brugeren, eller fordi en tjeneste er konstrueret til at kræve flere oplysninger som fx et dansk CPR-nummer.
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
-
-
-
-
-
-## Forretningsobjekter
-På figuren nedenfor illustreres de vigtigste forretningsobjekter inden for brugerstyring og deres relationer:
-
-<figure>
-<img src="Udvalgte forretningsobjekter.svg" width="80%"/>
-<figcaption>Udvalgte forretningsobjekter med særlig relevans for brugerstyring og adgangskontrol </figcaption>
-</figure>
-<br>
-
-<dfn>Bruger</dfn> Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen (unikke) identitet.
-
-<dfn>Identitet</dfn> Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -iIdentitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
-
-<dfn>Identifikationsmiddel</dfn> som en entitet får udstedt eller registreret til brug for autentifikation af en (ellere flere) identitet(er). Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (password), nogt kun brugeren er (biometri) eller nogen kun brugeren er i besiddelse af (enhed).
-
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (som entitet) have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt. I mange (legacy) implementeringer af brugerstyring er identifikationsmiddel og identitet koblet hårdt til hinanden, men det behøver de ikke at være, og en løs kobling kan give en større fleksibilitet - herunder gøre det muligt for brugerne ikke at skulle administrere et identifikationsmiddel per identitet, de kan optræde med.
-
-
-
-**Type af brugere**
-
-[genskriv med princip om entiteter og identitets typer hænger sammen mht til adgangskontrol]
-
-[entiteterne får adgang, men det er identiteter der tilgå tjeneste]
-
-
-
-
-Brugere ses som et subjekt, med rettigheder og pligter, eller et objekt, der kan arve rettigheder fra et subjekt.
-
-<figure>
-<img src="Brugertyper.png" width="60%"/>
-<figcaption>Brugertyper</figcaption>
-</figure>
-
-<dfn>Person</dfn> Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
-
-<dfn>Organisation</dfn> Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
-
-<dfn>Apparat</dfn> Fysiske enhed med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt tingen og kan, i modsætning til en applikation, ikke optræde selvstændigt.
-
-<dfn>Applikation</dfn> Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler.
-En automatiseringsrobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler efter at være logget ind på de nødvendige systemer, i brugerstyringssammenhæng ikke betragtes som en robot.
-
-**Relationer imellem brugere**
-
-Brugere kan have indbyrdes relationer af betydning for brugerstyring.
-
-<figure>
-<img src="Brugerrelationer.png" width="60%"/>
-<figcaption>Brugerrelationer</figcaption>
-</figure>
-
-**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
-
-**Tilhør** imellem person og organisation. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. For eksempel har en borger i Danmark implicit adgang til en række tjenester som for eksempel Borger.dk og e-Boks.
-
-**Rettighed** der eksplicit gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
-
-**Bruger af** et apparat. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver rettigheder fra personen der bruger det.
-
-**Delegering** af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
-
-En applikation der **afvikles på** en enhed, kan få særlige rettigheder på grund af enheden den afvikles på. *< eksempel >*.
-
-organisation der har **ansvar for** hvad en applikation gør.
-
-Øvrige begreber uddybes i referencearkitekturens bilag A (ordliste) eller forklares undervejs.
-
-"kun elektroniske identiteter kan anvende elektroniske tjenester".
-
-Brugere, her entiteter, får udstedt en identitet af en identitetsgarant. Til identiteten knyttes en række identifikationsmidler, som identiteten kan bruge til at bevise sin identitet. Når identiteten er bevist, kan oplysninger fra identiteten, eventuelt suppleret med eksterne adgangsrettigheder, styre brugerens adgang til tjenester.
-
-I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
-
-[På et teknisk niveau har vi identitets baseret adgangskontrol, men loven peger nogle gange på entiteter...]
-
-
-----
-
-I denne liste gives kun definitioner for de begreber, som referencearkitekturen for brugerstyring autoritativt definerer, og som er markeret på figur 6 (nedenfor) med røde rammer.
-
-<table>
-<tr>
-<th>Begreb</th>
-<th>Definition</th>
-<th>Eksempler</th>
-</tr>
-<tr>
-<td>Entitet </td>
-<td>Noget værende, der kan repræsenteres ved en digital identitet, og som ønsker adgang til en forretningstjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter.</td>
-<td>En person (borger, medarbejder), organisation (myndighed, virksomhed, forening), apparat (sensor, telefon) eller tjeneste (system, app, applikation, paskontor).</td>
-</tr>
-<tr>
-<td>Identitet</td>
-<td>En digital persona repræsenteret entydigt i en kontekst ved et sæt af attributter. En entitet kan have mere end en identitet.</td>
-<td>Den repræsentation i et sæt attributter, som man giver en entitet gennem brugerstyring, er målrettet de tjenester, som entiteten skal have adgang til.</td>
-</tr>
-<tr>
-<td>Identifikationsmiddel</td>
-<td> Et middel som en entitet får udstedt til brug for on-line autentifikation. Midlet kan både være fysisk og virtuelt, og skal være under entitetens kontrol. Også benævnt elektronisk akkreditiv.</td>
-<td>Et elektronisk identifikationsmiddel kan være et brugernavn, et brugernavn og password, en PIN-kode, et SmartCard, et certifikat, et (hardware) token, et fingeraftryk, et pas osv. Identifikationsmidlet kan også karakteriseres ved sikringsniveauer (AAL).</td>
-</tr>
-<tr>
-<td>Attribut</td>
-<td>Karakteristika eller egenskaber ved en identitet. På engelsk betegnes attributter som claims.</td>
-<td>Navn, adresse, køn, alder, UUID, PID, CPR-nummer, CVR-nummer, EAN nummer, Serienummer, URL, titel, uddannelse, kompetencer, ansvarsområde, specifik funktion, rolle, specifik kvalitet, specifik information osv. Når man vil tilgå en tjeneste, samler man de attributter tilhørende den elektroniske identitet, som tjenestens adgangspolitik kræver for at give adgang, og udsteder en adgangsbillet. Attributter kan vedligeholdes i kataloger som fx LDAP og AD. De kan også vedligeholdes af en attributtjeneste eller tildeles af en registreringstjeneste, samtidig med at der udstedes et identifikationsmiddel. Når attributter attesteres af en tillidstjeneste taler man på engelsk om såkaldte 'verified claims'.</td>
-</tr>
-<tr>
-<td>Adgangsbillet (token)</td>
-<td>Et elektronisk objekt, der beskriver attributter vedr. en identitet og er udstedt af en tillidstjeneste (autentifikationstjeneste, attributtjeneste eller identitetsbroker). En adgangsbillet betegnes på engelsk som 'security token' og er ofte signeret af udstederen for at sikre mod manipulering og forfalskning.</td>
-<td>For at opfylde adgangspolitikken for en tjeneste (levere et sæt claims), skal der ofte indhentes en eller flere billetter hos tillidstjenester, som forretningstjenesten har tillid til. Eksempelvis kan en borger få en SAML assertion (token) udstedt hos NemLog-in, der indeholder brugerens CPR-nummer, hvorefter borgeren kan få adgang til eksempelvis SKAT’s Tast Selv Borger-løsning. Her virker NemLog-in som en autentifikationstjeneste og identitetsbroker.</td>
-</tr>
-<tr>
-<td>Adgangspolitik </td>
-<td>En adgangspolitik beskriver betingelserne for at udføre en eller flere funktioner eller give adgang til alle informationer (data) eller en afgrænset mængde af informationer (data) i en tjeneste.</td>
-<td>En adgangspolitik for en tjeneste fastlægges af den dataansvarlige tjenesteudbyder baseret på tjenesteudbyderens informationssikkerhedspolitik. En adgangspolitik kan have to repræsentationer: -En repræsentation i almindelig tekst beregnet på personer, der informerer om, hvilke attributter en identitet skal møde op med for at kunne få adgang til hvilke funktioner og informationer. -En repræsentation i struktureret format, der kan læses maskinelt af en tjeneste, der undersøger betingelserne til at få adgang til funktioner og informationer. Når en bruger præsenterer en eller flere adgangsbilletter, konsulteres adgangspolitikken til at afgøre, hvilke data og funktioner, der skal gives adgang til. Hvis ikke adgangsbilletten indeholder attributter, der modsvarer, hvad adgangspolitikken kræver, afvises adgang.</td>
-</tr>
-</table>
-
-
-Der henvises i øvrigt til NSIS for en mere detaljeret gennemgang af begreber relateret til brugerstyring.
-
-
-Begrebsmodellen illustrerer begrebernes relationer til hinanden. De røde begreber er referencearkitekturens kernebegreber og defineres af denne. De anvendes  til at identificere og beskrive de centrale tjenester og roller, som er relevante i referencearkitekturen. De blå begreber er i princippet eksterne i forhold til referencearkitekturen. De er med som (udvalgte eksempler på) støttebegreber, der viser kontekst, relaterer til kernebegreberne og kan bruges til at pege på væsentlige støttetjenester.
-
-<figure>
-<img src="billede6.PNG" width="90%"/>
-<figcaption>Begrebsmodel for brugerstyring</figcaption>
-</figure>
-[Den er vist helt gal... De skal ikke beskrives som en relation i en bregebsmodel, men som en aktivitet i en process]
-
-<table>
-<tr>
-<th>Relation</th>
-<th>Definition</th>
-</tr>
-<tr>
-<td>En entitet registres med en eller flere identiteter.</td>
-<td>En identitet fastlægges og valideres af en registreringstjeneste</td>
-</tr>
-<tr>
-<td>En entitet får tildelt et eller flere identifikationsmidler knyttet til identiteter.</td>
-<td>En udsteder af identifikationsmidler udstyrer entiteten med identifikationsmidler, der kan autentificere identiteten over for den tjeneste, der forestår autentifikationen.</td>
-</tr><tr>
-<td>En identitet kan associeres med (knyttes til) flere identifikationsmidler, og et identifikationsmiddel kan associeres med flere identiteter.</td>
-<td>Ved at koble identitet og identifikationsmidler løst kan identiteten være vedvarende over tid med mulighed for at skifte identifikationsmiddel. Det giver også mulighed for, at brugeren kan indrullere flere identifikationsmidler som supplement til et udleveret identifikationsmiddel (fx indrullere fingeraftryk).</td>
-</tr><tr>
-<td>En identitet associeres med en eller flere attributter (claims) og en attribut kan associeres med flere identiteter.</td>
-<td>En identitet tilknyttes attributter, der karakteriserer den specifikke identitet, til brug for en tjenestes vurdering af, om tjenesten kan give denne identitet adgang. Et givet antal attributter hos en identitet skal matche adgangspolitikken hos tjenesten, for at tjenesten giver identiteten adgang.</td>
-</tr><tr>
-<td>En adgangsbillet indeholder et eller flere sæt attributter.</td>
-<td>En anmodning om adgang behandles af autentifikationstjeneste eller identitetsbroker, som udsteder en adgangsbillet med en eller flere attributter, der beskriver identiteten. </td>
-</tr><tr>
-<td>En adgangsbillet matches med en adgangspolitik.</td>
-<td>Adgang gives af en tjeneste på grundlag af de attributter, der fremgår af adgangsbilletten, samt et tillidsforhold til den tjeneste, som har udstedt billetten. Adgangskontrollen følger tjenesteudbyderens vedtagne adgangspolitik for den pågældende tjeneste.</td>
-</tr><tr>
-<td>En tjeneste har en adgangspolitik.</td>
-<td>En tjenesteudbyders tjeneste stiller funktionalitet og informationer (data) til rådighed, som er underlagt en adgangspolitik, der specificerer, hvilke attributter identiteten skal demonstrere for at få adgang til specifikke funktioner og informationer. Denne adgangspolitik fastlægger niveauet for funktioner og informationers  tilgængelighed og beskyttelse, herunder det sikringsniveau for identiteter, som tjenesten accepterer, og den kvalitet i attributter den forventer.</td>
-</tr>
-</table>
-
-Afsnit 12: Bilag C giver en begrundelse for valget af denne begrebsmodel
-
-
 
 
 # Teknisk arkitektur
