@@ -74,9 +74,9 @@ Referencearkitekturen beskriver administrationen og kontrollen med brugeres adga
 
 De primære kapabiliteter i brugerstyring er
 
--	*Brugeradministration* aspekt af brugerstyring hvor digitale identiter, deres tilknytning til entiter og tilknytning af rettigheder administreres.
+-	*Brugeradministration* aspekt af brugerstyring hvor digitale identiteter, deres tilknytning til entiteter og tilknytning af rettigheder administreres.
 -	*Adgangskontrol* proces, der afgør hvilke funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.
-- *Forretningstjenste*, tjeneste der understøtter forretningskabapbiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation.
+- *Forretningstjeneste*, tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation.
 
 Ved siden af forretningstjenester findes *tillidstjenester*, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
 
@@ -96,7 +96,7 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 
 *Identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
 
-*Identifikationsmiddel* middel som en en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+*Identifikationsmiddel* middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
 Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
@@ -867,7 +867,7 @@ Så længe alle tjenester i tillidskæden ligger inden for egen organisation, ka
 I en føderation mellem en række sektorer, der hver har deres sikkerhedsdomæner, skal tilliden udvides til at omfatte komponenter som autentifikationstjenester, attributtjenester og billettjenester fra alle involverede sektorer hos alle deltagere i føderationen. Desuden er det centralt at fastlægge de kombinationer af tillidstjenester, der giver et konkret sikringsniveau, og som alle i føderationen har tillid til. Det er nødvendigt helt specifikt at beskrive den datastrøm gennem tjenesterne, der giver et bestemt sikringsniveau.
 
 ## Identitetsbaserede services
-En ofte forekommende problematik er, at en forretningstjeneste har brug for at kalde videre til andre forretningsservices for at servicere en bruger. Det kan fx være, at en portal som borger.dk, der tilgås af slutbrugere, har brug for opslag i en bagvedliggende service, der kan levere data om en bestemt borger (fx Digital Post). Nedenstående figur illustrerer et simpelt eksempel, hvor der kun er to forretingstjenester i spil:
+En ofte forekommende problematik er, at en forretningstjeneste har brug for at kalde videre til andre forretningsservices for at servicere en bruger. Det kan fx være, at en portal som borger.dk, der tilgås af slutbrugere, har brug for opslag i en bagvedliggende service, der kan levere data om en bestemt borger (fx Digital Post). Nedenstående figur illustrerer et simpelt eksempel, hvor der kun er to forretningstjenester i spil:
 
 <figure>
 <img src="Kald mellem forretningstjenster.svg" width="90%" />
