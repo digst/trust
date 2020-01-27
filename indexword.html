@@ -24,49 +24,6 @@
 <p class="author">Digitaliseringsstyrelsen</p>
 <p class="date">December 2019</p>
 </header>
-<style>
-@media print {
-  html { margin: 0cm 2cm 2cm 0cm; font-size: 80%; }
-  /* DIGST fonts */
-  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
-  h2,h3,h4, h4 dfn { font-family: "Garamond", serif; color: black; margin-bottom: 0; font-style: normal; font-weight: normal;}
-
-  h2:not(#subtitle) { page-break-before: always; font-size: 250%; border-bottom: solid 0.5px black; padding-top: 20px; margin-bottom: 6px;}
-  h3 { font-size: 145%;}
-  h4 { font-size: 125%;}
-
-  #toc {page-break-before: always;}
-
-  /* DIGST-like frontpage */
-  .head { width: 50%; margin-left: 24px; padding: 0px; background-color: #031D5C;}
-  .head div { background-color: white; padding: 24px; }
-  .head hr { display: none;}
-  .head h1 { background-color: #031D5C; color: white; margin: 0px; padding: 50px 0px 50px 24px; font-weight: normal; }
-  #subtitle { padding-left: 24px; background-color: #031D5C; color: #031D5C; }
-  .head time { display: block; font-family: "Helvetica Neue", Helvetica, Arial; margin: 0px; background-color: #031D5C; font-size: 80%; color: white;}
-  .toc li { line-height: 70%; font-family: "Helvetica Neue", Helvetica, Arial;
-    font-weight: 600; font-size: 90%; }
-  .self-link { display: none; }
-
-  blockquote { font-size: 80%; font-style: italic; margin-left: 5%; width: 70%; border-left-width: 2px;}
-    h2#abstract {display: none;}
-    .p-summary {width: 50%; margin-left: 24px; padding: 0px;}
-
-  ul.index { column-count: 2;}
-}
-
-.new {
-    border: solid 3px green;
-    padding: 6px;
-    margin: 18px 0px 18px 0px;
-}
-
-dfn {
-  color: #940027;
-}
-
-/* style til egne og andres definitioner rød/blå*/
-</style>
 <pre class="metadata">
 Title: arkitektur.digst.dk Brugerstyring
 Status: LD
@@ -118,47 +75,45 @@ Resume
 <p>Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.</p>
 <h2 id="centrale-begreber">Centrale begreber</h2>
 <p>Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.</p>
-<p>De primære kapabiliteter i brugerstyring er</p>
-<ul>
-<li>Administrationen af brugere, med registrering, sikring af identiteter og tilknytning af rettigheder.</li>
-<li>Sikring af adgang, med autentifikation og håndtering af attributter om brugeren.</li>
-</ul>
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
 <figcaption>
 Kapabiliteter omkring brugerstyring
 </figcaption>
 </figure>
-<p>Forretningstjeneste en primært eksternt synlig funktionalitet, men kan også være til internt brug. Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.</p>
-<p>En tjenesteudbyder sikrer adgangen til forretningstjenesten, så brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.</p>
-<p>Ved siden af forretningstjenester findes tillidstjenester, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af føderationer.</p>
-<p><dfn>Tillidstjeneste</dfn> en betroet tjeneste som udbydes særskilt, og anvendes af bruger og forretningstjenesteudbyder i fællesskab, styret af aftaler om tillidspolitikker.</p>
-<p><dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.</p>
+<p>De primære kapabiliteter i brugerstyring er</p>
+<ul>
+<li><em>Brugeradministration</em> aspekt af brugerstyring hvor digitale identiter, deres tilknytning til entiter og tilknytning af rettigheder administreres.</li>
+<li><em>Adgangskontrol</em> proces, der afgør hvilke funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.</li>
+<li><em>Forretningstjenste</em>, tjeneste der understøtter forretningskabapbiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation.</li>
+</ul>
+<p>Ved siden af forretningstjenester findes <em>tillidstjenester</em>, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige <em>tillidstjenester</em> og <em>forretningstjenester</em> samarbejder, typisk i sammenslutninger i form af føderationer.</p>
+<p><em>Tillidstjeneste</em> tjeneste der udfører betroede funktioner der understøtter brugerstyring i forretningstjenester.</p>
+<p><em>Føderationer</em> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.</p>
 <h3 id="brugere-og-identiteter">Brugere og identiteter</h3>
 <p>I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.</p>
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>
-Sammenhængende tjenester
+Entitet, identitet og identifikationsmiddel
 </figcaption>
 </figure>
-<p>Entitet, person eller enhed som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet bruger om entiteter i rollen som brugere af en tjeneste.</p>
-<p>Bruger Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen (unikke) identitet.</p>
-<p>Identitet Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.</p>
-<p>Identifikationsmiddel som en bruger får udstedt eller registreret til brug for autentifikation af en identitet. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.</p>
+<p><em>Entitet</em>, , person, organisation, apaprat eller applikation, som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet <em>bruger</em> om entiteter i rollen som brugere af en tjeneste.</p>
+<p><em>Identitet</em> digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.</p>
+<p><em>Identifikationsmiddel</em> middel som en en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.</p>
 <p>Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.</p>
 <h3 id="typer-af-brugere">Typer af brugere</h3>
-<p>I forbindelse med brugerstyring kan brugere være enten et subjekt, med rettigheder og pligter, eller et objekt, der kun kan arve rettigheder fra et subjekt.</p>
+<p>I forbindelse med brugerstyring kan brugere være enten med rettigheder og pligter, eller brugere der kun kan arve rettigheder fra en anden bruger.</p>
 <figure>
-<img src="Brugertyper.png" width="65%"/>
+<img src="Brugertyper.png" width="80%"/>
 <figcaption>
 Brugertyper
 </figcaption>
 </figure>
-<p>Person Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.</p>
-<p>Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.</p>
-<p>Apparat Fysiske enhed med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.</p>
-<p>Applikation Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.</p>
+<p><em>Person</em> Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.</p>
+<p><em>Organisation</em> med adgange og rettigheder der kan delegeres til medarbejder eller applikation.</p>
+<p><em>Apparat</em> fysisk redskab med indlejret software, der kan udføre specifikke funktioner og kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.</p>
+<p><em>Applikation</em> software med specifik forretningsfunktion, der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.</p>
 <h3 id="relationer-imellem-brugere">Relationer imellem brugere</h3>
 <p>Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af rettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.</p>
 <ul>
@@ -169,6 +124,15 @@ Brugertyper
 <li>Delegering af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.</li>
 <li>En applikation kan have særlige rettigheder på grund af enheden den afvikles på.</li>
 </ul>
+<h3 id="begrebsoverblik">Begrebsoverblik</h3>
+<p>I forbindelse med implementeringen af arkitekturen, benyttes billetter til at samle de attributter der indgår i adgangsstyringen for en given tjeneste.</p>
+<figure>
+<img src="Billede6.png" width="100%"/>
+<figcaption>
+Begrebsoverblik
+</figcaption>
+</figure>
+<p>Ud over de her viste begreber er alle begreber forklaret i bilag [1 Begreber.]</p>
 <h2 id="tilblivelse-styring-og-andre-referencearkitekturer">Tilblivelse, styring og andre referencearkitekturer</h2>
 <p>Denne version 1.1 af Referencearkitektur for brugerstyring er udarbejdet i Center for teknik og datastrategi (CTD) i Digitaliseringsstyrelsen med konsulentbistand fra IT Crew og Capgemini.</p>
 <p>En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops og reviews. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.</p>
@@ -176,7 +140,6 @@ Brugertyper
 <p>Referencearkitektur for brugerstyring godkendtes i version 1.1 af Styregruppe for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i maj 2020. Styregruppen er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.</p>
 <p>Referencearkitekturen publiceres på arkitektur.digst.dk, hvor man kan finde beslægtede dokumenter vedrørende FDA.</p>
 <p>En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyringsområdet. Her kan nævnes sundhedsdatastyrelsens “Målbillede for tillidstjenester[check]” og [Kommunernes?] <span class="citation" data-cites="Kirsten">[Indsæt referencer @Kirsten]</span></p>
-<p>[I bilag [XX] kan se liste over identificerede offentlige it-løsninger der realisere nogle af de applikationsroller og -services der beskrives i dette dokument] [Bevarer vi dette bilag ?]</p>
 <h2 id="anvendt-metode-notation-og-signaturforklaring">Anvendt metode, notation og signaturforklaring</h2>
 <p>Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af FDA og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1].</p>
 <p>I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:</p>
@@ -267,7 +230,7 @@ Brugertyper
 <li>Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.</li>
 </ul>
 <h3 id="princip-3-tjenesteudbyder-har-ansvaret-for-at-håndhæve-brugernes-adgange">Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange</h3>
-<p>Tjenesteudbyder har ansvaret for at håndhæve brugeres adgange til tjenesten. Reglerne for adgang specificeres i en adgangspolitik udarbejdet af tjenesteudbyder.</p>
+<p>Tjenesteudbyder har ansvaret for at specificere reglerne for adgang i en adgangspolitik og dernæst at håndhæve reglerne i adgangspolitikken i forbindelse med at bruger gives adgang til tjenesten.</p>
 <p><em>Rationale</em></p>
 <ul>
 <li>Tjenesteudbyder har dataansvaret og dermed det juridiske ansvar.</li>
@@ -279,7 +242,7 @@ Brugertyper
 <li>Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.</li>
 </ul>
 <h3 id="princip-4-brugerstyring-er-adskilt-fra-forretningstjenester">Princip 4: Brugerstyring er adskilt fra forretningstjenester</h3>
-<p>Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at identiteter ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.</p>
+<p>Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at en identitet ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.</p>
 <p><em>Rationale</em></p>
 <ul>
 <li>Det giver større brugervenlighed, når samme identitet kan benyttes til alle tjenester, med mulighed for adgangsstyring på tværs af løsninger og domæner.</li>
@@ -290,7 +253,7 @@ Brugertyper
 <p><em>Implikationer</em></p>
 <ul>
 <li>Forretningstjenesten skal kunne samarbejde med tillidstjenester, der leverer brugerstyring.</li>
-<li>Brugerstyring skal være harmoniseret [TG: hvad menes hermed? baseret på fælles standarder eller noget andet?] således at samarbejde imellem forretningstjenester og tillidstjenester kan etableres enkelt, sikkert og effektivt.</li>
+<li>Brugerstyring skal baseres på fælles standarder således at samarbejde imellem forretningstjenester og tillidstjenester kan etableres enkelt, sikkert og effektivt.</li>
 <li>Der skal etableres aftaler imellem udbyderne af forretningstjenesterne og udbyderne af tillidstjenesterne, således at den nødvendige tillid for samarbejdet er til stede.</li>
 </ul>
 <h3 id="princip-5-brugerstyring-realiseres-via-løst-koblede-og-harmoniserede-tillidstjenester">Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester</h3>
@@ -884,123 +847,7 @@ Kommunikation mellem føderationer
 <p>En DID er basalt set en URL som relaterer et ‘DID subject’ til et ‘DID dokument’ på en måde der giver mulighed for troværdige interaktioner med subjektet (brugeren). Et DID dokument kan fx beskrive offentlige nøgler, som DID subjektet (og tilhørende services) kan bruge til at autentificere sig med, og beskrive serviceendepunkter, som kan benyttes til at interagere med DID subjektet. Hensigten med standardiseringen er at specificere syntaks (DID scheme) og et generisk sæt af operationer på DID dokumenter. Ved at publicere et DID dokument på en blockchain kan brugere på en generisk måde specificere, hvordan en bestemt identitet kan autentificeres.</p>
 <p>Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skole baseret på centrale autoriteter og -tillidstjenester, som sammenbindes gennem føderationer. Den decentrale brugerstyring er dog et interessant nyt paradigme, som vil blive observeret efterhånden som området modnes og standarderne færdiggøres. De to paradigmer kan godt forenes, eksempelvis kan klassiske identiteter og identifikationsmidler fra en centraliseret model udstilles som decentrale identifiers.</p>
 <h4 id="iot-initiativer">IoT initiativer</h4>
-<p>[Poul udfylder om W3C WoT]</p>
-<hr />
-<h2 id="ordliste">Ordliste</h2>
-<p>Nedenstående liste forklarer betydningen af de væsentligste ord og begreber, der indgår i den tværoffentlige referencearkitektur for brugerstyring.</p>
-<p>Ord, der er markeret med <em>kursiv</em>, er ord, hvor definitionen kan findes på ordlisten.</p>
-<p><dfn>Brugerrolle</dfn> Rolle der udgøres af en eller flere <em>adgangsrettigheder</em> til et eller flere it-systemer, som en bloc tildeles til en bruger. Brugerroller anvendes til at afgøre, hvilke handlinger en bruger må udføre i et it-system. Brugerrollen fastlægger de <em>adgangsrettigheder</em>, som brugeren er tildelt. Brugere tilknyttes til roller og opnår <em>adgangsrettigheder</em> ved at være rolleindehaver. Brugerroller er grupperinger af <em>adgangsrettigheder</em>. Der er ikke nødvendigvis sammenfald mellem brugerroller og brugerens profession, stillingsbetegnelse mv. [IT- &amp; Telestyrelsen, Begrebsmodel til brugerstyring]</p>
-<p><dfn>Brugerrollerestriktion</dfn> En begrænsning som specificerer, hvad en <em>brugerrolle</em> må bruges på. Et typisk eksempel er en såkaldt <em>dataafgrænsning</em>, som angiver hvilke dataobjekter (fx sager) som en given rolle må anvendes på (fx rollen <em>læs sag</em> afgrænset til sag med nummeret <em>xyz</em>’). I RBAC samt OIO Basic Privilege Profile benævnes dette for en <em>constraint</em>.[IT- &amp; Telestyrelsen, Begrebsmodel til brugerstyring]</p>
-<p><dfn>Brugerrolletildeling</dfn> Angivelse af de <em>brugerroller</em> som en bruger er tildelt evt. med tilhørende <em>brugerrollerestriktioner</em>. Brugerrolletildeling anvendes til at definere en brugers <em>brugerroller</em> med de begrænsninger (<em>brugerrollerestriktioner</em>), der måtte være i forhold til anvendelsen af brugerrollen. I OIO Basic Privile Profile anvises hvordan brugerens roller kan udtrykkes i et en SAML Assertion.[IT- &amp; Telestyrelsen, Begrebsmodel til brugerstyring]</p>
-<p><dfn>Brugerstyring</dfn> Brugerstyring anvendes bredt i denne tværoffentlige strategi og referencearkitektur for brugerstyring. Betegnelsen omfatter både <em>adgangskontrol</em> og administration af identiteter, identifikationsmidler, attributter og <em>adgangsrettigheder</em>, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM). Brugerstyring dækker således opgaver i forbindelse med <em>indrullering, autentificering, autorisation, billetudstedelse, adgangskontrol</em> osv.[]</p>
-<p><dfn>Certificate Authority (CA)</dfn> En betroet enhed, der udsteder <em>certifikater</em> til identificerede og registrerede parter (se også <em>registreringsmyndighed</em>). Opgaverne og ansvarsområderne tilhørende en CA er opdelt i Identity Proofing Service (IPS) og <em>Credential Management Service (CMS)</em>.[]</p>
-<p><dfn>Certifikat</dfn> En elektronisk attest, som angiver certifikatindehaverens offentlige nøgle sammen med supplerende information, og som entydigt knytter den offentlige nøgle til identifikation af certifikatindehaveren. Et certifikat skal signeres af et certificeringscenter (CA), som derved bekræfter certifikatets gyldighed.[OCES certifikatpolitikker]</p>
-<p><dfn>Certifikatudbyder, Certifikatudsteder, Certificeringscenter</dfn>En fysisk eller juridisk person, der er bemyndiget til at generere, udstede og administrere <em>certifikater</em> (jf. <em>identitetsudbyder</em>). Se også <em>Certificate Authority</em>.[OCES certifikatpolitikker]</p>
-<p><dfn>Credential</dfn>Synonym for attribut.[]</p>
-<p><dfn>Claim</dfn>Synonym for <em>identifikationsmiddel.</em>[]</p>
-<p><dfn>Credential Management Service</dfn>Service der varetager udstedelse og vedligeholdelse af identifikationsmidler gennem hele deres livscyklus.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Credential Service Provider (CSR)</dfn>Se Udsteder af identifikationsmiddel.[]</p>
-<p><dfn>Delegering</dfn>Omhandler personers adgang til at benytte medhjælp, dvs. under ansvar og efter instruktion og under tilsynspligt uddelegere nogle af den uddelegerendes rettigheder. Karakteristisk for delegering er, at der er tale om en person, der instruerer en anden i at handle på sine vegne. Med delegeringen kan der følge en pligt til at instruere og kontrollere. Der stilles derfor krav om, at man skal kunne se, hvem der handler på hvis vegne ved centrale opslag.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Digital identitet</dfn>En digital persona repræsenteret (entydigt) ved et sæt af attributter. En entitet kan have mere end en identitet.[Informationsordbogen]</p>
-<p><dfn>Digital Signatur</dfn>Anvendes om første generation af offentlige <em>certifikater</em> til elektronisk service (OCES). Et matematisk skema til at bevise autenticiteten af en digital besked eller dokument. Digitale signaturer dannes ved brug af asymmetrisk kryptering og hashfunktioner. Anvendes ikke synonymt med eSignatur.[Informationsordbogen]</p>
-<p><dfn>eIDAS</dfn>Electronic identification and trust services. EU-forordningen om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner.[eIDAS]</p>
-<p><dfn>Elektronisk Identitet</dfn>Se <em>Digital Identitet.</em>[]</p>
-<p><dfn>Elektronisk signatur</dfn>Data i elektronisk form, der er vedhæftet eller logisk tilknyttet andre data i elektronisk form, og som anvendes af underskriveren til at skrive under med.[EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Elektronisk identifikationsmiddel</dfn>Et elektronisk eller fysisk objekt/genstand, der kan anvendes til at gennemføre en autentifikation af en identitet. Eksempler kan være brugernavn/kodeord, et NemID nøglekort, et certifikat med tilhørende privat nøgle, et SAML token etc. Betegnes også for Akkreditiv.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Elektronisk signaturgenereringssystem</dfn>Konfigureret software eller hardware, der bruges til at generere en elektronisk signatur.[EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>ID-tjeneste</dfn>En betroet tjeneste, som leverer en eller flere af de processer, som er underlagt krav i (NSIS). Dette kan fx være identitetssikring, udstedelse af elektroniske identifikationsmidler eller drift af en broker. Bemærk, at eIDAS reguleringen bruger det komplementerende begreb ”tillidstjeneste” om tjenester involveret i udstedelse af digitale signaturer/certifikater, validering af certifikaters gyldighed og tidsstempling. Der er intet overlap mellem ID-tjenester i NSIS og tillidstjenester i eIDAS - det er således helt komplementære begreber.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Bruger</dfn> En fysisk person eller organisation, som ønsker adgang til en on-line tjeneste gennem autentifikation med elektroniske identifikationsmidler. En entitet kan have flere elektroniske identiteter – fx kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. En entitet er noget værende, og kan også være et apparat, sensor, app, apparat eller softwarerobot.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>eSignatur</dfn>eSignatur defineres som data i elektronisk form, der er logisk forbundet med andre elektroniske data, som autentificerer den, der signerer. En ”avanceret” signatur er en eSignatur, der kan identificere den, som signerer. Anvendes primært om begrebet elektronisk underskrift og i begrænset omfang om en specifik elektronisk underskrift. <em>&lt;Vi har flere forskellige signaturord (eSignatur, Elektronisk signatur, Avanceret elektronisk signatur, Digital Signatur, Signatur). Vi skal have et overblik så vi kan se hvilke der er synomyner og hvilke der adskiller sig. Et aspekt er at digital signatur er certifikatbaseret, mens en elektronisk signatur er enhver form for elektronisk version, fx en indscannet underskrift eller en underskrift på en skærm.</em>[http://ec.europa.eu/digitalagenda/en/trustservices-and-eid]</p>
-<p><dfn>FOCES</dfn>OCES <em>certifikat</em> udstedt til en “funktion” eller et system i en virksomhed. Disse <em>certifikater</em> kan anvendes til at autentificere systemet, oprette sikre kommunikationskanaler (f.eks. via SSL/TLS eller HTTPS) eller digital signering af indhold, der sendes fra systemet til et andet system. I modsætning til signaturer, der baseres på <em>VOCES certifikater</em>, har signaturen dog ingen juridisk legitimitet ift. virksomheden som juridisk person. Signaturer fra FOCES <em>certifikater</em> bruges derfor typisk som sikkerhed for at det pågældende <em>system</em> har sendt det pågældende indhold.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Forretningstjeneste</dfn>En tjeneste, der løses et forretningsmæssigt behov, fx en borgerrettet selvbetjeningsløsning. Vil typisk give adgang på baggrund af en adgangsbillet, hvis denne lever op til tjenestens adgangspolitik.[]</p>
-<p><dfn>Fuldmagt</dfn>Et almindeligt aftaleretligt begreb, hvor man som myndig person kan udstyre en anden med fuldmagt til at handle på sine vegne. Karakteristisk for en fuldmagt er, at det er en person, der giver en anden fuldmagt til at handle på sine vegne og repræsentere vedkommende. Omfanget af fuldmagten afhænger af, hvad der står i den/hvad personen har sagt/gjort.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Føderation</dfn>En samling af selvstændige organisationer, der har indbyrdes tillid til hinanden omkring <em>autentificering</em> af brugere og håndtering af brugeridentiteter - typisk baseret på et <em>trust framework</em> som NSIS, eIDAS eller tilsvarende. Indenfor en føderation kan en bruger autentificere sig overfor en af føderationen anerkendt autentifikationstjeneste eller identitetsbroker, få udstedt en adgangsbillet, og derefter anvende den til at tilgå forretningstjenester i føderationen.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Identifikation</dfn>En proces hvor identiteten af en bruger fastlægges, og hvor attributter eller dele heraf (fx navn og CPR nummer eller tilknytning til juridisk person) efterprøves. Kaldes også for identitetssikring eller <em>identity proofing</em> på engelsk[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Identitet</dfn>En digital persona repræsenteret ved et sæt af attributter. Anvendes også som synonym for <em>Elektronisk Identitet</em>.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Identitetsgarant</dfn>Den organisation, der udsteder <em>identifikationsmidler</em> og på anmodning (ved login) garanterer, at de fremviste <em>identifikationsmidler</em> tilhører den <em>entitet</em>, de er udstedt til. Samme organisation kan varetage registrering af identitet eller bygge på autoritativt <em>identitetsregister</em>, fx CPR, CVR eller virksomheders identitetsregistre (AD). Samme organisation kan varetage <em>verifikation</em> eller bygge på andres <em>verifikation</em> (i DK banker og borgerservicecentre).[]</p>
-<p><dfn>Identitetsregister </dfn>En funktion/register, der registrerer information om entiteter (fx borgere). Dette kan fx være CPR-registret og CVR-registret som eksempler blandt flere registre.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Identitetsudbyder, Identity Provider (IdP)</dfn>En autentifikationstjeneste, der verificerer en brugers eller et systems identitet på baggrund af brugerens (eller systemets) besiddelse og kontrol over <em>identifikationsmidler</em>.[Informationsordbogen NIST, Electronic Authentication Guideline]</p>
-<p><dfn>Identity Relationship Management</dfn>En variant af brugerstyring, hvor vægten lægges på relationer mellem entiteter og håndteringen heraf. Er fremkommet som følge af behovet for at kunne håndtere relationerne mellem personer og de mange enheder, der vil blive sluttet til internettet (internet of things).[Kantara, Identity Relationship Management]</p>
-<p><dfn>Identity Token</dfn>Et <em>sikkerheds token</em> der indeholder attributter, der beskriver en ‘identitet’ (omtales ofte som ‘principals’). Identity tokens er typisk XML-baserede eller JSON-baserede datastrukturer, der er udstedt og digitalt signeret af en billetudsteder som fx en IdP eller <em>STS (Security Token Service)</em>.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>IdP (Identity Provider)</dfn>Se <em>Identitetsudbyder.</em>[]</p>
-<p><dfn>Indrullering</dfn>Indrullering er den proces, en person gennemgår for at få oprettet en elektronisk identitet. I processen skal personen identitetssikres i passende omfang, f.eks. ved personligt fremmøde og fremvisning af tidligere udstedte <em>identifikationsmidler</em> (pas, kørekort). Styrken af identitetssikringen af personen er et af grundelementerne i den såkaldte ”Level of Assurance” (LoA), dvs. den grad af tillid, der kan haves til den fysiske identitet, der er koblet til en elektronisk identitet. Resultatet af en indrullering er dels en elektronisk identitet koblet til den fysiske bruger, dels nye <em>identifikationsmidler</em> der efterfølgende kan anvendes til at autentificere relationen mellem den fysiske bruger og den digitale identitet. Handlinger ved indrullering: - Registrering af identiteten - Identifikation (”Identity proofing”) - Udstedelse af <em>identifikationsmidler</em> (f.eks. <em>certifikat</em> og nøglekort) - Aktivering af identiteten (har typisk til formål at sikre sole <em>control</em>)[Lakeside, Region Midtjylland, Digital identitet – vigtige begreber og processer]</p>
-<p><dfn>Informationssikkerhedspolitik</dfn>Det overordnede dokument, som underskrives af ledelsen, og som udstikker de overordnede krav og målsætninger, som skal gælde for en organisations håndtering af informationssikkerhed Består af retningslinjer, forretningsgang og instruks og sikkerhedsforanstaltninger.[Informationssikkerhedspolitik : Digitaliseringsstyrelsen]</p>
-<p><dfn>Local Registration Authority</dfn>Se <em>Signaturadministrator</em>.[]</p>
-<p><dfn>Login</dfn>Den proces, hvor en person præsenterer sine <em>identifikationsmidler</em> for at bevise sin identitet. Se også <em>autentificering</em>.[Informationsordbogen]</p>
-<p><dfn>Login-faktor</dfn>Se <em>autentifikationsfaktor.</em>[]</p>
-<p><dfn>Login-tjeneste</dfn>De tjenester, der indestår for brugeres identitet over for tjenesteudbydere og herunder leverer identitetsrelaterede <em>attributter (primære attributter)</em>.[]</p>
-<p><dfn>LRA</dfn>Se <em>Signaturadministrator.</em>[]</p>
-<p><dfn>MOCES</dfn>OCES <em>certifikat</em> udstedt til en medarbejder i en virksomhed. <em>Certifikatet</em> attesterer at en person er identificeret af ledelsen (eller en af ledelsen udpeget administrator) og at personen er tilknyttet virksomheden.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>NemID</dfn>En løsning leveret af Nets DanID til brug i offentlige og private tjenester. NemID udsteder identifikationsmidler til borgere og medarbejdere i Danmark, og forventes erstattes med MitID løsningen i i løbet af 2021.[]</p>
-<p><dfn>NemID Privat</dfn>Bruges til de løsninger, der retter sig specifikt til private borgere.[]</p>
-<p><dfn>NemID til erhverv</dfn>Bruges til de løsninger, der omfatter virksomheder bredt, dvs. <em>MOCES, VOCES, FOCES</em> etc. <em>MOCES</em>= medarbejder-OCES <em>VOCES</em>=virksomheds-OCES <em>FOCES</em>= funktions-OCES <em>OCES= Offentlige certifikater til elektroniske services.</em>[]</p>
-<p><dfn>NemID medarbejdersignatur</dfn>NemID til medarbejdere i virksomheder og myndigheder. Bruges både som den nuværende og kommende fællesoffentlige løsning for medarbejderidentiteter.[]</p>
-<p><dfn>Nøgle</dfn>De tal, der står på nøglekortet til NemID, og som skal indtastes i forbindelse med anvendelse af nøglekort.[]</p>
-<p><dfn>Nøglefil</dfn>Angiver en af de specifikke løsninger for NemID til erhverv, hvor <em>certifikat</em> og tilhørende private nøgle gemmes i en fil beskyttet med brugerens adgangskode. Nøglefile kan anvendes til både <em>MOCES, VOCES</em> og <em>FOCES</em>.[]</p>
-<p><dfn>OCES</dfn>Se Offentlige <em>Certifikater</em> til Elektroniske Services[]</p>
-<p><dfn>Offentlige Certifikater til Elektroniske Services</dfn>Offentlige <em>Certifikater</em> til Elektroniske Services. Det danske fællesoffentlige system til elektronisk id og digitale signaturer.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>PDP</dfn>Se Policy Decision Point[]</p>
-<p><dfn>PEP</dfn>Se Policy Enforcement Point[]</p>
-<p><dfn>PKI</dfn>Se Public Key Infrastructure.[]</p>
-<p><dfn>Policy Decision Point</dfn>En funktion, som bestemmer om adgang er tilladt eller ej.[California - Identity and Access Management (IdAM) Reference Architecture (RA)]</p>
-<p><dfn>Policy Enforcement Point</dfn>En enhed, der styrer (håndhæver) adgang til en service baseret på verificerede <em>attributter</em> og afgørelser om overholdelse af <em>adgangspolitikker</em>. The code that actually enforces authorization rules.[California - Identity and Access Management (IdAM) Reference Architecture (RA)]</p>
-<p><dfn>Primære attributter</dfn>De kontekstafhængige <em>attributter</em>, der er besluttet i infrastrukturen, og som sikrer entydighed af en identitet. Antal og art af attributter fastlægges ud fra lovgivningsmæssige rammer (fx persondatareguleringen) og beslutninger ud fra tekniske og økonomiske præmisser. Et eksempel i NemID er PID-nummret, som identificerer en borgeridentitet entydigt, og har en 1-til-1 relation til CPR nummeret.[]</p>
-<p><dfn>Privat nøgle</dfn>Den private nøgle er et centralt element i en <em>public keyinfrastructure (PKI)</em> og svarer til definitionen af signaturgenereringsdata i <em>eIDAS</em>-forordningen.[]</p>
-<p><dfn>Protokol</dfn>En formel specifikation af hvordan enheder interagerer. På de lavere niveauer specificerer protokoller elektriske og fysiske standarder for netværk, rækkefølge af signaler / bits i en transmission, fejlhåndtering (f.eks. retransmission) mm.. På højere niveauer specificerer protokoller karaktersæt, syntaks af beskeder, beskedsekvenser mm.[http://da.wikipedia.org/wiki/Protokol_(edb)]</p>
-<p><dfn>Provisionering</dfn>Bruger provisionering henviser til skabelse/oprettelse, vedligeholdelse og deaktivering af bruger objekter og <em>identifikationsmidler</em> og <em>attributter</em> for brugere, da de eksisterer i flere ét eller flere systemer, registre eller appikationer, i modsætning til automatiseret eller interaktive forretningsprocesser. Se også indrullering.[http://en.wikipedia.org/wiki/Provisioning, afsnit 3. User provisioning]</p>
-<p><dfn>Public Key Infrastructure</dfn>PKI er en teknologi til udstedelse, administration og brug af digitale <em>certifikater</em>. Den Digitale Signatur er en PKI tofaktor sikkerhedsarkitektur (kendskab til kodeord samt besiddelse af en fysisk enhed, f.eks. en <em>nøglefil</em> eller et nøglekort), der administreres på nationalt hold af en OCES-operatør.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>RA</dfn>Se <em>Registration Authority.</em>[]</p>
-<p><dfn>Registration Authority</dfn>Se <em>Registreringsmyndighed</em> og <em>Identitetsgarant</em>[]</p>
-<p><dfn>Registrering</dfn>Registrering af en entitet, af attributter og identifikationsmidler. Omfatter bl.a. indrullering[]</p>
-<p><dfn>Registreringsmyndighed, Registreringsenhed</dfn>Den organisation, som registrerer en <em>entitet</em> og verificerer den identitet (fx med hjælp fra identitetspapirer). De står dermed inde for identitet af og oplysninger (<em>attributter</em>) om den part, der skal modtage et identifikationsmiddel. Samme organisation kan varetage registrering af identitet (UK) eller bygge på autoritativt <em>identitetsregister</em>, fx CPR, CVR eller virksomheders identitetsregistre (AD)[]</p>
-<p><dfn>Ressource</dfn>Se <em>Tjeneste</em>[]</p>
-<p><dfn>Retningslinjer</dfn>Guide i form af anvisninger, eksempler og principper i en <em>informationssikkerhedspolitik</em>[]</p>
-<p><dfn>Rettighed</dfn>Se <em>Adgangsrettighed</em>[]</p>
-<p><dfn>Rettighedsstyring</dfn>Se <em>Autorisation.</em>[]</p>
-<p><dfn>Rolle</dfn>En <em>identitet</em> (bruger) kan optræde i forskellige situationer eller sammenhænge, der gør at samme identitet skal have forskellige rettigheder. Roller er typisk knyttet til forskellige arbejdsfunktioner. Se <em>brugerrolle</em>.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Samtykke</dfn>At en person indvilliger i, at oplysninger, der vedrører pågældende selv, må læses og bruges af en anden part. Karakteristisk for et samtykke er således, at det afgives af en person vedrørende et specifikt forhold, og at personen skal kunne overskue konsekvenserne af sit samtykke. I persondatareguleringen dækker begrebet samtykke, at <em>”den registrerede indvilger i, at oplysninger, der vedrører den pågældende selv, gøres til genstand for behandling”</em>. Forvaltningsloven har bestemmelser om, at videregivelse af oplysninger (og dermed til at en anden myndighed kan se oplysningerne) kræver borgerens samtykke. I Sundhedsloven dækker begrebet både samtykke til behandling og samtykke til videregivelse af oplysninger til at andre sundhedspersoner og til at indhente oplysninger ved opslag i sundhedsregistre.[Redigeret efter Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Security token</dfn>Se <em>Adgangsbillet.</em>[]</p>
-<p><dfn>Security Token Service (STS)</dfn>En betroet tjeneste, som udsteder <em>security tokens</em> (adgangsbilletter).[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Sekundære attributter</dfn>De attributter ud over de <em>primære attributter</em>, som tjenesteudbydere har brug for om <em>identiteter</em> i forbindelse med tjenesten (indkomst, helbred mv) Eksempler på sekundære attributter: • Spærreliste ifm. spil – erhverv (Spiludbydere skal tjekke at spillere ikke er tilmeldt til spærrelisten. En tjeneste, der giver besked om over/under 18 bør set fra spiludbydernes side også indeholde status i forhold til spærrelisten.) • Indkomst - offentlig (Personlig indkomst, fx fra eIndkomst) • Sundhedsdata – offentlig (Fx fra praktiserende læge) • Rettighedsdata – erhverv og offentlig (Data om rolle, gruppe mv, der har relevans for tildeling af rettigheder. Fx <em>attributter</em> fra NemLog-in Brugeradministration. Fx <em>fuldmagt</em> (som delvist kan komme fra NemLogin <em>Fuldmagt</em>.)[]</p>
-<p><dfn>Service</dfn>Se <em>Tjeneste.</em>[]</p>
-<p><dfn>Serviceaftager</dfn>Den organisation eller person eller det system, der anvender en service. Se også afsnit 1.4.2 Requesters and Providers.[W3C, Web Services Architecture, Working Group Note]</p>
-<p><dfn>Serviceudbyder</dfn>Den organisation eller person eller det system, der udbyder en service. Se også afsnit 1.4.2 Requesters and Providers[W3C, Web Services Architecture, Working Group Note]</p>
-<p><dfn>Session</dfn>En tidsmæssig og systemorienteret ramme, indenfor hvilken en bruger er autentificeret, og kan tilgå et system eller sæt af systemer. En session oprettes typisk i forbindelse med autentifikationshandlingen, f.eks. ved login til et fagsystem eller en portalløsning, under betingelse af at brugerens identitet kan autentificeres af det tilhørende autentifikationsmodul.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Signatur</dfn>Signatur anvendes som udgangspunkt om en <em>avanceret elektronisk signatur</em> som defineret i eIDAS-forordningen. Dog anvendes begrebet ”digital signatur” som betegnelse for første generation af OCES-infrastrukturen.[eIDAS]</p>
-<p><dfn>Signaturadministrator</dfn>Virksomheders administrator af NemID til medarbejdere.[OCES certifikatpolitik]</p>
-<p><dfn>Sikkerhedsdomæne</dfn>Omgivelser defineret af sikkerhedsmodeller og en sikkerhedsarkitektur, der rummer en række it-ressourcer og systemer, der er autoriseret til at få adgang til <em>ressourcerne</em>.[Network Working Group, Request for Comments 2828]</p>
-<p><dfn>Sikkerhedsforanstaltning</dfn>De tiltag (kontroller) som indføres for at undgå, at der indtræffer <em>sikkerhedshændelser.</em> Kan fx være administrative procedurer eller tekniske opsætninger.[Informationssikkerhedspolitik : Digitaliseringsstyrelsen]</p>
-<p><dfn>Sikkerhedshændelse</dfn>Alle hændelser, der påvirker informationssikkerheden. Fjendtlige angreb, identitetstyveri, indbrud, forvanskning af information, informationstyveri, hacking.[Informationssikkerhedspolitik : Digitaliseringsstyrelsen]</p>
-<p><dfn>Sikringsniveau</dfn>Graden af tillid til en påstået identitet (på engelsk ”Level of Identity Assurance”) og ofte også benævnt autenticitetsniveau. Defineres i dette dokument som tre niveauer, der stiller krav til de forskellige delprocesser i forbindelse med udstedelse og anvendelse af elektroniske identifikationsmidler.[National Standard for Identiteters Sikringsniveauer (NSIS)]</p>
-<p><dfn>Sole Control</dfn>Et begreb fra <em>MOCES</em>-certifikatpolitikken, hvor der i afsnit 7.2.8 bl.a. står følgende <em>“Certifikatholders private nøgle må ikke kunne anvendes, uden at certifikatholderen i hvert tilfælde har autoriseret anvendelsen, således at certifikatholderen opretholder enekontrol over sin private nøgle.”</em> I den engelske tekst anvendes “sole control” som oversættelse af “enekontrol”.[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>STORK2</dfn>Forkortelse af Secure idenTity acrOss boRders linKed 2.0. Et EU-projekt, der har til formål at skabe et fælles elektronisk identifikations- og autentifikationsområde.[]</p>
-<p><dfn>STS</dfn>Se <em>Security Token Service</em>.[]</p>
-<p><dfn>Tjeneste</dfn>Data eller system der stilles til rådighed for relevante brugere, der i henhold til en politik kan opnå adgang. En tjeneste vil typisk være en web applikation eller en service.[W3C, Web Services Architecture, Working Group Note, afsnit 2.3.2.10 Service]</p>
-<p><dfn>Tjenesteudbyder (TU)</dfn>En part der stiller en (forretnings)tjeneste til rådighed for brugere, og er dataansvarlig for personoplysninger udstillet i tjenesten.[]</p>
-<p><dfn>Token</dfn>Se <em>Adgangsbillet.</em>[]</p>
-<p><dfn>Tokenudsteder</dfn>En tokenudsteder er en betroet tjeneste, som udsteder <em>security tokens</em> indeholdende attributter, der beskriver en identitet. Tokenudstedere er betroede tjenester, der ved noget om brugerne, således at it-services ikke behøver det. Tokenudstedere vil typisk være autentifikationstjenester eller identitetsbrokere og benævnes i tekniske standarder ofte for <em>IdP</em> eller <em>STS</em>.[IT- &amp; Telestyrelsen, Begrebsmodel til brugerstyring]</p>
-<p><dfn>Trust framework</dfn>For at alle parter i en <em>føderation</em> har tillid til hinanden er det en fordel at eksplicitere, harmonisere og standardisere forskellige aspekter af sikkerhed, herunder politikker, sikkerhedsmæssige tiltag og fælles sprog. Det sker ved udarbejdelse af et såkaldt trust framework. Et trust framework rummer et sæt af retningslinjer og procedurer m.v., som parterne, der anvender trust frameworket kan acceptere at overholde, så der etableres gensidig tillid - eller kan alternativt være fastsat ved lov. Trust frameworket fastsætter egenskaber som kvaliteten af identitetssikringsprocessen, identifikationsmiddeludstedelsesprocessen samt krav til selve autentifikationsprocessen. For at trust frameworket har værdi er det essentielt med bedømmelse og kontrol af de enkelte parters overholdelse af fremsatte retningslinjer og specifikationer. Dette kræver en organisation og governance omkring trust frameworket. Velkendte eksempler på trust frameworks er NSIS og eIDAS.[Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger]</p>
-<p><dfn>Validering</dfn>Den proces, der kontrollerer og bekræfter korrektheden og gyldigheden af en elektronisk identitet, en signatur, et elektronisk segl, mv.[EU 910/2014 Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<p><dfn>Verifikation</dfn>Den proces, med hvilken en <em>identitetsgarant eller en registreringsmyndighed</em> med tilstrækkelig information sikrer, at en person er entydigt og korrekt identificeret.[]</p>
-<p><dfn>VOCES</dfn>OCES <em>certifikat</em> udstedt til en virksomhed. Se også <em>FOCES.</em>[Fællesoffentlig eID i regionerne - Definition af begreber og termer]</p>
-<h2 id="referenceliste">Referenceliste</h2>
-<p>California - Identity and Access Management (IdAM) Reference Architecture (RA), 2014 http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf</p>
-<p>Datatilsynet, Flere faktorer i login http://www.datatilsynet.dk/fileadmin/user_upload/dokumenter/Publikationer/ST1.pdf</p>
-<p>eIDAS, EU-forordningen om elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner http://ec.europa.eu/dgs/connect/en/content/electronic-identification-and-trust-services-eidas-regulatory-environmentand-beyond</p>
-<p>EU 910/2014. Europa-Parlamentets og Rådets forordning (EU) nr. 910/2014 af 23. juli 2014 om elektronisk identifikation og tillidstjenester http://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32014R0910</p>
-<p>Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger http://www.google.dk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;frm=1&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CCEQFjAA&amp;url=http%3A%2F%2Fwww.kl.dk%2FImageVaultFiles%2Fid_67589%2Fcf_202%2FBilag_5_-_Udkast_til_rapporten_F-llesoffentlige_br.PDF&amp;ei=LsevVM3yN4iGzAPtILwDA&amp;usg=AFQjCNFV8hOc84wyml5TG5GfHYAv0BvbAw&amp;bvm=bv.83339334,d.bGQ</p>
-<p>Fællesoffentlig eID i regionerne - Definition af begreber og termer http://lionel.lakeside.dk/twiki/bin/view/Main/EIDBegrebsListe</p>
-<p>Informationsordbogen www.informationsordbogen.dk</p>
-<p>ISO/IEC 24760, A framework for identity management http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=57914</p>
-<p>IT- &amp; Telestyrelsen, Begrebsmodel til brugerstyring, Version 1.1, 2010 http://www.digst.dk/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx</p>
-<p>Kantara, Identity Relationship Management https://kantarainitiative.org/irmpillars/</p>
-<p>Lakeside, Region Midtjylland, Digital identitet – vigtige begreber og processer, 2014 <em>Grundlaget for eID i regionerne – Bilag 7: Digital identitet – vigtige begreber og processer</em></p>
-<p>National Standard for Identiteters Sikringsniveauer (NSIS) Forventes publiceret primo 2017</p>
-<p>Network Working Group, Request for Comments 2828 http://www.ietf.org/rfc/rfc2828.txt</p>
-<p>NIST, Electronic Authentication Guideline http://csrc.nist.gov/publications/nistpubs/800-63-1/SP-800-63-1.pdf</p>
-<p>OCES-certifikatpolitikker https://www.nemid.nu/dk-da/digital_signatur/oces-standarden/oces-certifikatpolitikker/</p>
-<p>W3C, Web Services Architecture, Working Group Note, 11 February 2004 http://www.w3.org/TR/ws-arch/</p>
-<h2 id="kilder-og-baggrundsmateriale">Kilder og baggrundsmateriale</h2>
+<h1 id="kilder-og-baggrundsmateriale">Kilder og baggrundsmateriale</h1>
 <p>Nedenstående liste viser det baggrundsmateriale, der indgår i udarbejdelsen af den tværoffentlige referencearkitektur for identitets- og rettighedsstyring.</p>
 <table>
 <colgroup>
@@ -1275,82 +1122,7 @@ Kommunikation mellem føderationer
           "title": "Elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked",
           "href": "https://eur-lex.europa.eu/legal-content/da/TXT/?uri=CELEX:32014R0910"}
 
-
-
-
 }
 </pre>
-<h2 id="baggrund-for-valg-af-relationen-entitet-elektronisk-identitet">Baggrund for valg af relationen entitet-elektronisk identitet</h2>
-<p><strong>Om relationen entitet – elektronisk identitet</strong> De grundlæggende begreber i brugerstyring bygger på eIDAS-forordningen inkl. gennemførselsforordning (EU) 2015/1502 og National Standard for Identiteters Sikringsniveau (NSIS), som er en dansk konkretisering af forordningen.</p>
-<p>I disse defineres følgende begreber:</p>
-<ul>
-<li>»Entitet«: Et subjekt/en bruger, som skal have adgang til en tjeneste.</li>
-<li>»[Elektronisk] Identitet«: En digital persona, repræsenteret ved et sæt af attributter, forkortes eID.</li>
-<li>»Elektronisk identifikationsmiddel«: Et elektronisk eller en fysisk objekt/genstand, der kan anvendes til at gennemføre en autentificering af en identitet.</li>
-</ul>
-<p>Det betyder, at de fleste personer i dag har en række elektroniske identiteter:</p>
-<ul>
-<li>NemID-borger med attributter som PID og navn</li>
-<li>Identitet hos arbejdsgiver, typisk med identifikationsmidlerne brugernavn og kodeord og attributter som navn, organisatorisk enhed</li>
-<li>Identitet hos Uni*Login</li>
-<li>Identitet hos Facebook</li>
-<li>Identitet hos Google</li>
-<li>Identitet hos en række andre tjenester.</li>
-</ul>
-<figure>
-<img src="billede24.PNG" width="90%" />
-<figcaption>
-De tre grundlæggende begreber i identitet
-</figcaption>
-</figure>
-<p>Der er mange tiltag for at reducere antallet af identiteter, fx ved at flere tjenester tilbyder, at man kan bruge sin Facebook-identitet eller Google-identitet.</p>
-<p>Et andet tiltag er NemID, som er etableret med henblik på anvendelse i stort set alle offentlige tjenester og hos bankerne. NemID kan også bruges hos mange private tjenester, fx pensionskasser, forsikringsselskaber, fagforeninger mv.</p>
-<p><strong>Om relationen entitet – elektronisk identitet i fællesoffentlig brugerstyring</strong></p>
-<p>I fællesoffentlig brugerstyring har der indtil nu været arbejdet med, at en entitet kan have flere elektroniske identiteter:</p>
-<ul>
-<li>En privat NemID</li>
-<li>En eller flere NemID Erhverv tilknyttet forskellige virksomheder.</li>
-</ul>
-<p>Særligt for små erhvervsdrivende har det været utilfredsstillende at skulle håndtere to eller flere identifikationsmidler som følge af den nuværende models stærke binding mellem identiteter og identifikationsmidler, som er implementeret i NemID. Derfor har der i næste generation NemID været arbejdet med at finde løsninger på dette. Der har været to grundlæggende modeller til overvejelse for fællesoffentlige løsninger og dermed for NDIS:</p>
-<ul>
-<li>En løsning med kun en identitet pr. entitet</li>
-<li>En løsning med flere identiteter pr. entitet.</li>
-</ul>
-<p><strong>En løsning med kun en identitet pr. entitet</strong></p>
-<p>I denne løsning er der kun en identitet pr. entitet. Identiteten karakteriseres ved attributter. Nogle er tæt knyttet til den fysiske person som fx navn, adresse og CPR. Andre attributter udtrykker de rettigheder, som identiteten tildeles til at tilgå funktioner eller informationer. Skal entiteten tilgå løsninger som borger og som ejer af virksomhed eller medarbejder, udtrykkes det ved forskellige sæt af attributter.</p>
-<figure>
-<img src="billede25.PNG"  width="90%"/>
-<figcaption>
-En identitet pr. entitet
-</figcaption>
-</figure>
-<p>Fordelene ved denne model:</p>
-<p>• Den enkelte person skal kun have en elektronisk identitet og dermed et NemID. • Forskellige attributsæt for personrettigheder karakteriserer de rettigheder, som en person har, når de optræder i forskellige kontekster; det man også kan kalde roller.</p>
-<p>Ulemperne ved denne model:</p>
-<p>• For en række personer vil det være en ulempe kun at have en elektronisk identitet, fx hvis personen arbejder for mange virksomheder, så det kan være vanskeligt at skelne mellem rollerne, hvis det er den samme funktion og dermed det samme attributsæt, personen har. • Alle tjenester skal fra implementeringstidspunktet kunne understøtte, at valg af identitet kun sker gennem at registrere en og kun en NemID og ikke kan ske på anden måde. • Der kan ikke vælges at danne identiteter med tilhørende identifikationsmidler, der kan afspejle virksomheders forskellige ønsker til fx sikringsniveau eller funktionalitet, fx som i sundhedssektoren, hvor der ønskes identifikationsmidler, der kan anvendes i klinisk kontekst.</p>
-<p><strong>En løsning med flere identiteter pr. entitet</strong></p>
-<p>I denne løsning kan hver entitet have flere elektroniske identiteter til fællesoffentlig brugerstyring. Skal entiteten tilgå løsninger som borger og som ejer af virksomhed eller medarbejder, sker det med forskellige identiteter. Nu er det identitetsattributter, der adskiller, om det er en identitet for en borger eller en medarbejder.</p>
-<p>Løsningen svarer til den model, der anvendes i det nuværende NemID (i 2016).</p>
-<figure>
-<img src="billede26.PNG" width="90%" />
-<figcaption>
-Flere identiteter pr. entitet
-</figcaption>
-</figure>
-<p>For at løsningen med flere identiteter pr. entitet tilgodeser brugerbehov, kan modellen implementeres, så en entitet kan anvende sit identifikationsmiddel (fx NemIDnøglekortet) til flere identiteter.</p>
-<p>Det sker på to måder:</p>
-<p>For borgere, der er ejere af enkeltmandsvirksomheder eller er tegningsberettigede, kan det offentlige tilbyde brug af borgeridentifikationsmidler i forbindelse med erhvervsidentiteten.</p>
-<p>Konceptuelt sker det ved, at en elektronisk identitet (erhvervsidentiteten) dannes på grundlag af en anden elektronisk identitet (borgeridentiteten). Fx en ny virksomhedsejer med automatisk CVR-opmærkning. Identiteten kan bevares over tid eller være dynamisk.</p>
-<p>Denne løsning implementeres fra februar 2017 i fællesoffentlig brugerstyring.</p>
-<p>Der dannes en separat erhvervsidentitet med egne attributter. Denne erhvervsidentitet bevares over tid, uafhængigt af identifikationsmidler. Det betyder, at der kan skiftets identifikationsmiddel, uden at der skal administreres en ny identitet med tilhørende rettigheder.</p>
-<p>For virksomheder betyder modellen, at de kan vælge mellem borgerens identifikationsmidler eller at foranledige brug af en erhvervsidentitet med identifikationsmidler med andre styrker. Virksomheder kan skifte mellem alternativerne løbende og stadig bevare samme erhvervsidentitet. Løsningen muliggør, at både borger og virksomhed kan vælge, om borgeridentiteten kan anvendes til erhvervsformål. Løsningen kan implementeres med begge valgmuligheder eller således, at kun den ene part (fx virksomheden) kan vælge.</p>
-<p>[Bilag om typer af robotanvendelser. Hvad starter robotten… tids, ændring, henvendelse, brugerklik]</p>
-<h2 id="om-robotter.">Om robotter….</h2>
-<figure>
-<img src="snitflader.svg" width="100%"/>
-<figcaption>
-Brugere af digitale tjenester har altid sit eget it-system….
-</figcaption>
-</figure>
 </body>
 </html>
