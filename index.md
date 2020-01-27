@@ -108,10 +108,10 @@ Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af de
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 De primære kapabiliteter i brugerstyring er
-•	Administrationen af brugere, med registrering, sikring af identiteter og tilknytning af rettigheder.
-•	Sikring af adgang, med autentifikation og håndtering af attributter om brugeren.
+
+-	Administrationen af brugere, med registrering, sikring af identiteter og tilknytning af rettigheder.
+-	Sikring af adgang, med autentifikation og håndtering af attributter om brugeren.
 
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
@@ -265,7 +265,7 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 
 ## Principper
 
-Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fælles-offentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de over-ordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur (FDA) [2]. For hvert princip er angivet de væsentligste relationer til disse.
+Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur (FDA) [2]. For hvert princip er angivet de væsentligste relationer til disse.
 
 *Principper for brugerstyring*
 
@@ -441,6 +441,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (rød
 <figcaption>Oversigt over brugerstyringsdomænet</figcaption>
 </figure>
 <br>
+
 
 Det øverste lag i figuren omhandler styringen i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx databeskyttelsesforordningen) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
