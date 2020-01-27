@@ -169,8 +169,15 @@ Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindel
 -	Delegering af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
 -	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
 
+### Begrebsoverblik
+I forbindelse med implementeringen af arkitekturen, benyttes billetter til at samle de attributter der indgår i adgangsstyringen for en given tjeneste.
 
+<figure>
+<img src="Billede6.png" width="100%"/>
+<figcaption>Begrebsoverblik</figcaption>
+</figure>
 
+Ud over de her viste begreber er alle begreber forklaret i bilag [1 Begreber.]
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
