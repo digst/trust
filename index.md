@@ -108,59 +108,56 @@ Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af de
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
 
-De primære kapabiliteter i brugerstyring er
 
--	Administrationen af brugere, med registrering, sikring af identiteter og tilknytning af rettigheder.
--	Sikring af adgang, med autentifikation og håndtering af attributter om brugeren.
 
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
 <figcaption>Kapabiliteter omkring brugerstyring</figcaption>
 </figure>
 
-Forretningstjeneste en primært eksternt synlig funktionalitet, men kan også være til internt brug. Hos offentlige myndigheder vil det typisk være en digital selvbetjening, som anvendes af borgere eller virksomheders ansatte, men termen dækker også over digitale tjenester der anvendes af it-systemer hos andre organisationer.
+De primære kapabiliteter i brugerstyring er
 
-En tjenesteudbyder sikrer adgangen til forretningstjenesten, så brugerne får den korrekte adgang til at anvende tjenesten i henhold til tjenestens adgangspolitik. Adgangspolitikken kan være underlagt krav i lovgivning, fx hvis tjenesten giver adgang til personoplysninger.
+-	*Brugeradministration* aspekt af brugerstyring hvor digitale identiter, deres tilknytning til entiter og tilknytning af rettigheder administreres.
+-	*Adgangskontrol* proces, der afgør hvilke funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.
+- *Forretningstjenste*, tjeneste der understøtter forretningskabapbiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation.
 
-Ved siden af forretningstjenester findes tillidstjenester, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af føderationer.
+Ved siden af forretningstjenester findes *tillidstjenester*, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
 
-<dfn>Tillidstjeneste</dfn> en betroet tjeneste som udbydes særskilt, og anvendes af bruger og forretningstjenesteudbyder i fællesskab, styret af aftaler om tillidspolitikker.
+*Tillidstjeneste* tjeneste der udfører betroede funktioner der understøtter brugerstyring i forretningstjenester.
 
-<dfn>Føderationer</dfn> sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
+*Føderationer* sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
 
 ### Brugere og identiteter
 I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
-<figcaption>Sammenhængende tjenester</figcaption>
+<figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-Entitet, person eller enhed som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet bruger om entiteter i rollen som brugere af en tjeneste.
+*Entitet*,  , person, organisation, apaprat eller applikation, som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet *bruger* om entiteter i rollen som brugere af en tjeneste.
 
-Bruger Person, organisation, apparat eller applikation som ønsker adgang til en tjeneste. En bruger kan have flere identiteter – for eksempel kan en fysisk person både have en privatidentitet og flere erhvervsidentiteter. Enhver bruger der skal have adgang til tjenester skal optræde som bruger med sin egen (unikke) identitet.
+*Identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
 
-Identitet Bruger repræsenteret ved et sæt af attributter der identificerer identiteten entydigt. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes -identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
-
-Identifikationsmiddel som en bruger får udstedt eller registreret til brug for autentifikation af en identitet. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+*Identifikationsmiddel* middel som en en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
 Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan brugere være enten et subjekt, med rettigheder og pligter, eller et objekt, der kun kan arve rettigheder fra et subjekt.
+I forbindelse med brugerstyring kan brugere være enten med rettigheder og pligter, eller brugere der kun kan arve rettigheder fra en anden bruger.
 
 <figure>
-<img src="Brugertyper.png" width="65%"/>
+<img src="Brugertyper.png" width="80%"/>
 <figcaption>Brugertyper</figcaption>
 </figure>
 
-Person Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+*Person* Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-Organisation med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+*Organisation* med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
 
-Apparat Fysiske enhed med indbygget program der kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+*Apparat* fysisk redskab med indlejret software, der kan udføre specifikke funktioner og kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.
 
-Applikation Et selvstændigt program der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.
+*Applikation* software med specifik forretningsfunktion, der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.
 
 ### Relationer imellem brugere
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af rettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.
@@ -171,6 +168,8 @@ Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindel
 -	Bruger af et apparat. For eksempel brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver rettigheder fra personen der bruger det.
 -	Delegering af rettigheder fra en person eller organisation til en applikation. For eksempel en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
 -	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
+
+
 
 
 ## Tilblivelse, styring og andre referencearkitekturer
