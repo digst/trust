@@ -63,7 +63,7 @@ Denne version 1.1 af Referencearkitektur for brugerstyring er udvidet med de sæ
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
-Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige virksomheder, og anvendes af borgere eller andre virksomheder og deres ansatte.
+Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige organisationer, og anvendes af borgere eller andre organisationer og deres ansatte.
 
 
 
@@ -74,27 +74,27 @@ Referencearkitekturen beskriver administrationen og kontrollen med brugeres adga
 
 De primære kapabiliteter i brugerstyring er
 
--	*Brugeradministration* aspekt af brugerstyring hvor digitale identiteter, deres tilknytning til entiteter og tilknytning af rettigheder administreres.
--	*Adgangskontrol* proces, der afgør hvilke funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.
+-	*Brugeradministration* aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
+-	*Adgangskontrol* proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.
 - *Forretningstjeneste*, tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation.
 
-Ved siden af forretningstjenester findes *tillidstjenester*, som kan implementere større eller mindre dele af brugerstyringsfunktionaliteten. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
+Ved siden af forretningstjenester findes *tillidstjenester*, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
 
 *Tillidstjeneste* tjeneste der udfører betroede funktioner der understøtter brugerstyring i forretningstjenester.
 
-*Føderationer* sammenslutning af tjenester med gensidig tillid samt fælles standarder og kontrol.
+*Føderationer* sammenslutning af tillids- og forretningstjenester med gensidig tillid.
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres brugere som dels den entitet de virkelig er og dels den tildelte identitet, de har fået som adgang til digitale tjenester.
+I en digital sammenhæng defineres brugere som den rolle en entitet har i forhold til den  tjeneste elller det system entiten tilgår. Rollen som bruger binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-*Entitet*,  , person, organisation, apaprat eller applikation, som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet *bruger* om entiteter i rollen som brugere af en tjeneste.
+*Entitet*, noget der har en selvstændig eksistens. Entiteter er i denne kontekst noget ( person, juridisk enhed, apaprat) eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
-*Identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes - identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
+*Digital identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
 *Identifikationsmiddel* middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
@@ -108,33 +108,34 @@ I forbindelse med brugerstyring kan brugere være enten med rettigheder og pligt
 <figcaption>Brugertyper</figcaption>
 </figure>
 
-*Person* Fysisk person der kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som fx Facebook.
+*Person* fysisk person, der kan være levende eller død, men ikke imaginær. Fysiske personer kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-*Organisation* med adgange og rettigheder der kan delegeres til medarbejder eller applikation.
+*Organisation* en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder eller applikation.
 
-*Apparat* fysisk redskab med indlejret software, der kan udføre specifikke funktioner og kan optræde som bruger eller tjeneste. Her er programmet underlagt apparatet og kan, i modsætning til en applikation, ikke optræde selvstændigt.
+*Apparat* fysisk redskab med indlejret software, der kan udføre specifikke funktioner. Apparater der kan opræde som brugere vil have et indlejret program som er uløseligt forbundet med apparatetet. Der er typisk tale om apparater der har en enkelt funktion og ikke kan få installeret yderligere programmer, hvorfor apparatet optræder som bruger.
 
-*Applikation* software med specifik forretningsfunktion, der kan afvikles på en platform. Til forskel fra programmet i et apparat, er en applikation ikke bundet til den platform det kører på. En applikation kan optræde både som bruger og tjeneste og skal have sin egen identitet med tilhørende identifikationsmidler. En autonom softwarerobot vil være en applikation og skal derfor have egen identitet og aldrig låne en personbrugers identitet. Bemærk, at automatiseringer en bruger selv afvikler, efter at være logget ind på de nødvendige systemer, en brugerafviklet software robot, i brugerstyringssammenhæng ikke betragtes som en applikation.
+*Applikation* software med specifik forretningsfunktion. Applikationer er uafhængige af den platform, de er installeret på. Applikationer der kan optræde som brugere vil være installeret på noget hardware, men kunne flyttes fra et stykke hardware til et andet unden at ændre identitet, hvorfor det er applikationen der optræder som bruger
 
-### Relationer imellem brugere
-Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af rettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.
-
--	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilhør til organisation. Tilhøret i sig selv giver implicit en række rettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
--	Eksplicit rettighed der gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
--	Bruger af et apparat. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver rettigheder fra personen der bruger det.
--	Delegering af rettigheder fra en person eller organisation til en applikation. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
--	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
 
 ### Begrebsoverblik
-I forbindelse med implementeringen af arkitekturen, benyttes billetter til at samle de attributter der indgår i adgangsstyringen for en given tjeneste.
+I forbindelse med implementeringen af arkitekturen, benyttes adgangsbilletter til at samle de attributter der indgår i adgangskontrollen for en given tjeneste.
 
 <figure>
 <img src="Billede6.png" width="100%"/>
 <figcaption>Begrebsoverblik</figcaption>
 </figure>
 
-Ud over de her viste begreber er alle begreber forklaret i bilag [1 Begreber.]
+Ud over de her viste begreber er alle begreber forklaret i Bilag [1 Begreber.]
+
+### Relationer imellem brugere
+Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.
+
+-	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
+-	Tilhør til organisation. Tilhøret i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Eksplicit adgangsrettighed der gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+-	Bruger af et apparat. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
+-	Delegering af adgangsrettigheder fra en person eller organisation til en applikation. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+-	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
