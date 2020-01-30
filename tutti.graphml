@@ -8875,10 +8875,10 @@ kontrol</y:NodeLabel>
     <node id="n625">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="95.99021726491122" width="157.23502630342688" x="2797.4413543901564" y="768.6811444625461"/>
+          <y:Geometry height="80.88886885379242" width="157.23502630342688" x="2797.4413543901564" y="764.7519191247869"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" rotationAngle="90.0" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="46.05078125" x="4.0" xml:space="preserve" y="4.0">udbyder A</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="br" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="79.234375" x="74.00065130342682" xml:space="preserve" y="62.88886885379236">tjenesteudbyder A</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -8886,11 +8886,11 @@ kontrol</y:NodeLabel>
     <node id="n626">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="25.0" width="105.11951052747156" x="2823.4991122781344" y="818.2669284649725"/>
+          <y:Geometry height="25.0" width="105.11951052747156" x="2823.4991122781344" y="792.6963535516832"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#3366FF" verticalTextPosition="bottom" visible="true" width="84.0146484375" x="10.552431044985951" xml:space="preserve" y="5.5">forretningstjeneste</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -8919,10 +8919,10 @@ kontrol</y:NodeLabel>
     <node id="n628">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="95.99021726491128" width="157.23502630342688" x="3031.085053267768" y="768.6811444625461"/>
+          <y:Geometry height="80.88886885379247" width="157.23502630342688" x="3031.085053267768" y="764.7519191247869"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" rotationAngle="90.0" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="45.7041015625" x="4.0" xml:space="preserve" y="4.0">udbyder B</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="br" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="78.8876953125" x="74.34733099092682" xml:space="preserve" y="62.888868853792474">tjenesteudbyder B</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -8930,18 +8930,18 @@ kontrol</y:NodeLabel>
     <node id="n629">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="25.0" width="105.11951052747156" x="3057.142811155746" y="818.2669284649725"/>
+          <y:Geometry height="25.0" width="105.11951052747156" x="3057.142811155746" y="792.6963535516832"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#3366FF" verticalTextPosition="bottom" visible="true" width="84.0146484375" x="10.552431044985951" xml:space="preserve" y="5.5">forretningstjeneste</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n630">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.664382105829645" width="20.664382105829645" x="2788.62867385772" y="834.5837664447948"/>
+          <y:Geometry height="20.664382105829645" width="20.664382105829645" x="2788.62867385772" y="809.0131915315055"/>
           <y:Fill color="#940027" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="8.332191052914823" y="8.332191052914823">
@@ -8959,7 +8959,7 @@ kontrol</y:NodeLabel>
     <node id="n631">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.664382105829645" width="20.664382105829645" x="3022.401980794283" y="834.5837664447948"/>
+          <y:Geometry height="20.664382105829645" width="20.664382105829645" x="3022.401980794283" y="809.0131915315055"/>
           <y:Fill color="#940027" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="8.332191052914823" y="8.332191052914823">
@@ -8993,7 +8993,7 @@ kontrol</y:NodeLabel>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="24.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="69.498046875" x="17.81073182623595" xml:space="preserve" y="6.109622137710858">Autentifikation 
 (SAML IdP)</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -9005,7 +9005,7 @@ kontrol</y:NodeLabel>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="24.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#940027" verticalTextPosition="bottom" visible="true" width="65.3623046875" x="19.87860291998595" xml:space="preserve" y="6.109622137710858">Tokenveksling 
 (WS-Trust STS)</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -9030,7 +9030,7 @@ kontrol</y:NodeLabel>
     <node id="n636">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.bpmn.Activity">
-          <y:Geometry height="33.0" width="66.0" x="2908.7244443303675" y="716.8853225466167"/>
+          <y:Geometry height="33.0" width="66.0" x="2903.4447999654635" y="710.9895263943566"/>
           <y:Fill color="#FFFFFFE6" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Helvetica Neue" fontSize="10" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.2509765625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#808080" verticalTextPosition="bottom" visible="true" width="9.5615234375" x="22.615980796939766" xml:space="preserve" y="4.0">b<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="-0.08489784067136719" nodeRatioY="-0.5" offsetX="0.0" offsetY="4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -9048,7 +9048,7 @@ kontrol</y:NodeLabel>
     <node id="n637">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.bpmn.Activity">
-          <y:Geometry height="33.0" width="66.0" x="2935.085053267768" y="735.6811444625461"/>
+          <y:Geometry height="33.0" width="66.0" x="2942.9308874849353" y="729.6963535516832"/>
           <y:Fill color="#FFFFFFE6" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Helvetica Neue" fontSize="10" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.2509765625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#808080" verticalTextPosition="bottom" visible="true" width="12.017578125" x="26.9912109375" xml:space="preserve" y="-8.12548828125">T'<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.5" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -9066,7 +9066,7 @@ kontrol</y:NodeLabel>
     <node id="n638">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.bpmn.Activity">
-          <y:Geometry height="33.0" width="66.0" x="2965.085053267768" y="805.455897459906"/>
+          <y:Geometry height="33.0" width="66.0" x="2965.085053267768" y="779.8853225466167"/>
           <y:Fill color="#FFFFFFE6" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Helvetica Neue" fontSize="10" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.2509765625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#808080" verticalTextPosition="bottom" visible="true" width="12.017578125" x="21.387953453189766" xml:space="preserve" y="4.0">T'<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="-0.08489784067136719" nodeRatioY="-0.5" offsetX="0.0" offsetY="4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
