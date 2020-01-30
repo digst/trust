@@ -25,7 +25,8 @@ Slim Build Artifact:
 <h2 class="no-num">Forord</h2>
 Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
 
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlge aspekter vedrørende applikationer som brugere og i noget omfang apparater, da der er behov for brugerstyring i forhold til såkaldt NPE - Non person entities og IoT - Internet of Things. Brugen af føderationer og tillidstjenester er uddybet.
+2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlge aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
+Brugen af føderationer og tillidstjenester er uddybet.
 
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne [nr. indsættes] viser centrale dele af begrebsmodellern og Bilag [nr. indsættes] viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
@@ -101,7 +102,7 @@ I en digital sammenhæng defineres brugere som den rolle en entitet har i forhol
 Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan brugere være personer eller organisationer med rettigheder og pligter, som kan delegere. Brugere kan også være apparater eller applikationer, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan brugere være personer eller organisationer med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være apparater eller applikationer, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
@@ -112,9 +113,9 @@ I forbindelse med brugerstyring kan brugere være personer eller organisationer 
 
 *Organisation* en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder eller applikation.
 
-*Apparat* fysisk redskab med indlejret software, der kan udføre specifikke funktioner. Apparater der kan opræde som brugere vil have et indlejret program som er uløseligt forbundet med apparatetet. Der er typisk tale om apparater der har en enkelt funktion og ikke kan få installeret yderligere programmer, hvorfor apparatet optræder som bruger.
+*Apparat* fysisk redskab med indlejret software, der kan udføre specifikke funktioner. I apparater der kan optræde som brugere er den indlejret software uløseligt forbundet med apparatet. Der er typisk tale om apparater der har en enkelt funktion og ikke kan få installeret yderligere applikationer, hvorfor apparatet optræder som bruger.
 
-*Applikation* software med specifik forretningsfunktion. Applikationer er uafhængige af den platform, de er installeret på. Applikationer der kan optræde som brugere vil være installeret på noget hardware, men kunne flyttes fra et stykke hardware til et andet unden at ændre identitet, hvorfor det er applikationen der optræder som bruger.
+*Applikation* software med specifik forretningsfunktion. Applikationer er uafhængige af den platform, de er installeret på. Applikationer der kan optræde som brugere vil være installeret på noget hardware, men kunne flyttes fra et stykke hardware til et andet uden at ændre identitet, hvorfor det er applikationen der optræder som bruger.
 
 
 ### Begrebsoverblik
@@ -240,7 +241,7 @@ Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og lev
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
 Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
 
-Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs og princip
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs.
 
 *Rationale*
 
@@ -258,7 +259,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 - Kravene til sikringsniveau i digitale forløb skal svare til det sikkerhedsniveau, der kræves af de enkelte tjenester, der indgår i forløbet.
 
 
-## Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
+### Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
 Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
@@ -480,7 +481,7 @@ I NSIS opereres der med, at identiteten kan valideres på tre forskellige sikrin
 
 Efter oprettelse af den elektroniske identitet skal et identifikationsmiddel tilknyttes til identiteten, fx kodeord, PIN, fingeraftryk. Identifikationsmidler anvendes til at autentificere identiteten i modsætning til attributter, som beskriver identiteten. En udsteder af identifikationsmidler skal dels sikre sammenhængen mellem identifikationsmidlet og identiteten, og dels stå inde for identifikationsmidlets tekniske styrke - se næste afsnit. Udstederen kan knytte allerede udstedte identifikationsmidler til identiteten eller udstede et nyt identifikationsmiddel og tilknytte dette til identiteten. Styrken af identifikationsmidler er ligeledes klassificeret i NSIS og tager afsæt i bl.a. antallet af autentifikationsfaktorer, hvor resistent det er mod angreb, samt andre sikkerhedsmæssige egenskaber.
 
-Det er centralt i denne referencearkitektur, at der opereres med en løs kobling mellem identiteter og identifikationsmidler. Eksempelvis kan et identifikationsmiddel benyttes til at autentificere flere forskellige identiteter hørende til samme entitet. Et eksempel på dette i fællesoffentlig kontekst er, når samme private NemID/MitID kan bruges til autentificere både en privatperson og en ejer (fuldt ansvarlig deltager) af en enkeltmandsvirksomhed. Brugeren skal altid i brugssituationen være oplyst om, hvilken elektronisk identitet vedkommende optræder med.
+Det er centralt i denne referencearkitektur, at der opereres med en løs kobling mellem identiteter og identifikationsmidler. Eksempelvis kan et identifikationsmiddel benyttes til at autentificere flere forskellige identiteter hørende til samme entitet. Et eksempel på dette i fællesoffentlig kontekst er, når samme private NemID/MitID kan bruges til at autentificere både en privatperson og en ejer (fuldt ansvarlig deltager) af en enkeltmandsvirksomhed. Brugeren skal altid i brugssituationen være oplyst om, hvilken elektronisk identitet vedkommende optræder med.
 
 CPR-nummeret er en attribut, som desværre også historisk er brugt som identifikationsmiddel - dvs. som bevis for identitet. Denne anvendelse af CPR-nummeret er imod regler fra CPR-kontoret, men anvendes stadig i et vist omfang.
 
