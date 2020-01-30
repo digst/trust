@@ -92,7 +92,7 @@ I en digital sammenhæng defineres brugere som dels den entitet de virkelig er o
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-*Entitet*,  , person, organisation, apaprat eller applikation, som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet *bruger* om entiteter i rollen som brugere af en tjeneste.
+*Entitet*,  person, organisation, appaprat eller applikation, som ønsker adgang til en tjeneste. I denne referencearkitektur er kun entiteter der optræder som brugere relevante. I det efterfølgende bruges derfor begrebet *bruger* om entiteter i rollen som brugere af en tjeneste.
 
 *Identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En identitet kan være stærkere eller svagere bundet til entiteten afhængigt af den proces, hvor identiteten udstedes - identitetssikring. En pseudonym identitet har fx ingen synlig binding til den entitet, som identiteten er udstedt til.
 
@@ -130,7 +130,7 @@ Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindel
 I forbindelse med implementeringen af arkitekturen, benyttes billetter til at samle de attributter der indgår i adgangsstyringen for en given tjeneste.
 
 <figure>
-<img src="Billede6.png" width="100%"/>
+<img src="Begrebsoverblik.png" width="100%"/>
 <figcaption>Begrebsoverblik</figcaption>
 </figure>
 
