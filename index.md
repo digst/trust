@@ -842,7 +842,7 @@ I et sammenhængende, skalérbart og sikkert økosystem af tillidstjenester og f
 Nedenstående figur 18 illustrerer den kæde af tillid, der kan optræde mellem tillidstjenester og forretningstjenester i et komplekst scenarie. Denne kæde skal være identificeret og beskrevet i en føderation, hvor der kan være en række tillidstjenester involveret i føderationen. Man skal her være eksplicit om, hvilket sikringsniveau de enkelte tjenester opererer på, for det vil være det laveste sikringsniveau i hele kæden, der er bestemmende for det samlede sikringsniveau. For enkelhed i illustrationen er der her tegnet en føderation med kun én af hver tillidstjeneste repræsenteret.
 
 <figure>
-<img src="billede4.PNG" width="100%" />
+<img src="Kæde af tillid.PNG" width="100%" />
 <figcaption>Kæde af tillid i et tjenestekald</figcaption>
 </figure>
 <br>
@@ -1162,4 +1162,103 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 
 
 
-    
+
+
+
+<pre class=biblio>
+{
+  "CDT": {
+    "author": "California, Department of Technology",
+    "title": "Identity and Access Management (IdAM) Reference Architecture (RA) 02-01-2014",
+    "href": " http://ocio.ca.gov/ea/docs/Identity-and-Access-Management-IdAM-V1.pdf"},
+  "CIDR": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "CIDR – borger.dk",
+    "href": "http://digitaliser.dk/group/2289910"},
+  "OIOSAML": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Digitaliseringsstyrelsens anbefalinger for brug af standarder for identitetsog rettighedsstyring som f.eks. OIO Web SSO Profile 2.0.6 (også kendt som OIOSAML 2.0)",
+    "href": "http://www.digst.dk/Arkitektur-og-standarder/Standardisering/Standarderfor-serviceorienteret-infrastruktur/Standarder-og-anbefalinger-forbrugerstyring"},
+  "Fælles sikkerhedsmodel": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Forslag til fælles sikkerhedsmodel for Grunddataprogrammet - 2014-06-19"},
+  "Fuldmagt": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Fuldmagtsrapport 2012. Fuldmagt, partsrepræsentation og samtykke. Behov og løsningsmuligheder, Rambøll for Digitaliseringsstyrelsen 2012"},
+  "National standard": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "National Standard for Identiteters Sikringsniveauer (NSIS) Forventes publiceret primo 2017"},
+  "Grunddata": {
+    "author": "Digitaliseringsstyrelsen",
+    "title": "Persongrunddata-rapporten"},
+  "eIDAS": {
+    "author": "eIDAS",
+    "title": "European Commission, Electronic identification and trust services",
+    "href": "http://ec.europa.eu/dgs/connect/en/content/electronic-identification-andtrust-services-eidas-regulatory-environment-and-beyond"},
+  "Brugerstyringsløsninger": {
+    "author": "Initiativ 3.4 i den Nationale Strategi for Digitalisering af Sundhedsvæsenet 2013 – 2017",
+    "title": "Fællesoffentlige brugerstyringsløsninger – En analyse af sikkerhedsstandarder og –løsninger "},
+  "Begrebsmodel": {
+    "author": "IT- & Telestyrelsen",
+    "title": "Den fællesoffentlige begrebsmodel til brugerstyring, der er udgivet af IT og Telestyrelsen.",
+    "href": "http://www.digst.dk/Loesninger-oginfrastruktur/NemLogin/~/media/Files/NemLogin/Begrebsmodel_til_brugerstyring_-_Version_1_11.ashx"},
+  "Nye Sikkerhedsmodeller": {
+    "author": "IT- & Telestyrelsen",
+    "title": "Nye digitale sikkerhedsmodeller- et oplæg til diskussion. Januar 2011 "},
+  "Kantara": {
+    "author": "Kantara ",
+    "title": "Kantara Initiative accelerates identity services markets by developing innovations and programs to support trusted on-line transactions. The membership of Kantara Initiative includes international communities, industry, research & education, and government stakeholders.",
+    "href": "http://kantarainitiative.org"},
+  "Adgangsstyring": {
+    "author": "KOMBIT",
+    "title": "Adgangsstyring i Rammearkitekturen - 22-03-2013 (kravspecifikation)"},
+  "Introduktion til adgangsstyring": {
+    "author": "KOMBIT",
+    "title": "Introduktion til Adgangsstyring",
+    "href": "https://sharekomm.kombit.dk/P024/Delte%20dokumenter/Introduktion%20til%20Adgangsstyring.pdf"},
+  "Miljøportalen": {
+    "author": "Miljøportalen",
+    "title": "Analyse af anvendelse af NemLog-in som brugerstyringsløsning???"},
+  "NSI": {
+    "author": "National Sundheds-it",
+    "title": "Referencearkitektur for Informationssikkerhed, september 2013",
+    "href": "http://www.ssi.dk/Sundhedsdataogit/National%20Sundhedsit/~/media/Indhold/DK%20-%20dansk/Sundhedsdata%20og%20it/NationalSundhedsIt/Standardisering/Referencearkitektur%20for%20informationssikkerhed%20v%20%201%200%20nyt%20layout.ashx"},
+  "NIST": {
+    "author": "NIST",
+    "title": "Electronic Authentication Guideline",
+    "href": "http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf"},
+  "Arkitekturtegninger": {
+    "author": "Thomas Gundel",
+    "title": "Fællesoffentlig brugerstyring - arkitekturtegninger 30-10-2013"},
+  "Trust framework": {
+    "author": "Thomas Gundel",
+    "title": "Fællesoffentligt Trust Framework - Indledende overvejelser"},
+  "Uni-login": {
+    "author": "Uni-login",
+    "title": "UNI-Login Adgangskontrol",
+    "href": "http://www.stil.dk/~/media/UNIC/Filer/Publikationer/Tekniske%20vejledninger/uni-login-adgangskontrol.pdf"},
+  "US Army": {
+    "author": "US Army",
+    "title": "Identity and Access Management (IdAM) Reference Architecture (RA) - 07- 05-2014",
+    "href": "http://ciog6.army.mil/Portals/1/Architecture/2014/20140507-US_Army_IdAM_Reference_Architecture_V3-0.pdf"},
+  "WAYF": {
+    "author": "WAYF",
+    "title": "Introducing transparency in hub-and-spoke federation architectures using SAML2 authentication request scoping elements.",
+    "href": "http://www.wayf.dk/wayfweb/artikler_og_notater_attchmt/2010_09_01_TNC_article_SAML2-scoping.pdf"},
+  "Økonomistyrelsen": {
+    "author": "Økonomistyrelsen",
+    "title": "Anbefalinger til retningslinjer for tværoffentlig brugerstyring – roadmap og koncept 1.0"},
+  "RAS": {
+    "author": "Fællesoffentlig Digital Arkitektur",
+    "title": "Referencearkitektur for selvbetjening",
+    "href": "https://arkitektur.digst.dk/sites/default/files/referencearkitektur_for_selvbetjening_version_1.0_0.pdf"},
+  "RA3D": {
+      "author": "Fællesoffentlig Digital Arkitektur",
+      "title": "Referencearkitektur for deling af data og dokumenter",
+      "href": "https://arkitektur.digst.dk/sites/default/files/20180503_rad_v1.0_-_godkendt_af_sda.pdf"},
+  "eIDAS": {
+          "title": "Elektronisk identifikation og tillidstjenester til brug for elektroniske transaktioner på det indre marked",
+          "href": "https://eur-lex.europa.eu/legal-content/da/TXT/?uri=CELEX:32014R0910"}
+
+}
+</pre>

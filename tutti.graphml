@@ -8776,7 +8776,7 @@ kontrol</y:NodeLabel>
           <y:Geometry height="95.99021726491122" width="157.23502630342688" x="2788.6999906008905" y="410.8617525095924"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" rotationAngle="90.0" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="46.05078125" x="4.0" xml:space="preserve" y="4.0">udbyder A</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="79.234375" x="4.0" xml:space="preserve" y="4.0">tjenesteudbyder A</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -8788,7 +8788,7 @@ kontrol</y:NodeLabel>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#3366FF" verticalTextPosition="bottom" visible="true" width="84.0146484375" x="10.552431044985951" xml:space="preserve" y="5.5">forretningstjeneste</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -8796,7 +8796,7 @@ kontrol</y:NodeLabel>
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:SVGNode>
-          <y:Geometry height="40.0" width="20.0" x="2685.9002079752045" y="452.9475365120188"/>
+          <y:Geometry height="40.0" width="20.0" x="2696.5270827830286" y="452.9475365120188"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Open Sans" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="4.0" x="8.0" y="-8.0">
@@ -8820,7 +8820,7 @@ kontrol</y:NodeLabel>
           <y:Geometry height="95.99021726491128" width="157.23502630342688" x="3022.3436894785023" y="410.8617525095924"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" rotationAngle="90.0" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="45.7041015625" x="4.0" xml:space="preserve" y="4.0">udbyder B</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#1F497D" verticalTextPosition="bottom" visible="true" width="78.8876953125" x="4.0" xml:space="preserve" y="4.0">tjenesteudbyder B</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -8832,7 +8832,7 @@ kontrol</y:NodeLabel>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Calibri" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="14.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#3366FF" verticalTextPosition="bottom" visible="true" width="84.0146484375" x="10.552431044985951" xml:space="preserve" y="5.5">forretningstjeneste</y:NodeLabel>
-          <y:Shape type="rectangle"/>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
