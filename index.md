@@ -121,7 +121,7 @@ I forbindelse med brugerstyring kan brugere være enten med rettigheder og pligt
 I forbindelse med implementeringen af arkitekturen, benyttes adgangsbilletter til at samle de attributter der indgår i adgangskontrollen for en given tjeneste.
 
 <figure>
-<img src="Billede6.png" width="100%"/>
+<img src="Begrebsoverblik.png" width="100%"/>
 <figcaption>Begrebsoverblik</figcaption>
 </figure>
 
