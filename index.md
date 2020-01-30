@@ -530,7 +530,7 @@ Tjenesteudbydere skal udarbejde en adgangspolitik for deres forretningstjenester
 For at sikre overensstemmelse mellem adgangspolitik og den efterfølgende adgangskontrol, som håndhæver politikken, kan adgangspolitikken med fordel udtrykkes i termer af attributter, der er tilgængelige via attributbeskrivelsen. Dette er fx særligt relevant i token-baserede realiseringer, hvor adgang opnås på baggrund af attributter beskrevet i et security token. Jo mere standardiserede adgangspolitikker er på tværs af tjenester, jo lettere er det for brugere og organisationer at administrere i overensstemmelse med adgangspolitikkerne. Fællesoffentligt er visse attributter standardiseret (fx i OIOSAML profilerne [19]), ligesom nogle domæner har standardiseret en række attributter (dette gælder fx på sundhedsområdet).
 
 <figure>
-<img src="billede3.PNG" width="90%"/>
+<img src="Bruger og tjenesteudbyder.PNG" width="100%"/>
 <figcaption>Adgangsrettigheder – Samspil mellem bruger og tjenesteudbyder</figcaption>
 </figure>
 <br>
