@@ -28,7 +28,7 @@ Denne referencearkitektur er udarbejdet for at understøtte implementeringen af 
 2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlge aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
 Brugen af føderationer og tillidstjenester er uddybet.
 
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne [nr. indsættes] viser centrale dele af begrebsmodellern og Bilag [nr. indsættes] viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne [nr. indsættes] viser centrale dele af begrebsmodellen og Bilag [nr. indsættes] viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -86,14 +86,14 @@ Ved siden af forretningstjenester findes *tillidstjenester*, der udfører betroe
 *Føderationer* sammenslutning af tillids- og forretningstjenester med gensidig tillid.
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres brugere som den rolle en entitet har i forhold til den  tjeneste elller det system entiten tilgår. Rollen som bruger binder entiteter til digitale identiteter.
+I en digital sammenhæng defineres brugere som den rolle en entitet har i forhold til den  tjeneste eller det system entiteten tilgår. Rollen som bruger binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-*Entitet*, noget der har en selvstændig eksistens. Entiteter er i denne kontekst noget ( person, juridisk enhed, apaprat) eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
+*Entitet*, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en person, organisation, apparat eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
 *Digital identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
@@ -1112,7 +1112,7 @@ Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skol
 
 # Kilder og baggrundsmateriale
 
-Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Referencearkitketur for brugerstyring version 1.1. Links er verificeret i januar 2020.
+Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Referencearkitektur for brugerstyring version 1.1. Links er verificeret i januar 2020.
 
 | Nr. | Kilde | Materiale |
 |-----|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
