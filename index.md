@@ -25,10 +25,10 @@ Slim Build Artifact:
 <h2 class="no-num">Forord</h2>
 Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
 
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlge aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
+2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
 Brugen af føderationer og tillidstjenester er uddybet.
 
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne [nr. indsættes] viser centrale dele af begrebsmodellen og Bilag [nr. indsættes] viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
@@ -73,7 +73,7 @@ Referencearkitekturen beskriver administrationen og kontrollen med brugeres adga
 <figcaption>Kapabiliteter omkring brugerstyring</figcaption>
 </figure>
 
-De primære kapabiliteter i brugerstyring er
+De primære kapabiliteter i brugerstyring er:
 
 -	*Brugeradministration* aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
 -	*Adgangskontrol* proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens identitet, attributter, roller/rettigheder og tjenestens adgangspolitik.
@@ -95,7 +95,7 @@ I en digital sammenhæng defineres brugere som den rolle en entitet har i forhol
 
 *Entitet*, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en person, organisation, apparat eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
-*Digital identitet* digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+*Digital identitet* digital persona der repræsenterer en entitet i rollen som bruger ved hjælp af et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
 *Identifikationsmiddel* middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
@@ -126,10 +126,10 @@ I forbindelse med implementeringen af arkitekturen, benyttes adgangsbilletter ti
 <figcaption>Begrebsoverblik</figcaption>
 </figure>
 
-Ud over de her viste begreber er alle begreber forklaret i Bilag [1 Begreber.]
+Ud over de her viste begreber er alle begreber forklaret i Bilag 2.
 
 ### Relationer imellem brugere
-Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring.
+Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder og hvordan de tildeles er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
 -	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
 -	Tilhør til organisation. Tilhøret i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
@@ -169,9 +169,7 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 Referencearkitekturen udmønter og understøtter beslutninger i Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1]. Strategien har tre, overordnede målsætninger:
 
 - Det digitale skal være let, hurtigt og sikre god kvalitet
-
 - Offentlig digitalisering skal give gode vilkår for vækst
-
 - Tryghed og tillid skal i centrum
 
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
@@ -191,7 +189,7 @@ En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
 - Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
 
-I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip'[9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
 
 ### Sikkerhed og tillid
 Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data (herunder følsomme personoplysninger), som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
@@ -324,7 +322,7 @@ Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sa
 - Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne.
 - Standarderne for informationsoverførsler mellem de løst koblede komponenter bør tage udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med dansk profiler, hvor det er nødvendigt).
 -	Når brugerstyringsopgaven løses af forskellige aktører bygget på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
-- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en række realiserede løsnngsbyggeblokke, herunder tjenester og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
+- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en række realiserede løsningsbyggeblokke, herunder tjenester og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
 
 ### Princip 6: Tjenesteudbydere indgår i føderationer
 For at effektivisere samarbejdet imellem udbydere af forretningstjenester og anvendte tillidstjenester kan disse indgå i føderationer. Inden for føderationen aftales fælles standarder, samt tillids- og adgangspolitikker.
@@ -359,7 +357,7 @@ De mest relevante love og forordninger, der har særligt fokus på brugerstyring
 
 - eIDAS forordningen [8] (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
 - Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester [12], der er den supplerende lov for eIDAS forordningen i Danmark.
-- EU-databeskyttelsesforordningen (GDPR)[13] som beskriver pligter og rettigheder ved behandling af persondata.
+- EU-databeskyttelsesforordningen (GDPR) [13] som beskriver pligter og rettigheder ved behandling af persondata.
 - Databeskyttelsesloven [14] som i dansk kontekst supplerer GDPR.
 - Forvaltningsloven [15] som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 - Lov om udstedelse af NemID [11], der regulerer borgeres og virksomheders retsstilling gennem et klart lovgrundlag for forvaltningen NemID. Loven vil blive erstattet af den kommende lov om MitID.
@@ -386,7 +384,7 @@ Hovedindholdet i ISO/IEC 27001 [16] er, at niveau for og håndtering af informat
 ISO/IEC 27001 standarden [16] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
 ### Risici vedr. brugere
-Indenfor domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tre-trins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
+Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, rettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
 
 
@@ -488,7 +486,7 @@ CPR-nummeret er en attribut, som desværre også historisk er brugt som identifi
 
 ### Autentifikation
 
-Autentifikation er en proces, som genkender og verificerer en identitet gennem anvendelse af et identifikationsmiddel, der er koblet til identiteten som beskrevet ovenfor. Ved flerfaktor autentifikation forstås en autentifikationsproces, hvor det anvendte elektroniske identifikationsmiddel er baseret på flere autentifikationsfaktorer fra forskellige kategorier (noget kun brugeren ved, er, eller er i besiddelse af). Et eksempel her på findes i NemID/MitID, hvor brugerne kan logge på med en kombination af et hemmeligt kodeord og 'swipe' i en App.
+Autentifikation er en proces, som genkender og verificerer en identitet gennem anvendelse af et identifikationsmiddel, der er koblet til identiteten som beskrevet ovenfor. Ved flerfaktor autentifikation forstås en autentifikationsproces, hvor det anvendte elektroniske identifikationsmiddel er baseret på flere autentifikationsfaktorer fra forskellige kategorier (noget kun brugeren ved, er, eller er i besiddelse af). Et eksempel her på findes i NemID/MitID, hvor brugerne kan logge på med en kombination af et hemmeligt kodeord og 'swipe' i en app.
 
 Autentikationsfunktionen varetages i nogle tilfælde af den part, der har udstedt identifikationsmidlet (fx fordi denne kender brugerens password eller en afledt værdi heraf), men den kan også være separat for udstederen (fx kan man i PKI-baseret autentifikation verificere brugerens kontrol over den private nøgle op mod det tilhørende certifikat).
 
@@ -502,7 +500,7 @@ Termen attributter bruges i denne referencearkitektur som en generalisering over
 
 Eksempler på opgaver inden for området kan være:
 
-- Administration af brugere i et brugerkatalog, fx et AD, med navn, titel, email, afdeling osv. underlagt ledelse i en organisation.
+- Administration af brugere i et brugerkatalog, fx et AD, med navn, titel, e-mail, afdeling osv. underlagt ledelse i en organisation.
 - Tildeling og udstilling af roller og fuldmagter til brugere.
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem brugere og andre objekter/subjekter (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
