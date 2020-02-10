@@ -424,6 +424,7 @@ Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i 
 - Tidsstemplingsservices
 - Valideringstjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
 - Elektroniske registrerede leveringstjenester.
+- Tjenester til bevaring af signaturer, segl og certifikater
 
 eIDAS-forordningen stiller en række krav til udbydere af (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
