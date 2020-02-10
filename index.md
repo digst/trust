@@ -22,14 +22,6 @@ Slim Build Artifact:
 <h1>Fællesoffentlig <br>referencearkitektur for <br>brugerstyring</h1>
 
 
-<h2 class="no-num">Forord</h2>
-Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
-
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
-Brugen af føderationer og tillidstjenester er uddybet.
-
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
-
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
 [Skrives inden offentlig kommentering]
@@ -59,7 +51,10 @@ Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder de
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-Denne version 1.1 af Referencearkitektur for brugerstyring er udvidet med de særlige aspekter vedrørende brugerstyring for ting, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE).
+2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
+Brugen af føderationer og tillidstjenester er uddybet.
+
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
@@ -159,20 +154,23 @@ Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af FDA og 
 I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
 
 -	Rød tekst: At et element eller en relation ejes og defineres i denne referencearkitekturs begrebsmodel
--	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet, nærmere angivet sted, fx i andre referencearkitekturer
+-	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet sted, fx i andre referencearkitekturer
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
 
 
 # Strategi
+Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
 
-Referencearkitekturen udmønter og understøtter beslutninger i Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1]. Strategien har tre, overordnede målsætninger:
+Digitaliseringsstrategien har tre, overordnede målsætninger:
 
 - Det digitale skal være let, hurtigt og sikre god kvalitet
 - Offentlig digitalisering skal give gode vilkår for vækst
 - Tryghed og tillid skal i centrum
 
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
+
+Referencearkitekturen er et centralt element i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20] jfr. beslutning om ... [beslutning verificeres med Lasse]
 
 ## Forretningsmæssige behov
 Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere i forbindelse med brugerstyring. Fokus for Referencearkitektur for brugerstyring er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
@@ -423,8 +421,8 @@ Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i 
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
 - Valideringstjenester for validering af elektroniske signaturer, elektroniske segl og tidsstempler
-- Elektroniske registrerede leveringstjenester.
 - Tjenester til bevaring af signaturer, segl og certifikater
+- Elektroniske registrerede leveringstjenester.
 
 eIDAS-forordningen stiller en række krav til udbydere af (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
@@ -1152,40 +1150,3 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 | 37 | KOMBIT | Det fælleskommunale Støttesystem Adgangsstyring,  https://www.kombit.dk/indhold/adgangsstyring |
 | 38 | Sundhedsdatastyrelsen | Sundhedsvæsenets Elektroniske Brugerstyring,  https://services.nsi.dk/seb |
 | 39 | W3C | Decentralized Identifiers (DIDs) v1.0,  https://www.w3.org/TR/did-core/ |
-
-# Bilag 2.	Begrebsmodel
-Begrebsmodellen findes i indeholdte Excel dokument.
-
-Begrebsmodellen er i store træk færdig, men stadig under udarbejdelse, så der kan komme mindre justeringer. Desuden vil der blive indarbejdet en ordliste med henvisninger fra accepterede termer og ord, der anvendes, men ikke er medtaget i begrebsmodellen.
-
-
-# Bilag 3.	Fællesoffentlig brokermodel
-I dette afsnit gives en beskrivelse af arkitekturen i den kommende fællesoffent-lige infrastruktur i form af MitID og NemLog-in3 som et eksempel på komponenter, der udmønter koncepter og begreber i referencearkitekturen.
-Nedenstående figur illustrerer overordnet principperne i den nye infrastruktur:
-
-<figure>
-<img src="NemLogin3.PNG" width="100%" />
-<figcaption>NemLogin3 kontekst</figcaption>
-</figure>
-
-Der er tale om en lagdelt model, hvor forretningstjenester skal koble sig til en broker (NemLog-in3 anvendes af offentlige tjenesteudbydere), og hvor kun brokerne har en integration med MitID. For den offentlige del baseres tilliden bl.a. på NSIS og eIDAS, og derudover er der specifikke aftaler og vilkår mellem de forskellige lag i infrastrukturen.
- 
-Nedenstående BPMN-diagram viser samarbejdet mellem en forretningstjeneste og tre tillidstjenester (NemLog-in som broker, MitID som autentifikationstjene-ste og CVR registreret som attributtjeneste) i et konkret forløb gennem infrastrukturens komponenter, når en bruger logger ind på en erhvervsrettet løsning:
-
-<figure>
-<img src="NemLogin3 proces.PNG" width="100%" />
-<figcaption>NemLogin3 samarbejde imellem tjenester</figcaption>
-</figure>
-
-NemLog-in står som broker for orkestreringen af log-in-forløbet og afklarer i dialog med brugeren, hvilken type identifikationsmiddel, der skal anvendes. Brugeren vælger i eksemplet en MitID identitet, og NemLog-in sørger herefter for at omveksle autentifikationssvaret fra MitID til en erhvervsidentitet beriget med attributter fra CVR-registret.
-
-Infrastrukturen udmønter en række af de begreber og elementer, der er beskre-vet i denne referencearkitektur:
-
--	MitID er en tillidstjeneste, som etablerer en elektronisk identifikations-ordning for privatpersoner. Løsningen udsteder således elektroniske identifikationsmidler og tilvejebringer en autentifikationstjeneste for disse (jævnfør afsnit 3.3.1 og 3.3.2).  Autentifikationen er klassificeret i henhold til NSIS sikringsniveauer og anmeldes både under NSIS og no-tificeres under eIDAS (jævnfør afsnit 3.1).
--	MitID kan ikke tilgås direkte af forretningstjenester, som i stedet skal gå igennem en broker. NemLog-in3 bliver broker, som skal anvendes af alle offentlige tjenestester, svarende til forretningsmønster 3 jævnfør af-snit 3.5.3.
--	NemLog-in3 er en tillidstjeneste, og etablerer en identifikationsordning for erhvervsidentiteter (jævnfør afsnit 3.3.1 og 3.3.2). Denne vil ligele-des både blive anmeldt under NSIS og notificeret under eIDAS.
--	NemLog-in’s broker vil berige identiteter med ekstra attributter fra au-toritative registre (bl.a. CPR og CVR) og dermed udføre attributatteste-ring, jævnfør afsnit 3.3.4.
--	NemLog-in3 vil endvidere etablere et kvalificeret CA og kunne udste-de- og validere kvalificerede signaturer, og optræder dermed som en eI-DAS kvalificeret tillidstjeneste (jævnfør afsnit 3.3 om tillidstjenester).
--	Brugerorganisationer kan etablere deres egne autentifikationstjenester (lokale IdP’er), hvis de ønsker at benytte lokalt udstedte identifikati-onsmidler for egne medarbejdere ved adgang til eksterne tjenester. For-udsætningen for, at disse kan tilsluttes NemLog-in3 er, at de er NSIS anmeldte. Herved bliver NemLog-in broker for lokale identiteter. Dette svarer til forretningsmønster 4 beskrevet i afsnit 3.5.4. Rent teknisk fo-retages billetomveksling, hvor adgangsbillet udstedt af lokal IdP om-veksles af NemLog-in (jævnfør afsnit 4.4).
--	NemLog-in indeholder en såkaldt Security Token Service komponent (STS), som gør det muligt at foretage omveksling af adgangsbilletter til identitetsbaserede web services som beskrevet i afsnit 4.5.1.
--	Forretningstjenester, som anvender NemLog-in3 som tillidstjeneste, kan udføre adgangskontrol på baggrund af de attributter, som fremgår i den adgangsbillet, som NemLog-in udsteder – såkaldt attributbaseret ad-gangskontrol. Adgangsbilletten vil både kunne rumme attributter som beskriver brugerens identitet, rettigheder, fuldmagter mv. Attributterne attesteret med andre ord via ’push’ metoden som beskrevet i afsnit 4.1
