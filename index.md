@@ -1153,3 +1153,24 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 | 38 | Sundhedsdatastyrelsen | Sundhedsvæsenets Elektroniske Brugerstyring,  https://services.nsi.dk/seb |
 | 39 | W3C | Decentralized Identifiers (DIDs) v1.0,  https://www.w3.org/TR/did-core/ |
 | 40 | Digitalisereingsstyrelsen | OIO Basic Privilege Profile, version 1.2, https://digst.dk/media/20999/oiosaml-basic-privilege-profile-1_2.pdf |
+
+## Bilag 4. Tjekliste
+
+Denne tjekliste kan anvendes af projekter, der designer, bestiller eller udvikler løsninger til deling af data. Tjeklisten trækker mange af de væsentligste punkter fra denne referencearkitektur frem og er desuden skrevet med projektarbejde for øje, i det den fremhæver mange af de nødvendige afklaringer, der skal foretages i projektsammenhæng.
+Tjeklisten anvendes desuden som en del af det arkitekturmæssige review af pro-jektet.
+
+
+| Nr. | Arkitekturegenskaber | Reference til ref.ark | Reference til principper i hvidbog |
+|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| 1 | Har projektet afklaret, hvordan det bedst muligt understøtter lettilgængelige og sammenhængende tjenester, hvor brugerne så vidt muligt kun logger ind én gang? | 2.1.1 Lettilgængelige sammenhængende tjenester2.3.1 Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring | 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs. |
+| 2 | Beskytter løsningen brugernes informationer og følges princippet om dataminimering? | 2.3.2 Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv</span> | 4: Sikkerhed, privatliv og tillid sikres. |
+| 3 | Har projektet sikret, at alle tjenester, der indgår i løsningen, opfylder krav til sikkerhed? | 2.1.3 Sikkerhed og tillid | 4.1: Opfyld krav til informationssikkerhed og privatlivsbeskyttelse 4.2: Anvend fælles arkitektur for informationssikkerhed |
+| 4 | Er der taget stilling til, om den aktuelle løsning designes og implementeres, så løsningen bliver effektiv? | 2.1.5 Effektivitet | 2.1: Anvend og udbyg den fællesoffentlige rammearkitektur 2.2: Anvend åbne og internationale standarder |
+| 5 | Er det i løsningen tjenesteudbyderens ansvar at håndhæve brugernes adgange? | 2.3.2 Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange | 4: Sikkerhed, privatliv og tillid sikres. |
+| 6 | Er brugerstyring adskilt fra forretningsprocesser? | 2.3.4 Princip 4: Brugerstyring er adskilt fra forretningsprocesser | 2 Arkitektur fremmer sammenhæng, innovation og effektivitet 7: It-løsninger samarbejder effektivt |
+| 7 | Er brugerstyringsløsningen delt op i løst koblede komponenter? | 2.3.5 Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester | 2 Arkitektur fremmer sammenhæng, innovation og effektivitet 7: It-løsninger samarbejder effektivt |
+| 8 | Har projektet klarlagt, om der findes eksisterende tjenester, der kan indgå i løsningen gennem føderation? | 2.3.6 Princip 6: Tjenesteudbydere indgår i føderationer | 5: Processer optimeres på tværs 7: It-løsninger samarbejder effektivt |
+| 9 | Er der foretaget en risiko- og konsekvensvurdering jfr. ISO 27001 standarden? | 2.6 Sikkerhed | 4: Sikkerhed, privatliv og tillid sikres. |
+| 10 | Har projektet vurderet og prioriteret de forskellige arkitekturmønstre for brugerstyring? Er skalerbarhed overvejet, både på kort sigt og i forhold til langsigtede behov? | 3.5 Logiske arkitekturmønstre | 5: Processer optimeres på tværs 7: It-løsninger samarbejder effektivt |
+| 11 | Er det undersøgt hvilken lovgivning, der skal tages højde for i forbindelse med etablering af løsningen? | 2.5 Juridiske rammer | 3: Arkitektur og regulering understøtter hinanden 4: Sikkerhed, privatliv og tillid sikres |
+| 12 | Har projektet taget stilling til hvilke danske og internationale standarder, der skal ligge til grund for løsningen? | 4.10 Områder for standardisering | 2: Arkitektur fremmer sammenhæng, innovation og effektivitet 7: It-løsninger samarbejder effektivt |
