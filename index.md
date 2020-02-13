@@ -33,7 +33,7 @@ Slim Build Artifact:
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 
-Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om arkitektur og digitalisering [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "...definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
+Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om fællesoffentlig digital arkitektur [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "...definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
 
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
@@ -139,7 +139,7 @@ Denne version 1.1 af Referencearkitektur for brugerstyring er udarbejdet i Cente
 
 En følgegruppe af arkitekter fra den offentlige sektor har bidraget til opdateringen gennem en række af workshops og reviews. Følgende organisationer har været repræsenteret i gruppen: Kommunernes Landsforening, Danske Regioner, Styrelsen for Dataforsyning og Effektivisering, Styrelsen for It og Læring, Naturstyrelsen, Miljøstyrelsen, KOMBIT, Energistyrelsen, Energinet, Sønderborg Kommune og Københavns Kommune.
 
-Inden godkendelse er referencearkitekturen blevet reviewet i regi af FDA ligesom der har været en offentlig høring af dokumentet med inddragelse af relevante offentlige og private interessenter.
+Inden godkendelse er referencearkitekturen blevet reviewet i regi af Den fællesoffentlige digitale arkitektur (FDA)[7] ligesom der har været en offentlig høring af dokumentet med inddragelse af relevante offentlige og private interessenter.
 
 [Referencearkitektur for brugerstyring godkendtes i version 1.1 af Udvalg for arkitektur og standarder under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] i juni 2020. Udvalget er herefter ejer af dokumentet, med CTD som ansvarlig for vedligehold af referencearkitekturen, der indgår i FDA.]
 
@@ -160,7 +160,7 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 
 
 # Strategi
-Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering” [2].
+Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om fællesoffentlig digital arkitektur” [2].
 
 Digitaliseringsstrategien har tre, overordnede målsætninger:
 
@@ -1114,7 +1114,7 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 | Nr. | Kilde | Materiale |
 |-----|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | Regeringen, KL, Danske Regioner | Den Fælles Offentlige Digitaliseringsstrategi 2016-2020,  https://digst.dk/strategier/digitaliseringsstrategien/ |
-| 2 | Digitaliseringsstyrelsen | En digitalt sammenhængende offentlig sektor: Hvidbog om arkitektur for digitalisering, juni 2017,  https://arkitektur.digst.dk/node/241 |
+| 2 | Digitaliseringsstyrelsen | En digitalt sammenhængende offentlig sektor: Hvidbog om fællesoffentlig digital arkitektur, juni 2017,  https://arkitektur.digst.dk/node/241 |
 | 3 | Digitaliseringsstyrelsen | Referencearkitektur for brugerstyring version 1.0, april 2017, https://arkitektur.digst.dk/node/123 |
 | 4 | Digitaliseringsstyrelsen | Fællesoffentlige regler for begrebs- og datamodellering Version 2.0., marts 2019,  https://arkitektur.digst.dk/metoder/regler-begrebs-og-datamodellering/modelregler-v-20 |
 | 5 | Regeringen, KL, Danske Regioner | Digitaliseringspagten, marts 2019,  https://digst.dk/strategier/digitaliseringspagten/ |
