@@ -170,7 +170,7 @@ Digitaliseringsstrategien har tre, overordnede målsætninger:
 
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
 
-Referencearkitekturen er et centralt element i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20] jfr. beslutning om ... [beslutning verificeres med Lasse]
+Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20].
 
 ## Forretningsmæssige behov
 Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere i forbindelse med brugerstyring. Fokus for Referencearkitektur for brugerstyring er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
