@@ -966,7 +966,7 @@ Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet,
 
 Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en billet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
 
-For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M), og herefter udstede/tilknytte et robot-egnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
+For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M). Dette indebærer også, at en robotidentitet kan modtage fuldmagter som en delegering af rettigheder. Herefter kan en administrator udstede/tilknytte et robot-egnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
 
 Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
 
