@@ -248,7 +248,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 - Brugerne skal i offentlige digitale løsninger have brugergrænseflader, hvor krav til sikkerhed og privatliv forenes med krav om brugervenlighed.
 -	Brugerne skal kunne tilbydes single sign-on i brugerforløb, der krydser flere tjenester, også når de går på tværs af domæner.
--	Brugere skal, hvor det er relevant, kunne afgive samtykke til brugen af  deres oplysninger, samt at oplysningerne kan bruges inden for en føderation i forbindelse med brugerstyring.
+-	Brugere skal, hvor det er relevant, kunne afgive samtykke til brugen af  deres oplysninger.
 - Brugerne skal kunne delegere fuldmagt til andre elektroniske identiteter.
 - Brugerne skal have et samlet overblik over afgivne og modtagne fuldmagter på tværs af tjenester.
 -	Brugerne skal opleve en sammenhængende administration af oprettelse af identiteter, brugere, administration af fuldmagter og administration af rettigheder.
