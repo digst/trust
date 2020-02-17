@@ -178,14 +178,14 @@ Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomhede
 ### Lettilgængelige sammenhængende tjenester
 Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængelige hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren, hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
 Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker adgang til denne tjeneste. Da brug af tjenester fra andre tjenester er stigende, er der behov for ensartede metoder til at tilgå disse tjenester.
-eIDAS forordningen [6] stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau.
+eIDAS forordningen [6] stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I praksis gælder kravet i eIDAS kun muligheden for at kunne autentificere sig over for tjenesten, og der er således ikke krav om, at forretningsfunktionen kan tilvejebringes efter autentifikationen, hvis der eksempelvis mangler nødvendige attributter om brugeren.
 
 ### Retten til privatliv
 Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet, hvor det er muligt og relevant.
 En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren (fx CPR-nummer) for at kunne afgøre dennes adgang til en service. Kun relevante attributter sendes til tjenesten i henhold til dataminimeringsprincippet.
 
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
-- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune.
+- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
 
 I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
 
@@ -195,7 +195,7 @@ Det er helt centralt for realiseringen af en effektiv digitalisering, at brugern
 
 ### Delegering og fuldmagt
 En del borgere og virksomheder har behov for at kunne give andre fuldmagt til at løse opgaver for sig. Myndigheder er omfattet af reglerne om partsrepræsentation, og deres digitale tjenester skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
-I forhold til autonome software robotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en robots identitet, således at den kan agere på et veldefineret grundlag.
+I forhold til autonome softwarerobotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en robots identitet, således at den kan agere på et veldefineret grundlag.
 
 ### Effektivitet
 
@@ -365,6 +365,7 @@ De mest relevante love og forordninger, der har særligt fokus på brugerstyring
 - Databeskyttelsesloven [14] som i dansk kontekst supplerer GDPR.
 - Forvaltningsloven [15] som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 - Lov om udstedelse af NemID [11], der regulerer borgeres og virksomheders retsstilling gennem et klart lovgrundlag for forvaltningen NemID. Loven vil blive erstattet af den kommende lov om MitID.
+- NIS direktivet er en EU-regulering (EU 2016/1148) der har til formål at styrke cybersikkerhedsområdet. Reguleringen stiller krav til medlemstaternes kapabiliteter, til samarbejde på tværs af medlemslande, og til supervision af kritiske sektorer i medlemslandene (fx forsyningsvirksomheder, transport, finansielle virksomheder mv.).  Formålet med er bl.a. at harmonisere og skærpe medlems­staternes regler om sikkerhed for kritisk infrastruktur i erkendelse af, at sikker­hedshændelser udgør en hyppig trussel for net- og informations­systemer, og at disse sikkerheds­hændelser kan få afgørende økonomiske og samfunds­mæssige konsekvenser. Implementeringen af NIS-direktivet er gennemført i dansk ret via flere love og bekendt­gørelser fra maj 2018 med forskellige administrerende myndigheder.
 
 Dertil kan der være særregulering inden for visse domæner som fx sundhedsområdet.
 
@@ -415,14 +416,14 @@ For at realisere politikkerne opereres der med en række tillidstjenester, der u
 I den tekniske arkitektur beskrives en række supplerende funktioner (fx billetudstedelse og anvendelse af brokere), som ikke optræder på forretningsniveau.
 
 
-En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument. En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
+En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument (også på engelsk kendt som *Web Service Consumer*). En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
 
 Bemærk at en tillidstjeneste også kan optræde som forretningstjeneste, og herunder udføre adgangskontrol, hvor forretningsområdet omhandler brugerstyring.  
 
 
 ## Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester.
-Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningen, som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
+Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3, som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
 
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
@@ -430,7 +431,7 @@ Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i 
 - Tjenester til bevaring af signaturer, segl og certifikater
 - Elektroniske registrerede leveringstjenester.
 
-eIDAS-forordningen stiller en række krav til udbydere af (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
+eIDAS-forordningens stiller en række krav til udbydere af ovennævnte (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
 De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
@@ -439,6 +440,8 @@ De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 <figcaption>Oversigt over de forskellige typer af tillidstjenester</figcaption>
 </figure>
 <br>
+
+Som det fremgår af figuren benytter denne referencearkitektur også begrebet 'tillidstjeneste' om elektronisk identifikation, som er beskrevet i eIDAS kapitel 2, samt en række øvrige tjenester, som slet ikke er beskrevet i eIDAS.
 
 
 ## Forretningsmæssig kontekst
@@ -509,7 +512,7 @@ Eksempler på opgaver inden for området kan være:
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem en bruger og andre brugere (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
-Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet, mens de kommunikeres i en infrastruktur.
+Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet (se [41]) og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet, mens de kommunikeres i en infrastruktur.
 
 Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydninger om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
 I denne referencearkitektur benyttes attributregistrering som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer.
@@ -766,7 +769,7 @@ Nedenfor gives eksempler på forskellige, vigtige kategorier af attributter:
 Derudover anvendes i nogle sammenhænge informationer om konteksten for en autentifikation som grundlag for adgangskontrol (fx IP-adresse, devicetype, tidspunkt for login, geolokation).
 
 
-I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at forholde sig til attributternes kvalitet. Dette gælder særligt, når attributter anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er der kun fælles rammer for visse attributters kvalitet i form af sikringsniveauerne LoA, IAL, AAL og FAL i National Standard for Identiteters Sikringsniveau (NSIS) [18], mens kvaliteten for øvrige attributter ofte er underforstået af den aktuelle sammenhæng. En simpel (men primitiv) mekanisme kan være at associere attributkvaliteten med den tillidstjeneste, der har attesteret den. Men her kan der opstå udfordringer, når attributter formidles gennem kæder med flere led og omveksles mellem adgangsbilletter, idet det for slutmodtageren bliver mere uklart, hvem der oprindeligt udtalte sig om en bestemt attribut. I stedet er det bedre eksplicit at påstemple yderligere oplysninger om attributtens kvalitetsegenskaber fx ved henvisning til en klassifikation eller lignende mekanisme, så denne information bevares gennem tillidskæden.
+I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at forholde sig til attributternes kvalitet. Dette gælder særligt, når attributter anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er der kun fælles rammer for visse attributters kvalitet i form af sikringsniveauerne LoA, IAL, AAL og FAL i National Standard for Identiteters Sikringsniveau (NSIS) [18], mens kvaliteten for øvrige attributter ofte er underforstået af den aktuelle sammenhæng. En simpel (men primitiv) mekanisme kan være at associere attributkvaliteten med den tillidstjeneste, der har attesteret den. Men her kan der opstå udfordringer, når attributter formidles gennem kæder med flere led og omveksles mellem adgangsbilletter, idet det for slutmodtageren bliver mere uklart, hvem der oprindeligt udtalte sig om en bestemt attribut. I stedet er det bedre eksplicit at påstemple yderligere oplysninger om attributtens kvalitetsegenskaber fx ved henvisning til en klassifikation eller lignende mekanisme, så denne information bevares gennem tillidskæden. Som inspiration kan henvises til vejledningen 'fælles sprog for datakvalitet' [41].
 
 Det er ligeledes vigtigt, at den fulde livscyklus for attributter kan håndteres, idet værdierne kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et certifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
 
@@ -818,7 +821,16 @@ Kendte eksempler på discovery-tjenester er fx:
 - En tilsvarende funktion findes i KOMBIT's ContextHandler, som kan afgøre hvilken kommune, en bruger kommer fra, for derved at lokalisere den relevante lokale (kommunale) autentifikationstjeneste (IdP).
 - I eIDAS føderationen findes en obligatorisk "landevælger", hvor brugeren vælger det EU-land, som kan autentificere ham.
 
-Bemærk at en discovery funktion ikke nødvendigvis behøver at interagere med brugeren, idet discovery også kan baseres på cookies, URL parametre osv.
+Der findes forskellige mekanismer til discovery hver med fordele og ulemper, herunder nævnes en række eksempler:
+- I mange føderationer foregår discovery ved, at brugeren første gang må vælge sin IdP (autentifikationstjeneste) fra en liste af kendte IdP'er, hvor valget så efterfølgende gemmes i en browser cookie. Hvis brugeren sletter sine cookies eller skifter browser/device, skal han således vælge IdP igen, næste gang der skal logges på.
+- I en række cloud-tjenester (fx hos Microsoft) sker valg af IdP indirekte ved, at brugeren skal taste sin email-adresse, som så kan oversættes til en relevant IdP baseret på registreringer om domænet.
+- I nogle tilfælde man etablere dybe links til tjenester med indlejret information om, hvordan brugerens skal logge på. Eksempel kan en kommune udstille en portal sin sine medarbejdere med links til fagsystemer, der i URL'en angiver hvilken kommune, medarbejderen kommer fra.
+- En anden kendt teknik er at basere discovery på brugerens IP adresse, men dette virker sjældent godt med mobile enheder.
+- I SAML standarden findes der en discovery mekanisme benævnt 'common domain cookie', som går ud på, at en IdP i forbindelse med etablering af en session sætter en cookie med sin egen ID i en cookie i et fælles domæne, som kan læses af tjenesteudbydere i samme føderation. Herved kan tjenesteudbydere opdage, at brugeren allerede har en session med en IdP og kalde denne. Teknikken virker dog ikke, når brugeren ikke har en session med en IdP i forvejen - og må man ofte prompte brugeren for manuelt valg af IdP.
+
+
+I visse tilfælde kan man vælge at kombinere flere af disse tilgange således, at der først forsøges automatiseret discovery uden brugerinvolvering, men hvis dette fejler fordi data ikke er tilgængelige anvendes en af mekanismerne med brugerinvolvering.
+
 
 ## Billetudstedelse og -omveksling
 
@@ -931,7 +943,7 @@ Den løbende vedligeholdelse af den adgangspolitik, en given tjeneste kræver, e
 
 En udbredt model for adgangsrettigheder er rollebaseret adgangskontrol (RBAC), hvor brugerorganisationen kan anvende egne organisatoriske roller i forbindelse med adgangskontrol. I de seneste år har en ny model, attributbaseret adgangskontrol (ABAC), vundet frem. Her kan en regelmotor agere ud fra de attributværdier, en tjeneste præsenteres for gennem adgangsbilletten. RBAC kan opfattes som en delmængde af ABAC, idet roller kan udtrykkes som attributter.
 
-I adgangskontrol kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra autentifikation og billetudstedelse - foruden at selve billetten valideres (herunder signatur og tidsstempel på denne). Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret single sign-on funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie eller en OAuth token [29], der er udvekslet til at holde sessionen åben i en bestemt tidsperiode.
+I adgangskontrol kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra autentifikation og billetudstedelse - foruden at selve billetten valideres (herunder signatur og tidsstempel på denne). Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret single sign-on funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie (browser) eller en OAuth token [29] (app), der er etableret i forbindelse den initielle autentifikation.
 
 Adgangskontrollen er tjenesteudbyders ansvar, men tekniske funktioner kan leveres af eksterne systemer. Dette er eksempelvis tilfældet i XACML standarden [26], der dog ikke er særlig udbredt i praksis. XACML står for 'eXtensible Access Control Markup Language' som definerer et finkornet sprog for adgangspolitikker baseret på attributter. Desuden beskriver standarden en arkitektur med forskellige komponenter bl.a. et 'Policy Decision Point' (PDP), som evaluerer et adgangsønske mod en adgangspolitik, et 'Policy Enforcement Point', som håndhæver PDP'ens adgangsbeslutning, et 'Policy Administration Point' (PAP), hvor adgangspolitikker administreres mv.
 
@@ -954,7 +966,7 @@ Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet,
 
 Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en billet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
 
-For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med præcis de samme attributter som en almindelig medarbejderidentitet (M), og herefter udstede/tilknytte et robot-egnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans.
+For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M), og herefter udstede/tilknytte et robot-egnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
 
 Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
 
@@ -1152,7 +1164,8 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 | 37 | KOMBIT | Det fælleskommunale Støttesystem Adgangsstyring,  https://www.kombit.dk/indhold/adgangsstyring |
 | 38 | Sundhedsdatastyrelsen | Sundhedsvæsenets Elektroniske Brugerstyring,  https://services.nsi.dk/seb |
 | 39 | W3C | Decentralized Identifiers (DIDs) v1.0,  https://www.w3.org/TR/did-core/ |
-| 40 | Digitalisereingsstyrelsen | OIO Basic Privilege Profile, version 1.2, https://digst.dk/media/20999/oiosaml-basic-privilege-profile-1_2.pdf |
+| 40 | Digitaliseringsstyrelsen | OIO Basic Privilege Profile, version 1.2, https://digst.dk/media/20999/oiosaml-basic-privilege-profile-1_2.pdf |
+| 41 | Digitaliseringsstyrelsen | Fælles sprog for datakvalitet, https://arkitektur.digst.dk/metoder/faelles-sprog-datakvalitet |
 
 
 # Bilag 2.	Begrebsmodel
