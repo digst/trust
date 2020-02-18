@@ -568,7 +568,7 @@ Adgangskontrol er altid forretningstjenestens ansvar (herunder den dataansvarlig
 
 
 ### Forebyggelse og kontrol
-Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv.
+Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv. Tjenesteudbyderen skal løbende sikre, at forebyggelse og kontrol svarer til de definerede sikkerhedspolitikker og det gældende trusselsbillede.
 
 Regeringen har i april 2018 udgivet en ny version af National strategi for cyber- og informationssikkerhed [20], som har til formål at professionalisere statens arbejde med informationssikkerhed yderligere og øge samfundets robusthed mod cyberangreb. Strategien omfatter 25 konkrete initiativer, der skal bidrage til at øge informationssikkerheden og styrke beskyttelsen mod cyberangreb.
 
