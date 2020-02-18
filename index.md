@@ -108,7 +108,7 @@ I forbindelse med brugerstyring kan brugere være personer eller organisationer 
 
 *Organisation* en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder eller applikation.
 
-*Apparat* fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede. Apparater der kan optræde som bruger har sin egen identitet.
+*Apparat* fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede. Apparater der kan optræde som bruger har sin egen identitet. I denne arkitektur er behandles kun apparater eller IoT, som direkte optræder som bruger eller tjeneste. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller applikationsbruger.
 
 *Applikation* software entitet med specifik forretningsfunktion. Applikation som bruger er software med egen identitet og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det, for eksempel en autonom software robot. Applikation, her som bruger, må ikke forveksles med for eksempel en mobil app, som er en tjeneste.
 
@@ -568,7 +568,7 @@ Adgangskontrol er altid forretningstjenestens ansvar (herunder den dataansvarlig
 
 
 ### Forebyggelse og kontrol
-Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv.
+Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv. Tjenesteudbyderen skal løbende sikre, at forebyggelse og kontrol svarer til de definerede sikkerhedspolitikker og det gældende trusselsbillede.
 
 Regeringen har i april 2018 udgivet en ny version af National strategi for cyber- og informationssikkerhed [20], som har til formål at professionalisere statens arbejde med informationssikkerhed yderligere og øge samfundets robusthed mod cyberangreb. Strategien omfatter 25 konkrete initiativer, der skal bidrage til at øge informationssikkerheden og styrke beskyttelsen mod cyberangreb.
 
@@ -995,7 +995,7 @@ Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikat
 ## Brugerstyring for (native) apps
 Brugerstyring for apps på mobile enheder bringer sine egne udfordringer. I dette afsnit fokuseres udelukkende på native apps, idet mobile web applikationer som regel håndteres på samme måde som traditionelle web applikationer.
 
-På mobile enheder er der ofte behov for at kunne autorisere en app til at kunne agere på brugerens vegne efter de tidligere nævnte principper om identitetsbaserede web service - eksempelvis give app'en mulighed for at kalde et REST API på vegne af brugeren. Der findes endnu ingen fællesoffentlige profiler eller standarder på dette område, men der tegner sig alligevel en række mønstre og best practices, baseret på anvendelse af OAuth 2.0 [27] samt OpenID Connect standarderne [28]. Det grundlæggende princip i disse er, at brugeren via en mobil browser sendes til en autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må tilgå brugerens data og ressourcer. Herefter udstedes en adgangsbillet (eller flere) til app’en, som kan anvendes til at autorisere kald til back-end services (typisk REST API'er). Herved er såvel app'ens identitet og identifikationsmiddel adskilt fra brugerens, og adgangen er eksplicit godkendt af brugeren.
+På mobile enheder er der ofte behov for at kunne autorisere en app til at kunne agere på brugerens vegne efter de tidligere nævnte principper om identitetsbaserede web service - eksempelvis give app'en mulighed for at kalde et API på vegne af brugeren. Der findes endnu ingen fællesoffentlige profiler eller standarder på dette område, men der tegner sig alligevel en række mønstre og best practices, baseret på anvendelse af OAuth 2.0 [27] samt OpenID Connect standarderne [28]. Det grundlæggende princip i disse er, at brugeren via en mobil browser sendes til en autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må tilgå brugerens data og ressourcer. Herefter udstedes en eller flere adgangsbilleter til app’en, som kan anvendes til at autorisere kald til back-end services. Herved er såvel app'ens identitet og identifikationsmiddel adskilt fra brugerens, og adgangen er eksplicit godkendt af brugeren.
 
 Det skal bemærkes, at brugerautentifikationen (indlejret i OAuth eller OpenID Connect flows) sagtens kan være baseret på OIOSAML [19], hvorfor eksisterende SAML-baserede autentifikationstjenester og brokere kan genanvendes. Eksempelvis er det fuldt ud muligt at benytte NemLog-in's SAML IdP til at autorisere en app, og brugergrænsefladen er i NemLog-in's implementering responsiv, og den vil dermed tilpasse sig den reducerede skærmstørrelse. Digitaliseringsstyrelsen har i 2011 udgivet en vejledning til OAuth 2.0 [27], der viser hvordan standarden kan anvendes.
 
@@ -1042,6 +1042,14 @@ Ovenstående forretningsbehov vurderes at kunne blive opfyldt på et teknisk pla
 
 Uden ovenstående specifikationer og byggeblokke er der risiko for, at understøttelsen af apps sker gennem isolerede implementeringer, hvor hver applikation etablerer egne byggeblokke og tillidstjenester i mangel på en fælles model. Dette kan føre til manglende sammenhæng og interoperabilitet samt uens brugeroplevelser og sikkerhedsniveauer.
 
+## Brugerstyring for Apparater
+Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i arkitekturen er gældende også for apparater. Afhængigt af hvordan apparater optræder skal der for:
+
+**Apparat som tjeneste** skal have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
+
+**Apparat som bruger** skal have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
+
+Standardisering på området er kun i sin vorden, men for eksempel W3C har arbejde i gang omkring Web of Things - WoT, som er deres begreb for IoT. Det indeholder en række gode eksempler og forslag til standardisering, ref. [x] Web of Things at W3C, https://www.w3.org/WoT/
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
@@ -1107,8 +1115,6 @@ Standarden er en central brik i forhold til skabe standardisering og interoperab
 En DID er basalt set en URL som relaterer et 'DID subject' til et 'DID dokument' på en måde der giver mulighed for troværdige interaktioner med subjektet (brugeren). Et DID dokument kan fx beskrive offentlige nøgler, som DID subjektet (og tilhørende services) kan bruge til at autentificere sig med, og beskrive serviceendepunkter, som kan benyttes til at interagere med DID subjektet. Hensigten med standardiseringen er at specificere syntaks (DID scheme) og et generisk sæt af operationer på DID dokumenter. Ved at publicere et DID dokument på en blockchain kan brugere på en generisk måde specificere, hvordan en bestemt identitet kan autentificeres.
 
 Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skole baseret på centrale autoriteter og -tillidstjenester, som sammenbindes gennem føderationer. Den decentrale brugerstyring er dog et interessant nyt paradigme, som vil blive observeret efterhånden som området modnes og standarderne færdiggøres. De to paradigmer kan godt forenes, eksempelvis kan klassiske identiteter og identifikationsmidler fra en centraliseret model udstilles som decentrale identifiers.
-
-#### IoT initiativer
 
 
 # Bilag
