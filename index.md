@@ -108,9 +108,9 @@ I forbindelse med brugerstyring kan brugere være personer eller organisationer 
 
 *Organisation* en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder eller applikation.
 
-*Apparat* fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater, der kan optræde som brugere, vil have et indlejret program, som er uløseligt forbundet med apparatet. Der er typisk tale om apparater, der har en enkelt funktion og ikke kan få installeret yderligere programmer, hvorfor apparatet optræder som bruger.
+*Apparat* fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede. Apparater der kan optræde som bruger har sin egen identitet.
 
-*Applikation* software entitet med specifik forretningsfunktion. Applikationer er uafhængige af den platform, de er installeret på. Applikationer, der kan optræde som brugere, vil være installeret på noget hardware, men kunne flyttes fra et stykke hardware til et andet uden at ændre identitet, hvorfor det er applikationen, der optræder som bruger.
+*Applikation* software entitet med specifik forretningsfunktion. Applikation som bruger er software med egen identitet og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det, for eksempel en autonom software robot. Applikation, her som bruger, må ikke forveksles med for eksempel en mobil app, som er en tjeneste.
 
 
 ### Begrebsoverblik
@@ -223,6 +223,7 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 ## Principper
 
 Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse.
+Principper er retningslinier og er naturligt modstridende, anvendelsen af principperne er derfor hele tiden afvejning af hvilke principper der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man ofte må finde det bedste kompromis så begge principper tilgodeses bedst muligt.
 
 *Principper for brugerstyring*
 
@@ -567,11 +568,9 @@ Adgangskontrol er altid forretningstjenestens ansvar (herunder den dataansvarlig
 
 
 ### Forebyggelse og kontrol
-Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv. Tillidstjenester indgår typisk som en del af sikkerheden i mange forretningstjenester, og skal have ekstra fokus på kontrol og forebyggelse.
+Forebyggelse af svindel og kontrol med brugeres digitale identiteter er relevant i alle systemer, både i forretningstjenester og i tillidstjenester. Aftaler om og standarder for kontrol og audits kan være beskrevet i lovgivning, standarder (fx NSIS [18]), vilkår, aftaler, regler i føderationers grundlag mv.
 
 Regeringen har i april 2018 udgivet en ny version af National strategi for cyber- og informationssikkerhed [20], som har til formål at professionalisere statens arbejde med informationssikkerhed yderligere og øge samfundets robusthed mod cyberangreb. Strategien omfatter 25 konkrete initiativer, der skal bidrage til at øge informationssikkerheden og styrke beskyttelsen mod cyberangreb.
-
-Strategien sætter fokus på udfordringerne og skaber en klar retning for den fremadrettede indsats. Truslerne på cyber- og informationssikkerhedsområdet er dog en dynamisk størrelse, og der vil derfor løbende være fokus på effekten af de 25 initiativer.
 
 Strategiens initiativer falder indenfor 3 pejlemærker:
 
@@ -583,17 +582,13 @@ Med den stadigt stigende hackeraktivitet kloden over bliver arbejdet med at sikr
 
 Flere af de angreb mod organisationers it-infrastruktur som opleves, er rettet mod at forfalske identiteter, identifikationsmidler og adgangsbilletter, eller at give sig ud for at være den rette ihændehaver af identiteter, identifikationsmidler og adgangsbilletter. Det centrale i forhold til brugerstyring er derfor hurtigt at kunne reagere ud fra den mest aktuelle viden gennem sikkerhedsforanstaltninger.
 
-Andre angreb forsøger at begrænse tilgængeligheden gennem Distributed Denial of Service-angreb mod kritiske elementer i it-infrastrukturen, herunder fællesoffentlige brugerstyringssystemer. Center for Cybersikkerhed udsender jævnligt en opdatering af det aktuelle trusselsbillede for cyberangreb.
-
-Overvågningsfunktionen kaldes CERT, der står for Computer Emergency Response Team eller CSIRT, der står for Computer Security Incident Respinse Team (synonym til CERT).
-
-Til at styrke området har staten samlet kræfterne i Center for Cybersikkerhed (CFCS), og nogle private organisationer udstiller deres CERT eller CSIRT-funktion. Disse organisationer håndterer sikkerhedshændelser og arbejder på at forebygge sikkerhedshændelser:
+Til at styrke området har staten samlet kræfterne i Center for Cybersikkerhed - CFCS, og nogle private organisationer udstiller deres Computer Emergency Response Team - CERT eller Computer Security Incident Respinse Team - CSIRT. Disse organisationer håndterer sikkerhedshændelser og arbejder på at forebygge sikkerhedshændelser:
 
 - Netsikkerhedstjenesten i CFCS rummer statens Computer Emergency Response Team (CERT)
 - NC3 er statens National Cyber Crime Center under Rigspolitiet
-- DKCERT er Danmarks akademiske Computer Emergency Response Team under Danish e-Infrastructure Cooperation (DeIC), der overvåger netsikkerheden på forskningsnettet
+- DKCERT er Danmarks akademiske Computer Emergency Response Team under Danish e-Infrastructure Cooperation - DeIC, der overvåger netsikkerheden på forskningsnettet
 - Finanssektoren har etableret en nordisk FinansCERT, der deler oplysninger om cybertrusler på tværs af de nordiske banker.
-- Flere større virksomheder har deres eget Computer Security Incident Response Team (CSIRT).
+- Flere større virksomheder har deres eget Computer Security Incident Response Team - CSIRT.
 
 Der stilles desuden i højere grad krav om notifikation til relevante myndigheder i forbindelse med sikkerhedshændelser. Fx skal tillidstjenesteudbydere, jf. eIDAS [8], notificere Digitaliseringsstyrelsen, og i medfør af Databeskyttelsesforordningen (GDPR) [13], skal dataansvarlig notificere Datatilsynet ved sikkerhedshændelser. Som led i et beredskab skal man således sikre sig, at man kan informere de rette myndigheder inden for fastlagte tidsrammer.
 
