@@ -1176,9 +1176,47 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 
 
 # Bilag 2.	Begrebsmodel
-Begrebsmodellen findes i indeholdte Excel dokument.
 
 Begrebsmodellen er i store træk færdig, men stadig under udarbejdelse, så der kan komme mindre justeringer. Desuden vil der blive indarbejdet en ordliste med henvisninger fra accepterede termer og ord, der anvendes, men ikke er medtaget i begrebsmodellen.
+Nedenfor findes begrebsmodellen i form af oversigtsdiagrammer opdelt i områder og en liste med begreberne. Den fulde begrebsliste findes i indeholdte Excel dokument sidst i afsnittet.
+
+## Brugerstyringen
+
+<figure>
+<img src="Oversigtsdiagram - Brugerstyring.bmp" width="90%" />
+<figcaption>Oversigtsdiagram - Brugerstyring</figcaption>
+</figure>
+
+## Bruger og Entitet
+
+<figure>
+<img src="Kontekstdiagram - Bruger og entitet.bmp" width="90%" />
+<figcaption>Kontekstdiagram - Bruger og entitet</figcaption>
+</figure>
+
+## Digital identitet og autentifikationen
+
+<figure>
+<img src="Kontekstdiagram - Digital identitet og autentifikation.bmp" width="90%" />
+<figcaption>Kontekstdiagram - Digital identitet og autentifikation</figcaption>
+</figure>
+
+## Adgang
+
+<figure>
+<img src="Kontekstdiagram - Adgang.bmp" width="90%" />
+<figcaption>Kontekstdiagram - Adgange</figcaption>
+</figure>
+
+## Adgangsbilletter og attributter
+
+<figure>
+<img src="Kontekstdiagram - Adgangsbilletter og attributter.bmp" width="90%" />
+<figcaption>Kontekstdiagram - Adgangsbilletter og attributter</figcaption>
+</figure>
+
+## Begrebsliste
+
 
 | Foretrukken term | Accepteret term | Frarådet term | Definition | Eksempel | Kommentar |
 |------------------------------------|---------------------------------------------------------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
