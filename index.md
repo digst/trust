@@ -54,7 +54,13 @@ Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af bru
 2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
 Brugen af føderationer og tillidstjenester er uddybet.
 
+Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor denne referencearkitekturs scope.
+
+Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere.
+
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
+
+Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for arbejdet med tværoffentlig brugerstyring, og som var angivet med kan, bør og skal. Denne udgave følger en ny skabelon for referencearkitekturer, der i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til.
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
@@ -127,7 +133,7 @@ Ud over de her viste begreber er alle begreber forklaret i Bilag 2.
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
 -	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilhør til organisation. Tilhøret i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Tilknytning til organisation. Tilhøret i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
 -	Eksplicit adgangsrettighed der gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et apparat. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
 -	Delegering af adgangsrettigheder fra en person eller organisation til en applikation. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
@@ -160,7 +166,7 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 
 
 # Strategi
-Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der er affødt af Digitaliseringsstrategiens initiativ 8.1 og bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om fællesoffentlig digital arkitektur” [2].
+Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om fællesoffentlig digital arkitektur” [2].
 
 Digitaliseringsstrategien har tre, overordnede målsætninger:
 
@@ -287,7 +293,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 *Implikationer*
 
 -	Tjenesteudbyder skal sikre at adgangskontrollen sker i henhold til adgangspolitikken, uanset hvor og hvordan adgangskontrollen implementeres.
--	Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester i sikkerhedsdomænet.
+-	Der kan inden for føderationer være en gevinst i at vedligeholde fælles adgangspolitikker og i sammenhæng hermed et sæt fælles attributter på tværs af aktører og tjenester.
 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
 Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at en identitet ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.
@@ -457,7 +463,7 @@ Nedenstående figur viser et funktionelt overblik med fokus på samarbejdet mell
 </div>
 <br>
 
-Figuren viser de forskellige typer brugere, som anvender forretningstjenester. Tillidstjenester autentificerer og attesterer attributter om brugerne over for forretningstjenesten, så brugerne kan passere adgangskontrollen og anvende forretningstjenesten. Grundlaget for tillidstjenester, som autentificerer og attesterer (run time), er en forudgående registrering af attributter om brugerne og udstedelse af identifikationsmidler. Uddelegeringen af opgaver til tillidstjenester fordrer tillid fra forretningstjenesteudbydere.
+Figuren viser de forskellige typer brugere, som anvender forretningstjenester. Tillidstjenester autentificerer og attesterer attributter om brugerne over for forretningstjenesten, så brugerne kan passere adgangskontrollen og anvende forretningstjenesten. Grundlaget for tillidstjenester, som autentificerer og attesterer på anvendelsestidspunktet, er en forudgående registrering af attributter om brugerne og udstedelse af identifikationsmidler. Uddelegeringen af opgaver til tillidstjenester fordrer tillid fra forretningstjenesteudbydere.
 
 Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributregistrering i et konkret scenarie. Det kan således variere, hvilke attributter forskellige tjenester har behov for, når de håndhæver deres adgangspolitik.
 
@@ -483,7 +489,7 @@ I forbindelse med registreringen eller efter denne kan identitetens karakteristi
 
 I NSIS opereres der med, at identiteten kan valideres på tre forskellige sikringsniveauer, fx i forhold til om brugeren har gennemført en on-line registrering, er mødt fysisk op, har præsenteret pas/kørekort osv. Kvaliteten af en identitetssikring betegnes ofte Identity Assurance Level.
 
-> Personer registrerer selv deres Facebook-identitet, hvor kun e-mail adressen verificeres, mens NemID/MitID-identiteter får valideret navn og CPR-nummer.
+> Personer registrerer selv deres Facebook-identitet, hvor kun e-mail adressen verificeres, mens NemID/MitID-identiteter får valideret navn og evt. CPR-nummer.
 
 Efter oprettelse af den elektroniske identitet skal et identifikationsmiddel tilknyttes til identiteten, fx kodeord, PIN, fingeraftryk. Identifikationsmidler anvendes til at autentificere identiteten i modsætning til attributter, som beskriver identiteten. En udsteder af identifikationsmidler skal dels sikre sammenhængen mellem identifikationsmidlet og identiteten, og dels stå inde for identifikationsmidlets tekniske styrke - se næste afsnit. Udstederen kan knytte allerede udstedte identifikationsmidler til identiteten eller udstede et nyt identifikationsmiddel og tilknytte dette til identiteten. Styrken af identifikationsmidler er ligeledes klassificeret i NSIS og tager afsæt i bl.a. antallet af autentifikationsfaktorer, hvor resistent det er mod angreb, samt andre sikkerhedsmæssige egenskaber.
 
