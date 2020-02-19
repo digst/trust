@@ -70,15 +70,15 @@ Referencearkitekturen beskriver administrationen og kontrollen med brugeres adga
 
 De primære kapabiliteter i brugerstyring er:
 
--	*Brugeradministration* aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
--	*Adgangskontrol* proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens attributter og tjenestens adgangspolitik.
-- *Forretningstjeneste*, tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en organisation.
+-	**Brugeradministration** aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
+-	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens attributter og tjenestens adgangspolitik.
+- **Forretningstjeneste**, tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en organisation.
 
 Ved siden af forretningstjenester findes *tillidstjenester*, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
 
-*Tillidstjeneste* tjeneste der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester.
+**Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester.
 
-*Føderationer* sammenslutning af tillids- og forretningstjenester med gensidig tillid.
+**Føderationer** sammenslutning af tillids- og forretningstjenester med gensidig tillid.
 
 ### Brugere og identiteter
 I en digital sammenhæng defineres brugere som den rolle en entitet har i forhold til den tjeneste eller det system, entiteten tilgår. Rollen som bruger binder entiteter til digitale identiteter.
@@ -88,29 +88,29 @@ I en digital sammenhæng defineres brugere som den rolle en entitet har i forhol
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-*Entitet*, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en person, organisation, apparat eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
+**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en person, organisation, apparat eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
-*Digital identitet* digital persona der repræsenterer en entitet i rollen som bruger ved hjælp af et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+**Digital identitet** digital persona der repræsenterer en entitet i rollen som bruger ved hjælp af et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
-*Identifikationsmiddel* middel som en entitet får udstedt til brug for autentifikation, og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+**Identifikationsmiddel** middel som en entitet får udstedt til brug for autentifikation, og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
 Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan brugere være personer eller organisationer med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være apparater eller applikationer, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan *brugere* være personer eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
 <figcaption>Brugertyper</figcaption>
 </figure>
 
-*Person* fysisk person, der kan være levende eller død, men ikke imaginær. Fysiske personer kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+**Person** fysisk person, ikke imaginær. Fysiske personer kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-*Organisation* en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder eller applikation.
+**Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, apparat eller applikation.
 
-*Apparat* fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede. Apparater der kan optræde som bruger har sin egen identitet. I denne arkitektur er behandles kun apparater eller IoT, som direkte optræder som bruger eller tjeneste. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller applikationsbruger.
+**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater der kan optræde som bruger har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller tjeneste. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en applikation.
 
-*Applikation* software entitet med specifik forretningsfunktion. Applikation som bruger er software med egen identitet og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det, for eksempel en autonom software robot. Applikation, her som bruger, må ikke forveksles med for eksempel en mobil app, som er en tjeneste.
+**Applikation** software entitet med specifik forretningsfunktion. Applikation som bruger, er software med egen identitet og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en autonom software robot. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en tjeneste.
 
 
 ### Begrebsoverblik
@@ -408,9 +408,9 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-Det øverste lag i figuren omhandler styringen i form af ledelse af informationssikkerhed. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [13]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [13]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-På baggrund heraf udformes dels politikker for adgang til egne tjenester (adgangspolitikker), som beskriver kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
+**Administration af tjenester** definerer på baggrund af den besluttede informationssikker, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
 For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) samt autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
@@ -1043,7 +1043,7 @@ Ovenstående forretningsbehov vurderes at kunne blive opfyldt på et teknisk pla
 Uden ovenstående specifikationer og byggeblokke er der risiko for, at understøttelsen af apps sker gennem isolerede implementeringer, hvor hver applikation etablerer egne byggeblokke og tillidstjenester i mangel på en fælles model. Dette kan føre til manglende sammenhæng og interoperabilitet samt uens brugeroplevelser og sikkerhedsniveauer.
 
 ## Brugerstyring for Apparater
-Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i arkitekturen er gældende også for apparater. Afhængigt af hvordan apparater optræder skal der for:
+Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i arkitekturen er gældende også for apparater. Afhængigt af hvordan apparater optræder skal:
 
 **Apparat som tjeneste** skal have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
 
