@@ -7,7 +7,7 @@
         <path d="M0 0 L774 0 L774 408 L0 408 L0 0 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
-        <path d="M0 -1 L774 -1 L774 407 L0 407 L0 -1 Z"/>
+        <path d="M65 4 L839 4 L839 412 L65 412 L65 4 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3">
         <path d="M0 0 L0 18 L111 18 L111 0 Z"/>
@@ -64,253 +64,253 @@
 ]]>
       </script>
     </defs>
-    <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="translate(0,1)" stroke="white">
-      <rect x="0" width="774" height="408" y="-1" clip-path="url(#clipPath2)" stroke="none"/>
+    <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="translate(-65,-4)" stroke="white">
+      <rect x="65" width="774" height="408" y="4" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.0" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="216.968" y="198.362" fill="none" width="148.4757" rx="4" ry="4" height="193.6042"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="281.968" y="203.362" fill="none" width="152.8453" rx="4" ry="4" height="193.6042"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="238.7025" xml:space="preserve" y="217.0358" stroke="none">adgangskontrol</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="305.8873" xml:space="preserve" y="222.0358" stroke="none">adgangskontrol</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.1" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="15.9181" y="14.1621" fill="none" width="742.1549" rx="4" ry="4" height="82.2795"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="80.9181" y="19.1621" fill="none" width="742.1549" rx="4" ry="4" height="82.2795"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="286.9995" xml:space="preserve" y="32.8359" stroke="none">ledelse af informationssikkerhed</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="351.9995" xml:space="preserve" y="37.8359" stroke="none">ledelse af informationssikkerhed</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.2" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="15.9181" y="198.362" fill="none" width="189.7659" rx="4" ry="4" height="193.6042"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="80.9181" y="203.362" fill="none" width="189.7659" rx="4" ry="4" height="193.6042"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="26.3977" xml:space="preserve" y="217.0358" stroke="none">administration af brugere</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="91.3977" xml:space="preserve" y="222.0358" stroke="none">administration af brugere</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.3" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="28.8015" y="238.2894" fill="none" width="163.9991" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="93.8015" y="243.2894" fill="none" width="163.9991" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="66.0633" xml:space="preserve" y="257.7911" stroke="none">udstedelse af</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="131.0633" xml:space="preserve" y="262.7911" stroke="none">udstedelse af</text>
           </g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="42.346" xml:space="preserve" y="273.4317" stroke="none">identifikationsmidler</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="107.346" xml:space="preserve" y="278.4317" stroke="none">identifikationsmidler</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.4" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="28.8015" y="305.6327" fill="none" width="163.9991" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="93.8015" y="310.6327" fill="none" width="163.9991" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="61.7874" xml:space="preserve" y="325.1343" stroke="none">registrering af </text>
-            <text x="77.7459" xml:space="preserve" y="340.775" stroke="none">attributter</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="126.7874" xml:space="preserve" y="330.1343" stroke="none">registrering af </text>
+            <text x="142.7459" xml:space="preserve" y="345.775" stroke="none">attributter</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.5" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="375.0778" y="198.362" fill="none" width="163.9991" rx="4" ry="4" height="193.6042"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="444.9249" y="203.362" fill="none" width="163.9991" rx="4" ry="4" height="193.6042"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(31,73,125)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(31,73,125)" stroke-miterlimit="1.45">
-            <text x="397.157" xml:space="preserve" y="217.0358" stroke="none">forretningstjenester</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(31,73,125)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(31,73,125)" stroke-miterlimit="1.45">
+            <text x="467.0041" xml:space="preserve" y="222.0358" stroke="none">forretningstjenester</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.6" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="228.4924" y="245.6327" fill="none" width="127.0199" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="293.4924" y="250.6327" fill="none" width="131.3895" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="244.1678" xml:space="preserve" y="265.4862" stroke="none">autentifikation</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="311.3527" xml:space="preserve" y="270.4862" stroke="none">autentifikation</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.7" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="228.4924" y="332.621" fill="none" width="127.0199" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="293.4924" y="337.621" fill="none" width="131.3895" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="268.2816" xml:space="preserve" y="352.1227" stroke="none">udføre </text>
-            <text x="239.4989" xml:space="preserve" y="367.7633" stroke="none">adgangskontrol</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="335.4664" xml:space="preserve" y="357.1227" stroke="none">udføre </text>
+            <text x="306.6837" xml:space="preserve" y="372.7633" stroke="none">adgangskontrol</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.8" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="15.9181" y="115.0888" fill="none" width="523.1588" rx="4" ry="4" height="75.6408"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="80.9181" y="120.0888" fill="none" width="528.0059" rx="4" ry="4" height="75.6408"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="197.3462" xml:space="preserve" y="133.7626" stroke="none">administration af tjenester</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="264.7697" xml:space="preserve" y="138.7626" stroke="none">administration af tjenester</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.9" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="294.255" y="149.3769" fill="none" width="189.7659" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="359.255" y="154.3769" fill="none" width="189.7659" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="309.8001" xml:space="preserve" y="169.2304" stroke="none">udforme adgangspolitik</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="374.8001" xml:space="preserve" y="174.2304" stroke="none">udforme adgangspolitik</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.10" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="47.1167" y="50.2598" fill="none" width="209.281" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="112.1167" y="55.2598" fill="none" width="209.281" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-            <text x="57.9818" xml:space="preserve" y="70.1133" stroke="none">godkende sikkerhedspolitikker</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+            <text x="122.9818" xml:space="preserve" y="75.1133" stroke="none">godkende sikkerhedspolitikker</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.11" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="487.8062" y="50.2598" fill="none" width="171.4085" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="552.8062" y="55.2598" fill="none" width="171.4085" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-            <text x="510.4694" xml:space="preserve" y="70.1133" stroke="none">beskytte persondata</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+            <text x="575.4694" xml:space="preserve" y="75.1133" stroke="none">beskytte persondata</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.12" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="286.3977" y="50.2598" fill="none" width="171.4085" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="351.3977" y="55.2598" fill="none" width="171.4085" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-            <text x="325.4193" xml:space="preserve" y="70.1133" stroke="none">acceptere risici</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+            <text x="390.4193" xml:space="preserve" y="75.1133" stroke="none">acceptere risici</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.13" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="548.7921" y="115.0888" fill="none" width="209.281" rx="4" ry="4" height="276.8774"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="6,2" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="623.4052" y="120.0888" fill="none" width="199.6679" rx="4" ry="4" height="276.8774"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="578.7192" xml:space="preserve" y="133.7626" stroke="none"> forebyggelse og kontrol</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="648.5258" xml:space="preserve" y="138.7626" stroke="none"> forebyggelse og kontrol</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.14" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="567.7283" y="163.0759" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="637.5349" y="168.0759" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="579.8813" xml:space="preserve" y="182.5775" stroke="none"> forebygge og overvåge</text>
-            <text x="623.8569" xml:space="preserve" y="198.2182" stroke="none">regelbrud</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="649.6879" xml:space="preserve" y="187.5775" stroke="none"> forebygge og overvåge</text>
+            <text x="693.6635" xml:space="preserve" y="203.2182" stroke="none">regelbrud</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.15" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="567.7283" y="238.0128" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="637.5349" y="243.0128" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="581.8261" xml:space="preserve" y="257.5145" stroke="none">forebygge og overvåge</text>
-            <text x="600.519" xml:space="preserve" y="273.1552" stroke="none">identitetsmisbrug</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="651.6327" xml:space="preserve" y="262.5145" stroke="none">forebygge og overvåge</text>
+            <text x="670.3256" xml:space="preserve" y="278.1552" stroke="none">identitetsmisbrug</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.16" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="567.7283" y="313.9846" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="637.5349" y="318.9846" fill="none" width="171.4085" rx="4" ry="4" height="44.937"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
-            <text x="581.8261" xml:space="preserve" y="333.4863" stroke="none">forebygge og overvåge</text>
-            <text x="630.081" xml:space="preserve" y="349.1269" stroke="none">indbrud</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" font-style="italic" stroke="gray" stroke-miterlimit="1.45">
+            <text x="651.6327" xml:space="preserve" y="338.4863" stroke="none">forebygge og overvåge</text>
+            <text x="699.8876" xml:space="preserve" y="354.1269" stroke="none">indbrud</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.17" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="76.4787" y="149.3769" fill="none" width="178.6458" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="141.4787" y="154.3769" fill="none" width="178.6458" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="96.9671" xml:space="preserve" y="169.2304" stroke="none">udforme tillidspolitik</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="161.9671" xml:space="preserve" y="174.2304" stroke="none">udforme tillidspolitik</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.18" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="228.4924" y="289.1268" fill="none" width="126.6825" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="293.4924" y="294.1268" fill="none" width="131.0521" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="256.4405" xml:space="preserve" y="308.9803" stroke="none">attestation</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="rgb(148,0,39)" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="rgb(148,0,39)" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="299.5184" xml:space="preserve" y="313.9803" stroke="none">attributattestation</text>
           </g>
         </g>
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.19" onmousemove="ShowTooltip(evt)">
       <a target="_blank" xlink:type="simple" xlink:href="http://data.gov.dk" xlink:show="new">
-        <g stroke-linecap="butt" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
-          <rect x="385.1748" y="286.9389" fill="none" width="143.8862" rx="4" ry="4" height="30"/>
+        <g stroke-linecap="butt" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke="gray" stroke-miterlimit="1.45">
+          <rect x="455.0219" y="291.9389" fill="none" width="143.8862" rx="4" ry="4" height="30"/>
         </g>
         <g>
-          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,0,1)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" font-weight="bold" stroke-miterlimit="1.45">
-            <text x="392.5695" xml:space="preserve" y="306.7924" stroke="none">forretningsfunktion</text>
+          <g stroke-linecap="butt" font-size="14px" transform="matrix(1,0,0,1,-65,-4)" fill="gray" text-rendering="geometricPrecision" font-family="'Arial'" shape-rendering="geometricPrecision" stroke="gray" font-weight="bold" stroke-miterlimit="1.45">
+            <text x="462.4166" xml:space="preserve" y="311.7924" stroke="none">forretningsfunktion</text>
           </g>
         </g>
       </a>
