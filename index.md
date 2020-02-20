@@ -77,50 +77,50 @@ Referencearkitekturen beskriver administrationen af og kontrollen med brugeres a
 De primære kapabiliteter i brugerstyring er:
 
 -	**Brugeradministration** aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
--	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens **attributter** og tjenestens **adgangspolitik**.
-- **Forretningstjeneste**, **tjeneste** der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en **organisation**.
+-	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens *attributter* og tjenestens *adgangspolitik*.
+- **Forretningstjeneste**, **tjeneste** der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en *organisation*.
 
-Ved siden af **forretningstjenester** findes **tillidstjenester**, der udfører betroede funktioner, der understøtter **brugerstyring** i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af **føderationer**.
+Ved siden af **forretningstjenester** findes **tillidstjenester**, der udfører betroede funktioner, der understøtter *brugerstyring* i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af *føderationer*.
 
-**Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter **brugerstyring** i **forretningstjenester**.
+**Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter *brugerstyring* i *forretningstjenester*.
 
-**Føderationer** sammenslutning af **tillids- og forretningstjenester** med gensidig tillid.
+**Føderationer** sammenslutning af *tillids- og forretningstjenester* med gensidig tillid.
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres **brugere** som den rolle, en **entitet** har i forhold til den **tjeneste** eller det system, entiteten tilgår. Rollen som **bruger** binder entiteter til digitale identiteter.
+I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i forhold til den *tjeneste* eller det system, entiteten tilgår. Rollen som *bruger* binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en **person**, **organisation**, **apparat** eller **applikation**, som ønsker adgang til en **tjeneste**. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
+**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
-**Digital identitet** digital persona der repræsenterer en **entitet** i rollen som **bruger** ved hjælp af et sæt **attributter**. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+**Digital identitet** digital persona der repræsenterer en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
-**Identifikationsmiddel** middel som en **entitet** får udstedt til brug for **autentifikation**, og som benytter en eller flere **autentifikationsfaktorer**. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+**Identifikationsmiddel** middel som en *entitet* får udstedt til brug for *autentifikation*, og som benytter en eller flere *autentifikationsfaktorer*. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige **digitale identiteter** og mange forskellige **identifikationsmidler**. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan **brugere** være personer eller **organisationer** med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være **apparater** eller **applikationer**, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan *brugere* være personer eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
 <figcaption>Brugertyper</figcaption>
 </figure>
 
-**Person** fysisk person, ikke imaginær. Fysiske personer kan have **digitale identiteter** som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+**Person** fysisk person, ikke imaginær. Fysiske personer kan have *digitale identiteter* som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-**Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, **apparat** eller **applikation**.
+**Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, *apparat* eller *applikation*.
 
-**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater, der kan optræde som **bruger**, har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller **tjeneste**. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en **applikation**.
+**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater, der kan optræde som *bruger*, har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en *applikation*.
 
-**Applikation** software entitet med specifik forretningsfunktion. Applikation som **bruger**, er software med egen **digital identitet** og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en **autonom software robot**. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en **tjeneste**.
+**Applikation** software entitet med specifik forretningsfunktion. Applikation som *bruger*, er software med egen *digital identitet* og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en *autonom software robot*. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en *tjeneste*.
 
 
 ### Begrebsoverblik
-I forbindelse med implementeringen af arkitekturen, benyttes **adgangsbilletter** til at samle de **attributter** der indgår i **adgangskontrollen** for en given **tjeneste**, herunder både **digital identitet**, rettigheder og andre attributter.
+I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* til at samle de *attributter* der indgår i *adgangskontrollen* for en given *tjeneste*, herunder både *digital identitet*, rettigheder og andre attributter.
 
 <figure>
 <img src="Begrebsoverblik.png" width="100%"/>
@@ -134,9 +134,9 @@ Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindel
 
 -	**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
 -	Tilknytning til **organisation**. Tilknytningen i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
--	Eksplicit **adgangsrettighed** der gives fra en **organisation** til en **person**. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+-	Eksplicit **adgangsrettighed** der gives fra en *organisation* til en *person*. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
--	Delegering af **adgangsrettigheder** fra en person eller organisation til en **applikation**. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+-	Delegering af **adgangsrettigheder** fra en person eller organisation til en *applikation*. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
 -	En **applikation** kan have særlige rettigheder på grund af enheden den afvikles på.
 
 ## Tilblivelse, styring og andre referencearkitekturer
