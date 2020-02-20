@@ -54,18 +54,18 @@ Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af bru
 2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og IoT - Internet of Things.
 Brugen af føderationer og tillidstjenester er uddybet.
 
-Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor denne referencearkitekturs scope.
+Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor scope af denne referencearkitektur.
 
 Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere.
 
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i diagrammer og listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for arbejdet med tværoffentlig brugerstyring, og som var angivet med kan, bør og skal. Denne udgave følger en ny skabelon for referencearkitekturer, der i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til.
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
 ## Centrale begreber
-Referencearkitekturen beskriver administrationen og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige organisationer, og anvendes af borgere eller andre organisationer og deres ansatte.
+Referencearkitekturen beskriver administrationen af og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige organisationer, og anvendes af borgere eller andre organisationer og deres ansatte.
 
 
 
@@ -77,50 +77,50 @@ Referencearkitekturen beskriver administrationen og kontrollen med brugeres adga
 De primære kapabiliteter i brugerstyring er:
 
 -	**Brugeradministration** aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
--	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens attributter og tjenestens adgangspolitik.
-- **Forretningstjeneste**, tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en organisation.
+-	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens **attributter** og tjenestens **adgangspolitik**.
+- **Forretningstjeneste**, **tjeneste** der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade, og som er eksplicit styret af en **organisation**.
 
-Ved siden af forretningstjenester findes *tillidstjenester*, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige *tillidstjenester* og *forretningstjenester* samarbejder, typisk i sammenslutninger i form af føderationer.
+Ved siden af **forretningstjenester** findes **tillidstjenester**, der udfører betroede funktioner, der understøtter **brugerstyring** i forretningstjenester. I denne referencearkitektur beskrives hvordan forskellige tillidstjenester og forretningstjenester samarbejder, typisk i sammenslutninger i form af **føderationer**.
 
-**Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester.
+**Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter **brugerstyring** i **forretningstjenester**.
 
-**Føderationer** sammenslutning af tillids- og forretningstjenester med gensidig tillid.
+**Føderationer** sammenslutning af **tillids- og forretningstjenester** med gensidig tillid.
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres brugere som den rolle en entitet har i forhold til den tjeneste eller det system, entiteten tilgår. Rollen som bruger binder entiteter til digitale identiteter.
+I en digital sammenhæng defineres **brugere** som den rolle, en **entitet** har i forhold til den **tjeneste** eller det system, entiteten tilgår. Rollen som **bruger** binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en person, organisation, apparat eller applikation, som ønsker adgang til en tjeneste. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
+**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en **person**, **organisation**, **apparat** eller **applikation**, som ønsker adgang til en **tjeneste**. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
 
-**Digital identitet** digital persona der repræsenterer en entitet i rollen som bruger ved hjælp af et sæt attributter. En digital identitet kan indeholde data der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+**Digital identitet** digital persona der repræsenterer en **entitet** i rollen som **bruger** ved hjælp af et sæt **attributter**. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
-**Identifikationsmiddel** middel som en entitet får udstedt til brug for autentifikation, og som benytter en eller flere autentifikationsfaktorer. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
+**Identifikationsmiddel** middel som en **entitet** får udstedt til brug for **autentifikation**, og som benytter en eller flere **autentifikationsfaktorer**. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har - kodeord, noget kun brugeren er – biometri, eller noget kun brugeren er i besiddelse af - enhed.
 
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige identiteter og mange forskellige identifikationsmidler. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige **digitale identiteter** og mange forskellige **identifikationsmidler**. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan *brugere* være personer eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan **brugere** være personer eller **organisationer** med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være **apparater** eller **applikationer**, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
 <figcaption>Brugertyper</figcaption>
 </figure>
 
-**Person** fysisk person, ikke imaginær. Fysiske personer kan have identiteter som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
+**Person** fysisk person, ikke imaginær. Fysiske personer kan have **digitale identiteter** som borger, medarbejder eller deltage i fællesskaber, som for eksempel Facebook.
 
-**Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, apparat eller applikation.
+**Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, **apparat** eller **applikation**.
 
-**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater der kan optræde som bruger har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller tjeneste. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en applikation.
+**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater, der kan optræde som **bruger**, har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller **tjeneste**. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en **applikation**.
 
-**Applikation** software entitet med specifik forretningsfunktion. Applikation som bruger, er software med egen identitet og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en autonom software robot. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en tjeneste.
+**Applikation** software entitet med specifik forretningsfunktion. Applikation som **bruger**, er software med egen **digital identitet** og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en **autonom software robot**. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en **tjeneste**.
 
 
 ### Begrebsoverblik
-I forbindelse med implementeringen af arkitekturen, benyttes adgangsbilletter til at samle de attributter der indgår i adgangskontrollen for en given tjeneste, herunder både identitet, rettigheder og andre attributter.
+I forbindelse med implementeringen af arkitekturen, benyttes **adgangsbilletter** til at samle de **attributter** der indgår i **adgangskontrollen** for en given **tjeneste**, herunder både **digital identitet**, rettigheder og andre attributter.
 
 <figure>
 <img src="Begrebsoverblik.png" width="100%"/>
@@ -132,12 +132,12 @@ Ud over de her viste begreber er alle begreber forklaret i Bilag 2.
 ### Relationer imellem brugere
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
--	Fuldmagt der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilknytning til organisation. Tilhøret i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
--	Eksplicit adgangsrettighed der gives fra en organisation til en person. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
--	Bruger af et apparat. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
--	Delegering af adgangsrettigheder fra en person eller organisation til en applikation. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
--	En applikation kan have særlige rettigheder på grund af enheden den afvikles på.
+-	**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
+-	Tilknytning til **organisation**. Tilknytningen i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Eksplicit **adgangsrettighed** der gives fra en **organisation** til en **person**. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
+-	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
+-	Delegering af **adgangsrettigheder** fra en person eller organisation til en **applikation**. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
+-	En **applikation** kan have særlige rettigheder på grund af enheden den afvikles på.
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
@@ -155,7 +155,7 @@ En række offentlige domæner har udfærdiget egne arkitekturer på brugerstyrin
 
 ## Anvendt metode, notation og signaturforklaring
 
-Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af FDA og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i sekretariatet for Styregruppen for Data og Arkitektur under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1].
+Metodemæssigt er referencearkitekturen udarbejdet inden for rammerne af FDA og følger så vidt muligt den fælles skabelon for referencearkitekturer, som er udarbejdet i sekretariatet for Udvalget for arkitektur og standarder (UAS) under Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1].
 
 I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og definitioner, markerer:
 
@@ -193,11 +193,11 @@ En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren
 - Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
 - Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
 
-I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder og virksomhed siger god for det.
+I den nye NemLog-in3 løsning kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler, der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder *og* virksomhed siger god for det.
 
 ### Sikkerhed og tillid
 Tjenester skal til enhver tid bygge på tilstrækkelig sikkerhed, så borgernes data ikke kompromitteres eller tjenesterne misbruges. Mange offentlige tjenester rummer fortrolige data (herunder følsomme personoplysninger), som kræver høj sikkerhed, mens andre er mindre kritiske og derfor har lavere sikkerhedsbehov.
-Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester, der udbydes og den sikkerhed, de beskyttes med. Når tjenester bliver mere sammensatte, skal denne tillid kunne opfyldes af alle tjenester, der er omfattet.  
+Det er helt centralt for realiseringen af en effektiv digitalisering, at brugerne har tillid til de tjenester, der udbydes, og den sikkerhed, de beskyttes med. Når tjenester bliver mere sammensatte, skal denne tillid kunne opfyldes af alle tjenester, der er omfattet.  
 
 ### Delegering og fuldmagt
 En del borgere og virksomheder har behov for at kunne give andre fuldmagt til at løse opgaver for sig. Myndigheder er omfattet af reglerne om partsrepræsentation, og deres digitale tjenester skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
@@ -242,7 +242,7 @@ Principper er retningslinier og er naturligt modstridende, anvendelsen af princi
 
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
-Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjening)forløb.
+Brugere vil i deres opgaveløsning og dialog med det offentlige skulle betjene sig af en række forretningstjenester og disse bør opleves sammenhængende, uanset hvor mange tjenester eller myndigheder, der er involveret i et (selvbetjenings)forløb.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres, samt princip 5: Processer optimeres på tværs.
 
@@ -372,7 +372,7 @@ De mest relevante love og forordninger, der har særligt fokus på brugerstyring
 - Databeskyttelsesloven [14] som i dansk kontekst supplerer GDPR.
 - Forvaltningsloven [15] som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
 - Lov om udstedelse af NemID [11], der regulerer borgeres og virksomheders retsstilling gennem et klart lovgrundlag for forvaltningen NemID. Loven vil blive erstattet af den kommende lov om MitID.
-- NIS direktivet er en EU-regulering (EU 2016/1148) der har til formål at styrke cybersikkerhedsområdet. Reguleringen stiller krav til medlemstaternes kapabiliteter, til samarbejde på tværs af medlemslande, og til supervision af kritiske sektorer i medlemslandene (fx forsyningsvirksomheder, transport, finansielle virksomheder mv.).  Formålet med er bl.a. at harmonisere og skærpe medlems­staternes regler om sikkerhed for kritisk infrastruktur i erkendelse af, at sikker­hedshændelser udgør en hyppig trussel for net- og informations­systemer, og at disse sikkerheds­hændelser kan få afgørende økonomiske og samfunds­mæssige konsekvenser. Implementeringen af NIS-direktivet er gennemført i dansk ret via flere love og bekendt­gørelser fra maj 2018 med forskellige administrerende myndigheder.
+- NIS direktivet [42] er en EU-regulering der har til formål at styrke cybersikkerhedsområdet. Reguleringen stiller krav til medlemstaternes kapabiliteter, til samarbejde på tværs af medlemslande, og til supervision af kritiske sektorer i medlemslandene (fx forsyningsvirksomheder, transport, finansielle virksomheder mv.).  Formålet med er bl.a. at harmonisere og skærpe medlems­staternes regler om sikkerhed for kritisk infrastruktur i erkendelse af, at sikker­hedshændelser udgør en hyppig trussel for net- og informations­systemer, og at disse sikkerheds­hændelser kan få afgørende økonomiske og samfunds­mæssige konsekvenser. Implementeringen af NIS-direktivet er gennemført i dansk ret via flere love og bekendt­gørelser fra maj 2018 med forskellige administrerende myndigheder.
 
 Dertil kan der være særregulering inden for visse domæner som fx sundhedsområdet.
 
@@ -1049,13 +1049,13 @@ Ovenstående forretningsbehov vurderes at kunne blive opfyldt på et teknisk pla
 Uden ovenstående specifikationer og byggeblokke er der risiko for, at understøttelsen af apps sker gennem isolerede implementeringer, hvor hver applikation etablerer egne byggeblokke og tillidstjenester i mangel på en fælles model. Dette kan føre til manglende sammenhæng og interoperabilitet samt uens brugeroplevelser og sikkerhedsniveauer.
 
 ## Brugerstyring for Apparater
-Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i arkitekturen er gældende også for apparater. Afhængigt af hvordan apparater optræder skal:
+Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i denne referencearkitektur er gældende også for apparater. Afhængigt af hvordan apparater optræder skal:
 
-**Apparat som tjeneste** skal have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
+**Apparat** som **tjeneste** have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
 
-**Apparat som bruger** skal have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
+**Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
-Standardisering på området er kun i sin vorden, men for eksempel W3C har arbejde i gang omkring Web of Things - WoT, som er deres begreb for IoT. Det indeholder en række gode eksempler og forslag til standardisering, ref. [x] Web of Things at W3C, https://www.w3.org/WoT/
+Standardisering på området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
@@ -1173,6 +1173,8 @@ Nedenstående liste viser kilder og baggrundsmateriale, der henvises til i Refer
 | 39 | W3C | Decentralized Identifiers (DIDs) v1.0,  https://www.w3.org/TR/did-core/ |
 | 40 | Digitaliseringsstyrelsen | OIO Basic Privilege Profile, version 1.2, https://digst.dk/media/20999/oiosaml-basic-privilege-profile-1_2.pdf |
 | 41 | Digitaliseringsstyrelsen | Fælles sprog for datakvalitet, https://arkitektur.digst.dk/metoder/faelles-sprog-datakvalitet |
+| 42 | Europaparlamentet og Rådet | Direktiv (EU) 2016/1148 af 6. juli 2016 om foranstaltninger, der skal sikre et højt fælles sikkerhedsniveau for net- og informationssystemer i hele Unionen (NIS), https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32016L1148 |
+| 43 | W3C | Web of Things (WoT) Security and Privacy Guidelines,  https://www.w3.org/TR/2019/NOTE-wot-security-20191106/ |
 
 
 # Bilag 2.	Begrebsmodel
@@ -1268,7 +1270,6 @@ Nedenfor findes begrebsmodellen i form af oversigtsdiagrammer opdelt i områder 
 |<font color="#1e4f79"> person </font>|   |   | fysisk person der kan være levende eller død,  men ikke imaginær |   | Kun levende personer kan optræde optræde i brugerstyringssammnehæng |
 |<font color="#1e4f79"> samtykke </font>|   |   | frivilligt afgivet tilladelse til en bestemt handling | fx deling eller indhentning af data |   |
 |<font color="#ff0000"> self-asserted claim </font>|   |   | attribut hvis værdi er oplyst af brugeren og som ikke er attesteret eller verificeret |   | Kan medtages i adgangsbilletten, men det bør fremgå at det ikke er verificeret. |
-|<font color="#ff0000"> sikkerhedsdomæne </font>|   |   |   |   |   |
 |<font color="#1e4f79"> sikringsniveau </font>| LoA; autenticitetssikringsniveau |   | graden af tillid til en autentificeret identitet  |   | Gælder ift. NSIS-standarden. Niveauerne er: Lav, Betydelig, Høj. |
 |<font color="#1e4f79"> software robot </font>|   |   | applikation der automatiserer opgaver der ellers skulle udføres manuelt  |   |   |
 |<font color="#ff0000"> tillidspolitik </font>|   |   | politik for anvendelse af eksterne parter i forbindelse med brugerstyring |   |   |
