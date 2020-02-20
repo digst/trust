@@ -1270,7 +1270,6 @@ Nedenfor findes begrebsmodellen i form af oversigtsdiagrammer opdelt i områder 
 |<font color="#1e4f79"> person </font>|   |   | fysisk person der kan være levende eller død,  men ikke imaginær |   | Kun levende personer kan optræde optræde i brugerstyringssammnehæng |
 |<font color="#1e4f79"> samtykke </font>|   |   | frivilligt afgivet tilladelse til en bestemt handling | fx deling eller indhentning af data |   |
 |<font color="#ff0000"> self-asserted claim </font>|   |   | attribut hvis værdi er oplyst af brugeren og som ikke er attesteret eller verificeret |   | Kan medtages i adgangsbilletten, men det bør fremgå at det ikke er verificeret. |
-|<font color="#ff0000"> sikkerhedsdomæne </font>|   |   |   |   |   |
 |<font color="#1e4f79"> sikringsniveau </font>| LoA; autenticitetssikringsniveau |   | graden af tillid til en autentificeret identitet  |   | Gælder ift. NSIS-standarden. Niveauerne er: Lav, Betydelig, Høj. |
 |<font color="#1e4f79"> software robot </font>|   |   | applikation der automatiserer opgaver der ellers skulle udføres manuelt  |   |   |
 |<font color="#ff0000"> tillidspolitik </font>|   |   | politik for anvendelse af eksterne parter i forbindelse med brugerstyring |   |   |
