@@ -114,9 +114,11 @@ I forbindelse med brugerstyring kan *brugere* være personer eller *organisation
 
 **Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, *apparat* eller *applikation*.
 
-**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Apparater, der kan optræde som *bruger*, har sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater der virker i lukkede kredsløb og som tilgås via et system betragtes som enten en tjeneste eller en *applikation*.
+**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Et apparat, der kan agere som *bruger*, optræder med sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater, der virker i lukkede kredsløb og som tilgås via et system, betragtes som enten en tjeneste eller en *applikation*.
 
-**Applikation** software entitet med specifik forretningsfunktion. Applikation som *bruger*, er software med egen *digital identitet* og derfor uafhængige af den platform, det er installeret på og den person eller det system der afvikler det. Det kan for eksempel være et batch program eller en *autonom software robot*. Applikation - her som bruger, må ikke forveksles med for eksempel en mobil app, som er en *tjeneste*.
+**Applikation** software entitet med specifik forretningsfunktion. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
+
+Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile Apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny identitet. En mobilapplikation er en særlig type *Applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
 
 
 ### Begrebsoverblik
@@ -137,7 +139,7 @@ Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindel
 -	Eksplicit **adgangsrettighed** der gives fra en *organisation* til en *person*. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
 -	Delegering af **adgangsrettigheder** fra en person eller organisation til en *applikation*. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
--	En **applikation** kan have særlige rettigheder på grund af enheden den afvikles på.
+
 
 ## Tilblivelse, styring og andre referencearkitekturer
 
