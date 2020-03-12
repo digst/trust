@@ -1103,7 +1103,7 @@ IOT apparater vil i nogle tilfælde arve rettigheder fra en person eller organis
 
 IOT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
 
-Adgangspolitikken for tjenester i IOT apparater bør altså specifikt tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i forhåndenværende referencearkitektur.
+Adgangspolitikken for tjenester i IOT apparater bør altså tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i forhåndenværende referencearkitektur.
 
 
 ## Digitale fuldmagter
