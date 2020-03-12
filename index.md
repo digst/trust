@@ -24,7 +24,53 @@ Slim Build Artifact:
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
-[Skrives inden offentlig kommentering]
+Der er de senere år etableret en række fælles løsninger for brugerstyring i samarbejde mellem forskellige offentlige parter. Disse løsninger sikrer sammenhæng inden for afgrænsede områder, men der er fortsat ikke tilstrækkelig overordnet fællesoffentlig sammenhæng i initiativer og løsninger.
+
+Formålet med referencearkitekturen er således at sætte rammer for at målrette og strukturere indsatsen med at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+
+Foruden brugerstyring af personer berører denne version af referencearkitekturen også særlige aspekter vedrørende brugerstyring af apparater, organisationer og applikationer, der samlet betegnes Non-person entities (NPE) og Internet of Things (IoT).
+
+Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises.
+
+**Aktiviteter i forbindelse med brugerstyring**
+Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i administration og adgangskontrol.
+Hovedaktiviteterne i administration af brugernes digitale identiteter er:
+
+- **Registrering og udstedelse af identifikationsmidler**, der anvendes til at godkende og verificere en brugers digitale identitet.
+- **Registrering af attributter** i form af egenskaber, der knyttes til en digital identitet fx brugernavn, roller og adgangsrettigheder.
+
+Hovedaktiviteterne i adgangskontrol er:
+
+- **Autentifikation**, hvor en brugers digitale identitet bliver godkendt og verificeret.
+- **Attributattestation**, som udstiller og verificerer en digital identitets egenskaber (attributter).
+-	**Udførelse af adgangskontrol**, hvor det afgøres hvilke funktioner og data, en bruger får adgang til, hvis der gives adgang.
+
+**Principper for brugerstyring**
+Referencearkitekturen for brugerstyring fastlægger en række principper, der understøtter de overordnede visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne uddyber arkitekturprincipperne fra Hvidbog om fællesoffentlig digital arkitektur [2] mht. brugerstyring:
+
+1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
+2.	Brugerstyringsløsninger respekterer brugernes privatliv.
+3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange.
+4.	Brugerstyring er adskilt fra forretningstjenester.
+5.	Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester.
+6.	Tjenesteudbydere indgår i føderationer.
+
+Forretningsbehov og de nævnte principper peger entydigt på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Det betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne ikke selv håndtere administration af brugerstyringen.
+
+Der er derfor valgt en model for adgangsstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den kan desuden være digitalt signeret af brugerstyringsløsningen, så den ikke kan forfalskes eller manipuleres.
+
+**Arkitekturmønstre**
+Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner ligger i den samme organisation til økosystemer, hvor mange parter indgår:
+
+1.	Forretningstjeneste med egen autentifikationstjeneste.
+2.	Delt, intern autentifikationstjeneste.
+3.	Føderation med central autentifikationstjeneste.
+4.	Fælles domænebroker for decentrale autentifikationstjenester.
+5.	Interføderation mellem domæner.
+
+De to første mønstre forekommer mange steder, men har en række udfordringer med hensyn til sammenhæng, brugervenlighed, skalerbarhed og sikkerhed. Derfor anbefales det, at man ikke anvender dem, men i stedet håndterer brugerstyringen i de 3 øvrige mønstre.
+
+I referencearkitekturen henvises til en række standarder for registrering af brugere, akkreditiver og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
 
 
 # Introduktion
