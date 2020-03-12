@@ -1095,6 +1095,17 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 Standardisering på området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
+IOT apparater er sensorer eller aktuatorer, der interagere og kommunikere med den fysiske verden igennem en intelligent tjeneste, på en infrastruktur af sammenhængende objekter, personer, systemer og informationsressourcer. Fordi IOT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
+
+Hvis et apparat indsamler data om en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere, uden at resten af IOT infrastrukturen også har skiftet ejer. Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IOT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
+
+IOT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IOT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
+
+IOT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
+
+Adgangspolitikken for tjenester i IOT apparater bør altså specifikt tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i forhåndenværende referencearkitektur.
+
+
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
 
