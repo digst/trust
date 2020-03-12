@@ -23,13 +23,13 @@ Slim Build Artifact:
 
 <h2 class="no-num">Summary (in english)</h2>
 <h2 class="no-num">Resume</h2>
-Der er de senere år etableret en række fælles løsninger for brugerstyring i samarbejde mellem forskellige offentlige parter. Disse løsninger sikrer sammenhæng inden for afgrænsede områder, men der er fortsat ikke tilstrækkelig overordnet fællesoffentlig sammenhæng i initiativer og løsninger.
+Der er de senere år etableret en række fælles løsninger for brugerstyring i samarbejde mellem forskellige offentlige parter. Disse løsninger sikrer sammenhæng inden for afgrænsede områder, men der er fortsat mulighed for at forbedre den overordnede fællesoffentlig digitale sammenhæng i initiativer og løsninger.
 
-Formålet med referencearkitekturen er således at sætte rammer for at målrette og strukturere indsatsen med at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+Formålet med referencearkitekturen er således at sætte rammer for at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
 Foruden brugerstyring af personer berører denne version af referencearkitekturen også særlige aspekter vedrørende brugerstyring af apparater, organisationer og applikationer, der samlet betegnes Non-person entities (NPE) og Internet of Things (IoT).
 
-Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises.
+Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises. Dermed berører referencearkitekturen en væsentlig del af den samlede informationssikkerhedsindsats i det fællesoffentlige samarbejde.
 
 **Aktiviteter i forbindelse med brugerstyring**
 Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i administration og adgangskontrol.
@@ -1092,7 +1092,6 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 **Apparat** som **tjeneste** have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
-
 
 
 ### IOT apparater
