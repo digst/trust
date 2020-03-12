@@ -1093,7 +1093,10 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
-Standardisering på området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
+
+
+### IOT apparater
+Standardisering på IOT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
 IOT apparater er sensorer eller aktuatorer, der interagere og kommunikere med den fysiske verden igennem en intelligent tjeneste, på en infrastruktur af sammenhængende objekter, personer, systemer og informationsressourcer. Fordi IOT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
@@ -1103,7 +1106,7 @@ IOT apparater vil i nogle tilfælde arve rettigheder fra en person eller organis
 
 IOT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
 
-Adgangspolitikken for tjenester i IOT apparater bør altså tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i forhåndenværende referencearkitektur.
+Adgangspolitikken for tjenester i IOT apparater bør altså tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
 
 
 ## Digitale fuldmagter
