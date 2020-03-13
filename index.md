@@ -25,7 +25,7 @@ Slim Build Artifact:
 <h2 class="no-num">Resume</h2>
 Der er de senere år etableret en række fælles løsninger for brugerstyring i samarbejde mellem forskellige offentlige parter. Disse løsninger sikrer sammenhæng inden for afgrænsede områder, men der er fortsat mulighed for at forbedre den overordnede fællesoffentlig digitale sammenhæng i initiativer og løsninger.
 
-Formålet med referencearkitekturen er således at sætte rammer for at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+Formålet med referencearkitekturen er således at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
 Foruden brugerstyring af personer berører denne version af referencearkitekturen også særlige aspekter vedrørende brugerstyring af apparater, organisationer og applikationer, der samlet betegnes Non-person entities (NPE) og Internet of Things (IoT).
 
