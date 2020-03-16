@@ -1093,18 +1093,36 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
-### Apparater med tekniske begrænsninger
-Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere på et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændre forudsætningerne for brugerstyring i praksis.
+Fordi apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
-### IoT apparater
+### Apparater med tekniske begrænsninger
+Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændre forudsætningerne for brugerstyring i praksis.
+
+IETF peger på at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne typer apparater på det fysiske datalag, men at kryptografi er stadig resourcekrævene i sin natur, og der er behov for redesignede protokoller der kan understøtte mindre ressourcekrævende løsninger af sikkerhedsudfordringerne der kommer med ressourceknaphed.
+
+### IoT-apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
-IoT-apparater er sensorer eller aktuatorer, der interagere og kommunikerer med den fysiske verden igennem en intelligent tjeneste på en infrastruktur af sammenhængende objekter, personnel, systemer og informationsressourcer. Fordi IoT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
+<!--
+AA: Jeg synes ikke, at dette afsnit bidrager tlistrækkeligt og det er svært at forstå. Derfor foreslår jeg, at vi sletter det.
+AFL: jeg tror det er nødvendigt på en eller anden måde at tydeliggøre hvad forskellen på IoT og andre dimser er, hvis vi skal tale om det.
+AA: I givet fald skal vi vist skrive det mere tydeligt, for jeg læser nedenstående som at det bare er et apparat.
+AFL: Hvad med apparater der ikke indgår i noget netværk? eller som ikke sanser eller igangsætter nogen forandring i verden? ex. en normal brødrister, eller en pc uden netværk?
+  IoT-apparater er sensorer eller aktuatorer, der interagere og kommunikerer med den fysiske verden igennem en intelligent tjeneste på en infrastruktur af sammenhængende objekter, personnel, systemer og informationsressourcer. Dermed adskiller de sig fra andre apparater, der kan udfører sin funktion uden nødvendigvis at være tilknyttet andre apparater eller en netværk.
+
+ -->
+
 
 Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
 
 #### Dataindsamling med IoT
-Hvis et apparat indsamler data om en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere, uden at resten af IoT infrastrukturen også har skiftet ejer. Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IoT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
+Hvis et apparat indsamler data relateret til en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere
+<!--  , uden at resten af IoT infrastrukturen også har skiftet ejer.  
+AA: hvorfor er det relevant, om resten har skiftet ejer? Er pointen, at
+AFL: pointen jeg prøvede at få frem var begge dele. både at der kan være flere brugere om det samme apparat, og det kan være svært at adskille, men også at apparatet kan skifte permanent "måleobjekt" og dermed levere forkert data som du ellers ikke havde nogen grund til at betvivle.
+-->
+
+Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IoT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
 
 #### Delegation af rettigheder i IoT netværk
 IoT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
