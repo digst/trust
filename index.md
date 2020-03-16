@@ -1093,19 +1093,23 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
+### Apparater med tekniske begrænsninger
+Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. 
 
 ### IoT apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
-IOT apparater er sensorer eller aktuatorer, der interagere og kommunikere med den fysiske verden igennem en intelligent tjeneste, på en infrastruktur af sammenhængende objekter, personer, systemer og informationsressourcer. Fordi IoT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
+IoT apparater er sensorer eller aktuatorer, der interagere og kommunikere med den fysiske verden igennem en intelligent tjeneste, på en infrastruktur af sammenhængende objekter, personer, systemer og informationsressourcer. Fordi IoT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
-Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IOT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
+Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
 
 #### Dataindsamling med IoT
 Hvis et apparat indsamler data om en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere, uden at resten af IoT infrastrukturen også har skiftet ejer. Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IoT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
 
-IOT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
+#### Delegation af rettigheder i IoT netværk
+IoT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
 
+#### IoT livscyklus
 IoT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
 
 
