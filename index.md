@@ -1094,12 +1094,12 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
 ### Apparater med tekniske begrænsninger
-Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere på et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændre forudsætningerne for brugerstyring i praksis. 
+Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere på et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændre forudsætningerne for brugerstyring i praksis.
 
 ### IoT apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
- IoT-apparater er sensorer eller aktuatorer, der interagere og kommunikerer med den fysiske verden igennem en intelligent tjeneste på en infrastruktur af sammenhængende objekter, personer, systemer og informationsressourcer. Fordi IoT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
+IoT-apparater er sensorer eller aktuatorer, der interagere og kommunikerer med den fysiske verden igennem en intelligent tjeneste på en infrastruktur af sammenhængende objekter, personnel, systemer og informationsressourcer. Fordi IoT apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
 Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
 
