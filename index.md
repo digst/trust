@@ -105,7 +105,7 @@ Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, b
 
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 viser hele begrebsmodellen i diagrammer og listeform. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
-Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for fælles og tværoffentlige brugerstyringsløsninger og tjenester, der anvender disse, samt andre offentlige løsninger. Disse var angivet i en liste i Bilag D og opmærket med kan, bør og skal. Denne udgave følger en ny skabe-lon for referencearkitekturer, der ikke definerer egentlige krav, men i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sek-tor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslut-ningsfora, som tværoffentlige brugerstyringsløsninger refererer til.
+Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for fælles og tværoffentlige brugerstyringsløsninger og tjenester, der anvender disse, samt andre offentlige løsninger. Disse var angivet i en liste i Bilag D og opmærket med kan, bør og skal. Denne udgave følger en ny skabe-lon for referencearkitekturer, der ikke definerer egentlige krav, men i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til.
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
@@ -276,7 +276,7 @@ Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i bal
 ## Principper
 
 Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse. Brugerstyringsprincipperne bør tillige anvendes i samspil med emnespecifikke principper, der beskrives i andre FDA-referencearkitekturer.
-Principper er retningslinier og er naturligt modstridende, anvendelsen af principperne er derfor hele tiden afvejning af hvilke principper der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man ofte må finde det bedste kompromis så begge principper tilgodeses bedst muligt.
+Principper er retningslinier og de kan i nogle tilfælde være modstridende. I de tilfælde afvejes det hvilke principper, der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man må finde det bedste kompromis så begge principper tilgodeses så godt som muligt.
 
 *Principper for brugerstyring*
 
@@ -323,7 +323,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 *Implikationer*
 
--	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil sige, at fx standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssige.
+-	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil fx sige, at standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssige.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men bør kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
@@ -346,7 +346,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 ### Princip 4: Brugerstyring er adskilt fra forretningstjenester
 Historisk har forretningstjenester selv varetaget brugerstyring med det resultat, at den samme bruger kan have mange forskellige identiteter, og at en identitet ikke kan anvendes på tværs af tjenester. Forretningstjenester skal i stedet benytte tværgående brugerstyring baseret på tillidstjenester adskilt fra forretningstjenesten.
 
-Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres og princip og princip 7: It-løsninger samarbejder effektivt
+Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres og princip 7: It-løsninger samarbejder effektivt
 
 *Rationale*
 
@@ -365,7 +365,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 ### Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede komponenter
 Brugerstyring er som fagligt domæne præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem  tillidstjenesterne og forretningstjenesterne såvel som mellem tillidstjenesterne indbyrdes og for at kunne kombinere tillidstjenester på nye måder er det en fordel, når tillidstjenesterne lever op til harmoniserede krav.
 
-Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sammenhæng, innovation og effektivitet, 4: Sikkerhed, privatliv og tillid sikres  og princip 7: It-løsninger samarbejder effektivt.
+Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sammenhæng, innovation og effektivitet, princip 4: Sikkerhed, privatliv og tillid sikres og princip 7: It-løsninger samarbejder effektivt.
 
 *Rationale*
 
@@ -385,7 +385,7 @@ Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sa
 For at effektivisere samarbejdet imellem udbydere af forretningstjenester og anvendte tillidstjenester, kan disse indgå i føderationer. Inden for føderationen aftales fælles standarder, samt tillids- og adgangspolitikker.
 Deltagere i føderationen kan omfatte både myndigheder og virksomheder i rollerne som organisationer, tjenesteudbydere og udbydere af tillidstjenester.
 
-Princippet understøtter særligt FDA arkitekturprincip 3: Arkitektur og regulering understøtter hinanden, 4: Sikkerhed, privatliv og tillid sikres og 7: It-løsninger samarbejder effektivt.
+Princippet understøtter særligt FDA arkitekturprincip 3: Arkitektur og regulering understøtter hinanden, princip 4: Sikkerhed, privatliv og tillid sikres og  princip 7: It-løsninger samarbejder effektivt.
 
 *Rationale*
 
