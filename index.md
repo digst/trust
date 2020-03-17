@@ -464,7 +464,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 
 **Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [13]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-**Administration af tjenester** definerer på baggrund af den besluttede informationssikker, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
+**Administration af tjenester** definerer på baggrund af den besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
 For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) samt autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
@@ -496,7 +496,7 @@ I det efterfølgende kapitel om den tekniske arkitektur beskrives det mere konkr
 
 
 ## Tillidstjenester
-I dette afsnit beskrives funktionaliteten i tillidstjenesterne fra ovenstående figurer i lidt større detaljer, samt hvor dan denne arkitekturs brug af tillidstjenester hænger sammen med definitionen i eIDAS. I beskrivelsen tages udgangspunkt i, at tillidstjenester udgøres af separate og specialiserede tjenester, som er er adskilt fra forretningstjenester. Tjenestebegrebet indikerer med andre ord, at funktionalitet udbydes til eksterne parter, og at der er rammer, som sikrer tillid til tjenesten. I praksis kan der naturligvis forekomme arkitekturer, hvor forretningstjenester selv udfører funktioner, der ideelt set burde leveres af en tillidstjeneste, hvilket kan lede til en række udfordringer. Disse beskrives nærmere i afsnittet om arkitekturmønstre nedenfor.
+I dette afsnit beskrives funktionaliteten i tillidstjenesterne fra ovenstående figurer i lidt større detaljer, samt hvordan denne arkitekturs brug af tillidstjenester hænger sammen med definitionen i eIDAS. I beskrivelsen tages udgangspunkt i, at tillidstjenester udgøres af separate og specialiserede tjenester, som er er adskilt fra forretningstjenester. Tjenestebegrebet indikerer med andre ord, at funktionalitet udbydes til eksterne parter, og at der er rammer, som sikrer tillid til tjenesten. I praksis kan der naturligvis forekomme arkitekturer, hvor forretningstjenester selv udfører funktioner, der ideelt set burde leveres af en tillidstjeneste, hvilket kan lede til en række udfordringer. Disse beskrives nærmere i afsnittet om arkitekturmønstre nedenfor.
 
 
 ### Om tillidstjenester og eIDAS
@@ -509,7 +509,7 @@ Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i 
 - Tjenester til bevaring af signaturer, segl og certifikater
 - Elektroniske registrerede leveringstjenester.
 
-eIDAS-forordningens stiller en række krav til udbydere af ovennævnte (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
+eIDAS-forordningens stiller en række krav til udbydere af ovennævnte (PKI)-tillidstjenester, som ikke skal forveksles med tillidstjenesterne i denne referencearkitektur. For eIDAS tillidstjenesterne findes et niveau af kvalificerede tillidstjenester, som er underlagt særlige krav og tilsyn - men også har særlige privilegier. Eksempelvis vil en kvalificeret signatur udstedt på baggrund af et kvalificeret certifikat have samme retsvirkninger som en papirbaseret underskrift (eIDAS artikel 25).
 
 De forskellige typer af tillidstjenester er illustreret på nedenstående figur:
 
@@ -572,7 +572,7 @@ Der er som tidligere nævnt både et aspekt, som vedrører administration, og et
 Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydninger om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
 I denne referencearkitektur benyttes attributregistrering som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer.
 
-Formålet med attributregistreringen er i sidste ende at tilvejebringe grundlaget for den adgangskontrol, der udføres i en forretningstjeneste. En forretningstjeneste kan således have brug for at kende brugerens alder, køn og bopælskommune for at kunne afgøre, hvilket adgang der skal gives. Udførsel af adgangskontrol beskrives nedenfor.
+Formålet med attributregistreringen er i sidste ende at tilvejebringe grundlaget for den adgangskontrol, der udføres i en forretningstjeneste. En forretningstjeneste kan således have brug for at kende brugerens alder, køn og bopælskommune for at kunne afgøre, hvilket adgang der skal gives. Udførelse af adgangskontrol beskrives nedenfor.
 
 
 ### Attestation af attributter
@@ -658,7 +658,7 @@ Dette giver anledning til en række arkitekturmønstre, som er temaet for dette 
 
 Dette mønster er karakteriseret ved en forretningstjeneste med sin egen applikationsspecifikke brugerdatabase, hvor alle brugere vedligeholdes både i forhold til identifikationsmidler, typisk brugernavn og kodeord og i forhold til adgangsrettigheder.
 
-I dette (anti)mønster håndterer forretningstjenesten de fleste funktioner i brugerstyring selv, herunder udstedelse af identifikationsmidler, autentifikation, vedligehold af attributter og adgangskontrol. Tjenesteudbyder og brugerorganisation er med andre ord samme organisation, men det kan være forskellige organisatoriske enheder, som er ansvarlighed for hhv. at forvalte applikationen og administrere brugerne. Tilliden mellem disse følger som oftest af, at der er en fælles ledelse og derfor ikke behov for tillid til eksterne parter.
+I dette (anti)mønster håndterer forretningstjenesten de fleste funktioner i brugerstyring selv, herunder udstedelse af identifikationsmidler, autentifikation, vedligehold af attributter og adgangskontrol. Tjenesteudbyder og brugerorganisation er med andre ord samme organisation, men det kan være forskellige organisatoriske enheder, som er ansvarlige for hhv. at forvalte applikationen og administrere brugerne. Tilliden mellem disse følger som oftest af, at der er en fælles ledelse og derfor ikke behov for tillid til eksterne parter.
 
 <figure>
 <img src="Mønster 1.svg" width="85%"/>
@@ -706,7 +706,7 @@ På baggrund af ovenstående kan mønstret kun anbefales i mindre og strengt int
 Dette mønster er det første, hvor bruger og tjenesteudbyder kan tilhøre forskellige organisationer, og der er derfor behov for mere eksplicit tillid, end når alle parter er under samme ledelse. Der er tale om en såkaldt ’3-corner model’, hvor brugeren har et identifikationsmiddel, der er udstedt til en autentifikationstjeneste, som tjenesteudbyderen kender og har tillid til – dvs. bruger og tjeneste har et fælles ’trust-anker’. Udstederen af identifikationsmidlet kan være sammenfaldende med udbyderen af autentifikationstjenesten (som det fx kendes fra NemID), men funktionerne kan også være adskilt. Det væsentlige er her, at forretningstjenesten stoler på autentifikationstjenesten.
 
 Mønstret er kendt fra NemLog-in, der som fællesoffentlig log-in tjeneste kan autentificere danske borgere og virksomheder til (stort set) alle offentlige tjenester med behov for sikker autentifikation – herunder alle tjenester på Borger.dk og Virk.dk. Som følge heraf betegnes dette også som ’den fællesoffentlige føderation’, og grundlaget for tillid i denne er National Standard for Identiteters Sikringsniveauer (NSIS) [18] og i en vis udstrækning OCES certifikatpolitikkerne [21], der med krav til sikkerhed, revision og andet sætter et veldefineret kvalitetsniveau.
-F
+
 <figure>
 <img src="Mønster 3.svg" width="85%"/>
 <figcaption>Mønster 3 - Central autentifikationstjeneste</figcaption>
@@ -716,8 +716,7 @@ F
 Fordele:
 
 - Forretningstjenesterne afkobles teknisk fra at kende til detaljerne i validering af brugernes identifikationsmidler, idet dette sker i autentifikationstjenesten. Med et fælles tillidsrammeværk (som fx NSIS [18]) kan autentifikationstjenesten blot oplyse det opnåede sikringsniveau til forretningstjenesten, som herefter kan reagere på dette i henhold til sin adgangspolitik. Dette gør det let at indføre nye identifikationsmidler eller ændre på eksisterende uden at påvirke forretningstjenesterne, og generelt giver afkoblingen en fleksibilitet i arkitekturen, som i praksis er meget værdifuld.
-- Mønstret kan skalere til nationalt plan og understøtte forretningstjenester, der skal tilgås af samtlige borgere eller samtlige virksomheder i landet. Dette skyldes bl.a., at
-de centrale autentikationstjenester i Danmark etableres og finansieres fællesoffentligt, og dermed får de national udbredelse. I mange andre lande er situationen langt mere broget med en række overlappende autentifikationstjenester og som følge deraf en mere kompleks arkitektur (se fx mønster 5).
+- Mønstret kan skalere til nationalt plan og understøtte forretningstjenester, der skal tilgås af samtlige borgere eller samtlige virksomheder i landet. Dette skyldes bl.a., at de centrale autentikationstjenester i Danmark etableres og finansieres fællesoffentligt, og dermed får de national udbredelse. I mange andre lande er situationen langt mere broget med en række overlappende autentifikationstjenester og som følge deraf en mere kompleks arkitektur (se fx mønster 5).
 - Autentifikationstjenesten er enkel at udvide med attributregistrering (fx roller, rettigheder, fuldmagter) og kan dermed give ekstra funktionalitet til samtlige, tilsluttede tjenester.
 
 
@@ -771,7 +770,7 @@ Ulemper:
 - Der kan være stor kompleksitet med flere lag af discovery.
 - Governance er typisk noget svagere på tværs af føderationer og domæner.
 - Det fælles forståede attributsæt er typisk mere begrænset, når tillidskæden er lang:
- -	Dette er fx en kendt udfordring i eIDAS føderationen, hvor det garanterede minimumsæt af attributter for en fysisk person på tværs af EU er meget fattigt og kun rummer navn, fødselsdato, og en unik ID (ikke meningsbærende).  Det er således en udfordring for mange forretningstjenester at levere en meningsfuld tjeneste til brugerne baseret på dette attributsæt. Enten fordi der ikke kan laves et sikkert match til en lokal repræsentation af brugeren, eller fordi en tjeneste er konstrueret til at kræve flere oplysninger som fx et dansk CPR-nummer.
+ -	Dette er fx en kendt udfordring i eIDAS føderationen, hvor det garanterede minimumsæt af attributter for en fysisk person på tværs af EU er meget fattigt og kun rummer navn, fødselsdato, og en unik ID (ikke meningsbærende). Det er således en udfordring for mange forretningstjenester at levere en meningsfuld tjeneste til brugerne baseret på dette attributsæt. Enten fordi der ikke kan laves et sikkert match til en lokal repræsentation af brugeren, eller fordi en tjeneste er konstrueret til at kræve flere oplysninger som fx et dansk CPR-nummer.
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
 
 
@@ -857,7 +856,7 @@ Referencearkitekturen kommer ikke med specifikke anbefalinger til, hvilke bruger
 
 Som en god praksis, og som det fremgår af Princip 4: Brugerstyring er adskilt fra forretningstjenester, bør brugere i en organisation i udgangspunktet oprettes i så få brugerkataloger som muligt med henblik på at effektivisere brugeradministrationen og sikre et centralt overblik. Dette gælder løsninger, der finansieres og fungerer inden for den offentlige sektor.
 
-Som eksempel på imødegåelse af problemstillingen med mange, adskilte brugerkataloger, etablerer mange organisationer såkaldte Identity Management-løsninger, som kan skabe sammenhæng mellem mange brugerkataloger gennem processer, teknisk provisionering og adapters. Herved kan man oprette, administrere og nedlægge brugere centralt og automatisk få de nødvendige opdateringer kommunikeret til applikationer og infrastruktur. Dette er dog i mange sammenhænge udtryk for applikationernes manglende modenhed inden for brugerstyring, da de fastholder et lokalt brugerkatalog som deres eneste verdensbillede. Løsningen med provisionering og applikationsspecifikke adapters fastholder den tætte binding frem for at løse det underliggende problem og skabe en åben, løst koblet arkitektur.
+Som eksempel på imødegåelse af problemstillingen med mange, adskilte brugerkataloger, etablerer mange organisationer såkaldte Identity Management løsninger, som kan skabe sammenhæng mellem mange brugerkataloger gennem processer, teknisk provisionering og adapters. Herved kan man oprette, administrere og nedlægge brugere centralt og automatisk få de nødvendige opdateringer kommunikeret til applikationer og infrastruktur. Dette er dog i mange sammenhænge udtryk for applikationernes manglende modenhed inden for brugerstyring, da de fastholder et lokalt brugerkatalog som deres eneste verdensbillede. Løsningen med provisionering og applikationsspecifikke adapters fastholder den tætte binding frem for at løse det underliggende problem og skabe en åben, løst koblet arkitektur.
 
 I den fællesoffentlige brugerstyring findes et centralt brugerkatalog for virksomheder i form af NemLog-in/Brugeradministration, der i NemLog-in3 erstattes med en samlet komponent til erhvervsidentitetsadministration (EIA). Hensigten med dette er at garantere danske virksomheder adgang til mindst ét brugerkatalog, da særligt mindre virksomheder ikke kan forventes selv at kunne etablere en sådan infrastruktur. Med NemLog-in3 får større virksomheder mulighed for at vælge at bruge deres eget lokale brugerkatalog, også i forbindelse med administration af adgang til offentlige løsninger.
 
@@ -873,12 +872,12 @@ Kendte eksempler på discovery-tjenester er fx:
 Der findes forskellige mekanismer til discovery hver med fordele og ulemper, herunder nævnes en række eksempler:
 - I mange føderationer foregår discovery ved, at brugeren første gang må vælge sin IdP (autentifikationstjeneste) fra en liste af kendte IdP'er, hvor valget så efterfølgende gemmes i en browser cookie. Hvis brugeren sletter sine cookies eller skifter browser/device, skal han således vælge IdP igen, næste gang der skal logges på.
 - I en række cloud-tjenester (fx hos Microsoft) sker valg af IdP indirekte ved, at brugeren skal taste sin email-adresse, som så kan oversættes til en relevant IdP baseret på registreringer om domænet.
-- I nogle tilfælde man etablere dybe links til tjenester med indlejret information om, hvordan brugerens skal logge på. Eksempel kan en kommune udstille en portal sin sine medarbejdere med links til fagsystemer, der i URL'en angiver hvilken kommune, medarbejderen kommer fra.
+- I nogle tilfælde etablerer man dybe links til tjenester med indlejret information om, hvordan brugeren skal logge på. Fx kan en kommune udstille en portal til sine medarbejdere med links til fagsystemer, der i URL'en angiver hvilken kommune, medarbejderen kommer fra.
 - En anden kendt teknik er at basere discovery på brugerens IP adresse, men dette virker sjældent godt med mobile enheder.
-- I SAML standarden findes der en discovery mekanisme benævnt 'common domain cookie', som går ud på, at en IdP i forbindelse med etablering af en session sætter en cookie med sin egen ID i en cookie i et fælles domæne, som kan læses af tjenesteudbydere i samme føderation. Herved kan tjenesteudbydere opdage, at brugeren allerede har en session med en IdP og kalde denne. Teknikken virker dog ikke, når brugeren ikke har en session med en IdP i forvejen - og må man ofte prompte brugeren for manuelt valg af IdP.
+- I SAML standarden findes der en discovery mekanisme benævnt 'common domain cookie', som går ud på, at en IdP i forbindelse med etablering af en session sætter en cookie med sin egen ID i en cookie i et fælles domæne, som kan læses af tjenesteudbydere i samme føderation. Herved kan tjenesteudbydere opdage, at brugeren allerede har en session med en IdP og kalde denne. Teknikken virker dog ikke, når brugeren ikke har en session med en IdP i forvejen - og så må man ofte prompte brugeren for manuelt valg af IdP.
 
 
-I visse tilfælde kan man vælge at kombinere flere af disse tilgange således, at der først forsøges automatiseret discovery uden brugerinvolvering, men hvis dette fejler fordi data ikke er tilgængelige anvendes en af mekanismerne med brugerinvolvering.
+I visse tilfælde kan man vælge at kombinere flere af disse tilgange således, at der først forsøges automatiseret discovery uden brugerinvolvering, men hvis dette fejler, fordi data ikke er tilgængelige, anvendes en af mekanismerne med brugerinvolvering.
 
 
 ## Billetudstedelse og -omveksling
@@ -1015,7 +1014,7 @@ Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet,
 
 Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en adgangsbillet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling.
 
-For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M). Dette indebærer også, at en robotidentitet kan modtage fuldmagter som en delegering af rettigheder. Herefter kan en administrator udstede/tilknytte et robot-egnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
+For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M). Dette indebærer også, at en robotidentitet kan modtage fuldmagter som en delegering af rettigheder. Herefter kan en administrator udstede/tilknytte et robotegnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
 
 Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
 
@@ -1096,9 +1095,9 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 Fordi apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
 ### Apparater med tekniske begrænsninger
-Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændre forudsætningerne for brugerstyring i praksis.
+Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændrer forudsætningerne for brugerstyring i praksis.
 
-IETF peger på at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne typer apparater på det fysiske datalag, men at kryptografi er stadig resourcekrævene i sin natur, og der er behov for redesignede protokoller der kan understøtte mindre ressourcekrævende løsninger af sikkerhedsudfordringerne der kommer med ressourceknaphed.
+IETF peger på at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne typer apparater på det fysiske datalag, men at kryptografi stadig er resourcekrævene i sin natur, og der er behov for redesignede protokoller der kan understøtte mindre ressourcekrævende løsninger af sikkerhedsudfordringerne der kommer med ressourceknaphed.
 
 ### IoT-apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
