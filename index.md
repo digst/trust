@@ -32,7 +32,7 @@ Foruden brugerstyring af personer berører denne version af referencearkitekture
 Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises. Dermed berører referencearkitekturen en væsentlig del af den samlede informationssikkerhedsindsats i det fællesoffentlige samarbejde.
 
 **Aktiviteter i forbindelse med brugerstyring**
-Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i administration og adgangskontrol.
+Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i **administration** og **adgangskontrol**.
 Hovedaktiviteterne i administration af brugernes digitale identiteter er:
 
 - **Registrering og udstedelse af identifikationsmidler**, der anvendes til at godkende og verificere en brugers digitale identitet.
@@ -45,7 +45,7 @@ Hovedaktiviteterne i adgangskontrol er:
 -	**Udførelse af adgangskontrol**, hvor det afgøres hvilke funktioner og data, en bruger får adgang til, hvis der gives adgang.
 
 **Principper for brugerstyring**
-Referencearkitekturen for brugerstyring fastlægger en række principper, der understøtter de overordnede visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne uddyber arkitekturprincipperne fra Hvidbog om fællesoffentlig digital arkitektur [2] mht. brugerstyring:
+Referencearkitekturen for brugerstyring fastlægger en række principper, der understøtter de overordnede visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne i denne referencearkitektur uddyber arkitekturprincipperne fra Hvidbog om fællesoffentlig digital arkitektur [2] mht. brugerstyring:
 
 1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
 2.	Brugerstyringsløsninger respekterer brugernes privatliv.
@@ -1114,7 +1114,13 @@ AFL: Hvad med apparater der ikke indgår i noget netværk? eller som ikke sanser
  -->
 
 
-Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan gøres indenfor de beskrevne mønstre i denne referencearkitektur.
+Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur.
+
+#### IoT livscyklus
+IoT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
+
+#### Delegation af rettigheder i IoT netværk
+IoT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
 
 #### Dataindsamling med IoT
 Hvis et apparat indsamler data relateret til en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere
@@ -1124,12 +1130,6 @@ AFL: pointen jeg prøvede at få frem var begge dele. både at der kan være fle
 -->
 
 Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IoT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
-
-#### Delegation af rettigheder i IoT netværk
-IoT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
-
-#### IoT livscyklus
-IoT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
 
 
 ## Digitale fuldmagter
