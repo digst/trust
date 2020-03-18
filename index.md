@@ -1096,6 +1096,8 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 Fordi apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
 
+Eksempler på apparater. Pas er et passivt apparat og et netværktilsluttet termometer er et aktivt apparat. ikke relevant for brugerstyring-apparater (der ikke har adgangsstyring eller rettigheder ud over adgang til kontrolpanelet)
+
 ### Apparater med tekniske begrænsninger
 Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændrer forudsætningerne for brugerstyring i praksis.
 
