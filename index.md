@@ -411,6 +411,8 @@ I mange tilfælde kan der være tale om en investering for at nå dertil, men ve
 - Det bliver hurtigere og billigere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området, og som ofte finansieres i fællesskab.
 - Risikoen for tab som følge af svindel og misbrug nedbringes, når sikkerheden øges gennem professionelle, dedikerede tillidstjenester.
 
+Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivning). Referencearkitekturen har ikke fokus på at opnå et bestemt sikkerhedsniveau men snarere at give værktøjer til at efterleve krav til brugerstyring på en effektiv måde, som muliggør sammenhæng på tværs. En høj sikkerhed kan principielt godt opnås i siloer med lav brugervenlighed og uden sammenhæng, men når en organisation indgår i føderationer og sammenhængende forløb, er det afgørende, at brugerstyringen indrettes efter nogle fælles principper, arkitektur og standarder.
+
 
 ## Juridiske rammer
 
