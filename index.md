@@ -148,7 +148,7 @@ I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i n
 Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan *brugere* være personer eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
