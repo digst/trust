@@ -805,7 +805,7 @@ De to tilgange kan sagtens kombineres.
 </figure>
 <br>
 
-Fordelen ved at få de attesterede oplysninger om brugeren leveret i en adgangsbillet via push-modellen er, at forretningstjenesten får en løsere kobling til tillidstjenesterne, idet forretningstjenesten typisk ikke skal bekymre sig om, hvilke tillidstjenester der er relevante for den aktuelle bruger, hvor de findes, hvordan der integreres med dem osv. Brokeren vil ofte påtage sig opgaven med at sikre afkobling for forretningstjenester og orkestrere tillidstjenesterne i et domæne (eller mod andre domæner) gennem opslag og omvekslinger af adgangsbilletter. Omvendt kan det i nogle sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation. Derfor kan der opstå et naturligt behov for dynamiske opslag, mens brugeren anvender forretningstjenesten. Det kan hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i en adgangsbillet, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i Databeskyttelsesforordningen (GDPR) [13], hvor kun absolut nødvendige oplysninger behandles.
+Fordelen ved at få de attesterede oplysninger om brugeren leveret i en adgangsbillet via push-modellen er, at forretningstjenesten får en løsere kobling til tillidstjenesterne, idet forretningstjenesten typisk ikke skal bekymre sig om, hvilke tillidstjenester der er relevante for den aktuelle bruger, hvor de findes, hvordan der integreres med dem osv. Brokeren vil ofte påtage sig opgaven med at sikre afkobling for forretningstjenester og orkestrere tillidstjenesterne i et domæne (eller mod andre domæner) gennem opslag og omvekslinger af adgangsbilletter. Omvendt kan det i nogle sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation. Derfor kan der opstå et naturligt behov for dynamiske opslag, mens brugeren anvender forretningstjenesten. Det kan hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i en adgangsbillet, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i Databeskyttelsesforordningen (GDPR) [13], hvor kun nødvendige oplysninger behandles. Dette gælder særligt, hvis der er tale om attributter med personoplysninger, men i mindre grad når attributter indeholder brugerens rettigheder til en tjeneste.
 
 ## Attributhåndtering
 Som tidligere nævnt spiller attributter en vigtig rolle i brugerstyring. Dels som grundlag for beskrivelse af brugerne, deres egenskaber og deres kontekst, dels som grundlag for håndhævelse af adgangskontrol. I dette afsnit fokuseres på attesterede attributter, hvor en tillidstjeneste udtaler sig om attributter, der er underlagt en eller anden form for kontrol.
@@ -997,10 +997,19 @@ En udbredt model for adgangsrettigheder er rollebaseret adgangskontrol (RBAC), h
 
 I adgangskontrol kontrolleres de attributter, som er indeholdt i den adgangsbillet, som brugeren medbringer fra autentifikation og billetudstedelse - foruden at selve billetten valideres (herunder signatur og tidsstempel på denne). Dette attributsæt skal matche den definerede adgangspolitik for tjenesten for de funktioner og informationer, der ønskes adgang til. Ellers afvises det at give identiteten adgang. I tilfælde af at der er etableret single sign-on funktionalitet, kan dette sæt af attributter (efter den initiale validering) repræsenteres af en session cookie (browser) eller en OAuth token [29] (app), der er etableret i forbindelse den initielle autentifikation.
 
-Adgangskontrollen er tjenesteudbyders ansvar, men tekniske funktioner kan leveres af eksterne systemer. Dette er eksempelvis tilfældet i XACML standarden [26], der dog ikke er særlig udbredt i praksis. XACML står for 'eXtensible Access Control Markup Language' som definerer et finkornet sprog for adgangspolitikker baseret på attributter. Desuden beskriver standarden en arkitektur med forskellige komponenter bl.a. et 'Policy Decision Point' (PDP), som evaluerer et adgangsønske mod en adgangspolitik, et 'Policy Enforcement Point', som håndhæver PDP'ens adgangsbeslutning, et 'Policy Administration Point' (PAP), hvor adgangspolitikker administreres mv.
+Adgangskontrollen er tjenesteudbyders ansvar, men tekniske funktioner kan leveres af eksterne systemer. Dette er eksempelvis tilfældet i XACML standarden [26], der dog i mindre grad er udbredt i praksis. XACML står for 'eXtensible Access Control Markup Language' som definerer et finkornet sprog for adgangspolitikker baseret på attributter. Desuden beskriver standarden en arkitektur med forskellige komponenter bl.a. et 'Policy Decision Point' (PDP), som evaluerer et adgangsønske mod en adgangspolitik, et 'Policy Enforcement Point', som håndhæver PDP'ens adgangsbeslutning, et 'Policy Administration Point' (PAP), hvor adgangspolitikker administreres, et Policy Information Point (PIP) som anvendes til at slå relevante attributter op for adgangsbeslutninger.
+
+Nedenstående figur (fra Wikipedia) viser samspillet mellem de forskellige komponenter i XACML:
+
+<figure>
+<img src="XACML.png" width="90%" />
+<figcaption>XACML standardens arkitektur</figcaption>
+</figure>
+<br>
 
 
-## Software robotter
+
+## Softwarerobotter
 Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Her indgår ofte systemer, der kun udstiller deres funktionalitet via en brugergrænseflade. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen og dermed opnå den ønskede automatisering.
 
 Det er ofte en grundlæggende præmis, at applikationerne ikke kan skrives om og gøres robot-venlige, men må bruges, som de er. Det kan her bemærkes, at den ideelle løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
@@ -1016,15 +1025,15 @@ Til håndtering af autonome software robotter kan man med fordel bygge på føde
 
 Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet, sker autentifikationen i NemLog-in, og applikationen får blot en signeret adgangsbillet tilbage (SAML Assertion) med en række attributter. Applikationens binding er således reelt til et forventet attributsæt (attributkontrakten), der beskriver en medarbejderidentitet (fx navn, e-mail, CVR, RID-nummer, rettigheder mv.) snarere end en binding til medarbejderens identifikationsmidler (fx MOCES certifikatet).
 
-Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en adgangsbillet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling. Det skal i den forbindelse bemærkes, at de nye certifikatpolitikker for OCES virksomhedscertifikater [35], netop er indrettet med henblik på understøttelse af softwarerobotter.
+Denne afkobling gør det muligt for brokeren/autentifikationstjenesten at udstede en adgangsbillet til en robot med samme attributsæt, som forventes til en medarbejder. Ideen er med andre ord at opfatte robotter som digitale medarbejdere, der blot har nogle andre typer identifikationsmidler, som er mere robotegnede (fx FOCES), men som i øvrigt ellers ligner medarbejdere til forveksling. Det skal i den forbindelse bemærkes, at de nye certifikatpolitikker for OCES virksomhedscertifikater [35], netop er indrettet med henblik på understøttelse af softwarerobotter. Når en organisation udsteder et certifikat til en softwarerobot skal man naturligvis være særligt opmærksom på at overholde certifikatpolitikkens krav, herunder sikkerhedskrav til beskyttelse af nøgler mv.
 
-For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M). Dette indebærer også, at en robotidentitet kan modtage fuldmagter som en delegering af rettigheder. Herefter kan en administrator udstede/tilknytte et robotegnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
+For at understøtte scenariet skal en brugeradministrator kunne oprette en robotidentitet (M’) med de samme attributdefinitioner som en almindelig medarbejderidentitet (M) - men også med en tydelig markering af, at der er tale om en robotidentitet. Dette indebærer også, at en robotidentitet kan få tildelt rettigheder. Herefter kan en administrator udstede/tilknytte et robotegnet identifikationsmiddel, fx FOCES-certifikat i en krypteret PKCS#12 nøglefil med privat nøgle og certifikat, der kan installeres i en robotinstans. Dette forudsætter, at organisationen på samme måde som med personbrugere sikrer, at kun den relevante og autoriserede robotinstans har adgang til nøglen.
 
 Adgangsprocessen til applikationen kan herefter udspilles på flg. måde:
 
 -	Robotten tilgår applikationen ved at simulere en browser.
 -	Applikationen laver redirect til NemLog-in’s autentifikationsservice og anmoder om autentifikation af en medarbejderidentitet via OIOSAML standarden [19].
--	Robotten autentificerer sig overfor NemLog-in via sit tilknyttede identifikationsmiddel (her FOCES certifikat).
+-	Robotten autentificerer sig overfor NemLog-in via sit tilknyttede identifikationsmiddel (her FOCES certifikat). Bemærk at der ikke findes noget rammeværk for robotidentiteter svarende til NSIS, men at certifikatpolitikkerne vil opfylde en væsentlig del af behovet for at regulere sikkerhedskrav.
 -	Efter autentifikationen fremfinder NemLog-in den medarbejderidentitet (M’) i sin brugerdatabase, som er tilknyttet identifikationsmidlet, og danner et autentifikationssvar med de nødvendige attributter til applikationen.
 -	Applikationen validerer billettens signatur, og giver adgang til applikationen på baggrund af attributterne i billetten i henhold til applikationens adgangspolitik.
 
@@ -1039,11 +1048,11 @@ Løsningen er illustreret på følgende figur:
 <br>
 
 
-Man kan evt. vælge at lade billetter for autonome software robotter indeholde en særlig attribut som indikerer, at der er tale om en robot. Herved kan ’robot-aware’ applikationer, hvis de vil, reagere på en særlig måde over for robotter, mens ’ikke-robot-aware’ applikationer blot ignorerer attributten, og opfører sig på samme måde som hvis der var tale om medarbejderidentitet for en fysisk person.
+Man bør lade billetter for autonome software robotter indeholde en særlig attribut som indikerer, at der er tale om en robot - fx analogt til hvordan OIOSAML 3.0 i billetten skelner mellem private og professionelle. Herved kan ’robot-aware’ applikationer, hvis de vil, reagere på en særlig måde over for robotter, mens ’ikke-robot-aware’ applikationer blot ignorerer attributten, og opfører sig på samme måde som hvis der var tale om medarbejderidentitet for en fysisk person.
 
 
 ### Robotter uden føderation
-For forretningstjenester, som ikke understøtter føderationsmodellen men i stedet fx mønster 1 eller 2, som beskrevet ovenfor, må der anvendes en anden tilgang til understøttelse af autonome software robotter. Her kan en oplagt mulighed være at oprette en særlig 'robotbruger' med brugernavn + kodeord i applikationens lokale brugerkatalog (mønster 1) eller i det fælles directory (mønster 2). For organisationer, som har et IdM-system, vil det være oplagt at oprette og adminstrere robot-identiteter i dette på lige fod med øvrige identiteter. Herved optræder robotten som en selvstændig identitet, kan få egne rettigheder tildelt og autentificerer sig med et selvstændigt identifikationsmiddel, der er adskilt fra personbrugere.
+For forretningstjenester, som ikke understøtter føderationsmodellen men i stedet fx mønster 1 eller 2, som beskrevet ovenfor, må der anvendes en anden tilgang til understøttelse af autonome software robotter. Her kan en oplagt mulighed være at oprette en særlig 'robotbruger' med brugernavn + kodeord, sikringsniveau samt andre relevante attributter i applikationens lokale brugerkatalog (mønster 1) eller i det fælles directory (mønster 2). For organisationer, som har et IdM-system, vil det være oplagt at oprette og adminstrere robot-identiteter i dette på lige fod med øvrige identiteter. Herved optræder robotten som en selvstændig identitet, kan få egne rettigheder tildelt og autentificerer sig med et selvstændigt identifikationsmiddel, der er adskilt fra personbrugere.
 
 Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikation med en bestemt type identifikationsmiddel, som kun må udstedes til mennesker (fx NemID medarbejdercertifikater), er der ikke umiddelbart nogen lette løsninger til at give software robotter adgang til forretningstjenesten. Her må forretningstjenesten typisk omskrives til at bruge en ekstern autentifikationstjeneste, således at forretningstjenesten undgår en hård teknisk kobling til bestemte typer identifikationsmidler. En sådan omskrivning vil forventeligt give en række gevinster og herunder større fleksibilitet i forhold til understøttelse af personbrugere.
 
@@ -1067,7 +1076,7 @@ Sekvensen i figuren er som følger:
 
 1.	Brugeren installerer og åbner app'en.
 2.	App'en starter log-in flowet ved at åbne en browser på den mobile enhed og medsende et OpenID Connect Authentication Request. Dette specificerer via nogle parametre (i form af scopes), hvilke data, der ønskes adgang til.
-3.	Browseren sendes med HTTP redirect (302) til OpenID Connect Authorization Service endepunktet og overleverer herved Authentication Request fra app'en.
+3.	Browseren sendes med HTTPS redirect (302) til OpenID Connect Authorization Service endepunktet og overleverer herved Authentication Request fra app'en.
 4.	Authorization Servicen indhenter Brugerens accept til, at app'en kan tilgå de data (scopes), der er angivet i OpenID requestet. Herefter detekterer Authorization Servicen, at der tale om en ny bruger (ingen session cookie i browseren) og danner derfor et SAML Authentication Request mod en ekstern SAML IdP (sendes også via HTTP Redirect).
 5.	Brugeren autentificerer sig mod IdP'en.
 6.	IdP'en danner et SAML Response indeholdende brugerens attributter og sender browseren tilbage til Authorization Service endepunktet (HTTP POST).
@@ -1085,7 +1094,11 @@ Der er således behov for videreudvikling af en arkitektur omhandlende brugersty
 - Understøttelse af delegeringer og identitetsbaserede kald på tværs af API'er.
 - Mulighed for konsolideret overblik for slutbrugere over deres apps og styring af afgivne samtykker til at apps kan tilgå deres data.
 
-Som nævnt er Digitaliseringsstyrelsen i gang med at udarbejde fællesoffentlige profiler, der sikrer en række af disse egenskaber. Profilerne kan ses som en pendant til de nuværende OIOSAML og OIO IDWS profiler rettet mod web-applikationer og SOAP-baserede web services, hvor de nye profiler adresserer apps og REST-baserede services. Derudover er der planer om at etablere fælles infrastruktur i NemLog-in3 løsningen i form af en fællesoffentlig OIDC Authorization Server og Token Server, som kan understøtte apps og API'er på linje med den nuværende implementering af fællesoffentlig IdP og STS i NemLog-in3. Herved kan offentlige apps og API'er undgå at skulle implementere deres egne infrastrukturkomponenter til brugerstyring.
+Som nævnt er Digitaliseringsstyrelsen i gang med at udarbejde fællesoffentlige profiler, der sikrer en række af disse egenskaber. Profilerne kan ses som en pendant til de nuværende OIOSAML og OIO IDWS profiler rettet mod web-applikationer og SOAP-baserede web services, hvor de nye profiler adresserer apps og REST-baserede services.
+
+Et udkast til profilerne kan findes på [Digitaliseringsstyrelsens hjemmeside](https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/vejledninger-og-standarder/openid-connect-profiler)
+
+ Derudover er der planer om at etablere fælles infrastruktur i NemLog-in3 løsningen i form af en fællesoffentlig OIDC Authorization Server og Token Server, som kan understøtte apps og API'er på linje med den nuværende implementering af fællesoffentlig IdP og STS i NemLog-in3. Herved kan offentlige apps og API'er undgå at skulle implementere deres egne infrastrukturkomponenter til brugerstyring.
 
 
 ## Brugerstyring for Apparater
