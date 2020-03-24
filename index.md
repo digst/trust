@@ -1104,6 +1104,8 @@ Der findes en række tekniske forudsætninger for at et apparat kan håndtere br
 
 IETF peger på at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne typer apparater på det fysiske datalag, men at kryptografi stadig er resourcekrævene i sin natur, og der er behov for redesignede protokoller der kan understøtte mindre ressourcekrævende løsninger af sikkerhedsudfordringerne der kommer med ressourceknaphed.
 
+Et andet mønster der kan imødekomme de tekniske begrænsninger i apparater, læner sig op af digital twin tankegangen. Her etableres en proxy-version af apparatets software i en anden del af netværket, der har flere resourcer til rådighed, og som kan forvalte brugerstyringen på vejne af det fysiske apparat. Ud over, at sikre at man kan
+
 ### IoT-apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
 
