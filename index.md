@@ -79,7 +79,8 @@ Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og st
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om fællesoffentlig digital arkitektur [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "... definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
-Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
+
+Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige. Det betyder at referencearkitekturen er tiltænkt det tværoffentlige brugerstyringsdomæne, men en forudsætning for en god tværoffentlig brugerstyring er god brugerstyring lokalt i domænerne. Derfor er referencearkitekturen skrevet så den også kan anvendes internt i de offentlige domæner.
 
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
 
