@@ -1096,6 +1096,8 @@ Der er således behov for videreudvikling af en arkitektur omhandlende brugersty
 
 Som nævnt er Digitaliseringsstyrelsen i gang med at udarbejde fællesoffentlige profiler [30], der sikrer en række af disse egenskaber. Profilerne kan ses som en pendant til de nuværende OIOSAML og OIO IDWS profiler rettet mod web-applikationer og SOAP-baserede web services, hvor de nye profiler adresserer apps og REST-baserede services.
 
+Et tidligt udkast til profilerne kan findes på [Digitaliseringsstyrelsens hjemmeside](https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/vejledninger-og-standarder/openid-connect-profiler)
+
 Det er hensigten, at disse profiler kan anvendes og profileres af domæner med specialbehov, fx ved lokalt at definere yderligere claims og scopes.
 
  Derudover er der planer om at etablere fælles infrastruktur i NemLog-in3 løsningen i form af en fællesoffentlig OIDC Authorization Server og Token Server, som kan understøtte apps og API'er på linje med den nuværende implementering af fællesoffentlig IdP og STS i NemLog-in3. Herved kan offentlige apps og API'er undgå at skulle implementere deres egne infrastrukturkomponenter til brugerstyring. Sundhedsområdet arbejder ligeledes med at etablere central infrastruktur på området.
