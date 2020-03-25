@@ -1103,16 +1103,18 @@ Det er hensigten, at disse profiler kan anvendes og profileres af domæner med s
  Derudover er der planer om at etablere fælles infrastruktur i NemLog-in3 løsningen i form af en fællesoffentlig OIDC Authorization Server og Token Server, som kan understøtte apps og API'er på linje med den nuværende implementering af fællesoffentlig IdP og STS i NemLog-in3. Herved kan offentlige apps og API'er undgå at skulle implementere deres egne infrastrukturkomponenter til brugerstyring. Sundhedsområdet arbejder ligeledes med at etablere central infrastruktur på området.
 
 
-## Brugerstyring for Apparater
+## Brugerstyring for Apparater og IOT
 Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i denne referencearkitektur er gældende også for apparater. Afhængigt af hvordan apparater optræder skal:
 
 **Apparat** som **tjeneste** have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
-Fordi apparater er specifik tilknyttet den fysiske verden giver dette et ekstra lag af fysisk brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tjenesternes underliggende infrastrukturleverandører.
+Fordi apparater er selvstændige maskiner, specifik tilknyttet den fysiske verden giver dette et ekstra lag af brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tillidstjenesternes underliggende infrastrukturleverandører. Det kan give udfordringer for teknisk begrænsede apparater der måske ikke har ressourcerne til at indgå i en tillidskæde og giver anledning til at være opmærksom på apparatets livscyklus og hvornår i denne brugerstyringen sættes op.
 
-Eksempler på apparater. Pas er et passivt apparat og et netværktilsluttet termometer er et aktivt apparat. ikke relevant for brugerstyring-apparater (der ikke har adgangsstyring eller rettigheder ud over adgang til kontrolpanelet)
+Selvstændige apparater der ikke er tilknyttet et netværk eller kan aflæses af andre apparater er ikke medtaget i denne referencearkitektur. Brugerstyring af den type apparater må forventes at bestå af at begrænse adgangen til kontrolpanelet. Her kan eksempelvis være tale om et klasssik hæve/sænkebord.
+
+Derudover kan vi dele apparater op i aktive og passive apparater. Aktive apparater er tilsluttet netværk og kan igangsætte processer uden yderligere menneskelig indblanding end opsætningen. Det kan eksempelvis være et netværkstilknyttet termometer, som kan aflæses på en smartphone. Passive apparater er ikke i stand til at ændre en tilstand i verden på egen hånd, men kan bærer på funktioner og information der kan være en udløsende faktor for ændringer i verden. Eksempelvis indeholder moderne pas information om biometrisk data der linker identiteten med entiteten, og som kan aflæses af andre apparater.
 
 ### Apparater med tekniske begrænsninger
 Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændrer forudsætningerne for brugerstyring i praksis.
