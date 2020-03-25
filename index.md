@@ -79,8 +79,7 @@ Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og st
 Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvordan man skal indrette løsninger, så systemer understøttet af forskellige sikkerhedsløsninger kan kommunikere med hinanden. Herved bliver løsninger enklere at etablere og drive, brugerne undgår at skulle logge på flere gange, og oplysninger om brugere skal ikke vedligeholdes flere steder.
 
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om fællesoffentlig digital arkitektur [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "... definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
-
-Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige. Det betyder at referencearkitekturen er tiltænkt det tværoffentlige brugerstyringsdomæne, men en forudsætning for en god tværoffentlig brugerstyring er god brugerstyring lokalt i domænerne. Derfor er referencearkitekturen skrevet så den også kan anvendes internt i de offentlige domæner.
+Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
 
 Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
 
@@ -160,7 +159,7 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 **Organisation** en organisation, der -især i juridisk forstand- er bredt anerkendt og har tilhørende rettigheder og ansvar. Adgange og rettigheder kan delegeres til medarbejder, *apparat* eller *applikation*.
 
-**Apparat** fysisk konstruktion med indlejret software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Et apparat, der kan agere som *bruger*, optræder med sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater, der virker i lukkede kredsløb og som tilgås via et system, betragtes som enten en tjeneste eller en *applikation*.
+**Apparat** fysisk konstruktion med indlejret logik, fx software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Et apparat, der kan agere som *bruger*, optræder med sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater, der virker i lukkede kredsløb og som tilgås via et system, betragtes som enten en tjeneste eller en *applikation*.
 
 **Applikation** software entitet med specifik forretningsfunktion, der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
 
@@ -181,7 +180,7 @@ Hele begrebsmodellen er vist i listeform og diagrammer i Bilag 2.
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
 -	**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilknytning til **organisation**. Tilknytningen i sig selv giver implicit en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Tilknytning til **organisation**. Tilknytningen kan give en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
 -	Eksplicit **adgangsrettighed** der gives fra en *organisation* til en *person*. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
 -	Delegering af **adgangsrettigheder** fra en person eller organisation til en *applikation*. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
@@ -312,7 +311,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 
 ### Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
-Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt i overensstemmelse med GDPR princippet om dataminimering.
+Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
 
@@ -324,10 +323,10 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 *Implikationer*
 
--	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil fx sige, at standardsamlinger af attributter fra brugerstyring ikke altid er hensigtsmæssige.
+-	I forbindelse med brugerstyring skal der ikke registreres og videresendes overflødige informationer om brugerne. Det vil fx sige, at standardsamlinger af attributter fra brugerstyring ikke bør anvendes.
 -	Danske offentlige tjenester må fortsat bruge CPR-nummeret, men bør kun anvende det, hvor det er nødvendigt.
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten er, dvs. hvad oplysningerne anvendes til.
--	Brugere skal, hvor det er relevant, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
+-	Brugere skal, hvor der ikke er anden hjemmel, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
 ### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 Tjenesteudbyder har ansvaret for at specificere reglerne for adgang i en adgangspolitik og dernæst at håndhæve reglerne i adgangspolitikken i forbindelse med at bruger gives adgang til tjenesten.
@@ -378,9 +377,9 @@ Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sa
 
 -	Tillidstjenester bør overholde fællesoffentlige aftaler og krav til egenskaber og anvendelse af standarder.
 - Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne.
-- Standarderne for informationsoverførsler mellem de løst koblede komponenter bør tage udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med danske profiler, hvor det er nødvendigt).
+- Standarderne for informationsoverførsler mellem de løst koblede komponenter tager udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med danske profiler, hvor det er nødvendigt).
 -	Når brugerstyringsopgaven løses af forskellige aktører bygget på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
-- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en del af arkitekturen er realiseret igennem fællesoffentlige løsningsbyggeblokke og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
+- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en række realiserede løsningsbyggeblokke, herunder tjenester og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
 
 ### Princip 6: Tjenesteudbydere indgår i føderationer
 For at effektivisere samarbejdet imellem udbydere af forretningstjenester og anvendte tillidstjenester, kan disse indgå i føderationer. Inden for føderationen aftales fælles standarder, samt tillids- og adgangspolitikker.
@@ -436,7 +435,7 @@ Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan næ
 - Forvaltningsloven [15] stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller digitale løsninger, også bør kunne håndtere digitale fuldmagter.
 
 ## Sikkerhed
-Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne.
+Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne, ligesom alle regionsråd har besluttet, at regionerne skal følge dem.
 
 Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
 
@@ -559,7 +558,7 @@ Autentikationsfunktionen varetages i nogle tilfælde af den part, der har udsted
 
 Styrken af en autentifikationsproces klassificeres i NSIS [18] som AAL (Authenticator Assurance Level) og indplaceres på den sædvanlig tretrins skala (Lav, Betydelig, Høj), og kan dermed indgå i adgangspolitikker for tjenester.
 
-I praksis kombineres autentifikationsfunktionen ofte med attributregistrering, således at den identitet, som formidles til tjenesten, er beriget med yderligere oplysninger - og den kombinerede funktion betegnes ofte som broker eller identitetsbroker. En anden vigtig egenskab ved autentifikationstjenester er, at de kan afkoble forretningstjenester fra at kende til detaljerne i validering af brugernes identifikationsmidler. I føderationer er det bærende princip, at forretningstjenester ikke må udføre autentifikation selv. Ved at delegere denne funktion til en ekstern tillidstjeneste opnås en lang række fordele som fx en mere sammenhængende, sikker og skalerbar arkitektur, hvor brugerne kan genbruge deres identifikationsmidler på tværs af forretningstjenester.
+I praksis kombineres autentifikationsfunktionen ofte med attributregistrering, således at den identitet, som formidles til tjenesten, er beriget med yderligere oplysninger - og den kombinerede funktion betegnes ofte som broker eller identitetsbroker. En anden vigtig egenskab ved autentifikationstjenester er, at de afkobler forretningstjenester fra at kende til detaljerne i validering af brugernes identifikationsmidler. I føderationer er det bærende princip, at forretningstjenester ikke må udføre autentifikation selv. Ved at delegere denne funktion til en ekstern tillidstjeneste opnås en lang række fordele som fx en mere sammenhængende, sikker og skalerbar arkitektur, hvor brugerne kan genbruge deres identifikationsmidler på tværs af forretningstjenester.
 
 
 ### Registrering af attributter
@@ -913,7 +912,7 @@ Nedenstående figur 16 illustrerer den kæde af tillid, der kan optræde mellem 
 - Brokeren har tillid til, at autentifikationstjenesten på en sikker måde har kunnet fastslå brugerens digitale identitet (autentificere vedkommende).
 - Autentifikationstjenesten har tillid til, at udstederen af identifikationsmidlet, der har tilknyttet og udstedt identifikationsmidlet, har gjort det til de rette entiteter, nemlig de samme entiteter, som registreringstjenesten (eng: Registration Authority, RA) har identificeret og registreret identiteten på.
 - I den udstrækning, som tjenesteudbyderen, adgangskontrollen, brokeren eller autentifikationstjenesten anvender et eller flere attributsæt, skal disse have tillid til de attributtjenester, som de anvender.
-- Attributtjenester skal have tillid til, at den, der har tilknyttet og udstedt identiteterne, har gjort det til de rette entiteter, nemlig de samme entiteter som registreringstjenesten har identificeret og registreret identiteten på.
+- Attributtjenester skal have tillid til, at identiteterne er tilknyttet og udstedt til de rette entiteter. Dvs. de samme entiteter som registreringstjenesten har identificeret og registreret identiteten på.
 - Udstederen af elektroniske identifikationsmidler har tillid til de identifikationsbeviser (fx pas, kørekort) og grunddata, som udstedelsesprocessen er baseret på.
 - Hele vejen gennem kæden skal der være tillid til de adgangsbilletter (eng. security token), der udstedes af autentifikationstjenesten og beriges af brokere, og som benyttes som adgangsbillet med tidsbegrænset gyldighed til en eller flere tjenester – også når adgangsbilletter omveksles ved overgang mellem sektorer.
 
@@ -1061,7 +1060,7 @@ Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikat
 ## Brugerstyring for (native) apps
 Brugerstyring for apps på mobile enheder bringer sine egne udfordringer. I dette afsnit fokuseres udelukkende på native apps, idet mobile web applikationer som regel håndteres på samme måde som traditionelle web applikationer.
 
-På mobile enheder er der ofte behov for at kunne personalisere en app og lade den agere på brugerens vegne (fx med en delmængde af brugerens rettigheder) efter de tidligere nævnte principper om identitetsbaserede web service - eksempelvis give app'en mulighed for at kalde et API i kontekst af brugeren. Der findes endnu ingen fællesoffentlige profiler eller standarder på dette område, men Digitaliseringsstyrelsen er i skrivende stund i gang med udarbejde sådanne baseret på anvendelse af OAuth 2.0 [27] samt OpenID Connect standarderne [28]. Det grundlæggende princip i disse standarder er, at brugeren via en mobil browser sendes til en såkaldt autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må opnå den efterspurgte adgang. Herefter udstedes en eller flere adgangsbilleter (security tokens) til app’en, som kan anvendes til at autorisere kald til back-end services. Herved er såvel app'ens identitet og identifikationsmiddel adskilt fra brugerens, og adgangen er eksplicit godkendt af brugeren, hvilket er i overensstemmeelse med principperne i denne referencearkitektur. Udover at en app kan opnå rettigheder på baggrund af et brugersamtykke kan den også få tildelt rettigheder i kraft dens identitet eller type, eller den kan blive konfigureret af den organisation, som installerer den. Et eksempel på sidstnævnte kan være et erhvervsscenarie, hvor en organisation anvender en såkaldt MDM-løsning (Mobile Device Management) til at udtrulle og konfigurere apps på enheder under organisationens kontrol - herunder konfiguration af identifikationsmidler, rettigheder og anden konfiguration.
+På mobile enheder er der ofte behov for at kunne personalisere en app og lade den agere på brugerens vegne (fx med en delmængde af brugerens rettigheder) efter de tidligere nævnte principper om identitetsbaserede web service - eksempelvis give app'en mulighed for at kalde et API i kontekst af brugeren. Der findes endnu ingen fællesoffentlige profiler eller standarder på dette område, men Digitaliseringsstyrelsen er i skrivende stund i gang med udarbejde sådanne baseret på anvendelse af OAuth 2.0 [27] samt OpenID Connect standarderne [28]. Det grundlæggende princip i disse standarder er, at brugeren via en mobil browser sendes til en såkaldt autorisationsserver, hvor brugeren logger ind og bekræfter, at app’en må opnå den efterspurgte adgang. Herefter udstedes en eller flere adgangsbilleter (security tokens) til app’en, som kan anvendes til at autorisere kald til back-end services. Herved er såvel app'ens identitet og identifikationsmiddel adskilt fra brugerens, og adgangen er eksplicit godkendt af brugeren, hvilket er i overensstemmelse med principperne i denne referencearkitektur. Udover at en app kan opnå rettigheder på baggrund af et brugersamtykke kan den også få tildelt rettigheder i kraft dens identitet eller type, eller den kan blive konfigureret af den organisation, som installerer den. Et eksempel på sidstnævnte kan være et erhvervsscenarie, hvor en organisation anvender en såkaldt MDM-løsning (Mobile Device Management) til at udtrulle og konfigurere apps på enheder under organisationens kontrol - herunder konfiguration af identifikationsmidler, rettigheder og anden konfiguration.
 
 Det skal bemærkes, at brugerautentifikationen (indlejret i OAuth eller OpenID Connect flows) sagtens kan være baseret på OIOSAML [19], hvorfor eksisterende SAML-baserede autentifikationstjenester og brokere kan genanvendes. Eksempelvis er det fuldt ud muligt at benytte NemLog-in's SAML IdP til at autorisere en app, og brugergrænsefladen er i NemLog-in's implementering responsiv, og den vil dermed tilpasse sig den reducerede skærmstørrelse. Digitaliseringsstyrelsen har i 2011 udgivet en vejledning til OAuth 2.0 [27], der viser hvordan standarden kan anvendes.
 
@@ -1095,9 +1094,7 @@ Der er således behov for videreudvikling af en arkitektur omhandlende brugersty
 - Understøttelse af delegeringer og identitetsbaserede kald på tværs af API'er.
 - Mulighed for konsolideret overblik for slutbrugere over deres apps og styring af afgivne samtykker til at apps kan tilgå deres data.
 
-Som nævnt er Digitaliseringsstyrelsen i gang med at udarbejde fællesoffentlige profiler, der sikrer en række af disse egenskaber. Profilerne kan ses som en pendant til de nuværende OIOSAML og OIO IDWS profiler rettet mod web-applikationer og SOAP-baserede web services, hvor de nye profiler adresserer apps og REST-baserede services.
-
-Et tidligt udkast til profilerne kan findes på [Digitaliseringsstyrelsens hjemmeside](https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/vejledninger-og-standarder/openid-connect-profiler)
+Som nævnt er Digitaliseringsstyrelsen i gang med at udarbejde fællesoffentlige profiler [30], der sikrer en række af disse egenskaber. Profilerne kan ses som en pendant til de nuværende OIOSAML og OIO IDWS profiler rettet mod web-applikationer og SOAP-baserede web services, hvor de nye profiler adresserer apps og REST-baserede services.
 
 Det er hensigten, at disse profiler kan anvendes og profileres af domæner med specialbehov, fx ved lokalt at definere yderligere claims og scopes.
 
@@ -1127,15 +1124,15 @@ IETF deler et apparats livscyklus op i tre faser. Først "bootstrapping", hvor a
 #### Apparater med tekniske begrænsninger
 Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater eller tokens. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændrer forudsætningerne for brugerstyring i praksis.
 
-IETF peger på, at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne type apparater på det fysiske datalag, men at kryptografi stadig er resourcekrævene i sin natur. Der er derfor behov for redesignede protokoller, der kan understøtte mindre ressourcekrævende løsninger i forhold til de sikkerhedsudfordringer, der kommer med ressourceknaphed.
+IETF peger på, at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne type apparater på det fysiske datalag, men at kryptografi stadig er resourcekrævende i sin natur. Der er derfor behov for redesignede protokoller, der kan understøtte mindre ressourcekrævende løsninger i forhold til de sikkerhedsudfordringer, der kommer med ressourceknaphed.
 
-Et andet mønster, der kan imødekomme de tekniske begrænsninger i apparater, læner sig op af digital twin tankegangen. Her etableres en virtuel proxy-version af apparatet i en anden del af netværket. Proxy-versionen har flere resourcer til rådighed og kan forvalte brugerstyringen på vegne af det fysiske apparat. I brugerstyringssammenhæng kan dette mønster yderligere give den fordel, at man kan opbygge det virtuelle apparat således, at man kan omgå den proprietere brugerstyring, der kunne være indbygget i apparatet fra den oprindelige opsætning. Ved at etablere et virtuelt apparat får man mulighed for at adskille brugerstyringen fra forretningstjenesten i overensstemmelse med referencearkitekturens principper, uanset hvordan apparatet oprindeligt var sat op. Det betyder at man kan anvende dedikerede brugerstyringstjenester, som kan indgå i et større tillidsøkosystem.
+Et andet mønster, der kan imødekomme de tekniske begrænsninger i apparater, læner sig op af digital twin tankegangen. Her etableres en virtuel proxy-version af apparatet i en anden del af netværket. Proxy-versionen har flere resourcer til rådighed og kan forvalte brugerstyringen på vegne af det fysiske apparat. I brugerstyringssammenhæng kan dette mønster yderligere give den fordel, at man kan opbygge det virtuelle apparat således, at man kan omgå den proprietære brugerstyring, der kunne være indbygget i apparatet fra den oprindelige opsætning. Ved at etablere et virtuelt apparat får man mulighed for at adskille brugerstyringen fra forretningstjenesten i overensstemmelse med referencearkitekturens principper, uanset hvordan apparatet oprindeligt var sat op. Det betyder at man kan anvende dedikerede brugerstyringstjenester, som kan indgå i et større tillidsøkosystem.
 
 
 ### IoT-apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43]. Yderligere er der defineret en række IoT begreber i ISO/IEC 20924 information technology - Internet of Things (IoT) - vocabulary standarden [32]. Definitionen af IoT i denne referencearkitektur bygger på ISO/IEC 20924 standarden, og definerer IoT som en infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services, der processerer og reagerer på information fra den fysiske og virtuelle verden.
 
-Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og W3Cs WoT Architecture. IoT-entiteter er her forstået som apparater eller sammenstillingen af apparater, der intereagere med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
+Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og W3Cs WoT Architecture. IoT-entiteter er her forstået som apparater eller sammenstillingen af apparater, der interagere med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
 #### Adgangspolitikker i IoT
 Hvis man driver en tjeneste på IoT niveau, bør man i sin adgangspolitik tage en holistisk tilgang, der også er dækkende for IOT apparater i infrastrukturen. Tjenesten vil i det tilfælde være placeret på en infrastruktur af software og apparater, og er altså ikke specifikt knyttet til et apparat.
@@ -1244,6 +1241,7 @@ Nedenstående liste viser kilder og baggrundsmateriale, som der henvises til i R
 | 27 | The Internet Engineering Task Force (IETF) | OAuth 2.0 Authorization Framework rfc 6749,  https://digitaliser.dk/resource/1246357 |
 | 28 | OpenID Foundation | OpenID Connect Core 1.0,  https://openid.net/specs/openid-connect-core-1_0.html |
 | 29 | The Internet Engineering Task Force (IETF) | OAuth 2.0 Token Exchange,  https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-19 |
+| 30 | Digitaliseringsstyrelsen | OpenID Connect Profiler, https://digst.dk/it-loesninger/nemlog-in/det-kommende-nemlog-in/vejledninger-og-standarder/openid-connect-profiler |
 | 32 | ISO/IEC | ISO/IEC 20924 information technology - Internet of Things (IoT) - vocabulary,  https://www.iso.org/standard/69470.html |
 | 33 | KL | KL Emnesystematik, kle-online.dk |
 | 34 | Digitaliseringsstyrelsen | FORM-online, https://arkitektur.digst.dk/node/470 |
