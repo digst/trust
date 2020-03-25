@@ -1124,21 +1124,13 @@ IETF peger på at man med fordel kan forsøge at minimere størrelsen og antalle
 Et andet mønster der kan imødekomme de tekniske begrænsninger i apparater, læner sig op af digital twin tankegangen. Her etableres en virtuel proxy-version af apparatet i en anden del af netværket, der har flere resourcer til rådighed, og som kan forvalte brugerstyringen på vejne af det fysiske apparat. I brugerstyringssammenhæng kan dette mønster yderligere give den fordel at man kan opbygge det virtuelle apparat således at man kan omgå den proprietere brugerstyring der kunne være indbygget i apparatet fra den oprindelige opsætning. Ved at etablere et virtuelt apparat får man mulighed for at adskille brugerstyringen fra forretningstjenesten, i overensstemmelse med referencearkitekturens principper, uanset hvordan apparatet oprindeligt var sat op. Det betyder at man kan anvende dedikerede brugerstyringstjenester som kan indgå i et større tillidsøkosystem.
 
 ### IoT-apparater
-Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43].
+Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43]. Yderligere er der defineret en række IoT begreber i *ISO/IEC 20924 information technology - Internet of Things (IoT) vocabylary* standarden. Definitionen af IoT i denne referencearkitektur bygger på ISO/IEC 20924 standarden, og definerer IoT som en infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services der processerer og reagerer på information fra den fysiske og virtuelle verden.
 
-<!--
-AA: Jeg synes ikke, at dette afsnit bidrager tlistrækkeligt og det er svært at forstå. Derfor foreslår jeg, at vi sletter det.
-AFL: jeg tror det er nødvendigt på en eller anden måde at tydeliggøre hvad forskellen på IoT og andre dimser er, hvis vi skal tale om det.
-AA: I givet fald skal vi vist skrive det mere tydeligt, for jeg læser nedenstående som at det bare er et apparat.
-AFL: Hvad med apparater der ikke indgår i noget netværk? eller som ikke sanser eller igangsætter nogen forandring i verden? ex. en normal brødrister, eller en pc uden netværk?
-  IoT-apparater er sensorer eller aktuatorer, der interagere og kommunikerer med den fysiske verden igennem en intelligent tjeneste på en infrastruktur af sammenhængende objekter, personnel, systemer og informationsressourcer. Dermed adskiller de sig fra andre apparater, der kan udfører sin funktion uden nødvendigvis at være tilknyttet andre apparater eller en netværk.
+Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og W3Cs WoT Architecture. IoT-entiteter er her forstået som apparater eller sammenstillingen af apparater, er intereagere med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
- -->
+<!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
-
-Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur.
-
-#### IoT livscyklus
+#### Apparaters livscyklus
 IoT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
 
 #### Delegation af rettigheder i IoT netværk
