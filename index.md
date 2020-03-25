@@ -1131,20 +1131,13 @@ Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og 
 <!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
 #### Apparaters livscyklus
-IoT har, som andre apparater, en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I et netværk af IOT apparater kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IOT apparat bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen.
+Apparater har en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I en IoT infrastruktur kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IoT entitet bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen, enten som en selvstændig tjenste, underlagt en overordnet tjeneste eller som bruger.
 
-#### Delegation af rettigheder i IoT netværk
-IoT apparater vil i nogle tilfælde arve rettigheder fra en person eller organisation, og videregive disse rettigheder til andre IOT apparater i netværket, der hver især kan tilgås fra internettet. Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
+#### Adgangspolitikker i IoT
+Hvis man driver en tjeneste på IoT niveau, bør man i sin adgangspolitik tage en holistisk tilgang der også er dækkende for de IOT apparater i infrastrukturen. Tjenesten vil i det tilfælde være placeret på en infrastruktur af software og apparater, og er altså ikke specifikt knyttet til et apparat.
 
-#### Dataindsamling med IoT
-Hvis et apparat indsamler data relateret til en anden entitet, eksempelvis en person eller en organisation, er det vigtigt at være opmærksom på, at denne kobling ikke nødvendigvis er permanent, stærk eller entydig. Et pulsur eller en Smart elmåler kan eksempelvis skifte ejer, og dermed begynde at indsamle data om en anden entitet end tidligere
-<!--  , uden at resten af IoT infrastrukturen også har skiftet ejer.  
-AA: hvorfor er det relevant, om resten har skiftet ejer? Er pointen, at
-AFL: pointen jeg prøvede at få frem var begge dele. både at der kan være flere brugere om det samme apparat, og det kan være svært at adskille, men også at apparatet kan skifte permanent "måleobjekt" og dermed levere forkert data som du ellers ikke havde nogen grund til at betvivle.
--->
 
-Ligeledes kan det være svært at håndhæve en streng adgangskontrol over en delt IoT badevægt, der af samme årsag kan indsamle information om vægten på alle der har adgang til den, uden at kunne præcisere informationen yderligere.
-
+Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
