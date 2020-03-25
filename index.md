@@ -1116,28 +1116,30 @@ Selvstændige apparater der ikke er tilknyttet et netværk eller kan aflæses af
 
 Derudover kan vi dele apparater op i aktive og passive apparater. Aktive apparater er tilsluttet netværk og kan igangsætte processer uden yderligere menneskelig indblanding end opsætningen. Det kan eksempelvis være et netværkstilknyttet termometer, som kan aflæses på en smartphone. Passive apparater er ikke i stand til at ændre en tilstand i verden på egen hånd, men kan bærer på funktioner og information der kan være en udløsende faktor for ændringer i verden. Eksempelvis indeholder moderne pas information om biometrisk data der linker identiteten med entiteten, og som kan aflæses af andre apparater.
 
-### Apparater med tekniske begrænsninger
+Fordi nogle apparater kan gennemfører fysiske forandringer i deres omverden og indsamle information, er der en reel risiko for brud på private data eller fysisk skade på personer. Det betyder at brugerstyring og yderligere tanke på sikkerhed bør indgå i opsætningen og driften af apparater.
+
+#### Apparaters livscyklus
+Apparater har en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. Ved installation, udskiftning eller afskaffelse af et apparat bør man sikre sig at det lever op til adgangspolitikken efter forandringen, enten som en selvstændig tjenste, underlagt en overordnet tjeneste eller som bruger.
+
+IETF deler et apparats livscyklus op i tre faser. Først "bootstrapping", hvor apparatet sættes op, til at kunne udføre sin opgave og indgå som tiltænkt i den samlede infrastruktur. Dernæst "Operational" fasen, hvor apparatet udfører sin funktion. Hvis der er behov for en forandring kan bliver den sidste fase "Maintainance & rebootstrapping" relevant. Det er særligt i bootstrappingfaserne at man skal være opmærksom på brugerstyring. Det er vigtigt at påpege at afskaffelse af apparater også tæller som en Maintainance & rebootstrapping fase, og at man altså bør sikre at apparatet ikke længere har rettigheder eller indflydelse eller indeholder fortrolig data.
+
+#### Apparater med tekniske begrænsninger
 Der findes en række tekniske forudsætninger for at et apparat kan håndtere brugerstyring med certifikater eller tokens. I nogle tilfælde vil apparater skulle agere i et kommunikationsnetværk med begrænset båndbredde, eller et ustabilt signal. Ligeledes har nogle apparater begrænset regnekraft, hukommelse eller energi til rådighed, som ændrer forudsætningerne for brugerstyring i praksis.
 
 IETF peger på at man med fordel kan forsøge at minimere størrelsen og antallet af datapakkerne til og fra denne typer apparater på det fysiske datalag, men at kryptografi stadig er resourcekrævene i sin natur, og der er behov for redesignede protokoller der kan understøtte mindre ressourcekrævende løsninger af de sikkerhedsudfordringer der kommer med ressourceknaphed.
 
 Et andet mønster der kan imødekomme de tekniske begrænsninger i apparater, læner sig op af digital twin tankegangen. Her etableres en virtuel proxy-version af apparatet i en anden del af netværket, der har flere resourcer til rådighed, og som kan forvalte brugerstyringen på vejne af det fysiske apparat. I brugerstyringssammenhæng kan dette mønster yderligere give den fordel at man kan opbygge det virtuelle apparat således at man kan omgå den proprietere brugerstyring der kunne være indbygget i apparatet fra den oprindelige opsætning. Ved at etablere et virtuelt apparat får man mulighed for at adskille brugerstyringen fra forretningstjenesten, i overensstemmelse med referencearkitekturens principper, uanset hvordan apparatet oprindeligt var sat op. Det betyder at man kan anvende dedikerede brugerstyringstjenester som kan indgå i et større tillidsøkosystem.
 
+
 ### IoT-apparater
 Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i gang vedrørende Web of Things (WoT), som er deres begreb for IoT. De har publiceret et udkast til retningslinjer for sikkerhed og privacy, der indeholder en række gode eksempler og forslag til standardisering [43]. Yderligere er der defineret en række IoT begreber i *ISO/IEC 20924 information technology - Internet of Things (IoT) vocabylary* standarden. Definitionen af IoT i denne referencearkitektur bygger på ISO/IEC 20924 standarden, og definerer IoT som en infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services der processerer og reagerer på information fra den fysiske og virtuelle verden.
 
 Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og W3Cs WoT Architecture. IoT-entiteter er her forstået som apparater eller sammenstillingen af apparater, er intereagere med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
-<!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
-
-#### Apparaters livscyklus
-Apparater har en livscyklus der enten er bundet op på en specifik anvendelse eller apparatets fysiske levetid. I en IoT infrastruktur kan der indgå apparater med forskellig levetid. Ved installation, udskiftning eller afskaffelse af et IoT entitet bør man sikre sig at det enkelte apparat lever op til adgangspolitikken efter forandringen, enten som en selvstændig tjenste, underlagt en overordnet tjeneste eller som bruger.
-
 #### Adgangspolitikker i IoT
 Hvis man driver en tjeneste på IoT niveau, bør man i sin adgangspolitik tage en holistisk tilgang der også er dækkende for de IOT apparater i infrastrukturen. Tjenesten vil i det tilfælde være placeret på en infrastruktur af software og apparater, og er altså ikke specifikt knyttet til et apparat.
 
-
-Dette kan eksempelvis ske i situationer hvor en række IoT apparater er blevet sat op som en gruppe under samme adgangskontrol. Enten fordi et apparat styrer og indsamler data fra en række andre apparater, eller fordi apparaterne er blevet grupperet eller fødereret og har fået koordineret brugerstyring hvor de alle acceptere samme token.
+<!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både at yde god digital service, som tager hensyn til it-svage borgere, og samtidig at fx forvaltningslovens krav til partsrepræsentation kan opfyldes.
