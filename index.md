@@ -311,7 +311,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 
 
 ### Princip 2: Brugerstyringsløsninger respekterer brugernes privatliv
-Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt ud fra princippet om dataminimering.
+Brugerstyringsløsninger skal beskytte information om brugerne og sikre fortrolighed, og bør indhente og udveksle så lidt information som muligt i overensstemmelse med GDPR princippet om dataminimering.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
 
@@ -379,7 +379,7 @@ Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sa
 - Anvendelse af åbne, løst koblede komponenter håndteret af flere aktører forudsætter, at der er tillid mellem parterne.
 - Standarderne for informationsoverførsler mellem de løst koblede komponenter bør tage udgangspunkt i internationalt anerkendte standarder inden for EU eller globalt (med danske profiler, hvor det er nødvendigt).
 -	Når brugerstyringsopgaven løses af forskellige aktører bygget på en kæde af tillid og aftaler mellem parterne, er sikkerheden afhængig af den enkelte aktørs interne sikkerhed samt af sikkerheden i samspillet mellem aktører.
-- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en række realiserede løsningsbyggeblokke, herunder tjenester og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
+- Den fællesoffentlige arkitektur for brugerstyring indeholder et overordnet sæt arkitekturbyggeblokke og en del af arkitekturen er realiseret igennem fællesoffentlige løsningsbyggeblokke og standarder for, hvordan disse udveksler adgangsbilletter og attributter. Enhver løsning inden for brugerstyring bør tage udgangspunkt i disse arkitektur- og løsningsbyggeblokke.
 
 ### Princip 6: Tjenesteudbydere indgår i føderationer
 For at effektivisere samarbejdet imellem udbydere af forretningstjenester og anvendte tillidstjenester, kan disse indgå i føderationer. Inden for føderationen aftales fælles standarder, samt tillids- og adgangspolitikker.
