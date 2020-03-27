@@ -51,7 +51,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 2.	Brugerstyringsløsninger respekterer brugernes privatliv.
 3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange.
 4.	Brugerstyring er adskilt fra forretningstjenester.
-5.	Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester.
+5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
 
 Forretningsbehov og de nævnte principper peger entydigt på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Det betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne ikke selv håndtere administration af brugerstyringen.
@@ -252,7 +252,7 @@ Det er helt centralt for realiseringen af en effektiv digitalisering, at brugern
 
 ### Delegering og fuldmagt
 En del borgere og virksomheder har behov for at kunne give andre fuldmagt til at løse opgaver for sig. Myndigheder er omfattet af reglerne om partsrepræsentation, og deres digitale tjenester skal derfor understøtte anvendelse af fuldmagt. Ellers skal myndigheden etablere manuelle løsninger til partsrepræsentation.
-I forhold til autonome softwarerobotter er der et behov for, at en person eller en organisation kan delegere rettigheder til en robots identitet, således at den kan agere på et veldefineret grundlag.
+I forhold til autonome softwarerobotter er der et behov for, at en person eller en organisation kan delegere rettigheder for et it-system til en robotidentitet, således at den kan agere på et veldefineret grundlag.
 
 ### Effektivitet
 
@@ -288,7 +288,7 @@ Principper er retningslinier og de kan i nogle tilfælde være modstridende. I d
 2.	Brugerstyringsløsninger respekterer brugernes privatliv
 3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
 4.	Brugerstyring er adskilt fra forretningstjenester
-5.	Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester
+5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester
 6.	Tjenesteudbydere indgår i føderationer
 
 
@@ -366,15 +366,15 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 -	Der skal etableres aftaler imellem udbyderne af forretningstjenesterne og udbyderne af tillidstjenesterne, således at den nødvendige tillid for samarbejdet er til stede.  
 
 
-### Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede komponenter
-Brugerstyring er som fagligt domæne præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem  tillidstjenesterne og forretningstjenesterne såvel som mellem tillidstjenesterne indbyrdes og for at kunne kombinere tillidstjenester på nye måder er det en fordel, når tillidstjenesterne lever op til harmoniserede krav.
+### Princip 5: Brugerstyring realiseres via løst koblede og standardiserede komponenter
+Brugerstyring er som fagligt domæne præget af stigende arbejdsdeling og opdeling i løst koblede komponenter, der kan kombineres efter behov. For at sikre et effektivt samarbejde imellem  tillidstjenesterne og forretningstjenesterne såvel som mellem tillidstjenesterne indbyrdes og for at kunne kombinere tillidstjenester på nye måder er det en fordel, når tillidstjenesterne lever op til standardiserede krav.
 
 Princippet understøtter særligt FDA arkitekturprincip 2: Arkitektur fremmer sammenhæng, innovation og effektivitet, princip 4: Sikkerhed, privatliv og tillid sikres og princip 7: It-løsninger samarbejder effektivt.
 
 *Rationale*
 
 -	En opdeling i  logisk adskilte komponenter reducerer den samlede kompleksitet af den fællesoffentlige brugerstyring.
--	Harmoniserede krav til funktionalitet og snitflader giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet.
+-	Standardiserede krav til funktionalitet og snitflader giver større fleksibilitet og bedre udnyttelse af udvikling og innovation i markedet.
 -	En åben og modulær arkitektur giver større agilitet og forandringsparathed i forhold til at udskifte eller variere delløsninger, integrere nye teknologier og implementere ændrede regler og politikker.
 
 *Implikationer*
@@ -453,6 +453,8 @@ ISO/IEC 27001 standarden [16] er opdelt i 14 domæner. For brugerstyring er dom�
 
 ### Risici vedr. brugere
 Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
+
+Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx ved brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
 
 
 
@@ -1017,21 +1019,21 @@ Nedenstående figur (fra Wikipedia) viser samspillet mellem de forskellige kompo
 
 
 ## Softwarerobotter
-Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Det kan fx være processer, hvor opgavekarakteren har en høj grad af repetition. Der skal ofte benyttes systemer, der kun udstiller deres funktionalitet via en brugergrænseflade (GUI) tiltænkt mennesker. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen og dermed opnå den ønskede automatisering - evt. kombineret med API-tilgang.
+Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Det kan fx være processer, hvor opgavekarakteren har en høj grad af repetition. Der er ofte behov for at interagere med systemer, der kun udstiller deres funktionalitet via en brugergrænseflade (GUI) tiltænkt mennesker. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen (fx via 'screen scraping') for at opnå den ønskede automatisering - evt. kombineret med tilgang til API'er.
 
-Det er ofte en grundlæggende præmis, at applikationerne ikke kan skrives om og gøres robot-venlige, men må bruges, som de er. Det kan her bemærkes, at den ideelle løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
+I denne referencearkitektur forstås softwarerobotter som de såkaldte autonome softwarerobotter, der agerer selvstændigt og optræder med sin egen digitale identitet, når den fx logger på applikationer og ikke agerer i kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for afgrænsningen, og giver som regel heller ikke udfordringer i brugerstyringen.
 
-En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres identifikationsmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS [18], lovgivning som eIDAS [8] mv. Det betyder i praksis at robotter skal oprettes som brugere i det system de skal tilgå, med en tydelig angivelse af at det er en robot, eksempelvis i brugerens attributsæt. Et andet aspekt er, at visse risici i forhold til personhenførbare data kan begrænses gennem anvendelse af robotter i stedet for mennesker - men omvendt kan robotter også bringe sine egne sårbarheder og angrebsvektorer.
+Det er ofte en grundlæggende præmis, at forretningsapplikationerne ikke kan skrives om og gøres robot-venlige, men må bruges, som de er. Det kan her bemærkes, at den ideelle løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
 
-I denne referencearkitektur forstås software robotter som de såkaldte autonome software robotter, der agerer selvstændigt og optræder med sin egen digitale identitet, når den fx logger på applikationer og ikke agerer i kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for afgrænsningen, og giver som regel heller ikke udfordringer i brugerstyringen.
+En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres identifikationsmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS [18], lovgivning som eIDAS [8] mv. Det betyder i praksis, at robotter skal oprettes som selvstændige brugere i det system de skal tilgå, med en tydelig angivelse af at det er en robot, eksempelvis i brugerens attributsæt. Et andet aspekt er, at visse risici i forhold til personhenførbare data kan begrænses gennem anvendelse af robotter i stedet for mennesker - men omvendt kan robotter også bringe sine egne sårbarheder og angrebsvektorer.
 
-For autonome software robotter opstår derimod ofte udfordringer med brugerstyring, når applikationen er konstrueret til at forvente et log-in med et identifikationsmiddel, som alene må anvendes af menneskebrugere – eksempelvis et MOCES medarbejdercertifikat, der er særdeles udbredt. Her kan den autonome robot ikke få adgang – med mindre et menneske bryder reglerne og kompromitterer sikkerheden. I de næste underafsnit præsenteres et forslag til en løsning af denne udfordring baseret på føderationsprincippet.
+Det er en grundlæggende tese i denne referencearkitektur, at eksisterende principper og værktøjer til brugerstyring også kan anvendes på softwarerobotter med mindre tilpasninger. Robotter kan udstyres med digitale identiteter med tilhørende identifikationsmidler og rettigheder, som svarer de til opgaver, de skal udføre. Robotters rettigheder bør (som ved mennesker) begrænses mest muligt til, hvad der er relevant for deres funktion i henhold til det velkendte princip om 'least privilege'. Robotidentiteter kan styres af de samme værktøjer (fx IGA) som menneskeidentiteter, og en robot bør fx på samme måde have tilknyttet en ansvarlig ejer/leder i organisationen. Robotter er i kraft af deres natur begrænsede til kun at anvende visse typer identifikationsmidler - eksempelvis har de ikke biometri eller kan håndtere et fysisk identifikationsmiddel som fx et OTP token eller et smartcard. I praksis kan der opstå udfordringer, når applikationer er konstrueret til at forvente autentifikation med et identifikationsmiddel, som alene må anvendes af menneskebrugere – eksempelvis et MOCES medarbejdercertifikat, der er særdeles udbredt. Her kan den autonome robot ikke få adgang – med mindre et menneske bryder reglerne og kompromitterer sikkerheden og vilkårene. I de næste underafsnit præsenteres et forslag til en løsning af denne udfordring baseret på føderationsprincippet.
 
-Det er en grunlæggende tese i denne referencearkitektur, at eksisterende principper og værktøjer til brugerstyring også kan anvendes på robotter med mindre tilpasninger.
+Der er en klar udvikling på området mod mere og mere avancerede softwarerobotter, som ved brug af maskinlæring og AI kan udførere stadigt mere avancerede opgaver. Fra et brugerstyringssynpunkt er der dog ikke nogen afgørende forskel - der er stadig tale om en robotidentitet med tilhørende identifikationsmidler og rettigheder, som skal styres. Det er klart, at der kan være forskel på de rettigheder, der i praksis tildeles, men det ændrer ikke på brugerstyringen som sådan.
 
 
-### Løsning for autonome software robotter via føderation
-Til håndtering af autonome software robotter kan man med fordel bygge på føderationsprincippet. Hvis applikationen således ikke selv står for autentifikation af brugere men anvender en ekstern broker eller autentifikationstjeneste, kan der foretages en afkobling, som tillader robotten at simulere et menneske. I det følgende tages udgangspunkt i et konkret scenarie, hvor applikationen kræver log-in med MOCES-certifikat, og anvender NemLog-in som autentikationstjeneste / broker. Dette vil være tilfældet for mange offentlige tjenester – og mønstret kan sagtens generaliseres til andre sammenhænge herunder andre brokere.
+### Løsning for autonome softwarerobotter via føderation
+Til håndtering af autonome softwarerobotter kan man med fordel bygge på føderationsprincippet. Hvis applikationen således ikke selv står for autentifikation af brugere men anvender en ekstern broker eller autentifikationstjeneste, kan der foretages en afkobling, som tillader robotten at simulere et menneske. I det følgende tages udgangspunkt i et konkret scenarie, hvor applikationen kræver log-in med MOCES-certifikat, og anvender NemLog-in som autentikationstjeneste / broker. Dette vil være tilfældet for mange offentlige tjenester – og mønstret kan sagtens generaliseres til andre sammenhænge herunder andre brokere.
 
 Når en applikation beder NemLog-in om at autentificere en medarbejderidentitet, sker autentifikationen i NemLog-in, og applikationen får blot en signeret adgangsbillet tilbage (SAML Assertion) med en række attributter. Applikationens binding er således reelt til et forventet attributsæt (attributkontrakten), der beskriver en medarbejderidentitet (fx navn, e-mail, CVR, RID-nummer, rettigheder mv.) snarere end en binding til medarbejderens identifikationsmidler (fx MOCES certifikatet).
 
@@ -1058,13 +1060,13 @@ Løsningen er illustreret på følgende figur:
 <br>
 
 
-Man bør lade billetter for autonome software robotter indeholde en særlig attribut som indikerer, at der er tale om en robot - fx analogt til hvordan OIOSAML 3.0 i billetten skelner mellem private og professionelle. Herved kan ’robot-aware’ applikationer, hvis de vil, reagere på en særlig måde over for robotter, mens ’ikke-robot-aware’ applikationer blot ignorerer attributten, og opfører sig på samme måde som hvis der var tale om medarbejderidentitet for en fysisk person.
+Man bør lade billetter for autonome softwarerobotter indeholde en særlig attribut som indikerer, at der er tale om en robot - fx analogt til hvordan OIOSAML 3.0 i billetten skelner mellem private og professionelle. Herved kan ’robot-aware’ applikationer, hvis de vil, reagere på en særlig måde over for robotter, mens ’ikke-robot-aware’ applikationer blot ignorerer attributten, og opfører sig på samme måde som hvis der var tale om medarbejderidentitet for en fysisk person.
 
 
 ### Robotter uden føderation
-For forretningstjenester, som ikke understøtter føderationsmodellen men i stedet fx mønster 1 eller 2, som beskrevet ovenfor, må der anvendes en anden tilgang til understøttelse af autonome software robotter. Her kan en oplagt mulighed være at oprette en særlig 'robotbruger' med brugernavn + kodeord, sikringsniveau samt andre relevante attributter i applikationens lokale brugerkatalog (mønster 1) eller i det fælles directory (mønster 2). For organisationer, som har et IdM-system, vil det være oplagt at oprette og adminstrere robot-identiteter i dette på lige fod med øvrige identiteter. Herved optræder robotten som en selvstændig identitet, kan få egne rettigheder tildelt og autentificerer sig med et selvstændigt identifikationsmiddel, der er adskilt fra personbrugere.
+For forretningstjenester, som ikke understøtter føderationsmodellen men i stedet fx mønster 1 eller 2, som beskrevet ovenfor, må der anvendes en anden tilgang til understøttelse af autonome softwarerobotter. Her kan en oplagt mulighed være at oprette en særlig 'robotbruger' med brugernavn + kodeord, sikringsniveau samt andre relevante attributter i applikationens lokale brugerkatalog (mønster 1) eller i det fælles directory (mønster 2). For organisationer, som har et IdM-system, vil det være oplagt at oprette og adminstrere robot-identiteter i dette på lige fod med øvrige identiteter. Herved optræder robotten som en selvstændig identitet, kan få egne rettigheder tildelt og autentificerer sig med et selvstændigt identifikationsmiddel, der er adskilt fra personbrugere.
 
-Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikation med en bestemt type identifikationsmiddel, som kun må udstedes til mennesker (fx NemID medarbejdercertifikater), er der ikke umiddelbart nogen lette løsninger til at give software robotter adgang til forretningstjenesten. Her må forretningstjenesten typisk omskrives til at bruge en ekstern autentifikationstjeneste, således at forretningstjenesten undgår en hård teknisk kobling til bestemte typer identifikationsmidler. En sådan omskrivning vil forventeligt give en række gevinster og herunder større fleksibilitet i forhold til understøttelse af personbrugere.
+Hvis forretningstjenesten har en hård teknisk binding, der kræver autentifikation med en bestemt type identifikationsmiddel, som kun må udstedes til mennesker (fx NemID medarbejdercertifikater), er der ikke umiddelbart nogen lette løsninger til at give softwarerobotter adgang til forretningstjenesten. Her må forretningstjenesten typisk omskrives til at bruge en ekstern autentifikationstjeneste, således at forretningstjenesten undgår en hård teknisk kobling til bestemte typer identifikationsmidler. En sådan omskrivning vil forventeligt give en række gevinster og herunder større fleksibilitet i forhold til understøttelse af personbrugere.
 
 
 ## Brugerstyring for (native) apps
@@ -1414,7 +1416,7 @@ De enkelte projekter kan have udfordringer med, at der kan være nogle uhensigts
 | 3 | Er der taget stilling til, om den aktuelle løsning designes og implementeres, så løsningen bliver effektiv? | 2.1.5 Effektivitet | 2.1: Anvend og udbyg den fællesoffentlige rammearkitektur 2.2: Anvend åbne og internationale standarder |
 | 4 | Er der defineret en klar adgangspolitik, som tjenesteudbyderen kan håndhæve | 2.3.2 Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange | 4: Sikkerhed, privatliv og tillid sikres. |
 | 5 | Er brugerstyring adskilt fra forretningsprocesser? | 2.3.4 Princip 4: Brugerstyring er adskilt fra forretningsprocesser | 2 Arkitektur fremmer sammenhæng, innovation og effektivitet 7: It-løsninger samarbejder effektivt |
-| 6 | Anvendes relevante (eksterne) tillidstjenester til at varetage elementer af brugerstyring | 2.3.5 Princip 5: Brugerstyring realiseres via løst koblede og harmoniserede tillidstjenester og 2.3.6 Princip 6: Tjenesteudbydere indgår i føderationer | 2 Arkitektur fremmer sammenhæng, innovation, 5: Processer optimeres på tværs 7: It-løsninger samarbejder effektivt |
+| 6 | Anvendes relevante (eksterne) tillidstjenester til at varetage elementer af brugerstyring | 2.3.5 Princip 5: Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester og 2.3.6 Princip 6: Tjenesteudbydere indgår i føderationer | 2 Arkitektur fremmer sammenhæng, innovation, 5: Processer optimeres på tværs 7: It-løsninger samarbejder effektivt |
 | 7 | Er der foretaget en risiko- og konsekvensvurdering jfr. ISO 27001 standarden, og dækker denne også konsekvenser for brugernes privatliv? | 2.6 Sikkerhed | 4: Sikkerhed, privatliv og tillid sikres. |
 | 8 | Er de forskellige arkitekturmønstre for brugerstyring blevet vurderet og prioriteret? Er skalerbarhed overvejet, både på kort sigt og i forhold til langsigtede behov? | 3.5 Logiske arkitekturmønstre | 5: Processer optimeres på tværs 7: It-løsninger samarbejder effektivt |
 | 9 | Er det undersøgt hvilken lovgivning, der skal tages højde for i forbindelse med etablering af løsningen? | 2.5 Juridiske rammer | 3: Arkitektur og regulering understøtter hinanden 4: Sikkerhed, privatliv og tillid sikres |
