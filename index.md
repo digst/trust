@@ -139,7 +139,7 @@ I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i n
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.
+**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
 
 **Digital identitet** digital persona der repræsenterer en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
@@ -163,7 +163,7 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 **Applikation** software entitet med specifik forretningsfunktion, der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
 
-Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem. 
+Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
 
 Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile Apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *Applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
 
