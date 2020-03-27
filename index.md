@@ -161,7 +161,9 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 **Apparat** fysisk konstruktion med indlejret logik, fx software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Et apparat, der kan agere som *bruger*, optræder med sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater, der virker i lukkede kredsløb og som tilgås via et system, betragtes som enten en tjeneste eller en *applikation*.
 
-**Applikation** software entitet med specifik forretningsfunktion, der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
+**Applikation** software entitet med specifik forretningsfunktion[^1], der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
+
+[^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
 Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
 
@@ -1015,15 +1017,18 @@ Nedenstående figur (fra Wikipedia) viser samspillet mellem de forskellige kompo
 
 
 ## Softwarerobotter
-Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Her indgår ofte systemer, der kun udstiller deres funktionalitet via en brugergrænseflade. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen og dermed opnå den ønskede automatisering.
+Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Det kan fx være processer, hvor opgavekarakteren har en høj grad af repetition. Der skal ofte benyttes systemer, der kun udstiller deres funktionalitet via en brugergrænseflade (GUI) tiltænkt mennesker. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen og dermed opnå den ønskede automatisering - evt. kombineret med API-tilgang.
 
 Det er ofte en grundlæggende præmis, at applikationerne ikke kan skrives om og gøres robot-venlige, men må bruges, som de er. Det kan her bemærkes, at den ideelle løsning formentlig vil være en ’API-first’ tilgang, hvor al funktionalitet i applikationer udstilles som services, således at procesautomatisering let kan opnås ved at orkestrere relevante services. Robot-tilgangen kan med andre ord opfattes som et teknisk work-around, som kompenserer for manglende service-enabling i eksisterende applikationer.
 
-En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres identifikationsmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS [18], lovgivning som eIDAS [8] mv. Det betyder i praksis at robotter skal oprettes som brugere i det system de skal tilgå, med en tydelig angivelse af at det er en robot, eksempelvis i brugerens attributsæt.
+En anden grundlæggende præmis er, at sikkerheden ikke må kompromitteres ved anvendelse af robotter, herunder at menneskebrugere ikke må være nødsaget til at udlevere deres identifikationsmidler til robotter i strid med certifikatpolitikker, brugervilkår for NemID/MitID, krav i standarder som NSIS [18], lovgivning som eIDAS [8] mv. Det betyder i praksis at robotter skal oprettes som brugere i det system de skal tilgå, med en tydelig angivelse af at det er en robot, eksempelvis i brugerens attributsæt. Et andet aspekt er, at visse risici i forhold til personhenførbare data kan begrænses gennem anvendelse af robotter i stedet for mennesker - men omvendt kan robotter også bringe sine egne sårbarheder og angrebsvektorer.
 
 I denne referencearkitektur forstås software robotter som de såkaldte autonome software robotter, der agerer selvstændigt og optræder med sin egen digitale identitet, når den fx logger på applikationer og ikke agerer i kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for afgrænsningen, og giver som regel heller ikke udfordringer i brugerstyringen.
 
 For autonome software robotter opstår derimod ofte udfordringer med brugerstyring, når applikationen er konstrueret til at forvente et log-in med et identifikationsmiddel, som alene må anvendes af menneskebrugere – eksempelvis et MOCES medarbejdercertifikat, der er særdeles udbredt. Her kan den autonome robot ikke få adgang – med mindre et menneske bryder reglerne og kompromitterer sikkerheden. I de næste underafsnit præsenteres et forslag til en løsning af denne udfordring baseret på føderationsprincippet.
+
+Det er en grunlæggende tese i denne referencearkitektur, at eksisterende principper og værktøjer til brugerstyring også kan anvendes på robotter med mindre tilpasninger.
+
 
 ### Løsning for autonome software robotter via føderation
 Til håndtering af autonome software robotter kan man med fordel bygge på føderationsprincippet. Hvis applikationen således ikke selv står for autentifikation af brugere men anvender en ekstern broker eller autentifikationstjeneste, kan der foretages en afkobling, som tillader robotten at simulere et menneske. I det følgende tages udgangspunkt i et konkret scenarie, hvor applikationen kræver log-in med MOCES-certifikat, og anvender NemLog-in som autentikationstjeneste / broker. Dette vil være tilfældet for mange offentlige tjenester – og mønstret kan sagtens generaliseres til andre sammenhænge herunder andre brokere.
