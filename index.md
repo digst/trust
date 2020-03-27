@@ -116,10 +116,10 @@ Referencearkitekturen beskriver administrationen af og kontrollen med brugeres a
 
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
-<figcaption>Kapabiliteter omkring brugerstyring</figcaption>
+<figcaption>Aspekter omkring brugerstyring</figcaption>
 </figure>
 
-De primære kapabiliteter i brugerstyring er:
+De primære aspekter i brugerstyring er:
 
 -	**Brugeradministration** aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
 -	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en *bruger* får adgang til på baggrund af brugerens *attributter* og *tjenestens* *adgangspolitik*.
@@ -151,7 +151,7 @@ Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenståe
 I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
 
 <figure>
-<img src="Brugertyper.png" width="80%"/>
+<img src="Typer af brugere.png" width="80%"/>
 <figcaption>Brugertyper</figcaption>
 </figure>
 
@@ -256,7 +256,7 @@ I forhold til autonome softwarerobotter er der et behov for, at en person eller 
 
 ### Effektivitet
 
-Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det vurderes om systemer og processer understøtter sparsommelighed, produktivitet og effektivitet. Private tjenester vil på den anden side være underlagt et ønske om profit. Alle tjenester har derfor et behov for at være effektive, hvilket kan udtrykkes i behov som:
+Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det vurderes om systemer og processer understøtter sparsommelighed, produktivitet og effektivitet. Også private tjenester vil være underlagt et ønske om god ressourceanvendelse. Alle tjenester har derfor et behov for at være effektive, hvilket kan udtrykkes i behov som:
 
 - Enkel og samlet administration af brugere.
 - Sammenhæng imellem brugerstyring i forskellige organisationer både private og offentlige.
@@ -1208,7 +1208,7 @@ Endelig vurderes det, at der kan blive behov for yderligere vejledning og standa
 En række internationale standardiseringsorganisationer er i gang med at udarbejde nye standarder, som kan påvirke denne referencearkitektur. I dette afsnit gives en introduktion til nogle få af disse, uden at oversigten på nogen måde kan siges at være udtømmende. Der er i gennemgangen prioriteret standarder, som ikke er domæne- eller industrispecifikke, og som vil have potentiale til at blive anvendt eller profileret fællesoffentligt, når behov og modenhed er tilstrækkelig udtalt.
 
 #### Decentraliseret brugerstyring og identiteter
-Standardiseringsorganisationen W3C, som er kendt fra en række internetstandarder, har en arbejdsgruppe, som arbejder med såkaldte decentralized identifiers eller DIDs. Gruppen har udgivet et udkast til en standard, som specificerer datamodel og syntaks for DIDs [39], som har status som 'W3C Working Draft'.
+Standardiseringsorganisationen W3C, som er kendt fra en række internetstandarder, har en arbejdsgruppe, som arbejder med såkaldte decentralized identifiers eller DIDs. Gruppen har udgivet et udkast til en standard, som specificerer datamodel og syntaks for DIDs [39], som har status som 'W3C Working Draft', og som er den vigtigste på området.
 
 Standarden er en central brik i forhold til skabe standardisering og interoperabilitet inden for den bredere bevægelse som kan kaldes decentraliseret brugerstyring ('decentralized identity management'), som ikke bygger på centrale autoriteter (fx tillidstjenester eller centrale registre) men i stedet benytter en mere decentral arkitektur ofte baseret på blockchains, distributed ledger technology (DLT) og lignende teknologier. Her bruges alternative mekanismer til at skabe tillid, herunder de egenskaber som en blockchain tilvejebringer. En anden karakteristisk egenskab er, at brugerne tager en mere aktiv rolle i håndtering af deres identiteter ('brugercentrisk identity management' eller self-sovereign identity (SSI)), herunder kan skabe så mange uafhængige identiteter som ønskes af fx privatlivshensyn.
 
