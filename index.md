@@ -417,14 +417,15 @@ Etablering af brugerstyring, der håndteres i en selvstændig løsning uden for 
 
 I mange tilfælde kan der være tale om en investering for at nå dertil, men ved at efterleve principper og mønstre i denne referencearkitektur opnås værdiskabelse på en række områder:
 
-- Brugerne spilder mindre tid på at udføre deres opgaver i forretningstjenester, når skift mellem disse kan ske sømløst (fx via single sign on) og identifikationsmidler kan genbruges på tværs. Brugerne vil således opleve færre barrierer for udførelse af deres egentlige arbejde, og de kan dermed være mere effektive.
-- Udgifterne til systemintegration reduceres, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
-- Udgifter til administration af brugere reduceres, når brugere kan administreres samlet og effektivt frem for i en række adskilte siloer.
-- Det bliver hurtigere og billigere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området, og som ofte finansieres i fællesskab.
 - Risikoen for tab som følge af svindel og misbrug nedbringes, når sikkerheden øges gennem professionelle, dedikerede tillidstjenester.
+- Brugerne anvender mindre tid på at udføre deres opgaver i forretningstjenester, når skift mellem disse kan ske sømløst (fx via single sign on) og identifikationsmidler kan genbruges på tværs. Brugerne vil således opleve færre barrierer for udførelse af deres egentlige arbejde, de vil få en bedre brugeroplevelse, og de kan dermed være mere effektive.
+- Systemintegrationen bliver mindre kompliceret, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
+- Administration af brugere bliver mere rationel og effektiv, når de kan administreres samlet frem for i adskilte siloer.
+- Det bliver lettere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området, og som ofte finansieres i fællesskab.
 
 Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivning). Referencearkitekturen har ikke fokus på at opnå et bestemt sikkerhedsniveau men snarere at give værktøjer til at efterleve krav til brugerstyring på en effektiv måde, som muliggør sammenhæng på tværs. En høj sikkerhed kan principielt godt opnås i siloer med lav brugervenlighed og uden sammenhæng, men når en organisation indgår i føderationer og sammenhængende forløb, er det afgørende, at brugerstyringen indrettes efter nogle fælles principper, arkitektur og standarder.
 
+Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerhedsbrud med udgangspunkt i brugerstyringen, idet medarbejdere kan have rettigheder til mange løsninger, hvor brugerne ved decentral styring skal administreres hvert sted. Når brugere styres i flere forskellige løsninger, kan der fx lettere opstå en situation, hvor en medarbejder, der ophører med at arbejde i en organisation, ikke konsekvent bliver deaktiveret i samtlige løsninger. Derved kan der opstå risiko for, at ophørte medarbejdere fortsat har adgang til data og funktionalitet i interne systemer.
 
 ## Juridiske rammer
 
