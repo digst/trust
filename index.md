@@ -27,12 +27,14 @@ Der er de senere år etableret en række fælles løsninger for brugerstyring i 
 
 Formålet med referencearkitekturen er således at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
-Foruden brugerstyring af personer berører denne version af referencearkitekturen også særlige aspekter vedrørende brugerstyring af apparater, organisationer og applikationer, der samlet betegnes Non-person entities (NPE) og Internet of Things (IoT).
+Foruden brugerstyring af personer beskriver denne version af referencearkitekturen også hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apps og apparater (IoT).
 
 Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises. Dermed berører referencearkitekturen en væsentlig del af den samlede informationssikkerhedsindsats i det fællesoffentlige samarbejde.
 
 **Aktiviteter i forbindelse med brugerstyring**
 Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i **administration** og **adgangskontrol**.
+Brugerstyringen udføres på baggrund af adgangspolitikker, der bygger på det besluttede informationssikkerhedsniveau, og som regulerer adgang til egne systemer og eksterne parter.
+
 Hovedaktiviteterne i administration af brugernes digitale identiteter er:
 
 - **Registrering og udstedelse af identifikationsmidler**, der anvendes til at godkende og verificere en brugers digitale identitet.
@@ -54,12 +56,12 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
 
-Forretningsbehov og de nævnte principper peger entydigt på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Det betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne ikke selv håndtere administration af brugerstyringen.
+Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillesen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne. I de tilfælde, hvor der er hyppige ændringer af brugernes rettigheder, kan tildeling af rettigheder ligge i fagsystemerne.
 
 Der er derfor valgt en model for adgangsstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den kan desuden være digitalt signeret af brugerstyringsløsningen, så den ikke kan forfalskes eller manipuleres.
 
 **Arkitekturmønstre**
-Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner ligger i den samme organisation til økosystemer, hvor mange parter indgår:
+Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner vedrørende brugerstyring ligger i den samme organisation til økosystemer, hvor mange parter arbejder sammen om brugerstyring:
 
 1.	Forretningstjeneste med egen autentifikationstjeneste.
 2.	Delt, intern autentifikationstjeneste.
