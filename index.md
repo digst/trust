@@ -131,6 +131,12 @@ Ved siden af *forretningstjenester* findes *tillidstjenester*, der udfører betr
 
 **Føderationer** sammenslutning af *tillids- og forretningstjenester* med gensidig tillid.
 
+**IoT** infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services, der processerer og reagerer på information fra den fysiske og virtuelle verden.
+
+**IoT-entitet** apparater eller sammenstillingen af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
+
+
+
 ### Brugere og identiteter
 I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i når den tilgår en *tjeneste* eller et system. Rollen som *bruger* binder entiteter til digitale identiteter.
 
