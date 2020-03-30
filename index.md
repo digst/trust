@@ -1126,7 +1126,7 @@ Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende 
 
 **Apparat** som **bruger** have sin egen digitale identitet med tilhørende identifikationsmidler, som kan benyttes af apparatet.   
 
-Fordi apparater er selvstændige maskiner, specifikt tilknyttet den fysiske verden giver dette et ekstra lag af brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tillidstjenesternes underliggende infrastrukturleverandører. Det kan give udfordringer for teknisk begrænsede apparater, der måske ikke har ressourcerne til at indgå i en tillidskæde, og giver anledning til at være opmærksom på apparatets livscyklus, og hvornår i denne brugerstyringen sættes op.
+Fordi apparater er selvstændige maskiner, specifikt tilknyttet den fysiske verden giver dette et ekstra lag af brugerstyring, som i mange andre situationer vil være håndteret af udbyderne af tillidstjenesternes underliggende infrastrukturleverandører eller slet ikke opstå. Det kan give udfordringer for teknisk begrænsede apparater, der måske ikke har ressourcerne til at indgå i en tillidskæde, og giver anledning til at være opmærksom på apparatets livscyklus, og hvornår i denne brugerstyringen sættes op.
 
 Selvstændige apparater, der ikke er tilknyttet et netværk eller kan kontaktes af andre apparater, er ikke medtaget i denne referencearkitektur. Brugerstyring af den type apparater må forventes at bestå af at begrænse den fysiske adgang til kontrolpanelet. Her kan eksempelvis være tale om et klassisk hæve/sænkebord.
 
