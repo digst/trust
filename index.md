@@ -221,14 +221,42 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 -	Blå tekst: At et element eller en relation er kendt, men ejes og defineres et andet sted, fx i andre referencearkitekturer
 -	Grå tekst: At et element eller en relation er identificeret, men ikke nærmere defineret i denne referencearkitektur.
 
+# Styring
+[Arkitekturperspektiv  med fokus på styring. Omfatter aktører, mål, indsatser, metoder og procedurer. Den politiske og organisatoriske kontekst for beslutninger og ansvar ift. løsnin-gens udvikling og drift. Overordnede mål og gevinster, som skal realiseres. Aftal-te programmer, projekter, fora, processer og procedurer til styring. Metode og dokumentation, der håndterer eller understøtter dette.]
 
+Dette kapitel beskriver de overordnede rammer for styring i forhold til brugersty-ring, i form af en summarisk oversigt over de væsentligste governancemodeller, interessenter og forretningsmål.]
 
-# Strategi
-Denne referencearkitektur er udarbejdet for at understøtte implementeringen af Den fællesoffentlige digitaliseringsstrategi 2016-2020 [1] og gennemføre initiativ 5 i Fællesoffentlig strategi for brugerstyring [10]. Målet er, at referencearkitekturen skal fungere som et teknisk pejlemærke for udvikling af brugerstyringsløsninger i den offentlige sektor. Den er en del af den fællesoffentlige rammearkitektur, der bidrager til realiseringen af ”En digitalt sammenhængende offentlig sektor: Hvidbog om fællesoffentlig digital arkitektur” [2].
+## Governancemodel
+Dette afsnit beskriver de overordnede organisatoriske rammer for at udøve governance i relation til brugerstyring.
 
-Digitaliseringsstrategien har tre, overordnede målsætninger:
+Grundlæggende er ansvaret for brugerstyring placeret hos den enkelte organisati-on/myndighed og dennes systemejer og dataansvarlige. I praksis indgår flere og flere digitale løsninger i dag i føderationer, hvor forskellige dele af opgaverne omkring brugerstyring varetages af forskellige offentlige eller private aktører og deres respektive tjenester.
 
-- Det digitale skal være let, hurtigt og sikre god kvalitet
+- På internationalt og globalt niveau er der private aktører som fx Google og Facebook, som også anvendes af mange danske organisationer til netbaserede tjenester. Desuden findes der en række internationale standardiseringsorgani-sationer. På forskellige domæner findes der desuden særlige rammer. Det gælder fx for forsvaret i relation til Nato.
+- I EU regi stiller eIDAS-forordningen krav til, at relevante onlinetjenester kan tilgås med et eID (elektronisk identifikation) fra andre EU-/EØS-lande, og at medlemsstaterne anerkender hinandens eID-løsninger. Det sker via en såkaldt national eID-gateway, som myndighederne kan integrere deres selvbetjenings-løsninger til. Digitaliseringsstyrelsen er ansvarlig for den danske eID-gateway.
+- Nationalt er der med udgangspunkt i dansk lovgivning er en række statslige aktører ansvarslige for fælles infrastrukturløsninger, som fx Digitaliseringssty-relsen med NemID/MitID og NemLogin.
+- Inden for en række domæner finder man fx Styrelsen for it og læring med Unilogin infrastrukturen og WAYF – Where Are You From, som er Dan-marks identitetsføderation for forskning og uddannelse. Andre eksempler er sundhedsområdet, miljøområdet og det kommunale område, som alle har eg-ne infrastrukturer til understøtte tværgående processer, datadeling og fælles løsninger.
+
+## Interessenter
+Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til bruger-styring.
+
+| Interessent | Interesse |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Borgere (voksen, barn, udlænding) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til at deres data behandles med respekt for deres privatliv.  Har interesse i at kunne logge ind og så vidt muligt med single sign on, signere samt give fuldmagt og samtykke og administrere disse. |
+| Virksomheder (ejer, ansvarlig, medarbejder) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til at deres data behandles med respekt for deres privatliv og krav til fortrolighed.   Har desuden interesse i at kunne indgå i tillidsføderationer ved at anvende offentlige infrastrukturløsninger.   Har særlig interesse i løsninger til understøttelse af delegering via fuldmagt og integration med egne løsninger til understøttelse af Single Sign On. |
+| Staten | Har interesse i en infrastruktur vendt mod borgere og virksomheder, som kan understøtte fællesoffentlig og fælleseuropæisk føderation.   Har desuden interesse i en infrastruktur vendt mod medarbejdere, som tilsvarende kan understøtte relevante føderationer med henblik på effektiv og sikker understøttelse af processer, datadeling og brug af fælles løsninger.  De enkelte statslige myndigheder og virksomheder har ansvar for egne løsninger.  En række styrelser ansvar for nationale infrastrukturløsninger, herunder særligt Digitaliseringsstyrelsen (Nem/D/MitID, NemLogin, eID gateway) Styrelsen for it og læring (Unilogin) Sundhedsdatastyrelsen (National Sundheds Platform). Desuden er der samarbejdsorganisationer på bl.a. uddannelses og forskningsområdet (WAYF) og miljøområdet (Miljøportalen). |
+| Kommuner | Har interesse i en infrastruktur vendt mod borgere og virksomheder, som kan understøtte fællesoffentlig og fælleseuropæisk føderation.   Har desuden interesse i en infrastruktur vendt mod medarbejdere, som tilsvarende kan understøtte relevante føderationer med henblik på effektiv og sikker understøttelse af processer, datadeling og brug af fælles løsninger.  De enkelte kommuner og fælleskommunale selskaber har ansvar for egne løsninger. KL(/KOMBIT har ansvar for fælleskommunal infrastruktur. |
+| Regioner | Har interesse i en infrastruktur vendt mod borgere som kan understøtte fællesoffentlig og fælleseuropæisk føderation.   Har desuden interesse i en infrastruktur vendt mod offentlige og private sundhedsaktører og deres medarbejdere, som tilsvarende kan understøtte relevante føderationer med henblik på effektiv og sikker understøttelse af processer, datadeling og brug af fælles løsninger.  De enkelte regioner har ansvar for egne løsninger. Regionernes Sundheds IT (RSI) har fx ansvar for Active Directory Federation Services (ADFS)  r ansvar for fælleskommunal infrastruktur. |
+| EU | Har interesse i at DK kan indgå i transeuropæiske føderationer baseret på eIADS forordningen og fælleseuropæiske løsningsbyggeblokke. |
+| Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
+
+## Forretningsmål
+[Dette afsnit er i første omgang blot et lille klip fra strategikapitlet. Kan evt. sup-pleres med mere konkrete forretningsmål, fx omkring ID, signatur, SSO, fuld-magt, samtykke, NPE. Disse kan fx hentes fra strategi7initaitver og de store pro-jekter. Bør være kort og stramt i pindeform.]
+
+Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme.
+
+Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
+
+- Det digitale skal være let, hurtigt og sikre god kvaliteten
 - Offentlig digitalisering skal give gode vilkår for vækst
 - Tryghed og tillid skal i centrum
 
@@ -236,8 +264,12 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 
 Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20].
 
-## Forretningsmæssige behov
-Forretningsbehovene tager udgangspunkt i de udfordringer, offentlige virksomheder skal være i stand til at håndtere i forbindelse med brugerstyring. Fokus for Referencearkitektur for brugerstyring er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+
+# Strategi
+## Kapabiliteter og udfordringer
+Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
+
+Fokus for referencearkitektur er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
 ### Lettilgængelige sammenhængende tjenester
 Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængelige hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren, hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
@@ -426,7 +458,7 @@ Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivni
 
 Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerhedsbrud med udgangspunkt i brugerstyringen, idet medarbejdere kan have rettigheder til mange løsninger, hvor brugerne ved decentral styring skal administreres hvert sted. Når brugere styres i flere forskellige løsninger, kan der fx lettere opstå en situation, hvor en medarbejder, der ophører med at arbejde i en organisation, ikke konsekvent bliver deaktiveret i samtlige løsninger. Derved kan der opstå risiko for, at ophørte medarbejdere fortsat har adgang til data og funktionalitet i interne systemer.
 
-## Juridiske rammer
+## Jura
 
 De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
 
@@ -466,7 +498,7 @@ Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, h
 
 
 
-# Forretningsarkitektur
+# Opgaver
 
 Brugerstyring dækker opgaver og funktioner i forbindelse med administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det er således en fælles betegnelse for de foranstaltninger, som sikrer, at de rette brugere får adgang til de rette it-systemer (herunder data) - og at alle andre afvises. Brugerstyring involverer dels administration af brugernes digitale identiteter (før de tilgår it-systemer), herunder registrering og udstedelse af identifikationsmidler, beskrivelse af attributter i form af egenskaber, roller, relationer mv. og dels en adgangsstyring, når brugere tilgår it-systemer, som bl.a. involverer autentifikation og udførelse af adgangskontrol.
 
@@ -791,8 +823,100 @@ Ulemper:
  -	Dette er fx en kendt udfordring i eIDAS føderationen, hvor det garanterede minimumsæt af attributter for en fysisk person på tværs af EU er meget fattigt og kun rummer navn, fødselsdato, og en unik ID (ikke meningsbærende). Det er således en udfordring for mange forretningstjenester at levere en meningsfuld tjeneste til brugerne baseret på dette attributsæt. Enten fordi der ikke kan laves et sikkert match til en lokal repræsentation af brugeren, eller fordi en tjeneste er konstrueret til at kræve flere oplysninger som fx et dansk CPR-nummer.
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
 
+# Information
+[Arkitekturperspektiv med fokus de informationer, der skal håndteres af såvel forretningen som af teknikken. Omfatter begreber, terminologi, data og repræsen-tationer af data. Sikring af ensartet beskrivelse og forståelse, datatilgængelighed og aftalt datakvalitet. Mulighed for sammenhængende genbrug og sammenstilling af data. Standarder for data og dokumenter.
 
-# Teknisk arkitektur
+De afsnit fra det gamle kapitel om teknisk arkitektur der handler specifikt om at definere informationsstandarder fx protokoller, formater, attributter og klassifika-tioner, dokumenter, og herunder alt omkring standardisering på disse områder flyttes til kapitel 6 Information.]
+
+Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som ind-går i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
+
+Kapitlet omfatter følgende typer af information
+
+-	Klassifikation af identiteters sikringsniveau
+-	Certifikater og certifikatpolitikker
+-	Profiler for protokoller, billetformater som definerer roller og rettigheder
+-	Attributter som beskriver ID, roller ol., herunder attributkontrakter og be-skrivelse af attributters kvalitet
+-	Samtykke og fuldmagt
+
+## Områder for standardisering
+### Eksisterende standarder
+En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffent-lige standarder og profiler inden for en række områder, som succesfuldt har bi-draget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
+
+-	National Standard for Identiteters Sikringsniveauer [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridi-ske enhender og fysiske personer associeret med en juridisk enhed.
+-	OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer forma-ter og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), med-arbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
+-	OIOSAML Web SSO profilerne [19] som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder sing-le sign-on.
+-	OIO Basic Privilege Profile [40] som definerer hvordan rettigheder og roller kan udtrykkes i en adgangsbillet herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
+-	OIO IDWS familien af profiler [24], som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
+
+### Behov for nye fællesoffentlige standarder
+Der er en række områder, hvor der fællesoffentligt er behov for yderligere profi-ler og standarder med henblik på at sikre synergi og interoperabilitet. Der er be-hov for:
+
+-	yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslut-ninger som tages på baggrund af attributter kan kvalificeres yderligere. Jf af-snittet om attributter nedenfor.
+-	fælles arkitektur, standarder og datamodeller for håndtering af samtykke, her-under så samtykker kan udveksles på tværs.
+-	profilering af mobil-egnede adgangsbilletter baseret på JWT, PASETO eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Con-nect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
+-	en model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profi-len.
+
+Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde med discovery og orkestrering af tillidstjenester. Dertil kommer naturligvis behov for en række domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter for sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
+
+Endelig vurderes det, at der kan blive behov for yderligere vejledning og standar-der for kommunikation mellem føderationer, når erfaringerne med interføderati-on udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugersty-ring (SEB) [38].
+
+<figure>
+<img src="Kommunikation melem føderationer.png"/>
+<figcaption>Kommunikation mellem føderationer</figcaption>
+</figure>
+
+### Igangværende standardisering internationalt
+En række internationale standardiseringsorganisationer er i gang med at udarbej-de nye standarder, som kan påvirke denne referencearkitektur. I dette afsnit gives en introduktion til nogle få af disse, uden at oversigten på nogen måde kan siges at være udtømmende. Der er i gennemgangen prioriteret standarder, som ikke er domæne- eller industrispecifikke, og som vil have potentiale til at blive anvendt eller profileret fællesoffentligt, når behov og modenhed er tilstrækkelig udtalt.
+
+**Decentraliseret brugerstyring og -ID’er**
+Standardiseringsorganisationen W3C, som er kendt fra en række internetstandar-der, har en arbejdsgruppe, som arbejder med såkaldte decentralized identifiers eller DIDs. Gruppen har udgivet et udkast til en standard, som specificerer data-model og syntaks for DIDs [39], som har status som ‘W3C Working Draft’.
+
+Standarden er en central brik i forhold til skabe standardisering og interoperabili-tet inden for den bredere bevægelse som kan kaldes decentraliseret brugerstyring (‘decentralized identity management’), som ikke bygger på centrale autoriteter (fx tillidstjenester eller centrale registre) men i stedet benytter en mere decentral arki-tektur ofte baseret på blockchains, distributed ledger technology (DLT) og lig-nende teknologier. Her bruges alternative mekanismer til at skabe tillid, herunder de egenskaber som en blockchain tilvejebringer. En anden karakteristisk egenskab er, at brugerne tager en mere aktiv rolle i håndtering af deres identiteter (‘bruger-centrisk identity management’ eller self-sovereign identity (SSI)), herunder kan skabe så mange uafhængige identiteter som ønskes af fx privatlivshensyn.
+
+En DID er basalt set en URL som relaterer et ‘DID subject’ til et ‘DID doku-ment’ på en måde der giver mulighed for troværdige interaktioner med subjektet (brugeren). Et DID dokument kan fx beskrive offentlige nøgler, som DID sub-jektet (og tilhørende services) kan bruge til at autentificere sig med, og beskrive serviceendepunkter, som kan benyttes til at interagere med DID subjektet. Hen-sigten med standardiseringen er at specificere syntaks (DID scheme) og et gene-risk sæt af operationer på DID dokumenter. Ved at publicere et DID dokument på en blockchain kan brugere på en generisk måde specificere, hvordan en be-stemt identitet kan autentificeres.
+
+Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skole ba-seret på centrale autoriteter og -tillidstjenester, som sammenbindes gennem føde-rationer. Den decentrale brugerstyring er dog et interessant nyt paradigme, som vil blive observeret efterhånden som området modnes og standarderne færdiggø-res. De to paradigmer kan godt forenes, eksempelvis kan klassiske identiteter og identifikationsmidler fra en centraliseret model udstilles som decentrale identifiers.
+
+
+## Attributter
+Som tidligere nævnt spiller attributter en vigtig rolle i brugerstyring. Dels som grundlag for beskrivelse af brugerne, deres egenskaber og deres kontekst, dels som grundlag for håndhævelse af adgangskontrol. I dette afsnit fokuseres på atte-sterede attributter, hvor en tillidstjeneste udtaler sig om attributter, der er under-lagt en eller anden form for kontrol.
+
+Nedenfor gives eksempler på forskellige, vigtige kategorier af attributter:
+
+-	Identificerende attributter (eller identifikatorer), som beskriver identiteten entydigt i en bestemt kontekst (fx CPR, PID, RID, UUID osv.).
+-	Beskrivende attributter om identiteten (fødselsdag, øjenfarve, navn).
+-	Attributter, der beskriver relationer (fx ‘repræsentant for virksomhed xyz’, ‘forælder til’, ‘ejer af’).
+-	Rettighedsrelevante attributter (roller, rettigheder eller indhold af dataaf-grænsninger, autorisation af læge/sygeplejerske/andre sundhedsprofessionel-le).
+-	Fuldmagter eller samtykker udtrykt som attributter.
+
+Derudover anvendes i nogle sammenhænge informationer om konteksten for en autentifikation som grundlag for adgangskontrol (fx IP-adresse, devicetype, tids-punkt for login, geolokation).
+
+I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at for-holde sig til attributternes kvalitet. Dette gælder særligt, når attributter anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er der kun fælles rammer for visse attributters kvalitet i form af sikringsniveauerne LoA, IAL, AAL og FAL i National Standard for Identiteters Sikringsniveau (NSIS) [18], mens kvaliteten for øvrige attributter ofte er underforstået af den aktuelle sammenhæng.
+
+En simpel (men primitiv) mekanisme kan være at associere attributkvaliteten med den tillidstjeneste, der har attesteret den. Men her kan der opstå udfordringer, når attributter formidles gennem kæder med flere led og omveksles mellem adgangs-billetter, idet det for slutmodtageren bliver mere uklart, hvem der oprindeligt udtalte sig om en bestemt attribut. I stedet er det bedre eksplicit at påstemple yderligere oplysninger om attributtens kvalitetsegenskaber fx ved henvisning til en klassifikation eller lignende mekanisme, så denne information bevares gennem tillidskæden. Som inspiration kan henvises til vejledningen ‘fælles sprog for data-kvalitet’ [41].
+
+Det er ligeledes vigtigt, at den fulde livscyklus for attributter kan håndteres, idet værdierne kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et cer-tifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
+
+I det fremadrettede arbejde med fællesoffentlig brugerstyring vurderes der at væ-re behov for at analysere fælles standarder for attributters kvalitet yderligere (ud over dem, som er beskrevet i NSIS [18]). Attributter defineres ofte inden for en bestemt sektor, men det kunne være relevant fællesoffentligt at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveks-les på en interoperabel måde.
+
+Det kræver ofte en vis modenhed og veldefineret governance at bygge klassifika-tioner og semantiske modeller. Som et eksempel på dette kan nævnes den kom-munale emnesystematik (KLE) [33], der er en taksonomi til at beskrive kommuna-le fagområder. Ved at benytte KLE er det muligt at berige en rolletildeling til en bruger med en dataafgrænsning til et bestemt emneområde, der angives ved en eller flere KLE-værdier på rolletildelingen. Tilsvarende kan nævnes for FORM [34], der er et opgavekatalog over det offentliges opgaver.
+
+### Attributkontrakter
+Forskellige forretningstjenester har behov for at modtage bestemte attributter for at kunne fungere, mens forskellige tillidstjenester kan levere forskellige sæt af attributter for bestemte digitale identiteter. En konkret aftale eller specifikation af hvilke attributter der skal leveres til en bestemt tjeneste, kaldes i flere sammenhænge for en attributkontrakt. Beskrivelse af attributsæt inden for bestemte domæner sker ofte i profiler af standarder som fx SAML:
+
+- Den fællesoffentlige OIOSAML profil [19] definerer et attributsæt for private og professionelle med dels en række obligatoriske og dels en række frivillige attributter.
+- KOMBIT har defineret en attributprofil som underprofil af OIOSAML, der definerer særlige attributter for kommunale medarbejdere.
+- Sundhedsdatastyrelsen har ligeledes defineret en underprofil af OIOSAML med attributter, der er relevante for sundhedsområdet.
+
+Ofte vil en forretningstjeneste ved tilslutning til en broker deklarere hvilke attributter, den pågældende forretningstjeneste har behov for (og ofte med henvisning til attributter defineret i en profil for domænet). Det er fx sædvanligt at definere attributsæt i SAML metadatafiler.
+
+En anden mulighed, som dog sjældent ses implementeret i praksis, er at beskrive attributter som en del af snitfladen (fx som et forventet sæt af claims i WS-Security Policy [25]), så sikkerhedsinfrastrukturen kan foretage en automatisk orkestrering. Via en policy fil med deklaration af attributter kan en identitetsbroker evaluere forretningstjenestens attributbehov og herefter kontakte et antal tillidstjenester, som tilsammen kan levere de ønskede attributter (i rette kvalitet), hvorefter brokeren udsteder en samlet adgangsbillet mod tjenesten med foreningsmængden af attributter.
+
+Endelig er der en velkendt fællesoffentlig udfordring i håndtering af CPR-nummeret. Mange forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen [19] i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
+
+# Applikation
+[Dette kapitel trimmes så fokus er på applikationskomponenter, services (tjenester) og snitflader / integration. De afsnit der handler specifikt om at defi-nere informationsstandarder fx protokoller, formater, attributter og klassifikatio-ner, dokumenter, og herunder alt omkring standardisering på disse områder fore-slår jeg, at vi flytter til kapitel 6 Information, hvis det kan bringes til at fungere.]
+
 I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester. Dette omhandler eksempelvis støttefunktioner som discovery og billetomveksling, håndtering af apps på mobile enheder, softwarerobotter og identitetsbaserede services.
 
 De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2, peger frem mod en løst koblet arkitektur, hvor forretningstjenester understøttes af tillidstjenester og hvor forretnings- og tillidstjenester indgår i en føderation. Her vil de enkelte forretningstjenester håndhæve adgang, der er baseret på oplysninger attesteret af tillidstjenester. Forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributregistrering, autentifikation osv.
@@ -823,40 +947,6 @@ Fordelen ved at få de attesterede oplysninger om brugeren leveret i en adgangsb
 
 Omvendt kan det i nogle sammenhænge være vanskeligt at vide, hvilke attributter en forretningstjeneste på forhånd har behov for, idet det kan afhænge af brugerens ageren i fx en applikation. Derfor kan der opstå et naturligt behov for dynamiske opslag, mens brugeren anvender forretningstjenesten. Det kan hertil bemærkes, at det normalt ikke er god praksis at samle for mange oplysninger i en adgangsbillet, som en forretningstjeneste eventuelt kunne få brug for, da dette kan stride mod dataminimeringsprincippet i Databeskyttelsesforordningen (GDPR) [13], hvor kun nødvendige oplysninger behandles. Dette gælder særligt, hvis der er tale om attributter med personoplysninger, men i mindre grad når attributter indeholder brugerens rettigheder til en tjeneste.
 
-## Attributhåndtering
-Som tidligere nævnt spiller attributter en vigtig rolle i brugerstyring. Dels som grundlag for beskrivelse af brugerne, deres egenskaber og deres kontekst, dels som grundlag for håndhævelse af adgangskontrol. I dette afsnit fokuseres på attesterede attributter, hvor en tillidstjeneste udtaler sig om attributter, der er underlagt en eller anden form for kontrol.
-
-Nedenfor gives eksempler på forskellige, vigtige kategorier af attributter:
-
-- Identificerende attributter (eller identifikatorer), som beskriver identiteten entydigt i en bestemt kontekst (fx CPR, PID, RID, UUID osv.).
-- Beskrivende attributter om identiteten (fødselsdag, øjenfarve, navn).
-- Attributter, der beskriver relationer (fx 'repræsentant for virksomhed xyz', 'forælder til', 'ejer af').
-- Rettighedsrelevante attributter (roller, rettigheder eller indhold af dataafgrænsninger, autorisation af læge/sygeplejerske/andre sundhedsprofessionelle).
-- Fuldmagter eller samtykker udtrykt som attributter.
-
-Derudover anvendes i nogle sammenhænge informationer om konteksten for en autentifikation som grundlag for adgangskontrol (fx IP-adresse, devicetype, tidspunkt for login, geolokation).
-
-I føderationer vil der ofte være behov for fælles/centrale attributtjenester, således at forretningstjenester og andre tillidstjenester har et veldefineret sted at slå op, og så attributter kan deles på tværs. Et eksempel på dette er støttesystemerne Organisation og Klassifikation i den fælleskommunale rammearkitektur. En fælles attributtjeneste som leverer attributregistrering og -attestation kan samtidig også være et ankerpunkt for governance af attributter.
-
-I forbindelse med anvendelse af attributter i adgangskontrol er det vigtigt at forholde sig til attributternes kvalitet. Dette gælder særligt, når attributter anvendes som grundlag for beslutninger om adgang til følsomme data. I dag er der kun fælles rammer for visse attributters kvalitet i form af sikringsniveauerne LoA, IAL, AAL og FAL i National Standard for Identiteters Sikringsniveau (NSIS) [18], mens kvaliteten for øvrige attributter ofte er underforstået af den aktuelle sammenhæng. En simpel (men primitiv) mekanisme kan være at associere attributkvaliteten med den tillidstjeneste, der har attesteret den. Men her kan der opstå udfordringer, når attributter formidles gennem kæder med flere led og omveksles mellem adgangsbilletter, idet det for slutmodtageren bliver mere uklart, hvem der oprindeligt udtalte sig om en bestemt attribut. I stedet er det bedre eksplicit at påstemple yderligere oplysninger om attributtens kvalitetsegenskaber fx ved henvisning til en klassifikation eller lignende mekanisme, så denne information bevares gennem tillidskæden. Som inspiration kan henvises til vejledningen 'Fælles sprog for datakvalitet' [41].
-
-Det er ligeledes vigtigt, at den fulde livscyklus for attributter kan håndteres, idet værdierne kan ændre sig over tid. Det skal med andre ord være muligt dynamisk at tilføje attributter eller ændre deres værdier. Historisk har det eksempelvis vist sig problematisk at anvende X.509-certifikater til attributformidling, fordi et certifikat ikke kan ændres – og derfor skal der udstedes et nyt, hvis de underliggende attributter ændres.
-
-I det fremadrettede arbejde med fællesoffentlig brugerstyring vurderes der at være behov for at analysere fælles standarder for attributters kvalitet yderligere (ud over dem, som er beskrevet i NSIS [18]). Attributter defineres ofte inden for en bestemt sektor, men det kunne være relevant fællesoffentligt at specificere fælles mekanismer til at udtrykke og formidle kvalitetsinformation, så dette kan udveksles på en interoperabel måde. Det kræver ofte en vis modenhed og veldefineret governance at bygge klassifikationer og semantiske modeller. Som et eksempel på dette kan nævnes den kommunale emnesystematik (KLE) [33], der er en taksonomi til at beskrive kommunale fagområder. Ved at benytte KLE er det muligt at berige en rolletildeling til en bruger med en dataafgrænsning til et bestemt emneområde, der angives ved en eller flere KLE-værdier på rolletildelingen. Tilsvarende kan nævnes for FORM [34], der er et opgavekatalog over det offentliges opgaver.
-
-### Attributkontrakter
-
-Forskellige forretningstjenester har behov for at modtage bestemte attributter for at kunne fungere, mens forskellige tillidstjenester kan levere forskellige sæt af attributter for bestemte digitale identiteter. En konkret aftale eller specifikation af hvilke attributter der skal leveres til en bestemt tjeneste, kaldes i flere sammenhænge for en attributkontrakt. Beskrivelse af attributsæt inden for bestemte domæner sker ofte i profiler af standarder som fx SAML:
-
-- Den fællesoffentlige OIOSAML profil [19] definerer et attributsæt for private og professionelle med dels en række obligatoriske og dels en række frivillige attributter.
-- KOMBIT har defineret en attributprofil som underprofil af OIOSAML, der definerer særlige attributter for kommunale medarbejdere.
-- Sundhedsdatastyrelsen har ligeledes defineret en underprofil af OIOSAML med attributter, der er relevante for sundhedsområdet.
-
-Ofte vil en forretningstjeneste ved tilslutning til en broker deklarere hvilke attributter, den pågældende forretningstjeneste har behov for (og ofte med henvisning til attributter defineret i en profil for domænet). Det er fx sædvanligt at definere attributsæt i SAML metadatafiler.
-
-En anden mulighed, som dog sjældent ses implementeret i praksis, er at beskrive attributter som en del af snitfladen (fx som et forventet sæt af claims i WS-Security Policy [25]), så sikkerhedsinfrastrukturen kan foretage en automatisk orkestrering. Via en policy fil med deklaration af attributter kan en identitetsbroker evaluere forretningstjenestens attributbehov og herefter kontakte et antal tillidstjenester, som tilsammen kan levere de ønskede attributter (i rette kvalitet), hvorefter brokeren udsteder en samlet adgangsbillet mod tjenesten med foreningsmængden af attributter.
-
-Endelig er der en velkendt fællesoffentlig udfordring i håndtering af CPR-nummeret. Mange forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen [19] i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
 
 ### Brugerkataloger
 Et brugerkatalog indeholder digitale identiteter med tilhørende attributter og i mange tilfælde også information til brug for validering af identifikationsmidler for en brugerkonto. Et velkendt eksempel er LDAP Directories (som fx Active Directory), der både udstiller services til brugerautentifikation, til at hente attributter, og som har en veldefineret administrationsmodel.
@@ -1026,7 +1116,7 @@ Nedenstående figur (fra Wikipedia) viser samspillet mellem de forskellige kompo
 
 
 
-## Softwarerobotter
+## Software robotter
 Behovet for softwarerobotter udspringer af et ønske om at automatisere processer, hvor de enkelte procestrin kræver interaktion med et eller flere it-systemer. Det kan fx være processer, hvor opgavekarakteren har en høj grad af repetition. Der er ofte behov for at interagere med systemer, der kun udstiller deres funktionalitet via en brugergrænseflade (GUI) tiltænkt mennesker. Robotter kan derfor have behov for at kunne simulere en menneskebruger ved at interagere med brugergrænsefladen (fx via 'screen scraping') for at opnå den ønskede automatisering - evt. kombineret med tilgang til API'er.
 
 I denne referencearkitektur forstås softwarerobotter som de såkaldte autonome softwarerobotter, der agerer selvstændigt og optræder med sin egen digitale identitet, når den fx logger på applikationer og ikke agerer i kontekst af en medarbejder pc. De såkaldte ’Attended robots’, der fungerer på den enkelte medarbejders pc og afvikles i kontekst af den enkelte medarbejders brugerkonto og adgange, er således uden for afgrænsningen, og giver som regel heller ikke udfordringer i brugerstyringen.
@@ -1121,7 +1211,7 @@ Det er hensigten, at disse profiler kan anvendes og profileres af domæner med s
  Derudover er der planer om at etablere fælles infrastruktur i NemLog-in3 løsningen i form af en fællesoffentlig OIDC Authorization Server og Token Server, som kan understøtte apps og API'er på linje med den nuværende implementering af fællesoffentlig IdP og STS i NemLog-in3. Herved kan offentlige apps og API'er undgå at skulle implementere deres egne infrastrukturkomponenter til brugerstyring. Sundhedsområdet arbejder ligeledes med at etablere central infrastruktur på området.
 
 
-## Brugerstyring for Apparater og IOT
+## Brugerstyring for Apparater
 Praktisk implementering af brugerstyring for apparater eller IoT er i skrivende stund meget umoden, men principperne i denne referencearkitektur er gældende også for apparater. Afhængigt af hvordan apparater optræder skal:
 
 **Apparat** som **tjeneste** have implementeret adgangskontrol på baggrund af en adgangspolitik for tjenesten i apparatet.
@@ -1180,49 +1270,8 @@ For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at d
 
 I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
 
-
-
-## Områder for standardisering
-
-### Eksisterende standarder
-En vigtig del af referencearkitekturen er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffentlige standarder og profiler inden for en række områder, som succesfuldt har bidraget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
-
-- National Standard for Identiteters Sikringsniveauer [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridiske enhender og fysiske personer associeret med en juridisk enhed.
-- OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer formater og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), medarbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
-- OIOSAML Web SSO profilerne [19]som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder single sign-on.
-- OIO Basic Privilege Profile [40] som definerer hvordan rettigheder og roller kan udtrykkes i en adgangsbillet herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
-- OIO IDWS familien af profiler [24], som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
-
-### Behov for nye fællesoffentlige standarder
-Som tidligere beskrevet er der en række områder, hvor der fællesoffentligt er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet. Der er behov for:
-
-- yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere.
-- fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
-- profilering af mobil-egnede adgangsbilletter baseret på JWT, PASETO eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Connect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
-- en model til at udtrykke rettigheder ('OAuth2.0 scopes') i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
-
-Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde med discovery og orkestrering af tillidstjenester. Dertil kommer naturligvis behov for en række domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter for sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
-
-Endelig vurderes det, at der kan blive behov for yderligere vejledning og standarder for kommunikation mellem føderationer, når erfaringerne med interføderation udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation baseret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT's adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugerstyring (SEB) [38].
-
-<figure>
-<img src="Kommunikation mellem føderationer.PNG" width="90%" />
-<figcaption>Kommunikation mellem føderationer</figcaption>
-</figure>
-<br>
-
-### Igangværende standardisering internationalt
-En række internationale standardiseringsorganisationer er i gang med at udarbejde nye standarder, som kan påvirke denne referencearkitektur. I dette afsnit gives en introduktion til nogle få af disse, uden at oversigten på nogen måde kan siges at være udtømmende. Der er i gennemgangen prioriteret standarder, som ikke er domæne- eller industrispecifikke, og som vil have potentiale til at blive anvendt eller profileret fællesoffentligt, når behov og modenhed er tilstrækkelig udtalt.
-
-#### Decentraliseret brugerstyring og identiteter
-Standardiseringsorganisationen W3C, som er kendt fra en række internetstandarder, har en arbejdsgruppe, som arbejder med såkaldte decentralized identifiers eller DIDs. Gruppen har udgivet et udkast til en standard, som specificerer datamodel og syntaks for DIDs [39], som har status som 'W3C Working Draft', og som er den vigtigste på området.
-
-Standarden er en central brik i forhold til skabe standardisering og interoperabilitet inden for den bredere bevægelse som kan kaldes decentraliseret brugerstyring ('decentralized identity management'), som ikke bygger på centrale autoriteter (fx tillidstjenester eller centrale registre) men i stedet benytter en mere decentral arkitektur ofte baseret på blockchains, distributed ledger technology (DLT) og lignende teknologier. Her bruges alternative mekanismer til at skabe tillid, herunder de egenskaber som en blockchain tilvejebringer. En anden karakteristisk egenskab er, at brugerne tager en mere aktiv rolle i håndtering af deres identiteter ('brugercentrisk identity management' eller self-sovereign identity (SSI)), herunder kan skabe så mange uafhængige identiteter som ønskes af fx privatlivshensyn.
-
-En DID er basalt set en URL som relaterer et 'DID subject' til et 'DID dokument' på en måde der giver mulighed for troværdige interaktioner med subjektet (brugeren). Et DID dokument kan fx beskrive offentlige nøgler, som DID subjektet (og tilhørende services) kan bruge til at autentificere sig med, og beskrive serviceendepunkter, som kan benyttes til at interagere med DID subjektet. Hensigten med standardiseringen er at specificere syntaks (DID scheme) og et generisk sæt af operationer på DID dokumenter. Ved at publicere et DID dokument på en blockchain kan brugere på en generisk måde specificere, hvordan en bestemt identitet kan autentificeres.
-
-Generelt har den fællesoffentlige brugerstyring tilhørt den traditionelle skole baseret på centrale autoritets- og tillidstjenester, som sammenbindes gennem føderationer. Den decentrale brugerstyring er dog et interessant nyt paradigme, som vil blive observeret efterhånden som området modnes og standarderne færdiggøres. De to paradigmer kan godt forenes, eksempelvis kan klassiske identiteter og identifikationsmidler fra en centraliseret model udstilles som decentrale identifiers.
-
+# Infrastruktur
+[Dette kapitel har jeg ikke nået at give et bud på i denne omgang. Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / tek-nologi? Evt. kan der laves pladsholdere til emner der kan være relevant, fx valg af tekniske platforme, cloud o.l. ift brugerstyring. Herunder evt. også pointer om-kring fysiske apparater. Evt. også relation til andre fysiske forhold, fx åbne vs lukkede netværk, lufthavnsproblemtik, fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l. Alternativ kan vi blot skrive at dette perspektiv ikke er udfoldet nærmere i denne omgang og så ev tre-fere til relevante steder for der står noget om infrastruktur og teknologi.]
 
 # Bilag
 
