@@ -98,7 +98,8 @@ Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder de
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. Denne udgave af referencearkitekturen (version 1.1) er udvidet med de særlige aspekter vedrørende brugerstyring for apparater, organisationer og applikationer - samlet betegnet som Non-Person Entities (NPE) og Internet of Things (IoT).
+2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) beskrives det endvidere hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apps og apparater (IoT).
+
 Brugen af føderationer og tillidstjenester er uddybet.
 
 Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor scope af denne referencearkitektur.
@@ -796,7 +797,7 @@ Ulemper:
 # Teknisk arkitektur
 I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester. Dette omhandler eksempelvis støttefunktioner som discovery og billetomveksling, håndtering af apps på mobile enheder, softwarerobotter og identitetsbaserede services.
 
-De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2, peger entydigt frem mod en løst koblet arkitektur, hvor forretningstjenester understøttes af tillidstjenester og hvor forretnings- og tillidstjenester indgår i en føderation. Her vil de enkelte forretningstjenester håndhæve adgang, der er baseret på oplysninger attesteret af tillidstjenester. Forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributregistrering, autentifikation osv.
+De strategiske temaer, principper og forretningsbehov, der er beskrevet i kapitel 2, peger frem mod en løst koblet arkitektur, hvor forretningstjenester understøttes af tillidstjenester og hvor forretnings- og tillidstjenester indgår i en føderation. Her vil de enkelte forretningstjenester håndhæve adgang, der er baseret på oplysninger attesteret af tillidstjenester. Forretningstjenesterne undgår selv at realisere en lang række funktioner vedr. registrering, udstedelse af identifikationsmidler, attributregistrering, autentifikation osv.
 
 Der gives endvidere nogle eksempler fra det fællesoffentlige domæne i form af MitID og NemLog-in3 løsningerne. For andre domæner som fx det kommunale område og sundhedsområdet henvises til specifikke domænearkitekturer og målbilleder udarbejdet i de respektive domæner.
 
