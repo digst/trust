@@ -27,12 +27,14 @@ Der er de senere år etableret en række fælles løsninger for brugerstyring i 
 
 Formålet med referencearkitekturen er således at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
-Foruden brugerstyring af personer berører denne version af referencearkitekturen også særlige aspekter vedrørende brugerstyring af apparater, organisationer og applikationer, der samlet betegnes Non-person entities (NPE) og Internet of Things (IoT).
+Foruden brugerstyring af personer beskriver denne version af referencearkitekturen også hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apps og apparater (IoT).
 
 Brugerstyring defineres i denne arkitektur som administration og kontrol af brugere, identifikationsmidler og adgang til forretningstjenester. Det sikres, at de rette brugere får adgang til de rette it-systemer og data, og at alle andre afvises. Dermed berører referencearkitekturen en væsentlig del af den samlede informationssikkerhedsindsats i det fællesoffentlige samarbejde.
 
 **Aktiviteter i forbindelse med brugerstyring**
 Aktiviteterne, der indgår i brugerstyring, kan overordnet opdeles i **administration** og **adgangskontrol**.
+Brugerstyringen udføres på baggrund af adgangspolitikker, der bygger på det besluttede informationssikkerhedsniveau, og som regulerer adgang til egne systemer og eksterne parter.
+
 Hovedaktiviteterne i administration af brugernes digitale identiteter er:
 
 - **Registrering og udstedelse af identifikationsmidler**, der anvendes til at godkende og verificere en brugers digitale identitet.
@@ -54,12 +56,12 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
 
-Forretningsbehov og de nævnte principper peger entydigt på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Det betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne ikke selv håndtere administration af brugerstyringen.
+Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillesen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne. I de tilfælde, hvor der er hyppige ændringer af brugernes rettigheder, kan tildeling af rettigheder ligge i fagsystemerne.
 
 Der er derfor valgt en model for adgangsstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den kan desuden være digitalt signeret af brugerstyringsløsningen, så den ikke kan forfalskes eller manipuleres.
 
 **Arkitekturmønstre**
-Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner ligger i den samme organisation til økosystemer, hvor mange parter indgår:
+Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner vedrørende brugerstyring ligger i den samme organisation til økosystemer, hvor mange parter arbejder sammen om brugerstyring:
 
 1.	Forretningstjeneste med egen autentifikationstjeneste.
 2.	Delt, intern autentifikationstjeneste.
@@ -69,7 +71,7 @@ Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra
 
 De to første mønstre forekommer mange steder, men har en række udfordringer med hensyn til sammenhæng, brugervenlighed, skalerbarhed og sikkerhed. Derfor anbefales det, at man ikke anvender dem, men i stedet håndterer brugerstyringen i de 3 øvrige mønstre.
 
-I referencearkitekturen henvises til en række standarder for registrering af brugere, akkreditiver og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
+I referencearkitekturen henvises til en række standarder for registrering af brugere, identifikationsmidler og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
 
 
 # Introduktion
@@ -415,14 +417,15 @@ Etablering af brugerstyring, der håndteres i en selvstændig løsning uden for 
 
 I mange tilfælde kan der være tale om en investering for at nå dertil, men ved at efterleve principper og mønstre i denne referencearkitektur opnås værdiskabelse på en række områder:
 
-- Brugerne spilder mindre tid på at udføre deres opgaver i forretningstjenester, når skift mellem disse kan ske sømløst (fx via single sign on) og identifikationsmidler kan genbruges på tværs. Brugerne vil således opleve færre barrierer for udførelse af deres egentlige arbejde, og de kan dermed være mere effektive.
-- Udgifterne til systemintegration reduceres, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
-- Udgifter til administration af brugere reduceres, når brugere kan administreres samlet og effektivt frem for i en række adskilte siloer.
-- Det bliver hurtigere og billigere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området, og som ofte finansieres i fællesskab.
 - Risikoen for tab som følge af svindel og misbrug nedbringes, når sikkerheden øges gennem professionelle, dedikerede tillidstjenester.
+- Brugerne anvender mindre tid på at udføre deres opgaver i forretningstjenester, når skift mellem disse kan ske sømløst (fx via single sign on) og identifikationsmidler kan genbruges på tværs. Brugerne vil således opleve færre barrierer for udførelse af deres egentlige arbejde, de vil få en bedre brugeroplevelse, og de kan dermed være mere effektive.
+- Systemintegrationen bliver mindre kompliceret, når de underliggende forretningstjenester er baseret på de samme arkitektoniske principper for brugerstyring. Ofte er uheldigt udformet brugerstyring et stort praktisk problem for integration af systemer og processer.
+- Administration af brugere bliver mere rationel og effektiv, når de kan administreres samlet frem for i adskilte siloer.
+- Det bliver lettere at etablere forretningstjenester med en høj grad af sikkerhed, fordi kompleks håndtering af brugerstyring tilvejebringes som en service af tillidstjenester, der er specialiserede i området, og som ofte finansieres i fællesskab.
 
 Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivning). Referencearkitekturen har ikke fokus på at opnå et bestemt sikkerhedsniveau men snarere at give værktøjer til at efterleve krav til brugerstyring på en effektiv måde, som muliggør sammenhæng på tværs. En høj sikkerhed kan principielt godt opnås i siloer med lav brugervenlighed og uden sammenhæng, men når en organisation indgår i føderationer og sammenhængende forløb, er det afgørende, at brugerstyringen indrettes efter nogle fælles principper, arkitektur og standarder.
 
+Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerhedsbrud med udgangspunkt i brugerstyringen, idet medarbejdere kan have rettigheder til mange løsninger, hvor brugerne ved decentral styring skal administreres hvert sted. Når brugere styres i flere forskellige løsninger, kan der fx lettere opstå en situation, hvor en medarbejder, der ophører med at arbejde i en organisation, ikke konsekvent bliver deaktiveret i samtlige løsninger. Derved kan der opstå risiko for, at ophørte medarbejdere fortsat har adgang til data og funktionalitet i interne systemer.
 
 ## Juridiske rammer
 
