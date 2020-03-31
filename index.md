@@ -71,7 +71,7 @@ Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra
 
 De to første mønstre forekommer mange steder, men har en række udfordringer med hensyn til sammenhæng, brugervenlighed, skalerbarhed og sikkerhed. Derfor anbefales det, at man ikke anvender dem, men i stedet håndterer brugerstyringen i de 3 øvrige mønstre.
 
-I referencearkitekturen henvises til en række standarder for registrering af brugere, akkreditiver og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
+I referencearkitekturen henvises til en række standarder for registrering af brugere, identifikationsmidler og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
 
 
 # Introduktion
