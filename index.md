@@ -1242,8 +1242,16 @@ Standardisering på IoT området er kun i sin vorden, men fx har W3C arbejde i g
 
 Definitionen af IoT-entiteter trækker ligeledes på elementer af ISO 20924, og W3Cs WoT Architecture. IoT-entiteter er her forstået som apparater eller sammenstillingen af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
-#### Adgangspolitikker i IoT
+#### Adgangspolitikker i IoT og apparater
 Hvis man driver en tjeneste på IoT niveau, bør man i sin adgangspolitik tage en holistisk tilgang, der også er dækkende for IoT apparater i infrastrukturen. Tjenesten vil i det tilfælde være placeret på en infrastruktur af software og apparater, og er altså ikke specifikt knyttet til et apparat.
+
+Son nævnt i starten af afsnittet, så bør man etablere en digital identiet, med tilhørernde identifikationsmiddel som benyttes af apparatet, hvis dette skal optræde som en bruger. Dette indebærer naturligvis at man forholder sig til hvilke attributter eller roller der er relvante i den konkrete kontekst. Dette kan også gøre sig gældende for passive apparater, der ikke nødvendigvis skal optræde som bruger. Hvis det skal agere som et led i en brugerstyrings eller identificationsprocess, som i eksemplet med passet, så skal opsætningen af apparattet også tage højde for om det skal bærer bestemte attributter, adgangsbilletter eller roller.
+
+Både for apparater der er opsat som tjeneste og som bruger er det særligt relevant at have for øje om det er et delt eller personligt apparat, når man skal opsætte adgangspolitikker eller digitale identiteter. Når det kommer til apparater kan denne opdeling give nogle udfordringer som man ikke ser ved applikationer med håndhævet adgangskontrol. Det kan eksempelvis være svært at håndhæve hvem i en husstand der anvender en IoT badevægt, og data fra et delt apparatet bør derfor opmærkes, så det behandles med de rette forbehold.
+
+For apparater der nødvendigvis skal fungere som personlige apparater kan det være en løsning at etablere mere håndfast adgangskontrol, eksempelvis fordi de automatisk indrapportere data som kan igangsætte en process der pejer tilbage på personen. Dette kan gøres igennem en applikation med login der verificerer den indsamlede data hos personen, inden den afsendes.
+
+For apparater der er fysisk forbundne med en person, som en fodlænke eller et kirugisk indopereret apparat, kan det stadig være fornuftigt ikke at koble apparatet og brugere for hårdt sammen i bootstrappingen, af privatlivshensyn. Eksempelvis kan man vente med at lave koblingen, til den indsamlede data er inde i det relevante fagsystem. Hvis uvedkommende får opsnapper data undervejs til fagsystemet, vil brugere ikke være tydeligt identificeret. Dette kræver dog stærke procedure for bootstrapping og opkobling til fagsystemet.
 
 <!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
