@@ -117,7 +117,7 @@ Referencearkitekturen beskriver administrationen af og kontrollen med brugeres a
 
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
-<figcaption>Aspekter omkring brugerstyring</figcaption>
+<figcaption>Aspekter af brugerstyring</figcaption>
 </figure>
 
 De primære aspekter i brugerstyring er:
@@ -315,7 +315,6 @@ Brugerstyringen skal understøtte enkel administration og rettighedsstyring på 
 Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i balance med effektivitet og brugervenlighed. Både sikkerhed, effektivitet og brugervenlighed fremmes ved, at brugerstyring er sammenhængende på tværs af den offentlige sektor.
 
 
-
 ## Principper
 
 Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse. Brugerstyringsprincipperne bør tillige anvendes i samspil med emnespecifikke principper, der beskrives i andre FDA-referencearkitekturer.
@@ -495,7 +494,6 @@ ISO/IEC 27001 standarden [16] er opdelt i 14 domæner. For brugerstyring er dom�
 Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
 Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx ved brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
-
 
 
 # Opgaver
@@ -715,7 +713,6 @@ I dette mønster håndterer forretningstjenesten de fleste funktioner i brugerst
 <figcaption>Mønster 1 - Forretningstjeneste med egne autentifikationstjenester</figcaption>
 </figure>
 <br>
-
 
 
 Der er en række udfordringer knyttet til dette mønster bl.a.:
