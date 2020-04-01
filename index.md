@@ -861,7 +861,7 @@ Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive 
 Endelig vurderes det, at der kan blive behov for yderligere vejledning og standar-der for kommunikation mellem føderationer, når erfaringerne med interføderati-on udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugersty-ring (SEB) [38].
 
 <figure>
-<img src="Kommunikation melem føderationer.png"/>
+<img src="Kommunikation mellem føderationer.png"/>
 <figcaption>Kommunikation mellem føderationer</figcaption>
 </figure>
 
