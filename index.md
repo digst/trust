@@ -83,11 +83,16 @@ Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvord
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om fællesoffentlig digital arkitektur [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "... definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
 
-Dette dokument har tre målgrupper, som vil have forskelligt fokus i forhold til referencearkitekturens kapitler:
+Den primære målgruppe for denne referencearkitektur er it-arkitekter, men andre med interesse for området, vil også have udbytte af at læse især de indledende afsnit.
 
-- Strategiske beslutningstagere inden for digitalisering og it, typisk digitaliseringschefer, it-chefer, afdelings- og kontorchefer og andre med rollen som systemejer. Kapitel 1 og 2, der indeholder introduktion til brugerstyring, strategi, centrale begreber og principper, er særligt rettet mod denne målgruppe.
-- Projektledere, arkitekter og udviklere hos myndigheder, virksomheder og leverandører, der har til opgave at kravspecificere, designe eller udvikle løsninger, hvor der indgår eller anvendes tværoffentlig brugerstyring. Ud over de to første kapitler er kapitel 3 og 4, der handler om forretningsarkitektur og teknisk arkitektur, særligt rettet mod denne målgruppe.
-- Arkitekter der udarbejder domænearkitekturer på basis af denne referencearkitektur. De vil have særlig opmærksomhed på kapitel 3 og 4.
+Kapitel 0 henvender sig til alle læsere. Det omfatter en generel introduktion til referencearkitekturens formål, afgrænsing, de centrale begreber vedrørende brugerstyring, samt beskrivelse af   dokumentets kontekst og tilblivelse.
+
+De følgende kapitler om Styring og Strategi giver et uddybende indblik i forretningsmål, udfordringer, principper og den værdiskabelse referencearkitekturen sigter mod at understøtte.
+Tilsvarende giver kapitlerne Jura og Sikkerhed et overblik over væsentlige hensyn og begrænsninger, der skal tages i betragtning i arbejdet med brugerstyring.
+Disse kapitler henvender sig til alle interesserede læsere.
+
+Kapitlerne Opgaver og Information henvender sig til forretningsarkitekter med information om den forretningsmæssige arkitektur, mens kapitlerne Applikation og Infrastruktur henvender sig til læsere med interesse for den tekniske arkitektur.
+
 
 ## Omfang og afgrænsning
 Referencearkitekturen for brugerstyring er målrettet offentlige tjenester, men referencearkitekturen kan desuden med fordel anvendes til ikke-offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
