@@ -74,7 +74,7 @@ De to første mønstre forekommer mange steder, men har en række udfordringer m
 I referencearkitekturen henvises til en række standarder for registrering af brugere, identifikationsmidler og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
 
 
-# Introduktion
+# Introduktion til læseren
 
 ## Formål, anvendelse og målgrupper
 Den fællesoffentlige referencearkitektur for brugerstyring skal målrette og strukturere indsatsen for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Fokus er på det tværgående dvs. adgang til tjenester på tværs af organisationer, herunder føderationer på tværs af sikkerhedsdomæner med gensidig tillid.
