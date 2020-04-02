@@ -190,7 +190,12 @@ I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* 
 <figcaption>Begrebsoverblik</figcaption>
 </figure>
 
-Hele begrebsmodellen er vist i listeform og diagrammer i Bilag 2.
+
+-	**Digital identitet** digital repræsentation af  en entitet i rollen som bruger ved hjælp af et sæt attributter.
+-	**identifikationsmiddel** middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer.
+- **Attribut**, egenskaber der kan knyttes til en digital identitet.
+-	**Adgangsbillet** beskyttet elektronisk objekt udstedt af tillidstjeneste, der beskriver en digital identitets attributter og som giver adgang til en forretningstjeneste.
+-	**Adgangspolitik** politik der beskriver hvilke kriterier og sikringsniveauer der er krævet at opnå for adgang til en forretningstjeneste.
 
 ### Relationer imellem brugere
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
