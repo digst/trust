@@ -266,10 +266,21 @@ Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den natio
 
 
 # Strategi
-## Kapabiliteter og udfordringer
 Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
 
-Fokus for referencearkitektur er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
+## Vision
+
+Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
+
+*Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger. Løsningerne bindes sammen på tværs af domæner. Brugerstyring sker på en måde, som fremmer sikkerhed, tillid, privatlivsbeskyttelse, valgmuligheder, innovation, og som øger anvendelsen af tjenester.*
+
+Visionen er at skabe fælles rammer for brugerstyring og dermed grundlag for, at de fællesoffentlige parter kan udvikle brugerstyring inden for fælles arkitekturmæssige rammer. På den måde vil organisationer og brugere opleve en lettilgængelig brugerstyring, der kan anvendes på tværs af løsninger, og fx minimere gentagende logins i samme brugerrejser. Det er centralt i visionen, at den omfatter både borgere, virksomheder, myndigheder og ansatte brugere i offentlige myndigheder samt anvendelsen af autonome softwarerobotter.
+Brugerstyringen skal understøtte enkel administration og rettighedsstyring på tværs af løsninger. Den danske brugerstyring skal lægge sig i forlængelse af internationale initiativer som fx eIDAS-forordningen og den internationale teknologiske udvikling, som Danmark har store fordele ved at udnytte og være en del af.
+Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i balance med effektivitet og brugervenlighed. Både sikkerhed, effektivitet og brugervenlighed fremmes ved, at brugerstyring er sammenhængende på tværs af den offentlige sektor.
+
+
+## Kapabiliteter og udfordringer
+Fokus for referencearkitekturen er især understøttelse af behov vedrørende sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt. Dette peger i retning af, at referencearkitekturen skal understøtte en række strategiske kapabiliteter og behandle en række udfordringer.
 
 ### Lettilgængelige sammenhængende tjenester
 Borgere og medarbejdere forventer, at tjenester er let tilgængelige og sammenhængende. Let tilgængelige hvor tjenester kan nås med samme identifikation og med samme login. Ekstra login giver kun mening for brugeren, hvis sikkerhedsniveauet skal hæves i forhold til et tidligere login.
@@ -304,20 +315,8 @@ Offentlige tjenester skal leve op til kravene om forvaltningsrevision, hvor det 
 
 Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at bygge brugerstyring. Det er derfor en positiv business case at udvikle forretningstjenesten for sig og tilgå brugerstyring som en fælles tjeneste.
 
-## Vision
-
-Digitaliseringsstyrelsen udgav i april 2017 "Fællesoffentlig strategi for brugerstyring" [10], efter at den var blevet godkendt i Styregruppen for udbud af fællesoffentlige komponenter. Her blev fastlagt en vision, som også er gældende for denne version af referencearkitekturen:
-
-*Borgere, virksomheder og myndigheder har adgang til en let og effektiv brugerstyring på tværs af løsninger. Løsningerne bindes sammen på tværs af domæner. Brugerstyring sker på en måde, som fremmer sikkerhed, tillid, privatlivsbeskyttelse, valgmuligheder, innovation, og som øger anvendelsen af tjenester.*
-
-Visionen er at skabe fælles rammer for brugerstyring og dermed grundlag for, at de fællesoffentlige parter kan udvikle brugerstyring inden for fælles arkitekturmæssige rammer. På den måde vil organisationer og brugere opleve en lettilgængelig brugerstyring, der kan anvendes på tværs af løsninger, og fx minimere gentagende logins i samme brugerrejser. Det er centralt i visionen, at den omfatter både borgere, virksomheder, myndigheder og ansatte brugere i offentlige myndigheder samt anvendelsen af autonome softwarerobotter.
-Brugerstyringen skal understøtte enkel administration og rettighedsstyring på tværs af løsninger. Den danske brugerstyring skal lægge sig i forlængelse af internationale initiativer som fx eIDAS-forordningen og den internationale teknologiske udvikling, som Danmark har store fordele ved at udnytte og være en del af.
-Derudover skal brugerstyringsløsninger have tilstrækkelig høj sikkerhed i balance med effektivitet og brugervenlighed. Både sikkerhed, effektivitet og brugervenlighed fremmes ved, at brugerstyring er sammenhængende på tværs af den offentlige sektor.
-
-
 ## Principper
-
-Dette afsnit beskriver  et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse. Brugerstyringsprincipperne bør tillige anvendes i samspil med emnespecifikke principper, der beskrives i andre FDA-referencearkitekturer.
+Den overordnede strategi kan udtrykkes i et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse. Brugerstyringsprincipperne bør tillige anvendes i samspil med emnespecifikke principper, der beskrives i andre FDA-referencearkitekturer.
 Principper er retningslinier og de kan i nogle tilfælde være modstridende. I de tilfælde afvejes det hvilke principper, der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man må finde det bedste kompromis så begge principper tilgodeses så godt som muligt.
 
 *Principper for brugerstyring*
@@ -821,19 +820,7 @@ Ulemper:
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
 
 # Information
-[Arkitekturperspektiv med fokus de informationer, der skal håndteres af såvel forretningen som af teknikken. Omfatter begreber, terminologi, data og repræsen-tationer af data. Sikring af ensartet beskrivelse og forståelse, datatilgængelighed og aftalt datakvalitet. Mulighed for sammenhængende genbrug og sammenstilling af data. Standarder for data og dokumenter.
-
-De afsnit fra det gamle kapitel om teknisk arkitektur der handler specifikt om at definere informationsstandarder fx protokoller, formater, attributter og klassifika-tioner, dokumenter, og herunder alt omkring standardisering på disse områder flyttes til kapitel 6 Information.]
-
 Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som ind-går i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
-
-Kapitlet omfatter følgende typer af information
-
--	Klassifikation af identiteters sikringsniveau
--	Certifikater og certifikatpolitikker
--	Profiler for protokoller, billetformater som definerer roller og rettigheder
--	Attributter som beskriver ID, roller ol., herunder attributkontrakter og be-skrivelse af attributters kvalitet
--	Samtykke og fuldmagt
 
 ## Områder for standardisering
 ### Eksisterende standarder
