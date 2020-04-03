@@ -107,9 +107,11 @@ Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af bru
 
 Brugen af føderationer og tillidstjenester er uddybet.
 
+Endelig er denne version af af referencearkitekturen opdateret jfr. aktuelle standarder og lovgivning samt i forhold til udviklingen af den fællesoffentlige infrastruktur.
+
 Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor scope af denne referencearkitektur.
 
-Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 inderholder hele begrebsmodellen i diagrammer samt en ordliste, der indeholder definitioner af fagudtryk, der anvendes i referencearkitekturen. Både  dem, der indgår i begrebsmodellen   og andre. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
+Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 inderholder hele begrebsmodellen i diagrammer samt en ordliste, der indeholder definitioner af fagudtryk, der anvendes i referencearkitekturen. Både dem, der indgår i begrebsmodellen og andre. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
 Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for fælles og tværoffentlige brugerstyringsløsninger og tjenester, der anvender disse, samt andre offentlige løsninger. Disse var angivet i en liste i Bilag D og opmærket med kan, bør og skal. Denne udgave følger en ny skabelon for referencearkitekturer, der ikke i samme grad definerer egentlige krav, men i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til og udmøntes bl.a. i de fællesoffentlige strategier.
 
