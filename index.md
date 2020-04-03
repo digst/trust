@@ -271,19 +271,7 @@ Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
 - Offentlig digitalisering skal give gode vilkår for vækst
 - Tryghed og tillid skal i centrum
 
-<<<<<<< HEAD
-De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf *Initiativ 7.3 Digitale identiteter og rettighedsstyring*, under målsætningen *Tryghed og tillid skal i centrum* er det konkrete ophæng for denne referencearkitektur.
-
-Initiativ 7.3 Digitale identiteter og rettighedsstyring, er i strategien opsummeret i nedenstående citat:
-
-*Systemer og data skal kun kunne tilgås af de rette personer. Det skal sikres via korrekt tildeling af digitale  identiteter  (e-identiteter)  og  rettigheder.  Den fælles metode til tildeling af korrekte digitale identiteter fx til personer og virksomheder, der flytter  til  Danmark,  skal  forbedres.  Muligheden  for  at  afgive  digital  fuldmagt  og  samtykke  skal   understøttes.  Og  øgede  krav  fra  EU  om  blandt  andet  gensidig  anerkendelse  af  e-identiteter  på  tværs af landegrænser skal imødekommes.*
-
-Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter som beskrevet i eIDAS [8], blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
-
-Referencearkitekturen indgår desuden i opfyldelsen af *Initiativ 3.8 Informationssikkerhedsarkitektur* i Den nationale strategi for cyber- og informationssikkerhed [20], der beskrives i nedenstående citat:
-=======
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
->>>>>>> 92dc414c7a84315b1d1fef011abe6116145626dd
 
 Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20].
 
@@ -534,7 +522,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 
 **Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [13]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-**Administration af tjenester** definerer på baggrund af den besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
+**Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
 For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) samt autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
@@ -571,7 +559,7 @@ I dette afsnit beskrives funktionaliteten i tillidstjenesterne fra ovenstående 
 
 ### Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester.
-Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3, som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
+Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3 [8], som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
 
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
@@ -670,7 +658,7 @@ Adgangspolitikker kan benytte roller som grundlag (Role Based Access Control –
 ### Udformning af tillidspolitik
 Udformning af tillidspolitikker handler om at gøre det eksplicit, hvilke tillidstjenester der vurderes som troværdige til forskellige anvendelser ud fra en risikovurdering. En forretningstjeneste kan fx beslutte, at den kun vil anvende autentifikationstjenester, som er NSIS anmeldte på et givet sikringsniveau, mens en anden forretningstjeneste kan beslutte, at den stoler på autentifikationer fra en bestemt broker, der ikke er NSIS anmeldt - fx på baggrund af en aftale eller kontrakt med den pågældende broker. Et andet eksempel på en tillidspolitik kan være, hvorvidt en cloud-baseret tillidstjeneste anerkendes af en bestemt forretningstjeneste.
 
-Det er vigtigt, at til og fravalg af tillidstjenester sker ud fra en informeret stillingtagen og forretningsmæssig vurdering af sikkerhed, tillid og andre former for garantier (SLA, lovkrav, revisionserklæringer).
+Det er vigtigt, at til- og fravalg af tillidstjenester sker ud fra en informeret stillingtagen og forretningsmæssig vurdering af sikkerhed, tillid og andre former for garantier (SLA, lovkrav, revisionserklæringer).
 
 #### Tillid gennem NSIS
 I National Standard for Identiteters Sikringsniveauer (NSIS) [18] skal elektroniske identifikationsordninger (udstedere af identifikationsmidler) og identitetsbrokere anmeldes til Digitaliseringsstyrelsen, før de må benytte NSIS, herunder påstemple NSIS sikringsniveauer på en brugerautentifikation. Kravene til dokumentation for compliance stiger gennem sikringsniveauerne:
