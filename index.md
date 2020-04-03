@@ -1280,27 +1280,40 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 
 Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed som infrastruk, inkl eID gateway
 
-##Kryptering
+## Kryptering
 Krav til kryptering, - fastlægges i politikker fx oces
 
-##Infrastrukturmønstre
+## Infrastrukturmønstre
 Jf afsnit om mønstre
 
-##Netværk
+## Netværk
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
 
-##SLA
+## SLA
  Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
 
-##Teknologivalg
+## Teknologivalg
 Mht teknologivalg vedr. apparater skal man være opmærksom på bl.a.  , se afsnit afsnit xx om apparater.
 Teknologivalget ift alle ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger.
 
-##Infrastrukturlandskab
+## Infrastrukturlandskab
 
-##Infrastrukturkonfiguration
+| Navn | Ejer | Beskrivelse | Link |
+|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Aula | Styrelsen for IT og Læring | Aula er en kommunikations- og samarbejdsplatform for kommunale folkeskoler, skolefritidsordninger og dagtilbud, herunder vuggestuer, børnehaver og dagplejere. Rettigheder og adgange styres inde i Aula af kommunale/institutionelle administratorer. AULA trækker på tre typer af eksterne IDPer: Contexthandler, Unilogin og kommuner/skolers egne IDPer. Unilogin giver i AULA relevante NemID brugere (forældre, lærer etc.) mulighed for at identificere et bruger der er for ung til at have sit ejet NemID, og på den måde løfte sikkerheden for den brugers identitet igennem en såkaldt Step-up funktion. | https://aulainfo.dk/wp-content/uploads/Sikkerhedsnotat-Login-og-Step-up-Aula.pdf https://aulainfo.dk/ |
+| Den Nationale Serviceplatform (NSP) | Sundhedsdatastyrelsen | En af de vigtigste aspekter af NSP er den sikkerhedsmodel, der er lagt over alle komponenter på platformen. For at kalde en komponent på NSP skal en anvender medsende et id-kort signeret af en identitetsudbyder i hvert kald. | https://www.nspop.dk/display/public/web/Introduktion+til+NSP-platformen |
+| Det fælleskommunale støttesystem: Adgangsstyring for brugere. | KL / Kombit | Adgangsstyring for Brugere udsteder brugerrettigheder i it-systemer ud fra kommunens tildeling af rettigheder til sine brugere. Selve tildelingen og administrationen af brugernes rettigheder til lokale og fælleskommunale systemer sker i kommunens eksisterende brugerrettighedssystem. Støttesystemerne Context Handler og Security Token Service gør det muligt at styre rettigheder ét sted (for hhv. person-brugere og system-brugere), samtidigt med at kommunen kan have forskellige leverandører. | chttps://digitaliseringskataloget.dk/integrationer?f%5B0%5D=data_area%3A21 |
+| eID gateway | Digitaliseringsstyrelsen | Den nationale eID-gateway gør det muligt for udenlandske borgere at logge ind på danske selvbetjeningsløsninger med deres europæiske nationale eID. Gatewayen har været implementeret siden september 2018 som led i eIDAS-forordningen. | https://digst.dk/it-loesninger/eid-gateway/ |
+| Fællesoffentligt testmiljø  | Digitaliseringsstyrelsen | Ved hjælp af FOTM testdata og FOTM simulator er det muligt at gennemføre simulerede test af brugerrejser på tværs af it-infrastrukturen tidligt i udviklingsforløbet. Dette skal være med til at løfte kvaliteten af test mod den fællesoffentlige it-infrastruktur. | https://digst.dk/it-loesninger/faellesoffentligt-testmiljoe/ |
+| MitID | Digitaliseringsstyrelsen | Med det nye navn ønsker vi at signalere, at Digitaliseringsstyrelsen præsenterer en ny generation NemID, som kan noget andet og mere end det eksisterende NemID. MitID udtrykker, at NemID er blevet mere mit. At det handler om mit liv, mine muligheder og valg. MitID er mit og ingen andres. Desuden ejer Digitaliseringsstyrelsen ikke rettighederne til navnet ”NemID”, og vi kan derfor ikke fortsætte med det navn. | https://digst.dk/it-loesninger/mitid/fremtidens-nemid/ |
+| NemID | Digitaliseringsstyrelsen | NemID er borgernes sikre log-in på internettet, hvad enten de tilgå netbanken, hente oplysninger hos det offentlige eller i dialog med en af de mange virksomheder, der tilbyder log-in med NemID. Det betyder, at de med NemID bruger det samme log-in alle steder. NemID består af et bruger-id, en adgangskode og et nøglekort med engangskoder (papkort). Når borgerne logger på, taster de først deres bruger-id og deres adgangskode og derefter en kode fra deres nøglekort. Borgernes bruger-id og adgangskode er noget, de selv vælger og skal lære udenad. Deres nøglekort er et lille papkort på størrelse med et kreditkort, som de skal passe godt på. | https://digst.dk/it-loesninger/nemid/om-loesningen/ |
+| NemLog-in | Digitaliseringsstyrelsen | ? | https://digst.dk/it-loesninger/nemlog-in/ |
+| Unilogin |Styrelsen for IT og Læring | Unilogin er et webbaseret digitalt id for elever, forældre, og medarbejdere på institutioner. Unilogin giver adgang til nationale tjenester og en lang række pædagogiske services for eksempel online læremidler. Unilogin bruges som identifikationsløsning ved en lang række digitale tjenester på undervisningsområdet, såsom de nationale test, Børne- og Undervisningsministeriets digitale prøveafviklingssystem, de nationale trivselsmålinger m.v.  | https://www.stil.dk/administration-og-infrastruktur/uni-login |
+| WAYF - Where are you from | DeiC (Danish e-Infrastructure Cooperation) | Danmarks identitetsføderation for forskning og uddannelse. Vi gør det muligt at bruge digitale identiteter fra forsknings- og uddannelsesinstitutioner uden for institutionerne selv – fx ved cloudtjenester. | https://www.wayf.dk/ |
 
-##Test
+## Infrastrukturkonfiguration
+
+## Test
 Test for xx ting..
 FOTM understøtter test af xxx
 Andre fællesoffentlige testmiljører o.l.
