@@ -1276,6 +1276,34 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 # Infrastruktur
 [Dette kapitel har jeg ikke nået at give et bud på i denne omgang. Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / tek-nologi? Evt. kan der laves pladsholdere til emner der kan være relevant, fx valg af tekniske platforme, cloud o.l. ift brugerstyring. Herunder evt. også pointer om-kring fysiske apparater. Evt. også relation til andre fysiske forhold, fx åbne vs lukkede netværk, lufthavnsproblemtik, fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l. Alternativ kan vi blot skrive at dette perspektiv ikke er udfoldet nærmere i denne omgang og så ev tre-fere til relevante steder for der står noget om infrastruktur og teknologi.]
 
+Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed som infrastruk, inkl eID gateway
+
+##Kryptering
+Krav til kryptering, - fastlægges i politikker fx oces
+
+##Infrastrukturmønstre
+Jf afsnit om mønstre
+
+##Netværk
+Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
+
+##SLA
+ Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+
+##Teknologivalg
+Mht teknologivalg vedr. apparater skal man være opmærksom på bl.a.  , se afsnit afsnit xx om apparater.
+Teknologivalget ift alle ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger.
+
+##Infrastrukturlandskab
+
+##Infrastrukturkonfiguration
+
+##Test
+Test for xx ting..
+FOTM understøtter test af xxx
+Andre fællesoffentlige testmiljører o.l.
+
+
 # Bilag
 
 
