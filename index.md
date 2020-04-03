@@ -261,17 +261,17 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 | Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
 
 ## Forretningsmål
-<!--  [Dette afsnit er i første omgang blot et lille klip fra strategikapitlet. Kan evt. sup-pleres med mere konkrete forretningsmål, fx omkring ID, signatur, SSO, fuld-magt, samtykke, NPE. Disse kan fx hentes fra strategi7initaitver og de store pro-jekter. Bør være kort og stramt i pindeform.] -->
+[Dette afsnit er i første omgang blot et lille klip fra strategikapitlet. Kan evt. sup-pleres med mere konkrete forretningsmål, fx omkring ID, signatur, SSO, fuld-magt, samtykke, NPE. Disse kan fx hentes fra strategi7initaitver og de store pro-jekter. Bør være kort og stramt i pindeform.]
 
+Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme.
 
-Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme. Forretningsmålene hænges her op op de strategiske initiativer referencearkitekturen bidrager til at realisere.
-
-Digitaliseringsstrategien 2016-2020 [1], er en af de primære strategiske ophæng for FDA og derfor også for denne referencearkitektur. Digitaliseringsstrategien har tre, overordnede målsætninger:
+Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
 
 - Det digitale skal være let, hurtigt og sikre god kvaliteten
 - Offentlig digitalisering skal give gode vilkår for vækst
 - Tryghed og tillid skal i centrum
 
+<<<<<<< HEAD
 De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf *Initiativ 7.3 Digitale identiteter og rettighedsstyring*, under målsætningen *Tryghed og tillid skal i centrum* er det konkrete ophæng for denne referencearkitektur.
 
 Initiativ 7.3 Digitale identiteter og rettighedsstyring, er i strategien opsummeret i nedenstående citat:
@@ -281,10 +281,12 @@ Initiativ 7.3 Digitale identiteter og rettighedsstyring, er i strategien opsumme
 Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter som beskrevet i eIDAS [8], blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
 
 Referencearkitekturen indgår desuden i opfyldelsen af *Initiativ 3.8 Informationssikkerhedsarkitektur* i Den nationale strategi for cyber- og informationssikkerhed [20], der beskrives i nedenstående citat:
+=======
+De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
+>>>>>>> 92dc414c7a84315b1d1fef011abe6116145626dd
 
-*Med henblik på at støtte myndighederne i at udvikle it-løsninger, der øger myndighederne evne til at sikre fortrolighed, integritet, tilgængelighed og robusthed af systemer og -tjenester, udarbejdes en fællesoffentlig arkitektur for informationssikkerhed bestående af principper, standarder, fælleskomponenter og vejledninger.*
+Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20].
 
-Som en den af arbejdet med at etablerer en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
 
 # Strategi
 Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
@@ -479,7 +481,7 @@ Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerheds
 
 ## Jura
 
-De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
+Foruden de forretningsmæssige, strategiske behov, der er beskrevet i det foregående kapitel, stiller lovgivningen en række krav til fx sikkerhed og policy. De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
 
 - eIDAS forordningen [8] (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
 - Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester [12], der er den supplerende lov for eIDAS forordningen i Danmark.
