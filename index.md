@@ -85,9 +85,9 @@ Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige ref
 
 Den primære målgruppe for denne referencearkitektur er it-arkitekter, men andre med interesse for området, vil også have udbytte af at læse især de indledende afsnit.
 
-Kapitel 0 henvender sig til alle læsere. Det omfatter en generel introduktion til referencearkitekturens formål, afgrænsing, de centrale begreber vedrørende brugerstyring, samt beskrivelse af   dokumentets kontekst og tilblivelse.
+Kapitel 0 henvender sig til alle læsere. Det omfatter en generel introduktion til referencearkitekturens formål, afgrænsing, de centrale begreber vedrørende brugerstyring, samt beskrivelse af dokumentets kontekst og tilblivelse.
 
-De følgende kapitler om Styring og Strategi giver et uddybende indblik i forretningsmål, udfordringer, principper og den værdiskabelse referencearkitekturen sigter mod at understøtte.
+De følgende kapitler om Styring og Strategi giver et uddybende indblik i forretningsmål, udfordringer, principper og den værdiskabelse, referencearkitekturen sigter mod at understøtte.
 Tilsvarende giver kapitlerne Jura og Sikkerhed et overblik over væsentlige hensyn og begrænsninger, der skal tages i betragtning i arbejdet med brugerstyring.
 Disse kapitler henvender sig til alle interesserede læsere.
 
@@ -125,7 +125,7 @@ Referencearkitekturen beskriver administrationen af og kontrollen med brugeres a
 <figcaption>Aspekter af brugerstyring</figcaption>
 </figure>
 
-De primære aspekter i brugerstyring er:
+De primære aspekter af brugerstyring er:
 
 -	**Brugeradministration** aspekt af brugerstyring hvor digitale identiteter og deres attributter administreres.
 -	**Adgangskontrol** proces, der afgør hvilke, om nogen, funktioner og data en *bruger* får adgang til på baggrund af brugerens *attributter* og *tjenestens* *adgangspolitik*.
@@ -179,7 +179,7 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
 
-Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile Apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *Applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
+Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
 
 
 ### Begrebsoverblik
@@ -192,7 +192,7 @@ I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* 
 
 
 -	**Digital identitet** digital repræsentation af  en entitet i rollen som bruger ved hjælp af et sæt attributter.
--	**identifikationsmiddel** middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer.
+-	**Identifikationsmiddel** middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer.
 - **Attribut**, egenskaber der kan knyttes til en digital identitet.
 -	**Adgangsbillet** beskyttet elektronisk objekt udstedt af tillidstjeneste, der beskriver en digital identitets attributter og som giver adgang til en forretningstjeneste.
 -	**Adgangspolitik** politik der beskriver hvilke kriterier og sikringsniveauer der er krævet at opnå for adgang til en forretningstjeneste.
