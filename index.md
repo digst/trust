@@ -1277,20 +1277,22 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 
 Dette kapitel omhandler infrastrukturperspektivet. I mange sammenhæng betragtes brugerstyring som infrastruktur. I denne referencearkitektur er brugerstyring beskrevet som funktionalitet i tillidstjenester i kapitel 5 Opgaver (forretningsarkitektur) og i kapitel 7 Applikationer (teknisk arkitektur). Dette kapitel giver en beskrivelse af udvalgte aspekter i forhold til infrastruktur og teknologi samt referencer til relevante afsnit i de øvrige kapitler.
 
-## Kryptering
-Krav til kryptering, - fastlægges i politikker fx oces
+
 
 ## Infrastrukturmønstre
 Kapitel 5 Opgaver beskriver de forskellige tillidstjenester og i afsnittet Logiske arkitekturmønstre beskrives fem mønstre for implementering af tillidstjenester. Disse spænder fra forretningstjenester med egen autentifikationstjeneste over forskellige løsninger med delte tillidstjenster i domæner til interføderation mellem domæner. De frem mønstre er således udtryk for en stigende grad af at tillidstjenesterne optræder som fælles infrastruktur. det giver en række fordele og kapabiliteter, men stiller også krav til den enkelte node i det samlede økosystem. Fx i forhold til teknologivalg og tekniske begrænsninger, krav til netværk, protokoller og kryptering, og krav til konfigurationsstyring, test mv.
 
+## SLA
+ Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+ 
 ## Teknologivalg
 Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
 
 ## Netværk
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
 
-## SLA
- Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+## Kryptering
+Krav til kryptering, - fastlægges i politikker fx oces
 
 ## Logning og hændelseshåndterng
  Logning på alle systemer og tjenester på netværksservere udgør en forudsætning for opdagelse og efterforskning af forskellige sikkerhedshændelser.
