@@ -251,7 +251,7 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 
 | Interessent | Interesse |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Borgere (voksen, barn, udlænding) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til, at deres data behandles med respekt for deres privatliv.  Har interesse i at kunne logge ind, så vidt muligt med single sign on, signere dokumenter, give fuldmagt og samtykke og administrere disse. Borgere er interesserede i at brugerstyring fylder så lidt som muligt i deres samarbejde med det offentlige, og at der ikke forventes at de anvender ressourcer på at huske unødigt mange forskellige brugere eller adgangskoder. |
+| Borgere (voksen, barn, udlænding) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til, at deres data behandles med respekt for deres privatliv.  Har interesse i at kunne logge ind, så vidt muligt med single sign on, signere dokumenter, give fuldmagt og samtykke og administrere disse. Borgere er interesserede i at brugerstyring fylder så lidt som muligt i deres samarbejde med det offentlige, og at der ikke forventes at de anvender ressourcer på at huske unødigt mange forskellige brugeridentiteter eller adgangskoder. |
 | Virksomheder (ejer, ansvarlig, medarbejder) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt. Virksomheder vil kunne have tillid til, at deres data behandles med respekt for deres privatliv og krav til fortrolighed. Virksomheder har desuden interesse i at kunne indgå i tillidsføderationer ved at anvende offentlige infrastrukturløsninger, og har særlig interesse i løsninger der understøtter delegering via fuldmagt, og løsninger der kan integrere med egne løsninger til understøttelse af Single Sign On. |
 | Staten | Har interesse i en infrastruktur vendt mod borgere og virksomheder, som kan understøtte fællesoffentlig og fælleseuropæisk føderation. Staten har desuden interesse i en infrastruktur vendt mod medarbejdere, som tilsvarende kan understøtte relevante føderationer med henblik på effektiv og sikker understøttelse af processer, datadeling og brug af fælles løsninger.  De enkelte statslige myndigheder og virksomheder har ansvar for egne løsninger.  En række styrelser har ansvar for nationale infrastruktur- og brugerstyringsløsninger, herunder særligt Digitaliseringsstyrelsen (NemID/MitID, NemLogin, eID-gateway) Styrelsen for it og læring (Unilogin) Sundhedsdatastyrelsen (National Sundheds Platform). Desuden er der samarbejdsorganisationer på bl.a. uddannelses og forskningsområdet (WAYF) og miljøområdet (Miljøportalen). |
 | Kommuner | Har interesse i en infrastruktur vendt mod borgere og virksomheder, som kan understøtte fællesoffentlig og fælleseuropæisk føderation. Kommuner har desuden interesse i en infrastruktur vendt mod medarbejdere, som tilsvarende kan understøtte relevante føderationer med henblik på effektiv og sikker understøttelse af processer, datadeling og brug af fælles løsninger.  De enkelte kommuner og fælleskommunale selskaber har ansvar for egne løsninger. KL/KOMBIT har ansvar for fælleskommunal infrastruktur. |
@@ -1276,25 +1276,31 @@ For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at d
 I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
 
 # Infrastruktur
-[Dette kapitel har jeg ikke nået at give et bud på i denne omgang. Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / tek-nologi? Evt. kan der laves pladsholdere til emner der kan være relevant, fx valg af tekniske platforme, cloud o.l. ift brugerstyring. Herunder evt. også pointer om-kring fysiske apparater. Evt. også relation til andre fysiske forhold, fx åbne vs lukkede netværk, lufthavnsproblemtik, fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l. Alternativ kan vi blot skrive at dette perspektiv ikke er udfoldet nærmere i denne omgang og så ev tre-fere til relevante steder for der står noget om infrastruktur og teknologi.]
+[Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l.]
 
-Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed som infrastruk, inkl eID gateway
-
-## Kryptering
-Krav til kryptering, - fastlægges i politikker fx oces
+Dette kapitel omhandler infrastrukturperspektivet. I mange sammenhæng betragtes brugerstyring som infrastruktur. I denne referencearkitektur er brugerstyring beskrevet som funktionalitet i tillidstjenester i kapitel 5 Opgaver (forretningsarkitektur) og i kapitel 7 Applikationer (teknisk arkitektur). Dette kapitel giver en beskrivelse af udvalgte aspekter i forhold til infrastruktur og teknologi samt referencer til relevante afsnit i de øvrige kapitler.
 
 ## Infrastrukturmønstre
-Jf afsnit om mønstre
+Kapitel 5 Opgaver beskriver de forskellige tillidstjenester og i afsnittet Logiske arkitekturmønstre beskrives fem mønstre for implementering af tillidstjenester. Disse spænder fra forretningstjenester med egen autentifikationstjeneste over forskellige løsninger med delte tillidstjenster i domæner til interføderation mellem domæner. De frem mønstre er således udtryk for en stigende grad af at tillidstjenesterne optræder som fælles infrastruktur. det giver en række fordele og kapabiliteter, men stiller også krav til den enkelte node i det samlede økosystem. Fx i forhold til teknologivalg og tekniske begrænsninger, krav til netværk, protokoller og kryptering, og krav til konfigurationsstyring, test mv.
+
+## Teknologivalg
+Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
 
 ## Netværk
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
 
-## SLA
- Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+## Kryptering
+Krav til kryptering, - fastlægges i politikker fx oces
 
-## Teknologivalg
-Mht teknologivalg vedr. apparater skal man være opmærksom på bl.a.  , se afsnit afsnit xx om apparater.
-Teknologivalget ift alle ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger.
+## SLA
+Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe, må der ikke være adgang til noget, der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+
+## Infrastrukturkonfiguration
+
+## Test  
+Test for xx ting..
+FOTM understøtter test af xxx
+Andre fællesoffentlige testmiljører o.l.
 
 ## Infrastrukturlandskab
 Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne der betjener alle typer af brugere.
@@ -1313,12 +1319,6 @@ Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, de
 | Unilogin |Styrelsen for IT og Læring | Unilogin er et webbaseret digitalt id for elever, forældre, og medarbejdere på institutioner. Unilogin giver adgang til nationale tjenester og en lang række pædagogiske services for eksempel online læremidler. Unilogin bruges som identifikationsløsning ved en lang række digitale tjenester på undervisningsområdet, såsom de nationale test, Børne- og Undervisningsministeriets digitale prøveafviklingssystem, de nationale trivselsmålinger m.v.  | https://www.stil.dk/administration-og-infrastruktur/uni-login |
 | WAYF - Where are you from | DeiC (Danish e-Infrastructure Cooperation) | Danmarks identitetsføderation for forskning og uddannelse. Vi gør det muligt at bruge digitale identiteter fra forsknings- og uddannelsesinstitutioner uden for institutionerne selv – fx ved cloudtjenester. | https://www.wayf.dk/ |
 
-## Infrastrukturkonfiguration
-
-## Test
-Test for xx ting..
-FOTM understøtter test af xxx
-Andre fællesoffentlige testmiljører o.l.
 
 
 # Bilag
