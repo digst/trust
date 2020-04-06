@@ -467,7 +467,7 @@ Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivni
 
 Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerhedsbrud med udgangspunkt i brugerstyringen, idet medarbejdere kan have rettigheder til mange løsninger, hvor brugerne ved decentral styring skal administreres hvert sted. Når brugere styres i flere forskellige løsninger, kan der fx lettere opstå en situation, hvor en medarbejder, der ophører med at arbejde i en organisation, ikke konsekvent bliver deaktiveret i samtlige løsninger. Derved kan der opstå risiko for, at ophørte medarbejdere fortsat har adgang til data og funktionalitet i interne systemer.
 
-## Jura
+# Jura
 
 Foruden de forretningsmæssige, strategiske behov, der er beskrevet i det foregående kapitel, stiller lovgivningen en række krav til fx sikkerhed og policy. De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
 
@@ -487,7 +487,7 @@ Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan næ
 - Databeskyttelsesforordningen [13] stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
 - Forvaltningsloven [15] stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller digitale løsninger, også bør kunne håndtere digitale fuldmagter.
 
-## Sikkerhed
+# Sikkerhed
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne, ligesom alle regionsråd har besluttet, at regionerne skal følge dem.
 
 Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
