@@ -1289,7 +1289,10 @@ Kapitel 5 Opgaver beskriver de forskellige tillidstjenester og i afsnittet Logis
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
 
 ## SLA
-Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe, må der ikke være adgang til noget, der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+Destor højere krav til tilgængelighed af en forretningstjeneste desto højere fra til SLA for anvendte tillidstjenester. Det vil derfor være en fordel at have redundans til at understøtte SLA, hvis man vil sikre tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe, må der ikke være adgang til noget, der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
+
+## Tekniske krav
+Hjemmesiden Sikker digital [17] beskriver minimumskrav til sikkerheden i it-løsninger for statslige myndigheder. Kravene er ufravigelige og skal sikre et fælles højt sikkerhedsniveau i staten. Som led i den nationale cyber- og informationssikkerhedsstrategi er det besluttet, at de statslige myndigheder skal efterleve en række tekniske minimumskrav med henblik på at sikre et højt fælles sikkerhedsniveau i staten. De fleste krav skal være implementeret senest den 1. januar 2020, mens nogle få krav først skal være implementeret den 1. juli 2020. Størstedelen af kravene følger af eksisterende vejledninger og anbefalinger på området fra Center for Cybersikkerhed, Digitaliseringsstyrelsen og Datatilsynet. De øvrige er udtryk for udbredt best practice.
 
 ## Teknologivalg
 Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
