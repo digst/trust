@@ -1249,7 +1249,6 @@ For apparater, der nødvendigvis skal fungere som personlige apparater, kan det 
 
 For apparater, der er fysisk forbundne med en person, som en fodlænke eller et kirugisk indopereret apparat, kan det af privatlivshensyn stadig være fornuftigt ikke at koble apparatet og brugere for hårdt sammen i bootstrappingen. Eksempelvis kan man vente med at lave koblingen, til den indsamlede data er inde i det relevante fagsystem. Hvis uvedkommende opsnapper data undervejs til fagsystemet, vil brugere ikke være tydeligt identificeret. Dette kræver dog stærke procedurer for bootstrapping og opkobling til fagsystemet.
 
-<!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både god digital service, som tager hensyn til it-svage borgere, og at fx forvaltningslovens [15] krav til partsrepræsentation kan opfyldes.
