@@ -243,7 +243,7 @@ Grundlæggende er ansvaret for brugerstyring placeret hos den enkelte organisati
 - På internationalt og globalt niveau er der private aktører som fx Google og Facebook, som også anvendes af mange danske organisationer til netbaserede tjenester. Desuden findes der en række internationale standardiseringsorganisationer. Indenfor forskellige domæner findes der særlige rammer, der er med til at sætte rammer for brugerstyring. Det gælder fx for forsvaret i relation til Nato.
 
 - I EU regi stiller eIDAS-forordningen [8] krav til, at relevante onlinetjenester kan tilgås med et eID (elektronisk identifikation) fra andre EU-/EØS-lande, og at medlemsstaterne anerkender hinandens eID-løsninger. Det sker via en såkaldt national eID-gateway, som myndighederne kan integrere deres selvbetjenings-løsninger til. Digitaliseringsstyrelsen er ansvarlig for den danske eID-gateway.
-- Nationalt er der med udgangspunkt i dansk lovgivning en række statslige aktører, som har ansvar for fælles infrastrukturløsninger, som fx Digitaliseringsstyrelsen med NemID/MitID og NemLog-in.
+- Nationalt er der med udgangspunkt i dansk lovgivning en række statslige aktører, som har ansvar for fælles infrastrukturløsninger, som fx Digitaliseringsstyrelsen med NemID/MitID og NemLogin.
 - Inden for en række domæner finder man fx Styrelsen for it og læring med Unilogin infrastrukturen og WAYF – Where Are You From, som er Dan-marks identitetsføderation for forskning og uddannelse. Andre eksempler er sundhedsområdet, miljøområdet og det kommunale område, som alle har egne infrastrukturer til at understøtte tværgående processer, datadeling og fælles løsninger.
 
 ## Interessenter
@@ -299,11 +299,11 @@ Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker 
 eIDAS forordningen [8] stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I praksis gælder kravet i eIDAS kun muligheden for at kunne autentificere sig over for tjenesten, og der er således ikke krav om, at forretningsfunktionen kan tilvejebringes efter autentifikationen, hvis der eksempelvis mangler nødvendige attributter om brugeren.
 
 ### Retten til privatliv
-Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet og pseudonymitet, hvor det er muligt og relevant.
+Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet, hvor det er muligt og relevant.
 En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren (fx CPR-nummer) for at kunne afgøre dennes adgang til en service. Kun relevante attributter sendes til tjenesten i henhold til dataminimeringsprincippet.
 
-- Ved et køb af billet til bus eller tog er der et behov for at levere et bevis for betaling, men ikke for kundens identitet.
-- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>=18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
+- Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
+- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
 
 I NemLog-in3 løsningen kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler, der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder *og* virksomhed siger god for det.
 
@@ -490,15 +490,17 @@ Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan næ
 # Sikkerhed
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne, ligesom alle regionsråd har besluttet, at regionerne skal følge dem.
 
-Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
+Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil på sikkerdigital.dk [17].
 
 Hovedindholdet i ISO/IEC 27001 [16] er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge:
 
-- retningslinjer
-- forretningsgange og instrukser
-- sikkerhedsforanstaltninger, som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
+- Retningslinjer
+- Forretningsgange og instrukser
+- Sikkerhedsforanstaltninger, som beskytter organisationen på de risikoniveauer, der er valgt. De vil ofte være forskellige, afhængigt af de konkrete informationer og tjenester.
 
 ISO/IEC 27001 standarden [16] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
+
+På sikkerdigital.dk [17], finder man ligeledes en række tekniske tiltage der skal give myndighederne en
 
 ### Risici vedr. brugere
 Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [18] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
@@ -831,29 +833,29 @@ Ulemper:
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
 
 # Information
-Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som indgår i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
+Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som ind-går i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
 
 ## Områder for standardisering
 ### Eksisterende standarder
-En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffentlige standarder og profiler inden for en række områder, som succesfuldt har bidraget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
+En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffent-lige standarder og profiler inden for en række områder, som succesfuldt har bi-draget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
 
--	National Standard for Identiteters Sikringsniveauer (NSIS) [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridiske enhender og fysiske personer associeret med en juridisk enhed.
--	OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer formater og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), medarbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
--	OIOSAML Web SSO profilerne [19] som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder single sign-on.
+-	National Standard for Identiteters Sikringsniveauer [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridi-ske enhender og fysiske personer associeret med en juridisk enhed.
+-	OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer forma-ter og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), med-arbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
+-	OIOSAML Web SSO profilerne [19] som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder sing-le sign-on.
 -	OIO Basic Privilege Profile [40] som definerer hvordan rettigheder og roller kan udtrykkes i en adgangsbillet herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
 -	OIO IDWS familien af profiler [24], som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
 
 ### Behov for nye fællesoffentlige standarder
-Der er en række områder, hvor der fællesoffentligt er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet. Der er behov for:
+Der er en række områder, hvor der fællesoffentligt er behov for yderligere profi-ler og standarder med henblik på at sikre synergi og interoperabilitet. Der er be-hov for:
 
--	Yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere. Jf afsnittet om attributter nedenfor.
--	Fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
--	Profilering af mobilegnede adgangsbilletter baseret på JWT eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Connect [28]. De nuværende OIOSAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
--	En model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
+-	yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslut-ninger som tages på baggrund af attributter kan kvalificeres yderligere. Jf af-snittet om attributter nedenfor.
+-	fælles arkitektur, standarder og datamodeller for håndtering af samtykke, her-under så samtykker kan udveksles på tværs.
+-	profilering af mobil-egnede adgangsbilletter baseret på JWT, PASETO eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Con-nect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
+-	en model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profi-len.
 
 Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde med discovery og orkestrering af tillidstjenester. Dertil kommer naturligvis behov for en række domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter for sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
 
-Endelig vurderes det, at der kan blive behov for yderligere vejledning og standarder for kommunikation mellem føderationer, når erfaringerne med interføderation udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugerstyring (SEB) [38].
+Endelig vurderes det, at der kan blive behov for yderligere vejledning og standar-der for kommunikation mellem føderationer, når erfaringerne med interføderati-on udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugersty-ring (SEB) [38].
 
 <figure>
 <img src="Kommunikation mellem føderationer.png"/>
