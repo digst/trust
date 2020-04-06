@@ -83,11 +83,11 @@ Referencearkitekturens formål er at skabe en arkitekturmæssig ramme for, hvord
 Referencearkitekturen skal kunne anvendes til at udpege standarder, der understøtter arkitekturen og dermed understøtte udarbejdelse af løsningsarkitektur i konkrete projekter. Arkitekturen anviser ikke i detaljer, hvordan myndigheder og virksomheder skal bygge løsninger, men fastlægger rammer og anviser standarder for løsninger, jfr. Hvidbog om fællesoffentlig digital arkitektur [2], hvor det fremgår, at fællesoffentlige referencearkitekturer "... definerer genbrugelige arkitekturbyggeblokke, som projekterne skal tage bestik af."
 Referencearkitekturen kan anvendes i sammenhæng med andre fællesoffentlige referencearkitekturer, enten direkte eller ved domænearkitekturer, der bygger på de fællesoffentlige.
 
-Den primære målgruppe for denne referencearkitektur er it-arkitekter, men andre med interesse for området, vil også have udbytte af at læse især de indledende afsnit.
+Den primære målgruppe for denne referencearkitektur er it-arkitekter, men andre med interesse for området vil også have udbytte af at læse især de indledende afsnit.
 
 Kapitel 0 henvender sig til alle læsere. Det omfatter en generel introduktion til referencearkitekturens formål, afgrænsing, de centrale begreber vedrørende brugerstyring, samt beskrivelse af dokumentets kontekst og tilblivelse.
 
-De følgende kapitler om Styring og Strategi giver et uddybende indblik i forretningsmål, udfordringer, principper og den værdiskabelse, referencearkitekturen sigter mod at understøtte.
+De følgende kapitler om Styring og Strategi giver et uddybende indblik i forretningsmål, udfordringer, principper og den værdiskabelse, referencearkitekturen kan understøtte.
 Tilsvarende giver kapitlerne Jura og Sikkerhed et overblik over væsentlige hensyn og begrænsninger, der skal tages i betragtning i arbejdet med brugerstyring.
 Disse kapitler henvender sig til alle interesserede læsere.
 
@@ -95,21 +95,15 @@ Kapitlerne Opgaver og Information henvender sig til forretningsarkitekter med in
 
 
 ## Omfang og afgrænsning
-Referencearkitekturen for brugerstyring er målrettet offentlige tjenester, men referencearkitekturen kan desuden med fordel anvendes til ikke-offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige.
+Referencearkitekturen for brugerstyring er målrettet offentlige tjenester, men referencearkitekturen kan desuden med fordel anvendes til ikke-offentlige tjenester og til at understøtte tværgående brugerforløb med det offentlige. En række af de forretningsbehov og udfordringer, som kan løses med referencearkitekturen, er almengyldige og optræder således også inden for den private sektor.
 
-Arkitekturen omfatter rollerne som leverandør af tillidstjenester - udstedere af identifikationsmidler, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at indgå som brugerorganisation herunder udstille bruger- og rolledata om egne medarbejdere.
+Arkitekturen omfatter rollerne som leverandør af tillidstjenester - udstedere af identifikationsmidler, autentifikationstjenester, identitetsbrokere, attributtjenester mv. Arkitekturen omfatter desuden private virksomheders mulighed for at indgå som brugerorganisation og tjenesteudbyder.
 
 Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder det der på engelsk betegnes Credential and Identity Management (CIM), Identity Rights Management (IRM), Access Control (AC) og Identity and Access Management (IAM/IdAM).
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-2017-udgaven af referencearkitekturen [3] omfattede brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) beskrives det endvidere hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apparater (IoT).
-
-Brugen af føderationer og tillidstjenester er uddybet.
-
-Endelig er denne version af af referencearkitekturen opdateret jfr. aktuelle standarder og lovgivning samt i forhold til udviklingen af den fællesoffentlige infrastruktur.
-
-Juridiske aspekter vedr. anvendelse af softwarerobotter ligger udenfor scope af denne referencearkitektur.
+2017-udgaven af referencearkitekturen [3] fokusere primært brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) beskrives det endvidere hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere. Juridiske aspekter vedr. anvendelse af softwarerobotter ligger dog udenfor scope af denne referencearkitektur. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apparater (IoT). Endvidere er beskrivelsen af føderationer og tillidstjenester er uddybet.
 
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 inderholder hele begrebsmodellen i diagrammer samt en ordliste, der indeholder definitioner af fagudtryk, der anvendes i referencearkitekturen. Både dem, der indgår i begrebsmodellen og andre. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
@@ -117,9 +111,11 @@ Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der 
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
+Endelig er denne version af referencearkitekturen opdateret jfr. aktuelle standarder og lovgivning samt i forhold til udviklingen af den fællesoffentlige infrastruktur.
+
+
 ## Centrale begreber
 Referencearkitekturen beskriver administrationen af og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige organisationer, og anvendes af borgere eller andre organisationer og deres ansatte.
-
 
 
 <figure>
@@ -141,28 +137,30 @@ Ved siden af *forretningstjenester* findes *tillidstjenester*, der udfører betr
 
 **IoT** infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services, der processerer og reagerer på information fra den fysiske og virtuelle verden.
 
-**IoT-entitet** apparater eller sammenstillingen af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
+**IoT-entitet** apparat eller sammenstilling af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
 
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i når den tilgår en *tjeneste* eller et system. Rollen som *bruger* binder entiteter til digitale identiteter.
+I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* optræder i, når den tilgår en *tjeneste* eller et system. Rollen som *bruger* binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
+**Entitet:** noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
 
-**Digital identitet** digital persona der repræsenterer en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system.
 
-**Identifikationsmiddel** middel som en *entitet* får udstedt til brug for *autentifikation*, og som benytter en eller flere *autentifikationsfaktorer*. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (kodeord), noget kun brugeren er (biometri), eller noget kun brugeren er i besiddelse af (enhed).
+**Digital identitet:** digital repræsentation af en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
+**Identifikationsmiddel:** middel som en *entitet* får udstedt til brug for *autentifikation*, og som benytter en eller flere *autentifikationsfaktorer*. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (kodeord), noget kun brugeren er (biometri), eller noget kun brugeren er i besiddelse af (enhed).
+
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (entitet) have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer eller organisationer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
@@ -179,13 +177,13 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 [^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
-Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
+Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
 
-Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
+Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *applikation*, der har mange instanser, og hvor hver instans ofte kun servicerer og agerer på vegne af én fysisk person, mens andre typer applikationer (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
 
 
 ### Begrebsoverblik
-I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* til at samle de *attributter* der indgår i *adgangskontrollen* for en given *tjeneste*, herunder både *digital identitet*, rettigheder og andre attributter.
+I arkitekturen benyttes termen *adgangsbilletter* som en abstraktion for en samling af *attributter* vedr. en bestemt bruger, der benyttes i *adgangskontrollen* for en given *tjeneste*. Attributterne kan beskrive både *digital identitet*, rettigheder og andre oplysninger om brugeren.
 
 <figure>
 <img src="Begrebsoverblik.png" width="100%"/>
@@ -203,7 +201,7 @@ I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* 
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
 -	**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilknytning til **organisation**. Tilknytningen kan give en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Tilknytning til **organisation**. Tilknytningen kan afhængigt af typen give en række adgangsrettigheder - eksempelvis kan en lærer tilknyttet en bestemt skoleklasse automatisk få tildelt en række rettigheder i visse systemer, og en ansat i en organisation kan automatisk få tildelt rettigheder fx form af adgang til intranet, email mv.
 -	Eksplicit **adgangsrettighed** der gives fra en *organisation* til en *person*. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
 -	Delegering af **adgangsrettigheder** fra en person eller organisation til en *applikation*. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
@@ -245,7 +243,7 @@ Grundlæggende er ansvaret for brugerstyring placeret hos den enkelte organisati
 - På internationalt og globalt niveau er der private aktører som fx Google og Facebook, som også anvendes af mange danske organisationer til netbaserede tjenester. Desuden findes der en række internationale standardiseringsorganisationer. Indenfor forskellige domæner findes der særlige rammer, der er med til at sætte rammer for brugerstyring. Det gælder fx for forsvaret i relation til Nato.
 
 - I EU regi stiller eIDAS-forordningen [8] krav til, at relevante onlinetjenester kan tilgås med et eID (elektronisk identifikation) fra andre EU-/EØS-lande, og at medlemsstaterne anerkender hinandens eID-løsninger. Det sker via en såkaldt national eID-gateway, som myndighederne kan integrere deres selvbetjenings-løsninger til. Digitaliseringsstyrelsen er ansvarlig for den danske eID-gateway.
-- Nationalt er der med udgangspunkt i dansk lovgivning en række statslige aktører, som har ansvar for fælles infrastrukturløsninger, som fx Digitaliseringsstyrelsen med NemID/MitID og NemLogin.
+- Nationalt er der med udgangspunkt i dansk lovgivning en række statslige aktører, som har ansvar for fælles infrastrukturløsninger, som fx Digitaliseringsstyrelsen med NemID/MitID og NemLog-in.
 - Inden for en række domæner finder man fx Styrelsen for it og læring med Unilogin infrastrukturen og WAYF – Where Are You From, som er Dan-marks identitetsføderation for forskning og uddannelse. Andre eksempler er sundhedsområdet, miljøområdet og det kommunale område, som alle har egne infrastrukturer til at understøtte tværgående processer, datadeling og fælles løsninger.
 
 ## Interessenter
@@ -301,11 +299,11 @@ Hvis en tjeneste gør brug af en anden tjeneste, er der behov for nem og sikker 
 eIDAS forordningen [8] stiller krav om, at hvis en myndighed stiller en digital service til rådighed for borgerne og virksomhederne med anvendelse af en såkaldt notificeret eID-løsning, skal det være muligt at autentificere sig med notificerede eID-løsninger fra andre EU-lande med samme eller højere sikringsniveau. I praksis gælder kravet i eIDAS kun muligheden for at kunne autentificere sig over for tjenesten, og der er således ikke krav om, at forretningsfunktionen kan tilvejebringes efter autentifikationen, hvis der eksempelvis mangler nødvendige attributter om brugeren.
 
 ### Retten til privatliv
-Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet, hvor det er muligt og relevant.
+Der skal være mulighed for en højere grad af kontrol over, hvilke data tjenester får adgang til og indsigt i, hvilke aktiviteter der udføres med en elektronisk identitet og mulighed for anonymitet og pseudonymitet, hvor det er muligt og relevant.
 En tjeneste har ikke altid behov for at kende den fysiske identitet for brugeren (fx CPR-nummer) for at kunne afgøre dennes adgang til en service. Kun relevante attributter sendes til tjenesten i henhold til dataminimeringsprincippet.
 
-- Ved et køb af billet til bus eller tog er der, et behov for at levere et bevis for betaling, men ikke for kundens identitet.
-- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
+- Ved et køb af billet til bus eller tog er der et behov for at levere et bevis for betaling, men ikke for kundens identitet.
+- Nogle tjenester har blot brug for oplysninger om hvorvidt brugeren er myndig (alder>=18) eller vedkommendes bopælskommune, men ikke fødselsdato, CPR eller navn.
 
 I NemLog-in3 løsningen kan private identifikationsmidler anvendes i erhvervsmæssig sammenhæng med henblik på at reducere mængden af identifikationsmidler, der skal administreres og anvendes for den enkelte. For at sikre retten til privatliv og mulighed for at adskille privatsfæren fra arbejdssfæren for den enkelte medarbejder, er denne funktionalitet underlagt det såkaldte 'dobbelte frivillighedsprincip' [9] som sikrer, at private identifikationsmidler kun kan bruges i erhvervsmæssig sammenhæng, hvis *både* medarbejder *og* virksomhed siger god for det.
 
@@ -833,29 +831,29 @@ Ulemper:
  -	Et mere simpelt eksempel på dette er, at tjenester på sundhedsområdet som regel kræver CPR nummer for brugeren, da sundhedsfaglige autorisationer er knyttet til dette, mens det i den kommunale verden ikke er sædvanligt at benytte CPR numre som grundlag for brugerstyring. Dette betyder konkret, at der er behov for ekstra opslag og omvekslinger, når en kommunal bruger skal tilgå en tjeneste under sundhedsdomænet.
 
 # Information
-Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som ind-går i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
+Dette kapitel fokuserer på udvalgte aspekter omkring de informationer, som indgår i forbindelse med brugerstyring. Fokus i dette kapitel er lagt på områder for standardisering. Desuden behandles emnet attributter særskilt, da det vurderes at have en særlig betydning i forhold til tværgående brugerstyring i føderationer med fokus på sikkerhed og privacy.
 
 ## Områder for standardisering
 ### Eksisterende standarder
-En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffent-lige standarder og profiler inden for en række områder, som succesfuldt har bi-draget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
+En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der skal være omfattet af standarder, for at referencearkitekturen fungerer. Der er gennem de seneste 12 års arbejde med fællesoffentlig brugerstyring etableret fællesoffentlige standarder og profiler inden for en række områder, som succesfuldt har bidraget til interoperabilitet, øget modenhed og fælles løsninger. De væsentligste eksisterende standarder er:
 
--	National Standard for Identiteters Sikringsniveauer [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridi-ske enhender og fysiske personer associeret med en juridisk enhed.
--	OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer forma-ter og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), med-arbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
--	OIOSAML Web SSO profilerne [19] som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder sing-le sign-on.
+-	National Standard for Identiteters Sikringsniveauer (NSIS) [18], som definerer et tillidsrammeværk for digitale identiteter som dækker fysiske personer, juridiske enhender og fysiske personer associeret med en juridisk enhed.
+-	OCES certifikatpolitikkerne [21] og deres afløsere [35], som definerer formater og sikkerhedskrav til certifikater dækkende privatpersoner (POCES), medarbejdere (MOCES), juridiske enheder (VOCES) og systemer (FOCES).
+-	OIOSAML Web SSO profilerne [19] som definerer protokol og billetformat i forbindelse med browser-baseret adgang til web applikationer, herunder single sign-on.
 -	OIO Basic Privilege Profile [40] som definerer hvordan rettigheder og roller kan udtrykkes i en adgangsbillet herunder ved brug af delegering (fx til brug i fuldmagter) og dataafgrænsninger.
 -	OIO IDWS familien af profiler [24], som definerer protokol og billetformat til brug ved udstilling og kald af identitetsbaserede web services.
 
 ### Behov for nye fællesoffentlige standarder
-Der er en række områder, hvor der fællesoffentligt er behov for yderligere profi-ler og standarder med henblik på at sikre synergi og interoperabilitet. Der er be-hov for:
+Der er en række områder, hvor der fællesoffentligt er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet. Der er behov for:
 
--	yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslut-ninger som tages på baggrund af attributter kan kvalificeres yderligere. Jf af-snittet om attributter nedenfor.
--	fælles arkitektur, standarder og datamodeller for håndtering af samtykke, her-under så samtykker kan udveksles på tværs.
--	profilering af mobil-egnede adgangsbilletter baseret på JWT, PASETO eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Con-nect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
--	en model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profi-len.
+-	Yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere. Jf afsnittet om attributter nedenfor.
+-	Fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
+-	Profilering af mobilegnede adgangsbilletter baseret på JWT eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Connect [28]. De nuværende OIOSAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
+-	En model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
 
 Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde med discovery og orkestrering af tillidstjenester. Dertil kommer naturligvis behov for en række domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter for sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
 
-Endelig vurderes det, at der kan blive behov for yderligere vejledning og standar-der for kommunikation mellem føderationer, når erfaringerne med interføderati-on udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugersty-ring (SEB) [38].
+Endelig vurderes det, at der kan blive behov for yderligere vejledning og standarder for kommunikation mellem føderationer, når erfaringerne med interføderation udbredes - et eksempel kunne være best-pratice for billetomveksling. Der er allerede arbejdet i EU-regi (STORK [36] og eIDAS [8]) med interføderation ba-seret på SAML, og i dansk regi er der planlagt piloter mellem kommunerne (KOMBIT’s adgangsstyring [37]) og Sundhedsvæsenets Elektroniske Brugerstyring (SEB) [38].
 
 <figure>
 <img src="Kommunikation mellem føderationer.png"/>
