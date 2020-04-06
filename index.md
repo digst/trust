@@ -1273,7 +1273,9 @@ For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at d
 I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
 
 # Infrastruktur
-[Dette kapitel har jeg ikke nået at give et bud på i denne omgang. Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Evt. kan der laves pladsholdere til emner der kan være relevant, fx valg af tekniske platforme, cloud o.l. ift brugerstyring. Herunder evt. også pointer omkring fysiske apparater. Evt. også relation til andre fysiske forhold, fx åbne vs lukkede netværk, lufthavnsproblemtik, fysiske objekter ift identifikation og autenfifikation som fx mobiltelefon, tokenkort, biometri o.l. Alternativ kan vi blot skrive at dette perspektiv ikke er udfoldet nærmere i denne omgang og så ev tre-fere til relevante steder for der står noget om infrastruktur og teknologi.]
+[Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l.]
+
+Dette kapitel omhandler infrastrukturperspektivet. I mange sammenhæng betragtes brugerstyring som infrastruktur. I denne referencearkitektur er brugerstyring beskrevet som funktionalitet i tillidstjenester i kapitel 5 Opgaver (forretningsarkitektur) og i kapitel 7 Applikationer (teknisk arkitektur). Dette kapitel giver en beskrivelse af udvalgte aspekter i forhold til infrastruktur og teknologi samt referencer til relevante afsnit i de øvrige kapitler.
 
 Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed som infrastruktur, inkl eID gateway
 
