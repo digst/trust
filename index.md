@@ -1378,98 +1378,160 @@ Nedenfor findes begrebsmodellen i form af oversigtsdiagrammer opdelt i områder 
 ## Brugerstyringen
 
 <figure>
-<img src="Oversigtsdiagram - Brugerstyring.bmp" width="90%" />
+<img src="Oversigtsdiagram - Brugerstyring.png" width="90%" />
 <figcaption>Oversigtsdiagram - Brugerstyring</figcaption>
 </figure>
 
 ## Bruger og Entitet
 
 <figure>
-<img src="Kontekstdiagram - Bruger og entitet.bmp" width="90%" />
+<img src="Kontekstdiagram - Bruger og entitet.png" width="90%" />
 <figcaption>Kontekstdiagram - Bruger og entitet</figcaption>
 </figure>
 
 ## Digital identitet og autentifikationen
 
 <figure>
-<img src="Kontekstdiagram - Digital identitet og autentifikation.bmp" width="90%" />
+<img src="Kontekstdiagram - Digital identitet og autentifikation.png" width="90%" />
 <figcaption>Kontekstdiagram - Digital identitet og autentifikation</figcaption>
 </figure>
 
 ## Adgang
 
 <figure>
-<img src="Kontekstdiagram - Adgang.bmp" width="90%" />
+<img src="Kontekstdiagram - Adgang.png" width="90%" />
 <figcaption>Kontekstdiagram - Adgange</figcaption>
 </figure>
 
 ## Adgangsbilletter og attributter
 
 <figure>
-<img src="Kontekstdiagram - Adgangsbilletter og attributter.bmp" width="90%" />
+<img src="Kontekstdiagram - Adgangsbilletter og attributter.png" width="90%" />
+<figcaption>Kontekstdiagram - Adgangsbilletter og attributter</figcaption>
+</figure>
+
+## Tjenestetyper
+
+<figure>
+<img src="Kontekstdiagram - Tjenestetyper.png" width="90%" />
 <figcaption>Kontekstdiagram - Adgangsbilletter og attributter</figcaption>
 </figure>
 
 ## Begrebsliste
 
 
-| Foretrukken term | Accepteret term | Frarådet term | Definition | Eksempel | Kommentar |
-|------------------------------------|---------------------------------------------------------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <font color="#ff0000">adgang</font> | systemadgang |   | evnen til at tilgå funktioner og data i et IT-system |   |   |
-|<font color="#ff0000"> adgangsbillet </font> | security token; token |   | beskyttet elektronisk objekt udstedt af tillidstjeneste, der beskriver en digital identitets attributter og som giver adgang til en forretningstjeneste |   | Beskyttelsen er typisk i form af en  digital signatur. Kan også indeholde attributter der beskriver autentifikationen (fx tid, sikringsniveau) |
-|<font color="#ff0000"> adgangskontrol </font>|  |   | proces, der afgør hvilke, om nogen, funktioner og data en bruger får adgang til på baggrund af brugerens attributter og tjenestensadgangspolitik |   | adgangskontrollen  sammenligner attributværdier opgivet i adgangsbilletten med hvad der er krævet i adgangspolitikken |
-|<font color="#ff0000"> adgangspolitik </font> |  |   | politik der beskriver hvilke kriterier og sikringsniveauer der er krævet at opnå for adgang til en forretningstjeneste |   |   |
-|<font color="#ff0000"> adgangsrettighed </font>| privilegie |   | tilladelse til at udføre en bestemt handling på et givet objekt i et IT-system | læserettighed til en givet folder, skriverettighed til en givet fil  |   |
-|<font color="#1e4f79"> apparat </font>  | device |   | fysisk konstruktion med indlejret software  der kan udføre specifikke funktioner | termostat, blodtryksmåler, alarm | Apparater, der kan optræde som brugere, vil have et indlejret program, som er uløseligt forbundet med apparatet. Der kan være tale om apparater, der har en enkelt funktion og ikke kan få installeret yderligere programmer, eller apparater der også kan få installeret yderligere applikationer. Når apparatet optræder som bruger er det apparatet selv med dets indlejrede program der er tale om, ikke evt. ekstra applikationer |
-|<font color="#1e4f79"> applikation </font>| system, app, program  |   | software entitet med specifik forretningsfunktion |   | Applikationer er uafhængige af den platform de er installeret på. Applikationer der kan optræde som brugere vil være installeret på noget hardware, men kunne flyttes fra et stykke hardware til et andet uden at ændre identitet, hvorfor det er applikationen der optræder som bruger. |
-|<font color="#ff0000"> attended software robot </font>| macro |   | software robot der afvikles i kontekst af en digital identitet der tilhører en person |   |   |
-|<font color="#ff0000"> attribut </font>| brugerattribut |   | egenskaber der kan knyttes til en digital identitet  | navn, brugernavn, et pseudonym, et CPR-nummer, en UUID, bopæl, rolle, adgangsrettighed | Kan være en repræsentation af egenskaber ved den entitet, der besidder identiteten og/eller udtrykker den rolle entiteten tilgår data  med, fx sagsbehandler eller supporter, eller en adgangsrettighed entiteten er tildelt. |
-|<font color="#ff0000"> attributattestation  </font>| attestering; attributattestering | attributbeskrivelse | proces som udstiller og verificerer en digital identitets attributter |   | Processen står inde for attributterne - som en slags notar. |
-|<font color="#ff0000"> attributkontrakt </font>|  |   | aftale om hvilket attributsæt en tillidstjeneste skal levere til en forretningstjeneste  |   |   |
-|<font color="#ff0000"> attributregistrering </font>|  |   | proces hvor data om brugere registreres som egenskaber ved en digital identitet |   |   |
-|<font color="#ff0000"> attributsæt </font>|  |   | specifik mængde af attributter |   |   |
-|<font color="#ff0000"> attributtjeneste </font>|  |   | tillidstjeneste der muliggør registrering og/eller attestation attributter |   |   |
-|<font color="#ff0000"> autentifikation </font>| login |   | proces som genkender og verificerer en digital identitet gennem anvendelse af et identifikationsmiddel, der er koblet til identiteten |   | Definition fra eIDAS (electronic process that enables the electronic identification of a natural or legal person, or the origin and integrity of data in electronic form to be confirmed) er fravalgt, da den udelukker apparater og applikationer. |
-|<font color="#ff0000"> autentifikationsfaktor </font>|   |   | En egenskab ved et identifikationsmiddel, der binder det til entiteten, og som kan være i kategorierne: a) »indehaverbaseret autentifikationsfaktor«: en autentifikationsfaktor, som entiteten skal bevise at være i besiddelse af(fx en fysisk enhed) b) »vidensbaseret autentifikationsfaktor«: en autentifikationsfaktor, som Entiteten skal bevise at have kendskab til (fx et kodeord)c) »iboende autentifikationsfaktor«: en autentifikationsfaktor, der er baseret på et fysisk træk hos en fysisk person, og som entiteten skal bevise at have (fx biometri) | kodeord, fingeraftryk, NemID-app, nøglekort, PIN-nummer |   |
-|<font color="#ff0000"> autentifikationstjeneste </font>| IdP; identity provider |   | tillidstjeneste der udfører autentifikation af digitale identiteter |   |   |
-|<font color="#ff0000"> autonom software robot </font>|   |   | software robot der agerer selvstændigt og optræder med sin egen digitale identitet |   |   |
-|<font color="#ff0000"> billetomveksling </font>|   |   | proces hvor en adgangsbillet udstedes på baggrund af en allerede udstedt adgangsbillet for at ændre de indeholdte attributter eller give adgang til yderligere tjenester |   | I forbindelse med billetomveksling kan der ske tilføjelse, ændring, berigelse eller sletning af attributter samt omveksling af attributter fra et format til et andet. |
-|<font color="#ff0000"> billetudstedelse </font>| token service |   | proces hvor en adgangsbillet udstedes til brugeren på baggrund af autentikation og attestation |   |   |
-|<font color="#ff0000"> bootstrap token </font>| token exchange token |   | adgangsbillet der er ikke er målrettet en bestemt forretningstjeneste, men er beregnet til at blive omvekslet til en adgangsbillet til en bestemt forretningstjeneste |   |   |
-|<font color="#ff0000"> bruger </font>| anvender |   | den rolle en entitet har når den tilgår en tjeneste eller et system  |   | Rollen som bruger binder entiteter til digitale identiteter. |
-|<font color="#ff0000"> brugeradministration </font>|   |   | aspekt af brugerstyring hvor digitale identiter og deres attributter administreres  |   |   |
-|<font color="#ff0000"> brugerkatalog </font>|   |   | katalog over digitale identiteter med tilhørende attributter |   | Et brugerkatalog kan fx  være tilknyttet en organisation eller en applikation. |
-|<font color="#ff0000"> brugerorganisation </font>|   |   | organisation der administrer sine medarbejderes adgang til forretningstjenester |   |   |
-|<font color="#ff0000"> brugerstyring </font>|   |   | administration og kontrol af brugere , identifikationsmidler og adgang til forretningstjenester  |   |   |
-|<font color="#ff0000"> dataafgrænsning </font>|   |   | afgrænsning af hvilke data brugeren har adgang til |   |   |
-|<font color="#ff0000"> digital fuldmagt </font>|   |   | fuldmagt der er udtrykt ved hjælp af attributter |   |   |
-|<font color="#ff0000"> digital identitet </font>| brugerkonto | bruger | digital persona der repræsenterer en entitet i rollen som bruger v.hj.a. et sæt attributter |   | En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym. |
-|<font color="#1e4f79"> discovery-tjeneste </font>|   |   | søgetjeneste der hjælper med at lokalisere relevante ressourcer  |   | Bruges i brugerstyringssammenhæng til at lokalisere de tillidstjenester, der kan tilvejebringe oplysninger om en given bruger. |
-|<font color="#1e4f79"> elektronisk identifikationsordning </font>| identitetsgarant; udsteder af identifikationsmidler; CSP; credential service provider |   | system til håndtering af elektronisk identifikation under hvilket identifikationsmidler udstedes og administreres |   | En elektronisk identifikationsordning dækker hele livscyklus for et identifikationsmiddel, herunder registrering, udstedelse, anvendelse, udløb, spærring og arkivering. Definitionen er udvidet ift. eIDAS for at kunne dække apparater og applikationer. |
-|<font color="#1e4f79"> entitet </font>|   | bruger | noget der har en selvstændig eksistens |   | Entiteter er i denne kontekst noget (person, juridisk enhed, apparat eller applikation), som ønsker adgang til en tjeneste.En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter.  |
-|<font color="#1e4f79"> forretningstjeneste </font>|   |   | tjeneste der understøtter forretningskapabiliteter gennem en eksplicit defineret snitflade og som er eksplicit styret af en organisation   |  | En forretningstjeneste giver en eksternt synlig funktionalitet, der giver mening for omgivelserne. |
-|<font color="#1e4f79"> fuldmagt </font>|   |   | formel tilladelse til at handle på vedkommendes vegne i nærmere bestemte situationer |  |  |
-|<font color="#ff0000"> fuldmagtspakke </font>|   |   | samling af fuldmagtspriviligier tildelt i forbindelse med tildeling af én digital fuldmagt |  |  |
-|<font color="#ff0000"> fuldmagtsprivilegie  </font>|   |   | adgangsrettighed givet i forbindelse med tildeling af digital fuldmagt  |  |  |
-|<font color="#ff0000"> føderation </font>| føderation af tjenester |   | sammenslutning af tillids- og forretningstjenester med gensidig tillid |   | Føderationer har ofte fælles standarder og governance. |
-|<font color="#ff0000"> identifikationsmiddel </font>| login-middel | akkreditiv | middel som en entitet får udstedt til brug for autentifikation og som benytter en eller flere autentifikationsfaktorer |   | eIDAS-forordningen definerer elektronisk identifikationsmiddel som "en materiel og/eller immateriel enhed, der indeholder personidentifikationsdata, og som bruges til autentifikation i forbindelse med en onlinetjeneste". Denne definition er fravalgt, da et identifikationsmiddel kan udstedes til entiteter, der ikke er personer og ikke nødvendigvis indeholder personidentifikationsdata. Desuden er 'elektronisk' fravalgt som del af den foretrukne term da ordet elektronisk - fejlagtigt - antyder at identifikationsmidlet ikke kan være fysisk uden 'elektronisk'. |
-|<font color="#ff0000"> identitetsbroker </font>|   | login-tjeneste | tillidstjeneste som formidler en digital identitet til tredjeparter på baggrund af en autentifikation verificeret af brokeren selv eller evt. af en anden tredjepart  |   | Definitionen er lettere udvidet ift. definitionen i NSIS for at blive mere anvendelsesneutral, således at en identitetsbroker også kan formidle digital identiteter, der ikke er autentificeret i henhold til NSIS-standarden. |
-|<font color="#ff0000"> identitetsregistrering </font>|   |   | proces der registrerer tilhørende attributter og tilhørsforhold til en entitet og udsteder digitale identiteter |   |   |
-|<font color="#ff0000"> identitetssikring </font>| verifikation af identitet |   | proces hvor en entitets oplyste identifikationsdata efterprøves og entitetens faktiske identitet fastslås |   |   |
-|<font color="#1e4f79"> informationssikkerhedspolitik </font>| sikkerhedspolitik  |   | overordnet dokument, som underskrives af ledelsen, og som udstikker de overordnede krav og målsætninger, som skal gælde for en organisations håndtering af informationssikkerhed |   |   |
-|<font color="#ff0000"> interføderering </font>|   |   | sammenslutning af  to eller flere føderationer  |   |   |
-|<font color="#ff0000"> multifaktor autentifikation </font>| flerfaktor autentifikation |   | autentifikation hvor der anvendes mindst to autentifikationsfaktorer fra forskellige kategorier  | fx noget brugeren ved (kodeord) + noget brugeren har (nøglekort) |   |
-|<font color="#1e4f79"> organisation </font>| formel organisation; juridisk enhed |   | en organisation, der –især i juridisk forstand –er bredt anerkendt og har tilhørende rettigheder og ansvar | myndighed, aktieselskab, forening, råd  | Organisation med adgange og rettigheder, der kan delegeres til medarbejder eller applikation. 'organisation' er i Referencearkitektur for brugerstyring valgt som den foretrukne term fremfor 'formel organisation' af kommunikative hensyn. |
-|<font color="#1e4f79"> person </font>|   |   | fysisk person der kan være levende eller død,  men ikke imaginær |   | Kun levende personer kan optræde i brugerstyringssammenhæng |
-|<font color="#1e4f79"> samtykke </font>|   |   | frivilligt afgivet tilladelse til en bestemt handling | fx deling eller indhentning af data |   |
-|<font color="#ff0000"> self-asserted claim </font>|   |   | attribut hvis værdi er oplyst af brugeren og som ikke er attesteret eller verificeret |   | Kan medtages i adgangsbilletten, men det bør fremgå at det ikke er verificeret. |
-|<font color="#1e4f79"> sikringsniveau </font>| LoA; autenticitetssikringsniveau |   | graden af tillid til en autentificeret identitet  |   | Gælder ift. NSIS-standarden. Niveauerne er: Lav, Betydelig, Høj. |
-|<font color="#1e4f79"> software robot </font>|   |   | applikation der automatiserer opgaver der ellers skulle udføres manuelt  |   |   |
-|<font color="#ff0000"> tillidspolitik </font>|   |   | politik for anvendelse af eksterne parter i forbindelse med brugerstyring |   |   |
-|<font color="#ff0000"> tillidstjeneste </font>|   |   | tjeneste der udfører betroede funktioner der understøtter brugerstyring i forretningstjenester |   | tillidstjeneste kan være kvalificerede tillidstjenester, hvis de opfylder krav fra eIDAS-forordningen (se også NSIS-standarden). eIDAS-forordningen definerer tillidstjeneste som "en elektronisk tjeneste, der normalt udføres mod betaling, og som består af: a)generering, kontrol og validering af elektroniske signaturer, elektroniske segl eller elektroniske tidsstempler, elektroniske registrerede leveringstjenester og certifikater relateret til disse tjenester, eller b)generering, kontrol og validering af certifikater for webstedsautentifikation, eller c)bevaring af elektroniske signaturer, segl eller certifikater relateret til disse tjenester. "Denne definition er fravalgt da betalingsaspektet ikke er relevant for definitionen og definitionen desuden ikke er dækkende  |
-|<font color="#1e4f79"> tjeneste </font>| service; it-tjeneste |   | systemelement der leverer en specifik funktionalitet som svar på forespørgelser fra aktører eller andre tjenester |   |   |
-|<font color="#1e4f79"> tjenesteudbyder </font>|  |   | formel organisation der er ansvarlig for en tjeneste og fastsætter vilkårene for brug af tjenesten |   |   |
-|<font color="#ff0000"> verified claim </font> |  |   | attribut hvis værdi er attesteret af en attributtjeneste som indestår for korrektheden |   |   |
+| Foretrukken term | Alternative termer | Definition | Kommentarer og eksempler |
+|------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| adgang | systemadgang | evnen   til at tilgå funktioner og data i et IT-system |   |
+| adgangsbillet | security token; token | beskyttet elektronisk objekt udstedt af tillidstjeneste, der   beskriver en digital identitets attributter og som giver adgang til en   forretningstjeneste |      Beskyttelsen er typisk i form af en    digital signatur.      Kan også indeholde attributter der beskriver autentifikationen (fx tid,   sikringsniveau) |
+| adgangskontrol |   | proces, der afgør hvilke, om nogen, funktioner og data en bruger   får adgang til på baggrund af brugerens attributter og tjenestens     adgangspolitik | Adgangskontrollen    sammenligner attributværdier opgivet i adgangsbilletten med hvad der   er krævet i adgangspolitikken |
+| adgangspolitik  |   | politik der beskriver hvilke kriterier og sikringsniveauer der   er krævet at opnå for adgang til en forretningstjeneste |   |
+| adgangsrettighed | privilegie | tilladelse til at udføre en bestemt handling på et givet objekt   i et IT-system | Fx læserettighed til en givet folder, skriverettighed til en   givet fil  |
+| akkreditiv | FRARÅDET TERM se identifikationsmiddel      |   | Akkreditiv har været anvendt som en oversættelse af det engelske   ”credential” som bl.a. kendes fra den amerikanske NIST 800-63 standard.   Udfordringen er dog, at credential-begrebet har skiftet betydning, således at   det tidligere har været anvendt i betydningen om den middel, som brugeren   anvender, som nu hedder Authenticator, og Credential anvendes nu som   betegnelse for bindingen mellem en Identitet og en eller flere   ’Authenticators’. For at undgå denne potentielle flertydighed ift. begrebet   ’Akkreditiv’ anvendes i stedet ’Elektronisk Identifikationsmiddel’, som dels   sprogligt vurderes som klarere, og som også er den term, der anvendes i eIDAS   og NSIS. Herved bliver referencearkitekturen konsistent med vigtig lovgivning   og standarder på området. |
+| antimønster |   | gentagen handling, proces, struktur eller genanvendelig løsning   som i første omgang ser ud til at være fordelagtig og som er alment brugt,   men som i praksis viser sig at være ineffektiv og/eller skadelig |   |
+| anvender | se bruger |   |   |
+| app | se applikation |   |   |
+| apparat  | device | fysisk konstruktion med indlejret software  der kan udføre specifikke funktioner | Fx termostat, blodtryksmåler, alarm |
+| applikation | system, app, program  | software entitet med specifik forretningsfunktion |   |
+| applikationsinstans |   | specifik instans af en applikation der er konfigureret med en   digital identitet  | Konfigureringen foretages ofte af en *person* eller   *organisation*, som ejer eller har anden relation til applikationsinstansen   ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et   password etc |
+| attended softwarerobot | macro | softwarerobot der afvikles i kontekst af en digital identitet   der tilhører en person |   |
+| attestering | se attributattestation |   |   |
+| attribut | brugerattribut | egenskaber der kan knyttes til en digital identitet  | Kan være en repræsentation af egenskaber ved den entitet, der   besidder identiteten og/eller udtrykker den rolle entiteten tilgår data  med, fx sagsbehandler eller supporter,   eller en adgangsrettighed entiteten er tildelt.     Fx navn, brugernavn, et pseudonym, et CPR-nummer, en UUID, bopæl, rolle,   adgangsrettighed |
+| attributattestation  | attestering; attributattestering  Frårådet term: attributbeskrivelse | proces som udstiller og verificerer en digital identitets   attributter | Processen står inde for attributterne - som en slags notar. |
+| attributattestering | se attributattestation |   |   |
+| attributbeskrivelse | FRARÅDET TERM se attributattestation |   |   |
+| attributkontrakt |   | aftale om hvilket attributsæt en tillidstjeneste skal levere til   en forretningstjeneste  |   |
+| attributregistrering |   | proces hvor data om brugere registreres som egenskaber ved en   digital identitet |   |
+| attributsæt |   | specifik mængde af attributter |   |
+| attributtjeneste |   | tillidstjeneste der muliggør registrering og/eller attestation   attributter |   |
+| autenticitetssikringsniveau | se sikringsniveau |   |   |
+| autentifikation | login | proces som genkender og verificerer en digital identitet gennem   anvendelse af et identifikationsmiddel, der er koblet til identiteten |   |
+| autentifikationsfaktor |   | En egenskab ved et identifikationsmiddel, der binder det til   entiteten, og som kan være i kategorierne: a) »indehaverbaseret   autentifikationsfaktor«: en autentifikationsfaktor, som entiteten skal bevise   at være i besiddelse af(fx en fysisk enhed) b) »vidensbaseret   autentifikationsfaktor«: en autentifikationsfaktor, som Entiteten skal bevise   at have kendskab til (fx et kodeord)c) »iboende autentifikationsfaktor«: en   autentifikationsfaktor, der er baseret på et fysisk træk hos en fysisk   person, og som entiteten skal bevise at have (fx biometri) | Fx kodeord, fingeraftryk, NemID-app, nøglekort, PIN-nummer |
+| autentifikationstjeneste | IdP; identity provider | tillidstjeneste der udfører autentifikation af digitale   identiteter |   |
+| autonom softwarerobot |   | softwarerobot der agerer selvstændigt og optræder med sin egen   digitale identitet |   |
+| billetomveksling |   | proces hvor en adgangsbillet udstedes på baggrund af en allerede   udstedt adgangsbillet for at ændre de indeholdte attributter eller give   adgang til yderligere tjenester | I forbindelse med billetomveksling kan der ske tilføjelse,   ændring, berigelse eller sletning af attributter samt omveksling af   attributter fra et format til et andet. |
+| billetudstedelse | token service | proces hvor en adgangsbillet udstedes til brugeren på baggrund   af autentifikation og attestation |   |
+| bootstrap token | token exchange token | adgangsbillet der er ikke er målrettet en bestemt   forretningstjeneste, men er beregnet til at blive omvekslet til en   adgangsbillet til en bestemt forretningstjeneste |   |
+| bruger | anvender | den rolle en entitet har når den tilgår en tjeneste eller et   system  | Rollen som bruger binder entiteter til digitale identiteter. |
+| bruger konto | se digital identitet |   |   |
+| brugeradministration |   | aspekt af brugerstyring hvor digitale identiter og deres   attributter administreres  |   |
+| brugerattribut | se attribut |   |   |
+| brugerkatalog |   | katalog over digitale identiteter med tilhørende attributter | Et brugerkatalog kan fx    være tilknyttet en organisation eller en applikation. |
+| brugerorganisation |   | organisation der administrer sine medarbejderes adgang til   forretningstjenester |   |
+| brugerstyring |   | administration og kontrol af brugere , identifikationsmidler og   adgang til forretningstjenester  |   |
+| credential service provider | se eletronisk idetifikationsordning |   |   |
+| CSP | se eletronisk idetifikationsordning |   |   |
+| dataminimering |   | princip on ikke at indsamle eller dele flere personhenførbare   data end nødvendigt |   |
+| dataafgrænsning |   | afgrænsning af hvilke data brugeren har adgang til |   |
+| delegering | delegering af adgangsrettingheder | formel overdragelse af adgangsrettigheder | I brugerstyringssammenhæng følger der ikke ansvar med en   delegering og det er udelukkende retten til adgang der delegeres |
+| delegering af adgangsrettingheder | se delegering |   |   |
+| device | se apparat |   |   |
+| digital fuldmagt |   | fuldmagt der er udtrykt ved hjælp af attributter |   |
+| digital identitet | brugerkonto; Frarådet term: bruger | digital repræsentation af    en entitet i rollen som bruger v.hj.a. et sæt attributter   | En digital identitet kan indeholde data, der identificerer en   bestemt person (personidentifikationsdata), men kan også være pseudonym. |
+| discovery-tjeneste |   | søgetjeneste der hjælper med at lokalisere relevante   ressourcer  | Bruges i brugerstyringssammenhæng til at lokalisere de   tillidstjenester, der kan tilvejebringe oplysninger om en given bruger. |
+| dobbelt frivillighedsprincip |   | princip om at et privat identifikationsmidddel kun anvendes i   erhvervssammenhæng, hvis både medarbejder og virksomhed siger god for det |   |
+| elektronisk identifikationsordning | identitetsgarant; udsteder af identifikationsmidler; CSP; credential service provider | system til håndtering af elektronisk identifikation under   hvilket identifikationsmidler udstedes og administreres | En elektronisk identifikationsordning dækker hele livscyklus for   et identifikationsmiddel, herunder registrering, udstedelse, anvendelse,   udløb, spærring og arkivering.      System bruges her i betydningen "interagerede elementer arrangeret med   henblik på at opnå et eller flere formål", hvor elementer kan være   it-komponenter, mennesker, services mm.      |
+| entitet | Frarådet term: bruger | noget der har en selvstændig eksistens | Entiteter er i denne kontekst noget (person, juridisk enhed,   apparat eller applikation), som ønsker adgang til en tjeneste.      En entitet kan have flere digitale identiteter - for eksempel kan en fysisk   person både have en privatidentitet og en eller flere   erhvervsidentiteter.  |
+| flerfaktor autentifikation | se multifaktor autentifikation |   |   |
+| formel organisation | se organisation |   |   |
+| forretningstjeneste |   | tjeneste der understøtter forretningskapabiliteter gennem en   eksplicit defineret snitflade og som er eksplicit styret af en   organisation   | En forretningstjeneste giver en eksternt synlig funktionalitet,   der giver mening for omgivelserne. |
+| fuldmagt |   | formel tilladelse til at handle på vedkommendes vegne i nærmere   bestemte situationer |   |
+| fuldmagtspakke |   | samling af fuldmagtspriviligier tildelt i forbindelse med   tildeling af én digital fuldmagt |   |
+| fuldmagtsprivilegie  |   | adgangsrettighed givet i forbindelse med tildeling af digital   fuldmagt  |   |
+| føderation | tillidsføderation; identitetsføderation; føderation af tjenester | sammenslutning af tillids- og forretningstjenester med gensidig   tillid | Føderationer har ofte fælles standarder og governance. |
+| føderation af tjenester | se føderation |   |   |
+| identifikationsmiddel | login-middel;    Frarådet term: akkreditiv | middel som en entitet får udstedt til brug for autentifikation   og som benytter en eller flere autentifikationsfaktorer | Identifikationsmiddel omfatter altid både det udstedte og   bindingen mellem det udstedte og en digital identitet.     I den tidligere version af referencearkitekturen blev begrebet Akkreditiv   anvendt med en betydning som modsvarer begrebet Elektronisk Identifikationsmiddel   i denne version.     Akkreditiv har været anvendt som en oversættelse af det engelske   ”credential” som bl.a. kendes fra den amerikanske NIST 800-63 standard.   Udfordringen er dog, at credential-begrebet har skiftet betydning, således at   det tidligere har været anvendt i betydningen om den middel, som brugeren   anvender, som nu hedder Authenticator, og Credential  anvendes nu som betegnelse for bindingen   mellem en Identitet og en eller flere ’Authenticators’. For at undgå denne   potentielle flertydighed ift. begrebet ’Akkreditiv’ anvendes i stedet   ’Elektronisk Identifikationsmiddel’, som dels sprogligt vurderes som klarere,   og som også er den term, der anvendes i eIDAS og NSIS. Herved bliver referencearkitekturen   konsistent med vigtig lovgivning og standarder på området.           |
+| identitetsbroker |   | tillidstjeneste som formidler en digital identitet til   tredjeparter på baggrund af en autentifikation verificeret af brokeren selv   eller evt. af en anden tredjepart  | Definitionen er lettere udvidet ift. definitionen i NSIS for at   blive mere anvendelsesneutral, således at en identitetsbroker også kan   formidle digitale identiteter, der ikke er autentificeret i henhold til   NSIS-standarden. NSIS-definition: En ID-tjeneste som formidler en   autentificeret Identitet til tredjeparter på baggrund af en Autentifikation   verificeret af brokeren selv eller evt. af en anden tredjepart (brokere i   flere led) |
+| identitetsføderation | se føderation |   |   |
+| identitetsgarant | se eletronisk identifikationsordning |   |   |
+| identitetsregistrering |   | proces der registrerer tilhørende attributter og tilhørsforhold   til en entitet og udsteder digitale identiteter |   |
+| identitetssikring | verifikation af identitet | proces hvor en entitets oplyste identifikationsdata efterprøves   og entitens faktiske identitet fastslås |   |
+| identity provider | se autentifikationstjeneste |   |   |
+| IdP | se autentifikationstjeneste |   |   |
+| informationssikkerhedspolitik | sikkerhedspolitik  | overordnet dokument, som underskrives af ledelsen, og som   udstikker de overordnede krav og målsætninger, som skal gælde for en   organisations håndtering af informationssikkerhed |   |
+| interføderering |   | sammenslutning af  to   eller flere føderationer  |   |
+| internet of things | se IoT |   |   |
+| IoT | internet of things; web of things; tingenes internet | infrastruktur af forbudne entiteter, mennesker, systemer og   informationsressourcer i sammenhæng med services der behandler og reagerer på   information fra den fysiske og den virtuelle verden |   |
+| IoT-apparat |   | apparat, der interagere med den fysiske verden gennem sensorer   eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via IoT |   |
+| it-tjeneste | se tjeneste |   |   |
+| juridisk enhed | se organisation |   |   |
+| konfigureret apparat |   | apparat der er konfigureret med en digital identitet  | Konfigureringen foretages ofte af en *person* eller   *organisation*, som ejer eller har anden relation til apparatet  ved fx at installere et certifikat med   tilhørende privatnøgle, konfigurere et password etc      |
+| kvalitetsannotation |   | annotationer om kvalitet, inklusiv vurderinger,   kvalitetscertifikater eller feedback, der kan associeres til datasæt eller   deres distributioner |   |
+| LoA | se sikringsniveau |   |   |
+| login | se autentifikation |   |   |
+| login-middel | se identifikationsmiddel |   |   |
+| macro | se attended software robot |   |   |
+| multifaktor autentifikation | flerfaktor autentifikation | autentifikation hvor der anvendes mindst to   autentifikationsfaktorer fra forskellige kategorier  | Fx noget   brugeren ved (kodeord) + noget brugeren har (nøglekort) |
+| organisation  | formel organisation; juridisk enhed | en organisation, der –især i juridisk forstand –er bredt   anerkendt og har tilhørende rettigheder og ansvar | Organisation med adgange og rettigheder, der kan delegeres til   medarbejder eller applikation.      Fx myndighed, aktieselskab, forening, råd  |
+| person |   | fysisk person der kan være levende eller død,  men ikke imaginær | Kun   levende personer kan optræde i brugerstyringssammenhæng |
+| persondata | se personhenførbare data |   |   |
+| personhenførbare data | persondata | data der indeholder personoplysninger som i sig selv eller i   sammenhæng med andre data kan henføres til et bestemt person |   |
+| privilegie | se adgangsrettighed |   |   |
+| program | se applikation |   |   |
+| protokolkovertering | se protokoltransformation |   |   |
+| protokoltransformation | protokolkonvertering | oversættelse fra en teknisk protokol til en anden |   |
+| samtykke |   | frivilligt afgivet tilladelse til en bestemt handling | Fx deling   eller indhentning af data |
+| security token | se adgangsbillet |   |   |
+| self-asserted claim |   | attribut hvis værdi er oplyst af brugeren og som ikke er   attesteret eller verificeret | Kan medtages i adgangsbilletten, men det bør fremgå at det ikke   er verificeret. |
+| service | se tjeneste |   |   |
+| sikkerhedspolitik | se informationssikkerhedspolitik  |   |   |
+| sikringsniveau | LoA; autenticitetssikringsniveau | graden af tillid til en autentificeret identitet  | Gælder ift. NSIS-standarden. Niveauerne er: Lav, Betydelig, Høj. |
+| softwarerobot |   | applikation der automatiserer opgaver der ellers skulle udføres   manuelt  |   |
+| system | se applikation |   |   |
+| systemadgang | se adgang |   |   |
+| tillidsføderation | se føderation |   |   |
+| tillidspolitik |   | politik for anvendelse af eksterne parter i forbindelse med   brugerstyring |   |
+| tillidstjeneste |   |      tjeneste der udfører betroede funktioner der understøtter brugerstyring i   forretningstjenester | Tillidstjeneste kan være kvalificerede tillidstjenester, hvis de   opfylder krav fra eIDAS-forordningen (se også NSIS-standarden).     eIDAS-forordningen definerer tillidstjeneste som "en elektronisk   tjeneste, der normalt udføres mod betaling, og som består af:      a)generering, kontrol og validering af elektroniske signaturer,   elektroniske segl eller elektroniske tidsstempler, elektroniske registrerede   leveringstjenester og certifikater relateret til disse tjenester, eller        b)generering, kontrol og validering af certifikater for   webstedsautentifikation, eller      c)bevaring af elektroniske signaturer, segl eller certifikater relateret   til disse tjenester"      Denne definition er fravalgt da betalingsaspektet ikke er relevant for   definitionen og definitionen desuden ikke er dækkende  |
+| tingenes internet | se IoT |   |   |
+| tjeneste | service; it-tjeneste | systemelement der leverer en specifik funktionalitet som svar på   forepørgsler fra aktører eller andre tjenester |   |
+| tjenesteudbyder |   | formel organisation der er ansvarlig for en tjeneste og   fastsætter vilkårene for brug af tjenesten |   |
+| token | se adgangsbillet |   |   |
+| token exchange token | se bootstrap token |   |   |
+| token service | se billetudstedelse |   |   |
+| udsteder af identifikationsmidler | se eletronisk idetifikationsordning |   |   |
+| verified claim |   | attribut hvis værdi er attesteret af en attributtjeneste som   indestår for korrektheden |   |
+| verifikation af identitet | se identitetssikring |   |   |
+| web of things | se IoT |   |   |
 
 # Bilag 3.	Fællesoffentlig brokermodel
 I dette afsnit gives en beskrivelse af arkitekturen i den kommende fællesoffent-lige infrastruktur i form af MitID og NemLog-in3 som et eksempel på komponenter, der udmønter koncepter og begreber i referencearkitekturen.
