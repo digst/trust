@@ -1275,6 +1275,7 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 
 # Infrastruktur
 [Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l.]
+
 Dette kapitel omhandler infrastrukturperspektivet. I mange sammenhæng betragtes brugerstyring som infrastruktur. I denne referencearkitektur er brugerstyring beskrevet som funktionalitet i tillidstjenester i kapitel 5 Opgaver (forretningsarkitektur) og i kapitel 7 Applikationer (teknisk arkitektur). Dette kapitel giver en beskrivelse af udvalgte aspekter i forhold til infrastruktur og teknologi samt referencer til relevante afsnit i de øvrige kapitler.
 
 ## Infrastrukturmønstre
