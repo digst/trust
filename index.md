@@ -235,10 +235,10 @@ I forhold til ejerskab af de elementer, der indgår i dokumentets figurer og def
 
 Dette kapitel indeholder en overordnet oversigt over de væsentligste organisatoriske rammer, interessenter og forretningsmål for brugerstyring.
 
-## Governancemodel
-Dette afsnit beskriver de overordnede organisatoriske rammer for at udøve governance i relation til brugerstyring.
+## Styringsrammer
+Brugerstyring er underlagt forskellige overordnede organisatoriske styringsrammer.
 
-Grundlæggende er ansvaret for brugerstyring placeret hos den enkelte organisation og dennes systemejer og dataansvarlige. I praksis indgår flere og flere digitale løsninger i dag i føderationer, hvor forskellige dele af opgaverne vedrørende brugerstyring varetages af forskellige offentlige eller private aktører og deres respektive tjenester.
+Grundlæggende er ansvaret for brugerstyring placeret hos den enkelte organisation og dennes systemejer og dataansvarlige. I praksis indgår flere og flere digitale løsninger i dag i føderationer, hvor forskellige dele af opgaverne vedrørende brugerstyring varetages af forskellige offentlige eller private aktører og deres respektive tjenester. Føderationer findes både inden for og på tværs af domæner og landegrænser.
 
 - I EU regi stiller eIDAS-forordningen [8] krav til, at relevante onlinetjenester kan tilgås med et eID (elektronisk identifikation) fra andre EU-/EØS-lande, og at medlemsstaterne anerkender hinandens eID-løsninger. Det sker via en såkaldt national eID-gateway, som myndighederne kan integrere deres selvbetjenings-løsninger til. Digitaliseringsstyrelsen er ansvarlig for den danske eID-gateway.
 - Nationalt er der med udgangspunkt i dansk lovgivning en række statslige aktører, som har ansvar for fælles infrastrukturløsninger, som fx Digitaliseringsstyrelsen med NemID/MitID og NemLogin.
