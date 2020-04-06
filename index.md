@@ -467,7 +467,7 @@ Krav til sikkerhed i organisationer kommer ofte udefra (eksempelvis fra lovgivni
 
 Erfaringen viser, at decentral brugerstyring giver større risiko for sikkerhedsbrud med udgangspunkt i brugerstyringen, idet medarbejdere kan have rettigheder til mange løsninger, hvor brugerne ved decentral styring skal administreres hvert sted. Når brugere styres i flere forskellige løsninger, kan der fx lettere opstå en situation, hvor en medarbejder, der ophører med at arbejde i en organisation, ikke konsekvent bliver deaktiveret i samtlige løsninger. Derved kan der opstå risiko for, at ophørte medarbejdere fortsat har adgang til data og funktionalitet i interne systemer.
 
-# Jura
+## Jura
 
 Foruden de forretningsmæssige, strategiske behov, der er beskrevet i det foregående kapitel, stiller lovgivningen en række krav til fx sikkerhed og policy. De mest relevante love og forordninger, der har særligt fokus på brugerstyring og adgangskontrol, er:
 
@@ -487,7 +487,7 @@ Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan næ
 - Databeskyttelsesforordningen [13] stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
 - Forvaltningsloven [15] stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere. Dette kan betyde, at en myndighed, som udstiller digitale løsninger, også bør kunne håndtere digitale fuldmagter.
 
-# Sikkerhed
+## Sikkerhed
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne, ligesom alle regionsråd har besluttet, at regionerne skal følge dem.
 
 Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
@@ -1249,7 +1249,6 @@ For apparater, der nødvendigvis skal fungere som personlige apparater, kan det 
 
 For apparater, der er fysisk forbundne med en person, som en fodlænke eller et kirugisk indopereret apparat, kan det af privatlivshensyn stadig være fornuftigt ikke at koble apparatet og brugere for hårdt sammen i bootstrappingen. Eksempelvis kan man vente med at lave koblingen, til den indsamlede data er inde i det relevante fagsystem. Hvis uvedkommende opsnapper data undervejs til fagsystemet, vil brugere ikke være tydeligt identificeret. Dette kræver dog stærke procedurer for bootstrapping og opkobling til fagsystemet.
 
-<!--  Adgangspolitikken for tjenester i IoT apparater bør tage højde for det specifikke apparats anvendelse, fysiske placering, placering i IoT netværket, apparatets livscyklus, apparatets tekniske begrænsninger og dataindsamlingsgrundlag. Dette kan som udgangspunkt gøres indenfor de beskrevne mønstre for NPE'er i denne referencearkitektur. -->
 
 ## Digitale fuldmagter
 En komponent til digitale fuldmagter gør det muligt for borgere og virksomheder at lade en repræsentant agere på deres vegne i en forretningstjeneste. Dette muliggør både god digital service, som tager hensyn til it-svage borgere, og at fx forvaltningslovens [15] krav til partsrepræsentation kan opfyldes.
