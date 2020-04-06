@@ -56,12 +56,12 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
 
-Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillesen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne. I de tilfælde, hvor der er hyppige ændringer af brugernes rettigheder, kan tildeling af rettigheder ligge i fagsystemerne.
+Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillelsen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne. I de tilfælde, hvor der er hyppige ændringer af brugernes rettigheder, kan tildeling af rettigheder ligge i fagsystemerne.
 
-Der er derfor valgt en model for adgangsstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den kan desuden være digitalt signeret af brugerstyringsløsningen, så den ikke kan forfalskes eller manipuleres.
+Der er derfor valgt en model for brugerstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den er desuden digitalt signeret, så den ikke kan forfalskes eller manipuleres.
 
 **Arkitekturmønstre**
-Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra et scenarie, hvor alle funktioner vedrørende brugerstyring ligger i den samme organisation til økosystemer, hvor mange parter arbejder sammen om brugerstyring:
+Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet startende med et scenarie, hvor alle funktioner vedrørende brugerstyring ligger i den samme organisation til et scenarie med løst-koblede økosystemer, hvor mange parter arbejder sammen om brugerstyring:
 
 1.	Forretningstjeneste med egen autentifikationstjeneste.
 2.	Delt, intern autentifikationstjeneste.
@@ -69,7 +69,7 @@ Referencearkitekturen beskriver 5 arkitekturmønstre i stigende kompleksitet fra
 4.	Fælles domænebroker for decentrale autentifikationstjenester.
 5.	Interføderation mellem domæner.
 
-De to første mønstre forekommer mange steder, men har en række udfordringer med hensyn til sammenhæng, brugervenlighed, skalerbarhed og sikkerhed. Derfor anbefales det, at man ikke anvender dem, men i stedet håndterer brugerstyringen i de 3 øvrige mønstre.
+De to første mønstre forekommer mange steder, men har en række udfordringer med hensyn til sammenhæng, brugervenlighed, skalerbarhed og sikkerhed. Derfor anbefales det, at man ikke anvender dem, men i stedet håndterer brugerstyring via de 3 øvrige mønstre.
 
 I referencearkitekturen henvises til en række standarder for registrering af brugere, identifikationsmidler og attributter. Der peges desuden på yderligere områder, hvor der er behov for standarder for at sikre ensartede, sammenhængende løsninger.
 
