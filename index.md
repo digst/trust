@@ -28,6 +28,8 @@ Dette er en test
 
 Der er de senere år etableret en række fælles løsninger for brugerstyring i samarbejde mellem forskellige offentlige parter. Disse løsninger sikrer sammenhæng inden for afgrænsede områder, men der er fortsat mulighed for at forbedre den overordnede fællesoffentlig digitale sammenhæng i initiativer og løsninger.
 
+Dette er også en test.
+
 Formålet med referencearkitekturen er således at målrette og strukturere brugerstyringen i det offentlige for at skabe sammenhængende, effektive, sikre og brugervenlige løsninger på tværs af domæner, nationalt og transnationalt.
 
 Foruden brugerstyring af personer beskriver denne version af referencearkitekturen også hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apps og apparater (IoT).
