@@ -51,7 +51,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 
 1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
 2.	Brugerstyringsløsninger respekterer brugernes privatliv.
-3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange.
+3.	Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves.
 4.	Brugerstyring er adskilt fra forretningstjenester.
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
@@ -380,7 +380,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor der ikke er anden hjemmel, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
-### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
+### Princip 3: Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves
 Tjenesteudbyder har ansvaret for at specificere reglerne for adgang i en adgangspolitik og dernæst at håndhæve reglerne i adgangspolitikken i forbindelse med at bruger gives adgang til tjenesten.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
@@ -1273,9 +1273,7 @@ For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at d
 I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
 
 # Infrastruktur
-[Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Fysiske objekter ift identifikation og auten-fifikation som fx mobiltelefon, tokenkort, biometri o.l.]
-
-Dette kapitel omhandler infrastrukturperspektivet. I mange sammenhæng betragtes brugerstyring som infrastruktur. I denne referencearkitektur er brugerstyring beskrevet som funktionalitet i tillidstjenester i kapitel 5 Opgaver (forretningsarkitektur) og i kapitel 7 Applikationer (teknisk arkitektur). Dette kapitel giver en beskrivelse af udvalgte aspekter i forhold til infrastruktur og teknologi samt referencer til relevante afsnit i de øvrige kapitler.
+[Dette kapitel har jeg ikke nået at give et bud på i denne omgang. Kan der trækkes noget af ovenstående ud, som passer ind under perspektivet infrastruktur / teknologi? Evt. kan der laves pladsholdere til emner der kan være relevant, fx valg af tekniske platforme, cloud o.l. ift brugerstyring. Herunder evt. også pointer omkring fysiske apparater. Evt. også relation til andre fysiske forhold, fx åbne vs lukkede netværk, lufthavnsproblemtik, fysiske objekter ift identifikation og autenfifikation som fx mobiltelefon, tokenkort, biometri o.l. Alternativ kan vi blot skrive at dette perspektiv ikke er udfoldet nærmere i denne omgang og så ev tre-fere til relevante steder for der står noget om infrastruktur og teknologi.]
 
 Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed som infrastruktur, inkl eID gateway
 
@@ -1283,30 +1281,17 @@ Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed s
 Krav til kryptering, - fastlægges i politikker fx oces
 
 ## Infrastrukturmønstre
-Kapitel 5 Opgaver beskriver de forskellige tillidstjenester og i afsnittet Logiske arkitekturmønstre beskrives fem mønstre for implementering af tillidstjenester. Disse spænder fra forretningstjenester med egen autentifikationstjeneste over forskellige løsninger med delte tillidstjenster i domæner til interføderation mellem domæner. De frem mønstre er således udtryk for en stigende grad af at tillidstjenesterne optræder som fælles infrastruktur. det giver en række fordele og kapabiliteter, men stiller også krav til den enkelte node i det samlede økosystem. Fx i forhold til teknologivalg og tekniske begrænsninger, krav til netværk, protokoller og kryptering, og krav til konfigurationsstyring, test mv.
+Jf afsnit om mønstre
 
 ## Netværk
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
 
 ## SLA
-Destor højere krav til tilgængelighed af en forretningstjeneste desto højere fra til SLA for anvendte tillidstjenester. Det vil derfor være en fordel at have redundans til at understøtte SLA, hvis man vil sikre tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe, må der ikke være adgang til noget, der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
-
-## Tekniske krav
-Hjemmesiden Sikker digital [17] beskriver minimumskrav til sikkerheden i it-løsninger for statslige myndigheder. Kravene er ufravigelige og skal sikre et fælles højt sikkerhedsniveau i staten. Som led i den nationale cyber- og informationssikkerhedsstrategi er det besluttet, at de statslige myndigheder skal efterleve en række tekniske minimumskrav med henblik på at sikre et højt fælles sikkerhedsniveau i staten. De fleste krav skal være implementeret senest den 1. januar 2020, mens nogle få krav først skal være implementeret den 1. juli 2020. Størstedelen af kravene følger af eksisterende vejledninger og anbefalinger på området fra Center for Cybersikkerhed, Digitaliseringsstyrelsen og Datatilsynet. De øvrige er udtryk for udbredt best practice.
+ Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
 
 ## Teknologivalg
-Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
-
-## Log og hændelseshåndtering
-Logning på alle systemer og tjenester på netværksservere udgør en forudsætning for opdagelse og efterforskning af forskellige sikkerhedshændelser.
-
-Vejledningen "Logning – en del af et godt cyberforsvar" [se 17] beskriver hvordan logning kan indgå i et godt cyberforsvar. Den giver en række anbefalinger og tiltag og peger på en række specifikke komponenter i it-infrastrukturen, hvor logning med fordel kan indgå som del af et godt cyberforsvar. Det bemærkes, at logningen skal ikke anvendes til overvågning af brugeradfærd, men til cybersikkerhed. Vejledningen peger på følgende typiske udfordringer, som også er relevante ift hvordan brugerstyring implementeres:
-
-* Organisationen kan have fravalgt at opsamle logs på givent udstyr som følge af kapacitetsmæssige overvejelser, idet opsamling af logs vil kræve såvel processorkraft som lagerkapacitet. Denne kapacitet har det anvendte udstyr ikke nødvendigvis til rådighed.
-* Manglende forståelse i organisationen for betydningen af logs fra det konkrete udstyr. Mange organisationer har meget svært ved at forstå hvilke specifikke logs, de som minimum bør opsamle og gemme.
-* Manglende krav til outsourcing-partner om behovet for logning. Mange outsourcingpartnere vil som udgangspunkt kun foretage logning, hvis der er indgået specifikke aftaler herom, da opsamling og håndtering af logs som udgangspunkt kræver ressourcer ud over traditionel drift.
-* Mangelfuld konfiguration af udstyr, der nok sikrer opsamling af logs, men ikke at disse opbevares i tilstrækkelig lang tid. På grund af manglende indsigt i hvilke krav til lagringskapacitet et givent system har, vil man ofte opleve, at disse bliver overskrevet, når den afsatte
-lagerplads til logs er opbrugt.
+Mht teknologivalg vedr. apparater skal man være opmærksom på bl.a.  , se afsnit afsnit xx om apparater.
+Teknologivalget ift alle ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger.
 
 ## Infrastrukturlandskab
 Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne der betjener alle typer af brugere.
