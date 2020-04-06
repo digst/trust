@@ -1290,8 +1290,7 @@ Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere
  Det vil være en fordel med redundans til at understøtte SLA mhp sikring tilgængelighed og robusthed. Hvis brugerstyring ikke er oppe må der ikke være adgang til noget der er underlagt brugerstyring. Derfor er tilgængelig ift tillidstjenester afgørende. Tilsvarende er svartider afgørende ift at sikre hurtige brugervendte processer.
 
 ## Teknologivalg
-Mht teknologivalg vedr. apparater skal man være opmærksom på bl.a.  , se afsnit afsnit xx om apparater.
-Teknologivalget ift alle ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger.
+Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
 
 ## Infrastrukturlandskab
 Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne der betjener alle typer af brugere.
