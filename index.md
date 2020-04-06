@@ -1297,6 +1297,17 @@ Hjemmesiden Sikker digital [17] beskriver minimumskrav til sikkerheden i it-løs
 ## Teknologivalg
 Teknologivalget ift alle apparater/ting der skal bruge brugerstyring skal man være opmærksom på kapabiliteter og begrænsninger i fx det konkrete apparat, fx ift båndbredde og andre tekniske begrænsninger, jf afsnittet om appraters tekniske begrænser i kapitel 7.
 
+## Log og hændelseshåndtering
+Logning på alle systemer og tjenester på netværksservere udgør en forudsætning for opdagelse og efterforskning af forskellige sikkerhedshændelser.
+
+Vejledningen "Logning – en del af et godt cyberforsvar" [se 17] beskriver hvordan logning kan indgå i et godt cyberforsvar. Den giver en række anbefalinger og tiltag og peger på en række specifikke komponenter i it-infrastrukturen, hvor logning med fordel kan indgå som del af et godt cyberforsvar. Det bemærkes, at logningen skal ikke anvendes til overvågning af brugeradfærd, men til cybersikkerhed. Vejledningen peger på følgende typiske udfordringer, som også er relevante ift hvordan brugerstyring implementeres:
+
+* Organisationen kan have fravalgt at opsamle logs på givent udstyr som følge af kapacitetsmæssige overvejelser, idet opsamling af logs vil kræve såvel processorkraft som lagerkapacitet. Denne kapacitet har det anvendte udstyr ikke nødvendigvis til rådighed.
+* Manglende forståelse i organisationen for betydningen af logs fra det konkrete udstyr. Mange organisationer har meget svært ved at forstå hvilke specifikke logs, de som minimum bør opsamle og gemme.
+* Manglende krav til outsourcing-partner om behovet for logning. Mange outsourcingpartnere vil som udgangspunkt kun foretage logning, hvis der er indgået specifikke aftaler herom, da opsamling og håndtering af logs som udgangspunkt kræver ressourcer ud over traditionel drift.
+* Mangelfuld konfiguration af udstyr, der nok sikrer opsamling af logs, men ikke at disse opbevares i tilstrækkelig lang tid. På grund af manglende indsigt i hvilke krav til lagringskapacitet et givent system har, vil man ofte opleve, at disse bliver overskrevet, når den afsatte
+lagerplads til logs er opbrugt.
+
 ## Infrastrukturlandskab
 Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne der betjener alle typer af brugere.
 
