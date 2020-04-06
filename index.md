@@ -57,7 +57,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
 
-Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillelsen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne. I de tilfælde, hvor der er hyppige ændringer af brugernes rettigheder, kan tildeling af rettigheder ligge i fagsystemerne.
+Forretningsbehov og de nævnte principper peger på en arkitektur, hvor brugerstyring håndteres adskilt fra fagsystemer. Adskillelsen betyder, at flere fagsystemer kan anvende samme løsning til brugerhåndtering inden for eller på tværs af organisationer og domæner. Desuden skal fagsystemerne som udgangspunkt ikke selv håndtere administration af brugerne.
 
 Der er derfor valgt en model for brugerstyring, der er baseret på adgangsbilletter. Det betyder, at brugere får udstedt en adgangsbillet, der præsenteres over for den løsning, som leverer data eller funktionalitet, der ønskes adgang til. En adgangsbillet indeholder information om brugerens identitet fx brugernavn og rolle samt tildelte adgangsrettigheder. Den er desuden digitalt signeret, så den ikke kan forfalskes eller manipuleres.
 
@@ -336,7 +336,7 @@ Når man bygger en forretningstjeneste, er det ofte dyrt og komplekst selv at by
 
 ## Principper
 Den overordnede strategi kan udtrykkes i et sæt principper for brugerstyring. Myndigheder og leverandører bør tage stilling til disse i forbindelse med overordnet it-styring og konkret løsningsudvikling. Principperne beskriver de væsentligste egenskaber i forhold til brugerstyring, som har betydning for at understøtte de overordnede fællesoffentlige visioner og mål for brugervenlig, sammenhængende og sikker digitalisering. Principperne har et snævert fokus på emnet brugerstyring og supplerer de overordnede arkitekturprincipper i Hvidbog om fællesoffentlig digital arkitektur [2]. For hvert princip er angivet de væsentligste relationer til disse. Brugerstyringsprincipperne bør tillige anvendes i samspil med emnespecifikke principper, der beskrives i andre FDA-referencearkitekturer.
-Principper er retningslinier og de kan i nogle tilfælde være modstridende. I de tilfælde afvejes det hvilke principper, der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man må finde det bedste kompromis så begge principper tilgodeses så godt som muligt.
+Principper er retningslinier og de kan i nogle tilfælde være modstridende. I de tilfælde afvejes det hvilke principper, der skal vægtes tungest. For eksempel kan brugervenlighed og sikkerhed være modstridende, hvorfor man må finde det bedste kompromis så begge principper tilgodeses så godt som muligt. Der kan også være forretningsbehov, der strider mod et eller flere principper, hvor der igen må findes et afvejet kompromis.
 
 *Principper for brugerstyring*
 
