@@ -1281,7 +1281,7 @@ Liste over kendte fællesoffentlige tillidstjenester som stilles til rådighed s
 Krav til kryptering, - fastlægges i politikker fx oces
 
 ## Infrastrukturmønstre
-Jf afsnit om mønstre
+Kapitel 5 Opgaver beskriver de forskellige tillidstjenester og i afsnittet Logiske arkitekturmønstre beskrives fem mønstre for implementering af tillidstjenester. Disse spænder fra forretningstjenester med egen autentifikationstjeneste over forskellige løsninger med delte tillidstjenster i domæner til interføderation mellem domæner. De frem mønstre er således udtryk for en stigende grad af at tillidstjenesterne optræder som fælles infrastruktur. det giver en række fordele og kapabiliteter, men stiller også krav til den enkelte node i det samlede økosystem. Fx i forhold til teknologivalg og tekniske begrænsninger, krav til netværk, protokoller og kryptering, og krav til konfigurationsstyring, test mv.
 
 ## Netværk
 Jo bedre kontrol man har i forhold til de netværk man kommunikerer over jo mere fleksibilitet har man på andre forhold som fx krav til krypteringsstyrke eller sikringsniveau fx mht krav til identitet. Det kan man eksempelvis løse med VPN.
