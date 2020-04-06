@@ -474,9 +474,9 @@ Foruden de forretningsmæssige, strategiske behov, der er beskrevet i det foreg�
 
 - eIDAS forordningen [8] (electronic IDentification, Authentication and trust Services) som regulerer tillidstjenester og elektroniske identifikationsordninger.
 - Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester [12], der er den supplerende lov for eIDAS forordningen i Danmark.
-- Databeskyttelsesforordningen (GDPR) [13] som beskriver pligter og rettigheder ved behandling af persondata.
+- Databeskyttelsesforordningen (GDPR) [13] stiller krav om, at dataansvarlige træffer relevante sikkerhedsforanstaltninger ved behandling af persondata på baggrund af en risikovurdering.
 - Databeskyttelsesloven [14] som i dansk kontekst supplerer GDPR.
-- Forvaltningsloven [15] som indeholder regler om borgernes retsstilling over for den offentlige forvaltning. I forbindelse med sagsbehandling i offentlige forvaltninger regulerer loven blandt andet retten til partsrepræsentation.
+- Forvaltningsloven [15] stiller krav om at den, der er part i en sag med det offentlige, skal kunne lade sig partsrepræsentere.  Dette kan betyde, at en myndighed, som udstiller digitale løsninger, også bør kunne håndtere digitale fuldmagter.
 - Lov om udstedelse af NemID [11], der regulerer borgeres og virksomheders retsstilling gennem et klart lovgrundlag for forvaltningen NemID. Loven vil blive erstattet af den kommende Lov om MitID og Nemlog-in.
 - NIS direktivet [42] er en EU-regulering der har til formål at styrke cybersikkerhedsområdet. Reguleringen stiller krav til medlemstaternes kapabiliteter, til samarbejde på tværs af medlemslande, og til supervision af kritiske sektorer i medlemslandene (fx forsyningsvirksomheder, transport, finansielle virksomheder mv.).  Formålet med er bl.a. at harmonisere og skærpe medlems­staternes regler om sikkerhed for kritisk infrastruktur i erkendelse af, at sikker­hedshændelser udgør en hyppig trussel for net- og informations­systemer, og at disse sikkerheds­hændelser kan få afgørende økonomiske og samfunds­mæssige konsekvenser. Implementeringen af NIS-direktivet er gennemført i dansk ret via flere love og bekendt­gørelser fra maj 2018 med forskellige administrerende myndigheder.
 
@@ -491,7 +491,7 @@ Som eksempler på hvordan ovennævnte regulering påvirker brugerstyring kan næ
 ## Sikkerhed
 Fastlæggelse af niveau for og håndtering af informationssikkerhed skal foretages af alle offentlige organisationer og tage udgangspunkt i ISO/IEC 27001-standarden [16] for styring af informationssikkerhed. Med udgivelse af den danske oversættelse af ISO 27001 standarden i januar 2014 blev det obligatorisk for de statslige myndigheder at følge ISO 27001 standarden. Kommunerne er også forpligtet til at følge principperne, ligesom alle regionsråd har besluttet, at regionerne skal følge dem.
 
-Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil [17].
+Realiseringen skal ske gennem et ledelsessystem for informationssikkerhed (Information Security Management System, ISMS). Digitaliseringsstyrelsen har i samarbejde med Erhvervsstyrelsen udarbejdet vejledninger, værktøjer og skabeloner hertil på sikkerdigital.dk [17].
 
 Hovedindholdet i ISO/IEC 27001 [16] er, at niveau for og håndtering af informationssikkerhed tager udgangspunkt i en risikovurdering. Organisationens ledelse fastlægger på baggrund af en risikovurdering et sikkerhedsniveau, som svarer til den forretningsmæssige betydning af de aktiver (fx informationer), som organisationen ejer, vedligeholder og har dataansvaret for, og de tjenester som den stiller til rådighed for andre organisationer af alle typer. Organisationen skal gennemføre en afbalanceret risiko- og konsekvensvurdering under hensyntagen til de økonomiske forhold og herudfra fastlægge:
 
@@ -847,10 +847,10 @@ En vigtig del af referencearkitekturens rolle er at udpege hvilke områder, der 
 ### Behov for nye fællesoffentlige standarder
 Der er en række områder, hvor der fællesoffentligt er behov for yderligere profiler og standarder med henblik på at sikre synergi og interoperabilitet. Der er behov for:
 
--	yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere. Jfr. afsnittet om attributter nedenfor.
--	fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
--	profilering af mobilegnede adgangsbilletter baseret på JWT, PASETO eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Connect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
--	en model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
+-	Yderligere standarder til beskrivelse af attributters kvalitet, så adgangsbeslutninger som tages på baggrund af attributter kan kvalificeres yderligere. Jfr. afsnittet om attributter nedenfor.
+-	Fælles arkitektur, standarder og datamodeller for håndtering af samtykke, herunder så samtykker kan udveksles på tværs.
+-	Profilering af mobilegnede adgangsbilletter baseret på JWT, eller tilsvarende samt protokoller til billetudstedelse baseret på fx OpenID Connect [28]. De nuværende OIO SAML profiler [19] er baseret på XML og SOAP og ikke velegnede til mobile anvendelser.
+-	En model til at udtrykke rettigheder (‘OAuth2.0 scopes’) i adgangsbilletter på en interoperabel måde i JSON baserede tokens svarende til OIO BPP profilen.
 
 Derudover kan der i takt med fremkomsten af nye autentifikationstjenester blive behov for yderligere arbejde med discovery og orkestrering af tillidstjenester. Dertil kommer naturligvis behov for en række domænespecifikke standarder og underprofiler. Et eksempel på sidstnævnte er IDWS XUA profilerne udviklet til sundhedsområdet, som bl.a. definerer en række attributter for sundhedsfaglige personers autorisationer, roller, patientrelationer mv.
 
