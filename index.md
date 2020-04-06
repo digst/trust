@@ -256,8 +256,6 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 | Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
 
 ## Forretningsmål
-[Dette afsnit er i første omgang blot et lille klip fra strategikapitlet. Kan evt. sup-pleres med mere konkrete forretningsmål, fx omkring ID, signatur, SSO, fuld-magt, samtykke, NPE. Disse kan fx hentes fra strategi7initaitver og de store pro-jekter. Bør være kort og stramt i pindeform.]
-
 Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme.
 
 Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
@@ -266,10 +264,15 @@ Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
 - Offentlig digitalisering skal give gode vilkår for vækst
 - Tryghed og tillid skal i centrum
 
-De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er det konkrete ophæng for denne referencearkitektur.
+De tre målsætninger er understøttet af en række, specifikke initiativer, hvoraf Initiativ 7.3 Digitale identiteter og rettighedsstyring er opsummeret i strategien i nedenstående citat:
+
+*Systemer og data skal kun kunne tilgås af de rette personer. Det skal sikres via korrekt tildeling af digitale  identiteter  (e-identiteter)  og  rettigheder.  Den fælles metode til tildeling af korrekte digitale identiteter fx til personer og virksomheder, der flytter  til  Danmark,  skal  forbedres.  Muligheden  for  at  afgive  digital  fuldmagt  og  samtykke  skal   understøttes.  Og  øgede  krav  fra  EU  om  blandt  andet  gensidig  anerkendelse  af  e-identiteter  på  tværs af landegrænser skal imødekommes.*
+
+Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
 
 Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [20].
 
+Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
 
 # Strategi
 Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
