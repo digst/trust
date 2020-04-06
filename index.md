@@ -118,7 +118,6 @@ Endelig er denne version af referencearkitekturen opdateret jfr. aktuelle standa
 Referencearkitekturen beskriver administrationen af og kontrollen med brugeres adgang til digitale tjenester. Tjenester udbydes af private og offentlige organisationer, og anvendes af borgere eller andre organisationer og deres ansatte.
 
 
-
 <figure>
 <img src="Brugerstyring overblik.png" width="90%"/>
 <figcaption>Aspekter af brugerstyring</figcaption>
@@ -138,28 +137,30 @@ Ved siden af *forretningstjenester* findes *tillidstjenester*, der udfører betr
 
 **IoT** infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services, der processerer og reagerer på information fra den fysiske og virtuelle verden.
 
-**IoT-entitet** apparater eller sammenstillingen af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
+**IoT-entitet** apparat eller sammenstilling af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
 
 
 
 ### Brugere og identiteter
-I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* har i når den tilgår en *tjeneste* eller et system. Rollen som *bruger* binder entiteter til digitale identiteter.
+I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* optræder i, når den tilgår en *tjeneste* eller et system. Rollen som *bruger* binder entiteter til digitale identiteter.
 
 <figure>
 <img src="Bermuda.png" width="65%"/>
 <figcaption>Entitet, identitet og identifikationsmiddel</figcaption>
 </figure>
 
-**Entitet**, noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
+**Entitet:** noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
 
-**Digital identitet** digital persona der repræsenterer en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
+**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system.
 
-**Identifikationsmiddel** middel som en *entitet* får udstedt til brug for *autentifikation*, og som benytter en eller flere *autentifikationsfaktorer*. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (kodeord), noget kun brugeren er (biometri), eller noget kun brugeren er i besiddelse af (enhed).
+**Digital identitet:** digital repræsentation af en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
-Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
+**Identifikationsmiddel:** middel som en *entitet* får udstedt til brug for *autentifikation*, og som benytter en eller flere *autentifikationsfaktorer*. Midlet vil typisk basere sig på faktorer, som er svære at efterligne, fx viden som kun brugeren har (kodeord), noget kun brugeren er (biometri), eller noget kun brugeren er i besiddelse af (enhed).
+
+Det er vigtigt at være opmærksom på dynamikken og fleksibiliteten i ovenstående model. Eksempelvis kan en fysisk person (entitet) have mange forskellige *digitale identiteter* og mange forskellige *identifikationsmidler*. Et bestemt identifikationsmiddel er ikke nødvendigvis koblet til en bestemt identitet og omvendt.
 
 ### Typer af brugere
-I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer.
+I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, erhvervsbrugere og medarbejdere eller *organisationer* med rettigheder og pligter, og mulighed for at delegere rettigheder. Det kan i praksis være relevant at skelne mellem forskellige typer af brugere i en konkret kontekst. Dette kan dog ofte afhjælpes ved at beskrive brugertypen i et attributsæt. Brugere kan også være *apparater* eller *applikationer*, der ikke i sig selv har juridiske rettigheder eller pligter, men som kan arve rettigheder via delegation og dermed agere på vegne af personer eller organisationer.
 
 <figure>
 <img src="Brugertyper.png" width="80%"/>
@@ -176,13 +177,13 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 [^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
-Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men at disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
+Som det fremgår af figur 3 kan apparater og applikationer ikke have rettigheder og pligter, men disse (særligt rettigheder) kan nedarves fra de personer eller organisationer, som ejer eller anvender dem.
 
-Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *applikation*, der har mange instanser, og hvor hver instans kun servicerer og agerer på vegne af én fysisk person, mens en generel applikation (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
+Et fællestræk ved apparater og applikationer er, at de skal konfigureres med en *digital identitet* og et *identifikationsmiddel*, før de kan optræde som brugere. Konfigureringen (eller personaliseringen) foretages ofte af en *person* eller *organisation*, som ejer eller har anden relation til apparatet / applikationen ved fx at installere et certifikat med tilhørende privatnøgle, konfigurere et password etc. Derudover vil en fysisk person, der interagerer med en applikation, kunne give applikationen rettigheder til at kunne agere som bruger af eksterne tjenester på sine vegne i et bestemt tidsrum. Dette er eksempelvis udbredt inden for mobile apps, der både agerer som tjeneste overfor slutbrugeren, men som også kan agere som (applikations)bruger ved at kalde eksterne tjenester på vegne af slutbrugeren. En sådan model kan opfattes som en delegering snarere end at applikationen optræder med en ny digital identitet. En mobilapplikation er en særlig type *applikation*, der har mange instanser, og hvor hver instans ofte kun servicerer og agerer på vegne af én fysisk person, mens andre typer applikationer (fx web applikation) servicerer og agerer på vegne af mange fysiske personer.   
 
 
 ### Begrebsoverblik
-I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* til at samle de *attributter* der indgår i *adgangskontrollen* for en given *tjeneste*, herunder både *digital identitet*, rettigheder og andre attributter.
+I arkitekturen benyttes termen *adgangsbilletter* som en abstraktion for en samling af *attributter* vedr. en bestemt bruger, der benyttes i *adgangskontrollen* for en given *tjeneste*. Attributterne kan beskrive både *digital identitet*, rettigheder og andre oplysninger om brugeren.
 
 <figure>
 <img src="Begrebsoverblik.png" width="100%"/>
@@ -200,7 +201,7 @@ I forbindelse med implementeringen af arkitekturen, benyttes *adgangsbilletter* 
 Brugere kan have indbyrdes relationer af betydning for brugerstyring i forbindelse med tildeling og delegering af adgangsrettigheder. Rettigheder, og hvordan de tildeles, er ikke indeholdt i denne referencearkitektur, hvorfor nedenstående blot er eksempler på relationer af betydning for brugerstyring:
 
 -	**Fuldmagt** der gives fra person til person. Afhængigt af fuldmagten, kan alle eller dele af en persons rettigheder videregives til den person der har fuldmagt.
--	Tilknytning til **organisation**. Tilknytningen kan give en række adgangsrettigheder fra organisationen til personen. Fx har en borger i Danmark implicit adgang til en række tjenester som fx Borger.dk og e-Boks.
+-	Tilknytning til **organisation**. Tilknytningen kan afhængigt af typen give en række adgangsrettigheder - eksempelvis kan en lærer tilknyttet en bestemt skoleklasse automatisk få tildelt en række rettigheder i visse systemer, og en ansat i en organisation kan automatisk få tildelt rettigheder fx form af adgang til intranet, email mv.
 -	Eksplicit **adgangsrettighed** der gives fra en *organisation* til en *person*. Dette kan være adgang til systemer eller steder, eller prokura til at handle på organisationens vegne.
 -	Bruger af et **apparat**. Fx brugeren af en mobiltelefon eller en blodtryksmåler. I begge tilfælde er det en mulighed, at apparatet som bruger arver adgangsrettigheder fra personen der bruger det.
 -	Delegering af **adgangsrettigheder** fra en person eller organisation til en *applikation*. Fx en automatiseringsrobot, der får delegeret rettigheder til at håndtere en givet sagsforløb.
