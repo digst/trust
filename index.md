@@ -1272,7 +1272,7 @@ For begge løsningers vedkommende vil afgivelse af en fuldmagt resultere i, at d
 
 I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk rolle i en tjeneste, som fx kunne være ”se sag”, ”indsend ansøgning”, ”ansøg om tilskud” etc. Der er p.t. ikke mulighed for at udtrykke dataafgrænsninger i kombination med rollen, hvilket kunne udtrykke mere finkornede og præcise fuldmagter (fx ”se sagsnr. AZ-7291”). Fuldmagtløsningen skal med andre ord også respektere dataafgrænsninger, som beskrevet i afsnittet om adgangskontrol.
 
-## Logning og hændelseshåndterng
+## Logning og hændelseshåndtering
  Logning på alle systemer og tjenester på netværksservere udgør en forudsætning for opdagelse og efterforskning af forskellige sikkerhedshændelser.
 
  Vejledningen "Logning – en del af et godt cyberforsvar" [se 17] beskriver hvordan logning kan indgå i et godt cyberforsvar. Den giver en række anbefalinger og tiltag og peger på en række specifikke komponenter i it-infrastrukturen, hvor logning med fordel kan indgå som del af et godt cyberforsvar. Det bemærkes, at logningen skal ikke anvendes til overvågning af brugeradfærd, men til cybersikkerhed. Vejledningen peger på følgende typiske udfordringer, som også er relevante ift hvordan brugerstyring implementeres:
