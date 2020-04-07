@@ -631,14 +631,14 @@ Termen attributter bruges i denne referencearkitektur om egenskaber ved en digit
 
 Eksempler på opgaver inden for området kan være:
 
-- Administration af brugere i et brugerkatalog, fx et AD, med navn, titel, e-mail, afdeling osv. underlagt ledelse i en organisation.
+- Administration af brugere i et brugerkatalog, fx et AD med navn, titel, e-mail, afdeling osv. underlagt ledelse i en organisation.
 - Tildeling og udstilling af roller og fuldmagter til brugere.
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem en bruger og andre brugere (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
 Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet (se [38]) og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet, mens de kommunikeres i en infrastruktur.
 
-Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydninger om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
+Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydninger om det at have rettigheder til en tjeneste og/eller til data i tjenesten.
 I denne referencearkitektur benyttes attributregistrering som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer. Eksempelvis kan man tildele en person en (værdi af en) attribut i et attributregister, hvilket kan give adgang til en forretningstjeneste, hvis adgangspolitik er baseret på denne attributværdi - uden at der eksplicit er sket en autorisation direkte til forretningstjenesten. Eksempelvis vil en person, der i Erhvervsstyrelsens registre angives med mulighed for at kunne tegne et selskab alene, automatisk få nogle rettigheder dels i NemLog-in løsningen og dels i en række forretningstjenester.
 
 Formålet med attributregistreringen er i sidste ende at tilvejebringe grundlaget for den adgangskontrol, der udføres i en forretningstjeneste. En forretningstjeneste kan således have brug for at kende brugerens alder, køn og bopælskommune for at kunne afgøre, hvilket adgang der skal gives. Udførelse af adgangskontrol beskrives nedenfor.
