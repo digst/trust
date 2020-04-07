@@ -1418,7 +1418,7 @@ Den formelle begrebsmodel for denne referencearkitektur kan findes her [indsæt 
 <figcaption>Kontekstdiagram - Adgangsbilletter og attributter</figcaption>
 </figure>
 
-## Begrebsliste
+## Ordliste
 
 
 | Foretrukken term | Alternative termer | Definition | Kommentarer og eksempler |
