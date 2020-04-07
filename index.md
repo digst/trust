@@ -1294,14 +1294,14 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 # Infrastruktur
 Infrastrukturperspektivet er en fast del af skabelonen for referencearkitekturer under FDA. Set fra forretningstjenesters synspunkt betragtes brugerstyring (herunder især tillidstjenester) ofte som infrastruktur, men i denne referencearkitektur er brugerstyring selve kernen. Infrastrukturaspekter er derfor allerede beskrevet i de tidligere afsnit:
 
-- De forskellige tillidstjenesters funkitonalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
+- De forskellige tillidstjenesters funktionalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
 - Tekniske standarder og profiler til føderation som fx SAML og OpenID Connect er beskrevet i afsnit 6 Information.
-- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis Discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
+- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
 
 Der henvises derfor til ovenstående afsnit for beskrivelse af infrastrukturperspektivet, og som supplement præsenteres nedenstående infrastrukturlandskab.
 
 ## Infrastrukturlandskab
-Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
+Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndterer brugerrettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
 
 | Navn | Ejer | Beskrivelse | Link |
 |-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
