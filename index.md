@@ -561,7 +561,7 @@ Figuren viser de forskellige typer brugere, som anvender forretningstjenester. T
 
 Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributregistrering i et konkret scenarie. Det kan således variere, hvilke attributter forskellige tjenester har behov for, når de håndhæver deres adgangspolitik.
 
-I det efterfølgende kapitel om den tekniske arkitektur beskrives det mere konkret, hvordan attributter kan håndteres i brugerstyring.
+I kapitel 6 om Information beskrives det mere konkret, hvordan attributter kan håndteres i brugerstyring.
 
 
 ## Tillidstjenester
