@@ -532,14 +532,13 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici skal håndteres, og hvordan persondata skal  beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-**Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
+**Administration af tjenester** er den forretningsfunktion der definerer dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker), på baggrund af det besluttede informationssikkerhedsniveau.
 
-For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) samt autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
+For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) og autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
 I den tekniske arkitektur beskrives en række supplerende funktioner (fx billetudstedelse og anvendelse af brokere), som ikke optræder på forretningsniveau.
-
 
 En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument (også på engelsk kendt som *Web Service Consumer*). En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
 
