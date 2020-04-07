@@ -51,7 +51,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 
 1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
 2.	Brugerstyringsløsninger respekterer brugernes privatliv.
-3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange.
+3.	Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves.
 4.	Brugerstyring er adskilt fra forretningstjenester.
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
@@ -329,12 +329,12 @@ Principper er retningslinier og de kan i nogle tilfælde være modstridende. I d
 
 *Principper for brugerstyring*
 
-1.	Brugerne oplever en relevant og sammenhængende adgangsstyring
-2.	Brugerstyringsløsninger respekterer brugernes privatliv
-3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
-4.	Brugerstyring er adskilt fra forretningstjenester
-5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester
-6.	Tjenesteudbydere indgår i føderationer
+1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
+2.	Brugerstyringsløsninger respekterer brugernes privatliv.
+3.	Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves.
+4.	Brugerstyring er adskilt fra forretningstjenester.
+5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
+6.	Tjenesteudbydere indgår i føderationer.
 
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
@@ -377,7 +377,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor der ikke er anden hjemmel, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
-### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
+### Princip 3: Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves
 Tjenesteudbyder har ansvaret for at specificere reglerne for adgang i en adgangspolitik og dernæst at håndhæve reglerne i adgangspolitikken i forbindelse med at bruger gives adgang til tjenesten.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
