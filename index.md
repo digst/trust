@@ -256,9 +256,9 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 | Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
 
 ## Forretningsmål
-Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme.
+Dette afsnit beskriver de overordnede forretningsmål, som referencearkitekturen skal fremme. Forretningsmålene hænges her op op de strategiske initiativer referencearkitekturen bidrager til at realisere.
 
-Digitaliseringsstrategien 2016-2020 har tre, overordnede målsætninger:
+Digitaliseringsstrategien 2016-2020 [1], er et af de primære strategiske ophæng for FDA og derfor også for denne referencearkitektur. Digitaliseringsstrategien har tre, overordnede målsætninger:
 
 - Det digitale skal være let, hurtigt og sikre god kvaliteten
 - Offentlig digitalisering skal give gode vilkår for vækst
@@ -270,7 +270,9 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 
 Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
 
-Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19].
+Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19] der beskrives i nedenstående citat:
+
+*Med henblik på at støtte myndighederne i at udvikle it-løsninger, der øger myndighederne evne til at sikre fortrolighed, integritet, tilgængelighed og robusthed af systemer og -tjenester, udarbejdes en fællesoffentlig arkitektur for informationssikkerhed bestående af principper, standarder, fælleskomponenter og vejledninger.*
 
 Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
 
