@@ -1372,8 +1372,7 @@ Nedenstående liste viser kilder og baggrundsmateriale, som der henvises til i R
 
 # Bilag 2.	Begrebsmodel
 
-Begrebsmodellen er i store træk færdig, men stadig under udarbejdelse, så der kan komme mindre justeringer. Desuden vil der blive indarbejdet en ordliste med henvisninger fra accepterede termer og ord, der anvendes, men ikke er medtaget i begrebsmodellen.
-Nedenfor findes begrebsmodellen i form af oversigtsdiagrammer opdelt i områder og en liste med begreberne. Den fulde begrebsliste findes i indeholdte Excel dokument sidst i afsnittet.
+Den formelle begrebsmodel for denne referencearkitektur kan findes her [indsæt link]. I denne ordliste findes termer og definitioner fra begrebsmodellen samt forklaringer af enkelte ord der bruges i referencearkitekturen, men som ikke indgår i begrebsmodellen, da det ikke specifikt er knyttet til brugerstyringsdomænet. Den giver desuden mulighed for at slå op på alternative og frarådede termer og blive henvist til den foretrukne term med tilhørende definition.
 
 ## Brugerstyringen
 
