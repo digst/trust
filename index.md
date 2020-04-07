@@ -570,7 +570,7 @@ I dette afsnit beskrives funktionaliteten i tillidstjenesterne fra ovenstående 
 
 ### Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester.
-Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3 [7], som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
+Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3 [7], som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI (public key infrastrukture)-området:
 
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
