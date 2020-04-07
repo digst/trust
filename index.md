@@ -146,7 +146,7 @@ I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* optræd
 
 **Entitet:** noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
 
-**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system.
+**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system. Kan også benævnes som en tjenestekonsument eller Web Service Consumer.
 
 **Digital identitet:** digital repræsentation af en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
@@ -532,16 +532,15 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici skal håndteres, og hvordan persondata skal  beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
-**Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
+**Administration af tjenester** er den forretningsfunktion der definerer dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker), på baggrund af det besluttede informationssikkerhedsniveau.
 
-For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) samt autentifikation af brugere. Tillidstjenester udfører som nævnt betroede funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
+For at realisere politikkerne opereres der med en række tillidstjenester, der udfører betroede funktioner i brugerstyringen. Disse omfatter udstedelse af elektroniske identifikationsmidler, som brugerne kan autentificere sig med, beskrivelse af attributter ved brugerne (fx navn, egenskaber, roller, relationer, bemyndigelser osv.) og autentifikation af brugere. Tillidstjenester udfører funktioner, der understøtter forretningstjenesterne - herunder særligt den adgangskontrol, som forretningstjenesterne skal varetage, før der gives adgang til systemer og data.
 
 I den tekniske arkitektur beskrives en række supplerende funktioner (fx billetudstedelse og anvendelse af brokere), som ikke optræder på forretningsniveau.
 
-
-En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En bruger, der efterspørger informationer og funktionalitet, kaldes en tjenestekonsument (også på engelsk kendt som *Web Service Consumer*). En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger (være en tjenestekonsument) over for andre tjenester.
+En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger over for andre tjenester.
 
 Bemærk at en tillidstjeneste også kan optræde som forretningstjeneste, og herunder udføre adgangskontrol, hvor forretningsområdet omhandler brugerstyring.  
 
@@ -562,7 +561,7 @@ Figuren viser de forskellige typer brugere, som anvender forretningstjenester. T
 
 Bemærk at figurerne ovenfor er udtryk for abstrakte forretningsbeskrivelser, og at man i en konkret arkitektur fx kan have flere forskellige parter, som udfører fx attributregistrering i et konkret scenarie. Det kan således variere, hvilke attributter forskellige tjenester har behov for, når de håndhæver deres adgangspolitik.
 
-I det efterfølgende kapitel om den tekniske arkitektur beskrives det mere konkret, hvordan attributter kan håndteres i brugerstyring.
+I kapitel 6 om Information beskrives det mere konkret, hvordan attributter kan håndteres i brugerstyring.
 
 
 ## Tillidstjenester
@@ -571,7 +570,7 @@ I dette afsnit beskrives funktionaliteten i tillidstjenesterne fra ovenstående 
 
 ### Om tillidstjenester og eIDAS
 I denne referencearkitektur anvendes betegnelsen 'tillidstjeneste' i bred forstand om en tjeneste, der udfører betroede funktioner, der understøtter brugerstyring i forretningstjenester. Med denne terminologi opnås et tydeligt skel til forretningstjenester.
-Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3 [7], som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI-området:
+Anvendelsen af termen 'tillidstjeneste' er dermed væsentligt bredere her end i eIDAS-forordningens kapitel 3 [7], som regulerer nogle specifikke former for tillidstjenester, hovedsageligt indenfor PKI (Public Key Infrastrukture)-området:
 
 - Certifikatudstedere (CA)
 - Tidsstemplingsservices
