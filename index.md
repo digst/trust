@@ -500,7 +500,7 @@ Hovedindholdet i ISO/IEC 27001 [15] er, at niveau for og håndtering af informat
 
 ISO/IEC 27001 standarden [15] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
-På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [? https://sikkerdigital.dk/myndighed/tekniske-tiltag/styring-af-password/]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik. på det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
+På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [42]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik. på det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
 
 - Stil ikke krav om password kompleksitet, men rådgiv om valg af sikre
 passwords.
@@ -510,8 +510,6 @@ organisationens systemer.
 - Anvend fler-faktor-autentifikation hvor muligt, og som minimum på al fjernadgang og alle privilegerede konti.
 - Tillad ikke ofte anvendte eller allerede lækkede passwords.
 - Hjælp brugerne til sikker håndtering af passwords, gennem regelmæssige awareness-tiltag.
-
-
 
 ### Risici vedr. brugere
 Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [17] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
@@ -1372,6 +1370,7 @@ Nedenstående liste viser kilder og baggrundsmateriale, som der henvises til i R
 | 39 | Europaparlamentet og Rådet | Direktiv (EU) 2016/1148 af 6. juli 2016 om foranstaltninger, der skal sikre et højt fælles sikkerhedsniveau for net- og informationssystemer i hele Unionen (NIS), https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32016L1148 |
 | 40 | W3C | Web of Things (WoT) Security and Privacy Guidelines,  https://www.w3.org/TR/2019/NOTE-wot-security-20191106/ |
 | 41 | IETF | Internet of Things (IoT) Security: State of the Art and Challenges, RFC8576, https://datatracker.ietf.org/doc/rfc8576/?include_text=1 |
+| 42 | Digitaliseringsstyrelsen og Center for Cybersikkerhed | passwordvejledningen https://sikkerdigital.dk/myndighed/tekniske-tiltag/styring-af-password/ |
 
 
 # Bilag 2.	Begrebsmodel
