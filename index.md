@@ -636,7 +636,7 @@ Eksempler på opgaver inden for området kan være:
 - Udstilling af autoritative data der beskriver brugere som fx CPR-registret, CVR-registret, Sundhedsstyrelsens autorisationsregister mv.
 - Autoritativ beskrivelse af relationer mellem en bruger og andre brugere (ansat i, forælder til, tegningsberettiget for, ejer af, værge for).
 
-Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet (se [38]) og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet, mens de kommunikeres i en infrastruktur.
+Der er som tidligere nævnt både et aspekt, som vedrører administration, og et aspekt vedrørende udstilling. Førstnævnte handler fortrinsvis om datakvalitet [38] og autoritative kilder, hvor sidstnævnte handler om at gøre attributter tilgængelige for forretningstjenesters adgangskontrol samt sikre deres integritet, mens de kommunikeres i en infrastruktur.
 
 Traditionelt har ordet 'autorisation' også været anvendt i brugerstyring i forskellige betydninger om det at have rettigheder til en tjeneste og/eller til data i tjenesten:
 I denne referencearkitektur benyttes attributregistrering som en bredere og mere generel term end 'autorisation' for bedre at kunne dække den mangfoldighed af adgangspolitikker, der eksisterer. Eksempelvis kan man tildele en person en (værdi af en) attribut i et attributregister, hvilket kan give adgang til en forretningstjeneste, hvis adgangspolitik er baseret på denne attributværdi - uden at der eksplicit er sket en autorisation direkte til forretningstjenesten. Eksempelvis vil en person, der i Erhvervsstyrelsens registre angives med mulighed for at kunne tegne et selskab alene, automatisk få nogle rettigheder dels i NemLog-in løsningen og dels i en række forretningstjenester.
@@ -921,7 +921,6 @@ En anden mulighed, som dog sjældent ses implementeret i praksis, er at beskrive
 Endelig er der en velkendt fællesoffentlig udfordring i håndtering af CPR-nummeret. Mange forretningstjenester har en hård binding til dennes nuværende form, hvilket gør det vanskeligt at skifte den ud, grundet det kommende udløb af numre. I den forbindelse definerer OIOSAML 3.0 profilen [18] i stedet brug af CPR UUID'er, således at tjenester kan påbegynde migrering til disse.
 
 # Applikation
-[Dette kapitel trimmes så fokus er på applikationskomponenter, services (tjenester) og snitflader / integration. De afsnit der handler specifikt om at definere informationsstandarder fx protokoller, formater, attributter og klassifikationer, dokumenter, og herunder alt omkring standardisering på disse områder foreslår jeg, at vi flytter til kapitel 6 Information, hvis det kan bringes til at fungere.]
 
 I dette afsnit beskrives tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester. Dette omhandler eksempelvis støttefunktioner som discovery og billetomveksling, håndtering af apps på mobile enheder, softwarerobotter og identitetsbaserede services.
 
