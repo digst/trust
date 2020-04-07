@@ -500,7 +500,16 @@ Hovedindholdet i ISO/IEC 27001 [15] er, at niveau for og håndtering af informat
 
 ISO/IEC 27001 standarden [15] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
-På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [? https://sikkerdigital.dk/myndighed/tekniske-tiltag/styring-af-password/]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik.
+På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [? https://sikkerdigital.dk/myndighed/tekniske-tiltag/styring-af-password/]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik. på det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
+
+- Stil ikke krav om password kompleksitet, men rådgiv om valg af sikre
+passwords.
+- Vurder om tvunget passwordskift øger eller forringer sikkerheden.
+- Anvend single-sign-on for at gøre det nemt for brugerne at tilgå
+organisationens systemer.
+- Anvend fler-faktor-autentifikation hvor muligt, og som minimum på al fjernadgang og alle privilegerede konti.
+- Tillad ikke ofte anvendte eller allerede lækkede passwords.
+- Hjælp brugerne til sikker håndtering af passwords, gennem regelmæssige awareness-tiltag.
 
 
 
