@@ -170,7 +170,7 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 **Applikation** software entitet med specifik forretningsfunktion[^1], der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
 
-**IoT-apparat** apparat, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via *IoT*
+**IoT-apparat** apparat, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via *IoT*.
 
 [^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
@@ -249,7 +249,7 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 | Borgere (voksen, barn, udlænding) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til, at deres data behandles med respekt for deres privatliv.  Har interesse i at kunne logge ind, så vidt muligt med single sign on, signere dokumenter, give fuldmagt og samtykke og administrere disse. Borgere er interesserede i at brugerstyring fylder så lidt som muligt i deres samarbejde med det offentlige, og at der ikke forventes at de anvender ressourcer på at huske unødigt mange forskellige brugeridentiteter eller adgangskoder. |
 | Virksomheder (ejer, ansvarlig, medarbejder) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt. Virksomheder vil kunne have tillid til, at deres data behandles med respekt for deres privatliv og krav til fortrolighed. Virksomheder har desuden interesse i at kunne indgå i tillidsføderationer ved at anvende offentlige infrastrukturløsninger, og har særlig interesse i løsninger der understøtter delegering via fuldmagt, og løsninger der kan integrere med egne løsninger til understøttelse af Single Sign On. |
 | Myndigheder | De enkelte myndigheder og offentlige virksomheder har ansvar for egne løsninger, herunder for brugerstyring på tværs af egne løsninger. På tværs af stat, kommuner og regioner er der interesse i at understøtte sammenhængende brugerrejser og adgang til data for borgere, virksomheder og medarbejdere, også når opgaverne går på tværs af myndigheder, domæner og it-systemer. Desuden er der behov for ensartede funktioner som fx signering, fuldmagt og samtykke. En række statslige styrelser har ansvar for nationale infrastruktur- og brugerstyringsløsninger, herunder særligt Digitaliseringsstyrelsen (NemID/MitID, NemLogin, eID-gateway), Styrelsen for it og læring (Unilogin), Sundhedsdatastyrelsen (National Sundheds Platform). Desuden er der samarbejdsorganisationer på bl.a. uddannelses og forskningsområdet (WAYF) og miljøområdet (Miljøportalen). KL/KOMBIT har ansvar for fælleskommunal infrastruktur. Regionernes Sundheds IT (RSI) har fx ansvar for Active Directory Federation Services (ADFS)|
-| EU | Har interesse i at DK kan indgå i transeuropæiske føderationer baseret på eIDAS forordningen og fælleseuropæiske løsningsbyggeblokke. |
+| EU | Har interesse i at Danmark kan indgå i transeuropæiske føderationer baseret på eIDAS forordningen og fælleseuropæiske løsningsbyggeblokke. |
 | Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
 
 ## Forretningsmål
@@ -265,13 +265,13 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 
 *Systemer og data skal kun kunne tilgås af de rette personer. Det skal sikres via korrekt tildeling af digitale  identiteter  (e-identiteter)  og  rettigheder.  Den fælles metode til tildeling af korrekte digitale identiteter fx til personer og virksomheder, der flytter  til  Danmark,  skal  forbedres.  Muligheden  for  at  afgive  digital  fuldmagt  og  samtykke  skal   understøttes.  Og  øgede  krav  fra  EU  om  blandt  andet  gensidig  anerkendelse  af  e-identiteter  på  tværs af landegrænser skal imødekommes.*
 
-Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
+Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, med udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske, digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
 
-Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19] der beskrives i nedenstående citat:
+Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19], der beskrives i nedenstående citat:
 
 *Med henblik på at støtte myndighederne i at udvikle it-løsninger, der øger myndighederne evne til at sikre fortrolighed, integritet, tilgængelighed og robusthed af systemer og -tjenester, udarbejdes en fællesoffentlig arkitektur for informationssikkerhed bestående af principper, standarder, fælleskomponenter og vejledninger.*
 
-Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
+Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder, der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
 
 # Strategi
 Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
