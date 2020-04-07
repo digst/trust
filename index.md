@@ -170,7 +170,7 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 
 **Applikation** software entitet med specifik forretningsfunktion[^1], der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
 
-**IoT-apparat** apparat, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via *IoT*
+**IoT-apparat** apparat, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via *IoT*.
 
 [^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
@@ -249,7 +249,7 @@ Dette afsnit beskriver de vigtigste interessenter og interesser i forhold til br
 | Borgere (voksen, barn, udlænding) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt og have tillid til, at deres data behandles med respekt for deres privatliv.  Har interesse i at kunne logge ind, så vidt muligt med single sign on, signere dokumenter, give fuldmagt og samtykke og administrere disse. Borgere er interesserede i at brugerstyring fylder så lidt som muligt i deres samarbejde med det offentlige, og at der ikke forventes at de anvender ressourcer på at huske unødigt mange forskellige brugeridentiteter eller adgangskoder. |
 | Virksomheder (ejer, ansvarlig, medarbejder) | Har interesse i at kunne tilgå offentlige tjenester nemt, sikkert og trygt. Virksomheder vil kunne have tillid til, at deres data behandles med respekt for deres privatliv og krav til fortrolighed. Virksomheder har desuden interesse i at kunne indgå i tillidsføderationer ved at anvende offentlige infrastrukturløsninger, og har særlig interesse i løsninger der understøtter delegering via fuldmagt, og løsninger der kan integrere med egne løsninger til understøttelse af Single Sign On. |
 | Myndigheder | De enkelte myndigheder og offentlige virksomheder har ansvar for egne løsninger, herunder for brugerstyring på tværs af egne løsninger. På tværs af stat, kommuner og regioner er der interesse i at understøtte sammenhængende brugerrejser og adgang til data for borgere, virksomheder og medarbejdere, også når opgaverne går på tværs af myndigheder, domæner og it-systemer. Desuden er der behov for ensartede funktioner som fx signering, fuldmagt og samtykke. En række statslige styrelser har ansvar for nationale infrastruktur- og brugerstyringsløsninger, herunder særligt Digitaliseringsstyrelsen (NemID/MitID, NemLogin, eID-gateway), Styrelsen for it og læring (Unilogin), Sundhedsdatastyrelsen (National Sundheds Platform). Desuden er der samarbejdsorganisationer på bl.a. uddannelses og forskningsområdet (WAYF) og miljøområdet (Miljøportalen). KL/KOMBIT har ansvar for fælleskommunal infrastruktur. Regionernes Sundheds IT (RSI) har fx ansvar for Active Directory Federation Services (ADFS)|
-| EU | Har interesse i at DK kan indgå i transeuropæiske føderationer baseret på eIDAS forordningen og fælleseuropæiske løsningsbyggeblokke. |
+| EU | Har interesse i at Danmark kan indgå i transeuropæiske føderationer baseret på eIDAS forordningen og fælleseuropæiske løsningsbyggeblokke. |
 | Standardiseringsorganisationer | Har interesse i opbakning til udvikling og anvendelse af internationale, åbne standarder. |
 
 ## Forretningsmål
@@ -265,13 +265,13 @@ De tre målsætninger er understøttet af en række, specifikke initiativer, hvo
 
 *Systemer og data skal kun kunne tilgås af de rette personer. Det skal sikres via korrekt tildeling af digitale  identiteter  (e-identiteter)  og  rettigheder.  Den fælles metode til tildeling af korrekte digitale identiteter fx til personer og virksomheder, der flytter  til  Danmark,  skal  forbedres.  Muligheden  for  at  afgive  digital  fuldmagt  og  samtykke  skal   understøttes.  Og  øgede  krav  fra  EU  om  blandt  andet  gensidig  anerkendelse  af  e-identiteter  på  tværs af landegrænser skal imødekommes.*
 
-Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, men udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
+Referencearkitekturen skal med baggrund i ovenstående initiativ konkretisere den fælles metode til tildeling af digitale identiteter, og understøtte løsninger for at afgive fuldmagt og samtykke, med udgangspunkt i digitale identiteter. Derudover skal referencearkitekturen hjælpe danske myndigheder til at understøtte gensidig anerkendelse af internationale, og særligt europæiske, digitale identiteter, blandt andet ved at sikre en ensartet og systematisk brugerstyring i den digitale offentlige sektor.
 
-Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19] der beskrives i nedenstående citat:
+Referencearkitekturen indgår desuden i opfyldelsen af Initiativ 3.8 i Den nationale strategi for cyber- og informationssikkerhed [19], der beskrives i nedenstående citat:
 
 *Med henblik på at støtte myndighederne i at udvikle it-løsninger, der øger myndighederne evne til at sikre fortrolighed, integritet, tilgængelighed og robusthed af systemer og -tjenester, udarbejdes en fællesoffentlig arkitektur for informationssikkerhed bestående af principper, standarder, fælleskomponenter og vejledninger.*
 
-Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
+Som en den af arbejdet med at etablere en arkitektur for informationssikkerhed præsenteres der i denne referencearkitektur en samlet metode, et fælles begrebsapparat og en række udpegede standarder, der tilsammen skal hjælpe myndighederne med at etablere og vedligeholde sikker, tilgængelig og robust brugerstyring på tværs af domæner og myndigheder i det fællesoffentlige samarbejde.
 
 # Strategi
 Dette afsnit beskriver de overordnede forretningsbehov forstået som de strategiske kapabiliteter, der skal realiseres og væsentlige udfordringer (problemer og muligheder), som arkitekturen skal adressere.
@@ -509,7 +509,11 @@ organisationens systemer.
 - Hjælp brugerne til sikker håndtering af passwords, gennem regelmæssige awareness-tiltag.
 
 ### Risici vedr. brugere
-Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange. National Standard for Identiteters Sikringsniveauer (NSIS) [17] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter. NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
+Inden for domænet 'brugerstyring' er det særligt relevant at beskæftige sig med risici knyttet til håndtering af digitale identiteter, adgangsrettigheder og identifikationsmidler - herunder risikoen for, at 'forkerte' brugere tilgår en forretningstjeneste eller opnår forkerte adgange.
+
+National Standard for Identiteters Sikringsniveauer (NSIS) [17] er her et afgørende element i den samlede risikostyring, som gør det muligt at udtrykke graden af tillid til en autentificeret identitet på en tretrins skala: Lav, Betydelig, Høj. Ved at benytte NSIS sikringsniveauer aktivt opnås en kvantificering af risici vedr. brugeridentiteter.
+
+NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
 Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx ved brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
 
@@ -528,7 +532,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-**Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
 **Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
@@ -1283,25 +1287,24 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 ## Logning og hændelseshåndtering
  Logning på alle systemer og tjenester på netværksservere udgør en forudsætning for opdagelse og efterforskning af forskellige sikkerhedshændelser.
 
- Vejledningen "Logning – en del af et godt cyberforsvar" [se 17] beskriver hvordan logning kan indgå i et godt cyberforsvar. Den giver en række anbefalinger og tiltag og peger på en række specifikke komponenter i it-infrastrukturen, hvor logning med fordel kan indgå som del af et godt cyberforsvar. Det bemærkes, at logningen skal ikke anvendes til overvågning af brugeradfærd, men til cybersikkerhed. Vejledningen peger på følgende typiske udfordringer, som også er relevante ift hvordan brugerstyring implementeres:
+ Vejledningen "Logning – en del af et godt cyberforsvar" [17] beskriver hvordan logning kan indgå i et godt cyberforsvar. Den giver en række anbefalinger og tiltag og peger på en række specifikke komponenter i it-infrastrukturen, hvor logning med fordel kan indgå som del af et godt cyberforsvar. Det bemærkes, at logningen ikke skal anvendes til overvågning af brugeradfærd, men til cybersikkerhed. Vejledningen peger på følgende typiske udfordringer, som også er relevante ift. hvordan brugerstyring implementeres:
 
  * Organisationen kan have fravalgt at opsamle logs på givent udstyr som følge af kapacitetsmæssige overvejelser, idet opsamling af logs vil kræve såvel processorkraft som lagerkapacitet. Denne kapacitet har det anvendte udstyr ikke nødvendigvis til rådighed.
  * Manglende forståelse i organisationen for betydningen af logs fra det konkrete udstyr. Mange organisationer har meget svært ved at forstå hvilke specifikke logs, de som minimum bør opsamle og gemme.
  * Manglende krav til outsourcing-partner om behovet for logning. Mange outsourcingpartnere vil som udgangspunkt kun foretage logning, hvis der er indgået specifikke aftaler herom, da opsamling og håndtering af logs som udgangspunkt kræver ressourcer ud over traditionel drift.
- * Mangelfuld konfiguration af udstyr, der nok sikrer opsamling af logs, men ikke at disse opbevares i tilstrækkelig lang tid. På grund af manglende indsigt i hvilke krav til lagringskapacitet et givent system har, vil man ofte opleve, at disse bliver overskrevet, når den afsatte
- lagerplads til logs er opbrugt.
+ * Mangelfuld konfiguration af udstyr, der nok sikrer opsamling af logs, men ikke at disse opbevares i tilstrækkelig lang tid. På grund af manglende indsigt i hvilke krav til lagringskapacitet et givent system har, vil man ofte opleve, at disse bliver overskrevet, når den afsatte lagerplads til logs er opbrugt.
 
 # Infrastruktur
 Infrastrukturperspektivet er en fast del af skabelonen for referencearkitekturer under FDA. Set fra forretningstjenesters synspunkt betragtes brugerstyring (herunder især tillidstjenester) ofte som infrastruktur, men i denne referencearkitektur er brugerstyring selve kernen. Infrastrukturaspekter er derfor allerede beskrevet i de tidligere afsnit:
 
-- De forskellige tillidstjenesters funkitonalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
+- De forskellige tillidstjenesters funktionalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
 - Tekniske standarder og profiler til føderation som fx SAML og OpenID Connect er beskrevet i afsnit 6 Information.
-- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis Discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
+- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
 
 Der henvises derfor til ovenstående afsnit for beskrivelse af infrastrukturperspektivet, og som supplement præsenteres nedenstående infrastrukturlandskab.
 
 ## Infrastrukturlandskab
-Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
+Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndterer brugerrettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
 
 | Navn | Ejer | Beskrivelse | Link |
 |-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
