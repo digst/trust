@@ -51,7 +51,7 @@ Referencearkitekturen for brugerstyring fastlægger en række principper, der un
 
 1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
 2.	Brugerstyringsløsninger respekterer brugernes privatliv.
-3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange.
+3.	Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves.
 4.	Brugerstyring er adskilt fra forretningstjenester.
 5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
 6.	Tjenesteudbydere indgår i føderationer.
@@ -329,12 +329,12 @@ Principper er retningslinier og de kan i nogle tilfælde være modstridende. I d
 
 *Principper for brugerstyring*
 
-1.	Brugerne oplever en relevant og sammenhængende adgangsstyring
-2.	Brugerstyringsløsninger respekterer brugernes privatliv
-3.	Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
-4.	Brugerstyring er adskilt fra forretningstjenester
-5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester
-6.	Tjenesteudbydere indgår i føderationer
+1.	Brugerne oplever en relevant og sammenhængende adgangsstyring.
+2.	Brugerstyringsløsninger respekterer brugernes privatliv.
+3.	Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves.
+4.	Brugerstyring er adskilt fra forretningstjenester.
+5.	Brugerstyring realiseres via løst koblede og standardiserede tillidstjenester.
+6.	Tjenesteudbydere indgår i føderationer.
 
 
 ### Princip 1: Brugerne oplever en relevant og sammenhængende adgangsstyring
@@ -377,7 +377,7 @@ Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv 
 -	Det skal være tydeligt for brugeren, hvad anvendelseskonteksten er, dvs. hvad oplysningerne anvendes til.
 -	Brugere skal, hvor der ikke er anden hjemmel, kunne afgive samtykke til, at deres oplysninger anvendes til angivne formål, og at oplysningerne er grundlag for handlinger inden for en føderation i forbindelse med brugerstyring.
 
-### Princip 3: Tjenesteudbyder har ansvaret for at håndhæve brugernes adgange
+### Princip 3: Tjenesteudbyder har ansvaret for at adgangspolitikken håndhæves
 Tjenesteudbyder har ansvaret for at specificere reglerne for adgang i en adgangspolitik og dernæst at håndhæve reglerne i adgangspolitikken i forbindelse med at bruger gives adgang til tjenesten.
 
 Princippet understøtter særligt FDA arkitekturprincip 4: Sikkerhed, privatliv og tillid sikres.
@@ -497,7 +497,7 @@ Hovedindholdet i ISO/IEC 27001 [15] er, at niveau for og håndtering af informat
 
 ISO/IEC 27001 standarden [15] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
-På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [42]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik. på det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
+På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [42]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om af, når man skal udarbejde ens passwordpolitik. På det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
 
 - Stil ikke krav om password kompleksitet, men rådgiv om valg af sikre
 passwords.
@@ -515,7 +515,7 @@ National Standard for Identiteters Sikringsniveauer (NSIS) [17] er her et afgør
 
 NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
-Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx ved brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
+Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
 
 
 # Opgaver
@@ -1418,7 +1418,7 @@ Den formelle begrebsmodel for denne referencearkitektur kan findes her [indsæt 
 <figcaption>Kontekstdiagram - Adgangsbilletter og attributter</figcaption>
 </figure>
 
-## Begrebsliste
+## Ordliste
 
 
 | Foretrukken term | Alternative termer | Definition | Kommentarer og eksempler |
