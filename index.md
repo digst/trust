@@ -146,7 +146,7 @@ I en digital sammenhæng defineres *brugere* som den rolle, en *entitet* optræd
 
 **Entitet:** noget der har en selvstændig eksistens. Entiteter er i denne kontekst en *person*, *organisation*, *apparat* eller *applikation*, som ønsker adgang til en *tjeneste*. En entitet kan have flere identiteter - for eksempel kan en fysisk person både have en privatidentitet og en eller flere erhvervsidentiteter. Endvidere kan man have transaktions- og sessionsspecifikke identiteter af hensyn til privatlivsbeskyttelse.
 
-**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system.
+**Bruger:** den rolle en *entitet* har, når den tilgår en tjeneste eller et system. Kan også benævnes som en tjenestekonsument eller Web Service Consumer.
 
 **Digital identitet:** digital repræsentation af en *entitet* i rollen som *bruger* ved hjælp af et sæt *attributter*. En digital identitet kan indeholde data, der identificerer en bestemt person (personidentifikationsdata), men kan også være pseudonym.
 
@@ -540,7 +540,7 @@ For at realisere politikkerne opereres der med en række tillidstjenester, der u
 
 I den tekniske arkitektur beskrives en række supplerende funktioner (fx billetudstedelse og anvendelse af brokere), som ikke optræder på forretningsniveau.
 
-En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger (også kendt som tjenestekonsument eller Web Service Consumer) over for andre tjenester.
+En tjeneste er i denne kontekst et systemelement, der leverer en specifik information, der understøtter brugerstyring i forretningstjenester. En tjeneste kan optræde både som leverandør og samtidig i sin udførelse af tjenesten optræde som bruger over for andre tjenester.
 
 Bemærk at en tillidstjeneste også kan optræde som forretningstjeneste, og herunder udføre adgangskontrol, hvor forretningsområdet omhandler brugerstyring.  
 
