@@ -532,7 +532,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-**Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
 **Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
