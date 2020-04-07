@@ -532,7 +532,7 @@ Figuren herunder viser de væsentligste elementer i brugerstyringsdomænet (mark
 <br>
 
 
-**Ledelse af informationssikkerhed** er det øverste lag i figuren. Det er her ledelsen i en organisation godkender sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Her er organisationen dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
+**Ledelse af informationssikkerhed** er det øverste lag i figuren. Her godkender ledelsen en organisations  sikkerhedspolitikker, og giver mandat til det sikkerhedsniveau, der skal opnås, hvordan identificerede risici håndteres, og hvordan persondata beskyttes. Organisationen er dels underlagt lovgivning og regulering (som fx Databeskyttelsesforordningen [12]) og dels egne forretningsmæssige vurderinger af risici, risikoappetit mv.
 
 **Administration af tjenester** definerer på baggrund af det besluttede informationssikkerhedsniveau, dels adgangspolitikker for adgang til egne tjenester, med kriterier og sikkerhedsniveauer for adgang, og dels politikker for anvendelse af eksterne parter i forbindelse med brugerstyring (tillidspolitikker).
 
@@ -1297,14 +1297,14 @@ I den nuværende løsning vil en fuldmagt bestå i en delegering af en statisk r
 # Infrastruktur
 Infrastrukturperspektivet er en fast del af skabelonen for referencearkitekturer under FDA. Set fra forretningstjenesters synspunkt betragtes brugerstyring (herunder især tillidstjenester) ofte som infrastruktur, men i denne referencearkitektur er brugerstyring selve kernen. Infrastrukturaspekter er derfor allerede beskrevet i de tidligere afsnit:
 
-- De forskellige tillidstjenesters funkitonalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
+- De forskellige tillidstjenesters funktionalitet og arkitekturmønstre for implementering af tillidstjenester er beskrevet i afsnit 5 Opgaver.
 - Tekniske standarder og profiler til føderation som fx SAML og OpenID Connect er beskrevet i afsnit 6 Information.
-- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis Discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
+- Tekniske og praktiske forhold, der er relevante for realisering af forretningsfunktioner og mønstre for tillidstjenester, er beskrevet i afsnit 7 Applikation. Dette gælder eksempelvis discovery tjenester, attestation via push/pull, identitetsbaserede services, apps, softwarerobotter samt brug af XACML standarden til adgangskontrol.
 
 Der henvises derfor til ovenstående afsnit for beskrivelse af infrastrukturperspektivet, og som supplement præsenteres nedenstående infrastrukturlandskab.
 
 ## Infrastrukturlandskab
-Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndtere bruger- rettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
+Hos offentlige myndigheder er der en række centrale brugerstyringstjenester, der håndterer brugerrettighedsstyring for forskellige dele af den offentlige digitale sektor. I nedenstående tabel ses et ikke-udtømmende uddrag af brugerstyringstjenesterne, der betjener alle typer af brugere.
 
 | Navn | Ejer | Beskrivelse | Link |
 |-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
