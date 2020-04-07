@@ -103,11 +103,11 @@ Arkitekturen omhandler både brugeradministration og adgangskontrol, herunder de
 
 Referencearkitekturen definerer, hvad en føderation omhandler i rammerne af brugerstyring, og den beskriver de opgaver, en føderation løser i denne ramme.
 
-2017-udgaven af referencearkitekturen [3] fokusere primært brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) beskrives det endvidere hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere. Juridiske aspekter vedr. anvendelse af softwarerobotter ligger dog udenfor scope af denne referencearkitektur. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apparater (IoT). Endvidere er beskrivelsen af føderationer og tillidstjenester er uddybet.
+2017-udgaven af referencearkitekturen (version 1.0) [3] fokuserer primært på brugerstyring af personer. I denne udgave af referencearkitekturen (version 1.1) beskrives det endvidere hvordan, referencearkitekturens principper for brugerstyring anvendes ved håndtering af softwarerobotter som separate identiteter med egne identifikationsmidler. Da brugerstyring for apps på mobile enheder indebærer særlige udfordringer, beskrives håndtering af mobilapps mere udførligt i denne udgave end tidligere. Juridiske aspekter vedr. anvendelse af softwarerobotter ligger dog udenfor scope af denne referencearkitektur. Tilsvarende er referencearkitekturen udvidet med beskrivelser af, hvordan principperne kan anvendes ved brugerstyring af apparater (IoT). Endvidere er beskrivelsen af føderationer og tillidstjenester uddybet.
 
 Siden første udgave af referencearkitekturen er De fællesoffentlige regler for begrebs- og datamodellering [4] blevet godkendt og udgivet. Derfor er begreberne i denne udgave opdateret og modelleret jfr. disse regler. Figurerne nr. 1-4 viser centrale dele af begrebsmodellen og Bilag 2 inderholder hele begrebsmodellen i diagrammer samt en ordliste, der indeholder definitioner af fagudtryk, der anvendes i referencearkitekturen. Både dem, der indgår i begrebsmodellen og andre. Øvrige figurer, der illustrerer referencearkitekturen, følger med få undtagelser begrebsmodellen mht. anvendelse af begreber, men indgår ikke som en del af begrebsmodellen.
 
-Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for fælles og tværoffentlige brugerstyringsløsninger og tjenester, der anvender disse, samt andre offentlige løsninger. Disse var angivet i en liste i Bilag D og opmærket med kan, bør og skal. Denne udgave følger en ny skabelon for referencearkitekturer, der ikke i samme grad definerer egentlige krav, men i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til og udmøntes bl.a. i de fællesoffentlige strategier.
+Den første udgave af referencearkitekturen omfattede krav og anbefalinger, der var styrende for fælles og tværoffentlige brugerstyringsløsninger og tjenester, der anvender disse, samt andre offentlige løsninger. Disse var angivet i en liste i Bilag D og opmærket med kan, bør og skal. Denne udgave følger en ny skabelon for referencearkitekturer, der ikke i samme grad definerer egentlige krav, men i højere grad beskriver best practice, som man bør forholde sig til i den offentlige sektor. Den konkrete anvendelse af arkitekturen fastlægges i de relevante beslutningsfora, som tværoffentlige brugerstyringsløsninger refererer til og udmøntes bl.a. i fællesoffentlige strategier.
 
 Med udspring i Digitaliseringspagten [5] er der parallelt med opdateringen af denne referencearkitektur igangsat en analyse af håndtering af samtykke på tværs af den offentlige sektor med henblik på at afdække behov og muligheder inden for dette område. Samtykkeområdet er af denne årsag kun overordnet behandlet i nærværende udgave af referencearkitekturen.
 
@@ -134,11 +134,6 @@ Ved siden af *forretningstjenester* findes *tillidstjenester*, der udfører betr
 **Tillidstjeneste** tjeneste der udfører betroede funktioner, der understøtter *brugerstyring* i *forretningstjenester*.
 
 **Føderationer** sammenslutning af *tillids- og forretningstjenester* med gensidig tillid.
-
-**IoT** infrastruktur af forbundne entiteter, mennesker, systemer og informationsressourcer i sammenhæng med services, der processerer og reagerer på information fra den fysiske og virtuelle verden.
-
-**IoT-entitet** apparat eller sammenstilling af apparater, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflader er tilgængelige via IoT.
-
 
 
 ### Brugere og identiteter
@@ -174,6 +169,8 @@ I forbindelse med brugerstyring kan *brugere* være personer, herunder borgere, 
 **Apparat** fysisk konstruktion med indlejret logik, fx software, der kan udføre specifikke funktioner. Apparater har typisk en eller flere fast indbyggede funktioner. Et apparat, der kan agere som *bruger*, optræder med sin egen identitet. I denne arkitektur behandles kun apparater eller IoT, som direkte optræder som bruger eller *tjeneste*. Apparater, der virker i lukkede kredsløb og som tilgås via et system, betragtes som enten en tjeneste eller en *applikation*.
 
 **Applikation** software entitet med specifik forretningsfunktion[^1], der er løst koblet fra den underliggende fysiske enhed. Applikationer kan optræde som brugere med en *digital identitet*, der autentificerer sig med et *identifikationsmiddel*.
+
+**IoT-apparat** apparat, der interagerer med den fysiske verden gennem sensorer eller aktuatorer, og hvis metadata og grænseflade er tilgængelige via *IoT*
 
 [^1]: Forretningsfunktion skal her forstås i bred forstand som den funktion, der udstilles til brugeren.
 
