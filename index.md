@@ -497,7 +497,7 @@ Hovedindholdet i ISO/IEC 27001 [15] er, at niveau for og håndtering af informat
 
 ISO/IEC 27001 standarden [15] er opdelt i 14 domæner. For brugerstyring er domænet 'Access Control' særligt relevant, og managementdelen indgår i domænet 'Information Security Policies'.
 
-På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [42]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om ad når man skal udarbejde ens passwordpolitik. på det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
+På Sikkerdigital.dk finder man desuden Center for Cybersikkerheds vejledning til styring af passwords [42]. Vejledningen inderholder grundlæggende viden om passwords, password-adfærd og en række tips og tjeklister man kan læne sig om af, når man skal udarbejde ens passwordpolitik. På det mest overordnede generelle niveau anbefaler CFCS følgende udgangspunkt for overvejelserne om den bedste passwordpolitik:
 
 - Stil ikke krav om password kompleksitet, men rådgiv om valg af sikre
 passwords.
@@ -515,7 +515,7 @@ National Standard for Identiteters Sikringsniveauer (NSIS) [17] er her et afgør
 
 NSIS kan benyttes både af brugerstyringstjenester, som leverer autentificerede digitale identiteter, og af forretningstjenester som aftager identiteter. NSIS er en standard, som er udarbejdet og aftalt fællesoffentligt efter en bred offentlig høring, og den er en dansk pendant til eIDAS forordningens retsakt om sikringsniveauer.
 
-Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx ved brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
+Der er naturligvis andre aspekter af risici vedr. brugere, som kan adresseres, herunder fx brug af 'identity analytics', som bygger på en risikobaseret tilgang til håndtering af identiteter og adgang frem for statiske regler. Målet er at identificere risikofyldte identiteter og adgange eksempelvis gennem machine-learning mv.
 
 
 # Opgaver
