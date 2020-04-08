@@ -1377,7 +1377,7 @@ Nedenstående liste viser kilder og baggrundsmateriale, som der henvises til i R
 Den formelle begrebsmodel for denne referencearkitektur kan findes her [indsæt link].
 I ordlisten Nedenfor findes termer og definitioner fra begrebsmodellen samt forklaringer af enkelte ord der bruges i referencearkitekturen, men som ikke indgår i begrebsmodellen, da det ikke specifikt er knyttet til brugerstyringsdomænet. Den giver desuden mulighed for at slå op på alternative og frarådede termer og blive henvist til den foretrukne term med tilhørende definition.
 
-## Brugerstyringen
+## Brugerstyring
 
 <figure>
 <img src="Oversigtsdiagram - Brugerstyring.png" width="90%" />
@@ -1391,7 +1391,7 @@ I ordlisten Nedenfor findes termer og definitioner fra begrebsmodellen samt fork
 <figcaption>Kontekstdiagram - Bruger og entitet</figcaption>
 </figure>
 
-## Digital identitet og autentifikationen
+## Digital identitet og autentifikation
 
 <figure>
 <img src="Kontekstdiagram - Digital identitet og autentifikation.png" width="90%" />
@@ -1536,7 +1536,7 @@ I ordlisten Nedenfor findes termer og definitioner fra begrebsmodellen samt fork
 | web of things | se IoT |   |   |
 
 # Bilag 3.	Fællesoffentlig brokermodel
-I dette afsnit gives en beskrivelse af arkitekturen i den kommende fællesoffent-lige infrastruktur i form af MitID og NemLog-in3 som et eksempel på komponenter, der udmønter koncepter og begreber i referencearkitekturen.
+I dette afsnit gives en beskrivelse af arkitekturen i den kommende fællesoffentlige infrastruktur i form af MitID og NemLog-in3 som et eksempel på komponenter, der udmønter koncepter og begreber i referencearkitekturen.
 Nedenstående figur illustrerer overordnet principperne i den nye infrastruktur:
 
 <figure>
@@ -1555,16 +1555,16 @@ Nedenstående BPMN-diagram viser samarbejdet mellem en forretningstjeneste og tr
 
 NemLog-in står som broker for orkestreringen af log-in-forløbet og afklarer i dialog med brugeren, hvilken type identifikationsmiddel, der skal anvendes. Brugeren vælger i eksemplet en MitID identitet, og NemLog-in sørger herefter for at omveksle autentifikationssvaret fra MitID til en erhvervsidentitet beriget med attributter fra CVR-registret.
 
-Infrastrukturen udmønter en række af de begreber og elementer, der er beskre-vet i denne referencearkitektur:
+Infrastrukturen udmønter en række af de begreber og elementer, der er beskrevet i denne referencearkitektur:
 
--	MitID er en tillidstjeneste, som etablerer en elektronisk identifikations-ordning for privatpersoner. Løsningen udsteder således elektroniske identifikationsmidler og tilvejebringer en autentifikationstjeneste for disse (jævnfør afsnit 3.3.1 og 3.3.2).  Autentifikationen er klassificeret i henhold til NSIS sikringsniveauer og anmeldes både under NSIS og no-tificeres under eIDAS (jævnfør afsnit 3.1).
--	MitID kan ikke tilgås direkte af forretningstjenester, som i stedet skal gå igennem en broker. NemLog-in3 bliver broker, som skal anvendes af alle offentlige tjenester, svarende til forretningsmønster 3 jævnfør af-snit 3.5.3.
--	NemLog-in3 er en tillidstjeneste, og etablerer en identifikationsordning for erhvervsidentiteter (jævnfør afsnit 3.3.1 og 3.3.2). Denne vil ligele-des både blive anmeldt under NSIS og notificeret under eIDAS.
--	NemLog-in’s broker vil berige identiteter med ekstra attributter fra au-toritative registre (bl.a. CPR og CVR) og dermed udføre attributatteste-ring, jævnfør afsnit 3.3.4.
--	NemLog-in3 vil endvidere etablere et kvalificeret CA og kunne udste-de- og validere kvalificerede signaturer, og optræder dermed som en eI-DAS kvalificeret tillidstjeneste (jævnfør afsnit 3.3 om tillidstjenester).
--	Brugerorganisationer kan etablere deres egne autentifikationstjenester (lokale IdP’er), hvis de ønsker at benytte lokalt udstedte identifikati-onsmidler for egne medarbejdere ved adgang til eksterne tjenester. For-udsætningen for, at disse kan tilsluttes NemLog-in3 er, at de er NSIS anmeldte. Herved bliver NemLog-in broker for lokale identiteter. Dette svarer til forretningsmønster 4 beskrevet i afsnit 3.5.4. Rent teknisk fo-retages billetomveksling, hvor adgangsbillet udstedt af lokal IdP om-veksles af NemLog-in (jævnfør afsnit 4.4).
--	NemLog-in indeholder en såkaldt Security Token Service komponent (STS), som gør det muligt at foretage omveksling af adgangsbilletter til identitetsbaserede web services som beskrevet i afsnit 4.5.1.
--	Forretningstjenester, som anvender NemLog-in3 som tillidstjeneste, kan udføre adgangskontrol på baggrund af de attributter, som fremgår i den adgangsbillet, som NemLog-in udsteder – såkaldt attributbaseret ad-gangskontrol. Adgangsbilletten vil både kunne rumme attributter som beskriver brugerens identitet, rettigheder, fuldmagter mv. Attributterne attesteret med andre ord via ’push’ metoden som beskrevet i afsnit 4.1.
+-	MitID er en tillidstjeneste, som etablerer en elektronisk identifikations-ordning for privatpersoner. Løsningen udsteder således elektroniske identifikationsmidler og tilvejebringer en autentifikationstjeneste for disse (jævnfør afsnit 3.3.1 og 3.3.2).  Autentifikationen er klassificeret i henhold til NSIS sikringsniveauer og anmeldes både under NSIS og notificeres under eIDAS (jævnfør afsnit 3.1).
+-	MitID kan ikke tilgås direkte af forretningstjenester, som i stedet skal gå igennem en broker. NemLog-in3 bliver broker, som skal anvendes af alle offentlige tjenester, svarende til forretningsmønster 3 jævnfør afsnit 3.4.3.
+-	NemLog-in3 er en tillidstjeneste, og etablerer en identifikationsordning for erhvervsidentiteter (jævnfør afsnit 3.3.1 og 3.3.2). Denne vil ligeledes både blive anmeldt under NSIS og notificeret under eIDAS.
+-	NemLog-in’s broker vil berige identiteter med ekstra attributter fra autoritative registre (bl.a. CPR og CVR) og dermed udføre attributattestering, jævnfør afsnit 3.3.4.
+-	NemLog-in3 vil endvidere etablere et kvalificeret CA og kunne udstede- og validere kvalificerede signaturer, og optræder dermed som en eIDAS kvalificeret tillidstjeneste (jævnfør afsnit 3.3 om tillidstjenester).
+-	Brugerorganisationer kan etablere deres egne autentifikationstjenester (lokale IdP’er), hvis de ønsker at benytte lokalt udstedte identifikationsmidler for egne medarbejdere ved adgang til eksterne tjenester. Forudsætningen for, at disse kan tilsluttes NemLog-in3 er, at de er NSIS anmeldte. Herved bliver NemLog-in broker for lokale identiteter. Dette svarer til forretningsmønster 4 beskrevet i afsnit 3.4.4. Rent teknisk foretages billetomveksling, hvor adgangsbillet udstedt af lokal IdP om-veksles af NemLog-in (jævnfør afsnit 5.3).
+-	NemLog-in indeholder en såkaldt Security Token Service komponent (STS), som gør det muligt at foretage omveksling af adgangsbilletter til identitetsbaserede web services som beskrevet i afsnit 5.4.1.
+-	Forretningstjenester, som anvender NemLog-in3 som tillidstjeneste, kan udføre adgangskontrol på baggrund af de attributter, som fremgår i den adgangsbillet, som NemLog-in udsteder - såkaldt attributbaseret ad-gangskontrol. Adgangsbilletten vil både kunne rumme attributter som beskriver brugerens identitet, rettigheder, fuldmagter mv. Attributterne attesteret med andre ord via ’push’ metoden som beskrevet i afsnit 5.1.
 
 # Bilag 4. Tjekliste
 
